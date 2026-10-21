@@ -123,6 +123,7 @@ export const SHOP_ICON = `${UI_ICON_BASE_PATH}/T_Icon_Shop.png`;
 export const MONSTER_ASSET_OVERRIDES = {
   SmallTooth: { dir: 'Smalltooth', icon: 'Smalltooth', flipbook: 'Smalltooth' },
   Electrofly: { dir: 'ElectroFly' },
+  RustEater: { icon: 'Rusteater' },
   Slimbones: { dir: 'SlimBones', icon: 'SlimBones', flipbook: 'SlimBones' },
   Snapjaw: { dir: 'SnapJaw', icon: 'SnapJaw', flipbook: 'SnapJaw' },
   Sharptail: { dir: 'SharpTail', icon: 'SharpTail', flipbook: 'SharpTail' },
