@@ -10,16 +10,16 @@ import { FusionCard } from './FusionCard.js';
 import { NotFoundCard } from './NotFoundCard.js';
 
 /**
- * @typedef {{ key: 'health' | 'soul' | 'strength' | 'defense' | 'mind' | 'agility', label: string, color: string, icon?: string }} StatBarConfig
+ * @typedef {{ key: 'health' | 'strength' | 'defense' | 'mind' | 'soul' | 'agility', label: string, color: string, icon?: string }} StatBarConfig
  */
 
 /** @type {StatBarConfig[]} */
 const STAT_BARS = [
   { key: 'health', label: 'Health (HP)', color: 'bg-green', icon: '' },
-  { key: 'soul', label: 'Soul', color: 'bg-purple', icon: getStatIcon('Soul') },
   { key: 'strength', label: 'Strength', color: 'bg-light-red', icon: getStatIcon('Strength') },
   { key: 'defense', label: 'Defense', color: 'bg-light-blue', icon: getStatIcon('Defense') },
   { key: 'mind', label: 'Mind', color: 'bg-light-purple', icon: getStatIcon('Mind') },
+  { key: 'soul', label: 'Soul', color: 'bg-purple', icon: getStatIcon('Soul') },
   { key: 'agility', label: 'Agility', color: 'bg-gold', icon: getStatIcon('Agility') }
 ];
 

@@ -13,10 +13,10 @@ const COLUMNS = [
   { key: 'attackType', label: 'Attack' },
   { key: 'tier', label: 'Tier', align: 'center' },
   { key: 'health', label: 'HP', align: 'right' },
-  { key: 'soul', align: 'right', icon: getStatIcon('Soul'), title: 'Soul' },
   { key: 'strength', align: 'right', icon: getStatIcon('Strength'), title: 'Strength' },
   { key: 'defense', align: 'right', icon: getStatIcon('Defense'), title: 'Defense' },
   { key: 'mind', align: 'right', icon: getStatIcon('Mind'), title: 'Mind' },
+  { key: 'soul', align: 'right', icon: getStatIcon('Soul'), title: 'Soul' },
   { key: 'agility', align: 'right', icon: getStatIcon('Agility'), title: 'Agility' },
   { key: 'statTotal', label: 'Total', align: 'right' },
   { key: 'lootSummary', label: 'Loot Drops' }
@@ -120,10 +120,10 @@ const TEMPLATE = /* html */ `
           </span>
         </td>
         <td class="pa3 tr b near-white">{{ monster.health }}</td>
-        <td class="pa3 tr b near-white">{{ monster.soul }}</td>
         <td class="pa3 tr b near-white">{{ monster.strength }}</td>
         <td class="pa3 tr b near-white">{{ monster.defense }}</td>
         <td class="pa3 tr b near-white">{{ monster.mind }}</td>
+        <td class="pa3 tr b near-white">{{ monster.soul }}</td>
         <td class="pa3 tr b near-white">{{ monster.agility }}</td>
         <td class="pa3 tr b light-purple">{{ monster.statTotal }}</td>
         <td class="pa3">
