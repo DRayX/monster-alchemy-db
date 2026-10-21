@@ -1,6 +1,7 @@
 // @ts-check
 import {
   getMonsterProfileImage,
+  getMonsterFlipbookUrl,
   getItemIcon,
   resolveUnrealAssetPath,
   STRUCT_URLS,
@@ -169,9 +170,7 @@ export async function loadMonsterSpriteImage(monsterId) {
   /** @type {UnrealFlipbookAsset[] | null} */
   let flipbook = null;
   try {
-    flipbook = await loadJson(
-      `./extracted/Game/Art/Sprites/${monsterId}/FB_${monsterId}_Idle.json`
-    );
+    flipbook = await loadJson(getMonsterFlipbookUrl(monsterId));
   } catch {
     // Handles 404s when a monster lacks a flipbook asset on disk
     return '';

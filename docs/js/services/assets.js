@@ -115,21 +115,52 @@ export const TOWER_ICON = `${UI_ICON_BASE_PATH}/T_Icon_Tower.png`;
 export const SHOP_ICON = `${UI_ICON_BASE_PATH}/T_Icon_Shop.png`;
 
 /**
+ * Map of monster IDs to asset folder and file names on disk when their casing
+ * differs from the standard `DT_MonsterTable` ID convention.
+ * Properties identical to monsterId are omitted.
+ * @type {Record<string, { dir?: string, icon?: string, flipbook?: string }>}
+ */
+export const MONSTER_ASSET_OVERRIDES = {
+  SmallTooth: { dir: 'Smalltooth', icon: 'Smalltooth', flipbook: 'Smalltooth' },
+  Electrofly: { dir: 'ElectroFly' },
+  Slimbones: { dir: 'SlimBones', icon: 'SlimBones', flipbook: 'SlimBones' },
+  Snapjaw: { dir: 'SnapJaw', icon: 'SnapJaw', flipbook: 'SnapJaw' },
+  Sharptail: { dir: 'SharpTail', icon: 'SharpTail', flipbook: 'SharpTail' },
+  Deathbloom: { dir: 'DeathBloom', flipbook: 'DeathBloom' }
+};
+
+/**
  * Returns the relative URL for a monster's profile image (`P_<id>.png`).
  * @param {string} monsterId
  * @returns {string}
  */
 export function getMonsterProfileImage(monsterId) {
-  return `./extracted/Game/Art/Sprites/${monsterId}/P_${monsterId}.png`;
+  const override = MONSTER_ASSET_OVERRIDES[monsterId];
+  const dir = override?.dir || monsterId;
+  const file = override?.icon || monsterId;
+  return `./extracted/Game/Art/Sprites/${dir}/P_${file}.png`;
+}
+
+/**
+ * Returns the relative URL for a monster's idle flipbook JSON definition (`FB_<id>_Idle.json`).
+ * @param {string} monsterId
+ * @returns {string}
+ */
+export function getMonsterFlipbookUrl(monsterId) {
+  const override = MONSTER_ASSET_OVERRIDES[monsterId];
+  const dir = override?.dir || monsterId;
+  const file = override?.flipbook || monsterId;
+  return `./extracted/Game/Art/Sprites/${dir}/FB_${file}_Idle.json`;
 }
 
 /**
  * Map of item IDs to custom texture asset names when the asset file name
- * differs from the standard `T_<itemId>.png` convention.
+ * differs from the standard `T_<itemId>.png` convention (omitting the `T_` prefix).
  * @type {Record<string, string>}
  */
 export const ITEM_ICON_OVERRIDES = {
-  Stone: 'T_Pebble'
+  Stone: 'Pebble',
+  BlackWood: 'Blackwood'
 };
 
 /**
@@ -138,8 +169,8 @@ export const ITEM_ICON_OVERRIDES = {
  * @returns {string}
  */
 export function getItemIcon(itemId) {
-  const file = ITEM_ICON_OVERRIDES[itemId] || `T_${itemId}`;
-  return `./extracted/Game/Art/Resources/${file}.png`;
+  const file = ITEM_ICON_OVERRIDES[itemId] || itemId;
+  return `./extracted/Game/Art/Resources/T_${file}.png`;
 }
 
 
