@@ -1,0 +1,26 @@
+[
+  {
+    "Type": "PaperFlipbook",
+    "Name": "FB_Petomp_Idle_old",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PaperFlipbook'",
+    "Package": "/Game/Art/Sprites/Petomp/FB_Petomp_Idle_old",
+    "Properties": {
+      "FramesPerSecond": 2.0,
+      "KeyFrames": [
+        {
+          "Sprite": null,
+          "FrameRun": 1
+        },
+        {
+          "Sprite": null,
+          "FrameRun": 1
+        }
+      ],
+      "DefaultMaterial": {
+        "ObjectName": "MaterialInstanceConstant'MI_Petomp'",
+        "ObjectPath": "/Game/Art/Sprites/Petomp/MI_Petomp.0"
+      }
+    }
+  }
+]

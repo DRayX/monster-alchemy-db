@@ -1,0 +1,32 @@
+[
+  {
+    "Type": "PaperFlipbook",
+    "Name": "FB_Phenchi_Idle",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PaperFlipbook'",
+    "Package": "/Game/Art/Sprites/Phenchi/FB_Phenchi_Idle",
+    "Properties": {
+      "FramesPerSecond": 2.0,
+      "KeyFrames": [
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'T_Phenchi_53X33_Sprite_0'",
+            "ObjectPath": "/Game/Art/Sprites/Phenchi/T_Phenchi_53X33_Sprite_0.1"
+          },
+          "FrameRun": 1
+        },
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'T_Phenchi_53X33_Sprite_1'",
+            "ObjectPath": "/Game/Art/Sprites/Phenchi/T_Phenchi_53X33_Sprite_1.1"
+          },
+          "FrameRun": 1
+        }
+      ],
+      "DefaultMaterial": {
+        "ObjectName": "MaterialInstanceConstant'MI_BoneCrawler1'",
+        "ObjectPath": "/Game/Art/Sprites/Phenchi/MI_BoneCrawler1.0"
+      }
+    }
+  }
+]

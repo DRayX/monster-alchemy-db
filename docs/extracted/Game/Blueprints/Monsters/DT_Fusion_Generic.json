@@ -1,0 +1,341 @@
+[
+  {
+    "Type": "DataTable",
+    "Name": "DT_Fusion_Generic",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DataTable'",
+    "Package": "/Game/Blueprints/Monsters/DT_Fusion_Generic",
+    "Properties": {
+      "RowStruct": {
+        "ObjectName": "UserDefinedStruct'S_FusionTable'",
+        "ObjectPath": "/Game/Blueprints/Monsters/S_FusionTable.0"
+      }
+    },
+    "Rows": {
+      "1FireAny+1WaterAny": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Naster"
+      },
+      "1FireAny+1NatureAny": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Lavapod"
+      },
+      "1WaterAny+1NatureAny": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Mosshat"
+      },
+      "1FireStrike+1FireStrike": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Illuminator"
+      },
+      "1FireSlash+1FireSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Dragonling"
+      },
+      "1FireProjectile+1FireProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "ScorchedJuggler"
+      },
+      "1FireStrike+1FireSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Dragonling"
+      },
+      "1FireProjectile+1FireStrike": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Illuminator"
+      },
+      "1FireSlash+1FireProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "ScorchedJuggler"
+      },
+      "1FireStrike+1NeutralStrike": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Illuminator"
+      },
+      "1FireStrike+1NeutralSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Dragonling"
+      },
+      "1FireStrike+1NeutralProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "ScorchedJuggler"
+      },
+      "1FireSlash+1NeutralStrike": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Illuminator"
+      },
+      "1FireSlash+1NeutralSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Dragonling"
+      },
+      "1FireSlash+1NeutralProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "ScorchedJuggler"
+      },
+      "1FireProjectile+1NeutralStrike": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Illuminator"
+      },
+      "1FireProjectile+1NeutralSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Dragonling"
+      },
+      "1FireProjectile+1NeutralProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "ScorchedJuggler"
+      },
+      "1WaterStrike+1WaterStrike": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Stompal"
+      },
+      "1WaterSlash+1WaterSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "PenguinWarrior"
+      },
+      "1WaterProjectile+1WaterProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Bruxis"
+      },
+      "1WaterStrike+1WaterSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "PenguinWarrior"
+      },
+      "1WaterStrike+1WaterProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Bruxis"
+      },
+      "1WaterSlash+1WaterProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "PenguinWarrior"
+      },
+      "1WaterStrike+1NeutralStrike": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Stompal"
+      },
+      "1WaterStrike+1NeutralSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "PenguinWarrior"
+      },
+      "1WaterStrike+1NeutralProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Bruxis"
+      },
+      "1WaterSlash+1NeutralStrike": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Stompal"
+      },
+      "1WaterSlash+1NeutralSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "PenguinWarrior"
+      },
+      "1WaterSlash+1NeutralProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Bruxis"
+      },
+      "1WaterProjectile+1NeutralStrike": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Stompal"
+      },
+      "1WaterProjectile+1NeutralSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "PenguinWarrior"
+      },
+      "1WaterProjectile+1NeutralProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Bruxis"
+      },
+      "1NatureStrike+1NatureStrike": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Corolus"
+      },
+      "1NatureSlash+1NatureSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Gekklar"
+      },
+      "1NatureProjectile+1NatureProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Bellotto"
+      },
+      "1NatureStrike+1NatureSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Corolus"
+      },
+      "1NatureStrike+1NatureProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Corolus"
+      },
+      "1NatureSlash+1NatureProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Gekklar"
+      },
+      "1NatureStrike+1NeutralStrike": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Corolus"
+      },
+      "1NatureStrike+1NeutralSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Gekklar"
+      },
+      "1NatureStrike+1NeutralProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Bellotto"
+      },
+      "1NatureSlash+1NeutralStrike": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Corolus"
+      },
+      "1NatureSlash+1NeutralSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Gekklar"
+      },
+      "1NatureSlash+1NeutralProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Bellotto"
+      },
+      "1NatureProjectile+1NeutralStrike": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Corolus"
+      },
+      "1NatureProjectile+1NeutralSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Gekklar"
+      },
+      "1NatureProjectile+1NeutralProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Bellotto"
+      },
+      "1NeutralStrike+1NeutralStrike": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "SteelHead"
+      },
+      "1NeutralSlash+1NeutralSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "FloatingHelmet"
+      },
+      "1NeutralProjectile+1NeutralProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "TwitchyFluff"
+      },
+      "1NeutralStrike+1NeutralSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "FloatingHelmet"
+      },
+      "1NeutralProjectile+1NeutralStrike": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "SteelHead"
+      },
+      "1NeutralSlash+1NeutralProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "TwitchyFluff"
+      },
+      "2FireAny+2WaterAny": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "CloudElemental"
+      },
+      "2FireAny+2NatureAny": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Piedredge"
+      },
+      "2WaterAny+2NatureAny": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "MossGolem"
+      },
+      "2FireStrike+2FireStrike": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Clawless"
+      },
+      "2FireSlash+2FireSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Snapjaw"
+      },
+      "2FireProjectile+2FireProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Chameledrake"
+      },
+      "2FireStrike+2FireSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Snapjaw"
+      },
+      "2FireStrike+2FireProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Clawless"
+      },
+      "2FireSlash+2FireProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Chameledrake"
+      },
+      "2FireStrike+2NeutralStrike": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Clawless"
+      },
+      "2FireStrike+2NeutralSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Snapjaw"
+      },
+      "2FireStrike+2NeutralProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Chameledrake"
+      },
+      "2FireSlash+2NeutralStrike": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Clawless"
+      },
+      "2FireSlash+2NeutralSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Snapjaw"
+      },
+      "2FireSlash+2NeutralProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Chameledrake"
+      },
+      "2FireProjectile+2NeutralStrike": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Clawless"
+      },
+      "2FireProjectile+2NeutralSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Snapjaw"
+      },
+      "2FireProjectile+2NeutralProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Chameledrake"
+      },
+      "2WaterStrike+2WaterStrike": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Mamclops"
+      },
+      "2WaterSlash+2WaterSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "MerfolkLancer"
+      },
+      "2WaterProjectile+2WaterProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Bubblex"
+      },
+      "2WaterStrike+2WaterSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "MerfolkLancer"
+      },
+      "2WaterStrike+2WaterProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Mamclops"
+      },
+      "2WaterSlash+2WaterProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "MerfolkLancer"
+      },
+      "2WaterStrike+2NeutralStrike": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Mamclops"
+      },
+      "2WaterStrike+2NeutralSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "MerfolkLancer"
+      },
+      "2WaterStrike+2NeutralProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Bubblex"
+      },
+      "2WaterSlash+2NeutralStrike": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Mamclops"
+      },
+      "2WaterSlash+2NeutralSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "MerfolkLancer"
+      },
+      "2WaterSlash+2NeutralProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Bubblex"
+      },
+      "2WaterProjectile+2NeutralStrike": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Mamclops"
+      },
+      "2WaterProjectile+2NeutralSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "MerfolkLancer"
+      },
+      "2WaterProjectile+2NeutralProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Bubblex"
+      },
+      "2NatureStrike+2NatureStrike": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Petomp"
+      },
+      "2NatureSlash+2NatureSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "SharpTail"
+      },
+      "2NatureProjectile+2NatureProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "BuzzingSniper"
+      },
+      "2NatureStrike+2NatureSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "SharpTail"
+      },
+      "2NatureStrike+2NatureProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "BuzzingSniper"
+      },
+      "2NatureSlash+2NatureProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "BuzzingSniper"
+      },
+      "2NatureStrike+2NeutralStrike": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Petomp"
+      },
+      "2NatureStrike+2NeutralSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "SharpTail"
+      },
+      "2NatureStrike+2NeutralProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "BuzzingSniper"
+      },
+      "2NatureSlash+2NeutralStrike": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Petomp"
+      },
+      "2NatureSlash+2NeutralSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "SharpTail"
+      },
+      "2NatureSlash+2NeutralProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "BuzzingSniper"
+      },
+      "2NatureProjectile+2NeutralStrike": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Petomp"
+      },
+      "2NatureProjectile+2NeutralSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "SharpTail"
+      },
+      "2NatureProjectile+2NeutralProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "BuzzingSniper"
+      },
+      "2NeutralStrike+2NeutralStrike": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Skullhead"
+      },
+      "2NeutralSlash+2NeutralSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Gorritero"
+      },
+      "2NeutralProjectile+2NeutralProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "KnifeThrower"
+      },
+      "2NeutralStrike+2NeutralSlash": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Gorritero"
+      },
+      "2NeutralProjectile+2NeutralStrike": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Skullhead"
+      },
+      "2NeutralSlash+2NeutralProjectile": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "KnifeThrower"
+      }
+    }
+  }
+]

@@ -1,0 +1,787 @@
+[
+  {
+    "Type": "DataTable",
+    "Name": "DT_MonsterRewards",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DataTable'",
+    "Package": "/Game/Blueprints/Monsters/DT_MonsterRewards",
+    "Properties": {
+      "RowStruct": {
+        "ObjectName": "UserDefinedStruct'S_MonsterRewards'",
+        "ObjectPath": "/Game/Blueprints/Monsters/S_MonsterRewards.0"
+      }
+    },
+    "Rows": {
+      "Slime": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Goo",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "StickGolem": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Stone",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "Oranite"
+      },
+      "GoblinPillager": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "ScraggyMeat",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "GoblinHexer": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "ScraggyMeat",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "Bone",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Scout": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "ScraggyMeat",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "Feather"
+      },
+      "Merkid": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "HydroGland",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "HydroGland",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "MushroomToad": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "CondensedSpores",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "GastricSac"
+      },
+      "Imp": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "FlameTendon",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "BoneCrawler": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Bone",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "GoblinFisher": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "ScraggyMeat",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "HydroGland",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Brachillo": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "HydroGland",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Noodle": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "Zana"
+      },
+      "Solsun": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "EmberGel",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "RedSlime": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Goo",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "EmberGel"
+      },
+      "GreenSlime": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Goo",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "FungalExtract"
+      },
+      "BlueSlime": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Goo",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "MarineEssence"
+      },
+      "YellowSlime": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Goo",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "PrismaticTonic"
+      },
+      "Wiwo": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "ScraggyMeat",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "RoughFur",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "TwitchyFluff": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "ScraggyMeat",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "RoughFur",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "SmallTooth": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "ScraggyMeat",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "RoughFur",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "RazorbeakCrow": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "Feather",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Stompal": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "ScraggyMeat",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "HydroGland",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "StinkyMonkey": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "ScraggyMeat",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "Dung"
+      },
+      "Gnome": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Coin",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "HealthPotion",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "SylvanInfusion"
+      },
+      "Dragonling": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "FlameTendon",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "FlintGolem": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Stone",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "MagmaShard"
+      },
+      "Bellotto": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Wood",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "Rurian"
+      },
+      "MysteriousSylvan": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "Zana",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "Rurian"
+      },
+      "Ork": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "ScraggyMeat",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "RoughFur",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "GoblinGunner": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "ScraggyMeat",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "ReactiveDust"
+      },
+      "PenguinWarrior": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Feather",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "FrostVeins",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "FloatingHelmet": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "IronIngot",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Mosshat": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "HydroGland",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Gekklar": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "ScraggyMeat",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Pott": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "GastricSac",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "FleshMeltingAcid"
+      },
+      "SpikeGuy": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "RoughFur",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "RustEater": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "GastricSac",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Ignibos": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "FlameTendon",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "RoughFur",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Lavapod": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "EmberGel",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "MagmaShard"
+      },
+      "BurnyFluff": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "FlameTendon",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "RoughFur",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "EmberGel"
+      },
+      "Amalgameye": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "GastricSac",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "ToxicBubble",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Naster": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "ToxicBubble",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Plibu": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "RoughFur",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Flicko": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "HydroGland",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Ornenza": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Goo",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "Feather",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "WingedSpirit": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "CrystaliumOre",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Phenchi": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "FlameTendon",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "Feather",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Corolus": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "Zana"
+      },
+      "Leggy": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Feather",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Electrofly": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "Dung"
+      },
+      "SteelHead": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Stone",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "IronOre",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Saka": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "CoagulatedBlood",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "ForestSprite": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "Ectoplasm",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "MuddyPetal"
+      },
+      "Wintlet": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "RoughFur",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "FrostVeins",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "SkeletonServant": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Bone",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "SkeletonArcher": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Bone",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Zombie": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "RottenMeat",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "SaltySailor": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "RottenMeat",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "MarineEssence"
+      },
+      "Banshee": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "Ectoplasm",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "HotBanshee": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "Ectoplasm",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "GhostDog": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Bone",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "Ectoplasm",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "ZombieGoblin": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "RottenMeat",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "ZombieSlime": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Goo",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "RottenMeat",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "DisturbingSilhouette": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "ShadowFragment",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "ScorchedJuggler": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "FlameTendon",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "RottenMeat",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Bruxis": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "Ectoplasm",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Candela": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "EmberGel",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Illuminator": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "EmberGel",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "VampireKid": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "RottenMeat",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "CoagulatedBlood",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Molo": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Bone",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "OsseousPlaster"
+      },
+      "Barkling": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "BlackWood",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "HollowBerry"
+      },
+      "VengefulDoll": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "BlackWood",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "Incense"
+      },
+      "Slimbones": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Bone",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "HydroGland",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "LivingTome": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "Ectoplasm",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "CuteAbomination": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "RottenMeat",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "RoughFur",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "RustyKnight": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "IronIngot",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "MechanicalCherub": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "IronIngot",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "TorchDemon": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "FlameTendon",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "MagmaShard",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "HammerDruid": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Ectoplasm",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "MuddyPetal",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "LostYeti": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "RoughFur",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "FrostVeins",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "ScaleDisciple": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "Oranite"
+      },
+      "LongSlime": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Goo",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "GooeyMix"
+      },
+      "RagingGunner": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "ScraggyMeat",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "ResentmentSerum"
+      },
+      "WaveCreeper": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Bone",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "MarineEssence"
+      },
+      "FloatingArmor": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "IronIngot",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "FerrousTincture"
+      },
+      "MerfolkLancer": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "HydroGland",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Wereshark": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "HydroGland",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Trianha": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "HydroGland",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Teddo": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "RoughFur",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Plibey": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "Liconut",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "SylvanInfusion"
+      },
+      "Fortifisand": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Stone",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "MagicSand"
+      },
+      "Zzoink": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "ScraggyMeat",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "Incense"
+      },
+      "KnifeThrower": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "ScraggyMeat",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "CloudDrake": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "HydroGland",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Chameledrake": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "ScraggyMeat",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "FlameTendon",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "CrystaliumOre"
+      },
+      "GleSha": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Stone",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Mamclops": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "RoughFur",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "FrostVeins",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "CaveTroll": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "ScraggyMeat",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "FrostVeins",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Borealus": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "FrostVeins",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "CloudElemental": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "SolidifiedCloud",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "BuzzingSniper": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "CoagulatedBlood",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Petomp": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "SpringtimeHumus"
+      },
+      "Gorritero": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Feather",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "MossGolem": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Stone",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "SpringtimeHumus"
+      },
+      "Snapjaw": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "CoagulatedBlood",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "EmberGel",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Sharptail": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "RoughFur",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Clawless": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "RoughFur",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Bubblex": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "ToxicBubble",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Piedredge": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "MagmaShard",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "ObsidianShard"
+      },
+      "TundraRanger": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "Feather",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Brachesert": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "HydroGland",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "WhiteDragonling": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "FrostVeins",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Bandikko": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "ScraggyMeat",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Electrolicko": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "HydroGland",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "DiamondHead": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "CrystalIngot",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Lunamoon": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "MoonCrystal",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Skullhead": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "RottenMeat",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "CursedSkull"
+      },
+      "RotsporeBrute": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "CondensedSpores",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "GastricSac",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "FungalExtract"
+      },
+      "InfectedJuggler": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "CondensedSpores",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "RottenMeat",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Stottro": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "CoagulatedBlood",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "ResentmentSerum"
+      },
+      "CorpseCrop": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "RottenMeat",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "VampireAdept": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "CoagulatedBlood",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "BabyShadow": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "ShadowFragment",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "RoninZombie": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "RottenMeat",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "DrownedBucaneer": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "RottenMeat",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "MarineEssence"
+      },
+      "Skunicorn": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Bone",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "CursedSkull"
+      },
+      "Cryoadorer": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "RottenMeat",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "FrostVeins",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "DemonSprout": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "MuddyPetal",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "TrumpetSkeleton": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Bone",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "PrismaticTonic"
+      },
+      "Crowmere": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "MoonCrystal"
+      },
+      "CogKnight": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "IronIngot",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "MechanicalAngel": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "IronIngot",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "MoltenDemon": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "FlameTendon",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "MagmaShard",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "GreatDryad": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Ectoplasm",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "MuddyPetal",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "StrongYeti": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "RoughFur",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "FrostVeins",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "DraconidCommander": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "Oranite"
+      },
+      "VertebralCorsair": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Bone",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "MarineEssence",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "DeathDust"
+      },
+      "Floro": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "SpringtimeHumus",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "AnchoredSoul": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "MarineEssence",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Sunchi": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "FantasyCalx"
+      },
+      "RighteousHand": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Stone",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "ToxicBubble",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "Oranite"
+      },
+      "StormElemental": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "SolidifiedCloud",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "PrismaticTonic"
+      },
+      "RuneGuardian": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "Oranite"
+      },
+      "KarmaHand": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "Oranite"
+      },
+      "Flamtail": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "RoughFur",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "FlameTendon",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Eplepe": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "ToxicBubble",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "ProteinConcentrate",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "MoonCrystal"
+      },
+      "Deathbloom": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "MuddyPetal",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "DeathDust"
+      },
+      "Stormwing": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Feather",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "PrismaticTonic",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "Phoenix": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "Feather",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "FantasyCalx",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "InfernalBlade": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "MagmaShard",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      },
+      "TwilightArmor": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "IronIngot",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "MoonCrystal"
+      },
+      "Dozz": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "MoonCrystal"
+      },
+      "CursedScale": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "DeathDust"
+      },
+      "FerrousKnuckle": {
+        "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "IronIngot",
+        "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+        "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+      }
+    }
+  }
+]

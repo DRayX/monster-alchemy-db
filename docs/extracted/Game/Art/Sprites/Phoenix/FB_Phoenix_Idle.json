@@ -1,0 +1,32 @@
+[
+  {
+    "Type": "PaperFlipbook",
+    "Name": "FB_Phoenix_Idle",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PaperFlipbook'",
+    "Package": "/Game/Art/Sprites/Phoenix/FB_Phoenix_Idle",
+    "Properties": {
+      "FramesPerSecond": 2.0,
+      "KeyFrames": [
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'T_Phoenix_107x87_Sprite_0'",
+            "ObjectPath": "/Game/Art/Sprites/Phoenix/T_Phoenix_107x87_Sprite_0.1"
+          },
+          "FrameRun": 1
+        },
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'T_Phoenix_107x87_Sprite_1'",
+            "ObjectPath": "/Game/Art/Sprites/Phoenix/T_Phoenix_107x87_Sprite_1.1"
+          },
+          "FrameRun": 1
+        }
+      ],
+      "DefaultMaterial": {
+        "ObjectName": "MaterialInstanceConstant'MI_Phoenix'",
+        "ObjectPath": "/Game/Art/Sprites/Phoenix/MI_Phoenix.0"
+      }
+    }
+  }
+]

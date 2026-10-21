@@ -1,0 +1,32 @@
+[
+  {
+    "Type": "PaperFlipbook",
+    "Name": "FB_TwilightArmor_Idle",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PaperFlipbook'",
+    "Package": "/Game/Art/Sprites/TwilightArmor/FB_TwilightArmor_Idle",
+    "Properties": {
+      "FramesPerSecond": 2.0,
+      "KeyFrames": [
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'T_TwilightArmor_95x45_Sprite_0'",
+            "ObjectPath": "/Game/Art/Sprites/TwilightArmor/T_TwilightArmor_95x45_Sprite_0.1"
+          },
+          "FrameRun": 1
+        },
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'T_TwilightArmor_95x45_Sprite_1'",
+            "ObjectPath": "/Game/Art/Sprites/TwilightArmor/T_TwilightArmor_95x45_Sprite_1.1"
+          },
+          "FrameRun": 1
+        }
+      ],
+      "DefaultMaterial": {
+        "ObjectName": "MaterialInstanceConstant'MI_FloatingArmor1'",
+        "ObjectPath": "/Game/Art/Sprites/TwilightArmor/MI_FloatingArmor1.0"
+      }
+    }
+  }
+]

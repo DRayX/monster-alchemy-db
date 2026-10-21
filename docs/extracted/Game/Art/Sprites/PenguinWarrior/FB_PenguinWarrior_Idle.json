@@ -1,0 +1,32 @@
+[
+  {
+    "Type": "PaperFlipbook",
+    "Name": "FB_PenguinWarrior_Idle",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PaperFlipbook'",
+    "Package": "/Game/Art/Sprites/PenguinWarrior/FB_PenguinWarrior_Idle",
+    "Properties": {
+      "FramesPerSecond": 2.0,
+      "KeyFrames": [
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'PenguinWarrior_Sprite_0'",
+            "ObjectPath": "/Game/Art/Sprites/PenguinWarrior/PenguinWarrior_Sprite_0.1"
+          },
+          "FrameRun": 1
+        },
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'PenguinWarrior_Sprite_1'",
+            "ObjectPath": "/Game/Art/Sprites/PenguinWarrior/PenguinWarrior_Sprite_1.1"
+          },
+          "FrameRun": 1
+        }
+      ],
+      "DefaultMaterial": {
+        "ObjectName": "MaterialInstanceConstant'MI_PenguinWarrior'",
+        "ObjectPath": "/Game/Art/Sprites/PenguinWarrior/MI_PenguinWarrior.0"
+      }
+    }
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "Type": "PaperFlipbook",
+    "Name": "FB_Banshee_Idle",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PaperFlipbook'",
+    "Package": "/Game/Art/Sprites/Banshee/FB_Banshee_Idle",
+    "Properties": {
+      "FramesPerSecond": 2.0,
+      "KeyFrames": [
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'Banshee_38x42_Sprite_0'",
+            "ObjectPath": "/Game/Art/Sprites/Banshee/Banshee_38x42_Sprite_0.1"
+          },
+          "FrameRun": 1
+        },
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'Banshee_38x42_Sprite_1'",
+            "ObjectPath": "/Game/Art/Sprites/Banshee/Banshee_38x42_Sprite_1.1"
+          },
+          "FrameRun": 1
+        }
+      ],
+      "DefaultMaterial": {
+        "ObjectName": "MaterialInstanceConstant'MI_Banshee'",
+        "ObjectPath": "/Game/Art/Sprites/Banshee/MI_Banshee.0"
+      }
+    }
+  }
+]

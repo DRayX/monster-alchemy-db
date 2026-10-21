@@ -1,0 +1,32 @@
+[
+  {
+    "Type": "PaperFlipbook",
+    "Name": "FB_BurnyFluff_Idle",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PaperFlipbook'",
+    "Package": "/Game/Art/Sprites/BurnyFluff/FB_BurnyFluff_Idle",
+    "Properties": {
+      "FramesPerSecond": 2.0,
+      "KeyFrames": [
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'T_BurningFluff_34x38_Sprite_0'",
+            "ObjectPath": "/Game/Art/Sprites/BurnyFluff/T_BurningFluff_34x38_Sprite_0.1"
+          },
+          "FrameRun": 1
+        },
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'T_BurningFluff_34x38_Sprite_1'",
+            "ObjectPath": "/Game/Art/Sprites/BurnyFluff/T_BurningFluff_34x38_Sprite_1.1"
+          },
+          "FrameRun": 1
+        }
+      ],
+      "DefaultMaterial": {
+        "ObjectName": "MaterialInstanceConstant'MI_BurnyFluff'",
+        "ObjectPath": "/Game/Art/Sprites/BurnyFluff/MI_BurnyFluff.0"
+      }
+    }
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "Type": "UserDefinedEnum",
+    "Name": "ERecipeType",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedEnum'",
+    "Package": "/Game/Blueprints/Items/ERecipeType",
+    "Properties": {
+      "DisplayNameMap": [
+        {
+          "Key": "NewEnumerator0",
+          "Value": {
+            "Namespace": "",
+            "Key": "3C9134F8404003B92A04B6AE8A04067A",
+            "SourceString": "Resource",
+            "LocalizedString": "Resource"
+          }
+        },
+        {
+          "Key": "NewEnumerator1",
+          "Value": {
+            "Namespace": "",
+            "Key": "2777D7CC48119FB8036369A8DF9A3577",
+            "SourceString": "Monster",
+            "LocalizedString": "Monster"
+          }
+        },
+        {
+          "Key": "NewEnumerator2",
+          "Value": {
+            "Namespace": "",
+            "Key": "5ED4DC62467750CF8E4D9F84D2454918",
+            "SourceString": "Structure",
+            "LocalizedString": "Structure"
+          }
+        }
+      ]
+    },
+    "Names": {
+      "ERecipeType::NewEnumerator0": 0,
+      "ERecipeType::NewEnumerator1": 1,
+      "ERecipeType::NewEnumerator2": 2,
+      "ERecipeType::ERecipeType_MAX": 3
+    },
+    "CppForm": "Namespaced"
+  }
+]

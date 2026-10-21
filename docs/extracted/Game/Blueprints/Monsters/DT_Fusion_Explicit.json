@@ -1,0 +1,149 @@
+[
+  {
+    "Type": "DataTable",
+    "Name": "DT_Fusion_Explicit",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DataTable'",
+    "Package": "/Game/Blueprints/Monsters/DT_Fusion_Explicit",
+    "Properties": {
+      "RowStruct": {
+        "ObjectName": "UserDefinedStruct'S_FusionTable'",
+        "ObjectPath": "/Game/Blueprints/Monsters/S_FusionTable.0"
+      }
+    },
+    "Rows": {
+      "Slime+1FireAny": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "RedSlime"
+      },
+      "Slime+1WaterAny": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "BlueSlime"
+      },
+      "Slime+1NatureAny": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "GreenSlime"
+      },
+      "Slime+1EnergyAny": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "YellowSlime"
+      },
+      "StickGolem+Lavapod": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "FlintGolem"
+      },
+      "TwitchyFluff+RedSlime": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "BurnyFluff"
+      },
+      "BoneCrawler+Brachillo": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "WaveCreeper"
+      },
+      "Imp+DemonSprout": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "TorchDemon"
+      },
+      "ForestSprite+CaveTroll": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "HammerDruid"
+      },
+      "Wintlet+Teddo": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "LostYeti"
+      },
+      "Scout+GoblinPillager": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "GoblinGunner"
+      },
+      "GoblinGunner+Ignibos": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "RagingGunner"
+      },
+      "SmallTooth+Flicko": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Wereshark"
+      },
+      "Merkid+GoblinFisher": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "MerfolkLancer"
+      },
+      "Banshee+1FireAny": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "HotBanshee"
+      },
+      "Slime+Noodle": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "LongSlime"
+      },
+      "FloatingHelmet+GleSha": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "FloatingArmor"
+      },
+      "Banshee+SmallTooth": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "GhostDog"
+      },
+      "Zombie+GoblinPillager": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "ZombieGoblin"
+      },
+      "Zombie+Slime": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "ZombieSlime"
+      },
+      "Plibu+Ork": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Teddo"
+      },
+      "Vampirekid+saka": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "VampireAdept"
+      },
+      "SaltySailor+BuzzingSniper": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "DrownedBucaneer"
+      },
+      "Corolus+CloudDrake": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Borealus"
+      },
+      "Scout+PenguinWarrior": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "TundraRanger"
+      },
+      "Brachillo+Fortifisand": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Brachesert"
+      },
+      "Gekklar+Clawless": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Bandikko"
+      },
+      "Flicko+Electrofly": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Electrolicko"
+      },
+      "SteelHead+Skullhead": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "DiamondHead"
+      },
+      "Solsun+Crowmere": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Lunamoon"
+      },
+      "TorchDemon+Dozz": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "MoltenDemon"
+      },
+      "HammerDruid+Eplepe": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "GreatDryad"
+      },
+      "LostYeti+RighteousHand": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "StrongYeti"
+      },
+      "Dragonling+LostYeti": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "WhiteDragonling"
+      },
+      "CloudElemental+CuteAbomination": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "StormElemental"
+      },
+      "Sharptail+TorchDemon": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Flamtail"
+      },
+      "ScaleDisciple+Dozz": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "CursedScale"
+      },
+      "ScaleDisciple+Phoenix": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "DraconidCommander"
+      },
+      "AnchoredSoul+Corolus": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Floro"
+      },
+      "AnchoredSoul+Gnome": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Sunchi"
+      },
+      "Phoenix+Leggy": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Stormwing"
+      },
+      "DemonSprout+CursedScale": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "Deathbloom"
+      },
+      "DraconidCommander+FloatingArmor": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "InfernalBlade"
+      },
+      "FloatingArmor+Crowmere": {
+        "Result_2_67E97D374C78BA04E18A94BD8E128359": "TwilightArmor"
+      }
+    }
+  }
+]

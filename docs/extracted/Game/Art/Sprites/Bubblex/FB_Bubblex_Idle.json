@@ -1,0 +1,32 @@
+[
+  {
+    "Type": "PaperFlipbook",
+    "Name": "FB_Bubblex_Idle",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PaperFlipbook'",
+    "Package": "/Game/Art/Sprites/Bubblex/FB_Bubblex_Idle",
+    "Properties": {
+      "FramesPerSecond": 2.0,
+      "KeyFrames": [
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'T_Bubblex_62x53_Sprite_0'",
+            "ObjectPath": "/Game/Art/Sprites/Bubblex/T_Bubblex_62x53_Sprite_0.1"
+          },
+          "FrameRun": 1
+        },
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'T_Bubblex_62x53_Sprite_1'",
+            "ObjectPath": "/Game/Art/Sprites/Bubblex/T_Bubblex_62x53_Sprite_1.1"
+          },
+          "FrameRun": 1
+        }
+      ],
+      "DefaultMaterial": {
+        "ObjectName": "MaterialInstanceConstant'MI_Bubblex'",
+        "ObjectPath": "/Game/Art/Sprites/Bubblex/MI_Bubblex.0"
+      }
+    }
+  }
+]

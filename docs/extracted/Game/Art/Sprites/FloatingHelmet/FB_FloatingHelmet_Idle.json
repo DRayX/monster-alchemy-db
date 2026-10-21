@@ -1,0 +1,32 @@
+[
+  {
+    "Type": "PaperFlipbook",
+    "Name": "FB_FloatingHelmet_Idle",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PaperFlipbook'",
+    "Package": "/Game/Art/Sprites/FloatingHelmet/FB_FloatingHelmet_Idle",
+    "Properties": {
+      "FramesPerSecond": 2.0,
+      "KeyFrames": [
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'FloatingHelmet_87x47_Sprite_0'",
+            "ObjectPath": "/Game/Art/Sprites/FloatingHelmet/FloatingHelmet_87x47_Sprite_0.1"
+          },
+          "FrameRun": 1
+        },
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'FloatingHelmet_87x47_Sprite_1'",
+            "ObjectPath": "/Game/Art/Sprites/FloatingHelmet/FloatingHelmet_87x47_Sprite_1.1"
+          },
+          "FrameRun": 1
+        }
+      ],
+      "DefaultMaterial": {
+        "ObjectName": "MaterialInstanceConstant'MI_FloatingHelmet'",
+        "ObjectPath": "/Game/Art/Sprites/FloatingHelmet/MI_FloatingHelmet.0"
+      }
+    }
+  }
+]

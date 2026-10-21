@@ -1,0 +1,120 @@
+[
+  {
+    "Type": "UserDefinedStruct",
+    "Name": "S_ActiveSkillTable",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedStruct'",
+    "Package": "/Game/Blueprints/Skills/S_ActiveSkillTable",
+    "Properties": {
+      "Guid": "A059B6DD-405B4DEC-B03AAC9D-417B0848"
+    },
+    "ChildProperties": [
+      {
+        "Type": "TextProperty",
+        "Name": "Name_7_B2011EDC46DA38B7489B95BC36A3F665",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Description_13_F809F5C347614A1081E02CAF266F1AEE",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Targetting_10_66D835194A6C6245E8AFE896C8945AC6",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'ETargettingType'",
+          "ObjectPath": "/Game/Blueprints/Skills/ETargettingType.0"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "MonsterType_20_84B6964C459960F71A9B439B140030D7",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'EMonsterType'",
+          "ObjectPath": "/Game/Blueprints/Monsters/EMonsterType.0"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'EAttackType'",
+          "ObjectPath": "/Game/Blueprints/Monsters/EAttackType.0"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Scaling_29_84937C3241B90A63346221AD44329CAA",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'EScaling'",
+          "ObjectPath": "/Game/Blueprints/Skills/EScaling.0"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "SoftClassProperty",
+        "Name": "Skill_4_76DA577F4509D98E00AD068AA07AD2AD",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 48,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "BlueprintGeneratedClass'O_ActiveSkill_C'",
+          "ObjectPath": "/Game/Blueprints/Skills/O_ActiveSkill.0"
+        }
+      }
+    ],
+    "StructFlags": 0,
+    "DefaultProperties": {
+      "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+        "CultureInvariantString": null
+      },
+      "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+        "CultureInvariantString": null
+      },
+      "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+      "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator0",
+      "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator0",
+      "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator0",
+      "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 0,
+      "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 50,
+      "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+        "AssetPathName": "",
+        "SubPathString": ""
+      }
+    }
+  }
+]

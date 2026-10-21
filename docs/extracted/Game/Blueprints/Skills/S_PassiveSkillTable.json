@@ -1,0 +1,37 @@
+[
+  {
+    "Type": "UserDefinedStruct",
+    "Name": "S_PassiveSkillTable",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedStruct'",
+    "Package": "/Game/Blueprints/Skills/S_PassiveSkillTable",
+    "Properties": {
+      "Guid": "239828B5-4D776B59-08820785-A2E59D74"
+    },
+    "ChildProperties": [
+      {
+        "Type": "TextProperty",
+        "Name": "Name_10_76DA577F4509D98E00AD068AA07AD2AD",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      }
+    ],
+    "StructFlags": 0,
+    "DefaultProperties": {
+      "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+        "CultureInvariantString": null
+      },
+      "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+        "CultureInvariantString": null
+      }
+    }
+  }
+]

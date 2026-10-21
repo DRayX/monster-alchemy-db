@@ -1,0 +1,32 @@
+[
+  {
+    "Type": "PaperFlipbook",
+    "Name": "FB_Chameledrake_Idle",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PaperFlipbook'",
+    "Package": "/Game/Art/Sprites/Chameledrake/FB_Chameledrake_Idle",
+    "Properties": {
+      "FramesPerSecond": 2.0,
+      "KeyFrames": [
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'T_Chameledrake_72x42_Sprite_0'",
+            "ObjectPath": "/Game/Art/Sprites/Chameledrake/T_Chameledrake_72x42_Sprite_0.1"
+          },
+          "FrameRun": 1
+        },
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'T_Chameledrake_72x42_Sprite_1'",
+            "ObjectPath": "/Game/Art/Sprites/Chameledrake/T_Chameledrake_72x42_Sprite_1.1"
+          },
+          "FrameRun": 1
+        }
+      ],
+      "DefaultMaterial": {
+        "ObjectName": "MaterialInstanceConstant'MI_Chameledrake'",
+        "ObjectPath": "/Game/Art/Sprites/Chameledrake/MI_Chameledrake.0"
+      }
+    }
+  }
+]

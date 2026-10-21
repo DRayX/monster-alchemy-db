@@ -1,0 +1,32 @@
+[
+  {
+    "Type": "PaperFlipbook",
+    "Name": "FB_FerrousKnuckle_Idle",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PaperFlipbook'",
+    "Package": "/Game/Art/Sprites/FerrousKnuckle/FB_FerrousKnuckle_Idle",
+    "Properties": {
+      "FramesPerSecond": 2.0,
+      "KeyFrames": [
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'T_GiantRobot_83x73_Sprite_0'",
+            "ObjectPath": "/Game/Art/Sprites/FerrousKnuckle/T_GiantRobot_83x73_Sprite_0.1"
+          },
+          "FrameRun": 1
+        },
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'T_GiantRobot_83x73_Sprite_1'",
+            "ObjectPath": "/Game/Art/Sprites/FerrousKnuckle/T_GiantRobot_83x73_Sprite_1.1"
+          },
+          "FrameRun": 1
+        }
+      ],
+      "DefaultMaterial": {
+        "ObjectName": "MaterialInstanceConstant'MI_FerrousKnuckle'",
+        "ObjectPath": "/Game/Art/Sprites/FerrousKnuckle/MI_FerrousKnuckle.0"
+      }
+    }
+  }
+]

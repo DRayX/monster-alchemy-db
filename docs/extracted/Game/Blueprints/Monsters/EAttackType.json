@@ -1,0 +1,67 @@
+[
+  {
+    "Type": "UserDefinedEnum",
+    "Name": "EAttackType",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedEnum'",
+    "Package": "/Game/Blueprints/Monsters/EAttackType",
+    "Properties": {
+      "DisplayNameMap": [
+        {
+          "Key": "NewEnumerator0",
+          "Value": {
+            "Namespace": "",
+            "Key": "618680F04C371B47BF2F1CA62B8B20D5",
+            "SourceString": "Any",
+            "LocalizedString": "Any"
+          }
+        },
+        {
+          "Key": "NewEnumerator1",
+          "Value": {
+            "Namespace": "",
+            "Key": "9320FFBB41C85EAE612416B61B98A009",
+            "SourceString": "Strike",
+            "LocalizedString": "Strike"
+          }
+        },
+        {
+          "Key": "NewEnumerator2",
+          "Value": {
+            "Namespace": "",
+            "Key": "484B4F5A4CA3555271E098ADCB8F4891",
+            "SourceString": "Slash",
+            "LocalizedString": "Slash"
+          }
+        },
+        {
+          "Key": "NewEnumerator3",
+          "Value": {
+            "Namespace": "",
+            "Key": "04C588E04FB906FC9C68E8A5FE151D6E",
+            "SourceString": "Projectile",
+            "LocalizedString": "Projectile"
+          }
+        },
+        {
+          "Key": "NewEnumerator4",
+          "Value": {
+            "Namespace": "",
+            "Key": "64ED6DCA497028C09791FAA326518BFF",
+            "SourceString": "Magic",
+            "LocalizedString": "Magic"
+          }
+        }
+      ]
+    },
+    "Names": {
+      "EAttackType::NewEnumerator0": 0,
+      "EAttackType::NewEnumerator1": 1,
+      "EAttackType::NewEnumerator2": 2,
+      "EAttackType::NewEnumerator3": 3,
+      "EAttackType::NewEnumerator4": 4,
+      "EAttackType::EAttackType_MAX": 5
+    },
+    "CppForm": "Namespaced"
+  }
+]

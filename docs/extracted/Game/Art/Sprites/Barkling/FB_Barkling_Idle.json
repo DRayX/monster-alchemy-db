@@ -1,0 +1,32 @@
+[
+  {
+    "Type": "PaperFlipbook",
+    "Name": "FB_Barkling_Idle",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PaperFlipbook'",
+    "Package": "/Game/Art/Sprites/Barkling/FB_Barkling_Idle",
+    "Properties": {
+      "FramesPerSecond": 2.0,
+      "KeyFrames": [
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'BarklingV2_Sprite_0'",
+            "ObjectPath": "/Game/Art/Sprites/Barkling/BarklingV2_Sprite_0.1"
+          },
+          "FrameRun": 1
+        },
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'BarklingV2_Sprite_1'",
+            "ObjectPath": "/Game/Art/Sprites/Barkling/BarklingV2_Sprite_1.1"
+          },
+          "FrameRun": 1
+        }
+      ],
+      "DefaultMaterial": {
+        "ObjectName": "MaterialInstanceConstant'MI_Barkling'",
+        "ObjectPath": "/Game/Art/Sprites/Barkling/MI_Barkling.0"
+      }
+    }
+  }
+]

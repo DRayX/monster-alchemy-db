@@ -1,0 +1,32 @@
+[
+  {
+    "Type": "PaperFlipbook",
+    "Name": "FB_Sunchi_Idle",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PaperFlipbook'",
+    "Package": "/Game/Art/Sprites/Sunchi/FB_Sunchi_Idle",
+    "Properties": {
+      "FramesPerSecond": 2.0,
+      "KeyFrames": [
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'T_Sunchi_61x37_Sprite_0'",
+            "ObjectPath": "/Game/Art/Sprites/Sunchi/T_Sunchi_61x37_Sprite_0.1"
+          },
+          "FrameRun": 1
+        },
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'T_Sunchi_61x37_Sprite_1'",
+            "ObjectPath": "/Game/Art/Sprites/Sunchi/T_Sunchi_61x37_Sprite_1.1"
+          },
+          "FrameRun": 1
+        }
+      ],
+      "DefaultMaterial": {
+        "ObjectName": "MaterialInstanceConstant'MI_Sunchi'",
+        "ObjectPath": "/Game/Art/Sprites/Sunchi/MI_Sunchi.0"
+      }
+    }
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "name": "monster-alchemy-db",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monster Alchemy Database",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc -p jsconfig.json --noEmit",
+    "serve": "pnpm dlx serve -l 8080 ./docs"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vue": "3.5.44",
+    "vue-router": "5.4.0"
+  }
+}

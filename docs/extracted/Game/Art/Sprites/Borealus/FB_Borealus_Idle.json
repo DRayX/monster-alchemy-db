@@ -1,0 +1,32 @@
+[
+  {
+    "Type": "PaperFlipbook",
+    "Name": "FB_Borealus_Idle",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PaperFlipbook'",
+    "Package": "/Game/Art/Sprites/Borealus/FB_Borealus_Idle",
+    "Properties": {
+      "FramesPerSecond": 2.0,
+      "KeyFrames": [
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'T_Borealus_120X68_Sprite_0'",
+            "ObjectPath": "/Game/Art/Sprites/Borealus/T_Borealus_120X68_Sprite_0.1"
+          },
+          "FrameRun": 1
+        },
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'T_Borealus_120X68_Sprite_1'",
+            "ObjectPath": "/Game/Art/Sprites/Borealus/T_Borealus_120X68_Sprite_1.1"
+          },
+          "FrameRun": 1
+        }
+      ],
+      "DefaultMaterial": {
+        "ObjectName": "MaterialInstanceConstant'MI_Borealus'",
+        "ObjectPath": "/Game/Art/Sprites/Borealus/MI_Borealus.0"
+      }
+    }
+  }
+]

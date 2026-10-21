@@ -1,0 +1,1459 @@
+[
+  {
+    "Type": "DataTable",
+    "Name": "DT_ResourceData",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DataTable'",
+    "Package": "/Game/Sprites/Tables/DT_ResourceData",
+    "Properties": {
+      "RowStruct": {
+        "ObjectName": "UserDefinedStruct'S_ResourceData'",
+        "ObjectPath": "/Game/Sprites/Tables/S_ResourceData.0"
+      }
+    },
+    "Rows": {
+      "Artifact": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Artifact_Name",
+          "SourceString": "Artifact",
+          "LocalizedString": "Artifact"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Artifact_Description",
+          "SourceString": "Magic device used to comunicate between planes of existence. It seems valuable; it would be a big problem if you lost it.",
+          "LocalizedString": "Magic device used to comunicate between planes of existence. It seems valuable; it would be a big problem if you lost it."
+        }
+      },
+      "BlackWood": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "BlackWood_Name",
+          "SourceString": "Black Wood",
+          "LocalizedString": "Black Wood"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "BlackWood_Description",
+          "SourceString": "Hard fiberlike substance from special trees. It is harder than regular wood. Can be used to build.",
+          "LocalizedString": "Hard fiberlike substance from special trees. It is harder than regular wood. Can be used to build."
+        }
+      },
+      "BloodLiquor": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "BloodLiquor_Name",
+          "SourceString": "Blood Liquor",
+          "LocalizedString": "Blood Liquor"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "BloodLiquor_Description",
+          "SourceString": "Drink made mostly of blood. It is used in dark rituals to summon blood-loving creatures. Certain creatures can become obsessed with it.",
+          "LocalizedString": "Drink made mostly of blood. It is used in dark rituals to summon blood-loving creatures. Certain creatures can become obsessed with it."
+        }
+      },
+      "Bone": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Bone_Name",
+          "SourceString": "Bone",
+          "LocalizedString": "Bone"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Bone_Description",
+          "SourceString": "Medium size bone. It seems simple but can be used in rituals and drives some creatures crazy.",
+          "LocalizedString": "Medium size bone. It seems simple but can be used in rituals and drives some creatures crazy."
+        }
+      },
+      "Boots": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Boots_Name",
+          "SourceString": "Boots",
+          "LocalizedString": "Boots"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Boots_Description",
+          "SourceString": "5+ speed",
+          "LocalizedString": "5+ speed"
+        }
+      },
+      "CrystaliumOre": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "CrystaliumOre_Name",
+          "SourceString": "Crystalium Ore",
+          "LocalizedString": "Crystalium Ore"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "CrystaliumOre_Description",
+          "SourceString": "Rare mineral. It is capable of trapping light.",
+          "LocalizedString": "Rare mineral. It is capable of trapping light."
+        }
+      },
+      "CoagulatedBlood": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "CoagulatedBlood_Name",
+          "SourceString": "Coagulated Blood",
+          "LocalizedString": "Coagulated Blood"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "CoagulatedBlood_Description",
+          "SourceString": "Coagulated blood obtained from blood-feeding creatures. Can be processed to obtain liquid blood.",
+          "LocalizedString": "Coagulated blood obtained from blood-feeding creatures. Can be processed to obtain liquid blood."
+        }
+      },
+      "Coin": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Coin_Name",
+          "SourceString": "Coin",
+          "LocalizedString": "Coin"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Coin_Description",
+          "SourceString": "The currency from this world. Can be exchanged for items.",
+          "LocalizedString": "The currency from this world. Can be exchanged for items."
+        }
+      },
+      "CondensedSpores": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "CondensedSpores_Name",
+          "SourceString": "Condensed Spores",
+          "LocalizedString": "Condensed Spores"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "CondensedSpores_Description",
+          "SourceString": "Cluster of spores that formed naturally.",
+          "LocalizedString": "Cluster of spores that formed naturally."
+        }
+      },
+      "Core": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Core_Name",
+          "SourceString": "Core",
+          "LocalizedString": "Core"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Core_Description",
+          "SourceString": "A complex device that generates a large amount of energy. It can be used to power automatons.",
+          "LocalizedString": "A complex device that generates a large amount of energy. It can be used to power automatons."
+        }
+      },
+      "Corpse": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Corpse_Name",
+          "SourceString": "Corpse",
+          "LocalizedString": "Corpse"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Corpse_Description",
+          "SourceString": "A lifeless body. It has several uses especially in necromancy.",
+          "LocalizedString": "A lifeless body. It has several uses especially in necromancy."
+        }
+      },
+      "CrystalIngot": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "CrystalIngot_Name",
+          "SourceString": "Crystal Ingot",
+          "LocalizedString": "Crystal Ingot"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "CrystalIngot_Description",
+          "SourceString": "Ingot made of Crystalium. Used in alchemy to reinforce magical properties.",
+          "LocalizedString": "Ingot made of Crystalium. Used in alchemy to reinforce magical properties."
+        }
+      },
+      "CursedSkull": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "CursedSkull_Name",
+          "SourceString": "Cursed Skull",
+          "LocalizedString": "Cursed Skull"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "CursedSkull_Description",
+          "SourceString": "Living skull due to a powerful curse. It contains a considerable amount of negative energy.",
+          "LocalizedString": "Living skull due to a powerful curse. It contains a considerable amount of negative energy."
+        }
+      },
+      "DeathDust": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "DeathDust_Name",
+          "SourceString": "Death Dust",
+          "LocalizedString": "Death Dust"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "DeathDust_Description",
+          "SourceString": "Powder capable of absorbing vitality. Used in advanced necromancy rituals.",
+          "LocalizedString": "Powder capable of absorbing vitality. Used in advanced necromancy rituals."
+        }
+      },
+      "DragonsDraught": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "DragonsDraught_Name",
+          "SourceString": "Dragon's Draught",
+          "LocalizedString": "Dragon's Draught"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "DragonsDraught_Description",
+          "SourceString": "Fermented beverage with magical properties. It's like drinking fire.",
+          "LocalizedString": "Fermented beverage with magical properties. It's like drinking fire."
+        }
+      },
+      "DampDough": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "DampDough_Name",
+          "SourceString": "Damp Dough",
+          "LocalizedString": "Damp Dough"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "DampDough_Description",
+          "SourceString": "Fermented paste that retains a lot of moisture.",
+          "LocalizedString": "Fermented paste that retains a lot of moisture."
+        }
+      },
+      "Dung": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Dung_Name",
+          "SourceString": "Dung",
+          "LocalizedString": "Dung"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Dung_Description",
+          "SourceString": "Deposition from a creature. Even if it doesn't smell very well some creatures like it.",
+          "LocalizedString": "Deposition from a creature. Even if it doesn't smell very well some creatures like it."
+        }
+      },
+      "Ectoplasm": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Ectoplasm_Name",
+          "SourceString": "Ectoplasm",
+          "LocalizedString": "Ectoplasm"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Ectoplasm_Description",
+          "SourceString": "Remains of ghostly creatures. Viscous to the touch and difficult to physically contain.",
+          "LocalizedString": "Remains of ghostly creatures. Viscous to the touch and difficult to physically contain."
+        }
+      },
+      "EmberGel": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "EmberGel_Name",
+          "SourceString": "Ember Gel",
+          "LocalizedString": "Ember Gel"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "EmberGel_Description",
+          "SourceString": "Viscous substance made from cartilage. It gives a pleasant warmth.",
+          "LocalizedString": "Viscous substance made from cartilage. It gives a pleasant warmth."
+        }
+      },
+      "FeralBait": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "FeralBait_Name",
+          "SourceString": "Feral Bait",
+          "LocalizedString": "Feral Bait"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "FeralBait_Description",
+          "SourceString": "Mixture of elements that activate the instinct of certain beasts.",
+          "LocalizedString": "Mixture of elements that activate the instinct of certain beasts."
+        }
+      },
+      "FerrousTincture": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "FerrousTincture_Name",
+          "SourceString": "Ferrous Tincture",
+          "LocalizedString": "Ferrous Tincture"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "FerrousTincture_Description",
+          "SourceString": "Potion made from iron. It remains in a liquid state at room temperature.",
+          "LocalizedString": "Potion made from iron. It remains in a liquid state at room temperature."
+        }
+      },
+      "FetidPotion": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "FetidPotion_Name",
+          "SourceString": "Fetid Potion",
+          "LocalizedString": "Fetid Potion"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "FetidPotion_Description",
+          "SourceString": "Potion that makes you emit a distinctive scent that repels the weakest monsters.",
+          "LocalizedString": "Potion that makes you emit a distinctive scent that repels the weakest monsters."
+        }
+      },
+      "FieryHeart": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "FieryHeart_Name",
+          "SourceString": "Fiery Heart",
+          "LocalizedString": "Fiery Heart"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "FieryHeart_Description",
+          "SourceString": "Artificial heart made from vegetables. Just being near it conveys you with determination.",
+          "LocalizedString": "Artificial heart made from vegetables. Just being near it conveys you with determination."
+        }
+      },
+      "FlameTendon": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "FlameTendon_Name",
+          "SourceString": "Flame Tendon",
+          "LocalizedString": "Flame Tendon"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "FlameTendon_Description",
+          "SourceString": "Connective tissue that burns to the touch. It is believed that the hot blood of demons causes this effect.",
+          "LocalizedString": "Connective tissue that burns to the touch. It is believed that the hot blood of demons causes this effect."
+        }
+      },
+      "FleshMeltingAcid": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "FleshMeltingAcid_Name",
+          "SourceString": "Flesh Melting Acid",
+          "LocalizedString": "Flesh Melting Acid"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "FleshMeltingAcid_Description",
+          "SourceString": "Corrosive acid capable of dissolving most organic matter.",
+          "LocalizedString": "Corrosive acid capable of dissolving most organic matter."
+        }
+      },
+      "FrostVeins": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "FrostVeins_Name",
+          "SourceString": "Frost Veins",
+          "LocalizedString": "Frost Veins"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "FrostVeins_Description",
+          "SourceString": "System of branching blood vessels containing frozen fluids. They coalesce into a surprisingly strong structure.",
+          "LocalizedString": "System of branching blood vessels containing frozen fluids. They coalesce into a surprisingly strong structure."
+        }
+      },
+      "FungalExtract": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "FungalExtract_Name",
+          "SourceString": "Fungal Extract",
+          "LocalizedString": "Fungal Extract"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "FungalExtract_Description",
+          "SourceString": "Extract of spores from different types of mushrooms.",
+          "LocalizedString": "Extract of spores from different types of mushrooms."
+        }
+      },
+      "GastricSac": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "GastricSac_Name",
+          "SourceString": "Gastric Sac",
+          "LocalizedString": "Gastric Sac"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "GastricSac_Description",
+          "SourceString": "Organ containing corrosive fluids that can digest almost anything.",
+          "LocalizedString": "Organ containing corrosive fluids that can digest almost anything."
+        }
+      },
+      "Goo": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Goo_Name",
+          "SourceString": "Goo",
+          "LocalizedString": "Goo"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Goo_Description",
+          "SourceString": "Viscous substance from slimes. It can be used in some potions as a thickener.",
+          "LocalizedString": "Viscous substance from slimes. It can be used in some potions as a thickener."
+        }
+      },
+      "GooeyMix": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "GooeyMix_Name",
+          "SourceString": "Gooey Concentrate",
+          "LocalizedString": "Gooey Concentrate"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "GooeyMix_Description",
+          "SourceString": "Mixture made from condensed goo. Its widely used in alchemy.",
+          "LocalizedString": "Mixture made from condensed goo. Its widely used in alchemy."
+        }
+      },
+      "HiemalBeverage": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "HiemalBeverage_Name",
+          "SourceString": "Hiemal Beverage",
+          "LocalizedString": "Hiemal Beverage"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "HiemalBeverage_Description",
+          "SourceString": "Fermented beverage that freezes on contact.",
+          "LocalizedString": "Fermented beverage that freezes on contact."
+        }
+      },
+      "LiquidShadow": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "LiquidShadow_Name",
+          "SourceString": "Liquid Shadow",
+          "LocalizedString": "Liquid Shadow"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "LiquidShadow_Description",
+          "SourceString": "Dark liquid made from liquefied shadows.",
+          "LocalizedString": "Dark liquid made from liquefied shadows."
+        }
+      },
+      "ProteinConcentrate": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "ProteinConcentrate_Name",
+          "SourceString": "Protein Concentrate",
+          "LocalizedString": "Protein Concentrate"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "ProteinConcentrate_Description",
+          "SourceString": "Ancient mixture that promotes the abnormal growth of some creatures.",
+          "LocalizedString": "Ancient mixture that promotes the abnormal growth of some creatures."
+        }
+      },
+      "Gunpowder": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Gunpowder_Name",
+          "SourceString": "Gunpowder",
+          "LocalizedString": "Gunpowder"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Gunpowder_Description",
+          "SourceString": "Highly flammable powder.",
+          "LocalizedString": "Highly flammable powder."
+        }
+      },
+      "HollowBerry": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "HollowBerry_Name",
+          "SourceString": "Hollow Berry",
+          "LocalizedString": "Hollow Berry"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "HollowBerry_Description",
+          "SourceString": "Strange berry that despite being empty inside fills you up when you eat it. It has a very salty taste.",
+          "LocalizedString": "Strange berry that despite being empty inside fills you up when you eat it. It has a very salty taste."
+        }
+      },
+      "HydroGland": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "HydroGland_Name",
+          "SourceString": "Hydro Gland",
+          "LocalizedString": "Hydro Gland"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "HydroGland_Description",
+          "SourceString": "Organ specialized for producing liquid or secretions. Aquatic creatures usually have it.",
+          "LocalizedString": "Organ specialized for producing liquid or secretions. Aquatic creatures usually have it."
+        }
+      },
+      "Incense": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Incense_Name",
+          "SourceString": "Incense",
+          "LocalizedString": "Incense"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Incense_Description",
+          "SourceString": "Plant resin that gives off a pleasant aroma when burned. It has spiritual properties.",
+          "LocalizedString": "Plant resin that gives off a pleasant aroma when burned. It has spiritual properties."
+        }
+      },
+      "Egg": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Egg_Name",
+          "SourceString": "Insect Egg",
+          "LocalizedString": "Insect Egg"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Egg_Description",
+          "SourceString": "An egg that can be altered to become different types of insect creatures.",
+          "LocalizedString": "An egg that can be altered to become different types of insect creatures."
+        }
+      },
+      "IronIngot": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "IronIngot_Name",
+          "SourceString": "Iron Ingot",
+          "LocalizedString": "Iron Ingot"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "IronIngot_Description",
+          "SourceString": "Metal made into a convenient form that can be used in more advanced constructions.",
+          "LocalizedString": "Metal made into a convenient form that can be used in more advanced constructions."
+        }
+      },
+      "IronOre": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "IronOre_Name",
+          "SourceString": "Iron Ore",
+          "LocalizedString": "Iron Ore"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "IronOre_Description",
+          "SourceString": "Raw iron bearing mineral.",
+          "LocalizedString": "Raw iron bearing mineral."
+        }
+      },
+      "Liconut": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Liconut_Name",
+          "SourceString": "Liconut",
+          "LocalizedString": "Liconut"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Liconut_Description",
+          "SourceString": "Bumpy fruit with energizing properties. It has a sweet taste with a bitter aftertaste.",
+          "LocalizedString": "Bumpy fruit with energizing properties. It has a sweet taste with a bitter aftertaste."
+        }
+      },
+      "MagicManure": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "MagicManure_Name",
+          "SourceString": "Magic Manure",
+          "LocalizedString": "Magic Manure"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "MagicManure_Description",
+          "SourceString": "Manure made with so much love that it has acquired magical properties.",
+          "LocalizedString": "Manure made with so much love that it has acquired magical properties."
+        }
+      },
+      "MagicSand": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "MagicSand_Name",
+          "SourceString": "Magic Sand",
+          "LocalizedString": "Magic Sand"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "MagicSand_Description",
+          "SourceString": "Sand imbued with supernatural particles. It moves on its own.",
+          "LocalizedString": "Sand imbued with supernatural particles. It moves on its own."
+        }
+      },
+      "MagmaShard": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "MagmaShard_Name",
+          "SourceString": "Magma Shard",
+          "LocalizedString": "Magma Shard"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "MagmaShard_Description",
+          "SourceString": "Strange mineral that emits heat. It can form naturally under extreme conditions.",
+          "LocalizedString": "Strange mineral that emits heat. It can form naturally under extreme conditions."
+        }
+      },
+      "MarineEssence": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "MarineEssence_Name",
+          "SourceString": "Marine Essence",
+          "LocalizedString": "Marine Essence"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "MarineEssence_Description",
+          "SourceString": "Artificial liquid that channels the energy of the sea. It's not just salt water at all.",
+          "LocalizedString": "Artificial liquid that channels the energy of the sea. It's not just salt water at all."
+        }
+      },
+      "MoonCrystal": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "MoonCrystal_Name",
+          "SourceString": "Moon Crystal",
+          "LocalizedString": "Moon Crystal"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "MoonCrystal_Description",
+          "SourceString": "Very rare mineral. It is said to come from the moon of Behila. Very valuable because of it's supernatural properties.",
+          "LocalizedString": "Very rare mineral. It is said to come from the moon of Behila. Very valuable because of it's supernatural properties."
+        }
+      },
+      "MuddyPetal": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "MuddyPetal_Name",
+          "SourceString": "Muddy Petal",
+          "LocalizedString": "Muddy Petal"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "MuddyPetal_Description",
+          "SourceString": "Petal with special fibers that generate moisture. It is always wet.",
+          "LocalizedString": "Petal with special fibers that generate moisture. It is always wet."
+        }
+      },
+      "MutantSerum": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "MutantSerum_Name",
+          "SourceString": "Mutant Serum",
+          "LocalizedString": "Mutant Serum"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "MutantSerum_Description",
+          "SourceString": "Clear liquid with high genetic alteration properties. It should be used with caution.",
+          "LocalizedString": "Clear liquid with high genetic alteration properties. It should be used with caution."
+        }
+      },
+      "MysticUnguent": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "MysticUnguent_Name",
+          "SourceString": "Mystic Unguent",
+          "LocalizedString": "Mystic Unguent"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "MysticUnguent_Description",
+          "SourceString": "Soft smooth oily peparation capable of bestowing arcane power; most of the times.",
+          "LocalizedString": "Soft smooth oily peparation capable of bestowing arcane power; most of the times."
+        }
+      },
+      "Nabana": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Nabana_Name",
+          "SourceString": "Nabana",
+          "LocalizedString": "Nabana"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Nabana_Description",
+          "SourceString": "Crescent-shaped fruit. It possesses supernatural properties. It has a sophisticated acidic flavor.",
+          "LocalizedString": "Crescent-shaped fruit. It possesses supernatural properties. It has a sophisticated acidic flavor."
+        }
+      },
+      "ObsidianShard": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "ObsidianShard_Name",
+          "SourceString": "Obsidian Shard",
+          "LocalizedString": "Obsidian Shard"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "ObsidianShard_Description",
+          "SourceString": "Extremely resistant dark mineral. It is said that if sharpened, it can cut through spirits.",
+          "LocalizedString": "Extremely resistant dark mineral. It is said that if sharpened, it can cut through spirits."
+        }
+      },
+      "Oranite": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Oranite_Name",
+          "SourceString": "Oranite",
+          "LocalizedString": "Oranite"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Oranite_Description",
+          "SourceString": "Rare mineral that happens to resemble a fruit. For some reason it contains stored energy.",
+          "LocalizedString": "Rare mineral that happens to resemble a fruit. For some reason it contains stored energy."
+        }
+      },
+      "OsseousPlaster": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "OsseousPlaster_Name",
+          "SourceString": "Osseous Plaster",
+          "LocalizedString": "Osseous Plaster"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "OsseousPlaster_Description",
+          "SourceString": "Moldable clay that hardens with water. It is quite durable once hardened.",
+          "LocalizedString": "Moldable clay that hardens with water. It is quite durable once hardened."
+        }
+      },
+      "OtherwordlyEmulsion": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "OtherwordlyEmulsion_Name",
+          "SourceString": "Otherwordly Emulsion",
+          "LocalizedString": "Otherwordly Emulsion"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "OtherwordlyEmulsion_Description",
+          "SourceString": "Viscous mixture with a high spiritual charge. Ghosts are usually attracted to it.",
+          "LocalizedString": "Viscous mixture with a high spiritual charge. Ghosts are usually attracted to it."
+        }
+      },
+      "PressuredVapor": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "PressuredVapor_Name",
+          "SourceString": "Pressured Vapor",
+          "LocalizedString": "Pressured Vapor"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "PressuredVapor_Description",
+          "SourceString": "High pressure steam. It can be used to generate a lot of power.",
+          "LocalizedString": "High pressure steam. It can be used to generate a lot of power."
+        }
+      },
+      "PrismaticTonic": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "PrismaticTonic_Name",
+          "SourceString": "Prismatic Tonic",
+          "LocalizedString": "Prismatic Tonic"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "PrismaticTonic_Description",
+          "SourceString": "Energizing tonic that contains all the colors of the rainbow.",
+          "LocalizedString": "Energizing tonic that contains all the colors of the rainbow."
+        }
+      },
+      "PutridMixture": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "PutridMixture_Name",
+          "SourceString": "Putrid Mixture",
+          "LocalizedString": "Putrid Mixture"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "PutridMixture_Description",
+          "SourceString": "Potion made from flesh. It has a high number of microorganisms a fact that favors the mutation and creation of new creatures.",
+          "LocalizedString": "Potion made from flesh. It has a high number of microorganisms a fact that favors the mutation and creation of new creatures."
+        }
+      },
+      "StrengthPotion": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "StrengthPotion_Name",
+          "SourceString": "Quick Feet Potion",
+          "LocalizedString": "Quick Feet Potion"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "StrengthPotion_Description",
+          "SourceString": "Potion that makes your feet move faster without getting tired.",
+          "LocalizedString": "Potion that makes your feet move faster without getting tired."
+        }
+      },
+      "ReactiveDust": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "ReactiveDust_Name",
+          "SourceString": "Reactive Dust",
+          "LocalizedString": "Reactive Dust"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "ReactiveDust_Description",
+          "SourceString": "Unstable compound that reacts violently when mixed. Used to energize mixtures.",
+          "LocalizedString": "Unstable compound that reacts violently when mixed. Used to energize mixtures."
+        }
+      },
+      "FantasyCalx": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "FantasyCalx_Name",
+          "SourceString": "Fantasy Calx",
+          "LocalizedString": "Fantasy Calx"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "FantasyCalx_Description",
+          "SourceString": "Brilliant compound that reflects all colors of light. Just looking at it conveys a feeling of illusion.",
+          "LocalizedString": "Brilliant compound that reflects all colors of light. Just looking at it conveys a feeling of illusion."
+        }
+      },
+      "HealthPotion": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "HealthPotion_Name",
+          "SourceString": "Revitalizing Potion",
+          "LocalizedString": "Revitalizing Potion"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "HealthPotion_Description",
+          "SourceString": "Recovers 20 HP.",
+          "LocalizedString": "Recovers 20 HP."
+        }
+      },
+      "RitualPowder": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "RitualPowder_Name",
+          "SourceString": "Ritual Powder",
+          "LocalizedString": "Ritual Powder"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "RitualPowder_Description",
+          "SourceString": "Mixture of elements that amplify lunar waves. They are used in complex rituals.",
+          "LocalizedString": "Mixture of elements that amplify lunar waves. They are used in complex rituals."
+        }
+      },
+      "RottenMeat": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "RottenMeat_Name",
+          "SourceString": "Rotten Meat",
+          "LocalizedString": "Rotten Meat"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "RottenMeat_Description",
+          "SourceString": "Flesh from a creature that passed away too long ago.",
+          "LocalizedString": "Flesh from a creature that passed away too long ago."
+        }
+      },
+      "RottenMixture": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "RottenMixture_Name",
+          "SourceString": "Rotten Mixture",
+          "LocalizedString": "Rotten Mixture"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "RottenMixture_Description",
+          "SourceString": "Potion made from decaying flesh.",
+          "LocalizedString": "Potion made from decaying flesh."
+        }
+      },
+      "RoughFur": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "RoughFur_Name",
+          "SourceString": "Rough Fur",
+          "LocalizedString": "Rough Fur"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "RoughFur_Description",
+          "SourceString": "Thick coat of hair that provides insulation.",
+          "LocalizedString": "Thick coat of hair that provides insulation."
+        }
+      },
+      "Rurian": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Rurian_Name",
+          "SourceString": "Rurian",
+          "LocalizedString": "Rurian"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Rurian_Description",
+          "SourceString": "Spikey fruit with a rather peculiar smell when opened. It has a sweet taste.",
+          "LocalizedString": "Spikey fruit with a rather peculiar smell when opened. It has a sweet taste."
+        }
+      },
+      "Salt": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Salt_Name",
+          "SourceString": "Salt",
+          "LocalizedString": "Salt"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Salt_Description",
+          "SourceString": "White crystal-like compound that can be used in various ways.",
+          "LocalizedString": "White crystal-like compound that can be used in various ways."
+        }
+      },
+      "EnergyPotion": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "EnergyPotion_Name",
+          "SourceString": "Sanity Potion",
+          "LocalizedString": "Sanity Potion"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "EnergyPotion_Description",
+          "SourceString": "Recovers 50 Aura.",
+          "LocalizedString": "Recovers 50 Aura."
+        }
+      },
+      "RevivingPotion": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "RevivingPotion_Name",
+          "SourceString": "Reviving Potion",
+          "LocalizedString": "Reviving Potion"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "RevivingPotion_Description",
+          "SourceString": "Revives a monster with 50% HP.",
+          "LocalizedString": "Revives a monster with 50% HP."
+        }
+      },
+      "ScraggyMeat": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "ScraggyMeat_Name",
+          "SourceString": "Scraggy Meat",
+          "LocalizedString": "Scraggy Meat"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "ScraggyMeat_Description",
+          "SourceString": "Flesh from a creature that not very well nourished.",
+          "LocalizedString": "Flesh from a creature that not very well nourished."
+        }
+      },
+      "Seed": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Seed_Name",
+          "SourceString": "Seed",
+          "LocalizedString": "Seed"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Seed_Description",
+          "SourceString": "A valuable seed that is very sensitive to its environment. It can mutate depending on the conditions to which it is exposed.",
+          "LocalizedString": "A valuable seed that is very sensitive to its environment. It can mutate depending on the conditions to which it is exposed."
+        }
+      },
+      "ShadowFragment": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "ShadowFragment_Name",
+          "SourceString": "Shadow Fragment",
+          "LocalizedString": "Shadow Fragment"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "ShadowFragment_Description",
+          "SourceString": "Fragment originating from a solidified shadow. Its composition is strange and it absorbs light.",
+          "LocalizedString": "Fragment originating from a solidified shadow. Its composition is strange and it absorbs light."
+        }
+      },
+      "Feather": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Feather_Name",
+          "SourceString": "Shiny Feather",
+          "LocalizedString": "Shiny Feather"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Feather_Description",
+          "SourceString": "Rare feather of a winged creature. It is said to have spiritual properties.",
+          "LocalizedString": "Rare feather of a winged creature. It is said to have spiritual properties."
+        }
+      },
+      "SolidifiedCloud": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "SolidifiedCloud_Name",
+          "SourceString": "Solidified Cloud",
+          "LocalizedString": "Solidified Cloud"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "SolidifiedCloud_Description",
+          "SourceString": "Mineral composed mostly of water droplets in solid state. It is warm to the touch and surprisingly soft.",
+          "LocalizedString": "Mineral composed mostly of water droplets in solid state. It is warm to the touch and surprisingly soft."
+        }
+      },
+      "SoulCrystal": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "SoulCrystal_Name",
+          "SourceString": "Soul Crystal",
+          "LocalizedString": "Soul Crystal"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "SoulCrystal_Description",
+          "SourceString": "Mystic mineral that contains the soul of many creatures.",
+          "LocalizedString": "Mystic mineral that contains the soul of many creatures."
+        }
+      },
+      "SpringtimeHumus": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "SpringtimeHumus_Name",
+          "SourceString": "Springtime Humus",
+          "LocalizedString": "Springtime Humus"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "SpringtimeHumus_Description",
+          "SourceString": "Powerful fertilizer that stimulates cell growth. Smells like flowers.",
+          "LocalizedString": "Powerful fertilizer that stimulates cell growth. Smells like flowers."
+        }
+      },
+      "Stone": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Stone_Name",
+          "SourceString": "Stone",
+          "LocalizedString": "Stone"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Stone_Description",
+          "SourceString": "Hard substance formed of mineral matter. Can be used to build.",
+          "LocalizedString": "Hard substance formed of mineral matter. Can be used to build."
+        }
+      },
+      "SylvanInfusion": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "SylvanInfusion_Name",
+          "SourceString": "Sylvan Infusion",
+          "LocalizedString": "Sylvan Infusion"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "SylvanInfusion_Description",
+          "SourceString": "Organic mixture that emulates the essence of forests.",
+          "LocalizedString": "Organic mixture that emulates the essence of forests."
+        }
+      },
+      "PolarPowder": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "PolarPowder_Name",
+          "SourceString": "Polar Powder",
+          "LocalizedString": "Polar Powder"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "PolarPowder_Description",
+          "SourceString": "Compound that stays cold in any circumstance.",
+          "LocalizedString": "Compound that stays cold in any circumstance."
+        }
+      },
+      "ToxicBubble": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "ToxicBubble_Name",
+          "SourceString": "Ocular Bubble",
+          "LocalizedString": "Ocular Bubble"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "ToxicBubble_Description",
+          "SourceString": "Globe made of organic matter that contains toxic gases. It looks like an eye.",
+          "LocalizedString": "Globe made of organic matter that contains toxic gases. It looks like an eye."
+        }
+      },
+      "TeleportRune": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "TeleportRune_Name",
+          "SourceString": "Transmatter Rune",
+          "LocalizedString": "Transmatter Rune"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "TeleportRune_Description",
+          "SourceString": "Rune that allows you to teleport to the Alchemist Tower from almost anywhere. Once used it loses its power.",
+          "LocalizedString": "Rune that allows you to teleport to the Alchemist Tower from almost anywhere. Once used it loses its power."
+        }
+      },
+      "CircadianRune": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "CircadianRune_Name",
+          "SourceString": "Circadian Rune",
+          "LocalizedString": "Circadian Rune"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "CircadianRune_Description",
+          "SourceString": "Rune that allows you to alter between daytime and nighttime. Once used it loses its power.",
+          "LocalizedString": "Rune that allows you to alter between daytime and nighttime. Once used it loses its power."
+        }
+      },
+      "ResentmentSerum": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "ResentmentSerum_Name",
+          "SourceString": "Resentment Serum",
+          "LocalizedString": "Resentment Serum"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "ResentmentSerum_Description",
+          "SourceString": "Clear liquid that alters the matter it touches. It mutates it violently.",
+          "LocalizedString": "Clear liquid that alters the matter it touches. It mutates it violently."
+        }
+      },
+      "Wood": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Wood_Name",
+          "SourceString": "Wood",
+          "LocalizedString": "Wood"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Wood_Description",
+          "SourceString": "Hard fiberlike substance from trees. Can be used to build.",
+          "LocalizedString": "Hard fiberlike substance from trees. Can be used to build."
+        }
+      },
+      "WoodenShield": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "WoodenShield_Name",
+          "SourceString": "Wooden Shield",
+          "LocalizedString": "Wooden Shield"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "WoodenShield_Description",
+          "SourceString": "5+ defense",
+          "LocalizedString": "5+ defense"
+        }
+      },
+      "WoodenSword": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "WoodenSword_Name",
+          "SourceString": "Wooden Sword",
+          "LocalizedString": "Wooden Sword"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "WoodenSword_Description",
+          "SourceString": "5+ attack",
+          "LocalizedString": "5+ attack"
+        }
+      },
+      "WorkingGloves": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "WorkingGloves_Name",
+          "SourceString": "Working Gloves",
+          "LocalizedString": "Working Gloves"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "WorkingGloves_Description",
+          "SourceString": "5+ work",
+          "LocalizedString": "5+ work"
+        }
+      },
+      "Zana": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Zana_Name",
+          "SourceString": "Zana",
+          "LocalizedString": "Zana"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Zana_Description",
+          "SourceString": "Smooth fruit with revitalizing properties. It has a sweet and sour taste.",
+          "LocalizedString": "Smooth fruit with revitalizing properties. It has a sweet and sour taste."
+        }
+      },
+      "ZephyrDust": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "ZephyrDust_Name",
+          "SourceString": "Zephyr Dust",
+          "LocalizedString": "Zephyr Dust"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "ZephyrDust_Description",
+          "SourceString": "Powder with supernatural properties. It is said to channel the energy of the wind.",
+          "LocalizedString": "Powder with supernatural properties. It is said to channel the energy of the wind."
+        }
+      },
+      "TelepathyGloves": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "TelepathyGloves_Name",
+          "SourceString": "Telepathy Gloves",
+          "LocalizedString": "Telepathy Gloves"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "TelepathyGloves_Description",
+          "SourceString": "Gloves with arcane technology that allow moving Arcane Cubes from a distance.",
+          "LocalizedString": "Gloves with arcane technology that allow moving Arcane Cubes from a distance."
+        }
+      },
+      "EyeOpeningPendant": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "EyeOpeningPendant_Name",
+          "SourceString": "Eye-Opening Pendant",
+          "LocalizedString": "Eye-Opening Pendant"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "EyeOpeningPendant_Description",
+          "SourceString": "Necklace with arcane technology that allows activating Arcane Eyes.",
+          "LocalizedString": "Necklace with arcane technology that allows activating Arcane Eyes."
+        }
+      },
+      "FloaterBoots": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "FloaterBoots_Name",
+          "SourceString": "Floater Boots",
+          "LocalizedString": "Floater Boots"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "FloaterBoots_Description",
+          "SourceString": "Modified boots that allow crossing difficult terrain without taking damage.",
+          "LocalizedString": "Modified boots that allow crossing difficult terrain without taking damage."
+        }
+      },
+      "EtherealHarpoon": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "EtherealHarpoon_Name",
+          "SourceString": "Ethereal Harpoon",
+          "LocalizedString": "Ethereal Harpoon"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "EtherealHarpoon_Description",
+          "SourceString": "Magical harpoon that is controlled with the soul.",
+          "LocalizedString": "Magical harpoon that is controlled with the soul."
+        }
+      },
+      "Map_PirateIsland": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Map_PirateIsland_Name",
+          "SourceString": "Pirate Island Map",
+          "LocalizedString": "Pirate Island Map"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Map_PirateIsland_Description",
+          "SourceString": "Map with the sea route to get to Pirate Island. You'll need a boat.",
+          "LocalizedString": "Map with the sea route to get to Pirate Island. You'll need a boat."
+        }
+      },
+      "Map_BoboIsland": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Map_BoboIsland_Name",
+          "SourceString": "Bobo Island Map",
+          "LocalizedString": "Bobo Island Map"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Map_BoboIsland_Description",
+          "SourceString": "Map with the sea route to get to Bobo Island. You'll need a boat.",
+          "LocalizedString": "Map with the sea route to get to Bobo Island. You'll need a boat."
+        }
+      },
+      "Map_PlinkyIsland": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Map_PlinkyIsland_Name",
+          "SourceString": "Plinky Island Map",
+          "LocalizedString": "Plinky Island Map"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Map_PlinkyIsland_Description",
+          "SourceString": "Map with the sea route to get to Plinky Island. You'll need a boat.",
+          "LocalizedString": "Map with the sea route to get to Plinky Island. You'll need a boat."
+        }
+      },
+      "Map_CrassulaIsland": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Map_CrassulaIsland_Name",
+          "SourceString": "Crassula Island Map",
+          "LocalizedString": "Crassula Island Map"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Map_CrassulaIsland_Description",
+          "SourceString": "Map with the sea route to get to Crassula Island. You'll need a boat.",
+          "LocalizedString": "Map with the sea route to get to Crassula Island. You'll need a boat."
+        }
+      },
+      "Map_AbiesIsland": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Map_AbiesIsland_Name",
+          "SourceString": "Abies Island Map",
+          "LocalizedString": "Abies Island Map"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Map_AbiesIsland_Description",
+          "SourceString": "Map with the sea route to get to Abies Island. You'll need a boat.",
+          "LocalizedString": "Map with the sea route to get to Abies Island. You'll need a boat."
+        }
+      },
+      "Map_BrawlIsland": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Map_BrawlIsland_Name",
+          "SourceString": "Brawl Island Map",
+          "LocalizedString": "Brawl Island Map"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Map_BrawlIsland_Description",
+          "SourceString": "Map with the sea route to get to Brawl Island. You'll need a boat.",
+          "LocalizedString": "Map with the sea route to get to Brawl Island. You'll need a boat."
+        }
+      },
+      "Map_IllusionIsland": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Map_IllusionIsland_Name",
+          "SourceString": "Illusion Island Map",
+          "LocalizedString": "Illusion Island Map"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Map_IllusionIsland_Description",
+          "SourceString": "Map with the sea route to get to Illusion Island. You'll need a boat.",
+          "LocalizedString": "Map with the sea route to get to Illusion Island. You'll need a boat."
+        }
+      },
+      "Emblem_Blades": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Emblem_Blades_Name",
+          "SourceString": "Emblem Of Blades",
+          "LocalizedString": "Emblem Of Blades"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Emblem_Blades_Description",
+          "SourceString": "Prize awarded for winning in the Colisseum of Blades.",
+          "LocalizedString": "Prize awarded for winning in the Colisseum of Blades."
+        }
+      },
+      "Emblem_Essence": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Emblem_Essence_Name",
+          "SourceString": "Emblem Of Essence",
+          "LocalizedString": "Emblem Of Essence"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Emblem_Essence_Description",
+          "SourceString": "Prize awarded for winning in the Colisseum of Essence.",
+          "LocalizedString": "Prize awarded for winning in the Colisseum of Essence."
+        }
+      },
+      "Emblem_Powder": {
+        "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Emblem_Powder_Name",
+          "SourceString": "Emblem Of Powder",
+          "LocalizedString": "Emblem Of Powder"
+        },
+        "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+          "Namespace": "DT_ResourceData",
+          "Key": "Emblem_Powder_Description",
+          "SourceString": "Prize awarded for winning in the Colisseum of Powder.",
+          "LocalizedString": "Prize awarded for winning in the Colisseum of Powder."
+        }
+      }
+    }
+  }
+]

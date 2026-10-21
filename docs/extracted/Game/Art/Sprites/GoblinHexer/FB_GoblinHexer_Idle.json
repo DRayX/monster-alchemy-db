@@ -1,0 +1,32 @@
+[
+  {
+    "Type": "PaperFlipbook",
+    "Name": "FB_GoblinHexer_Idle",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PaperFlipbook'",
+    "Package": "/Game/Art/Sprites/GoblinHexer/FB_GoblinHexer_Idle",
+    "Properties": {
+      "FramesPerSecond": 2.0,
+      "KeyFrames": [
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'Goblin_Hexer_Sprite_0'",
+            "ObjectPath": "/Game/Art/Sprites/GoblinHexer/Goblin_Hexer_Sprite_0.1"
+          },
+          "FrameRun": 1
+        },
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'Goblin_Hexer_Sprite_1'",
+            "ObjectPath": "/Game/Art/Sprites/GoblinHexer/Goblin_Hexer_Sprite_1.1"
+          },
+          "FrameRun": 1
+        }
+      ],
+      "DefaultMaterial": {
+        "ObjectName": "MaterialInstanceConstant'MI_GoblinHexer'",
+        "ObjectPath": "/Game/Art/Sprites/GoblinHexer/MI_GoblinHexer.0"
+      }
+    }
+  }
+]

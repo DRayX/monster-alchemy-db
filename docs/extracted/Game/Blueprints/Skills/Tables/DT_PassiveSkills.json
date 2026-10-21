@@ -1,0 +1,1330 @@
+[
+  {
+    "Type": "DataTable",
+    "Name": "DT_PassiveSkills",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DataTable'",
+    "Package": "/Game/Blueprints/Skills/Tables/DT_PassiveSkills",
+    "Properties": {
+      "RowStruct": {
+        "ObjectName": "UserDefinedStruct'S_PassiveSkillTable'",
+        "ObjectPath": "/Game/Blueprints/Skills/S_PassiveSkillTable.0"
+      }
+    },
+    "Rows": {
+      "AbyssalStrenght": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "AbyssalStrenght_Name",
+          "SourceString": "Abyssal Strenght",
+          "LocalizedString": "Abyssal Strenght"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "AbyssalStrenght_Description",
+          "SourceString": "<img id=\"Water\"/> Attacks deal 120% damage.",
+          "LocalizedString": "<img id=\"Water\"/> Attacks deal 120% damage."
+        }
+      },
+      "AcidicSaliva": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "AcidicSaliva_Name",
+          "SourceString": "Acidic Saliva",
+          "LocalizedString": "Acidic Saliva"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "AcidicSaliva_Description",
+          "SourceString": "After using a <img id=\"Shoot\"/> attack inflict 2 <img id=\"Poison\"/> Poison to the target.",
+          "LocalizedString": "After using a <img id=\"Shoot\"/> attack inflict 2 <img id=\"Poison\"/> Poison to the target."
+        }
+      },
+      "AngerUp": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "AngerUp_Name",
+          "SourceString": "Anger Up",
+          "LocalizedString": "Anger Up"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "AngerUp_Description",
+          "SourceString": "Gain 3 <img id=\"Rage\"/> Rage when performing a basic attack.",
+          "LocalizedString": "Gain 3 <img id=\"Rage\"/> Rage when performing a basic attack."
+        }
+      },
+      "BlindingScales": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "BlindingScales_Name",
+          "SourceString": "Blinding Scales",
+          "LocalizedString": "Blinding Scales"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "BlindingScales_Description",
+          "SourceString": "When hit by a <img id=\"Magic\"/> attack, inflict 5 <img id=\"Burn\"/> Burn to the attacker.",
+          "LocalizedString": "When hit by a <img id=\"Magic\"/> attack, inflict 5 <img id=\"Burn\"/> Burn to the attacker."
+        }
+      },
+      "Burglar": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Burglar_Name",
+          "SourceString": "Burglar",
+          "LocalizedString": "Burglar"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Burglar_Description",
+          "SourceString": "25% chance to double coin rewards after battle.",
+          "LocalizedString": "25% chance to double coin rewards after battle."
+        }
+      },
+      "CandleWax": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "CandleWax_Name",
+          "SourceString": "Candle Wax",
+          "LocalizedString": "Candle Wax"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "CandleWax_Description",
+          "SourceString": "When a monster in your team uses a <img id=\"Fire\"/> skill, it gains 1 <img id=\"Barrier\"/> Barrier.",
+          "LocalizedString": "When a monster in your team uses a <img id=\"Fire\"/> skill, it gains 1 <img id=\"Barrier\"/> Barrier."
+        }
+      },
+      "ChillyAura": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "ChillyAura_Name",
+          "SourceString": "Chilly Aura",
+          "LocalizedString": "Chilly Aura"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "ChillyAura_Description",
+          "SourceString": "When hit by an attack, inflict 1 <img id=\"Freeze\"/> Freeze to the attacker.",
+          "LocalizedString": "When hit by an attack, inflict 1 <img id=\"Freeze\"/> Freeze to the attacker."
+        }
+      },
+      "Combustible": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Combustible_Name",
+          "SourceString": "Combustible",
+          "LocalizedString": "Combustible"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Combustible_Description",
+          "SourceString": "Gain 2 <img id=\"Rage\"/> Rage for each <img id=\"Fire\"/> monster in your team at battle start.",
+          "LocalizedString": "Gain 2 <img id=\"Rage\"/> Rage for each <img id=\"Fire\"/> monster in your team at battle start."
+        }
+      },
+      "CorpseMend": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "CorpseMend_Name",
+          "SourceString": "Corpse Mend",
+          "LocalizedString": "Corpse Mend"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "CorpseMend_Description",
+          "SourceString": "Recovers 8% Health after attacking.",
+          "LocalizedString": "Recovers 8% Health after attacking."
+        }
+      },
+      "CorrosiveAbsorption": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "CorrosiveAbsorption_Name",
+          "SourceString": "Corrosive Absorption",
+          "LocalizedString": "Corrosive Absorption"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "CorrosiveAbsorption_Description",
+          "SourceString": "When anyone is inflicted by <img id=\"Poison\"/> Poison, gain 1 <img id=\"Regeneration\"/> Regeneration.",
+          "LocalizedString": "When anyone is inflicted by <img id=\"Poison\"/> Poison, gain 1 <img id=\"Regeneration\"/> Regeneration."
+        }
+      },
+      "Dense": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Dense_Name",
+          "SourceString": "Dense",
+          "LocalizedString": "Dense"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Dense_Description",
+          "SourceString": "<img id=\"Neutral\"/><img id=\"Strike\"/> skills deal 150% damage.",
+          "LocalizedString": "<img id=\"Neutral\"/><img id=\"Strike\"/> skills deal 150% damage."
+        }
+      },
+      "SearingEdge": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "SearingEdge_Name",
+          "SourceString": "Searing Edge",
+          "LocalizedString": "Searing Edge"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "SearingEdge_Description",
+          "SourceString": "<img id=\"Fire\"/><img id=\"Slash\"/> skills deal 150% damage.",
+          "LocalizedString": "<img id=\"Fire\"/><img id=\"Slash\"/> skills deal 150% damage."
+        }
+      },
+      "EnchancedGrowth": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "EnchancedGrowth_Name",
+          "SourceString": "Enchanced Growth",
+          "LocalizedString": "Enchanced Growth"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "EnchancedGrowth_Description",
+          "SourceString": "Restores 25% Health when using a skill.",
+          "LocalizedString": "Restores 25% Health when using a skill."
+        }
+      },
+      "FaithfulProtector": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "FaithfulProtector_Name",
+          "SourceString": "Faithful Protector",
+          "LocalizedString": "Faithful Protector"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "FaithfulProtector_Description",
+          "SourceString": "At battle start, the monster at it's front gains 1 <img id=\"Barrier\"/> Barrier. ",
+          "LocalizedString": "At battle start, the monster at it's front gains 1 <img id=\"Barrier\"/> Barrier. "
+        }
+      },
+      "Gaseous": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Gaseous_Name",
+          "SourceString": "Gaseous",
+          "LocalizedString": "Gaseous"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Gaseous_Description",
+          "SourceString": "When inflicted by <img id=\"Poison\"/> Poison, gain 1 <img id=\"Regeneration\"/> Regeneration instead.",
+          "LocalizedString": "When inflicted by <img id=\"Poison\"/> Poison, gain 1 <img id=\"Regeneration\"/> Regeneration instead."
+        }
+      },
+      "GearUp": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "GearUp_Name",
+          "SourceString": "Gear Up",
+          "LocalizedString": "Gear Up"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "GearUp_Description",
+          "SourceString": "Gain 1 <img id=\"Charge\"/> Charge after performing a basic attack.",
+          "LocalizedString": "Gain 1 <img id=\"Charge\"/> Charge after performing a basic attack."
+        }
+      },
+      "GiftOfDestiny": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "GiftOfDestiny_Name",
+          "SourceString": "Gift of Destiny",
+          "LocalizedString": "Gift of Destiny"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "GiftOfDestiny_Description",
+          "SourceString": "Restore 50% Aura to the monster at it's front at battle start.",
+          "LocalizedString": "Restore 50% Aura to the monster at it's front at battle start."
+        }
+      },
+      "GuardCrush": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "GuardCrush_Name",
+          "SourceString": "Guard Crush",
+          "LocalizedString": "Guard Crush"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "GuardCrush_Description",
+          "SourceString": "When attacking a monster with <img id=\"Barrier\"/> Barrier, remove it.",
+          "LocalizedString": "When attacking a monster with <img id=\"Barrier\"/> Barrier, remove it."
+        }
+      },
+      "HealthyFists": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "HealthyFists_Name",
+          "SourceString": "Healthy Fists",
+          "LocalizedString": "Healthy Fists"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "HealthyFists_Description",
+          "SourceString": "After using a <img id=\"Strike\"/> attack, gain 1 <img id=\"Regeneration\"/>  Regeneration.",
+          "LocalizedString": "After using a <img id=\"Strike\"/> attack, gain 1 <img id=\"Regeneration\"/>  Regeneration."
+        }
+      },
+      "HellishPrecision": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "HellishPrecision_Name",
+          "SourceString": "Hellish Precision",
+          "LocalizedString": "Hellish Precision"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "HellishPrecision_Description",
+          "SourceString": "25% critical chance against enemies with <img id=\"Burn\"/> Burn.",
+          "LocalizedString": "25% critical chance against enemies with <img id=\"Burn\"/> Burn."
+        }
+      },
+      "HighTide": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "HighTide_Name",
+          "SourceString": "High Tide",
+          "LocalizedString": "High Tide"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "HighTide_Description",
+          "SourceString": "At night, gain 5 <img id=\"Rage\"/> Rage when using <img id=\"Water\"/> skills.",
+          "LocalizedString": "At night, gain 5 <img id=\"Rage\"/> Rage when using <img id=\"Water\"/> skills."
+        }
+      },
+      "HotPotato": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "HotPotato_Name",
+          "SourceString": "Hot Potato",
+          "LocalizedString": "Hot Potato"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "HotPotato_Description",
+          "SourceString": "After using a <img id=\"Shoot\"/> attack, inflict 2 <img id=\"Burn\"/> Burn to the target.",
+          "LocalizedString": "After using a <img id=\"Shoot\"/> attack, inflict 2 <img id=\"Burn\"/> Burn to the target."
+        }
+      },
+      "IceMagic": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "IceMagic_Name",
+          "SourceString": "Ice Magic",
+          "LocalizedString": "Ice Magic"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "IceMagic_Description",
+          "SourceString": "After using a <img id=\"Magic\"/> skill, inflict 1 <img id=\"Freeze\"/> Freeze to all enemies.",
+          "LocalizedString": "After using a <img id=\"Magic\"/> skill, inflict 1 <img id=\"Freeze\"/> Freeze to all enemies."
+        }
+      },
+      "Lucky": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Lucky_Name",
+          "SourceString": "Lucky",
+          "LocalizedString": "Lucky"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Lucky_Description",
+          "SourceString": "Obtain rarer rewards after battle.",
+          "LocalizedString": "Obtain rarer rewards after battle."
+        }
+      },
+      "Malfunction": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Malfunction_Name",
+          "SourceString": "Malfunction",
+          "LocalizedString": "Malfunction"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Malfunction_Description",
+          "SourceString": "Gain 1 <img id=\"Charge\"/> Charge or 1 <img id=\"Shock\"/> Shock at battle start.",
+          "LocalizedString": "Gain 1 <img id=\"Charge\"/> Charge or 1 <img id=\"Shock\"/> Shock at battle start."
+        }
+      },
+      "Merciless": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Merciless_Name",
+          "SourceString": "Merciless",
+          "LocalizedString": "Merciless"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Merciless_Description",
+          "SourceString": "25% critical chance against enemies with <img id=\"Weak\"/> Weak.",
+          "LocalizedString": "25% critical chance against enemies with <img id=\"Weak\"/> Weak."
+        }
+      },
+      "Mischievous": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Mischievous_Name",
+          "SourceString": "Mischievous",
+          "LocalizedString": "Mischievous"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Mischievous_Description",
+          "SourceString": "Gain 1 <img id=\"Charge\"/> Charge when using a non damaging skill.",
+          "LocalizedString": "Gain 1 <img id=\"Charge\"/> Charge when using a non damaging skill."
+        }
+      },
+      "MoltenBody": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "MoltenBody_Name",
+          "SourceString": "Molten Body",
+          "LocalizedString": "Molten Body"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "MoltenBody_Description",
+          "SourceString": "When hit by an attack, inflict 2 <img id=\"Burn\"/> Burn to the attacker.",
+          "LocalizedString": "When hit by an attack, inflict 2 <img id=\"Burn\"/> Burn to the attacker."
+        }
+      },
+      "NightStalker": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "NightStalker_Name",
+          "SourceString": "Night Stalker",
+          "LocalizedString": "Night Stalker"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "NightStalker_Description",
+          "SourceString": "At night, gain 3 <img id=\"Ambush\"/> Ambush at battle start.",
+          "LocalizedString": "At night, gain 3 <img id=\"Ambush\"/> Ambush at battle start."
+        }
+      },
+      "RootNetwork": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "RootNetwork_Name",
+          "SourceString": "Root Network",
+          "LocalizedString": "Root Network"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "RootNetwork_Description",
+          "SourceString": "Gain 1 <img id=\"Regeneration\"/> Regeneration for each <img id=\"Nature\"/> monster in your team at battle start.",
+          "LocalizedString": "Gain 1 <img id=\"Regeneration\"/> Regeneration for each <img id=\"Nature\"/> monster in your team at battle start."
+        }
+      },
+      "SeaGuardian": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "SeaGuardian_Name",
+          "SourceString": "Sea Guardian",
+          "LocalizedString": "Sea Guardian"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "SeaGuardian_Description",
+          "SourceString": "Gain 1 <img id=\"Barrier\"/> Barrier for each <img id=\"Water\"/> monster in your team at battle start.",
+          "LocalizedString": "Gain 1 <img id=\"Barrier\"/> Barrier for each <img id=\"Water\"/> monster in your team at battle start."
+        }
+      },
+      "Sharpshooter": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Sharpshooter_Name",
+          "SourceString": "Sharpshooter",
+          "LocalizedString": "Sharpshooter"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Sharpshooter_Description",
+          "SourceString": "20% critical chance against backline enemies.",
+          "LocalizedString": "20% critical chance against backline enemies."
+        }
+      },
+      "SharpTeeth": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "SharpTeeth_Name",
+          "SourceString": "Sharp Teeth",
+          "LocalizedString": "Sharp Teeth"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "SharpTeeth_Description",
+          "SourceString": "After using a <img id=\"Slash\"/> attack, there's a 50% chance of inflicting 1 <img id=\"Weak\"/> Weak.",
+          "LocalizedString": "After using a <img id=\"Slash\"/> attack, there's a 50% chance of inflicting 1 <img id=\"Weak\"/> Weak."
+        }
+      },
+      "Sick": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Sick_Name",
+          "SourceString": "Sick",
+          "LocalizedString": "Sick"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Sick_Description",
+          "SourceString": "Gain 5 <img id=\"Poison\"/> Poison and 5 <img id=\"Rage\"/> Rage at battle start. ",
+          "LocalizedString": "Gain 5 <img id=\"Poison\"/> Poison and 5 <img id=\"Rage\"/> Rage at battle start. "
+        }
+      },
+      "SlimyTexture": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "SlimyTexture_Name",
+          "SourceString": "Slimy Texture",
+          "LocalizedString": "Slimy Texture"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "SlimyTexture_Description",
+          "SourceString": "When inflicted by <img id=\"Shock\"/> Shock, gain 1 <img id=\"Regeneration\"/> Regeneration instead.",
+          "LocalizedString": "When inflicted by <img id=\"Shock\"/> Shock, gain 1 <img id=\"Regeneration\"/> Regeneration instead."
+        }
+      },
+      "SolarBlessing": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "SolarBlessing_Name",
+          "SourceString": "Solar Blessing",
+          "LocalizedString": "Solar Blessing"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "SolarBlessing_Description",
+          "SourceString": "At day, gain 1 <img id=\"Charge\"/> Charge at battle start.",
+          "LocalizedString": "At day, gain 1 <img id=\"Charge\"/> Charge at battle start."
+        }
+      },
+      "SpikeCuirass": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "SpikeCuirass_Name",
+          "SourceString": "Spike Cuirass",
+          "LocalizedString": "Spike Cuirass"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "SpikeCuirass_Description",
+          "SourceString": "Gain 3 <img id=\"Thorns\"/> Thorns at battle start.",
+          "LocalizedString": "Gain 3 <img id=\"Thorns\"/> Thorns at battle start."
+        }
+      },
+      "StaticFur": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "StaticFur_Name",
+          "SourceString": "Static Fur",
+          "LocalizedString": "Static Fur"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "StaticFur_Description",
+          "SourceString": "When hit by an attack, inflict 1 <img id=\"Shock\"/> Shock to the attacker.",
+          "LocalizedString": "When hit by an attack, inflict 1 <img id=\"Shock\"/> Shock to the attacker."
+        }
+      },
+      "StickAfficionado": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "StickAfficionado_Name",
+          "SourceString": "StickAfficionado",
+          "LocalizedString": "StickAfficionado"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "StickAfficionado_Description",
+          "SourceString": "Obtain Wood after battle.",
+          "LocalizedString": "Obtain Wood after battle."
+        }
+      },
+      "StunningStrikes": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "StunningStrikes_Name",
+          "SourceString": "Stunning Strikes",
+          "LocalizedString": "Stunning Strikes"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "StunningStrikes_Description",
+          "SourceString": "After using a <img id=\"Strike\"/> attack, there's a 50% chance of inflicting <img id=\"Shock\"/> Shock.",
+          "LocalizedString": "After using a <img id=\"Strike\"/> attack, there's a 50% chance of inflicting <img id=\"Shock\"/> Shock."
+        }
+      },
+      "Supervision": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Supervision_Name",
+          "SourceString": "Supervision",
+          "LocalizedString": "Supervision"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Supervision_Description",
+          "SourceString": "When attacking a monster with <img id=\"Ambush\"/> Ambush, gain 100% critical chance.",
+          "LocalizedString": "When attacking a monster with <img id=\"Ambush\"/> Ambush, gain 100% critical chance."
+        }
+      },
+      "TerrorizingSight": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "TerrorizingSight_Name",
+          "SourceString": "Terrorizing Sight",
+          "LocalizedString": "Terrorizing Sight"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "TerrorizingSight_Description",
+          "SourceString": "Inflict 1 <img id=\"Shock\"/> Shock to the enemy frontline at battle start.",
+          "LocalizedString": "Inflict 1 <img id=\"Shock\"/> Shock to the enemy frontline at battle start."
+        }
+      },
+      "ThrowTantrum": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "ThrowTantrum_Name",
+          "SourceString": "Throw Tantrum",
+          "LocalizedString": "Throw Tantrum"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "ThrowTantrum_Description",
+          "SourceString": "When hit by a <img id=\"Shoot\"/> attack, gain 5 <img id=\"Rage\"/> Rage.",
+          "LocalizedString": "When hit by a <img id=\"Shoot\"/> attack, gain 5 <img id=\"Rage\"/> Rage."
+        }
+      },
+      "ToxicFumes": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "ToxicFumes_Name",
+          "SourceString": "Toxic Fumes",
+          "LocalizedString": "Toxic Fumes"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "ToxicFumes_Description",
+          "SourceString": "When hit by an attack, inflict 2 <img id=\"Poison\"/> Poison to the enemy frontline.",
+          "LocalizedString": "When hit by an attack, inflict 2 <img id=\"Poison\"/> Poison to the enemy frontline."
+        }
+      },
+      "Vampirism": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Vampirism_Name",
+          "SourceString": "Vampirism",
+          "LocalizedString": "Vampirism"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Vampirism_Description",
+          "SourceString": "When attacking a monster with <img id=\"Weak\"/> Weak, restore 30% Max Health.",
+          "LocalizedString": "When attacking a monster with <img id=\"Weak\"/> Weak, restore 30% Max Health."
+        }
+      },
+      "CurrentCatcher": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "CurrentCatcher_Name",
+          "SourceString": "Current Catcher",
+          "LocalizedString": "Current Catcher"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "CurrentCatcher_Description",
+          "SourceString": "Chance to obtain Hydrogland after battle.",
+          "LocalizedString": "Chance to obtain Hydrogland after battle."
+        }
+      },
+      "RipeTaker": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "RipeTaker_Name",
+          "SourceString": "Ripe Taker",
+          "LocalizedString": "Ripe Taker"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "RipeTaker_Description",
+          "SourceString": "Chance to obtain a random fruit after battle.",
+          "LocalizedString": "Chance to obtain a random fruit after battle."
+        }
+      },
+      "ToughGuy": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "ToughGuy_Name",
+          "SourceString": "Tough Guy",
+          "LocalizedString": "Tough Guy"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "ToughGuy_Description",
+          "SourceString": "Deals 120% damage when at 50% health or less.",
+          "LocalizedString": "Deals 120% damage when at 50% health or less."
+        }
+      },
+      "RegenerativeTissue": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "RegenerativeTissue_Name",
+          "SourceString": "Regenerative Tissue",
+          "LocalizedString": "Regenerative Tissue"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "RegenerativeTissue_Description",
+          "SourceString": "At battle start, gain 2 <img id=\"Regeneration\"/> Regeneration.",
+          "LocalizedString": "At battle start, gain 2 <img id=\"Regeneration\"/> Regeneration."
+        }
+      },
+      "FunnyMelody": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "FunnyMelody_Name",
+          "SourceString": "Funny Melody",
+          "LocalizedString": "Funny Melody"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "FunnyMelody_Description",
+          "SourceString": "When using a non damaging skill, give 1 <img id=\"Charge\"/> Charge other allies.",
+          "LocalizedString": "When using a non damaging skill, give 1 <img id=\"Charge\"/> Charge other allies."
+        }
+      },
+      "EnergizedPlumage": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "EnergizedPlumage_Name",
+          "SourceString": "Energized Plumage",
+          "LocalizedString": "Energized Plumage"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "EnergizedPlumage_Description",
+          "SourceString": "After using a <img id=\"Slash\"/> attack, inflict 2 <img id=\"Shock\"/> Shock to the target.",
+          "LocalizedString": "After using a <img id=\"Slash\"/> attack, inflict 2 <img id=\"Shock\"/> Shock to the target."
+        }
+      },
+      "BladeMastery": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "BladeMastery_Name",
+          "SourceString": "Blade Mastery",
+          "LocalizedString": "Blade Mastery"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "BladeMastery_Description",
+          "SourceString": "After performing a critical attack, recover 30% of aura.",
+          "LocalizedString": "After performing a critical attack, recover 30% of aura."
+        }
+      },
+      "AuraFarming": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "AuraFarming_Name",
+          "SourceString": "Aura Farming",
+          "LocalizedString": "Aura Farming"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "AuraFarming_Description",
+          "SourceString": "Recover 50% of Aura after a basic attack.",
+          "LocalizedString": "Recover 50% of Aura after a basic attack."
+        }
+      },
+      "Camouflage": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Camouflage_Name",
+          "SourceString": "Camouflage",
+          "LocalizedString": "Camouflage"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Camouflage_Description",
+          "SourceString": "When hit by an attack, gain 2 <img id=\"Ambush\"/> Ambush.",
+          "LocalizedString": "When hit by an attack, gain 2 <img id=\"Ambush\"/> Ambush."
+        }
+      },
+      "BorealSpirit": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "BorealSpirit_Name",
+          "SourceString": "Boreal Spirit",
+          "LocalizedString": "Boreal Spirit"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "BorealSpirit_Description",
+          "SourceString": "After using a <img id=\"Water\"/> skill, inflict 1 <img id=\"Freeze\"/> Freeze to the target.",
+          "LocalizedString": "After using a <img id=\"Water\"/> skill, inflict 1 <img id=\"Freeze\"/> Freeze to the target."
+        }
+      },
+      "GroupHunting": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "GroupHunting_Name",
+          "SourceString": "Group Hunting",
+          "LocalizedString": "Group Hunting"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "GroupHunting_Description",
+          "SourceString": "At battle start, gain 3 <img id=\"Ambush\"/> Ambush for each other monster in your team with \"Group Hunting\". Chance to obtain Bone after battle.",
+          "LocalizedString": "At battle start, gain 3 <img id=\"Ambush\"/> Ambush for each other monster in your team with \"Group Hunting\". Chance to obtain Bone after battle."
+        }
+      },
+      "FromAshes": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "FromAshes_Name",
+          "SourceString": "From Ashes",
+          "LocalizedString": "From Ashes"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "FromAshes_Description",
+          "SourceString": "After death, inflict 2 <img id=\"Burn\"/> Burn to all enemies.",
+          "LocalizedString": "After death, inflict 2 <img id=\"Burn\"/> Burn to all enemies."
+        }
+      },
+      "BoneArmy": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "BoneArmy_Name",
+          "SourceString": "Bone Army",
+          "LocalizedString": "Bone Army"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "BoneArmy_Description",
+          "SourceString": "At battle start, gain 3 <img id=\"Rage\"/> Rage for each other monster in your team with \"Bone Army\".",
+          "LocalizedString": "At battle start, gain 3 <img id=\"Rage\"/> Rage for each other monster in your team with \"Bone Army\"."
+        }
+      },
+      "Staticflock": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Staticflock_Name",
+          "SourceString": "Static Flock",
+          "LocalizedString": "Static Flock"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Staticflock_Description",
+          "SourceString": "Gain 1 <img id=\"Charge\"/> Charge after another ally uses a <img id=\"Slash\"/> skill.",
+          "LocalizedString": "Gain 1 <img id=\"Charge\"/> Charge after another ally uses a <img id=\"Slash\"/> skill."
+        }
+      },
+      "SpookyGuide": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "SpookyGuide_Name",
+          "SourceString": "Spooky Guide",
+          "LocalizedString": "Spooky Guide"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "SpookyGuide_Description",
+          "SourceString": "All allies gain 25% more EXP from battles won at night.",
+          "LocalizedString": "All allies gain 25% more EXP from battles won at night."
+        }
+      },
+      "WarmFur": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "WarmFur_Name",
+          "SourceString": "Warm Fur",
+          "LocalizedString": "Warm Fur"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "WarmFur_Description",
+          "SourceString": "At battle start, give 1 <img id=\"Regeneration\"/> Regeneration to other allies.",
+          "LocalizedString": "At battle start, give 1 <img id=\"Regeneration\"/> Regeneration to other allies."
+        }
+      },
+      "FinalBloom": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "FinalBloom_Name",
+          "SourceString": "Final Bloom",
+          "LocalizedString": "Final Bloom"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "FinalBloom_Description",
+          "SourceString": "On death, heal 25% of Max Health to other allies.",
+          "LocalizedString": "On death, heal 25% of Max Health to other allies."
+        }
+      },
+      "Resentment": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Resentment_Name",
+          "SourceString": "Resentment",
+          "LocalizedString": "Resentment"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Resentment_Description",
+          "SourceString": "When an ally dies, gain 5 <img id=\"Rage\"/> Rage and 3 <img id=\"Thorns\"/> Thorns.",
+          "LocalizedString": "When an ally dies, gain 5 <img id=\"Rage\"/> Rage and 3 <img id=\"Thorns\"/> Thorns."
+        }
+      },
+      "SharedKnowledge": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "SharedKnowledge_Name",
+          "SourceString": "Shared Knowledge",
+          "LocalizedString": "Shared Knowledge"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "SharedKnowledge_Description",
+          "SourceString": "After using Focus, all allies gain 1 <img id=\"Charge\"/> Charge.",
+          "LocalizedString": "After using Focus, all allies gain 1 <img id=\"Charge\"/> Charge."
+        }
+      },
+      "SeparationAnxiety": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "SeparationAnxiety_Name",
+          "SourceString": "Separation Anxiety",
+          "LocalizedString": "Separation Anxiety"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "SeparationAnxiety_Description",
+          "SourceString": "When the adjacent monster dies, gain 20 <img id=\"Rage\"/> Rage.",
+          "LocalizedString": "When the adjacent monster dies, gain 20 <img id=\"Rage\"/> Rage."
+        }
+      },
+      "EchoedFocus": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "EchoedFocus_Name",
+          "SourceString": "Echoed Focus",
+          "LocalizedString": "Echoed Focus"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "EchoedFocus_Description",
+          "SourceString": "When other ally uses Focus, gain 1 <img id=\"Charge\"/> Charge and 1 <img id=\"Regeneration\"/> Regen.",
+          "LocalizedString": "When other ally uses Focus, gain 1 <img id=\"Charge\"/> Charge and 1 <img id=\"Regeneration\"/> Regen."
+        }
+      },
+      "Condensation": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Condensation_Name",
+          "SourceString": "Condensation",
+          "LocalizedString": "Condensation"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Condensation_Description",
+          "SourceString": "Chance to obtain Solidified Cloud after battle.",
+          "LocalizedString": "Chance to obtain Solidified Cloud after battle."
+        }
+      },
+      "QuarryWorker": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "QuarryWorker_Name",
+          "SourceString": "Quarry Worker",
+          "LocalizedString": "Quarry Worker"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "QuarryWorker_Description",
+          "SourceString": "Chance to obtain Oranite after battle.",
+          "LocalizedString": "Chance to obtain Oranite after battle."
+        }
+      },
+      "NorthernLights": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "NorthernLights_Name",
+          "SourceString": "Northern Lights",
+          "LocalizedString": "Northern Lights"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "NorthernLights_Description",
+          "SourceString": "All allies gain 25% crit chance against enemies with <img id=\"Freeze\"/> Freeze.",
+          "LocalizedString": "All allies gain 25% crit chance against enemies with <img id=\"Freeze\"/> Freeze."
+        }
+      },
+      "BogTrap": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "BogTrap_Name",
+          "SourceString": "Bog Trap",
+          "LocalizedString": "Bog Trap"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "BogTrap_Description",
+          "SourceString": "When an enemy affected by <img id=\"Poison\"/> Poison or <img id=\"Slow\"/> Slow attacks, the user gains 1 <img id=\"Thorns\"/> Thorns.",
+          "LocalizedString": "When an enemy affected by <img id=\"Poison\"/> Poison or <img id=\"Slow\"/> Slow attacks, the user gains 1 <img id=\"Thorns\"/> Thorns."
+        }
+      },
+      "Gooardian": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Gooardian_Name",
+          "SourceString": "Gooardian",
+          "LocalizedString": "Gooardian"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Gooardian_Description",
+          "SourceString": "At battle start, all \"Slime\" allies gain 1 <img id=\"Barrier\"/> Barrier and 1 <img id=\"Charge\"/> Charge.",
+          "LocalizedString": "At battle start, all \"Slime\" allies gain 1 <img id=\"Barrier\"/> Barrier and 1 <img id=\"Charge\"/> Charge."
+        }
+      },
+      "SoothingBubble": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "SoothingBubble_Name",
+          "SourceString": "Soothing Bubble",
+          "LocalizedString": "Soothing Bubble"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "SoothingBubble_Description",
+          "SourceString": "Whenever an ally gains <img id=\"Barrier\"/> Barrier, they also gain <img id=\"Regeneration\"/> Regeneration.",
+          "LocalizedString": "Whenever an ally gains <img id=\"Barrier\"/> Barrier, they also gain <img id=\"Regeneration\"/> Regeneration."
+        }
+      },
+      "LunarBlessing": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "LunarBlessing_Name",
+          "SourceString": "Lunar Blessing",
+          "LocalizedString": "Lunar Blessing"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "LunarBlessing_Description",
+          "SourceString": "At night, gain 1 <img id=\"Charge\"/> Charge at battle start.",
+          "LocalizedString": "At night, gain 1 <img id=\"Charge\"/> Charge at battle start."
+        }
+      },
+      "DefensiveStance": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "DefensiveStance_Name",
+          "SourceString": "Defensive Stance",
+          "LocalizedString": "Defensive Stance"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "DefensiveStance_Description",
+          "SourceString": "After using Focus, gain 1 <img id=\"Barrier\"/> Barrier.",
+          "LocalizedString": "After using Focus, gain 1 <img id=\"Barrier\"/> Barrier."
+        }
+      },
+      "ContagiousAct": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "ContagiousAct_Name",
+          "SourceString": "Contagious Act",
+          "LocalizedString": "Contagious Act"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "ContagiousAct_Description",
+          "SourceString": "When attacking an emeny affected by <img id=\"Poison\"/> Poison, inflict 1 <img id=\"Poison\"/> Poison to all enemies.",
+          "LocalizedString": "When attacking an emeny affected by <img id=\"Poison\"/> Poison, inflict 1 <img id=\"Poison\"/> Poison to all enemies."
+        }
+      },
+      "PressureSense": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "PressureSense_Name",
+          "SourceString": "Pressure Sense",
+          "LocalizedString": "Pressure Sense"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "PressureSense_Description",
+          "SourceString": "When an enemy uses Focus, gain 3 <img id=\"Ambush\"/> Ambush.",
+          "LocalizedString": "When an enemy uses Focus, gain 3 <img id=\"Ambush\"/> Ambush."
+        }
+      },
+      "PiercingHorn": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "PiercingHorn_Name",
+          "SourceString": "Piercing Horn",
+          "LocalizedString": "Piercing Horn"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "PiercingHorn_Description",
+          "SourceString": "User basic attacks deal 30% of their damage to the enemy behind the target.",
+          "LocalizedString": "User basic attacks deal 30% of their damage to the enemy behind the target."
+        }
+      },
+      "Berserk": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Berserk_Name",
+          "SourceString": "Berserk",
+          "LocalizedString": "Berserk"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Berserk_Description",
+          "SourceString": "When hit by an attack, gain 2 <img id=\"Rage\"/> Rage.",
+          "LocalizedString": "When hit by an attack, gain 2 <img id=\"Rage\"/> Rage."
+        }
+      },
+      "Arcanist": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Arcanist_Name",
+          "SourceString": "Arcanist",
+          "LocalizedString": "Arcanist"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Arcanist_Description",
+          "SourceString": "<img id=\"Neutral\"/><img id=\"Magic\"/> skills deal 150% damage.",
+          "LocalizedString": "<img id=\"Neutral\"/><img id=\"Magic\"/> skills deal 150% damage."
+        }
+      },
+      "MoltenGeneration": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "MoltenGeneration_Name",
+          "SourceString": "Molten Generation",
+          "LocalizedString": "Molten Generation"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "MoltenGeneration_Description",
+          "SourceString": "Chance to obtain Magma Shard or Obsidian Shard after battle.",
+          "LocalizedString": "Chance to obtain Magma Shard or Obsidian Shard after battle."
+        }
+      },
+      "Plagueburst": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Plagueburst_Name",
+          "SourceString": "Plagueburst",
+          "LocalizedString": "Plagueburst"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Plagueburst_Description",
+          "SourceString": "Whenever a <img id=\"Poison\"/> Poisoned enemy dies, inflict <img id=\"Poison\"/> Poison on all enemies equal to the amount of Poison it had.",
+          "LocalizedString": "Whenever a <img id=\"Poison\"/> Poisoned enemy dies, inflict <img id=\"Poison\"/> Poison on all enemies equal to the amount of Poison it had."
+        }
+      },
+      "Superconductor": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Superconductor_Name",
+          "SourceString": "Superconductor",
+          "LocalizedString": "Superconductor"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Superconductor_Description",
+          "SourceString": "When hit by a <img id=\"Energy\"/> attack, gain 2 <img id=\"Charge\"/> Charge.",
+          "LocalizedString": "When hit by a <img id=\"Energy\"/> attack, gain 2 <img id=\"Charge\"/> Charge."
+        }
+      },
+      "Naturist": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Naturist_Name",
+          "SourceString": "Naturist",
+          "LocalizedString": "Naturist"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Naturist_Description",
+          "SourceString": "After using a <img id=\"Nature\"/> skill, all allies gain 1 <img id=\"Regeneration\"/> Regeneration.",
+          "LocalizedString": "After using a <img id=\"Nature\"/> skill, all allies gain 1 <img id=\"Regeneration\"/> Regeneration."
+        }
+      },
+      "Refraction": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Refraction_Name",
+          "SourceString": "Refraction",
+          "LocalizedString": "Refraction"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Refraction_Description",
+          "SourceString": "Whenever the user gains any points of a positive status, apply that much to all allies.",
+          "LocalizedString": "Whenever the user gains any points of a positive status, apply that much to all allies."
+        }
+      },
+      "VoodooSpell": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "VoodooSpell_Name",
+          "SourceString": "Voodoo Spell",
+          "LocalizedString": "Voodoo Spell"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "VoodooSpell_Description",
+          "SourceString": "After death, deal 30% of Max Health damage to the enemy frontline.",
+          "LocalizedString": "After death, deal 30% of Max Health damage to the enemy frontline."
+        }
+      },
+      "TogetherStrong": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "TogetherStrong_Name",
+          "SourceString": "Together Strong",
+          "LocalizedString": "Together Strong"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "TogetherStrong_Description",
+          "SourceString": "Gain 5 <img id=\"Rage\"/> Rage for each other monster in your team with \"Together Strong\".",
+          "LocalizedString": "Gain 5 <img id=\"Rage\"/> Rage for each other monster in your team with \"Together Strong\"."
+        }
+      },
+      "RigorRepair": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "RigorRepair_Name",
+          "SourceString": "Rigor Repair",
+          "LocalizedString": "Rigor Repair"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "CultureInvariantString": null
+        }
+      },
+      "BattleBuddy": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "BattleBuddy_Name",
+          "SourceString": "Battle Buddy",
+          "LocalizedString": "Battle Buddy"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "BattleBuddy_Description",
+          "SourceString": "When the ally directly behind consumes <img id=\"Rage\"/> Rage, user gains 1 <img id=\"Rage\"/> Rage.",
+          "LocalizedString": "When the ally directly behind consumes <img id=\"Rage\"/> Rage, user gains 1 <img id=\"Rage\"/> Rage."
+        }
+      },
+      "Atajo": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Atajo_Name",
+          "SourceString": "Atajo",
+          "LocalizedString": "Atajo"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "Atajo_Description",
+          "SourceString": "Whenever an enemy attacks this monster, inflict 1 <img id=\"Weak\"/> Weak and gain 1 <img id=\"Barrier\"/> Barrier.",
+          "LocalizedString": "Whenever an enemy attacks this monster, inflict 1 <img id=\"Weak\"/> Weak and gain 1 <img id=\"Barrier\"/> Barrier."
+        }
+      },
+      "GreenThumb": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "GreenThumb_Name",
+          "SourceString": "Green Thumb",
+          "LocalizedString": "Green Thumb"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "GreenThumb_Description",
+          "SourceString": "Provides double Work in the Circle of Growth and Fermentator.",
+          "LocalizedString": "Provides double Work in the Circle of Growth and Fermentator."
+        }
+      },
+      "HealingTide": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "HealingTide_Name",
+          "SourceString": "Healing Tide",
+          "LocalizedString": "Healing Tide"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "HealingTide_Description",
+          "SourceString": "When a frontline ally loses <img id=\"Barrier\"/> Barrier, gain 1 <img id=\"Regeneration\"/> Regeneration.",
+          "LocalizedString": "When a frontline ally loses <img id=\"Barrier\"/> Barrier, gain 1 <img id=\"Regeneration\"/> Regeneration."
+        }
+      },
+      "KillZone": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "KillZone_Name",
+          "SourceString": "Kill Zone",
+          "LocalizedString": "Kill Zone"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "KillZone_Description",
+          "SourceString": "Whenever an enemy attacks a frontline monster, inflict 1 <img id=\"Weak\"/> Weak to it.",
+          "LocalizedString": "Whenever an enemy attacks a frontline monster, inflict 1 <img id=\"Weak\"/> Weak to it."
+        }
+      },
+      "ProtectiveCold": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "ProtectiveCold_Name",
+          "SourceString": "Protective Cold",
+          "LocalizedString": "Protective Cold"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "ProtectiveCold_Description",
+          "SourceString": "When another frontline ally's <img id=\"Barrier\"/> Barrier is consumed, inflict 1 <img id=\"Freeze\"/> Freeze on the attacker.",
+          "LocalizedString": "When another frontline ally's <img id=\"Barrier\"/> Barrier is consumed, inflict 1 <img id=\"Freeze\"/> Freeze on the attacker."
+        }
+      },
+      "WarLeader": {
+        "Name_10_76DA577F4509D98E00AD068AA07AD2AD": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "WarLeader_Name",
+          "SourceString": "War Leader",
+          "LocalizedString": "War Leader"
+        },
+        "Description_11_F71D6C0F4C22AD6770DF98B28FB0A600": {
+          "Namespace": "DT_PassiveSkills",
+          "Key": "WarLeader_Description",
+          "SourceString": "Whenever user performs a basic attack, give 2 <img id=\"Rage\"/>  Rage to all allies.",
+          "LocalizedString": "Whenever user performs a basic attack, give 2 <img id=\"Rage\"/>  Rage to all allies."
+        }
+      }
+    }
+  }
+]

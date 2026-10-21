@@ -1,0 +1,129 @@
+[
+  {
+    "Type": "UserDefinedStruct",
+    "Name": "S_CraftRecipe",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedStruct'",
+    "Package": "/Game/Blueprints/Items/S_CraftRecipe",
+    "Properties": {
+      "Guid": "A8A0C958-4A92935B-3470A9BD-D274AFDB"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ByteProperty",
+        "Name": "Type_37_635D04CE4F4BFA40EA6D198FA4C81132",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'ERecipeType'",
+          "ObjectPath": "/Game/Blueprints/Items/ERecipeType.0"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Room_53_D7083A774147A487C167769FF885977C",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'ERoomType'",
+          "ObjectPath": "/Game/Blueprints/Items/ERoomType.0"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Work_40_417D5136480DAA7B39BFE49FF4F3125E",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Result_29_55F0EA464E8019F2179353AE77372FEA",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "AmountResult_30_3A792404482D2F80D0D0608687550D1B",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Resource1_2_F950B67340902B51680A3D908E021305",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Amount1_13_E8CA93F0497BBB085B04DB9168AA7BB9",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Resource2_7_5E8DB1BA4224C5BB17512CB88EBFE19D",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Amount2_18_9A108B9A4B88D2AE4BC362AE23C88B70",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Resource3_8_A7F2AA8B4E8648C1A018A8A463FB5B4F",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Amount3_19_96D63B0243D245B792D5BD8A49C73598",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Resource4_9_576A38324C4D095B60DA7A93C35C6D40",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Amount4_20_C23B4DC74CD2A4E97F5B5085A2B3885E",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      }
+    ],
+    "StructFlags": 0,
+    "DefaultProperties": {
+      "Type_37_635D04CE4F4BFA40EA6D198FA4C81132": "ERecipeType::NewEnumerator0",
+      "Room_53_D7083A774147A487C167769FF885977C": "ERoomType::NewEnumerator0",
+      "Work_40_417D5136480DAA7B39BFE49FF4F3125E": 100,
+      "Result_29_55F0EA464E8019F2179353AE77372FEA": "None",
+      "AmountResult_30_3A792404482D2F80D0D0608687550D1B": 0,
+      "Resource1_2_F950B67340902B51680A3D908E021305": "None",
+      "Amount1_13_E8CA93F0497BBB085B04DB9168AA7BB9": 0,
+      "Resource2_7_5E8DB1BA4224C5BB17512CB88EBFE19D": "None",
+      "Amount2_18_9A108B9A4B88D2AE4BC362AE23C88B70": 0,
+      "Resource3_8_A7F2AA8B4E8648C1A018A8A463FB5B4F": "None",
+      "Amount3_19_96D63B0243D245B792D5BD8A49C73598": 0,
+      "Resource4_9_576A38324C4D095B60DA7A93C35C6D40": "None",
+      "Amount4_20_C23B4DC74CD2A4E97F5B5085A2B3885E": 0
+    }
+  }
+]

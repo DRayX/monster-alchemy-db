@@ -1,0 +1,47 @@
+[
+  {
+    "Type": "UserDefinedEnum",
+    "Name": "EScaling",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedEnum'",
+    "Package": "/Game/Blueprints/Skills/EScaling",
+    "Properties": {
+      "DisplayNameMap": [
+        {
+          "Key": "NewEnumerator0",
+          "Value": {
+            "Namespace": "",
+            "Key": "D3F1B35B48FA5813E1370FBC67D6FD75",
+            "SourceString": "None",
+            "LocalizedString": "None"
+          }
+        },
+        {
+          "Key": "NewEnumerator1",
+          "Value": {
+            "Namespace": "",
+            "Key": "174D2123451542EC383F208D624CF14D",
+            "SourceString": "Strength",
+            "LocalizedString": "Strength"
+          }
+        },
+        {
+          "Key": "NewEnumerator2",
+          "Value": {
+            "Namespace": "",
+            "Key": "0073463045D71F41462390938197FDDB",
+            "SourceString": "Mind",
+            "LocalizedString": "Mind"
+          }
+        }
+      ]
+    },
+    "Names": {
+      "EScaling::NewEnumerator0": 0,
+      "EScaling::NewEnumerator1": 1,
+      "EScaling::NewEnumerator2": 2,
+      "EScaling::EScaling_MAX": 3
+    },
+    "CppForm": "Namespaced"
+  }
+]

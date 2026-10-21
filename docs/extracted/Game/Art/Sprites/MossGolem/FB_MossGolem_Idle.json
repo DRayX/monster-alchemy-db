@@ -1,0 +1,32 @@
+[
+  {
+    "Type": "PaperFlipbook",
+    "Name": "FB_MossGolem_Idle",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PaperFlipbook'",
+    "Package": "/Game/Art/Sprites/MossGolem/FB_MossGolem_Idle",
+    "Properties": {
+      "FramesPerSecond": 2.0,
+      "KeyFrames": [
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'T_MossGolem_97x45_Sprite_0'",
+            "ObjectPath": "/Game/Art/Sprites/MossGolem/T_MossGolem_97x45_Sprite_0.1"
+          },
+          "FrameRun": 1
+        },
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'T_MossGolem_97x45_Sprite_1'",
+            "ObjectPath": "/Game/Art/Sprites/MossGolem/T_MossGolem_97x45_Sprite_1.1"
+          },
+          "FrameRun": 1
+        }
+      ],
+      "DefaultMaterial": {
+        "ObjectName": "MaterialInstanceConstant'MI_MossGolem'",
+        "ObjectPath": "/Game/Art/Sprites/MossGolem/MI_MossGolem.0"
+      }
+    }
+  }
+]

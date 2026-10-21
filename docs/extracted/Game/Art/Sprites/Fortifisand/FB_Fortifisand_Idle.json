@@ -1,0 +1,32 @@
+[
+  {
+    "Type": "PaperFlipbook",
+    "Name": "FB_Fortifisand_Idle",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PaperFlipbook'",
+    "Package": "/Game/Art/Sprites/Fortifisand/FB_Fortifisand_Idle",
+    "Properties": {
+      "FramesPerSecond": 2.0,
+      "KeyFrames": [
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'P_Fortifisand_75x43_Sprite_0'",
+            "ObjectPath": "/Game/Art/Sprites/Fortifisand/P_Fortifisand_75x43_Sprite_0.1"
+          },
+          "FrameRun": 1
+        },
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'P_Fortifisand_75x43_Sprite_1'",
+            "ObjectPath": "/Game/Art/Sprites/Fortifisand/P_Fortifisand_75x43_Sprite_1.1"
+          },
+          "FrameRun": 1
+        }
+      ],
+      "DefaultMaterial": {
+        "ObjectName": "MaterialInstanceConstant'MI_Fortifisand'",
+        "ObjectPath": "/Game/Art/Sprites/Fortifisand/MI_Fortifisand.0"
+      }
+    }
+  }
+]

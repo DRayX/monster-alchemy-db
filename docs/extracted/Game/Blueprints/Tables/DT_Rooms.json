@@ -1,0 +1,167 @@
+[
+  {
+    "Type": "DataTable",
+    "Name": "DT_Rooms",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DataTable'",
+    "Package": "/Game/Blueprints/Tables/DT_Rooms",
+    "Properties": {
+      "RowStruct": {
+        "ObjectName": "UserDefinedStruct'S_RoomTable'",
+        "ObjectPath": "/Game/Blueprints/Tables/S_RoomTable.0"
+      }
+    },
+    "Rows": {
+      "Room": {
+        "Name_2_7D1514C349B3E887C195088408BBBB77": {
+          "Namespace": "DT_Rooms",
+          "Key": "Room_Name",
+          "SourceString": "Room Manager",
+          "LocalizedString": "Room Manager"
+        },
+        "Prefix_5_278BD9294CE8B94B8384258636459F18": "Str",
+        "Icon_8_040C6BBA421EBA7805B93DA9DB88A38C": {
+          "ObjectName": "Texture2D'T_Icon_RoomManager'",
+          "ObjectPath": "/Game/Art/UI/T_Icon_RoomManager.0"
+        }
+      },
+      "SummoningCircle": {
+        "Name_2_7D1514C349B3E887C195088408BBBB77": {
+          "Namespace": "DT_Rooms",
+          "Key": "CircleOfSummoning_Name",
+          "SourceString": "Circle Of Summoning",
+          "LocalizedString": "Circle Of Summoning"
+        },
+        "Prefix_5_278BD9294CE8B94B8384258636459F18": "Sum",
+        "Icon_8_040C6BBA421EBA7805B93DA9DB88A38C": {
+          "ObjectName": "Texture2D'T_Icon_Summoning'",
+          "ObjectPath": "/Game/Art/UI/T_Icon_Summoning.0"
+        }
+      },
+      "NecromancyCircle": {
+        "Name_2_7D1514C349B3E887C195088408BBBB77": {
+          "Namespace": "DT_Rooms",
+          "Key": "CircleOfNecromancy_Name",
+          "SourceString": "Circle Of Necromancy",
+          "LocalizedString": "Circle Of Necromancy"
+        },
+        "Prefix_5_278BD9294CE8B94B8384258636459F18": "Nec",
+        "Icon_8_040C6BBA421EBA7805B93DA9DB88A38C": {
+          "ObjectName": "Texture2D'T_Icon_Necromancy'",
+          "ObjectPath": "/Game/Art/UI/T_Icon_Necromancy.0"
+        }
+      },
+      "CircleOfGrowth": {
+        "Name_2_7D1514C349B3E887C195088408BBBB77": {
+          "Namespace": "DT_Rooms",
+          "Key": "CircleOfGrowth_Name",
+          "SourceString": "Circle Of Growth",
+          "LocalizedString": "Circle Of Growth"
+        },
+        "Prefix_5_278BD9294CE8B94B8384258636459F18": "Gro",
+        "Icon_8_040C6BBA421EBA7805B93DA9DB88A38C": null
+      },
+      "CircleOfAssembly": {
+        "Name_2_7D1514C349B3E887C195088408BBBB77": {
+          "Namespace": "DT_Rooms",
+          "Key": "CircleOfAssembly_Name",
+          "SourceString": "Circle Of Assembly",
+          "LocalizedString": "Circle Of Assembly"
+        },
+        "Prefix_5_278BD9294CE8B94B8384258636459F18": "Ase",
+        "Icon_8_040C6BBA421EBA7805B93DA9DB88A38C": null
+      },
+      "Cauldron": {
+        "Name_2_7D1514C349B3E887C195088408BBBB77": {
+          "Namespace": "DT_Rooms",
+          "Key": "Cauldron_Name",
+          "SourceString": "The Cauldron",
+          "LocalizedString": "The Cauldron"
+        },
+        "Prefix_5_278BD9294CE8B94B8384258636459F18": "Cal",
+        "Icon_8_040C6BBA421EBA7805B93DA9DB88A38C": {
+          "ObjectName": "Texture2D'T_Icon_Cauldron'",
+          "ObjectPath": "/Game/Art/UI/T_Icon_Cauldron.0"
+        }
+      },
+      "Furnace": {
+        "Name_2_7D1514C349B3E887C195088408BBBB77": {
+          "Namespace": "DT_Rooms",
+          "Key": "Furnace_Name",
+          "SourceString": "Furnace",
+          "LocalizedString": "Furnace"
+        },
+        "Prefix_5_278BD9294CE8B94B8384258636459F18": "Fur",
+        "Icon_8_040C6BBA421EBA7805B93DA9DB88A38C": {
+          "ObjectName": "Texture2D'T_Icon_Furnace'",
+          "ObjectPath": "/Game/Art/UI/T_Icon_Furnace.0"
+        }
+      },
+      "Crusher": {
+        "Name_2_7D1514C349B3E887C195088408BBBB77": {
+          "Namespace": "DT_Rooms",
+          "Key": "Crusher_Name",
+          "SourceString": "Crusher",
+          "LocalizedString": "Crusher"
+        },
+        "Prefix_5_278BD9294CE8B94B8384258636459F18": "Cru",
+        "Icon_8_040C6BBA421EBA7805B93DA9DB88A38C": {
+          "ObjectName": "Texture2D'T_Icon_Crusher'",
+          "ObjectPath": "/Game/Art/UI/T_Icon_Crusher.0"
+        }
+      },
+      "Fermentator": {
+        "Name_2_7D1514C349B3E887C195088408BBBB77": {
+          "Namespace": "DT_Rooms",
+          "Key": "Fermentator_Name",
+          "SourceString": "Fermentator",
+          "LocalizedString": "Fermentator"
+        },
+        "Prefix_5_278BD9294CE8B94B8384258636459F18": "Fer",
+        "Icon_8_040C6BBA421EBA7805B93DA9DB88A38C": {
+          "ObjectName": "Texture2D'T_IconFermentator'",
+          "ObjectPath": "/Game/Art/UI/T_IconFermentator.0"
+        }
+      },
+      "MonsterManager": {
+        "Name_2_7D1514C349B3E887C195088408BBBB77": {
+          "Namespace": "DT_Rooms",
+          "Key": "MonsterManager_Name",
+          "SourceString": "Monster Manager",
+          "LocalizedString": "Monster Manager"
+        },
+        "Prefix_5_278BD9294CE8B94B8384258636459F18": "Man",
+        "Icon_8_040C6BBA421EBA7805B93DA9DB88A38C": {
+          "ObjectName": "Texture2D'T_Icon_Manager'",
+          "ObjectPath": "/Game/Art/UI/T_Icon_Manager.0"
+        }
+      },
+      "FusionRoom": {
+        "Name_2_7D1514C349B3E887C195088408BBBB77": {
+          "Namespace": "",
+          "Key": "1CEF039341F2AECAA590DAA8B80C91AE",
+          "SourceString": "Chimeric Chamber",
+          "LocalizedString": "Chimeric Chamber"
+        },
+        "Prefix_5_278BD9294CE8B94B8384258636459F18": "Fus",
+        "Icon_8_040C6BBA421EBA7805B93DA9DB88A38C": {
+          "ObjectName": "Texture2D'T_Icon_Fusion'",
+          "ObjectPath": "/Game/Art/UI/T_Icon_Fusion.0"
+        }
+      },
+      "Atelier": {
+        "Name_2_7D1514C349B3E887C195088408BBBB77": {
+          "Namespace": "",
+          "Key": "4B8CBDD64C5562C260ECB5BBFB2209EF",
+          "SourceString": "Quintessence Atelier",
+          "LocalizedString": "Quintessence Atelier"
+        },
+        "Prefix_5_278BD9294CE8B94B8384258636459F18": "Ate",
+        "Icon_8_040C6BBA421EBA7805B93DA9DB88A38C": {
+          "ObjectName": "Texture2D'T_Icon_Atelier'",
+          "ObjectPath": "/Game/Art/UI/T_Icon_Atelier.0"
+        }
+      }
+    }
+  }
+]

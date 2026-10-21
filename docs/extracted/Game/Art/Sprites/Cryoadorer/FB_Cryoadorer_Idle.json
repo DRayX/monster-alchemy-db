@@ -1,0 +1,32 @@
+[
+  {
+    "Type": "PaperFlipbook",
+    "Name": "FB_Cryoadorer_Idle",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PaperFlipbook'",
+    "Package": "/Game/Art/Sprites/Cryoadorer/FB_Cryoadorer_Idle",
+    "Properties": {
+      "FramesPerSecond": 2.0,
+      "KeyFrames": [
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'T_Cryoadorer_90x52_Sprite_0'",
+            "ObjectPath": "/Game/Art/Sprites/Cryoadorer/T_Cryoadorer_90x52_Sprite_0.1"
+          },
+          "FrameRun": 1
+        },
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'T_Cryoadorer_90x52_Sprite_1'",
+            "ObjectPath": "/Game/Art/Sprites/Cryoadorer/T_Cryoadorer_90x52_Sprite_1.1"
+          },
+          "FrameRun": 1
+        }
+      ],
+      "DefaultMaterial": {
+        "ObjectName": "MaterialInstanceConstant'MI_Cryoadorer'",
+        "ObjectPath": "/Game/Art/Sprites/Cryoadorer/MI_Cryoadorer.0"
+      }
+    }
+  }
+]

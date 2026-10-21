@@ -1,0 +1,32 @@
+[
+  {
+    "Type": "PaperFlipbook",
+    "Name": "FB_GoblinGunner_Idle",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PaperFlipbook'",
+    "Package": "/Game/Art/Sprites/GoblinGunner/FB_GoblinGunner_Idle",
+    "Properties": {
+      "FramesPerSecond": 2.0,
+      "KeyFrames": [
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'GoblinGunner_41x32_Sprite_0'",
+            "ObjectPath": "/Game/Art/Sprites/GoblinGunner/GoblinGunner_41x32_Sprite_0.1"
+          },
+          "FrameRun": 1
+        },
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'GoblinGunner_41x32_Sprite_1'",
+            "ObjectPath": "/Game/Art/Sprites/GoblinGunner/GoblinGunner_41x32_Sprite_1.1"
+          },
+          "FrameRun": 1
+        }
+      ],
+      "DefaultMaterial": {
+        "ObjectName": "MaterialInstanceConstant'MI_GoblinGunner'",
+        "ObjectPath": "/Game/Art/Sprites/GoblinGunner/MI_GoblinGunner.0"
+      }
+    }
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "Type": "UserDefinedStruct",
+    "Name": "S_ResourceData",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedStruct'",
+    "Package": "/Game/Sprites/Tables/S_ResourceData",
+    "Properties": {
+      "Guid": "A53D3CC7-421EB3F1-101E89B4-D24EA483"
+    },
+    "ChildProperties": [
+      {
+        "Type": "TextProperty",
+        "Name": "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      }
+    ],
+    "StructFlags": 0,
+    "DefaultProperties": {
+      "Name_8_35FB6CDD453B2DDD135B7197D50CE6AF": {
+        "CultureInvariantString": null
+      },
+      "Description_5_1BEA7FBB41482CB8F583CE8FFC8F5B5A": {
+        "CultureInvariantString": null
+      }
+    }
+  }
+]

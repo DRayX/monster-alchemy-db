@@ -1,0 +1,25 @@
+[
+  {
+    "Type": "UserDefinedStruct",
+    "Name": "S_FusionTable",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedStruct'",
+    "Package": "/Game/Blueprints/Monsters/S_FusionTable",
+    "Properties": {
+      "Guid": "87D9E533-4F8BCEC6-4CCEE1B6-787BFD78"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "Result_2_67E97D374C78BA04E18A94BD8E128359",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      }
+    ],
+    "StructFlags": 0,
+    "DefaultProperties": {
+      "Result_2_67E97D374C78BA04E18A94BD8E128359": "None"
+    }
+  }
+]

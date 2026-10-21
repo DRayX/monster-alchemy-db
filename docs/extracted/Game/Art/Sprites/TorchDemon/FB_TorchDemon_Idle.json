@@ -1,0 +1,32 @@
+[
+  {
+    "Type": "PaperFlipbook",
+    "Name": "FB_TorchDemon_Idle",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PaperFlipbook'",
+    "Package": "/Game/Art/Sprites/TorchDemon/FB_TorchDemon_Idle",
+    "Properties": {
+      "FramesPerSecond": 2.0,
+      "KeyFrames": [
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'LesserDemon_Sprite_0'",
+            "ObjectPath": "/Game/Art/Sprites/TorchDemon/LesserDemon_Sprite_0.1"
+          },
+          "FrameRun": 1
+        },
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'LesserDemon_Sprite_1'",
+            "ObjectPath": "/Game/Art/Sprites/TorchDemon/LesserDemon_Sprite_1.1"
+          },
+          "FrameRun": 1
+        }
+      ],
+      "DefaultMaterial": {
+        "ObjectName": "MaterialInstanceConstant'MI_TorchDemon'",
+        "ObjectPath": "/Game/Art/Sprites/TorchDemon/MI_TorchDemon.0"
+      }
+    }
+  }
+]

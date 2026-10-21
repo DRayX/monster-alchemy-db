@@ -1,0 +1,32 @@
+[
+  {
+    "Type": "PaperFlipbook",
+    "Name": "FB_RazorbeakCrow_Idle",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PaperFlipbook'",
+    "Package": "/Game/Art/Sprites/RazorbeakCrow/FB_RazorbeakCrow_Idle",
+    "Properties": {
+      "FramesPerSecond": 2.0,
+      "KeyFrames": [
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'RazorbeakCrow_Sprite_4'",
+            "ObjectPath": "/Game/Art/Sprites/RazorbeakCrow/RazorbeakCrow_Sprite_4.1"
+          },
+          "FrameRun": 1
+        },
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'RazorbeakCrow_Sprite_5'",
+            "ObjectPath": "/Game/Art/Sprites/RazorbeakCrow/RazorbeakCrow_Sprite_5.1"
+          },
+          "FrameRun": 1
+        }
+      ],
+      "DefaultMaterial": {
+        "ObjectName": "MaterialInstanceConstant'MI_RazorbeakCrow'",
+        "ObjectPath": "/Game/Art/Sprites/RazorbeakCrow/MI_RazorbeakCrow.0"
+      }
+    }
+  }
+]

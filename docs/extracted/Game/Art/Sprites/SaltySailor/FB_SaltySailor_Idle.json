@@ -1,0 +1,32 @@
+[
+  {
+    "Type": "PaperFlipbook",
+    "Name": "FB_SaltySailor_Idle",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PaperFlipbook'",
+    "Package": "/Game/Art/Sprites/SaltySailor/FB_SaltySailor_Idle",
+    "Properties": {
+      "FramesPerSecond": 2.0,
+      "KeyFrames": [
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'SaltySailor_Sprite_0'",
+            "ObjectPath": "/Game/Art/Sprites/SaltySailor/SaltySailor_Sprite_0.1"
+          },
+          "FrameRun": 1
+        },
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'SaltySailor_Sprite_1'",
+            "ObjectPath": "/Game/Art/Sprites/SaltySailor/SaltySailor_Sprite_1.1"
+          },
+          "FrameRun": 1
+        }
+      ],
+      "DefaultMaterial": {
+        "ObjectName": "MaterialInstanceConstant'MI_SaltySailor'",
+        "ObjectPath": "/Game/Art/Sprites/SaltySailor/MI_SaltySailor.0"
+      }
+    }
+  }
+]

@@ -1,0 +1,137 @@
+[
+  {
+    "Type": "UserDefinedStruct",
+    "Name": "S_Monster_Table",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedStruct'",
+    "Package": "/Game/Blueprints/Monsters/S_Monster_Table",
+    "Properties": {
+      "Guid": "CDD25BE4-42E7201E-8A6AA5AF-4EE9D6D3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "TextProperty",
+        "Name": "Name_44_B85A12174D2FAE314D280C9D610D0902",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Tier_43_645CB9EB4BDDA88D15DA1BA88D415290",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Health_2_432446DD4CF9FACC3672618713FE9147",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Soul_55_94EAF9D94894F45F2B36769255484E18",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Strength_59_472774CC44D5BE42ED3A0C80F9438336",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Defense_18_0BE37AE7483C3F137EDEF6A264ADD74E",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Mind_57_7DDADDF14E7CDEB00F7FD99186E8F880",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Agility_58_9F6DDA97438D5E547986A899214DF6AC",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Type_21_B95DA0BA47D2AC728E698A949196506D",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'EMonsterType'",
+          "ObjectPath": "/Game/Blueprints/Monsters/EMonsterType.0"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "AttackType_28_F25931F143E41A30B9B7B393BD4FC3A7",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'EAttackType'",
+          "ObjectPath": "/Game/Blueprints/Monsters/EAttackType.0"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "MovementType_47_5CE6AB234814CEA44E392BA44F39265A",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'ENPCMovementType'",
+          "ObjectPath": "/Game/Blueprints/Characters/ENPCMovementType.0"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Passive_50_262BE3AD4C5515D922F1A7B775F1B693",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Description_62_B028C92748664F2DA09DBA83AA9EC184",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      }
+    ],
+    "StructFlags": 0,
+    "DefaultProperties": {
+      "Name_44_B85A12174D2FAE314D280C9D610D0902": {
+        "CultureInvariantString": null
+      },
+      "Tier_43_645CB9EB4BDDA88D15DA1BA88D415290": 1,
+      "Health_2_432446DD4CF9FACC3672618713FE9147": 10,
+      "Soul_55_94EAF9D94894F45F2B36769255484E18": 0,
+      "Strength_59_472774CC44D5BE42ED3A0C80F9438336": 0,
+      "Defense_18_0BE37AE7483C3F137EDEF6A264ADD74E": 0,
+      "Mind_57_7DDADDF14E7CDEB00F7FD99186E8F880": 0,
+      "Agility_58_9F6DDA97438D5E547986A899214DF6AC": 0,
+      "Type_21_B95DA0BA47D2AC728E698A949196506D": "EMonsterType::NewEnumerator0",
+      "AttackType_28_F25931F143E41A30B9B7B393BD4FC3A7": "EAttackType::NewEnumerator0",
+      "MovementType_47_5CE6AB234814CEA44E392BA44F39265A": "ENPCMovementType::NewEnumerator0",
+      "Passive_50_262BE3AD4C5515D922F1A7B775F1B693": "None",
+      "Description_62_B028C92748664F2DA09DBA83AA9EC184": {
+        "CultureInvariantString": null
+      }
+    }
+  }
+]

@@ -1,0 +1,137 @@
+[
+  {
+    "Type": "UserDefinedEnum",
+    "Name": "ETargettingType",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedEnum'",
+    "Package": "/Game/Blueprints/Skills/ETargettingType",
+    "Properties": {
+      "DisplayNameMap": [
+        {
+          "Key": "NewEnumerator0",
+          "Value": {
+            "Namespace": "",
+            "Key": "AF59655243B8E95CAAED28B108E2218A",
+            "SourceString": "SingleEnemyFrontline",
+            "LocalizedString": "SingleEnemyFrontline"
+          }
+        },
+        {
+          "Key": "NewEnumerator1",
+          "Value": {
+            "Namespace": "",
+            "Key": "CFE0303F49FB3A632D59A58CB4B7EEA5",
+            "SourceString": "SingleEnemyBackline",
+            "LocalizedString": "SingleEnemyBackline"
+          }
+        },
+        {
+          "Key": "NewEnumerator2",
+          "Value": {
+            "Namespace": "",
+            "Key": "4B2F3C294F836559DBE8659CC4C873B4",
+            "SourceString": "AllEnemies",
+            "LocalizedString": "AllEnemies"
+          }
+        },
+        {
+          "Key": "NewEnumerator3",
+          "Value": {
+            "Namespace": "",
+            "Key": "FD670EB24909BAD51FDFC7A9886DCCB7",
+            "SourceString": "AllAllies",
+            "LocalizedString": "AllAllies"
+          }
+        },
+        {
+          "Key": "NewEnumerator4",
+          "Value": {
+            "Namespace": "",
+            "Key": "510E80794D73182F768EAC96164E4EF1",
+            "SourceString": "AllMonsters",
+            "LocalizedString": "AllMonsters"
+          }
+        },
+        {
+          "Key": "NewEnumerator5",
+          "Value": {
+            "Namespace": "",
+            "Key": "397AA3794DD8E1E9761662904B9448C4",
+            "SourceString": "EnemyFrontline",
+            "LocalizedString": "EnemyFrontline"
+          }
+        },
+        {
+          "Key": "NewEnumerator6",
+          "Value": {
+            "Namespace": "",
+            "Key": "56188C0543C26F9F62B3CE87B4BB97FF",
+            "SourceString": "EnemyBackline",
+            "LocalizedString": "EnemyBackline"
+          }
+        },
+        {
+          "Key": "NewEnumerator7",
+          "Value": {
+            "Namespace": "",
+            "Key": "2442F8274C9848AAA408298AF621B934",
+            "SourceString": "AllyFrontline",
+            "LocalizedString": "AllyFrontline"
+          }
+        },
+        {
+          "Key": "NewEnumerator8",
+          "Value": {
+            "Namespace": "",
+            "Key": "D891E0FB450E788A3BB069A9354AE490",
+            "SourceString": "AllyBackline",
+            "LocalizedString": "AllyBackline"
+          }
+        },
+        {
+          "Key": "NewEnumerator9",
+          "Value": {
+            "Namespace": "",
+            "Key": "BBF76606423E761FE903C4A35D10F548",
+            "SourceString": "Self",
+            "LocalizedString": "Self"
+          }
+        },
+        {
+          "Key": "NewEnumerator10",
+          "Value": {
+            "Namespace": "",
+            "Key": "5D8C19AA4C5A1664C3B2D6A001AB92D2",
+            "SourceString": "SingleEnemyFree",
+            "LocalizedString": "SingleEnemyFree"
+          }
+        },
+        {
+          "Key": "NewEnumerator11",
+          "Value": {
+            "Namespace": "",
+            "Key": "3440C5F8475205E454B9A098C6DF2364",
+            "SourceString": "Custom",
+            "LocalizedString": "Custom"
+          }
+        }
+      ]
+    },
+    "Names": {
+      "ETargettingType::NewEnumerator0": 0,
+      "ETargettingType::NewEnumerator1": 1,
+      "ETargettingType::NewEnumerator10": 2,
+      "ETargettingType::NewEnumerator2": 3,
+      "ETargettingType::NewEnumerator3": 4,
+      "ETargettingType::NewEnumerator4": 5,
+      "ETargettingType::NewEnumerator5": 6,
+      "ETargettingType::NewEnumerator6": 7,
+      "ETargettingType::NewEnumerator7": 8,
+      "ETargettingType::NewEnumerator8": 9,
+      "ETargettingType::NewEnumerator9": 10,
+      "ETargettingType::NewEnumerator11": 11,
+      "ETargettingType::ETargettingType_MAX": 12
+    },
+    "CppForm": "Namespaced"
+  }
+]

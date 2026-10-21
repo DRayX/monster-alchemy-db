@@ -1,0 +1,1973 @@
+[
+  {
+    "Type": "DataTable",
+    "Name": "DT_ActiveSkills",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DataTable'",
+    "Package": "/Game/Blueprints/Skills/Tables/DT_ActiveSkills",
+    "Properties": {
+      "RowStruct": {
+        "ObjectName": "UserDefinedStruct'S_ActiveSkillTable'",
+        "ObjectPath": "/Game/Blueprints/Skills/S_ActiveSkillTable.0"
+      }
+    },
+    "Rows": {
+      "AcidBomb": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "AcidBomb_Name",
+          "SourceString": "Acid Bomb",
+          "LocalizedString": "Acid Bomb"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "AcidBomb_Description",
+          "SourceString": "Inflicts 2 <img id=\"Poison\"/> Poison.",
+          "LocalizedString": "Inflicts 2 <img id=\"Poison\"/> Poison."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator4",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator4",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator2",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 100,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 15,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_AcidBomb.O_ActiveSkill_AcidBomb_C",
+          "SubPathString": ""
+        }
+      },
+      "ArcaneSpark": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "ArcaneSpark_Name",
+          "SourceString": "Arcane Spark",
+          "LocalizedString": "Arcane Spark"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "CultureInvariantString": null
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator0",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator4",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator2",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 100,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 15,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_ArcaneSpark.O_ActiveSkill_ArcaneSpark_C",
+          "SubPathString": ""
+        }
+      },
+      "ArcaneStorm": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "ArcaneStorm_Name",
+          "SourceString": "Arcane Storm",
+          "LocalizedString": "Arcane Storm"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "CultureInvariantString": null
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator2",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator0",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator4",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator2",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 100,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 40,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_ArcaneStorm.O_ActiveSkill_ArcaneStorm_C",
+          "SubPathString": ""
+        }
+      },
+      "Aromatherapy": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "Aromatherapy_Name",
+          "SourceString": "Aromatherapy",
+          "LocalizedString": "Aromatherapy"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "Aromatherapy_Description",
+          "SourceString": "Gain 2 <img id=\"Regeneration\"/>  Regeneration.",
+          "LocalizedString": "Gain 2 <img id=\"Regeneration\"/>  Regeneration."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator3",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator4",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator0",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator0",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 0,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_Aromatherapy.O_ActiveSkill_Aromatherapy_C",
+          "SubPathString": ""
+        }
+      },
+      "Avalanche": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "Avalanche_Name",
+          "SourceString": "Avalanche",
+          "LocalizedString": "Avalanche"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "CultureInvariantString": null
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator5",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator2",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator3",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 75,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_Avalanche.O_ActiveSkill_Avalanche_C",
+          "SubPathString": ""
+        }
+      },
+      "BlackWaters": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "BlackWaters_Name",
+          "SourceString": "Black Waters",
+          "LocalizedString": "Black Waters"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "BlackWaters_Description",
+          "SourceString": "Inflicts 2 <img id=\"Slow\"/> Slow and 2 <img id=\"Weak\"/> Weak.",
+          "LocalizedString": "Inflicts 2 <img id=\"Slow\"/> Slow and 2 <img id=\"Weak\"/> Weak."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator2",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator2",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator0",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator0",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 0,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_BlackWaters.O_ActiveSkill_BlackWaters_C",
+          "SubPathString": ""
+        }
+      },
+      "BlazingSlash": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "BlazingSlash_Name",
+          "SourceString": "Blazing Slash",
+          "LocalizedString": "Blazing Slash"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "BlazingSlash_Description",
+          "SourceString": "Inflicts 4 <img id=\"Burn\"/> Burn.",
+          "LocalizedString": "Inflicts 4 <img id=\"Burn\"/> Burn."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator1",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator2",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator2",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 100,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 15,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_BlazingSlash.O_ActiveSkill_BlazingSlash_C",
+          "SubPathString": ""
+        }
+      },
+      "BloomBash": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "BloomBash_Name",
+          "SourceString": "Bloom Bash",
+          "LocalizedString": "Bloom Bash"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "CultureInvariantString": null
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator4",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator1",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 120,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 15,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_BloomBash.O_ActiveSkill_BloomBash_C",
+          "SubPathString": ""
+        }
+      },
+      "BoneBreakingBomb": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "BoneBreakingBomb_Name",
+          "SourceString": "Bone-Breaking Bomb",
+          "LocalizedString": "Bone-Breaking Bomb"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "BoneBreakingBomb_Description",
+          "SourceString": "Inflicts 3 <img id=\"Weak\"/> Weak.",
+          "LocalizedString": "Inflicts 3 <img id=\"Weak\"/> Weak."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator10",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator1",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator3",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 150,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 20,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_BoneBreakingBomb.O_ActiveSkill_BoneBreakingBomb_C",
+          "SubPathString": ""
+        }
+      },
+      "BorealGale": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "BorealGale_Name",
+          "SourceString": "Boreal Gale",
+          "LocalizedString": "Boreal Gale"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "CultureInvariantString": null
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator5",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator2",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator4",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator2",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 50,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_BorealGale.O_ActiveSkill_BorealGale_C",
+          "SubPathString": ""
+        }
+      },
+      "BoulderThrow": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "BoulderThrow_Name",
+          "SourceString": "Boulder Throw",
+          "LocalizedString": "Boulder Throw"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "CultureInvariantString": null
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator0",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator3",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 90,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_BoulderThrow.O_ActiveSkill_BoulderThrow_C",
+          "SubPathString": ""
+        }
+      },
+      "BubbleBash": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "BubbleBash_Name",
+          "SourceString": "Bubble Bash",
+          "LocalizedString": "Bubble Bash"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "BubbleBash_Description",
+          "SourceString": "Gain 1 <img id=\"Barrier\"/>Barrier.",
+          "LocalizedString": "Gain 1 <img id=\"Barrier\"/>Barrier."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator2",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator1",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 75,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_BubbleBash.O_ActiveSkill_BubbleBash_C",
+          "SubPathString": ""
+        }
+      },
+      "BubbleBlast": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "BubbleBlast_Name",
+          "SourceString": "Bubble Blast",
+          "LocalizedString": "Bubble Blast"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "BubbleBlast_Description",
+          "SourceString": "This skill can target any enemy.",
+          "LocalizedString": "This skill can target any enemy."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator10",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator2",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator4",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator2",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 100,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 15,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_BubbleBlast.O_ActiveSkill_BubbleBlast_C",
+          "SubPathString": ""
+        }
+      },
+      "BurningCyclone": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "BurningCyclone_Name",
+          "SourceString": "Burning Cyclone",
+          "LocalizedString": "Burning Cyclone"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "BurningCyclone_Description",
+          "SourceString": "Inflicts 6 <img id=\"Burn\"/> Burn.",
+          "LocalizedString": "Inflicts 6 <img id=\"Burn\"/> Burn."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator2",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator1",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator4",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator2",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 20,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 20,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_BurningCyclone.O_ActiveSkill_BurningCyclone_C",
+          "SubPathString": ""
+        }
+      },
+      "ChargedMind": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "ChargedMind_Name",
+          "SourceString": "Charged Mind",
+          "LocalizedString": "Charged Mind"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "ChargedMind_Description",
+          "SourceString": "Gains 3 <img id=\"Charge\"/> Charge.",
+          "LocalizedString": "Gains 3 <img id=\"Charge\"/> Charge."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator9",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator3",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator0",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator0",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 0,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_ChargedMind.O_ActiveSkill_ChargedMind_C",
+          "SubPathString": ""
+        }
+      },
+      "CleanCut": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "CleanCut_Name",
+          "SourceString": "Clean Cut",
+          "LocalizedString": "Clean Cut"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "CultureInvariantString": null
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator0",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator2",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 100,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 15,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_CleanCut.O_ActiveSkill_CleanCut_C",
+          "SubPathString": ""
+        }
+      },
+      "CleansingWaters": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "CleansingWaters_Name",
+          "SourceString": "Cleansing Waters",
+          "LocalizedString": "Cleansing Waters"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "CleansingWaters_Description",
+          "SourceString": "Removes all status effects.",
+          "LocalizedString": "Removes all status effects."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator4",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator2",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator0",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator0",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 0,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_CleansingWaters.O_ActiveSkill_CleansingWaters_C",
+          "SubPathString": ""
+        }
+      },
+      "ColdWind": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "ColdWind_Name",
+          "SourceString": "Cold Wind",
+          "LocalizedString": "Cold Wind"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "ColdWind_Description",
+          "SourceString": "Inflicts 2 <img id=\"Freeze\"/> Freeze.",
+          "LocalizedString": "Inflicts 2 <img id=\"Freeze\"/> Freeze."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator2",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator2",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator0",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator0",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 0,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_ColdWind.O_ActiveSkill_ColdWind_C",
+          "SubPathString": ""
+        }
+      },
+      "Combustion": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "Combustion_Name",
+          "SourceString": "Combustion",
+          "LocalizedString": "Combustion"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "Combustion_Description",
+          "SourceString": "Inflicts double damage on targets with <img id=\"Burn\"/> Burn.",
+          "LocalizedString": "Inflicts double damage on targets with <img id=\"Burn\"/> Burn."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator1",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator4",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator2",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 90,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_Combustion.O_ActiveSkill_Combustion_C",
+          "SubPathString": ""
+        }
+      },
+      "CriticalShot": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "CriticalShot_Name",
+          "SourceString": "Critical Shot",
+          "LocalizedString": "Critical Shot"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "CriticalShot_Description",
+          "SourceString": "If the target has <img id=\"Weak\"/> Weak, is always critical.",
+          "LocalizedString": "If the target has <img id=\"Weak\"/> Weak, is always critical."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator10",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator0",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator3",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 100,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 15,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_CriticalShot.O_ActiveSkill_CriticalShot_C",
+          "SubPathString": ""
+        }
+      },
+      "CursedMelody": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "CursedMelody_Name",
+          "SourceString": "Cursed Melody",
+          "LocalizedString": "Cursed Melody"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "CursedMelody_Description",
+          "SourceString": "Inflicts 2 <img id=\"Weak\"/> Weak and 2 <img id=\"Shock\"/> Shock.",
+          "LocalizedString": "Inflicts 2 <img id=\"Weak\"/> Weak and 2 <img id=\"Shock\"/> Shock."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator2",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator3",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator0",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator0",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 0,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 15,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_CursedMelody.O_ActiveSkill_CursedMelody_C",
+          "SubPathString": ""
+        }
+      },
+      "DebilitatingBite": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "DebilitatingBite_Name",
+          "SourceString": "Debilitating Bite",
+          "LocalizedString": "Debilitating Bite"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "DebilitatingBite_Description",
+          "SourceString": "Inflicts 2 <img id=\"Weak\"/> Weak.",
+          "LocalizedString": "Inflicts 2 <img id=\"Weak\"/> Weak."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator0",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator2",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 75,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 15,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_DebilitatingBite.O_ActiveSkill_DebilitatingBite_C",
+          "SubPathString": ""
+        }
+      },
+      "Discharge": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "Discharge_Name",
+          "SourceString": "Discharge",
+          "LocalizedString": "Discharge"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "CultureInvariantString": null
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator5",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator3",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator4",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator2",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 80,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 25,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_Discharge.O_ActiveSkill_Discharge_C",
+          "SubPathString": ""
+        }
+      },
+      "DrainingBite": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "DrainingBite_Name",
+          "SourceString": "Draining Bite",
+          "LocalizedString": "Draining Bite"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "DrainingBite_Description",
+          "SourceString": "User heals for 50% of damage inflicted.",
+          "LocalizedString": "User heals for 50% of damage inflicted."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator0",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator2",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 80,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_DrainingBite.O_ActiveSkill_DrainingBite_C",
+          "SubPathString": ""
+        }
+      },
+      "Dreadshade": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "Dreadshade_Name",
+          "SourceString": "Dreadshade",
+          "LocalizedString": "Dreadshade"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "Dreadshade_Description",
+          "SourceString": "If it's nighttime, inflicts 2 <img id=\"Weak\"/> Weak and 1 <img id=\"Shock\"/> Shock.",
+          "LocalizedString": "If it's nighttime, inflicts 2 <img id=\"Weak\"/> Weak and 1 <img id=\"Shock\"/> Shock."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator6",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator4",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator2",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 80,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_Dreadshade.O_ActiveSkill_Dreadshade_C",
+          "SubPathString": ""
+        }
+      },
+      "DungBomb": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "DungBomb_Name",
+          "SourceString": "Dung Bomb",
+          "LocalizedString": "Dung Bomb"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "DungBomb_Description",
+          "SourceString": "Inflicts 2 <img id=\"Weak\"/> Weak.",
+          "LocalizedString": "Inflicts 2 <img id=\"Weak\"/> Weak."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator0",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator3",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 90,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_DungBomb.O_ActiveSkill_DungBomb_C",
+          "SubPathString": ""
+        }
+      },
+      "Earthquake": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "Earthquake_Name",
+          "SourceString": "Earthquake",
+          "LocalizedString": "Earthquake"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "CultureInvariantString": null
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator2",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator4",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator1",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 100,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 40,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_Earthquake.O_ActiveSkill_Earthquake_C",
+          "SubPathString": ""
+        }
+      },
+      "ElectronicVibrations": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "ElectronicVibrations_Name",
+          "SourceString": "Electronic Vibrations",
+          "LocalizedString": "Electronic Vibrations"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "CultureInvariantString": null
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator2",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator3",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator4",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator2",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 50,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 20,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_ElectronicVibrations.O_ActiveSkill_ElectronicVibrations_C",
+          "SubPathString": ""
+        }
+      },
+      "EnragingRush": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "EnragingRush_Name",
+          "SourceString": "Enraging Rush",
+          "LocalizedString": "Enraging Rush"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "EnragingRush_Description",
+          "SourceString": "Gain 2 <img id=\"Rage\"/> Rage.",
+          "LocalizedString": "Gain 2 <img id=\"Rage\"/> Rage."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator1",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator1",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 90,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 15,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_EnragingRush.O_ActiveSkill_EnragingRush_C",
+          "SubPathString": ""
+        }
+      },
+      "EruptionShot": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "EruptionShot_Name",
+          "SourceString": "Eruption Shot",
+          "LocalizedString": "Eruption Shot"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "CultureInvariantString": null
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator1",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator3",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator2",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 150,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 20,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_EruptionShot.O_ActiveSkill_EruptionShot_C",
+          "SubPathString": ""
+        }
+      },
+      "FieryAssault": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "FieryAssault_Name",
+          "SourceString": "Fiery Assault",
+          "LocalizedString": "Fiery Assault"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "FieryAssault_Description",
+          "SourceString": "Inflicts 5 <img id=\"Burn\"/> Burn.",
+          "LocalizedString": "Inflicts 5 <img id=\"Burn\"/> Burn."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator1",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator1",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 75,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_FieryAssault.O_ActiveSkill_FieryAssault_C",
+          "SubPathString": ""
+        }
+      },
+      "FireStorm": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "FireStorm_Name",
+          "SourceString": "Fire Storm",
+          "LocalizedString": "Fire Storm"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "CultureInvariantString": null
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator2",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator1",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator4",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator2",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 80,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 30,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_FireStorm.O_ActiveSkill_FireStorm_C",
+          "SubPathString": ""
+        }
+      },
+      "HeatWave": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "HeatWave_Name",
+          "SourceString": "Heat Wave",
+          "LocalizedString": "Heat Wave"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "CultureInvariantString": null
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator2",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator1",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator4",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator2",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 50,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 20,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_HeatWave.O_ActiveSkill_HeatWave_C",
+          "SubPathString": ""
+        }
+      },
+      "HeavyStrike": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "HeavyStrike_Name",
+          "SourceString": "Heavy Strike",
+          "LocalizedString": "Heavy Strike"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "CultureInvariantString": null
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator0",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator1",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 100,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 15,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_HeavyStrike.O_ActiveSkill_HeavyStrike_C",
+          "SubPathString": ""
+        }
+      },
+      "Hex": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "Hex_Name",
+          "SourceString": "Hex",
+          "LocalizedString": "Hex"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "Hex_Description",
+          "SourceString": "Inflicts 2 <img id=\"Weak\"/> Weak.",
+          "LocalizedString": "Inflicts 2 <img id=\"Weak\"/> Weak."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator0",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator0",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator0",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 0,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_Hex.O_ActiveSkill_Hex_C",
+          "SubPathString": ""
+        }
+      },
+      "IceBarrier": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "IceBarrier_Name",
+          "SourceString": "Ice Barrier",
+          "LocalizedString": "Ice Barrier"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "IceBarrier_Description",
+          "SourceString": "Gain 2 <img id=\"Barrier\"/> Barrier.",
+          "LocalizedString": "Gain 2 <img id=\"Barrier\"/> Barrier."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator7",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator2",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator0",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator0",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 0,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 20,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_IceBarrier.O_ActiveSkill_IceBarrier_C",
+          "SubPathString": ""
+        }
+      },
+      "Icebreaker": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "Icebreaker_Name",
+          "SourceString": "Icebreaker",
+          "LocalizedString": "Icebreaker"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "Icebreaker_Description",
+          "SourceString": "Inflicts double damage on targets with <img id=\"Freeze\"/> Freeze.",
+          "LocalizedString": "Inflicts double damage on targets with <img id=\"Freeze\"/> Freeze."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator2",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator1",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 90,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_Icebreaker.O_ActiveSkill_Icebreaker_C",
+          "SubPathString": ""
+        }
+      },
+      "IcicleDart": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "IcicleDart_Name",
+          "SourceString": "Icicle Dart",
+          "LocalizedString": "Icicle Dart"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "IcicleDart_Description",
+          "SourceString": "This skill can target any enemy.",
+          "LocalizedString": "This skill can target any enemy."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator10",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator2",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator3",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 100,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_IcicleDart.O_ActiveSkill_IcicleDart_C",
+          "SubPathString": ""
+        }
+      },
+      "InfectedNeedle": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "InfectedNeedle_Name",
+          "SourceString": "Infected Needle",
+          "LocalizedString": "Infected Needle"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "InfectedNeedle_Description",
+          "SourceString": "Inflicts 2 <img id=\"Poison\"/> Poison.",
+          "LocalizedString": "Inflicts 2 <img id=\"Poison\"/> Poison."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator4",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator2",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 75,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_InfectedNeedle.O_ActiveSkill_InfectedNeedle_C",
+          "SubPathString": ""
+        }
+      },
+      "IntimidatingShout": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "IntimidatingShout_Name",
+          "SourceString": "Intimidating Shout",
+          "LocalizedString": "Intimidating Shout"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "IntimidatingShout_Description",
+          "SourceString": "Inflicts 2 <img id=\"Weak\"/> Weak.",
+          "LocalizedString": "Inflicts 2 <img id=\"Weak\"/> Weak."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator5",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator0",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator4",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 25,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 20,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_IntimidatingShout.O_ActiveSkill_IntimidatingShout_C",
+          "SubPathString": ""
+        }
+      },
+      "InvigoratingFumes": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "InvigoratingFumes_Name",
+          "SourceString": "Invigorating Fumes",
+          "LocalizedString": "Invigorating Fumes"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "InvigoratingFumes_Description",
+          "SourceString": "Gain 2 <img id=\"Regeneration\"/> Regeneration. If it's daytime, also gain 2 <img id=\"Charge\"/> Charge.",
+          "LocalizedString": "Gain 2 <img id=\"Regeneration\"/> Regeneration. If it's daytime, also gain 2 <img id=\"Charge\"/> Charge."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator7",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator4",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator0",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator0",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 0,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_InvigoratingFumes.O_ActiveSkill_InvigoratingFumes_C",
+          "SubPathString": ""
+        }
+      },
+      "InvigoratingSong": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "InvigoratingSong_Name",
+          "SourceString": "Invigorating Song",
+          "LocalizedString": "Invigorating Song"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "InvigoratingSong_Description",
+          "SourceString": "Gains 2 <img id=\"Charge\"/> Charge.",
+          "LocalizedString": "Gains 2 <img id=\"Charge\"/> Charge."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator3",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator3",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator0",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator0",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 0,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_InvigoratingSong.O_ActiveSkill_InvigoratingSong_C",
+          "SubPathString": ""
+        }
+      },
+      "LightningBolt": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "LightningBolt_Name",
+          "SourceString": "Lightning Bolt",
+          "LocalizedString": "Lightning Bolt"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "LightningBolt_Description",
+          "SourceString": "This skill can target any enemy.",
+          "LocalizedString": "This skill can target any enemy."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator10",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator3",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator4",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator2",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 120,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 15,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_LightningBolt.O_ActiveSkill_LightningBolt_C",
+          "SubPathString": ""
+        }
+      },
+      "Maelstrom": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "Maelstrom_Name",
+          "SourceString": "Maelstrom",
+          "LocalizedString": "Maelstrom"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "CultureInvariantString": null
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator2",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator2",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator4",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator2",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 80,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 30,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_Maelstrom.O_ActiveSkill_Maelstrom_C",
+          "SubPathString": ""
+        }
+      },
+      "Meteor": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "Meteor_Name",
+          "SourceString": "Meteor",
+          "LocalizedString": "Meteor"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "CultureInvariantString": null
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator2",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator1",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator3",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator2",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 100,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 30,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_Meteor.O_ActiveSkill_Meteor_C",
+          "SubPathString": ""
+        }
+      },
+      "Moonbeam": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "Moonbeam_Name",
+          "SourceString": "Moonbeam",
+          "LocalizedString": "Moonbeam"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "Moonbeam_Description",
+          "SourceString": "If it's nighttime, inflicts double damage.",
+          "LocalizedString": "If it's nighttime, inflicts double damage."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator6",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator4",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator2",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 100,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 15,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_Moonbeam.O_ActiveSkill_Moonbeam_C",
+          "SubPathString": ""
+        }
+      },
+      "MudBall": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "MudBall_Name",
+          "SourceString": "Mud Ball",
+          "LocalizedString": "Mud Ball"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "MudBall_Description",
+          "SourceString": "Inflicts 1 <img id=\"Slow\"/> Slow.",
+          "LocalizedString": "Inflicts 1 <img id=\"Slow\"/> Slow."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator4",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator3",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator2",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 100,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 15,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_MudBall.O_ActiveSkill_MudBall_C",
+          "SubPathString": ""
+        }
+      },
+      "MysticPulse": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "MysticPulse_Name",
+          "SourceString": "Mystic Pulse",
+          "LocalizedString": "Mystic Pulse"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "CultureInvariantString": null
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator4",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator4",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator2",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 90,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_MysticPulse.O_ActiveSkill_MysticPulse_C",
+          "SubPathString": ""
+        }
+      },
+      "NastyExplosion": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "NastyExplosion_Name",
+          "SourceString": "Nasty Explosion",
+          "LocalizedString": "Nasty Explosion"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "NastyExplosion_Description",
+          "SourceString": "Increases power for each stack of <img id=\"Poison\"/> Poison from the target.",
+          "LocalizedString": "Increases power for each stack of <img id=\"Poison\"/> Poison from the target."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator4",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator4",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator2",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 50,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 20,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_NastyExplosion.O_ActiveSkill_NastyExplosion_C",
+          "SubPathString": ""
+        }
+      },
+      "Nightslash": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "Nightslash_Name",
+          "SourceString": "Nightslash",
+          "LocalizedString": "Nightslash"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "Nightslash_Description",
+          "SourceString": "If it's nighttime, is always critical.",
+          "LocalizedString": "If it's nighttime, is always critical."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator6",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator2",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 100,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 15,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_Nightslash.O_ActiveSkill_Nightslash_C",
+          "SubPathString": ""
+        }
+      },
+      "OldCurse": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "OldCurse_Name",
+          "SourceString": "Old Curse",
+          "LocalizedString": "Old Curse"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "OldCurse_Description",
+          "SourceString": "Inflicts 2 <img id=\"Weak\"/> Weak and 2 <img id=\"Slow\"/> Slow. This skill can target any enemy.",
+          "LocalizedString": "Inflicts 2 <img id=\"Weak\"/> Weak and 2 <img id=\"Slow\"/> Slow. This skill can target any enemy."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator10",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator0",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator0",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator0",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 0,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 20,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_OldCurse.O_ActiveSkill_OldCurse_C",
+          "SubPathString": ""
+        }
+      },
+      "OverwhelmingSlam": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "OverwhelmingSlam_Name",
+          "SourceString": "Overwhelming Slam",
+          "LocalizedString": "Overwhelming Slam"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "CultureInvariantString": null
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator0",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator1",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 200,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 20,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_OverwhelmingSlam.O_ActiveSkill_OverwhelmingSlam_C",
+          "SubPathString": ""
+        }
+      },
+      "ParanormalBlessing": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "ParanormalBlessing_Name",
+          "SourceString": "Paranormal Blessing",
+          "LocalizedString": "Paranormal Blessing"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "ParanormalBlessing_Description",
+          "SourceString": "Gains 1 <img id=\"Barrier\"/> Barrier and 1 <img id=\"Charge\"/> Charge.",
+          "LocalizedString": "Gains 1 <img id=\"Barrier\"/> Barrier and 1 <img id=\"Charge\"/> Charge."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator7",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator2",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator0",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator0",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 0,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 15,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_ParanormalBlessing.O_ActiveSkill_ParanormalBlessing_C",
+          "SubPathString": ""
+        }
+      },
+      "PointBlankShot": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "PointBlankShot_Name",
+          "SourceString": "Point Blank Shot",
+          "LocalizedString": "Point Blank Shot"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "CultureInvariantString": null
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator0",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator3",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 200,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 25,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_PointBlankShot.O_ActiveSkill_PointBlankShot_C",
+          "SubPathString": ""
+        }
+      },
+      "PoisonTouch": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "PoisonTouch_Name",
+          "SourceString": "Poison Touch",
+          "LocalizedString": "Poison Touch"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "PoisonTouch_Description",
+          "SourceString": "Inflicts 3 <img id=\"Poison\"/> Poison.",
+          "LocalizedString": "Inflicts 3 <img id=\"Poison\"/> Poison."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator4",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator0",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator0",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 0,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_PoisonTouch.O_ActiveSkill_PoisonTouch_C",
+          "SubPathString": ""
+        }
+      },
+      "Prank": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "Prank_Name",
+          "SourceString": "Prank",
+          "LocalizedString": "Prank"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "Prank_Description",
+          "SourceString": "Inflicts a random status to all monsters.",
+          "LocalizedString": "Inflicts a random status to all monsters."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator4",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator0",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator0",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator0",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 0,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_Prank.O_ActiveSkill_Prank_C",
+          "SubPathString": ""
+        }
+      },
+      "PreciseShot": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "PreciseShot_Name",
+          "SourceString": "Precise Shot",
+          "LocalizedString": "Precise Shot"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "PreciseShot_Description",
+          "SourceString": "This skill can target any enemy.",
+          "LocalizedString": "This skill can target any enemy."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator10",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator0",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator3",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 75,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_PreciseShot.O_ActiveSkill_PreciseShot_C",
+          "SubPathString": ""
+        }
+      },
+      "PredatoryKick": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "PredatoryKick_Name",
+          "SourceString": "Predatory Kick",
+          "LocalizedString": "Predatory Kick"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "PredatoryKick_Description",
+          "SourceString": "If the target has <img id=\"Weak\"/> Weak, gain 5 <img id=\"Rage\"/> Rage.",
+          "LocalizedString": "If the target has <img id=\"Weak\"/> Weak, gain 5 <img id=\"Rage\"/> Rage."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator1",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator1",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 120,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 15,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_PredatoryKick.O_ActiveSkill_PredatoryKick_C",
+          "SubPathString": ""
+        }
+      },
+      "PressureBlast": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "PressureBlast_Name",
+          "SourceString": "Pressure Blast",
+          "LocalizedString": "Pressure Blast"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "PressureBlast_Description",
+          "SourceString": "Inflicts 4 <img id=\"Burn\"/> Burn.",
+          "LocalizedString": "Inflicts 4 <img id=\"Burn\"/> Burn."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator2",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator4",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator2",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 100,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_PressureBlast.O_ActiveSkill_PressureBlast_C",
+          "SubPathString": ""
+        }
+      },
+      "PressureSlash": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "PressureSlash_Name",
+          "SourceString": "Pressure Slash",
+          "LocalizedString": "Pressure Slash"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "CultureInvariantString": null
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator2",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator2",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator2",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 110,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_PressureSlash.O_ActiveSkill_PressureSlash_C",
+          "SubPathString": ""
+        }
+      },
+      "Pyroclast": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "Pyroclast_Name",
+          "SourceString": "Pyroclast",
+          "LocalizedString": "Pyroclast"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "CultureInvariantString": null
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator1",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator3",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 90,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_Pyroclast.O_ActiveSkill_Pyroclast_C",
+          "SubPathString": ""
+        }
+      },
+      "Regeneration": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "Regeneration_Name",
+          "SourceString": "Regeneration",
+          "LocalizedString": "Regeneration"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "Regeneration_Description",
+          "SourceString": "Restores 50% max Health.",
+          "LocalizedString": "Restores 50% max Health."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator9",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator4",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator0",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator0",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 0,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_Regeneration.O_ActiveSkill_Regeneration_C",
+          "SubPathString": ""
+        }
+      },
+      "RegrowthSmash": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "RegrowthSmash_Name",
+          "SourceString": "Regrowth Smash",
+          "LocalizedString": "Regrowth Smash"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "RegrowthSmash_Description",
+          "SourceString": "Gain 2 <img id=\"Regeneration\"/> Regeneration.",
+          "LocalizedString": "Gain 2 <img id=\"Regeneration\"/> Regeneration."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator4",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator1",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 75,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 15,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_RegrowthSmash.O_ActiveSkill_RegrowthSmash_C",
+          "SubPathString": ""
+        }
+      },
+      "RockAvalanche": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "RockAvalanche_Name",
+          "SourceString": "Rock Avalanche",
+          "LocalizedString": "Rock Avalanche"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "CultureInvariantString": null
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator5",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator0",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator3",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 60,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 15,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_RockAvalanche.O_ActiveSkill_RockAvalanche_C",
+          "SubPathString": ""
+        }
+      },
+      "RottenEssence": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "RottenEssence_Name",
+          "SourceString": "Rotten Essence",
+          "LocalizedString": "Rotten Essence"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "RottenEssence_Description",
+          "SourceString": "Inflicts 15 <img id=\"Poison\"/> Poison.",
+          "LocalizedString": "Inflicts 15 <img id=\"Poison\"/> Poison."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator10",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator4",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator0",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator0",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 0,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 20,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_RottenEssence.O_ActiveSkill_RottenEssence_C",
+          "SubPathString": ""
+        }
+      },
+      "ScorchBlast": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "ScorchBlast_Name",
+          "SourceString": "Scorch Blast",
+          "LocalizedString": "Scorch Blast"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "ScorchBlast_Description",
+          "SourceString": "Inflicts 2 <img id=\"Burn\"/> Burn.",
+          "LocalizedString": "Inflicts 2 <img id=\"Burn\"/> Burn."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator1",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator4",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator2",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 100,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 15,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_ScorchBlast.O_ActiveSkill_ScorchBlast_C",
+          "SubPathString": ""
+        }
+      },
+      "SharpClaw": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "SharpClaw_Name",
+          "SourceString": "Sharp Claw",
+          "LocalizedString": "Sharp Claw"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "CultureInvariantString": null
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator0",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator2",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 90,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_SharpClaw.O_ActiveSkill_SharpClaw_C",
+          "SubPathString": ""
+        }
+      },
+      "ShieldBash": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "ShieldBash_Name",
+          "SourceString": "Shield Bash",
+          "LocalizedString": "Shield Bash"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "ShieldBash_Description",
+          "SourceString": "Inflicts double damage if user has <img id=\"Barrier\"/> Barrier.",
+          "LocalizedString": "Inflicts double damage if user has <img id=\"Barrier\"/> Barrier."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator0",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator1",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 90,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_ShieldBash.O_ActiveSkill_ShieldBash_C",
+          "SubPathString": ""
+        }
+      },
+      "SmokeTactics": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "SmokeTactics_Name",
+          "SourceString": "Smoke Tactics",
+          "LocalizedString": "Smoke Tactics"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "SmokeTactics_Description",
+          "SourceString": "Gain 1 <img id=\"Ambush\"/> Ambush. This skill can target any enemy.",
+          "LocalizedString": "Gain 1 <img id=\"Ambush\"/> Ambush. This skill can target any enemy."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator10",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator1",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator2",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 100,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 15,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_SmokeTactics.O_ActiveSkill_SmokeTactics_C",
+          "SubPathString": ""
+        }
+      },
+      "SolarBlast": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "SolarBlast_Name",
+          "SourceString": "Solar Blast",
+          "LocalizedString": "Solar Blast"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "SolarBlast_Description",
+          "SourceString": "If it's daytime, inflicts double damage.",
+          "LocalizedString": "If it's daytime, inflicts double damage."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator3",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator4",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator2",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 100,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 15,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_SolarBlast.O_ActiveSkill_SolarBlast_C",
+          "SubPathString": ""
+        }
+      },
+      "SteamImpact": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "SteamImpact_Name",
+          "SourceString": "Steam Impact",
+          "LocalizedString": "Steam Impact"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "SteamImpact_Description",
+          "SourceString": "Inflicts 4 <img id=\"Burn\"/> Burn.",
+          "LocalizedString": "Inflicts 4 <img id=\"Burn\"/> Burn."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator2",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator1",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 90,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_SteamImpact.O_ActiveSkill_SteamImpact_C",
+          "SubPathString": ""
+        }
+      },
+      "StickyStrike": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "StickyStrike_Name",
+          "SourceString": "Sticky Strike",
+          "LocalizedString": "Sticky Strike"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "StickyStrike_Description",
+          "SourceString": "Inflicts 2 <img id=\"Slow\"/> Slow.",
+          "LocalizedString": "Inflicts 2 <img id=\"Slow\"/> Slow."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator2",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator1",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator2",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 75,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_StickyStrike.O_ActiveSkill_StickyStrike_C",
+          "SubPathString": ""
+        }
+      },
+      "SuppressingShot": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "SuppressingShot_Name",
+          "SourceString": "Suppressing Shot",
+          "LocalizedString": "Suppressing Shot"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "SuppressingShot_Description",
+          "SourceString": "Inflicts 1 <img id=\"Weak\"/> Weak. If the target already has <img id=\"Weak\"/> Weak, inflicts 2 <img id=\"Weak\"/> Weak instead.\nThis skill can target any enemy.",
+          "LocalizedString": "Inflicts 1 <img id=\"Weak\"/> Weak. If the target already has <img id=\"Weak\"/> Weak, inflicts 2 <img id=\"Weak\"/> Weak instead.\nThis skill can target any enemy."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator10",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator0",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator3",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 75,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_SuppressingShot.O_ActiveSkill_SuppressingShot_C",
+          "SubPathString": ""
+        }
+      },
+      "SwiftSlash": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "SwiftSlash_Name",
+          "SourceString": "Swift Slash",
+          "LocalizedString": "Swift Slash"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "SwiftSlash_Description",
+          "SourceString": "Gains 1 <img id=\"Charge\"/> Charge.",
+          "LocalizedString": "Gains 1 <img id=\"Charge\"/> Charge."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator3",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator2",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 90,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_SwiftSlash.O_ActiveSkill_SwiftSlash_C",
+          "SubPathString": ""
+        }
+      },
+      "TensionBash": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "TensionBash_Name",
+          "SourceString": "Tension Bash",
+          "LocalizedString": "Tension Bash"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "CultureInvariantString": null
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator3",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator1",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 90,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_TensionBash.O_ActiveSkill_TensionBash_C",
+          "SubPathString": ""
+        }
+      },
+      "ThornShot": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "ThornShot_Name",
+          "SourceString": "Thorn Shot",
+          "LocalizedString": "Thorn Shot"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "CultureInvariantString": null
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator4",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator3",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 90,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_ThornShot.O_ActiveSkill_ThornShot_C",
+          "SubPathString": ""
+        }
+      },
+      "ThornStrike": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "ThornStrike_Name",
+          "SourceString": "Thorn Strike",
+          "LocalizedString": "Thorn Strike"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "ThornStrike_Description",
+          "SourceString": "User gains 2 <img id=\"Thorns\"/> Thorns.",
+          "LocalizedString": "User gains 2 <img id=\"Thorns\"/> Thorns."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator4",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator1",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 75,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_ThornStrike.O_ActiveSkill_ThornStrike_C",
+          "SubPathString": ""
+        }
+      },
+      "Thunderstorm": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "Thunderstorm_Name",
+          "SourceString": "Thunderstorm",
+          "LocalizedString": "Thunderstorm"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "Thunderstorm_Description",
+          "SourceString": "Inflicts 2 <img id=\"Shock\"/> Shock.",
+          "LocalizedString": "Inflicts 2 <img id=\"Shock\"/> Shock."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator5",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator3",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator4",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator2",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 50,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 20,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_Thunderstorm.O_ActiveSkill_Thunderstorm_C",
+          "SubPathString": ""
+        }
+      },
+      "ToxicCloud": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "ToxicCloud_Name",
+          "SourceString": "Toxic Cloud",
+          "LocalizedString": "Toxic Cloud"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "ToxicCloud_Description",
+          "SourceString": "Inflicts 2 <img id=\"Poison\"/> Poison.",
+          "LocalizedString": "Inflicts 2 <img id=\"Poison\"/> Poison."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator2",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator4",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator0",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator0",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 0,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 20,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_ToxicCloud.O_ActiveSkill_ToxicCloud_C",
+          "SubPathString": ""
+        }
+      },
+      "Trembling": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "Trembling_Name",
+          "SourceString": "Trembling",
+          "LocalizedString": "Trembling"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "CultureInvariantString": null
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator2",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator4",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator1",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 50,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 20,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_Trembling.O_ActiveSkill_Trembling_C",
+          "SubPathString": ""
+        }
+      },
+      "VerdantGuard": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "VerdantGuard_Name",
+          "SourceString": "Verdant Guard",
+          "LocalizedString": "Verdant Guard"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "VerdantGuard_Description",
+          "SourceString": "Gain 2 <img id=\"Barrier\"/> Barrier. If user has <img id=\"Regeneration\"/> Regeneration, gain 2 <img id=\"Thorns\"/> Thorns.",
+          "LocalizedString": "Gain 2 <img id=\"Barrier\"/> Barrier. If user has <img id=\"Regeneration\"/> Regeneration, gain 2 <img id=\"Thorns\"/> Thorns."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator9",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator4",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator0",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator0",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 0,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_VerdantGuard.O_ActiveSkill_VerdantGuard_C",
+          "SubPathString": ""
+        }
+      },
+      "VileSmash": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "VileSmash_Name",
+          "SourceString": "Vile Smash",
+          "LocalizedString": "Vile Smash"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "VileSmash_Description",
+          "SourceString": "Inflicts double damage on targets with <img id=\"Poison\"/> Poison.",
+          "LocalizedString": "Inflicts double damage on targets with <img id=\"Poison\"/> Poison."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator4",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator1",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 120,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 15,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_VileSmash.O_ActiveSkill_VileSmash_C",
+          "SubPathString": ""
+        }
+      },
+      "Warcry": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "Warcry_Name",
+          "SourceString": "Warcry",
+          "LocalizedString": "Warcry"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "Warcry_Description",
+          "SourceString": "Gains 3 <img id=\"Rage\"/> Rage.",
+          "LocalizedString": "Gains 3 <img id=\"Rage\"/> Rage."
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator3",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator0",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator0",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator0",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 0,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 10,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_Warcry.O_ActiveSkill_Warcry_C",
+          "SubPathString": ""
+        }
+      },
+      "WaveRush": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "WaveRush_Name",
+          "SourceString": "Wave Rush",
+          "LocalizedString": "Wave Rush"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "CultureInvariantString": null
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator2",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator1",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator1",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 150,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 25,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "/Game/Blueprints/Skills/ActiveSkills/O_ActiveSkill_WaveRush.O_ActiveSkill_WaveRush_C",
+          "SubPathString": ""
+        }
+      },
+      "CuttingCyclone": {
+        "Name_7_B2011EDC46DA38B7489B95BC36A3F665": {
+          "Namespace": "DT_ActiveSkills",
+          "Key": "CuttingCyclone_Name",
+          "SourceString": "Cutting Cyclone",
+          "LocalizedString": "Cutting Cyclone"
+        },
+        "Description_13_F809F5C347614A1081E02CAF266F1AEE": {
+          "CultureInvariantString": null
+        },
+        "Targetting_10_66D835194A6C6245E8AFE896C8945AC6": "ETargettingType::NewEnumerator0",
+        "MonsterType_20_84B6964C459960F71A9B439B140030D7": "EMonsterType::NewEnumerator0",
+        "DamageType_17_B874E71F46BD3AF494A7F7BCD451A5CA": "EAttackType::NewEnumerator0",
+        "Scaling_29_84937C3241B90A63346221AD44329CAA": "EScaling::NewEnumerator0",
+        "Power_31_5E8319AE4DC380A0DC1FFEBE424548BB": 0,
+        "Cost_32_6FF0CD0244A7BF8E66C8C3A8E2D7C531": 50,
+        "Skill_4_76DA577F4509D98E00AD068AA07AD2AD": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    }
+  }
+]

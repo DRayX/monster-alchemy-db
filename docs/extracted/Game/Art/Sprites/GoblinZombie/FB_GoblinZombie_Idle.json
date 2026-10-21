@@ -1,0 +1,26 @@
+[
+  {
+    "Type": "PaperFlipbook",
+    "Name": "FB_GoblinZombie_Idle",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PaperFlipbook'",
+    "Package": "/Game/Art/Sprites/GoblinZombie/FB_GoblinZombie_Idle",
+    "Properties": {
+      "FramesPerSecond": 2.0,
+      "KeyFrames": [
+        {
+          "Sprite": null,
+          "FrameRun": 1
+        },
+        {
+          "Sprite": null,
+          "FrameRun": 1
+        }
+      ],
+      "DefaultMaterial": {
+        "ObjectName": "MaterialInstanceConstant'MI_GoblinZombie'",
+        "ObjectPath": "/Game/Art/Sprites/GoblinZombie/MI_GoblinZombie.0"
+      }
+    }
+  }
+]

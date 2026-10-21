@@ -1,0 +1,41 @@
+[
+  {
+    "Type": "UserDefinedStruct",
+    "Name": "S_MonsterRewards",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedStruct'",
+    "Package": "/Game/Blueprints/Monsters/S_MonsterRewards",
+    "Properties": {
+      "Guid": "2555C18A-49B359CB-A15D0FA2-D4B9CE4F"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "EpicLoot_9_119A15EE49645AB270F7D19213470FA8",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      }
+    ],
+    "StructFlags": 0,
+    "DefaultProperties": {
+      "CommonLoot_7_1933457F420D1D4FDE01C687EDD461EA": "None",
+      "RareLoot_8_E6F97A024547CC362D15F0A92DB8F529": "None",
+      "EpicLoot_9_119A15EE49645AB270F7D19213470FA8": "None"
+    }
+  }
+]

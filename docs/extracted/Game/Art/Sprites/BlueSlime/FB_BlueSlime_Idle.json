@@ -1,0 +1,32 @@
+[
+  {
+    "Type": "PaperFlipbook",
+    "Name": "FB_BlueSlime_Idle",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PaperFlipbook'",
+    "Package": "/Game/Art/Sprites/BlueSlime/FB_BlueSlime_Idle",
+    "Properties": {
+      "FramesPerSecond": 2.0,
+      "KeyFrames": [
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'SlimeWater__33x30__Sprite_0'",
+            "ObjectPath": "/Game/Art/Sprites/BlueSlime/SlimeWater__33x30__Sprite_0.1"
+          },
+          "FrameRun": 1
+        },
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'SlimeWater__33x30__Sprite_1'",
+            "ObjectPath": "/Game/Art/Sprites/BlueSlime/SlimeWater__33x30__Sprite_1.1"
+          },
+          "FrameRun": 1
+        }
+      ],
+      "DefaultMaterial": {
+        "ObjectName": "MaterialInstanceConstant'MI_BlueSlime'",
+        "ObjectPath": "/Game/Art/Sprites/BlueSlime/MI_BlueSlime.0"
+      }
+    }
+  }
+]

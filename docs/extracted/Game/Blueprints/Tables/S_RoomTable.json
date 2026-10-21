@@ -1,0 +1,47 @@
+[
+  {
+    "Type": "UserDefinedStruct",
+    "Name": "S_RoomTable",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedStruct'",
+    "Package": "/Game/Blueprints/Tables/S_RoomTable",
+    "Properties": {
+      "Guid": "6F66C836-4B0CF9EB-E05FA680-C9F7DD4E"
+    },
+    "ChildProperties": [
+      {
+        "Type": "TextProperty",
+        "Name": "Name_2_7D1514C349B3E887C195088408BBBB77",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Prefix_5_278BD9294CE8B94B8384258636459F18",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Icon_8_040C6BBA421EBA7805B93DA9DB88A38C",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "StructFlags": 0,
+    "DefaultProperties": {
+      "Name_2_7D1514C349B3E887C195088408BBBB77": {
+        "CultureInvariantString": null
+      },
+      "Prefix_5_278BD9294CE8B94B8384258636459F18": "None",
+      "Icon_8_040C6BBA421EBA7805B93DA9DB88A38C": null
+    }
+  }
+]

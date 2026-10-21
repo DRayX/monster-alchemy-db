@@ -1,0 +1,32 @@
+[
+  {
+    "Type": "PaperFlipbook",
+    "Name": "FB_Zombie_Idle",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PaperFlipbook'",
+    "Package": "/Game/Art/Sprites/Zombie/FB_Zombie_Idle",
+    "Properties": {
+      "FramesPerSecond": 2.0,
+      "KeyFrames": [
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'ZombieV2_Sprite_4'",
+            "ObjectPath": "/Game/Art/Sprites/Zombie/ZombieV2_Sprite_4.1"
+          },
+          "FrameRun": 1
+        },
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'ZombieV2_Sprite_5'",
+            "ObjectPath": "/Game/Art/Sprites/Zombie/ZombieV2_Sprite_5.1"
+          },
+          "FrameRun": 1
+        }
+      ],
+      "DefaultMaterial": {
+        "ObjectName": "MaterialInstanceConstant'MI_Zombie'",
+        "ObjectPath": "/Game/Art/Sprites/Zombie/MI_Zombie.0"
+      }
+    }
+  }
+]

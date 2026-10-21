@@ -1,0 +1,89 @@
+[
+  {
+    "Type": "UserDefinedStruct",
+    "Name": "S_MonsterSkillLevelTable",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedStruct'",
+    "Package": "/Game/Blueprints/Skills/S_MonsterSkillLevelTable",
+    "Properties": {
+      "Guid": "924B6B43-4CFF7662-130F5F96-14F46614"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "BaseSkill_2_76DEE0BA45B5FC86640A76A258C8EDDA",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "SkillLevel1_14_708346DA4CCEC45A92133CB8DEB5D52F",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Skill1_5_C32BC51544FB8EE4A361DFABAE3063A3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "SkillLevel2_18_89D3997E4D9817EADB5AC59AD81B2E11",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Skill2_9_81C37C514C6C65B1FB9F7087EFBF3683",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "SkillLevel3_19_741F49A345365CE30B8D599711284F05",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Skill3_10_862ACECF4AB3813FDAA063948191B56C",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "SkillLevel4_20_4B21622A432B4F76E3D18B811BC4ED0B",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Skill4_11_7A06015B4000607348239EB47AC16347",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      }
+    ],
+    "StructFlags": 0,
+    "DefaultProperties": {
+      "BaseSkill_2_76DEE0BA45B5FC86640A76A258C8EDDA": "None",
+      "SkillLevel1_14_708346DA4CCEC45A92133CB8DEB5D52F": 0,
+      "Skill1_5_C32BC51544FB8EE4A361DFABAE3063A3": "None",
+      "SkillLevel2_18_89D3997E4D9817EADB5AC59AD81B2E11": 0,
+      "Skill2_9_81C37C514C6C65B1FB9F7087EFBF3683": "None",
+      "SkillLevel3_19_741F49A345365CE30B8D599711284F05": 0,
+      "Skill3_10_862ACECF4AB3813FDAA063948191B56C": "None",
+      "SkillLevel4_20_4B21622A432B4F76E3D18B811BC4ED0B": 0,
+      "Skill4_11_7A06015B4000607348239EB47AC16347": "None"
+    }
+  }
+]

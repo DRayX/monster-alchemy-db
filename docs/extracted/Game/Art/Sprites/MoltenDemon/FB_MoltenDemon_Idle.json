@@ -1,0 +1,32 @@
+[
+  {
+    "Type": "PaperFlipbook",
+    "Name": "FB_MoltenDemon_Idle",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PaperFlipbook'",
+    "Package": "/Game/Art/Sprites/MoltenDemon/FB_MoltenDemon_Idle",
+    "Properties": {
+      "FramesPerSecond": 2.0,
+      "KeyFrames": [
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'T_MoltenDemon_94x64_Sprite_0'",
+            "ObjectPath": "/Game/Art/Sprites/MoltenDemon/T_MoltenDemon_94x64_Sprite_0.1"
+          },
+          "FrameRun": 1
+        },
+        {
+          "Sprite": {
+            "ObjectName": "PaperSprite'T_MoltenDemon_94x64_Sprite_1'",
+            "ObjectPath": "/Game/Art/Sprites/MoltenDemon/T_MoltenDemon_94x64_Sprite_1.1"
+          },
+          "FrameRun": 1
+        }
+      ],
+      "DefaultMaterial": {
+        "ObjectName": "MaterialInstanceConstant'MI_MoltenDemon'",
+        "ObjectPath": "/Game/Art/Sprites/MoltenDemon/MI_MoltenDemon.0"
+      }
+    }
+  }
+]

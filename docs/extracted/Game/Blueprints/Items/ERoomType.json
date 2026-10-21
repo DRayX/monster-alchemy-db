@@ -1,0 +1,137 @@
+[
+  {
+    "Type": "UserDefinedEnum",
+    "Name": "ERoomType",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedEnum'",
+    "Package": "/Game/Blueprints/Items/ERoomType",
+    "Properties": {
+      "DisplayNameMap": [
+        {
+          "Key": "NewEnumerator0",
+          "Value": {
+            "Namespace": "",
+            "Key": "9297117940A1FD678E054A91AE89556B",
+            "SourceString": "SummoningCircle",
+            "LocalizedString": "SummoningCircle"
+          }
+        },
+        {
+          "Key": "NewEnumerator1",
+          "Value": {
+            "Namespace": "",
+            "Key": "35D3A2F54DC25BB675F66689C5CF2A00",
+            "SourceString": "NecromancyCircle",
+            "LocalizedString": "NecromancyCircle"
+          }
+        },
+        {
+          "Key": "NewEnumerator2",
+          "Value": {
+            "Namespace": "",
+            "Key": "E9BC4C884B0796CBD6815ABC5251486D",
+            "SourceString": "CircleOfGrowth",
+            "LocalizedString": "CircleOfGrowth"
+          }
+        },
+        {
+          "Key": "NewEnumerator3",
+          "Value": {
+            "Namespace": "",
+            "Key": "AC058DC048D596EB9321EF9A7DF9A00A",
+            "SourceString": "CircleOfAssembly",
+            "LocalizedString": "CircleOfAssembly"
+          }
+        },
+        {
+          "Key": "NewEnumerator4",
+          "Value": {
+            "Namespace": "",
+            "Key": "5F4522354DB6D9ABB472428FFDAFF3E5",
+            "SourceString": "Cauldron",
+            "LocalizedString": "Cauldron"
+          }
+        },
+        {
+          "Key": "NewEnumerator5",
+          "Value": {
+            "Namespace": "",
+            "Key": "0A73A1F4477E4FCFECB42B90268605EF",
+            "SourceString": "Furnace",
+            "LocalizedString": "Furnace"
+          }
+        },
+        {
+          "Key": "NewEnumerator6",
+          "Value": {
+            "Namespace": "",
+            "Key": "EB39AE0044DD67DEF043BD98C4BDB96D",
+            "SourceString": "Crusher",
+            "LocalizedString": "Crusher"
+          }
+        },
+        {
+          "Key": "NewEnumerator7",
+          "Value": {
+            "Namespace": "",
+            "Key": "6930429B43A47B52AC82A5BB0E749F54",
+            "SourceString": "Fermentator",
+            "LocalizedString": "Fermentator"
+          }
+        },
+        {
+          "Key": "NewEnumerator8",
+          "Value": {
+            "Namespace": "",
+            "Key": "C469BD554834949664A4B8981EEFF7A7",
+            "SourceString": "MonsterManager",
+            "LocalizedString": "MonsterManager"
+          }
+        },
+        {
+          "Key": "NewEnumerator10",
+          "Value": {
+            "Namespace": "",
+            "Key": "8065D94C40C74767CC677A8B7C7D565D",
+            "SourceString": "Room",
+            "LocalizedString": "Room"
+          }
+        },
+        {
+          "Key": "NewEnumerator11",
+          "Value": {
+            "Namespace": "",
+            "Key": "1F988C934424A582898FA0BCB5A7C635",
+            "SourceString": "Atelier",
+            "LocalizedString": "Atelier"
+          }
+        },
+        {
+          "Key": "NewEnumerator12",
+          "Value": {
+            "Namespace": "",
+            "Key": "4B151F3945F62DC406BE7F87E5BD68AF",
+            "SourceString": "FusionRoom",
+            "LocalizedString": "FusionRoom"
+          }
+        }
+      ]
+    },
+    "Names": {
+      "ERoomType::NewEnumerator0": 0,
+      "ERoomType::NewEnumerator1": 1,
+      "ERoomType::NewEnumerator2": 2,
+      "ERoomType::NewEnumerator3": 3,
+      "ERoomType::NewEnumerator4": 4,
+      "ERoomType::NewEnumerator5": 5,
+      "ERoomType::NewEnumerator6": 6,
+      "ERoomType::NewEnumerator7": 7,
+      "ERoomType::NewEnumerator8": 8,
+      "ERoomType::NewEnumerator10": 9,
+      "ERoomType::NewEnumerator11": 10,
+      "ERoomType::NewEnumerator12": 11,
+      "ERoomType::ERoomType_MAX": 12
+    },
+    "CppForm": "Namespaced"
+  }
+]
