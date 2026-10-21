@@ -19,7 +19,7 @@ const STAT_BARS = [
   { key: 'strength', label: 'Strength', color: 'bg-light-red', icon: getStatIcon('Strength') },
   { key: 'defense', label: 'Defense', color: 'bg-light-blue', icon: getStatIcon('Defense') },
   { key: 'mind', label: 'Mind', color: 'bg-light-purple', icon: getStatIcon('Mind') },
-  { key: 'soul', label: 'Soul', color: 'bg-purple', icon: getStatIcon('Soul') },
+  { key: 'soul', label: 'Soul', color: 'bg-blue', icon: getStatIcon('Soul') },
   { key: 'agility', label: 'Agility', color: 'bg-gold', icon: getStatIcon('Agility') }
 ];
 
