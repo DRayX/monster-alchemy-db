@@ -1,4 +1,5 @@
 // @ts-check
+import { getRoomIcon } from '../services/assets.js';
 
 /**
  * Room entity representing an alchemical crafting chamber or fusion lab.
@@ -9,7 +10,6 @@ export class Room {
    * @param {string} data.id
    * @param {string} [data.name]
    * @param {string} [data.prefix]
-   * @param {string} [data.icon]
    * @param {import('./Recipe.js').CraftingRecipe[]} [data.recipes]
    * @param {import('./Recipe.js').FusionRecipe[]} [data.fusionRecipes]
    */
@@ -17,7 +17,7 @@ export class Room {
     this.id = data.id;
     this.name = data.name || data.id;
     this.prefix = data.prefix || '';
-    this.icon = data.icon || '';
+    this.icon = getRoomIcon(this.id);
     this.recipes = data.recipes || [];
     this.fusionRecipes = data.fusionRecipes || [];
   }

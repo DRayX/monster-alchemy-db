@@ -7,9 +7,10 @@ import {
   TOWER_ICON,
   SHOP_ICON
 } from '../services/assets.js';
+import buildInfo from '../../meta/build_info.json' with { type: 'json' };
 
 /** SteamDB build ID for current game data snapshot. */
-export const DATA_BUILD_ID = '25597095';
+export const DATA_BUILD_ID = buildInfo.buildId || 'Unknown';
 
 const TEMPLATE = /* html */ `
   <aside class="w5 vh-100 bg-dark-gray br b--white-10 flex flex-column justify-between flex-shrink-0">
@@ -98,12 +99,10 @@ const TEMPLATE = /* html */ `
             class="flex items-center pa2 ph3 br2 link near-white hover-bg-black-30 mb1"
           >
             <img
-              v-if="room.icon"
               :src="room.icon"
               :alt="room.name"
               class="mr2 dib v-mid flex-shrink-0 pixelated icon-18"
             />
-            <span v-else class="mr2 dib flex-shrink-0 icon-18"></span>
             <span class="flex-auto f6">{{ room.name }}</span>
             <span class="f7 bg-black-40 near-white ph2 pv1 br-pill ba b--white-20">
               {{ room.totalRecipeCount }}

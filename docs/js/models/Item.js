@@ -10,7 +10,6 @@ export class Item {
    * @param {string} data.id
    * @param {string} [data.name]
    * @param {string} [data.description]
-   * @param {string} [data.icon]
    * @param {number} [data.dropCount]
    * @param {number} [data.craftedCount]
    * @param {number} [data.usedInCount]
@@ -19,7 +18,7 @@ export class Item {
     this.id = data.id;
     this.name = data.name || data.id;
     this.description = data.description || '';
-    this.icon = data.icon || getItemIcon(this.id);
+    this.icon = getItemIcon(this.id);
     this.dropCount = data.dropCount ?? 0;
     this.craftedCount = data.craftedCount ?? 0;
     this.usedInCount = data.usedInCount ?? 0;

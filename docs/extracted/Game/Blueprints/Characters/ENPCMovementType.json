@@ -1,0 +1,47 @@
+[
+  {
+    "Type": "UserDefinedEnum",
+    "Name": "ENPCMovementType",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedEnum'",
+    "Package": "/Game/Blueprints/Characters/ENPCMovementType",
+    "Properties": {
+      "DisplayNameMap": [
+        {
+          "Key": "NewEnumerator0",
+          "Value": {
+            "Namespace": "",
+            "Key": "E6D7BB334F33CB9D0BAD2090C637DAEB",
+            "SourceString": "Walk",
+            "LocalizedString": "Walk"
+          }
+        },
+        {
+          "Key": "NewEnumerator1",
+          "Value": {
+            "Namespace": "",
+            "Key": "2C0E5834402AC0ACD80092AEA58E275A",
+            "SourceString": "Bounce",
+            "LocalizedString": "Bounce"
+          }
+        },
+        {
+          "Key": "NewEnumerator2",
+          "Value": {
+            "Namespace": "",
+            "Key": "996689A349DCE1A16F57FDBB53D944F1",
+            "SourceString": "Float",
+            "LocalizedString": "Float"
+          }
+        }
+      ]
+    },
+    "Names": {
+      "ENPCMovementType::NewEnumerator0": 0,
+      "ENPCMovementType::NewEnumerator1": 1,
+      "ENPCMovementType::NewEnumerator2": 2,
+      "ENPCMovementType::ENPCMovementType_MAX": 3
+    },
+    "CppForm": "Namespaced"
+  }
+]

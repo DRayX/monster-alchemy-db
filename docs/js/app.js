@@ -3,7 +3,6 @@ import { createApp, defineComponent } from 'vue';
 import { db, initDatabase } from './store.js';
 import { router } from './router.js';
 import { AppNavbar } from './components/AppNavbar.js';
-import { setupGlobalImageFallback } from './services/assets.js';
 
 const TEMPLATE = /* html */ `
   <div class="vh-100 overflow-hidden flex flex-row bg-near-black near-white">
@@ -36,7 +35,6 @@ export const App = defineComponent({
   name: 'App',
   components: { AppNavbar },
   setup() {
-    setupGlobalImageFallback();
     initDatabase();
 
     return {

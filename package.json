@@ -6,7 +6,10 @@
   "type": "module",
   "scripts": {
     "typecheck": "tsc -p jsconfig.json --noEmit",
-    "serve": "pnpm dlx serve -l 8080 ./docs"
+    "serve": "pnpm dlx serve -l 8080 ./docs",
+    "download": "dotnet script scripts/download.csx --",
+    "mappings": "dotnet script scripts/mappings.csx --",
+    "extract": "dotnet script scripts/extract.csx --"
   },
   "devDependencies": {
     "typescript": "^5.9.3",

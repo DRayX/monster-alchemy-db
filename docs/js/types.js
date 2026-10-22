@@ -36,6 +36,7 @@
  * @typedef {Object} UnrealDataTableAsset
  * @property {string} Type
  * @property {string} Name
+ * @property {{ RowStruct?: UnrealObjectRef }} [Properties]
  * @property {Record<string, RawUnrealRow>} [Rows]
  */
 

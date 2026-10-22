@@ -1,5 +1,5 @@
 // @ts-check
-import { ref, computed, defineComponent, watch } from 'vue';
+import { ref, computed, defineComponent } from 'vue';
 import { useRoute } from 'vue-router';
 import { db } from '../store.js';
 import { getMonsterProfileImage, getItemIcon, getStatIcon } from '../services/assets.js';
@@ -77,13 +77,13 @@ const TEMPLATE = /* html */ `
         </p>
 
         <div
-          v-if="spriteImage"
+          v-if="monster.spriteImage"
           class="mt3 pt3 bt b--white-10"
         >
           <div class="f7 b silver ttu tracked mb2">Sprite Sheet</div>
           <div class="dib pa3 bg-near-black ba b--white-10 br3">
             <img
-              :src="spriteImage"
+              :src="monster.spriteImage"
               :alt="monster.name + ' Sprite'"
               class="db pixelated"
               style="height: 90px; width: auto;"
@@ -346,20 +346,9 @@ export const MonsterDetail = defineComponent({
       )
     );
 
-    const spriteImage = ref('');
-
-    watch(
-      monster,
-      async (m) => {
-        spriteImage.value = (await m?.spriteImage) || '';
-      },
-      { immediate: true }
-    );
-
     return {
       monsterId,
       monster,
-      spriteImage,
       summoningRecipes,
       fusionResults,
       usedInFusions,

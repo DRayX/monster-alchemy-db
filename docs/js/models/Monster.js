@@ -1,6 +1,5 @@
 // @ts-check
-import { getMonsterProfileImage } from '../services/assets.js';
-import { loadMonsterSpriteImage } from '../services/loader.js';
+import { getMonsterProfileImage, getMonsterSpriteImage } from '../services/assets.js';
 import { ActiveSkill, PassiveSkill } from './Skill.js';
 import { Item } from './Item.js';
 
@@ -61,20 +60,6 @@ export class LearnedSkill {
  */
 export class Monster {
   /**
-   * Cached Promise for the idle sprite sheet .png path.
-   * @type {Promise<string> | undefined}
-   */
-  cachedSpriteImage = undefined;
-
-  /**
-   * Lazy-loads the idle sprite sheet .png path on demand.
-   * @returns {Promise<string>}
-   */
-  get spriteImage() {
-    return (this.cachedSpriteImage ??= loadMonsterSpriteImage(this.id));
-  }
-
-  /**
    * @param {Object} data
    * @param {string} data.id
    * @param {string} [data.name]
@@ -90,7 +75,6 @@ export class Monster {
    * @param {PassiveSkill | null} [data.passiveSkill]
    * @param {LearnedSkill[]} [data.skills]
    * @param {string} [data.description]
-   * @param {string} [data.profileImage]
    * @param {MonsterLoot[]} [data.loots]
    */
   constructor(data) {
@@ -115,7 +99,8 @@ export class Monster {
     this.skills = data.skills || [];
     this.description = data.description || '';
 
-    this.profileImage = data.profileImage || getMonsterProfileImage(this.id);
+    this.profileImage = getMonsterProfileImage(this.id);
+    this.spriteImage = getMonsterSpriteImage(this.id);
 
     this.loots = data.loots || [];
     this.lootSummary = this.loots.map((l) => l.item.name).join(', ');

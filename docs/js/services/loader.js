@@ -1,12 +1,8 @@
 // @ts-check
 import {
-  getMonsterProfileImage,
-  getMonsterFlipbookUrl,
-  getItemIcon,
-  resolveUnrealAssetPath,
+  DATA_TABLE_URLS,
   STRUCT_URLS,
-  ENUM_URLS,
-  DATA_TABLE_URLS
+  ENUM_URLS
 } from './assets.js';
 import {
   formatSkillDescription,
@@ -78,18 +74,36 @@ export function parseUnrealEnum(rawEnumJson) {
 }
 
 /**
- * Extracts and normalizes all rows from an Unreal DataTable JSON export using its
- * corresponding `UserDefinedStruct` (`S_*.json`) definition:
+ * Extracts the UserDefinedStruct name referenced by a DataTable's RowStruct property.
+ * e.g. ObjectName "UserDefinedStruct'S_Monster_Table'" -> "S_Monster_Table"
+ * @param {UnrealDataTableAsset[]} rawTableJson
+ * @returns {string | null}
+ */
+export function getTableRowStructName(rawTableJson) {
+  const objectName = rawTableJson?.[0]?.Properties?.RowStruct?.ObjectName || '';
+  return /'(\w+)'/.exec(objectName)?.[1] || null;
+}
+
+/**
+ * Normalizes all rows from an Unreal DataTable JSON export by automatically resolving its
+ * struct schema from `RowStruct` and applying enum lookups:
  * - Maps each exact serialized property key (`Name_44_...`) to its clean base name (`Name`)
  * - Automatically extracts `SourceString` for `TextProperty` fields
  * - Automatically resolves enum display strings for `ByteProperty` fields
  *
  * @param {UnrealDataTableAsset[]} rawTableJson
- * @param {UnrealStructAsset[]} rawStructJson
+ * @param {Record<string, UnrealStructAsset[]>} structs
  * @param {Record<string, string>} [enumLookup]
  * @returns {Record<string, NormalizedUnrealRow>}
  */
-export function extractNormalizedRows(rawTableJson, rawStructJson, enumLookup = {}) {
+export function extractNormalizedRows(rawTableJson, structs, enumLookup = {}) {
+  const structName = getTableRowStructName(rawTableJson);
+  const rawStructJson = structName ? structs[structName] : null;
+
+  if (!rawStructJson) {
+    throw new Error(`[Loader] No struct definition found for table struct '${structName}'`);
+  }
+
   const structEntry = rawStructJson[0];
   const childProps = structEntry?.ChildProperties ?? [];
 
@@ -147,38 +161,16 @@ export async function loadJson(url) {
 
 /**
  * Loads a dictionary of URLs into an object mapping each key to its parsed JSON data.
+ * @template T
  * @param {Record<string, string>} urls
- * @returns {Promise<Record<string, any>>}
+ * @returns {Promise<Record<string, T>>}
  */
 async function loadJsonMap(urls) {
-  const entries = await Promise.all(
-    Object.entries(urls).map(async ([key, url]) => [key, await loadJson(url)])
+  return Object.fromEntries(
+    await Promise.all(
+      Object.entries(urls).map(async ([key, url]) => [key, await loadJson(url)])
+    )
   );
-  return Object.fromEntries(entries);
-}
-
-/**
- * Fetches `FB_<monsterId>_Idle.json` for a monster and extracts the relative sprite sheet `.png` path
- * from `Properties.KeyFrames[0].Sprite.ObjectPath` (e.g. `/Game/Art/Sprites/Amalgameye/T_Amalgameye_50x45_Sprite_0.1`
- * -> `./extracted/Game/Art/Sprites/Amalgameye/T_Amalgameye_50x45.png`).
- * Returns an empty string if the flipbook asset does not exist.
- *
- * @param {string} monsterId
- * @returns {Promise<string>}
- */
-export async function loadMonsterSpriteImage(monsterId) {
-  /** @type {UnrealFlipbookAsset[] | null} */
-  let flipbook = null;
-  try {
-    flipbook = await loadJson(getMonsterFlipbookUrl(monsterId));
-  } catch {
-    // Handles 404s when a monster lacks a flipbook asset on disk
-    return '';
-  }
-
-  const objectPath = flipbook?.[0]?.Properties?.KeyFrames?.[0]?.Sprite?.ObjectPath;
-  if (!objectPath) return '';
-  return `./extracted${objectPath.replace(/_Sprite_\d+\.\d+$/, '.png')}`;
 }
 
 /**
@@ -192,30 +184,23 @@ export async function loadGameDatabase() {
     loadJsonMap(DATA_TABLE_URLS)
   ]);
 
-  // Combined enum lookup table
   /** @type {Record<string, string>} */
   const enumLookup = {};
   for (const rawEnum of Object.values(enums)) {
     Object.assign(enumLookup, parseUnrealEnum(rawEnum));
   }
 
-  // Pre-normalize all DataTables using their S_* struct definitions
-  const resourceRows = extractNormalizedRows(tables.resourceData, structs.resourceStruct, enumLookup);
-  const rewardRows = extractNormalizedRows(tables.monsterRewards, structs.rewardStruct, enumLookup);
-  const monsterRows = extractNormalizedRows(tables.monsterTable, structs.monsterStruct, enumLookup);
-  const roomRows = extractNormalizedRows(tables.roomsTable, structs.roomStruct, enumLookup);
-  const recipeRows = extractNormalizedRows(tables.craftRecipes, structs.recipeStruct, enumLookup);
-  const explicitFusionRows = extractNormalizedRows(tables.fusionExplicit, structs.fusionStruct, enumLookup);
-  const genericFusionRows = extractNormalizedRows(tables.fusionGeneric, structs.fusionStruct, enumLookup);
-  const genericFusionConvertedRows = extractNormalizedRows(tables.fusionGenericConverted, structs.fusionStruct, enumLookup);
-  const activeSkillRows = extractNormalizedRows(tables.activeSkills, structs.activeSkillStruct, enumLookup);
-  const passiveSkillRows = extractNormalizedRows(tables.passiveSkills, structs.passiveSkillStruct, enumLookup);
-  const skillLevelRows = extractNormalizedRows(tables.monsterSkillLevels, structs.monsterSkillLevelStruct, enumLookup);
+  // Pre-normalize all DataTables in a single pass using dynamic RowStruct lookups
+  /** @type {Record<string, Record<string, NormalizedUnrealRow>>} */
+  const normalized = {};
+  for (const [tableName, rawTableJson] of Object.entries(tables)) {
+    normalized[tableName] = extractNormalizedRows(rawTableJson, structs, enumLookup);
+  }
 
   // Process Active Skills
   /** @type {Map<string, ActiveSkill>} */
   const activeSkillsById = new Map();
-  for (const [id, row] of Object.entries(activeSkillRows)) {
+  for (const [id, row] of Object.entries(normalized.DT_ActiveSkills || {})) {
     if (!id || id === 'None') continue;
     const rawDesc = row.Description || '';
     activeSkillsById.set(
@@ -239,7 +224,7 @@ export async function loadGameDatabase() {
   // Process Passive Skills
   /** @type {Map<string, PassiveSkill>} */
   const passiveSkillsById = new Map();
-  for (const [id, row] of Object.entries(passiveSkillRows)) {
+  for (const [id, row] of Object.entries(normalized.DT_PassiveSkills || {})) {
     if (!id || id === 'None') continue;
     const rawDesc = row.Description || '';
     passiveSkillsById.set(
@@ -257,15 +242,14 @@ export async function loadGameDatabase() {
   /** @type {Map<string, Item>} */
   const itemById = new Map();
 
-  for (const [id, row] of Object.entries(resourceRows)) {
+  for (const [id, row] of Object.entries(normalized.DT_ResourceData || {})) {
     if (!id || id === 'None') continue;
     itemById.set(
       id,
       new Item({
         id,
         name: row.Name || id,
-        description: row.Description || '',
-        icon: getItemIcon(id)
+        description: row.Description || ''
       })
     );
   }
@@ -289,10 +273,9 @@ export async function loadGameDatabase() {
   /** @type {Map<string, string>} */
   const monsterNameMap = new Map();
 
-  for (const [id, row] of Object.entries(monsterRows)) {
+  for (const [id, row] of Object.entries(normalized.DT_MonsterTable || {})) {
     const name = row.Name || id;
-    const reward = rewardRows[id];
-    const profileImage = getMonsterProfileImage(id);
+    const reward = normalized.DT_MonsterRewards?.[id];
 
     /** @type {Array<{ key: string | undefined, rarity: 'Common' | 'Rare' | 'Epic' }>} */
     const lootSlots = [
@@ -323,7 +306,7 @@ export async function loadGameDatabase() {
       }
     }
 
-    const skillRow = skillLevelRows[id];
+    const skillRow = normalized.DT_MonsterSkillLevels?.[id];
     /** @type {LearnedSkill[]} */
     const skills = [];
     if (skillRow) {
@@ -349,13 +332,6 @@ export async function loadGameDatabase() {
 
     monsterNameMap.set(id, name);
 
-    const health = row.Health ?? 0;
-    const soul = row.Soul ?? 0;
-    const strength = row.Strength ?? 0;
-    const defense = row.Defense ?? 0;
-    const mind = row.Mind ?? 0;
-    const agility = row.Agility ?? 0;
-
     monsters.push(
       new Monster({
         id,
@@ -363,16 +339,15 @@ export async function loadGameDatabase() {
         element: row.Type || 'Neutral',
         attackType: row.AttackType || 'Strike',
         tier: row.Tier ?? 1,
-        health,
-        soul,
-        strength,
-        defense,
-        mind,
-        agility,
+        health: row.Health ?? 0,
+        soul: row.Soul ?? 0,
+        strength: row.Strength ?? 0,
+        defense: row.Defense ?? 0,
+        mind: row.Mind ?? 0,
+        agility: row.Agility ?? 0,
         passiveSkill,
         skills,
         description: row.Description || '',
-        profileImage,
         loots
       })
     );
@@ -381,15 +356,13 @@ export async function loadGameDatabase() {
   // 3. Process Rooms
   /** @type {Map<string, Room>} */
   const roomById = new Map();
-  for (const [roomId, row] of Object.entries(roomRows)) {
-    const iconUrl = resolveUnrealAssetPath(row.Icon);
+  for (const [roomId, row] of Object.entries(normalized.DT_Rooms || {})) {
     roomById.set(
       roomId,
       new Room({
         id: roomId,
         name: row.Name || roomId,
-        prefix: row.Prefix || '',
-        icon: iconUrl
+        prefix: row.Prefix || ''
       })
     );
   }
@@ -398,7 +371,7 @@ export async function loadGameDatabase() {
   /** @type {CraftingRecipe[]} */
   const recipes = [];
 
-  for (const [recipeId, row] of Object.entries(recipeRows)) {
+  for (const [recipeId, row] of Object.entries(normalized.DT_CraftRecipes || {})) {
     if (!recipeId || recipeId === '#N/A') continue;
     const resultId = row.Result || 'None';
     if (!resultId || resultId === 'None') continue;
@@ -507,7 +480,7 @@ export async function loadGameDatabase() {
   }
 
   // 1. Add Explicit Fusions
-  for (const [comboKey, row] of Object.entries(explicitFusionRows)) {
+  for (const [comboKey, row] of Object.entries(normalized.DT_Fusion_Explicit || {})) {
     fusions.push(createFusionRecipe(comboKey, row.Result, 'Explicit'));
   }
 
@@ -517,14 +490,14 @@ export async function loadGameDatabase() {
   /** @type {Map<string, { pattern: string, result: string, baseCombinations: GenericFusionInputs[] }>} */
   const genericGroups = new Map();
 
-  for (const [comboKey, row] of Object.entries(genericFusionRows)) {
+  for (const [comboKey, row] of Object.entries(normalized.DT_Fusion_Generic || {})) {
     const canonicalResult = canonicalMonsterIds.get(row.Result.toLowerCase()) || row.Result;
 
     // Look up normalized pattern in converter table (checking both operand orders)
-    let normPattern = genericFusionConvertedRows[comboKey]?.Result;
+    let normPattern = normalized.DT_Fusion_Generic_Converted?.[comboKey]?.Result;
     if (!normPattern) {
       const [pA, pB] = comboKey.split('+');
-      normPattern = genericFusionConvertedRows[`${pB}+${pA}`]?.Result;
+      normPattern = normalized.DT_Fusion_Generic_Converted?.[`${pB}+${pA}`]?.Result;
     }
     const pattern = normPattern || comboKey;
 
