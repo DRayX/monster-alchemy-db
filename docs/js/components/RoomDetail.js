@@ -2,9 +2,10 @@
 import { ref, computed, watch, defineComponent } from 'vue';
 import { useRoute } from 'vue-router';
 import { db } from '../store.js';
-import { getMonsterProfileImage, getStatIcon } from '../services/assets.js';
+import { getStatIcon } from '../services/assets.js';
 import { SortableTable } from './SortableTable.js';
 import { ItemChip } from './ItemChip.js';
+import { FusionOperandBadge } from './FusionOperandBadge.js';
 import { NotFoundCard } from './NotFoundCard.js';
 
 /** @type {import('./SortableTable.js').TableColumn<import('../models/Recipe.js').CraftingRecipe>[]} */
@@ -127,7 +128,7 @@ const TEMPLATE = /* html */ `
             <td class="pa3">
               <div class="flex items-center">
                 <img
-                  :src="getMonsterProfileImage(fusion.resultId)"
+                  :src="fusion.resultIcon"
                   :alt="fusion.resultName"
                   class="icon-32 br2 bg-near-black ba b--white-10 mr2 flex-shrink-0 pixelated"
                   loading="lazy"
@@ -156,54 +157,10 @@ const TEMPLATE = /* html */ `
               </span>
             </td>
             <td class="pa3">
-              <RouterLink
-                v-if="fusion.inputAIsMonster"
-                :to="'/monsters/' + fusion.inputA"
-                class="link b light-blue hover-white inline-flex items-center"
-              >
-                <img
-                  :src="getMonsterProfileImage(fusion.inputA)"
-                  :alt="fusion.inputAName"
-                  class="br2 bg-near-black ba b--white-10 mr2 flex-shrink-0 pixelated icon-24"
-                  loading="lazy"
-                />
-                <span>{{ fusion.inputAName }}</span>
-              </RouterLink>
-              <span v-else class="silver inline-flex items-center">
-                <img
-                  v-for="icon in fusion.inputAIcons"
-                  :key="icon"
-                  :src="icon"
-                  class="mr2 pixelated icon-24 v-mid flex-shrink-0"
-                  alt=""
-                />
-                <span>{{ fusion.inputAName }}</span>
-              </span>
+              <FusionOperandBadge :operand="fusion.inputA" />
             </td>
             <td class="pa3">
-              <RouterLink
-                v-if="fusion.inputBIsMonster"
-                :to="'/monsters/' + fusion.inputB"
-                class="link b light-blue hover-white inline-flex items-center"
-              >
-                <img
-                  :src="getMonsterProfileImage(fusion.inputB)"
-                  :alt="fusion.inputBName"
-                  class="br2 bg-near-black ba b--white-10 mr2 flex-shrink-0 pixelated icon-24"
-                  loading="lazy"
-                />
-                <span>{{ fusion.inputBName }}</span>
-              </RouterLink>
-              <span v-else class="silver inline-flex items-center">
-                <img
-                  v-for="icon in fusion.inputBIcons"
-                  :key="icon"
-                  :src="icon"
-                  class="mr2 pixelated icon-24 v-mid flex-shrink-0"
-                  alt=""
-                />
-                <span>{{ fusion.inputBName }}</span>
-              </span>
+              <FusionOperandBadge :operand="fusion.inputB" />
             </td>
           </template>
         </SortableTable>
@@ -299,7 +256,7 @@ const TEMPLATE = /* html */ `
 
 export const RoomDetail = defineComponent({
   name: 'RoomDetail',
-  components: { SortableTable, ItemChip, NotFoundCard },
+  components: { SortableTable, ItemChip, FusionOperandBadge, NotFoundCard },
   template: TEMPLATE,
   setup() {
     const route = useRoute();
@@ -371,7 +328,6 @@ export const RoomDetail = defineComponent({
       selectedFusionType,
       filteredRecipes,
       filteredFusions,
-      getMonsterProfileImage,
       getStatIcon
     };
   }

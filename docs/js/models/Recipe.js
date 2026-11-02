@@ -1,7 +1,7 @@
 // @ts-check
 import { Item } from './Item.js';
 import { getMonsterProfileImage, getItemIcon, getRoomIcon } from '../services/assets.js';
-import { formatGenericFusionInput, getGenericFusionInputIcons } from '../services/formatters.js';
+import { parseGenericFusionToken } from '../services/formatters.js';
 
 /** @type {Record<'Resource' | 'Monster' | 'Structure', (id: string) => string>} */
 const OUTPUT_ICON_RESOLVERS = {
@@ -68,27 +68,41 @@ export class CraftingRecipe {
 }
 
 /**
+ * Operand in a fusion recipe (either a specific monster or a generic archetype).
+ */
+export class FusionOperand {
+  /**
+   * @param {string} id
+   * @param {string} [monsterName]
+   */
+  constructor(id, monsterName) {
+    this.id = id;
+    this.isMonster = monsterName !== undefined;
+    if (this.isMonster) {
+      this.name = /** @type {string} */ (monsterName);
+      this.icons = [getMonsterProfileImage(id)];
+    } else {
+      const parsed = parseGenericFusionToken(id);
+      this.name = parsed.name;
+      this.icons = parsed.icons;
+    }
+  }
+}
+
+/**
  * Generic fusion input combination representing a specific input pair in a generic recipe group.
  */
 export class GenericFusionInputs {
   /**
    * @param {Object} data
    * @param {string} data.key
-   * @param {string} data.inputA
-   * @param {string} data.inputB
-   * @param {string[]} [data.inputAIcons]
-   * @param {string[]} [data.inputBIcons]
+   * @param {FusionOperand} data.inputA
+   * @param {FusionOperand} data.inputB
    */
   constructor(data) {
     this.key = data.key;
     this.inputA = data.inputA;
-    this.inputAName = formatGenericFusionInput(data.inputA);
-    /** @type {string[]} */
-    this.inputAIcons = data.inputAIcons || getGenericFusionInputIcons(data.inputA);
     this.inputB = data.inputB;
-    this.inputBName = formatGenericFusionInput(data.inputB);
-    /** @type {string[]} */
-    this.inputBIcons = data.inputBIcons || getGenericFusionInputIcons(data.inputB);
   }
 }
 
@@ -100,33 +114,22 @@ export class FusionRecipe {
    * @param {Object} data
    * @param {string} [data.id]
    * @param {'Explicit' | 'Generic'} data.fusionType
-   * @param {string} data.inputA
-   * @param {string} data.inputAName
-   * @param {boolean} data.inputAIsMonster
-   * @param {string[]} [data.inputAIcons]
-   * @param {string} data.inputB
-   * @param {string} data.inputBName
-   * @param {boolean} data.inputBIsMonster
-   * @param {string[]} [data.inputBIcons]
+   * @param {FusionOperand} data.inputA
+   * @param {FusionOperand} data.inputB
    * @param {string} data.resultId
    * @param {string} data.resultName
    * @param {GenericFusionInputs[]} [data.baseCombinations]
    */
   constructor(data) {
-    this.id = data.id || `${data.inputA}+${data.inputB}=${data.resultId}`;
+    this.id = data.id || `${data.inputA.id}+${data.inputB.id}=${data.resultId}`;
     this.fusionType = data.fusionType;
     this.inputA = data.inputA;
-    this.inputAName = data.inputAName;
-    this.inputAIsMonster = Boolean(data.inputAIsMonster);
-    /** @type {string[]} */
-    this.inputAIcons = data.inputAIcons || (this.inputAIsMonster ? [] : getGenericFusionInputIcons(data.inputA));
     this.inputB = data.inputB;
-    this.inputBName = data.inputBName;
-    this.inputBIsMonster = Boolean(data.inputBIsMonster);
-    /** @type {string[]} */
-    this.inputBIcons = data.inputBIcons || (this.inputBIsMonster ? [] : getGenericFusionInputIcons(data.inputB));
+    this.inputAName = data.inputA.name;
+    this.inputBName = data.inputB.name;
     this.resultId = data.resultId;
     this.resultName = data.resultName;
+    this.resultIcon = getMonsterProfileImage(data.resultId);
     this.baseCombinations = data.baseCombinations || [];
   }
 }

@@ -1,62 +1,14 @@
 // @ts-check
 import { defineComponent, ref } from 'vue';
-import { getMonsterProfileImage } from '../services/assets.js';
+import { FusionOperandBadge } from './FusionOperandBadge.js';
 
 const TEMPLATE = /* html */ `
   <div class="pa3 bg-near-black ba b--white-10 br2 mb2">
     <div class="flex items-center justify-between flex-wrap">
       <div class="f6 flex items-center flex-wrap">
-        <!-- Input A -->
-        <RouterLink
-          v-if="fusion.inputAIsMonster"
-          :to="'/monsters/' + fusion.inputA"
-          class="link light-blue hover-white b inline-flex items-center"
-        >
-          <img
-            :src="getMonsterProfileImage(fusion.inputA)"
-            :alt="fusion.inputAName"
-            class="br1 bg-dark-gray ba b--white-10 mr1 pixelated icon-24"
-            loading="lazy"
-          />
-          <span>{{ fusion.inputAName }}</span>
-        </RouterLink>
-        <span v-else class="silver inline-flex items-center">
-          <img
-            v-for="icon in fusion.inputAIcons"
-            :key="icon"
-            :src="icon"
-            class="mr1 pixelated icon-24 v-mid"
-            alt=""
-          />
-          <span>{{ fusion.inputAName }}</span>
-        </span>
-
+        <FusionOperandBadge :operand="fusion.inputA" />
         <span class="gray mh2">+</span>
-
-        <!-- Input B -->
-        <RouterLink
-          v-if="fusion.inputBIsMonster"
-          :to="'/monsters/' + fusion.inputB"
-          class="link light-blue hover-white b inline-flex items-center"
-        >
-          <img
-            :src="getMonsterProfileImage(fusion.inputB)"
-            :alt="fusion.inputBName"
-            class="br1 bg-dark-gray ba b--white-10 mr1 pixelated icon-24"
-            loading="lazy"
-          />
-          <span>{{ fusion.inputBName }}</span>
-        </RouterLink>
-        <span v-else class="silver inline-flex items-center">
-          <img
-            v-for="icon in fusion.inputBIcons"
-            :key="icon"
-            :src="icon"
-            class="mr1 pixelated icon-24 v-mid"
-            alt=""
-          />
-          <span>{{ fusion.inputBName }}</span>
-        </span>
+        <FusionOperandBadge :operand="fusion.inputB" />
 
         <!-- Combinations expand button for generic fusions -->
         <button
@@ -88,7 +40,7 @@ const TEMPLATE = /* html */ `
         >
           <span class="mr2">&rarr;</span>
           <img
-            :src="getMonsterProfileImage(fusion.resultId)"
+            :src="fusion.resultIcon"
             :alt="fusion.resultName"
             class="br1 bg-dark-gray ba b--white-10 mr1 pixelated icon-24"
             loading="lazy"
@@ -108,27 +60,9 @@ const TEMPLATE = /* html */ `
           class="f7 silver pv1 flex items-center flex-wrap"
         >
           <span class="gray mr2">&bull;</span>
-          <span class="inline-flex items-center">
-            <img
-              v-for="icon in combo.inputAIcons"
-              :key="icon"
-              :src="icon"
-              class="mr1 pixelated icon-14 v-mid"
-              alt=""
-            />
-            <span>{{ combo.inputAName }}</span>
-          </span>
+          <FusionOperandBadge :operand="combo.inputA" icon-class="icon-14" />
           <span class="gray mh2">+</span>
-          <span class="inline-flex items-center">
-            <img
-              v-for="icon in combo.inputBIcons"
-              :key="icon"
-              :src="icon"
-              class="mr1 pixelated icon-14 v-mid"
-              alt=""
-            />
-            <span>{{ combo.inputBName }}</span>
-          </span>
+          <FusionOperandBadge :operand="combo.inputB" icon-class="icon-14" />
         </div>
       </div>
     </div>
@@ -137,8 +71,10 @@ const TEMPLATE = /* html */ `
 
 export const FusionCard = defineComponent({
   name: 'FusionCard',
+  components: { FusionOperandBadge },
   props: {
     fusion: {
+      /** @type {import('vue').PropType<import('../models/Recipe.js').FusionRecipe>} */
       type: Object,
       required: true
     },
@@ -158,7 +94,6 @@ export const FusionCard = defineComponent({
     };
 
     return {
-      getMonsterProfileImage,
       isExpanded,
       toggleExpand
     };

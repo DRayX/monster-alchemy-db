@@ -309,8 +309,8 @@ export const MonsterDetail = defineComponent({
     const usedInFusions = computed(() =>
       db.fusions.filter(
         (f) =>
-          (f.inputAIsMonster && f.inputA === monsterId.value) ||
-          (f.inputBIsMonster && f.inputB === monsterId.value)
+          (f.inputA.isMonster && f.inputA.id === monsterId.value) ||
+          (f.inputB.isMonster && f.inputB.id === monsterId.value)
       )
     );
 

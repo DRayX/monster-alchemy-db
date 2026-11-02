@@ -83,64 +83,32 @@ export function formatTargetting(type) {
 }
 
 /**
- * Formats a generic fusion archetype token like `"1FireStrike"` or `"1WaterAny"` into a readable label.
+ * Parses a generic fusion archetype token like `"1FireStrike"` or `"1WaterAny"`
+ * into its human-readable label and trait icon URLs in a single pass.
+ *
  * @param {string} token
- * @returns {string}
+ * @returns {{ name: string, icons: string[] }}
  */
-export function formatGenericFusionInput(token) {
+export function parseGenericFusionToken(token) {
   const match = /^(\d+)(Neutral|Fire|Water|Nature|Energy|Moon|Any)(Any|Strike|Slash|Projectile|Magic)$/.exec(token);
   if (!match) {
-    return token;
+    return { name: token, icons: [] };
   }
   const [, tier, element, attack] = match;
   const parts = [`Tier ${tier}`];
-  if (element !== 'Any') parts.push(element);
-  if (attack !== 'Any') parts.push(attack);
-  return parts.join(' ');
-}
-
-/**
- * Returns icon URLs for a generic fusion input token if it specifies an element and/or attack type.
- * E.g. `"1FireAny"` -> `['./extracted/.../T_EType_Fire.png']`
- * `"1AnyStrike"` -> `['./extracted/.../T_AType_Strike.png']`
- * `"1FireStrike"` -> `['./extracted/.../T_EType_Fire.png', './extracted/.../T_AType_Strike.png']`
- *
- * @param {string} token
- * @returns {string[]}
- */
-export function getGenericFusionInputIcons(token) {
-  const match = /^(\d+)(Neutral|Fire|Water|Nature|Energy|Moon|Any)(Any|Strike|Slash|Projectile|Magic)$/.exec(token);
-  if (!match) {
-    return [];
-  }
-  const [, , element, attack] = match;
   /** @type {string[]} */
   const icons = [];
+
   if (element !== 'Any') {
+    parts.push(element);
     const icon = getTypeIcon(element);
     if (icon) icons.push(icon);
   }
   if (attack !== 'Any') {
+    parts.push(attack);
     const icon = getTypeIcon(attack);
     if (icon) icons.push(icon);
   }
-  return icons;
-}
 
-/**
- * Formats a fusion input (resolving monster names via monsterNameMap for specific monsters,
- * or delegating to formatGenericFusionInput for generic archetype tokens like `"1FireStrike"`).
- * @param {string} token
- * @param {Map<string, string>} monsterNameMap
- * @returns {{ name: string, isMonster: boolean }}
- */
-export function formatFusionInput(token, monsterNameMap) {
-  const knownMonster = monsterNameMap.get(token);
-  if (knownMonster) {
-    return { name: knownMonster, isMonster: true };
-  }
-  return {
-    name: formatGenericFusionInput(token),
-    isMonster: false
-  };
+  return { name: parts.join(' '), icons };
 }

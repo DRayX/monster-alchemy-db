@@ -4,11 +4,10 @@ import {
   STRUCT_URLS,
   ENUM_URLS
 } from './assets.js';
-import { formatFusionInput } from './formatters.js';
 import { Monster, MonsterLoot, LearnedSkill } from '../models/Monster.js';
 import { Item } from '../models/Item.js';
 import { Room } from '../models/Room.js';
-import { CraftingRecipe, RecipeIngredient, FusionRecipe, GenericFusionInputs } from '../models/Recipe.js';
+import { CraftingRecipe, RecipeIngredient, FusionOperand, FusionRecipe, GenericFusionInputs } from '../models/Recipe.js';
 import { ActiveSkill, PassiveSkill } from '../models/Skill.js';
 
 /**
@@ -422,6 +421,15 @@ export async function loadGameDatabase() {
   );
 
   /**
+   * @param {string} rawToken
+   * @returns {FusionOperand}
+   */
+  function createFusionOperand(rawToken) {
+    const canonicalId = canonicalMonsterIds.get(rawToken.toLowerCase()) || rawToken;
+    return new FusionOperand(canonicalId, monsterNameMap.get(canonicalId));
+  }
+
+  /**
    * @param {string} comboKey
    * @param {string} resultRaw
    * @param {'Explicit' | 'Generic'} fusionType
@@ -429,22 +437,13 @@ export async function loadGameDatabase() {
    */
   function createFusionRecipe(comboKey, resultRaw, fusionType, baseCombinations = []) {
     const [rawA, rawB] = comboKey.split('+');
-    const canonicalA = canonicalMonsterIds.get(rawA.toLowerCase()) || rawA;
-    const canonicalB = canonicalMonsterIds.get(rawB.toLowerCase()) || rawB;
     const canonicalResult = canonicalMonsterIds.get(resultRaw.toLowerCase()) || resultRaw;
-
-    const infoA = formatFusionInput(canonicalA, monsterNameMap);
-    const infoB = formatFusionInput(canonicalB, monsterNameMap);
 
     return new FusionRecipe({
       id: `${comboKey}=${canonicalResult}`,
       fusionType,
-      inputA: canonicalA,
-      inputAName: infoA.name,
-      inputAIsMonster: infoA.isMonster,
-      inputB: canonicalB,
-      inputBName: infoB.name,
-      inputBIsMonster: infoB.isMonster,
+      inputA: createFusionOperand(rawA),
+      inputB: createFusionOperand(rawB),
       resultId: canonicalResult,
       resultName: monsterNameMap.get(canonicalResult) || canonicalResult,
       baseCombinations
@@ -481,14 +480,12 @@ export async function loadGameDatabase() {
     }
 
     const [baseA, baseB] = comboKey.split('+');
-    const canonicalBaseA = canonicalMonsterIds.get(baseA.toLowerCase()) || baseA;
-    const canonicalBaseB = canonicalMonsterIds.get(baseB.toLowerCase()) || baseB;
 
     group.baseCombinations.push(
       new GenericFusionInputs({
         key: comboKey,
-        inputA: canonicalBaseA,
-        inputB: canonicalBaseB
+        inputA: createFusionOperand(baseA),
+        inputB: createFusionOperand(baseB)
       })
     );
   }
