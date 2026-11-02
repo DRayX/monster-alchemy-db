@@ -2,8 +2,8 @@
 import { computed, defineComponent } from 'vue';
 import { useRoute } from 'vue-router';
 import { db } from '../store.js';
-import { getStatIcon } from '../services/assets.js';
 import { getRarityBadgeClass } from './ItemChip.js';
+import { CraftingRecipeCard } from './CraftingRecipeCard.js';
 import { NotFoundCard } from './NotFoundCard.js';
 
 const TEMPLATE = /* html */ `
@@ -102,53 +102,11 @@ const TEMPLATE = /* html */ `
           </h2>
 
           <div v-if="craftedInRecipes.length > 0">
-            <div
+            <CraftingRecipeCard
               v-for="rec in craftedInRecipes"
               :key="rec.id"
-              class="pa3 bg-near-black ba b--white-10 br2 mb2"
-            >
-              <div class="flex items-center justify-between mb2">
-                <RouterLink
-                  :to="'/rooms/' + rec.roomId"
-                  class="link light-purple b f6 hover-white inline-flex items-center"
-                >
-                  <img
-                    v-if="rec.roomIcon"
-                    :src="rec.roomIcon"
-                    :alt="rec.roomName"
-                    class="mr2 dib v-mid flex-shrink-0 pixelated icon-16"
-                  />
-                  {{ rec.roomName }} (&times;{{ rec.outputQuantity }}) &rarr;
-                </RouterLink>
-                <span class="f7 silver inline-flex items-center">
-                  <img
-                    :src="getStatIcon('Work')"
-                    alt="Work"
-                    class="mr1 flex-shrink-0 pixelated icon-12"
-                  />
-                  Work: {{ rec.work }}
-                </span>
-              </div>
-              <div class="flex flex-wrap">
-                <RouterLink
-                  v-for="ing in rec.ingredients"
-                  :key="ing.item.id"
-                  :to="'/items/' + ing.item.id"
-                  class="link inline-flex items-center ph2 pv1 br2 bg-dark-gray ba b--white-10 hover-b--purple f7 near-white mr2 mb1"
-                >
-                  <img
-                    :src="ing.item.icon"
-                    :alt="ing.item.name"
-                    class="mr1 flex-shrink-0 pixelated icon-18"
-                    loading="lazy"
-                  />
-                  <span><strong class="gold">{{ ing.quantity }}&times;</strong> {{ ing.item.name }}</span>
-                </RouterLink>
-                <span v-if="rec.ingredients.length === 0" class="f7 silver">
-                  No resource inputs required
-                </span>
-              </div>
-            </div>
+              :recipe="rec"
+            />
           </div>
 
           <div v-else class="pa3 bg-near-black ba b--white-10 br2 silver f6">
@@ -220,7 +178,7 @@ const TEMPLATE = /* html */ `
 
 export const ItemDetail = defineComponent({
   name: 'ItemDetail',
-  components: { NotFoundCard },
+  components: { CraftingRecipeCard, NotFoundCard },
   setup() {
     const route = useRoute();
 
@@ -262,8 +220,7 @@ export const ItemDetail = defineComponent({
       droppedByMonsters,
       craftedInRecipes,
       usedInRecipes,
-      rarityBadgeClass: getRarityBadgeClass,
-      getStatIcon
+      rarityBadgeClass: getRarityBadgeClass
     };
   },
   template: TEMPLATE

@@ -4,8 +4,9 @@ import { useRoute } from 'vue-router';
 import { db } from '../store.js';
 import { getStatIcon } from '../services/assets.js';
 import { TypeBadge } from './TypeBadge.js';
-import { ItemChip, getRarityBadgeClass } from './ItemChip.js';
+import { getRarityBadgeClass } from './ItemChip.js';
 import { StatBar } from './StatBar.js';
+import { CraftingRecipeCard } from './CraftingRecipeCard.js';
 import { FusionCard } from './FusionCard.js';
 import { NotFoundCard } from './NotFoundCard.js';
 
@@ -239,44 +240,11 @@ const TEMPLATE = /* html */ `
             Room Crafting Recipes ({{ summoningRecipes.length }})
           </h2>
           <div v-if="summoningRecipes.length > 0" class="mb4">
-            <div
+            <CraftingRecipeCard
               v-for="rec in summoningRecipes"
               :key="rec.id"
-              class="pa3 bg-near-black ba b--white-10 br2 mb2"
-            >
-              <div class="flex items-center justify-between mb2">
-                <RouterLink
-                  :to="'/rooms/' + rec.roomId"
-                  class="link light-purple b f6 hover-white inline-flex items-center"
-                >
-                  <img
-                    v-if="rec.roomIcon"
-                    :src="rec.roomIcon"
-                    :alt="rec.roomName"
-                    class="mr2 dib v-mid flex-shrink-0 pixelated icon-16"
-                  />
-                  {{ rec.roomName }} &rarr;
-                </RouterLink>
-                <span class="f7 silver inline-flex items-center">
-                  <img
-                    :src="getStatIcon('Work')"
-                    alt="Work"
-                    class="mr1 flex-shrink-0 pixelated icon-12"
-                  />
-                  Work: {{ rec.work }}
-                </span>
-              </div>
-              <div class="flex flex-wrap">
-                <ItemChip
-                  v-for="ing in rec.ingredients"
-                  :key="ing.item.id"
-                  :item-id="ing.item.id"
-                  :name="ing.item.name"
-                  :quantity="ing.quantity"
-                  custom-class="mr2 mb1"
-                />
-              </div>
-            </div>
+              :recipe="rec"
+            />
           </div>
           <div v-else class="pa3 bg-near-black ba b--white-10 br2 silver f6 mb4">
             Not crafted directly in a ritual circle.
@@ -318,7 +286,7 @@ const TEMPLATE = /* html */ `
 
 export const MonsterDetail = defineComponent({
   name: 'MonsterDetail',
-  components: { TypeBadge, ItemChip, StatBar, FusionCard, NotFoundCard },
+  components: { TypeBadge, StatBar, CraftingRecipeCard, FusionCard, NotFoundCard },
   setup() {
     const route = useRoute();
 

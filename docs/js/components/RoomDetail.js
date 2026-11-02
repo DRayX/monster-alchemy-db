@@ -76,20 +76,14 @@ const TEMPLATE = /* html */ `
             />
             Construction Cost (Work {{ buildRecipe.work }}):
           </span>
-          <RouterLink
+          <ItemChip
             v-for="ing in buildRecipe.ingredients"
             :key="ing.item.id"
-            :to="'/items/' + ing.item.id"
-            class="link inline-flex items-center ph2 pv1 br2 bg-near-black ba b--white-10 hover-b--purple f7 near-white mr2"
-          >
-            <img
-              :src="ing.item.icon"
-              :alt="ing.item.name"
-              class="mr1 flex-shrink-0 pixelated icon-18"
-              loading="lazy"
-            />
-            <span><strong class="gold">{{ ing.quantity }}&times;</strong> {{ ing.item.name }}</span>
-          </RouterLink>
+            :item-id="ing.item.id"
+            :name="ing.item.name"
+            :quantity="ing.quantity"
+            custom-class="mr2"
+          />
         </div>
       </header>
 
@@ -282,7 +276,7 @@ const TEMPLATE = /* html */ `
               &times;{{ recipe.outputQuantity }}
             </td>
             <td class="pa3">
-              <div v-if="recipe.ingredients.length > 0" class="flex flex-wrap">
+              <div class="flex flex-wrap">
                 <ItemChip
                   v-for="ing in recipe.ingredients"
                   :key="ing.item.id"
@@ -292,7 +286,6 @@ const TEMPLATE = /* html */ `
                   custom-class="mr2 mb1"
                 />
               </div>
-              <span v-else class="f7 gray">None (Base Gathering)</span>
             </td>
             <td class="pa3 tr b silver nowrap">
               {{ recipe.work }}
