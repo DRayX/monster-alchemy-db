@@ -196,18 +196,23 @@ string? ResolveReferencedTexture(DefaultFileProvider provider, string? packagePa
     }
 }
 
+IEnumerable<FPackageIndex?> GetFieldTypeRefs(FField? field) => field switch
+{
+    FByteProperty b => new[] { b.Enum },
+    FEnumProperty e => new[] { e.Enum },
+    FStructProperty s => new[] { s.Struct },
+    FArrayProperty a => GetFieldTypeRefs(a.Inner),
+    FSetProperty set => GetFieldTypeRefs(set.ElementProp),
+    FMapProperty m => GetFieldTypeRefs(m.KeyProp).Concat(GetFieldTypeRefs(m.ValueProp)),
+    _ => Enumerable.Empty<FPackageIndex?>()
+};
+
 void DiscoverDependencies(UObject? export, Queue<string> pendingQueue, HashSet<string> seenPackages)
 {
     var refs = export switch
     {
         UDataTable dt => new[] { dt.GetOrDefault<FPackageIndex>("RowStruct") },
-        UStruct st when st.ChildProperties != null => st.ChildProperties.Select(f => f switch
-        {
-            FByteProperty b => b.Enum,
-            FEnumProperty e => e.Enum,
-            FStructProperty s => s.Struct,
-            _ => null
-        }),
+        UStruct st when st.ChildProperties != null => st.ChildProperties.SelectMany(GetFieldTypeRefs),
         _ => Enumerable.Empty<FPackageIndex?>()
     };
 

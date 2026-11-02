@@ -4,6 +4,7 @@ import {
   STRUCT_URLS,
   ENUM_URLS
 } from './assets.js';
+import { parseUnrealEnum, extractNormalizedRows } from './unreal.js';
 import { Monster, MonsterLoot, LearnedSkill } from '../models/Monster.js';
 import { Item } from '../models/Item.js';
 import { Room } from '../models/Room.js';
@@ -11,131 +12,8 @@ import { CraftingRecipe, RecipeIngredient, FusionOperand, FusionRecipe, GenericF
 import { ActiveSkill, PassiveSkill } from '../models/Skill.js';
 
 /**
- * Utilities for loading and normalizing the real Unreal Engine DataTable, Struct, & Enum
- * JSON dumps under `./extracted/Game/` without modifying the source files.
- *
- * @typedef {import('../types.js').UnrealText} UnrealText
- * @typedef {import('../types.js').RawUnrealPropValue} RawUnrealPropValue
- * @typedef {import('../types.js').RawUnrealRow} RawUnrealRow
- * @typedef {import('../types.js').UnrealDataTableAsset} UnrealDataTableAsset
- * @typedef {import('../types.js').UnrealStructAsset} UnrealStructAsset
- * @typedef {import('../types.js').UnrealEnumAsset} UnrealEnumAsset
  * @typedef {import('../types.js').NormalizedUnrealRow} NormalizedUnrealRow
  */
-
-/**
- * Extracts a clean string from an Unreal Engine FText object using SourceString.
- * @param {RawUnrealPropValue} value
- * @param {string} [fallback]
- * @returns {string}
- */
-export function extractUnrealText(value, fallback = 'Unknown') {
-  if (!value) return fallback;
-  if (typeof value === 'string') return value;
-  if (typeof value === 'object' && 'SourceString' in value) {
-    return value.SourceString || fallback;
-  }
-  return fallback;
-}
-
-/**
- * Parses an Unreal `UserDefinedEnum` JSON export into a lookup map from
- * `"EnumName::NewEnumeratorX"` to its display string.
- *
- * @param {UnrealEnumAsset[]} rawEnumJson
- * @returns {Record<string, string>}
- */
-export function parseUnrealEnum(rawEnumJson) {
-  /** @type {Record<string, string>} */
-  const map = {};
-  const entry = rawEnumJson[0];
-  if (!entry || !entry.Name) return map;
-
-  const enumName = entry.Name;
-  const displayList = entry.Properties?.DisplayNameMap;
-  if (Array.isArray(displayList)) {
-    for (const item of displayList) {
-      if (item && typeof item.Key === 'string') {
-        const label = extractUnrealText(item.Value, item.Key);
-        map[`${enumName}::${item.Key}`] = label;
-      }
-    }
-  }
-  return map;
-}
-
-/**
- * Extracts the UserDefinedStruct name referenced by a DataTable's RowStruct property.
- * e.g. ObjectName "UserDefinedStruct'S_Monster_Table'" -> "S_Monster_Table"
- * @param {UnrealDataTableAsset[]} rawTableJson
- * @returns {string | null}
- */
-export function getTableRowStructName(rawTableJson) {
-  const objectName = rawTableJson?.[0]?.Properties?.RowStruct?.ObjectName || '';
-  return /'(\w+)'/.exec(objectName)?.[1] || null;
-}
-
-/**
- * Normalizes all rows from an Unreal DataTable JSON export by automatically resolving its
- * struct schema from `RowStruct` and applying enum lookups:
- * - Maps each exact serialized property key (`Name_44_...`) to its clean base name (`Name`)
- * - Automatically extracts `SourceString` for `TextProperty` fields
- * - Automatically resolves enum display strings for `ByteProperty` fields
- *
- * @param {UnrealDataTableAsset[]} rawTableJson
- * @param {Record<string, UnrealStructAsset[]>} structs
- * @param {Record<string, string>} [enumLookup]
- * @returns {Record<string, NormalizedUnrealRow>}
- */
-export function extractNormalizedRows(rawTableJson, structs, enumLookup = {}) {
-  const structName = getTableRowStructName(rawTableJson);
-  const rawStructJson = structName ? structs[structName] : null;
-
-  if (!rawStructJson) {
-    throw new Error(`[Loader] No struct definition found for table struct '${structName}'`);
-  }
-
-  const structEntry = rawStructJson[0];
-  const childProps = structEntry?.ChildProperties ?? [];
-
-  /** @type {Array<{ fullName: string, baseName: string, type: string }>} */
-  const propSpecs = [];
-  for (const prop of childProps) {
-    propSpecs.push({
-      fullName: prop.Name,
-      baseName: prop.Name.replace(/_\d+_[0-9A-Fa-f]{32}$/, ''),
-      type: prop.Type
-    });
-  }
-
-  /** @type {Record<string, RawUnrealRow>} */
-  const rawRows = {};
-  for (const entry of rawTableJson) {
-    if (entry.Rows) {
-      Object.assign(rawRows, entry.Rows);
-    }
-  }
-
-  /** @type {Record<string, NormalizedUnrealRow>} */
-  const normalized = {};
-  for (const [rowId, rawRow] of Object.entries(rawRows)) {
-    /** @type {NormalizedUnrealRow} */
-    const cleanRow = {};
-    for (const spec of propSpecs) {
-      const val = rawRow[spec.fullName];
-      if (spec.type === 'TextProperty') {
-        cleanRow[spec.baseName] = extractUnrealText(val, '');
-      } else if (spec.type === 'ByteProperty' && typeof val === 'string') {
-        cleanRow[spec.baseName] = enumLookup[val] || val;
-      } else {
-        cleanRow[spec.baseName] = val;
-      }
-    }
-    normalized[rowId] = cleanRow;
-  }
-
-  return normalized;
-}
 
 /**
  * Fetches and parses a JSON resource from the given URL.
