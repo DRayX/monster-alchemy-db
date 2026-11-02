@@ -1,5 +1,5 @@
 // @ts-check
-import { ref, computed, defineComponent } from 'vue';
+import { ref, computed, watch, defineComponent } from 'vue';
 import { useRoute } from 'vue-router';
 import { db } from '../store.js';
 import { getMonsterProfileImage, getStatIcon } from '../services/assets.js';
@@ -314,6 +314,11 @@ export const RoomDetail = defineComponent({
     const selectedFusionType = ref('ALL');
 
     const roomId = computed(() => String(route.params.id || ''));
+
+    watch(roomId, () => {
+      searchQuery.value = '';
+      selectedFusionType.value = 'ALL';
+    });
 
     const room = computed(() =>
       db.rooms.find((r) => r.id === roomId.value)
