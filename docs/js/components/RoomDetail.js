@@ -2,7 +2,7 @@
 import { ref, computed, defineComponent } from 'vue';
 import { useRoute } from 'vue-router';
 import { db } from '../store.js';
-import { getMonsterProfileImage, getItemIcon, getStatIcon } from '../services/assets.js';
+import { getMonsterProfileImage, getStatIcon } from '../services/assets.js';
 import { SortableTable } from './SortableTable.js';
 import { ItemChip } from './ItemChip.js';
 import { NotFoundCard } from './NotFoundCard.js';
@@ -245,31 +245,14 @@ const TEMPLATE = /* html */ `
             <td class="pa3">
               <div class="flex items-center">
                 <img
-                  v-if="recipe.outputType === 'Monster'"
-                  :src="getMonsterProfileImage(recipe.outputId)"
+                  :src="recipe.outputIcon"
                   :alt="recipe.outputName"
-                  class="icon-32 br2 bg-near-black ba b--white-10 mr2 flex-shrink-0 pixelated"
+                  :class="[
+                    'icon-32 br2 bg-near-black ba b--white-10 mr2 flex-shrink-0 pixelated',
+                    recipe.outputType === 'Monster' ? '' : 'pa1'
+                  ]"
                   loading="lazy"
                 />
-                <img
-                  v-else-if="recipe.outputType === 'Resource'"
-                  :src="getItemIcon(recipe.outputId)"
-                  :alt="recipe.outputName"
-                  class="icon-32 br2 bg-near-black ba b--white-10 mr2 pa1 flex-shrink-0 pixelated"
-                  loading="lazy"
-                />
-                <div
-                  v-else-if="recipe.outputType === 'Structure'"
-                  class="icon-32 br2 bg-near-black ba b--white-10 mr2 flex items-center justify-center flex-shrink-0 overflow-hidden pa1"
-                >
-                  <img
-                    v-if="getRoom(recipe.outputId)?.icon"
-                    :src="getRoom(recipe.outputId)?.icon"
-                    :alt="recipe.outputName"
-                    class="w-100 h-100 pixelated"
-                    loading="lazy"
-                  />
-                </div>
                 <div>
                   <RouterLink
                     :to="recipe.outputRoute"
@@ -379,14 +362,6 @@ export const RoomDetail = defineComponent({
       });
     });
 
-    /**
-     * @param {string} id
-     * @returns {import('../models/Room.js').Room | undefined}
-     */
-    function getRoom(id) {
-      return db.rooms.find((r) => r.id === id);
-    }
-
     return {
       CRAFT_COLUMNS,
       FUSION_COLUMNS,
@@ -399,9 +374,7 @@ export const RoomDetail = defineComponent({
       filteredRecipes,
       filteredFusions,
       getMonsterProfileImage,
-      getItemIcon,
-      getStatIcon,
-      getRoom
+      getStatIcon
     };
   }
 });

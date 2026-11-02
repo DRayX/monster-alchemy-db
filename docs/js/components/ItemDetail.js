@@ -2,7 +2,7 @@
 import { computed, defineComponent } from 'vue';
 import { useRoute } from 'vue-router';
 import { db } from '../store.js';
-import { getMonsterProfileImage, getItemIcon, getStatIcon } from '../services/assets.js';
+import { getStatIcon } from '../services/assets.js';
 import { getRarityBadgeClass } from './ItemChip.js';
 import { NotFoundCard } from './NotFoundCard.js';
 
@@ -169,17 +169,12 @@ const TEMPLATE = /* html */ `
             >
               <div class="flex items-center">
                 <img
-                  v-if="entry.recipe.outputType === 'Monster'"
-                  :src="getMonsterProfileImage(entry.recipe.outputId)"
+                  :src="entry.recipe.outputIcon"
                   :alt="entry.recipe.outputName"
-                  class="icon-32 br2 bg-dark-gray ba b--white-10 mr3 flex-shrink-0 pixelated"
-                  loading="lazy"
-                />
-                <img
-                  v-else-if="entry.recipe.outputType === 'Resource'"
-                  :src="getItemIcon(entry.recipe.outputId)"
-                  :alt="entry.recipe.outputName"
-                  class="icon-32 br2 bg-dark-gray ba b--white-10 mr3 pa1 flex-shrink-0 pixelated"
+                  :class="[
+                    'icon-32 br2 bg-dark-gray ba b--white-10 mr3 flex-shrink-0 pixelated',
+                    entry.recipe.outputType === 'Monster' ? '' : 'pa1'
+                  ]"
                   loading="lazy"
                 />
                 <div>
@@ -195,8 +190,14 @@ const TEMPLATE = /* html */ `
                     Requires <strong class="gold">{{ entry.quantity }}&times;</strong> in
                     <RouterLink
                       :to="'/rooms/' + entry.recipe.roomId"
-                      class="link light-blue hover-white"
+                      class="link light-blue hover-white inline-flex items-center"
                     >
+                      <img
+                        v-if="entry.recipe.roomIcon"
+                        :src="entry.recipe.roomIcon"
+                        :alt="entry.recipe.roomName"
+                        class="mr1 dib v-mid flex-shrink-0 pixelated icon-14"
+                      />
                       {{ entry.recipe.roomName }}
                     </RouterLink>
                   </div>
@@ -262,8 +263,6 @@ export const ItemDetail = defineComponent({
       craftedInRecipes,
       usedInRecipes,
       rarityBadgeClass: getRarityBadgeClass,
-      getMonsterProfileImage,
-      getItemIcon,
       getStatIcon
     };
   },

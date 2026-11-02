@@ -1,6 +1,14 @@
 // @ts-check
 import { Item } from './Item.js';
+import { getMonsterProfileImage, getItemIcon, getRoomIcon } from '../services/assets.js';
 import { formatGenericFusionInput, getGenericFusionInputIcons } from '../services/formatters.js';
+
+/** @type {Record<'Resource' | 'Monster' | 'Structure', (id: string) => string>} */
+const OUTPUT_ICON_RESOLVERS = {
+  Resource: getItemIcon,
+  Monster: getMonsterProfileImage,
+  Structure: getRoomIcon
+};
 
 /**
  * Recipe Ingredient entity representing a resource required for crafting.
@@ -38,6 +46,7 @@ export class CraftingRecipe {
    * @param {string} data.outputId
    * @param {string} [data.outputName]
    * @param {'Resource' | 'Monster' | 'Structure'} [data.outputType]
+   * @param {string} [data.outputIcon]
    * @param {string} [data.outputRoute]
    * @param {number} [data.outputQuantity]
    * @param {number} [data.work]
@@ -52,6 +61,7 @@ export class CraftingRecipe {
     this.outputId = data.outputId;
     this.outputName = data.outputName || data.outputId;
     this.outputType = data.outputType || 'Resource';
+    this.outputIcon = data.outputIcon || OUTPUT_ICON_RESOLVERS[this.outputType](this.outputId);
     this.outputRoute = data.outputRoute || `/items/${this.outputId}`;
     this.outputQuantity = Number(data.outputQuantity) || 1;
     this.work = Number(data.work) || 0;
