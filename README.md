@@ -33,42 +33,45 @@ An interactive web database for **Monster Alchemy**, parsed directly from raw Un
 
 ```text
 docs/
-├── index.html               # Entry HTML with importmap and stylesheet links
+├── index.html                    # Entry HTML with importmap and stylesheet links
 ├── css/
-│   └── style.css            # Custom CSS utilities, scrollbars, and pixel-art helpers
-├── extracted/               # Raw Unreal Engine blueprint & asset dumps (JSON & PNG)
-├── meta/                    # Build metadata and canonical asset mappings
-│   ├── asset_manifest.json  # Unified asset path manifest
-│   └── build_info.json      # Dynamic Steam build snapshot metadata
+│   └── style.css                 # Custom CSS utilities, scrollbars, and pixel-art helpers
+├── extracted/                    # Raw Unreal Engine blueprint & asset dumps (JSON & PNG)
+├── meta/                         # Build metadata and canonical asset mappings
+│   ├── asset_manifest.json       # Unified asset path manifest
+│   └── build_info.json           # Dynamic Steam build snapshot metadata
 └── js/
-    ├── app.js               # Application bootstrap and root layout
-    ├── router.js            # Vue Router routes, document titles, and scroll reset
-    ├── store.js             # Reactive global database store (`db`)
-    ├── types.js             # JSDoc type definitions
-    ├── models/              # Domain models (Monster, Item, Room, Recipe, Skill)
+    ├── app.js                    # Application bootstrap and root layout
+    ├── router.js                 # Vue Router routes, document titles, and scroll reset
+    ├── store.js                  # Reactive global database store (`db`)
+    ├── types.d.ts                # Shared TypeScript type declarations
+    ├── models/                   # Domain models (Monster, Item, Room, Recipe, Skill)
     ├── services/
-    │   ├── assets.js        # Game asset & sprite URL resolvers (backed by manifest)
-    │   ├── formatters.js    # Skill description & type badge formatters
-    │   └── loader.js        # Dynamic DataTable normalization & database loader
-    └── components/          # Vue UI components
-        ├── AppNavbar.js     # Sidebar navigation (with dynamic build ID)
-        ├── HomePage.js      # Dashboard & distributions
-        ├── MonsterTable.js  # Monsterpedia data table
-        ├── MonsterDetail.js # Monster profile, stats, and sprite sheet
-        ├── ItemTable.js     # Items catalog
-        ├── ItemDetail.js    # Resource details & usages
-        ├── RoomDetail.js    # Crafting room & fusion recipes
-        ├── SortableTable.js # Generic sortable data table
-        ├── TypeBadge.js     # Element & attack type badges
-        ├── ItemChip.js      # Item pill chips
-        ├── StatBar.js       # Visual monster stat bar
-        ├── FusionCard.js    # Expandable fusion preview card
-        └── NotFoundCard.js  # 404 entity fallback card
+    │   ├── assets.js             # Game asset & sprite URL resolvers (backed by manifest)
+    │   ├── formatters.js         # Skill description & type badge formatters
+    │   ├── unreal.js             # Dynamic DataTable, Struct & Enum schema normalization
+    │   └── loader.js             # Domain entity builder & database loader
+    └── components/               # Vue UI components
+        ├── AppNavbar.js          # Sidebar navigation (with dynamic build ID)
+        ├── HomePage.js           # Dashboard & distributions
+        ├── MonsterTable.js       # Monsterpedia data table
+        ├── MonsterDetail.js      # Monster profile, stats, and sprite sheet
+        ├── ItemTable.js          # Items catalog
+        ├── ItemDetail.js         # Resource details & usages
+        ├── RoomDetail.js         # Crafting room & fusion recipes
+        ├── SortableTable.js      # Generic sortable data table
+        ├── TypeBadge.js          # Element & attack type badges
+        ├── ItemChip.js           # Item pill chips
+        ├── StatBar.js            # Visual monster stat bar
+        ├── CraftingRecipeCard.js # Shared room crafting recipe card
+        ├── FusionCard.js         # Expandable fusion preview card
+        ├── FusionOperandBadge.js # Monster or generic trait fusion operand badge
+        └── NotFoundCard.js       # 404 entity fallback card
 
 scripts/
-├── download.csx             # Steam depot downloader (SteamKit2)
-├── mappings.csx             # Unreal .usmap mapping generator (jmap_dumper)
-└── extract.csx              # Unreal PAK/UCAS extractor & manifest generator (CUE4Parse)
+├── download.csx                  # Steam depot downloader (SteamKit2)
+├── mappings.csx                  # Unreal .usmap mapping generator (jmap_dumper)
+└── extract.csx                   # Unreal PAK/UCAS extractor & manifest generator (CUE4Parse)
 ```
 
 ---
