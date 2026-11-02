@@ -22,12 +22,15 @@ using CommandLine;
 using CUE4Parse.Encryption.Aes;
 using CUE4Parse.FileProvider;
 using CUE4Parse.MappingsProvider.Usmap;
+using CUE4Parse.UE4.Assets.Exports;
+using CUE4Parse.UE4.Assets.Exports.Engine;
 using CUE4Parse.UE4.Assets.Exports.Texture;
+using CUE4Parse.UE4.Assets.Objects;
 using CUE4Parse.UE4.Objects.Core.Misc;
+using CUE4Parse.UE4.Objects.UObject;
 using CUE4Parse.UE4.Versions;
 using CUE4Parse_Conversion.Textures;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using SkiaSharp;
 
 class Options
@@ -119,7 +122,18 @@ static readonly (string Category, string Key, string Asset)[] UI_ICON_DEFINITION
 // Helpers
 // ============================================================================
 
-string StripExportIndex(string path) => Regex.Replace(path, @"\.\d+$", "");
+string StripExportIndex(string path)
+{
+    var dotIdx = path.LastIndexOf('.');
+    return dotIdx >= 0 ? path[..dotIdx] : path;
+}
+
+string StripStructPropertyGuid(string name) => Regex.Replace(name, @"_\d+_[0-9A-Fa-f]{32}$", "");
+
+string? ResolveStructPropertyName(UDataTable dataTable, string baseName) =>
+    dataTable.GetOrDefault<FPackageIndex>("RowStruct")?.Load<UStruct>()?.ChildProperties?
+        .Select(p => p.Name.Text)
+        .FirstOrDefault(n => StripStructPropertyGuid(n).Equals(baseName, StringComparison.OrdinalIgnoreCase));
 
 string EnsureDir(string filePath)
 {
@@ -130,41 +144,24 @@ string EnsureDir(string filePath)
 
 Task SaveFileAsync(string path, byte[] bytes) => File.WriteAllBytesAsync(EnsureDir(path), bytes);
 Task SaveFileAsync(string path, string text) => File.WriteAllTextAsync(EnsureDir(path), text);
-Task SaveJsonAsync(string path, object data) => SaveFileAsync(path, JsonConvert.SerializeObject(data, Formatting.Indented) + "\n");
+Task SaveJsonAsync(string path, object data) => SaveFileAsync(path, JsonConvert.SerializeObject(data, Formatting.Indented).Replace("\r\n", "\n") + "\n");
 
 string VfsToGamePackagePath(string vfsPath)
 {
     var norm = vfsPath.Replace('\\', '/').TrimStart('/');
-    if (norm.EndsWith(".uasset", StringComparison.OrdinalIgnoreCase))
-    {
-        norm = norm[..^7];
-    }
+    if (norm.EndsWith(".uasset", StringComparison.OrdinalIgnoreCase)) norm = norm[..^7];
     var contentIdx = norm.IndexOf("Content/", StringComparison.OrdinalIgnoreCase);
-    if (contentIdx >= 0)
-    {
-        return "/Game/" + norm.Substring(contentIdx + 8).TrimStart('/');
-    }
-    if (norm.StartsWith("/Game/", StringComparison.OrdinalIgnoreCase))
-    {
-        return norm;
-    }
-    if (norm.StartsWith("Game/", StringComparison.OrdinalIgnoreCase))
-    {
-        return "/" + norm;
-    }
+    if (contentIdx >= 0) norm = norm[(contentIdx + 8)..];
+    else if (norm.StartsWith("Game/", StringComparison.OrdinalIgnoreCase)) norm = norm[5..];
     return "/Game/" + norm.TrimStart('/');
 }
 
 string? ResolveAssetPackage(Dictionary<string, List<string>> vfsByName, string assetName, string category)
 {
     if (!vfsByName.TryGetValue(assetName, out var matches) || matches.Count == 0)
-    {
         return null;
-    }
     if (matches.Count > 1)
-    {
         Console.WriteLine($"  [Warning] Multiple assets found for {category} '{assetName}': using '{matches[0]}'");
-    }
     return VfsToGamePackagePath(matches[0]);
 }
 
@@ -177,24 +174,19 @@ bool RegisterIcon(
     ISet<string> textureBatch)
 {
     var path = ResolveAssetPackage(vfsByName, assetName, category);
-    if (path != null)
-    {
-        targetMap[key] = $"{path}.png";
-        textureBatch.Add(path);
-        return true;
-    }
-    return false;
+    if (path == null) return false;
+    targetMap[key] = $"{path}.png";
+    textureBatch.Add(path);
+    return true;
 }
 
-string? ResolveReferencedTexture(DefaultFileProvider provider, string? packagePath, Func<JToken, string?> selector, string label)
+string? ResolveReferencedTexture(DefaultFileProvider provider, string? packagePath, Func<IEnumerable<UObject>, string?> selector, string label)
 {
     if (string.IsNullOrEmpty(packagePath)) return null;
     try
     {
         var exports = provider.LoadPackage(packagePath.TrimStart('/')).GetExports();
-        if (exports == null) return null;
-        var token = JToken.Parse(JsonConvert.SerializeObject(exports));
-        var objPath = selector(token);
+        var objPath = exports != null ? selector(exports) : null;
         return string.IsNullOrEmpty(objPath) ? null : VfsToGamePackagePath(StripExportIndex(objPath));
     }
     catch (Exception ex)
@@ -204,36 +196,28 @@ string? ResolveReferencedTexture(DefaultFileProvider provider, string? packagePa
     }
 }
 
-void DiscoverDependencies(JToken? token, Queue<string> pendingQueue, HashSet<string> seenPackages)
+void DiscoverDependencies(UObject? export, Queue<string> pendingQueue, HashSet<string> seenPackages)
 {
-    if (token == null) return;
-
-    if (token is JArray arr)
+    var refs = export switch
     {
-        foreach (var item in arr) DiscoverDependencies(item, pendingQueue, seenPackages);
-        return;
-    }
+        UDataTable dt => new[] { dt.GetOrDefault<FPackageIndex>("RowStruct") },
+        UStruct st when st.ChildProperties != null => st.ChildProperties.Select(f => f switch
+        {
+            FByteProperty b => b.Enum,
+            FEnumProperty e => e.Enum,
+            FStructProperty s => s.Struct,
+            _ => null
+        }),
+        _ => Enumerable.Empty<FPackageIndex?>()
+    };
 
-    if (token is JObject obj)
+    foreach (var resolved in refs.Select(r => r?.ResolvedObject).Where(r => r != null))
     {
-        var objName = obj["ObjectName"]?.ToString();
-        var objPath = obj["ObjectPath"]?.ToString();
-
-        if (!string.IsNullOrEmpty(objName) && !string.IsNullOrEmpty(objPath))
+        if (resolved!.Class?.Name.Text is "UserDefinedStruct" or "UserDefinedEnum")
         {
-            if (objName.Contains("UserDefinedStruct") || objName.Contains("UserDefinedEnum"))
-            {
-                var cleanPath = StripExportIndex(objPath);
-                if (cleanPath.StartsWith("/Game/") && seenPackages.Add(cleanPath))
-                {
-                    pendingQueue.Enqueue(cleanPath);
-                }
-            }
-        }
-
-        foreach (var prop in obj.Properties())
-        {
-            DiscoverDependencies(prop.Value, pendingQueue, seenPackages);
+            var cleanPath = StripExportIndex(resolved.GetPathName());
+            if (cleanPath.StartsWith("/Game/", StringComparison.OrdinalIgnoreCase) && seenPackages.Add(cleanPath))
+                pendingQueue.Enqueue(cleanPath);
         }
     }
 }
@@ -253,23 +237,19 @@ async Task<int> ExtractTexturesAsync(
             var exports = provider.LoadPackage(gamePath.TrimStart('/')).GetExports();
             if (exports == null) continue;
 
-            foreach (var export in exports)
+            foreach (var export in exports.OfType<UTexture2D>())
             {
-                if (export is UTexture2D texture)
-                {
-                    var ctexture = TextureDecoder.Decode(texture);
-                    if (ctexture == null) continue;
-                    using var bitmap = TextureEncoder.ToSkBitmap(ctexture);
-                    if (bitmap != null)
-                    {
-                        using var image = SKImage.FromBitmap(bitmap);
-                        using var data = image.Encode(SKEncodedImageFormat.Png, 100);
-                        var destFile = Path.Combine(outputDir, gamePath.TrimStart('/') + ".png");
-                        await SaveFileAsync(destFile, data.ToArray());
-                        count++;
-                        Console.WriteLine($"  [{label}] {gamePath}.png");
-                    }
-                }
+                var ctexture = TextureDecoder.Decode(export);
+                if (ctexture == null) continue;
+                using var bitmap = TextureEncoder.ToSkBitmap(ctexture);
+                if (bitmap == null) continue;
+
+                using var image = SKImage.FromBitmap(bitmap);
+                using var data = image.Encode(SKEncodedImageFormat.Png, 100);
+                var destFile = Path.Combine(outputDir, gamePath.TrimStart('/') + ".png");
+                await SaveFileAsync(destFile, data.ToArray());
+                count++;
+                Console.WriteLine($"  [{label}] {gamePath}.png");
             }
         }
         catch (Exception ex)
@@ -278,6 +258,41 @@ async Task<int> ExtractTexturesAsync(
         }
     }
     return count;
+}
+
+async Task<SortedDictionary<string, string>> ResolveAndExtractReferencedTexturesAsync(
+    DefaultFileProvider provider,
+    Dictionary<string, List<string>> vfsByName,
+    IEnumerable<string> ids,
+    Func<string, string> assetNamePattern,
+    Func<IEnumerable<UObject>, string?> textureSelector,
+    string outputDir,
+    string label)
+{
+    var iconMap = new SortedDictionary<string, string>(StringComparer.Ordinal);
+    var texturesToExtract = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+    int missingCount = 0;
+
+    foreach (var id in ids)
+    {
+        var pkgPath = ResolveAssetPackage(vfsByName, assetNamePattern(id), label);
+        if (pkgPath == null)
+        {
+            missingCount++;
+            continue;
+        }
+
+        var texGamePath = ResolveReferencedTexture(provider, pkgPath, textureSelector, label);
+        if (texGamePath != null)
+        {
+            texturesToExtract.Add(texGamePath);
+            iconMap[id] = $"{texGamePath}.png";
+        }
+    }
+
+    Console.WriteLine($"  Discovered {texturesToExtract.Count} unique {label} texture(s) ({missingCount} missing). Extracting textures...");
+    await ExtractTexturesAsync(provider, texturesToExtract, outputDir, label);
+    return iconMap;
 }
 
 // ============================================================================
@@ -304,9 +319,7 @@ async Task<int> ExtractTexturesAsync(
     provider.Initialize();
 
     if (!string.IsNullOrWhiteSpace(opts.AesKey))
-    {
         provider.SubmitKey(new FGuid(), new FAesKey(opts.AesKey));
-    }
 
     provider.Mount();
     provider.PostMount();
@@ -314,18 +327,12 @@ async Task<int> ExtractTexturesAsync(
     Console.WriteLine();
 
     var vfsByName = new Dictionary<string, List<string>>(StringComparer.OrdinalIgnoreCase);
-    foreach (var fileKey in provider.Files.Keys)
+    foreach (var fileKey in provider.Files.Keys.Where(k => k.EndsWith(".uasset", StringComparison.OrdinalIgnoreCase)))
     {
-        if (fileKey.EndsWith(".uasset", StringComparison.OrdinalIgnoreCase))
-        {
-            var fileName = Path.GetFileNameWithoutExtension(fileKey);
-            if (!vfsByName.TryGetValue(fileName, out var list))
-            {
-                list = new List<string>();
-                vfsByName[fileName] = list;
-            }
-            list.Add(fileKey);
-        }
+        var fileName = Path.GetFileNameWithoutExtension(fileKey);
+        if (!vfsByName.TryGetValue(fileName, out var list))
+            vfsByName[fileName] = list = new List<string>();
+        list.Add(fileKey);
     }
 
     return (provider, vfsByName);
@@ -349,13 +356,9 @@ ExtractDataTablesAndTypesAsync(DefaultFileProvider provider, Dictionary<string, 
     {
         var gamePath = ResolveAssetPackage(vfsByName, tableName, "DataTable");
         if (gamePath != null && seenPackages.Add(gamePath))
-        {
             pendingQueue.Enqueue(gamePath);
-        }
         else if (gamePath == null)
-        {
             Console.WriteLine($"  [Warning] DataTable '{tableName}' not found in VFS archives.");
-        }
     }
 
     var monsterIds = new List<string>();
@@ -379,57 +382,50 @@ ExtractDataTablesAndTypesAsync(DefaultFileProvider provider, Dictionary<string, 
             var exports = provider.LoadPackage(lookupPath).GetExports();
             if (exports == null) continue;
 
-            var jsonStr = JsonConvert.SerializeObject(exports, Formatting.Indented);
-            var jToken = JToken.Parse(jsonStr);
+            var primaryExport = exports.FirstOrDefault();
 
-            if (packagePath.EndsWith("DT_MonsterTable", StringComparison.OrdinalIgnoreCase))
+            if (primaryExport is UDataTable dataTable)
             {
-                var rows = (jToken as JArray)?.FirstOrDefault()?["Rows"] as JObject;
-                if (rows != null)
+                if (packagePath.EndsWith("DT_MonsterTable", StringComparison.OrdinalIgnoreCase))
                 {
-                    monsterIds.AddRange(rows.Properties().Select(p => p.Name));
+                    monsterIds.AddRange(dataTable.RowMap.Keys.Select(k => k.Text));
                     Console.WriteLine($"  [Data] Loaded {monsterIds.Count} monster ID(s) from DT_MonsterTable into memory.");
                 }
-            }
-            else if (packagePath.EndsWith("DT_ResourceData", StringComparison.OrdinalIgnoreCase))
-            {
-                var rows = (jToken as JArray)?.FirstOrDefault()?["Rows"] as JObject;
-                if (rows != null)
+                else if (packagePath.EndsWith("DT_ResourceData", StringComparison.OrdinalIgnoreCase))
                 {
-                    resourceIds.AddRange(rows.Properties().Select(p => p.Name).Where(n => !n.Equals("None", StringComparison.OrdinalIgnoreCase)));
+                    resourceIds.AddRange(dataTable.RowMap.Keys
+                        .Select(k => k.Text)
+                        .Where(n => !n.Equals("None", StringComparison.OrdinalIgnoreCase)));
                     Console.WriteLine($"  [Data] Loaded {resourceIds.Count} resource ID(s) from DT_ResourceData into memory.");
                 }
-            }
-            else if (packagePath.EndsWith("DT_Rooms", StringComparison.OrdinalIgnoreCase))
-            {
-                var rows = (jToken as JArray)?.FirstOrDefault()?["Rows"] as JObject;
-                if (rows != null)
+                else if (packagePath.EndsWith("DT_Rooms", StringComparison.OrdinalIgnoreCase))
                 {
-                    foreach (var prop in rows.Properties())
+                    var iconPropName = ResolveStructPropertyName(dataTable, "Icon");
+                    if (iconPropName != null)
                     {
-                        var rowObj = prop.Value as JObject;
-                        var iconProp = rowObj?.Properties().FirstOrDefault(p => p.Name.StartsWith("Icon", StringComparison.OrdinalIgnoreCase));
-                        var iconObjPath = (iconProp?.Value as JObject)?["ObjectPath"]?.ToString();
-                        if (!string.IsNullOrEmpty(iconObjPath))
+                        foreach (var (rowKey, rowStruct) in dataTable.RowMap)
                         {
-                            var texGamePath = VfsToGamePackagePath(StripExportIndex(iconObjPath));
-                            roomTexturesToExtract.Add(texGamePath);
-                            roomIconMap[prop.Name] = $"{texGamePath}.png";
+                            var iconObjPath = rowStruct.GetOrDefault<FPackageIndex>(iconPropName)?.ResolvedObject?.GetPathName();
+                            if (!string.IsNullOrEmpty(iconObjPath))
+                            {
+                                var texGamePath = VfsToGamePackagePath(StripExportIndex(iconObjPath));
+                                roomTexturesToExtract.Add(texGamePath);
+                                roomIconMap[rowKey.Text] = $"{texGamePath}.png";
+                            }
                         }
                     }
                     Console.WriteLine($"  [Data] Loaded {roomIconMap.Count} room icon reference(s) from DT_Rooms into memory.");
                 }
             }
 
-            DiscoverDependencies(jToken, pendingQueue, seenPackages);
+            DiscoverDependencies(primaryExport, pendingQueue, seenPackages);
 
-            var destFile = Path.Combine(outputDir, lookupPath + ".json");
-            await SaveFileAsync(destFile, jsonStr);
+            var jsonStr = JsonConvert.SerializeObject(exports, Formatting.Indented);
+            await SaveFileAsync(Path.Combine(outputDir, lookupPath + ".json"), jsonStr);
 
             var assetName = Path.GetFileName(packagePath);
             var canonicalPackagePath = "/" + lookupPath + ".json";
 
-            var primaryExport = exports.FirstOrDefault();
             var (map, tag) = primaryExport?.ExportType switch
             {
                 "DataTable" => (dataTablesMap, "DataTable"),
@@ -453,13 +449,7 @@ ExtractDataTablesAndTypesAsync(DefaultFileProvider provider, Dictionary<string, 
     return (dataTablesMap, structsMap, enumsMap, monsterIds, resourceIds, roomIconMap, roomTexturesToExtract);
 }
 
-async Task<(
-    SortedDictionary<string, string> Rooms,
-    SortedDictionary<string, string> Types,
-    SortedDictionary<string, string> Stats,
-    SortedDictionary<string, string> General,
-    int ExtractedCount)>
-ExtractUiIconsAsync(
+async Task<Dictionary<string, SortedDictionary<string, string>>> ExtractUiIconsAsync(
     DefaultFileProvider provider,
     Dictionary<string, List<string>> vfsByName,
     SortedDictionary<string, string> roomIcons,
@@ -469,17 +459,14 @@ ExtractUiIconsAsync(
     Console.WriteLine();
     Console.WriteLine("==> [Phase 2/5] Extracting UI & Icon Textures...");
 
-    var typeIconMap = new SortedDictionary<string, string>(StringComparer.OrdinalIgnoreCase);
-    var statIconMap = new SortedDictionary<string, string>(StringComparer.OrdinalIgnoreCase);
-    var genericUiIconMap = new SortedDictionary<string, string>(StringComparer.OrdinalIgnoreCase);
-    var uiTexturesToExtract = new HashSet<string>(roomTextures, StringComparer.OrdinalIgnoreCase);
-
     var categoryMaps = new Dictionary<string, SortedDictionary<string, string>>
     {
-        ["types"] = typeIconMap,
-        ["stats"] = statIconMap,
-        ["general"] = genericUiIconMap
+        ["rooms"] = roomIcons,
+        ["types"] = new(StringComparer.OrdinalIgnoreCase),
+        ["stats"] = new(StringComparer.OrdinalIgnoreCase),
+        ["general"] = new(StringComparer.OrdinalIgnoreCase)
     };
+    var uiTexturesToExtract = new HashSet<string>(roomTextures, StringComparer.OrdinalIgnoreCase);
 
     foreach (var (category, key, assetName) in UI_ICON_DEFINITIONS)
     {
@@ -487,18 +474,13 @@ ExtractUiIconsAsync(
             Console.WriteLine($"  [Warning] {category} icon asset '{assetName}' not found in VFS archives.");
     }
 
-    Console.WriteLine($"  Discovered {uiTexturesToExtract.Count} UI/icon texture(s) (Rooms: {roomIcons.Count}, Types: {typeIconMap.Count}, Stats: {statIconMap.Count}, General: {genericUiIconMap.Count}). Extracting textures...");
-    int uiTexturesExtracted = await ExtractTexturesAsync(provider, uiTexturesToExtract, outputDir, "UI/Icon");
+    Console.WriteLine($"  Discovered {uiTexturesToExtract.Count} UI/icon texture(s). Extracting textures...");
+    await ExtractTexturesAsync(provider, uiTexturesToExtract, outputDir, "UI/Icon");
 
-    return (roomIcons, typeIconMap, statIconMap, genericUiIconMap, uiTexturesExtracted);
+    return categoryMaps;
 }
 
-async Task<(
-    SortedDictionary<string, string> Icons,
-    SortedDictionary<string, string> Sprites,
-    int ProfilesExtracted,
-    int SpritesExtracted)>
-ExtractMonsterVisualsAsync(
+async Task<(SortedDictionary<string, string> Icons, SortedDictionary<string, string> Sprites)> ExtractMonsterVisualsAsync(
     DefaultFileProvider provider,
     Dictionary<string, List<string>> vfsByName,
     List<string> monsterIds,
@@ -509,58 +491,32 @@ ExtractMonsterVisualsAsync(
 
     var monsterIconMap = new SortedDictionary<string, string>(StringComparer.Ordinal);
     var profileCandidates = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
-    int missingProfileCount = 0;
-
-    foreach (var monsterId in monsterIds)
-    {
-        if (!RegisterIcon(vfsByName, monsterId, $"P_{monsterId}", "Profile", monsterIconMap, profileCandidates))
-        {
-            missingProfileCount++;
-        }
-    }
+    int missingProfileCount = monsterIds.Count(id => !RegisterIcon(vfsByName, id, $"P_{id}", "Profile", monsterIconMap, profileCandidates));
 
     Console.WriteLine($"  Matched {profileCandidates.Count} profile icon(s) for {monsterIds.Count} monsters ({missingProfileCount} not found)...");
-    int profilesExtracted = await ExtractTexturesAsync(provider, profileCandidates, outputDir, "Profile");
+    await ExtractTexturesAsync(provider, profileCandidates, outputDir, "Profile");
 
     Console.WriteLine();
     Console.WriteLine("==> [Phase 4/5] Extracting Monster Sprite Sheets (FB_<MonsterID>_Idle)...");
 
-    var monsterSpriteMap = new SortedDictionary<string, string>(StringComparer.Ordinal);
-    var spritePackagesToExtract = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
-    int missingFlipbookCount = 0;
-
-    foreach (var monsterId in monsterIds)
-    {
-        var fbGamePath = ResolveAssetPackage(vfsByName, $"FB_{monsterId}_Idle", "Flipbook");
-        if (fbGamePath == null)
+    var monsterSpriteMap = await ResolveAndExtractReferencedTexturesAsync(
+        provider,
+        vfsByName,
+        monsterIds,
+        id => $"FB_{id}_Idle",
+        exports =>
         {
-            missingFlipbookCount++;
-            continue;
-        }
+            var keyFrames = exports.FirstOrDefault()?.GetOrDefault<FStructFallback[]>("KeyFrames");
+            var spritePath = keyFrames?.FirstOrDefault()?.GetOrDefault<FPackageIndex>("Sprite")?.ResolvedObject?.GetPathName();
+            return spritePath != null ? Regex.Replace(StripExportIndex(spritePath), @"_Sprite_\d+$", "", RegexOptions.IgnoreCase) : null;
+        },
+        outputDir,
+        "SpriteSheet");
 
-        var texGamePath = ResolveReferencedTexture(provider, fbGamePath, t =>
-        {
-            var sprite = t[0]?["Properties"]?["KeyFrames"]?[0]?["Sprite"]?["ObjectPath"]?.ToString();
-            return sprite != null ? Regex.Replace(StripExportIndex(sprite), @"_Sprite_\d+$", "", RegexOptions.IgnoreCase) : null;
-        }, "Flipbook");
-
-        if (texGamePath != null)
-        {
-            spritePackagesToExtract.Add(texGamePath);
-            monsterSpriteMap[monsterId] = $"{texGamePath}.png";
-        }
-    }
-
-    Console.WriteLine($"  Discovered {spritePackagesToExtract.Count} sprite sheet(s) ({missingFlipbookCount} flipbooks not found). Extracting textures...");
-    int spritesExtracted = await ExtractTexturesAsync(provider, spritePackagesToExtract, outputDir, "SpriteSheet");
-
-    return (monsterIconMap, monsterSpriteMap, profilesExtracted, spritesExtracted);
+    return (monsterIconMap, monsterSpriteMap);
 }
 
-async Task<(
-    SortedDictionary<string, string> Icons,
-    int TexturesExtracted)>
-ExtractResourceVisualsAsync(
+async Task<SortedDictionary<string, string>> ExtractResourceVisualsAsync(
     DefaultFileProvider provider,
     Dictionary<string, List<string>> vfsByName,
     List<string> resourceIds,
@@ -569,40 +525,20 @@ ExtractResourceVisualsAsync(
     Console.WriteLine();
     Console.WriteLine("==> [Phase 5/5] Extracting Resource Icons & Building Resource Icon Map (T_<ItemID>_Sprite)...");
 
-    var resourceIconMap = new SortedDictionary<string, string>(StringComparer.Ordinal);
-    var resourceTexturesToExtract = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
-    int resourceSpritesExtracted = 0;
-    int missingResourceCount = 0;
-
-    foreach (var itemId in resourceIds)
-    {
-        var spriteGamePath = ResolveAssetPackage(vfsByName, $"T_{itemId}_Sprite", "Resource sprite");
-        if (spriteGamePath == null)
+    return await ResolveAndExtractReferencedTexturesAsync(
+        provider,
+        vfsByName,
+        resourceIds,
+        id => $"T_{id}_Sprite",
+        exports =>
         {
-            missingResourceCount++;
-            continue;
-        }
-
-        resourceSpritesExtracted++;
-        var texGamePath = ResolveReferencedTexture(provider, spriteGamePath, t =>
-        {
-            var paperSprite = (t as JArray)?.FirstOrDefault(e =>
-                string.Equals(e["Type"]?.ToString(), "PaperSprite", StringComparison.OrdinalIgnoreCase));
-            return paperSprite?["Properties"]?["BakedSourceTexture"]?["ObjectPath"]?.ToString()
-                ?? paperSprite?["Properties"]?["SourceTexture"]?["ObjectPath"]?.ToString();
-        }, "Resource sprite");
-
-        if (texGamePath != null)
-        {
-            resourceTexturesToExtract.Add(texGamePath);
-            resourceIconMap[itemId] = $"{texGamePath}.png";
-        }
-    }
-
-    Console.WriteLine($"  Resolved {resourceSpritesExtracted} PaperSprite asset(s) ({missingResourceCount} missing). Extracting {resourceTexturesToExtract.Count} unique resource texture(s)...");
-    int resourceTexturesExtractedCount = await ExtractTexturesAsync(provider, resourceTexturesToExtract, outputDir, "Resource");
-
-    return (resourceIconMap, resourceTexturesExtractedCount);
+            var paperSprite = exports.FirstOrDefault(e => string.Equals(e.ExportType, "PaperSprite", StringComparison.OrdinalIgnoreCase));
+            var texIndex = paperSprite?.GetOrDefault<FPackageIndex>("BakedSourceTexture")
+                ?? paperSprite?.GetOrDefault<FPackageIndex>("SourceTexture");
+            return texIndex?.ResolvedObject?.GetPathName();
+        },
+        outputDir,
+        "Resource");
 }
 
 // ============================================================================
@@ -630,9 +566,9 @@ async Task<int> RunExtractAsync(Options opts)
         var (provider, vfsByName) = InitializeProvider(opts);
 
         var data = await ExtractDataTablesAndTypesAsync(provider, vfsByName, outputDir);
-        var ui = await ExtractUiIconsAsync(provider, vfsByName, data.RoomIcons, data.RoomTextures, outputDir);
+        var uiIcons = await ExtractUiIconsAsync(provider, vfsByName, data.RoomIcons, data.RoomTextures, outputDir);
         var monsters = await ExtractMonsterVisualsAsync(provider, vfsByName, data.MonsterIds, outputDir);
-        var resources = await ExtractResourceVisualsAsync(provider, vfsByName, data.ResourceIds, outputDir);
+        var resourceIcons = await ExtractResourceVisualsAsync(provider, vfsByName, data.ResourceIds, outputDir);
 
         var manifest = new
         {
@@ -641,14 +577,8 @@ async Task<int> RunExtractAsync(Options opts)
             enums = data.Enums,
             monsterIcons = monsters.Icons,
             monsterSprites = monsters.Sprites,
-            resourceIcons = resources.Icons,
-            uiIcons = new
-            {
-                rooms = ui.Rooms,
-                types = ui.Types,
-                stats = ui.Stats,
-                general = ui.General
-            }
+            resourceIcons,
+            uiIcons
         };
 
         var manifestFile = Path.Combine(metaDir, "asset_manifest.json");
@@ -662,13 +592,9 @@ async Task<int> RunExtractAsync(Options opts)
         Console.WriteLine($"   DataTables:    {data.DataTables.Count}");
         Console.WriteLine($"   Structs:       {data.Structs.Count}");
         Console.WriteLine($"   Enums:         {data.Enums.Count}");
-        Console.WriteLine($"   UI Textures:   {ui.ExtractedCount} (PNG)");
-        Console.WriteLine($"   Profiles:      {monsters.ProfilesExtracted} (PNG)");
         Console.WriteLine($"   Icon Map:      {monsters.Icons.Count} mappings");
-        Console.WriteLine($"   Sprite Sheets: {monsters.SpritesExtracted} (PNG)");
         Console.WriteLine($"   Sprite Map:    {monsters.Sprites.Count} mappings");
-        Console.WriteLine($"   Res Textures:  {resources.TexturesExtracted} (PNG)");
-        Console.WriteLine($"   Res Icon Map:  {resources.Icons.Count} mappings");
+        Console.WriteLine($"   Res Icon Map:  {resourceIcons.Count} mappings");
         Console.WriteLine($"   Manifest:      {manifestFile}");
         Console.WriteLine("========================================");
         Console.ResetColor();
