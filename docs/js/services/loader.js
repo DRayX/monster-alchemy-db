@@ -25,7 +25,6 @@ import { ActiveSkill, PassiveSkill } from '../models/Skill.js';
  * @typedef {import('../types.js').UnrealDataTableAsset} UnrealDataTableAsset
  * @typedef {import('../types.js').UnrealStructAsset} UnrealStructAsset
  * @typedef {import('../types.js').UnrealEnumAsset} UnrealEnumAsset
- * @typedef {import('../types.js').UnrealFlipbookAsset} UnrealFlipbookAsset
  * @typedef {import('../types.js').NormalizedUnrealRow} NormalizedUnrealRow
  */
 
@@ -46,7 +45,7 @@ export function extractUnrealText(value, fallback = 'Unknown') {
 
 /**
  * Parses an Unreal `UserDefinedEnum` JSON export into a lookup map from
- * `"EnumName::NewEnumeratorX"` and `"NewEnumeratorX"` to its display string.
+ * `"EnumName::NewEnumeratorX"` to its display string.
  *
  * @param {UnrealEnumAsset[]} rawEnumJson
  * @returns {Record<string, string>}
@@ -55,18 +54,15 @@ export function parseUnrealEnum(rawEnumJson) {
   /** @type {Record<string, string>} */
   const map = {};
   const entry = rawEnumJson[0];
-  if (!entry) return map;
+  if (!entry || !entry.Name) return map;
 
-  const enumName = entry.Name || '';
+  const enumName = entry.Name;
   const displayList = entry.Properties?.DisplayNameMap;
   if (Array.isArray(displayList)) {
     for (const item of displayList) {
       if (item && typeof item.Key === 'string') {
         const label = extractUnrealText(item.Value, item.Key);
-        map[item.Key] = label;
-        if (enumName) {
-          map[`${enumName}::${item.Key}`] = label;
-        }
+        map[`${enumName}::${item.Key}`] = label;
       }
     }
   }

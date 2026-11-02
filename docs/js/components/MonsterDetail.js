@@ -1,8 +1,8 @@
 // @ts-check
-import { ref, computed, defineComponent } from 'vue';
+import { computed, defineComponent } from 'vue';
 import { useRoute } from 'vue-router';
 import { db } from '../store.js';
-import { getMonsterProfileImage, getItemIcon, getStatIcon } from '../services/assets.js';
+import { getStatIcon } from '../services/assets.js';
 import { TypeBadge } from './TypeBadge.js';
 import { ItemChip, getRarityBadgeClass } from './ItemChip.js';
 import { StatBar } from './StatBar.js';
@@ -353,8 +353,6 @@ export const MonsterDetail = defineComponent({
       fusionResults,
       usedInFusions,
       rarityBadgeClass: getRarityBadgeClass,
-      getMonsterProfileImage,
-      getItemIcon,
       getStatIcon,
       STAT_BARS
     };

@@ -21,7 +21,7 @@ const FEATURED_MONSTER_IDS = [
 const TEMPLATE = /* html */ `
   <div>
     <header class="pa4 bg-dark-gray ba b--white-10 br3 mb4">
-      <h1 class="f2 fw8 mt0 mb2 near-white">Monster Alchemy Databse</h1>
+      <h1 class="f2 fw8 mt0 mb2 near-white">Monster Alchemy Database</h1>
       <p class="f5 silver lh-copy mw7 mt0 mb4">
         Interactive reference database of creatures, alchemical resources, crafting rooms, and chimeric fusions parsed directly from Monster Alchemy's Unreal Engine data tables.
       </p>

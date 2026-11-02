@@ -75,21 +75,6 @@
  */
 
 /**
- * Raw Unreal Engine PaperFlipbook keyframe entry (`FB_*.json`).
- * @typedef {Object} UnrealFlipbookKeyFrame
- * @property {UnrealObjectRef} [Sprite]
- * @property {number} [FrameRun]
- */
-
-/**
- * Raw Unreal Engine PaperFlipbook JSON asset (`FB_*.json`).
- * @typedef {Object} UnrealFlipbookAsset
- * @property {string} Type
- * @property {string} Name
- * @property {{ FramesPerSecond?: number, KeyFrames?: UnrealFlipbookKeyFrame[] }} [Properties]
- */
-
-/**
  * Normalized Unreal Engine DataTable row dictionary keyed by clean base property names.
  * @typedef {Record<string, any>} NormalizedUnrealRow
  */

@@ -36,8 +36,6 @@ export const TYPE_COLOR_CLASSES = {
   Charge: 'bg-gold near-black b--gold'
 };
 
-export const STATUS_COLOR_CLASSES = TYPE_COLOR_CLASSES;
-
 /**
  * Formats skill descriptions that contain Unreal rich text tags like `<img id="Poison"/>`
  * into clean HTML with colored badges and extracted icons.
@@ -50,7 +48,7 @@ export function formatSkillDescription(desc) {
   return desc.replace(/<img\s+id="([^"]+)"\s*\/>\s*(\b\1\b)?/gi, (match, tag, trailingWord) => {
     const word = trailingWord || tag;
     const iconUrl = getTypeIcon(tag);
-    const colorClass = STATUS_COLOR_CLASSES[tag] || '';
+    const colorClass = TYPE_COLOR_CLASSES[tag] || '';
 
     const iconContent = iconUrl
       ? `<img src="${iconUrl}" alt="${word}" class="dib v-mid mr1 pixelated icon-14" />`

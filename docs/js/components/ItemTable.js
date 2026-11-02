@@ -70,17 +70,17 @@ const TEMPLATE = /* html */ `
           </div>
         </td>
         <td class="pa3 tr b near-white">
-          <span v-if="item.dropCount > 0" class="dib ph2 pv1 br-pill f7 bg-near-black ba b--white-10 light-blue">
+          <span v-if="item.isDropped" class="dib ph2 pv1 br-pill f7 bg-near-black ba b--white-10 light-blue">
             {{ item.dropCount }}
           </span>
         </td>
         <td class="pa3 tr b near-white">
-          <span v-if="item.craftedCount > 0" class="dib ph2 pv1 br-pill f7 bg-near-black ba b--white-10 light-purple">
+          <span v-if="item.isCrafted" class="dib ph2 pv1 br-pill f7 bg-near-black ba b--white-10 light-purple">
             {{ item.craftedCount }}
           </span>
         </td>
         <td class="pa3 tr b near-white">
-          <span v-if="item.usedInCount > 0" class="dib ph2 pv1 br-pill f7 bg-near-black ba b--white-10 gold">
+          <span v-if="item.isIngredient" class="dib ph2 pv1 br-pill f7 bg-near-black ba b--white-10 gold">
             {{ item.usedInCount }}
           </span>
         </td>
@@ -102,9 +102,9 @@ export const ItemTable = defineComponent({
       return db.items.filter((item) => {
         const matchesSource =
           selectedSource.value === 'ALL' ||
-          (selectedSource.value === 'DROPPED' && item.dropCount > 0) ||
-          (selectedSource.value === 'CRAFTED' && item.craftedCount > 0) ||
-          (selectedSource.value === 'INGREDIENT' && item.usedInCount > 0);
+          (selectedSource.value === 'DROPPED' && item.isDropped) ||
+          (selectedSource.value === 'CRAFTED' && item.isCrafted) ||
+          (selectedSource.value === 'INGREDIENT' && item.isIngredient);
         const matchesQuery =
           !query ||
           item.name.toLowerCase().includes(query) ||
