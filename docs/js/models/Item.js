@@ -35,15 +35,4 @@ export class Item {
   get isIngredient() {
     return this.usedInCount > 0;
   }
-
-  toJSON() {
-    return {
-      id: this.id,
-      name: this.name,
-      description: this.description,
-      dropCount: this.dropCount,
-      craftedCount: this.craftedCount,
-      usedInCount: this.usedInCount
-    };
-  }
 }

@@ -31,22 +31,6 @@ export class ActiveSkill {
     this.power = data.power ?? 0;
     this.cost = data.cost ?? 0;
   }
-
-  toJSON() {
-    return {
-      id: this.id,
-      name: this.name,
-      description: this.description,
-      formattedDescription: this.formattedDescription,
-      targetting: this.targetting,
-      targettingLabel: this.targettingLabel,
-      element: this.element,
-      damageType: this.damageType,
-      scaling: this.scaling,
-      power: this.power,
-      cost: this.cost
-    };
-  }
 }
 
 /**
@@ -65,14 +49,5 @@ export class PassiveSkill {
     this.name = data.name || data.id;
     this.description = data.description || '';
     this.formattedDescription = data.formattedDescription || '';
-  }
-
-  toJSON() {
-    return {
-      id: this.id,
-      name: this.name,
-      description: this.description,
-      formattedDescription: this.formattedDescription
-    };
   }
 }

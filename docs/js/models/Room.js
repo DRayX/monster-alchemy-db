@@ -25,15 +25,4 @@ export class Room {
   get totalRecipeCount() {
     return this.recipes.length + this.fusionRecipes.length;
   }
-
-  toJSON() {
-    return {
-      id: this.id,
-      name: this.name,
-      prefix: this.prefix,
-      icon: this.icon,
-      recipes: this.recipes,
-      fusionRecipes: this.fusionRecipes
-    };
-  }
 }

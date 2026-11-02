@@ -20,14 +20,6 @@ export class MonsterLoot {
   get rarityLabel() {
     return `${this.rarity} Loot`;
   }
-
-  toJSON() {
-    return {
-      itemId: this.item.id,
-      itemName: this.item.name,
-      rarity: this.rarity
-    };
-  }
 }
 
 /**
@@ -45,13 +37,6 @@ export class LearnedSkill {
 
   get levelLabel() {
     return this.level === 1 ? 'Base' : `Lv. ${this.level}`;
-  }
-
-  toJSON() {
-    return {
-      level: this.level,
-      skillId: this.skill?.id || ''
-    };
   }
 }
 
@@ -104,26 +89,5 @@ export class Monster {
 
     this.loots = data.loots || [];
     this.lootSummary = this.loots.map((l) => l.item.name).join(', ');
-  }
-
-  toJSON() {
-    return {
-      id: this.id,
-      name: this.name,
-      element: this.element,
-      attackType: this.attackType,
-      tier: this.tier,
-      health: this.health,
-      soul: this.soul,
-      strength: this.strength,
-      defense: this.defense,
-      mind: this.mind,
-      agility: this.agility,
-      passive: this.passive,
-      passiveSkill: this.passiveSkill,
-      skills: this.skills,
-      description: this.description,
-      loots: this.loots
-    };
   }
 }

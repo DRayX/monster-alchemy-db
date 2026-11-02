@@ -23,14 +23,6 @@ export class RecipeIngredient {
     this.item = item;
     this.summary = `${this.quantity}x ${this.item.name}`;
   }
-
-  toJSON() {
-    return {
-      itemId: this.item.id,
-      itemName: this.item.name,
-      quantity: this.quantity
-    };
-  }
 }
 
 /**
@@ -71,23 +63,6 @@ export class CraftingRecipe {
       data.ingredientsSummary ||
       this.ingredients.map((i) => i.summary).join(', ');
   }
-
-  toJSON() {
-    return {
-      id: this.id,
-      roomId: this.roomId,
-      roomName: this.roomName,
-      roomIcon: this.roomIcon,
-      outputId: this.outputId,
-      outputName: this.outputName,
-      outputType: this.outputType,
-      outputRoute: this.outputRoute,
-      outputQuantity: this.outputQuantity,
-      work: this.work,
-      ingredients: this.ingredients,
-      ingredientsSummary: this.ingredientsSummary
-    };
-  }
 }
 
 /**
@@ -112,14 +87,6 @@ export class GenericFusionInputs {
     this.inputBName = formatGenericFusionInput(data.inputB);
     /** @type {string[]} */
     this.inputBIcons = data.inputBIcons || getGenericFusionInputIcons(data.inputB);
-  }
-
-  toJSON() {
-    return {
-      key: this.key,
-      inputA: this.inputA,
-      inputB: this.inputB
-    };
   }
 }
 
@@ -159,23 +126,5 @@ export class FusionRecipe {
     this.resultId = data.resultId;
     this.resultName = data.resultName;
     this.baseCombinations = data.baseCombinations || [];
-  }
-
-  toJSON() {
-    return {
-      id: this.id,
-      fusionType: this.fusionType,
-      inputA: this.inputA,
-      inputAName: this.inputAName,
-      inputAIsMonster: this.inputAIsMonster,
-      inputAIcons: this.inputAIcons,
-      inputB: this.inputB,
-      inputBName: this.inputBName,
-      inputBIsMonster: this.inputBIsMonster,
-      inputBIcons: this.inputBIcons,
-      resultId: this.resultId,
-      resultName: this.resultName,
-      baseCombinations: this.baseCombinations
-    };
   }
 }
