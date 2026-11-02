@@ -364,19 +364,14 @@ export async function loadGameDatabase() {
       row.Type === 'Monster' || row.Type === 'Structure' ? row.Type : 'Resource';
 
     let outputName = resultId;
-    let outputRoute = `/items/${resultId}`;
-
     if (outputType === 'Monster') {
       outputName = monsterNameMap.get(resultId) || resultId;
-      outputRoute = `/monsters/${resultId}`;
     } else if (outputType === 'Structure') {
       outputName = roomById.get(resultId)?.name || resultId;
-      outputRoute = `/rooms/${resultId}`;
     } else {
       const itm = ensureItem(resultId);
       itm.craftedCount += 1;
       outputName = itm.name;
-      outputRoute = `/items/${resultId}`;
     }
 
     /** @type {Array<{ resId: string | undefined, amt: number | undefined }>} */
@@ -406,7 +401,6 @@ export async function loadGameDatabase() {
       outputId: resultId,
       outputName,
       outputType,
-      outputRoute,
       outputQuantity: row.AmountResult ?? 1,
       work: row.Work ?? 0,
       ingredients

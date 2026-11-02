@@ -10,6 +10,13 @@ const OUTPUT_ICON_RESOLVERS = {
   Structure: getRoomIcon
 };
 
+/** @type {Record<'Resource' | 'Monster' | 'Structure', string>} */
+const OUTPUT_ROUTE_PREFIXES = {
+  Resource: '/items/',
+  Monster: '/monsters/',
+  Structure: '/rooms/'
+};
+
 /**
  * Recipe Ingredient entity representing a resource required for crafting.
  */
@@ -38,12 +45,9 @@ export class CraftingRecipe {
    * @param {string} data.outputId
    * @param {string} [data.outputName]
    * @param {'Resource' | 'Monster' | 'Structure'} [data.outputType]
-   * @param {string} [data.outputIcon]
-   * @param {string} [data.outputRoute]
    * @param {number} [data.outputQuantity]
    * @param {number} [data.work]
    * @param {RecipeIngredient[]} [data.ingredients]
-   * @param {string} [data.ingredientsSummary]
    */
   constructor(data) {
     this.id = data.id;
@@ -53,15 +57,13 @@ export class CraftingRecipe {
     this.outputId = data.outputId;
     this.outputName = data.outputName || data.outputId;
     this.outputType = data.outputType || 'Resource';
-    this.outputIcon = data.outputIcon || OUTPUT_ICON_RESOLVERS[this.outputType](this.outputId);
-    this.outputRoute = data.outputRoute || `/items/${this.outputId}`;
+    this.outputIcon = OUTPUT_ICON_RESOLVERS[this.outputType](this.outputId);
+    this.outputRoute = `${OUTPUT_ROUTE_PREFIXES[this.outputType]}${this.outputId}`;
     this.outputQuantity = Number(data.outputQuantity) || 1;
     this.work = Number(data.work) || 0;
 
     this.ingredients = data.ingredients || [];
-    this.ingredientsSummary =
-      data.ingredientsSummary ||
-      this.ingredients.map((i) => i.summary).join(', ');
+    this.ingredientsSummary = this.ingredients.map((i) => i.summary).join(', ');
   }
 }
 
