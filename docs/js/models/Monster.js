@@ -80,7 +80,6 @@ export class Monster {
     this.statTotal = this.health + this.soul + this.strength + this.defense + this.mind + this.agility;
 
     this.passiveSkill = data.passiveSkill ?? null;
-    this.passive = this.passiveSkill?.name || 'None';
     this.skills = data.skills || [];
     this.description = data.description || '';
 

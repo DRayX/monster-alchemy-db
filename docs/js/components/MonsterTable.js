@@ -180,7 +180,7 @@ export const MonsterTable = defineComponent({
           !query ||
           m.name.toLowerCase().includes(query) ||
           m.id.toLowerCase().includes(query) ||
-          m.passive.toLowerCase().includes(query) ||
+          m.passiveSkill?.name.toLowerCase().includes(query) ||
           m.description.toLowerCase().includes(query) ||
           m.lootSummary.toLowerCase().includes(query) ||
           m.element.toLowerCase().includes(query);

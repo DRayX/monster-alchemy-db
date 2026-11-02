@@ -4,11 +4,7 @@ import {
   STRUCT_URLS,
   ENUM_URLS
 } from './assets.js';
-import {
-  formatSkillDescription,
-  formatTargetting,
-  formatFusionInput
-} from './formatters.js';
+import { formatFusionInput } from './formatters.js';
 import { Monster, MonsterLoot, LearnedSkill } from '../models/Monster.js';
 import { Item } from '../models/Item.js';
 import { Room } from '../models/Room.js';
@@ -198,16 +194,13 @@ export async function loadGameDatabase() {
   const activeSkillsById = new Map();
   for (const [id, row] of Object.entries(normalized.DT_ActiveSkills || {})) {
     if (!id || id === 'None') continue;
-    const rawDesc = row.Description || '';
     activeSkillsById.set(
       id,
       new ActiveSkill({
         id,
-        name: row.Name || id.replace(/([a-z])([A-Z])/g, '$1 $2'),
-        description: rawDesc,
-        formattedDescription: formatSkillDescription(rawDesc),
+        name: row.Name,
+        description: row.Description || '',
         targetting: row.Targetting || '',
-        targettingLabel: formatTargetting(row.Targetting || ''),
         element: row.MonsterType || 'Neutral',
         damageType: row.DamageType || 'Strike',
         scaling: row.Scaling || 'None',
@@ -222,14 +215,12 @@ export async function loadGameDatabase() {
   const passiveSkillsById = new Map();
   for (const [id, row] of Object.entries(normalized.DT_PassiveSkills || {})) {
     if (!id || id === 'None') continue;
-    const rawDesc = row.Description || '';
     passiveSkillsById.set(
       id,
       new PassiveSkill({
         id,
-        name: row.Name || id.replace(/([a-z])([A-Z])/g, '$1 $2'),
-        description: rawDesc,
-        formattedDescription: formatSkillDescription(rawDesc)
+        name: row.Name,
+        description: row.Description || ''
       })
     );
   }
@@ -290,17 +281,7 @@ export async function loadGameDatabase() {
       }
     }
 
-    const rawPassive = row.Passive || 'None';
-    /** @type {PassiveSkill | null} */
-    let passiveSkill = null;
-    if (rawPassive && rawPassive !== 'None') {
-      const found = passiveSkillsById.get(rawPassive);
-      if (found) {
-        passiveSkill = found;
-      } else {
-        passiveSkill = new PassiveSkill({ id: rawPassive });
-      }
-    }
+    const passiveSkill = passiveSkillsById.get(row.Passive) ?? null;
 
     const skillRow = normalized.DT_MonsterSkillLevels?.[id];
     /** @type {LearnedSkill[]} */
@@ -319,9 +300,10 @@ export async function loadGameDatabase() {
         if (slot.skillKey && slot.skillKey !== 'None') {
           const skill =
             activeSkillsById.get(slot.skillKey) ||
-            passiveSkillsById.get(slot.skillKey) ||
-            new ActiveSkill({ id: slot.skillKey });
-          skills.push(new LearnedSkill(slot.level, skill));
+            passiveSkillsById.get(slot.skillKey);
+          if (skill) {
+            skills.push(new LearnedSkill(slot.level, skill));
+          }
         }
       }
     }

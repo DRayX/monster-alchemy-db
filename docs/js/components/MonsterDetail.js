@@ -61,7 +61,7 @@ const TEMPLATE = /* html */ `
                 <TypeBadge :type="monster.attackType" :pill="false" :icon-size="16" custom-class="b near-white" />
                 <span class="silver">&bull;</span>
                 <span>Passive:</span>
-                <TypeBadge :type="monster.passiveSkill?.name || monster.passive" :pill="false" :icon-size="16" custom-class="b light-purple" />
+                <TypeBadge :type="monster.passiveSkill?.name || 'None'" :pill="false" :icon-size="16" custom-class="b light-purple" />
               </div>
             </div>
           </div>
@@ -123,7 +123,7 @@ const TEMPLATE = /* html */ `
                   Passive
                 </span>
                 <TypeBadge
-                  :type="monster.passiveSkill?.name || monster.passive"
+                  :type="monster.passiveSkill?.name || 'None'"
                   :pill="false"
                   :icon-size="16"
                   custom-class="b f6 near-white"
@@ -136,7 +136,7 @@ const TEMPLATE = /* html */ `
               v-html="monster.passiveSkill.formattedDescription"
             ></div>
             <div
-              v-else-if="monster.passive && monster.passive !== 'None'"
+              v-else-if="monster.passiveSkill"
               class="f6 silver-60 i"
             >
               No detailed description available.
