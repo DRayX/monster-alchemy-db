@@ -79,10 +79,6 @@
  * @typedef {Record<string, any>} NormalizedUnrealRow
  */
 
-/**
- * Navigation page identifiers.
- * @typedef {'home' | 'monsters' | 'items'} PageId
- */
-
 export {};
+
 
