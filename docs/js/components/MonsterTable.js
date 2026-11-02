@@ -4,7 +4,7 @@ import { db } from '../store.js';
 import { SortableTable } from './SortableTable.js';
 import { TypeBadge } from './TypeBadge.js';
 import { ItemChip } from './ItemChip.js';
-import { getStatIcon, MONSTER_MANAGER_ICON } from '../services/assets.js';
+import { getIcon, MONSTER_MANAGER_ICON } from '../services/assets.js';
 
 /** @type {import('./SortableTable.js').TableColumn<import('../models/Monster.js').Monster>[]} */
 const COLUMNS = [
@@ -13,11 +13,11 @@ const COLUMNS = [
   { key: 'attackType', label: 'Attack' },
   { key: 'tier', label: 'Tier', align: 'center' },
   { key: 'health', label: 'HP', align: 'right' },
-  { key: 'strength', align: 'right', icon: getStatIcon('Strength'), title: 'Strength' },
-  { key: 'defense', align: 'right', icon: getStatIcon('Defense'), title: 'Defense' },
-  { key: 'mind', align: 'right', icon: getStatIcon('Mind'), title: 'Mind' },
-  { key: 'soul', align: 'right', icon: getStatIcon('Soul'), title: 'Soul' },
-  { key: 'agility', align: 'right', icon: getStatIcon('Agility'), title: 'Agility' },
+  { key: 'strength', align: 'right', icon: getIcon('Strength'), title: 'Strength' },
+  { key: 'defense', align: 'right', icon: getIcon('Defense'), title: 'Defense' },
+  { key: 'mind', align: 'right', icon: getIcon('Mind'), title: 'Mind' },
+  { key: 'soul', align: 'right', icon: getIcon('Soul'), title: 'Soul' },
+  { key: 'agility', align: 'right', icon: getIcon('Agility'), title: 'Agility' },
   { key: 'statTotal', label: 'Total', align: 'right' },
   { key: 'lootSummary', label: 'Loot Drops' }
 ];

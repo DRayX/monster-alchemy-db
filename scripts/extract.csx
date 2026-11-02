@@ -67,55 +67,18 @@ static readonly string[] WEBAPP_DATA_TABLE_NAMES = new[]
     "DT_Rooms",
     "DT_MonsterSkillLevels",
     "DT_ActiveSkills",
-    "DT_PassiveSkills"
+    "DT_PassiveSkills",
+    "RDT_DialogueDecoratorImage"
 };
 
 /// <summary>
-/// Canonical UI icons mapped by category and game-defined identifier to Unreal asset name.
-/// Categories correspond to sections in asset_manifest.json (types, stats, general).
+/// Canonical general UI icons mapped by key to Unreal asset name.
 /// </summary>
-static readonly (string Category, string Key, string Asset)[] UI_ICON_DEFINITIONS = new[]
+static readonly (string Key, string Asset)[] GENERAL_ICON_DEFINITIONS = new[]
 {
-    // Elements (EMonsterType)
-    ("types", "Neutral", "T_EType_Normal"),
-    ("types", "Fire", "T_EType_Fire"),
-    ("types", "Water", "T_EType_Water"),
-    ("types", "Nature", "T_EType_Nature"),
-    ("types", "Energy", "T_EType_Energy"),
-    ("types", "Moon", "T_EType_Moon"),
-
-    // Attack Types (EAttackType)
-    ("types", "Slash", "T_AType_Slash_Icon"),
-    ("types", "Strike", "T_AType_Strike"),
-    ("types", "Projectile", "T_AType_Projectile"),
-    ("types", "Magic", "T_AType_Magic"),
-
-    // Status Effects (Skill rich-text tags)
-    ("types", "Poison", "T_EType_Poison_Icon"),
-    ("types", "Burn", "T_EType_Burn_Icon"),
-    ("types", "Shock", "T_EType_Shock_Icon"),
-    ("types", "Freeze", "T_EType_Freeze_Icon"),
-    ("types", "Slow", "T_EType_Slow_Icon"),
-    ("types", "Weak", "T_EType_Weak_Icon"),
-    ("types", "Rage", "T_EType_Rage_Icon"),
-    ("types", "Barrier", "T_EType_Barrier_Icon"),
-    ("types", "Regeneration", "T_EType_Regeneration_Icon"),
-    ("types", "Thorns", "T_EType_Thorns_Icon"),
-    ("types", "Ambush", "T_EType_Blind_Icon"),
-    ("types", "Charge", "T_EType_Charged_Icon"),
-
-    // Stats (S_Monster_Table)
-    ("stats", "Strength", "T_Stat_Attack"),
-    ("stats", "Defense", "T_Stat_Defense"),
-    ("stats", "Mind", "T_Stat_Mind"),
-    ("stats", "Soul", "T_Stat_Soul"),
-    ("stats", "Agility", "T_Stat_Speed"),
-    ("stats", "Work", "T_Stat_Work"),
-
-    // General UI
-    ("general", "Player", "T_Icon_Player"),
-    ("general", "Tower", "T_Icon_Tower"),
-    ("general", "Shop", "T_Icon_Shop")
+    ("Player", "T_Icon_Player"),
+    ("Tower", "T_Icon_Tower"),
+    ("Shop", "T_Icon_Shop"),
 };
 
 // ============================================================================
@@ -350,7 +313,9 @@ async Task<(
     List<string> MonsterIds,
     List<string> ResourceIds,
     SortedDictionary<string, string> RoomIcons,
-    HashSet<string> RoomTextures)>
+    HashSet<string> RoomTextures,
+    SortedDictionary<string, string> DecoratorIcons,
+    HashSet<string> DecoratorTextures)>
 ExtractDataTablesAndTypesAsync(DefaultFileProvider provider, Dictionary<string, List<string>> vfsByName, string outputDir)
 {
     var seenPackages = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
@@ -370,6 +335,8 @@ ExtractDataTablesAndTypesAsync(DefaultFileProvider provider, Dictionary<string, 
     var resourceIds = new List<string>();
     var roomIconMap = new SortedDictionary<string, string>(StringComparer.OrdinalIgnoreCase);
     var roomTexturesToExtract = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+    var decoratorIconMap = new SortedDictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+    var decoratorTexturesToExtract = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
 
     var dataTablesMap = new SortedDictionary<string, string>(StringComparer.Ordinal);
     var structsMap = new SortedDictionary<string, string>(StringComparer.Ordinal);
@@ -421,6 +388,22 @@ ExtractDataTablesAndTypesAsync(DefaultFileProvider provider, Dictionary<string, 
                     }
                     Console.WriteLine($"  [Data] Loaded {roomIconMap.Count} room icon reference(s) from DT_Rooms into memory.");
                 }
+                else if (packagePath.EndsWith("RDT_DialogueDecoratorImage", StringComparison.OrdinalIgnoreCase))
+                {
+                    foreach (var (rowKey, rowStruct) in dataTable.RowMap)
+                    {
+                        var brush = rowStruct.GetOrDefault<FStructFallback>("Brush");
+                        var resObj = brush?.GetOrDefault<FPackageIndex>("ResourceObject");
+                        var objPath = resObj?.ResolvedObject?.GetPathName();
+                        if (!string.IsNullOrEmpty(objPath))
+                        {
+                            var texGamePath = VfsToGamePackagePath(StripExportIndex(objPath));
+                            decoratorTexturesToExtract.Add(texGamePath);
+                            decoratorIconMap[rowKey.Text] = $"{texGamePath}.png";
+                        }
+                    }
+                    Console.WriteLine($"  [Data] Loaded {decoratorIconMap.Count} decorator icon reference(s) from RDT_DialogueDecoratorImage into memory.");
+                }
             }
 
             DiscoverDependencies(primaryExport, pendingQueue, seenPackages);
@@ -451,38 +434,35 @@ ExtractDataTablesAndTypesAsync(DefaultFileProvider provider, Dictionary<string, 
         }
     }
 
-    return (dataTablesMap, structsMap, enumsMap, monsterIds, resourceIds, roomIconMap, roomTexturesToExtract);
+    return (dataTablesMap, structsMap, enumsMap, monsterIds, resourceIds, roomIconMap, roomTexturesToExtract, decoratorIconMap, decoratorTexturesToExtract);
 }
 
-async Task<Dictionary<string, SortedDictionary<string, string>>> ExtractUiIconsAsync(
+async Task<(SortedDictionary<string, string> UiIcons, SortedDictionary<string, string> RoomIcons, SortedDictionary<string, string> GeneralIcons)> ExtractUiIconsAsync(
     DefaultFileProvider provider,
     Dictionary<string, List<string>> vfsByName,
     SortedDictionary<string, string> roomIcons,
     HashSet<string> roomTextures,
+    SortedDictionary<string, string> decoratorIcons,
+    HashSet<string> decoratorTextures,
     string outputDir)
 {
     Console.WriteLine();
     Console.WriteLine("==> [Phase 2/5] Extracting UI & Icon Textures...");
 
-    var categoryMaps = new Dictionary<string, SortedDictionary<string, string>>
-    {
-        ["rooms"] = roomIcons,
-        ["types"] = new(StringComparer.OrdinalIgnoreCase),
-        ["stats"] = new(StringComparer.OrdinalIgnoreCase),
-        ["general"] = new(StringComparer.OrdinalIgnoreCase)
-    };
+    var generalIcons = new SortedDictionary<string, string>(StringComparer.OrdinalIgnoreCase);
     var uiTexturesToExtract = new HashSet<string>(roomTextures, StringComparer.OrdinalIgnoreCase);
+    uiTexturesToExtract.UnionWith(decoratorTextures);
 
-    foreach (var (category, key, assetName) in UI_ICON_DEFINITIONS)
+    foreach (var (key, assetName) in GENERAL_ICON_DEFINITIONS)
     {
-        if (!RegisterIcon(vfsByName, key, assetName, $"{category} icon", categoryMaps[category], uiTexturesToExtract))
-            Console.WriteLine($"  [Warning] {category} icon asset '{assetName}' not found in VFS archives.");
+        if (!RegisterIcon(vfsByName, key, assetName, "general icon", generalIcons, uiTexturesToExtract))
+            Console.WriteLine($"  [Warning] General icon asset '{assetName}' not found in VFS archives.");
     }
 
     Console.WriteLine($"  Discovered {uiTexturesToExtract.Count} UI/icon texture(s). Extracting textures...");
     await ExtractTexturesAsync(provider, uiTexturesToExtract, outputDir, "UI/Icon");
 
-    return categoryMaps;
+    return (decoratorIcons, roomIcons, generalIcons);
 }
 
 async Task<(SortedDictionary<string, string> Icons, SortedDictionary<string, string> Sprites)> ExtractMonsterVisualsAsync(
@@ -571,7 +551,7 @@ async Task<int> RunExtractAsync(Options opts)
         var (provider, vfsByName) = InitializeProvider(opts);
 
         var data = await ExtractDataTablesAndTypesAsync(provider, vfsByName, outputDir);
-        var uiIcons = await ExtractUiIconsAsync(provider, vfsByName, data.RoomIcons, data.RoomTextures, outputDir);
+        var icons = await ExtractUiIconsAsync(provider, vfsByName, data.RoomIcons, data.RoomTextures, data.DecoratorIcons, data.DecoratorTextures, outputDir);
         var monsters = await ExtractMonsterVisualsAsync(provider, vfsByName, data.MonsterIds, outputDir);
         var resourceIcons = await ExtractResourceVisualsAsync(provider, vfsByName, data.ResourceIds, outputDir);
 
@@ -583,7 +563,9 @@ async Task<int> RunExtractAsync(Options opts)
             monsterIcons = monsters.Icons,
             monsterSprites = monsters.Sprites,
             resourceIcons,
-            uiIcons
+            roomIcons = icons.RoomIcons,
+            uiIcons = icons.UiIcons,
+            generalIcons = icons.GeneralIcons
         };
 
         var manifestFile = Path.Combine(metaDir, "asset_manifest.json");

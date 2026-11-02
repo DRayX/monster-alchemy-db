@@ -40,33 +40,6 @@ export const ENUM_URLS = Object.fromEntries(
   Object.entries(manifest.enums).map(([k, p]) => [k, resolvePath(p)])
 );
 
-/** @type {Record<string, string>} */
-const monsterIcons = manifest.monsterIcons;
-
-/** @type {Record<string, string>} */
-const monsterSprites = manifest.monsterSprites;
-
-/** @type {Record<string, string>} */
-const resourceIcons = manifest.resourceIcons;
-
-/** @type {Record<string, string>} */
-const typeIcons = manifest.uiIcons?.types || {};
-
-/** @type {Record<string, string>} */
-const statIcons = manifest.uiIcons?.stats || {};
-
-/** @type {Record<string, string>} */
-const roomIcons = manifest.uiIcons?.rooms || {};
-
-/**
- * Returns the icon URL for a stat (Strength, Defense, Mind, Soul, Agility, Work).
- * @param {string} statName
- * @returns {string}
- */
-export function getStatIcon(statName) {
-  return resolvePath(statIcons[statName]);
-}
-
 /**
  * 1x1 transparent SVG data URI used as a clean fallback for missing assets.
  */
@@ -74,18 +47,29 @@ export const TRANSPARENT_PIXEL =
   'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg"/%3E';
 
 /**
+ * Returns the icon URL for a game decorator/UI icon (element, attack type, stat, status effect).
+ * @param {string} name
+ * @returns {string}
+ */
+export function getIcon(name) {
+  // The EAttackType enum defines 'Projectile', but RDT_DialogueDecoratorImage registers its decorator icon as 'Shoot'.
+  const key = name === 'Projectile' ? 'Shoot' : name;
+  return resolvePath(manifest.uiIcons[/** @type {keyof typeof manifest.uiIcons} */ (key)]);
+}
+
+/**
  * Returns the relative URL for a crafting room icon.
  * @param {string} roomId
  * @returns {string}
  */
 export function getRoomIcon(roomId) {
-  return resolvePath(roomIcons[roomId]) || TRANSPARENT_PIXEL;
+  return resolvePath(manifest.roomIcons[/** @type {keyof typeof manifest.roomIcons} */ (roomId)]) || TRANSPARENT_PIXEL;
 }
 
 export const MONSTER_MANAGER_ICON = getRoomIcon('MonsterManager');
-export const PLAYER_ICON = resolvePath(manifest.uiIcons?.general?.Player) || TRANSPARENT_PIXEL;
-export const TOWER_ICON = resolvePath(manifest.uiIcons?.general?.Tower) || TRANSPARENT_PIXEL;
-export const SHOP_ICON = resolvePath(manifest.uiIcons?.general?.Shop) || TRANSPARENT_PIXEL;
+export const PLAYER_ICON = resolvePath(manifest.generalIcons.Player) || TRANSPARENT_PIXEL;
+export const TOWER_ICON = resolvePath(manifest.generalIcons.Tower) || TRANSPARENT_PIXEL;
+export const SHOP_ICON = resolvePath(manifest.generalIcons.Shop) || TRANSPARENT_PIXEL;
 
 /**
  * Returns the relative URL for a monster's profile image (`P_<id>.png`).
@@ -93,7 +77,7 @@ export const SHOP_ICON = resolvePath(manifest.uiIcons?.general?.Shop) || TRANSPA
  * @returns {string}
  */
 export function getMonsterProfileImage(monsterId) {
-  return resolvePath(monsterIcons[monsterId]) || TRANSPARENT_PIXEL;
+  return resolvePath(manifest.monsterIcons[/** @type {keyof typeof manifest.monsterIcons} */ (monsterId)]) || TRANSPARENT_PIXEL;
 }
 
 /**
@@ -102,7 +86,7 @@ export function getMonsterProfileImage(monsterId) {
  * @returns {string}
  */
 export function getMonsterSpriteImage(monsterId) {
-  return resolvePath(monsterSprites[monsterId]) || TRANSPARENT_PIXEL;
+  return resolvePath(manifest.monsterSprites[/** @type {keyof typeof manifest.monsterSprites} */ (monsterId)]) || TRANSPARENT_PIXEL;
 }
 
 /**
@@ -111,14 +95,5 @@ export function getMonsterSpriteImage(monsterId) {
  * @returns {string}
  */
 export function getItemIcon(itemId) {
-  return resolvePath(resourceIcons[itemId]) || TRANSPARENT_PIXEL;
-}
-
-/**
- * Returns the icon URL for an element, attack type, or status effect.
- * @param {string} name
- * @returns {string}
- */
-export function getTypeIcon(name) {
-  return resolvePath(typeIcons[name]);
+  return resolvePath(manifest.resourceIcons[/** @type {keyof typeof manifest.resourceIcons} */ (itemId)]) || TRANSPARENT_PIXEL;
 }

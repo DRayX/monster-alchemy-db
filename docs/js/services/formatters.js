@@ -1,5 +1,5 @@
 // @ts-check
-import { getTypeIcon } from './assets.js';
+import { getIcon } from './assets.js';
 
 /**
  * Text and rich-text parsing and formatting utilities.
@@ -18,7 +18,7 @@ export const TYPE_COLOR_CLASSES = {
   // Attack / Damage Types
   Slash: 'bg-dark-blue light-blue b--light-blue',
   Strike: 'bg-dark-red light-red b--light-red',
-  Projectile: 'bg-dark-green light-green b--light-green',
+  Shoot: 'bg-dark-green light-green b--light-green',
   Magic: 'bg-purple washed-red b--light-purple',
 
   // Status Effects
@@ -33,8 +33,21 @@ export const TYPE_COLOR_CLASSES = {
   Regeneration: 'bg-dark-green washed-green b--light-green',
   Thorns: 'bg-dark-green light-green b--light-green',
   Ambush: 'bg-mid-gray washed-red b--silver',
-  Charge: 'bg-gold near-black b--gold'
+  Charge: 'bg-gold near-black b--gold',
+  Accelerated: 'bg-dark-blue light-blue b--light-blue',
+  Petrify: 'bg-mid-gray washed-red b--silver'
 };
+
+/**
+ * Returns the CSS color classes for an element, attack type, or status effect badge.
+ * @param {string} type
+ * @returns {string}
+ */
+export function getTypeColorClass(type) {
+  // The EAttackType enum defines 'Projectile', but RDT_DialogueDecoratorImage registers its decorator icon/style as 'Shoot'.
+  const key = type === 'Projectile' ? 'Shoot' : type;
+  return TYPE_COLOR_CLASSES[key] || '';
+}
 
 /**
  * Formats skill descriptions that contain Unreal rich text tags like `<img id="Poison"/>`
@@ -45,16 +58,17 @@ export const TYPE_COLOR_CLASSES = {
  */
 export function formatSkillDescription(desc) {
   if (!desc) return '';
-  return desc.replace(/<img\s+id="([^"]+)"\s*\/>\s*(\b\1\b)?/gi, (match, tag, trailingWord) => {
+  return desc.replace(/<img\s+id="([^"]+)"\s*\/>(\s*)(\b\1\b)?/gi, (match, tag, whitespace, trailingWord) => {
     const word = trailingWord || tag;
-    const iconUrl = getTypeIcon(tag);
-    const colorClass = TYPE_COLOR_CLASSES[tag] || '';
+    const iconUrl = getIcon(tag);
+    const colorClass = getTypeColorClass(tag);
 
     const iconContent = iconUrl
       ? `<img src="${iconUrl}" alt="${word}" class="dib v-mid mr1 pixelated icon-14" />`
       : '';
 
-    return `<span class="dib ph1 pv0 br1 f7 b ba ${colorClass}" style="vertical-align: middle;">${iconContent}${word}</span>`;
+    const badge = `<span class="dib ph1 pv0 br1 f7 b ba ${colorClass}" style="vertical-align: middle;">${iconContent}${word}</span>`;
+    return trailingWord ? badge : `${badge}${whitespace}`;
   });
 }
 
@@ -101,12 +115,12 @@ export function parseGenericFusionToken(token) {
 
   if (element !== 'Any') {
     parts.push(element);
-    const icon = getTypeIcon(element);
+    const icon = getIcon(element);
     if (icon) icons.push(icon);
   }
   if (attack !== 'Any') {
     parts.push(attack);
-    const icon = getTypeIcon(attack);
+    const icon = getIcon(attack);
     if (icon) icons.push(icon);
   }
 

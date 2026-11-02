@@ -10,7 +10,8 @@
     "DT_MonsterTable": "/Game/Blueprints/Monsters/DT_MonsterTable.json",
     "DT_PassiveSkills": "/Game/Blueprints/Skills/Tables/DT_PassiveSkills.json",
     "DT_ResourceData": "/Game/Sprites/Tables/DT_ResourceData.json",
-    "DT_Rooms": "/Game/Blueprints/Tables/DT_Rooms.json"
+    "DT_Rooms": "/Game/Blueprints/Tables/DT_Rooms.json",
+    "RDT_DialogueDecoratorImage": "/Game/Blueprints/Widgets/Resources/TextStyle/RDT_DialogueDecoratorImage.json"
   },
   "structs": {
     "S_ActiveSkillTable": "/Game/Blueprints/Skills/S_ActiveSkillTable.json",
@@ -432,55 +433,53 @@
     "Zana": "/Game/Art/Resources/T_Zana.png",
     "ZephyrDust": "/Game/Art/Resources/T_ZephyrDust.png"
   },
+  "roomIcons": {
+    "Atelier": "/Game/Art/UI/T_Icon_Atelier.png",
+    "Cauldron": "/Game/Art/UI/T_Icon_Cauldron.png",
+    "Crusher": "/Game/Art/UI/T_Icon_Crusher.png",
+    "Fermentator": "/Game/Art/UI/T_IconFermentator.png",
+    "Furnace": "/Game/Art/UI/T_Icon_Furnace.png",
+    "FusionRoom": "/Game/Art/UI/T_Icon_Fusion.png",
+    "MonsterManager": "/Game/Art/UI/T_Icon_Manager.png",
+    "NecromancyCircle": "/Game/Art/UI/T_Icon_Necromancy.png",
+    "Room": "/Game/Art/UI/T_Icon_RoomManager.png",
+    "SummoningCircle": "/Game/Art/UI/T_Icon_Summoning.png"
+  },
   "uiIcons": {
-    "rooms": {
-      "Atelier": "/Game/Art/UI/T_Icon_Atelier.png",
-      "Cauldron": "/Game/Art/UI/T_Icon_Cauldron.png",
-      "Crusher": "/Game/Art/UI/T_Icon_Crusher.png",
-      "Fermentator": "/Game/Art/UI/T_IconFermentator.png",
-      "Furnace": "/Game/Art/UI/T_Icon_Furnace.png",
-      "FusionRoom": "/Game/Art/UI/T_Icon_Fusion.png",
-      "MonsterManager": "/Game/Art/UI/T_Icon_Manager.png",
-      "NecromancyCircle": "/Game/Art/UI/T_Icon_Necromancy.png",
-      "Room": "/Game/Art/UI/T_Icon_RoomManager.png",
-      "SummoningCircle": "/Game/Art/UI/T_Icon_Summoning.png"
-    },
-    "types": {
-      "Ambush": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Effects/T_EType_Blind_Icon.png",
-      "Barrier": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Effects/T_EType_Barrier_Icon.png",
-      "Burn": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Effects/T_EType_Burn_Icon.png",
-      "Charge": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Effects/T_EType_Charged_Icon.png",
-      "Energy": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Attack/T_EType_Energy.png",
-      "Fire": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Attack/T_EType_Fire.png",
-      "Freeze": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Effects/T_EType_Freeze_Icon.png",
-      "Magic": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Attack/T_AType_Magic.png",
-      "Moon": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Attack/T_EType_Moon.png",
-      "Nature": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Attack/T_EType_Nature.png",
-      "Neutral": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Attack/T_EType_Normal.png",
-      "Poison": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Effects/T_EType_Poison_Icon.png",
-      "Projectile": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Attack/T_AType_Projectile.png",
-      "Rage": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Effects/T_EType_Rage_Icon.png",
-      "Regeneration": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Effects/T_EType_Regeneration_Icon.png",
-      "Shock": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Effects/T_EType_Shock_Icon.png",
-      "Slash": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Attack/T_AType_Slash_Icon.png",
-      "Slow": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Effects/T_EType_Slow_Icon.png",
-      "Strike": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Attack/T_AType_Strike.png",
-      "Thorns": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Effects/T_EType_Thorns_Icon.png",
-      "Water": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Attack/T_EType_Water.png",
-      "Weak": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Effects/T_EType_Weak_Icon.png"
-    },
-    "stats": {
-      "Agility": "/Game/Art/UI/Input_Icons/T_Stat_Speed.png",
-      "Defense": "/Game/Art/UI/Input_Icons/T_Stat_Defense.png",
-      "Mind": "/Game/Art/UI/Input_Icons/T_Stat_Mind.png",
-      "Soul": "/Game/Art/UI/Input_Icons/T_Stat_Soul.png",
-      "Strength": "/Game/Art/UI/Input_Icons/T_Stat_Attack.png",
-      "Work": "/Game/Art/UI/Input_Icons/T_Stat_Work.png"
-    },
-    "general": {
-      "Player": "/Game/Art/UI/T_Icon_Player.png",
-      "Shop": "/Game/Art/UI/T_Icon_Shop.png",
-      "Tower": "/Game/Art/UI/T_Icon_Tower.png"
-    }
+    "Accelerated": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Effects/T_EType_Accelerated_Icon.png",
+    "Agility": "/Game/Art/UI/Input_Icons/T_Stat_Speed.png",
+    "Ambush": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Effects/T_EType_Blind_Icon.png",
+    "Barrier": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Effects/T_EType_Barrier_Icon.png",
+    "Burn": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Effects/T_EType_Burn_Icon.png",
+    "Charge": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Effects/T_EType_Charged_Icon.png",
+    "Defense": "/Game/Art/UI/Input_Icons/T_Stat_Defense.png",
+    "Energy": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Attack/T_EType_Energy.png",
+    "Fire": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Attack/T_EType_Fire.png",
+    "Freeze": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Effects/T_EType_Freeze_Icon.png",
+    "Magic": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Attack/T_AType_Magic.png",
+    "Mind": "/Game/Art/UI/Input_Icons/T_Stat_Mind.png",
+    "Moon": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Attack/T_EType_Moon.png",
+    "Nature": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Attack/T_EType_Nature.png",
+    "Neutral": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Attack/T_EType_Normal.png",
+    "Petrify": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Effects/T_EType_Petrified_Icon.png",
+    "Poison": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Effects/T_EType_Poison_Icon.png",
+    "Rage": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Effects/T_EType_Rage_Icon.png",
+    "Regeneration": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Effects/T_EType_Regeneration_Icon.png",
+    "Shock": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Effects/T_EType_Shock_Icon.png",
+    "Shoot": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Attack/T_AType_Projectile.png",
+    "Slash": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Attack/T_AType_Slash_Icon.png",
+    "Slow": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Effects/T_EType_Slow_Icon.png",
+    "Soul": "/Game/Art/UI/Input_Icons/T_Stat_Soul.png",
+    "Strength": "/Game/Art/UI/Input_Icons/T_Stat_Attack.png",
+    "Strike": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Attack/T_AType_Strike.png",
+    "Thorns": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Effects/T_EType_Thorns_Icon.png",
+    "Water": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Attack/T_EType_Water.png",
+    "Weak": "/Game/Blueprints/Widgets/Resources/Icons/TypeIcons/Effects/T_EType_Weak_Icon.png",
+    "Work": "/Game/Art/UI/Input_Icons/T_Stat_Work.png"
+  },
+  "generalIcons": {
+    "Player": "/Game/Art/UI/T_Icon_Player.png",
+    "Shop": "/Game/Art/UI/T_Icon_Shop.png",
+    "Tower": "/Game/Art/UI/T_Icon_Tower.png"
   }
 }

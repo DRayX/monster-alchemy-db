@@ -2,7 +2,7 @@
 import { computed, defineComponent } from 'vue';
 import { useRoute } from 'vue-router';
 import { db } from '../store.js';
-import { getStatIcon } from '../services/assets.js';
+import { getIcon } from '../services/assets.js';
 import { TypeBadge } from './TypeBadge.js';
 import { getRarityBadgeClass } from './ItemChip.js';
 import { StatBar } from './StatBar.js';
@@ -17,11 +17,11 @@ import { NotFoundCard } from './NotFoundCard.js';
 /** @type {StatBarConfig[]} */
 const STAT_BARS = [
   { key: 'health', label: 'Health (HP)', color: 'bg-green', icon: '' },
-  { key: 'strength', label: 'Strength', color: 'bg-light-red', icon: getStatIcon('Strength') },
-  { key: 'defense', label: 'Defense', color: 'bg-light-blue', icon: getStatIcon('Defense') },
-  { key: 'mind', label: 'Mind', color: 'bg-light-purple', icon: getStatIcon('Mind') },
-  { key: 'soul', label: 'Soul', color: 'bg-blue', icon: getStatIcon('Soul') },
-  { key: 'agility', label: 'Agility', color: 'bg-gold', icon: getStatIcon('Agility') }
+  { key: 'strength', label: 'Strength', color: 'bg-light-red', icon: getIcon('Strength') },
+  { key: 'defense', label: 'Defense', color: 'bg-light-blue', icon: getIcon('Defense') },
+  { key: 'mind', label: 'Mind', color: 'bg-light-purple', icon: getIcon('Mind') },
+  { key: 'soul', label: 'Soul', color: 'bg-blue', icon: getIcon('Soul') },
+  { key: 'agility', label: 'Agility', color: 'bg-gold', icon: getIcon('Agility') }
 ];
 
 const TEMPLATE = /* html */ `
@@ -178,8 +178,8 @@ const TEMPLATE = /* html */ `
                   class="dib ph2 pv1 br-pill f7 b ba bg-black-40 gold b--gold inline-flex items-center"
                 >
                   <img
-                    v-if="getStatIcon(skill.scaling)"
-                    :src="getStatIcon(skill.scaling)"
+                    v-if="getIcon(skill.scaling)"
+                    :src="getIcon(skill.scaling)"
                     :alt="skill.scaling"
                     class="mr1 flex-shrink-0 pixelated icon-12"
                   />
@@ -321,7 +321,7 @@ export const MonsterDetail = defineComponent({
       fusionResults,
       usedInFusions,
       rarityBadgeClass: getRarityBadgeClass,
-      getStatIcon,
+      getIcon,
       STAT_BARS
     };
   },

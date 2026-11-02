@@ -1,9 +1,9 @@
 // @ts-check
 import { defineComponent } from 'vue';
-import { getStatIcon } from '../services/assets.js';
+import { getIcon } from '../services/assets.js';
 import { ItemChip } from './ItemChip.js';
 
-const WORK_ICON = getStatIcon('Work');
+const WORK_ICON = getIcon('Work');
 
 const TEMPLATE = /* html */ `
   <div class="pa3 bg-near-black ba b--white-10 br2 mb2">

@@ -56,24 +56,25 @@ export function parseUnrealEnum(rawEnumJson) {
 }
 
 /**
- * Extracts the asset or class name from an Unreal ObjectName string.
+ * Extracts the UserDefinedStruct name from an Unreal ObjectName reference if applicable.
  * e.g. "UserDefinedStruct'S_Monster_Table'" -> "S_Monster_Table"
+ * Returns null for native C++ classes (e.g. "Class'RichImageRow'").
  * @param {UnrealObjectRef | undefined} ref
  * @returns {string | null}
  */
-function extractObjectRefName(ref) {
-  if (!ref?.ObjectName) return null;
+export function extractUserDefinedStructName(ref) {
+  if (!ref?.ObjectName?.startsWith("UserDefinedStruct'")) return null;
   return /'(\w+)'/.exec(ref.ObjectName)?.[1] || null;
 }
 
 /**
  * Extracts the UserDefinedStruct name referenced by a DataTable's RowStruct property.
- * e.g. ObjectName "UserDefinedStruct'S_Monster_Table'" -> "S_Monster_Table"
+ * Returns null if the DataTable uses a native C++ engine struct (e.g. RichImageRow).
  * @param {UnrealDataTableAsset[]} rawTableJson
  * @returns {string | null}
  */
 export function getTableRowStructName(rawTableJson) {
-  return extractObjectRefName(rawTableJson?.[0]?.Properties?.RowStruct);
+  return extractUserDefinedStructName(rawTableJson?.[0]?.Properties?.RowStruct);
 }
 
 /**
@@ -100,10 +101,7 @@ function normalizePropertyValue(val, prop, structs, enumLookup) {
 
     case 'StructProperty': {
       if (typeof val !== 'object' || Array.isArray(val)) return val;
-      if (!prop.Struct?.ObjectName?.startsWith("UserDefinedStruct'")) {
-        return val;
-      }
-      const nestedStructName = extractObjectRefName(prop.Struct);
+      const nestedStructName = extractUserDefinedStructName(prop.Struct);
       if (!nestedStructName) return val;
       return normalizeStructRow(val, nestedStructName, structs, enumLookup);
     }
@@ -172,7 +170,7 @@ function normalizeStructRow(rawRow, structName, structs, enumLookup) {
  */
 export function extractNormalizedRows(rawTableJson, structs, enumLookup = {}) {
   const structName = getTableRowStructName(rawTableJson);
-  if (!structName || !structs[structName]) {
+  if (structName && !structs[structName]) {
     throw new Error(`[Loader] No struct definition found for table struct '${structName}'`);
   }
 
@@ -181,7 +179,9 @@ export function extractNormalizedRows(rawTableJson, structs, enumLookup = {}) {
   for (const entry of rawTableJson) {
     if (!entry.Rows) continue;
     for (const [rowId, rawRow] of Object.entries(entry.Rows)) {
-      normalized[rowId] = normalizeStructRow(rawRow, structName, structs, enumLookup);
+      normalized[rowId] = structName
+        ? normalizeStructRow(rawRow, structName, structs, enumLookup)
+        : rawRow;
     }
   }
 

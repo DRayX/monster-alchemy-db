@@ -1,7 +1,7 @@
 // @ts-check
 import { defineComponent, computed } from 'vue';
-import { getTypeIcon } from '../services/assets.js';
-import { TYPE_COLOR_CLASSES } from '../services/formatters.js';
+import { getIcon } from '../services/assets.js';
+import { getTypeColorClass } from '../services/formatters.js';
 
 /**
  * Returns the CSS classes for an element or attack type badge pill.
@@ -9,7 +9,7 @@ import { TYPE_COLOR_CLASSES } from '../services/formatters.js';
  * @returns {string}
  */
 export function getElementBadgeClass(type) {
-  const color = TYPE_COLOR_CLASSES[type] || 'bg-mid-gray near-white b--silver';
+  const color = getTypeColorClass(type) || 'bg-mid-gray near-white b--silver';
   return `inline-flex items-center ph2 pv1 br-pill f7 b ba ${color}`;
 }
 
@@ -61,7 +61,7 @@ export const TypeBadge = defineComponent({
   setup(props) {
     const iconUrl = computed(() => {
       if (!props.showIcon || !props.type) return '';
-      return getTypeIcon(props.type);
+      return getIcon(props.type);
     });
 
     const displayText = computed(() => props.label || props.type || '');

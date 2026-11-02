@@ -2,7 +2,7 @@
 import { ref, computed, watch, defineComponent } from 'vue';
 import { useRoute } from 'vue-router';
 import { db } from '../store.js';
-import { getStatIcon } from '../services/assets.js';
+import { getIcon } from '../services/assets.js';
 import { SortableTable } from './SortableTable.js';
 import { ItemChip } from './ItemChip.js';
 import { FusionOperandBadge } from './FusionOperandBadge.js';
@@ -14,7 +14,7 @@ const CRAFT_COLUMNS = [
   { key: 'outputType', label: 'Type' },
   { key: 'outputQuantity', label: 'Yield', align: 'right' },
   { key: 'ingredientsSummary', label: 'Required Resources' },
-  { key: 'work', label: 'Work', align: 'right', icon: getStatIcon('Work') }
+  { key: 'work', label: 'Work', align: 'right', icon: getIcon('Work') }
 ];
 
 /** @type {import('./SortableTable.js').TableColumn<import('../models/Recipe.js').FusionRecipe>[]} */
@@ -71,7 +71,7 @@ const TEMPLATE = /* html */ `
         <div v-if="buildRecipe" class="mt3 pt3 bt b--white-10 f6 silver flex flex-wrap items-center">
           <span class="mr2 inline-flex items-center">
             <img
-              :src="getStatIcon('Work')"
+              :src="getIcon('Work')"
               alt="Work"
               class="mr1 flex-shrink-0 pixelated icon-14"
             />
@@ -328,7 +328,7 @@ export const RoomDetail = defineComponent({
       selectedFusionType,
       filteredRecipes,
       filteredFusions,
-      getStatIcon
+      getIcon
     };
   }
 });
