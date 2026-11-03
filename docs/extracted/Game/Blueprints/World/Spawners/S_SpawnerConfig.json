@@ -1,0 +1,161 @@
+[
+  {
+    "Type": "UserDefinedStruct",
+    "Name": "S_SpawnerConfig",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedStruct'",
+    "Package": "/Game/Blueprints/World/Spawners/S_SpawnerConfig",
+    "Properties": {
+      "Guid": "7D75EA1A-42E502AE-33C5D885-6D164061"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "MinLv_2_091527274BC13E7435DE559F52061A49",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "MaxLv_21_B657F5554083D3A58BFAA099E48AE461",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "MinSpawns_22_265BE97940410A65165416B06B70EFD2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "MaxSpawns_23_398CB1B94875444B34C741AD475C3B3D",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Common1_24_7B82DA8D475FD4EE2F8F39831DBE2B9A",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Common2_25_C64C3B0841804195115F1A81C1A19B4B",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Common3_26_3E5BFCBC4E7C148C41F007A6B4EC5C97",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Common4_27_6CC50ABC4FC134FC2CF9E98B0BA0658A",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Rare1_28_08D1820D414F09277B2C1CB8E8FEB4BD",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Rare2_29_7056642642BD3A5C46C191BF5FAE1089",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Epic_30_72888C1946B3F0F9759D5BA680146B69",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CommonN1_31_89F6A23448363078A8335AB57A1BB347",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CommonN2_32_002250F140896FBAF78246950C61FEA2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CommonN3_33_A45D3ED749A674E93686A09B21F8F97F",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CommonN4_34_DD85C59D4FD695421D1167BB201F3717",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "RareN1_35_2033E2844F1C5ABF68E1D28EF94B1AA9",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "RareN2_36_EE8BA3A749F7791B6A03589B02A13E4D",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "EpicN_37_3952934245CE53AF57B94ABE6A385F32",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      }
+    ],
+    "StructFlags": 0,
+    "DefaultProperties": {
+      "MinLv_2_091527274BC13E7435DE559F52061A49": 1,
+      "MaxLv_21_B657F5554083D3A58BFAA099E48AE461": 1,
+      "MinSpawns_22_265BE97940410A65165416B06B70EFD2": 1,
+      "MaxSpawns_23_398CB1B94875444B34C741AD475C3B3D": 1,
+      "Common1_24_7B82DA8D475FD4EE2F8F39831DBE2B9A": "None",
+      "Common2_25_C64C3B0841804195115F1A81C1A19B4B": "None",
+      "Common3_26_3E5BFCBC4E7C148C41F007A6B4EC5C97": "None",
+      "Common4_27_6CC50ABC4FC134FC2CF9E98B0BA0658A": "None",
+      "Rare1_28_08D1820D414F09277B2C1CB8E8FEB4BD": "None",
+      "Rare2_29_7056642642BD3A5C46C191BF5FAE1089": "None",
+      "Epic_30_72888C1946B3F0F9759D5BA680146B69": "None",
+      "CommonN1_31_89F6A23448363078A8335AB57A1BB347": "None",
+      "CommonN2_32_002250F140896FBAF78246950C61FEA2": "None",
+      "CommonN3_33_A45D3ED749A674E93686A09B21F8F97F": "None",
+      "CommonN4_34_DD85C59D4FD695421D1167BB201F3717": "None",
+      "RareN1_35_2033E2844F1C5ABF68E1D28EF94B1AA9": "None",
+      "RareN2_36_EE8BA3A749F7791B6A03589B02A13E4D": "None",
+      "EpicN_37_3952934245CE53AF57B94ABE6A385F32": "None"
+    }
+  }
+]

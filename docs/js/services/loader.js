@@ -5,7 +5,7 @@ import {
   ENUM_URLS
 } from './assets.js';
 import { parseUnrealEnum, extractNormalizedRows } from './unreal.js';
-import { Monster, MonsterLoot, LearnedSkill } from '../models/Monster.js';
+import { Monster, MonsterLoot, LearnedSkill, MonsterWildSpawn } from '../models/Monster.js';
 import { Item } from '../models/Item.js';
 import { Room } from '../models/Room.js';
 import { CraftingRecipe, RecipeIngredient, FusionOperand, FusionRecipe, GenericFusionInputs } from '../models/Recipe.js';
@@ -134,6 +134,8 @@ export async function loadGameDatabase() {
   // 2. Process Monsters & Rewards
   /** @type {Monster[]} */
   const monsters = [];
+  /** @type {Map<string, Monster>} */
+  const monsterById = new Map();
   /** @type {Map<string, string>} */
   const monsterNameMap = new Map();
 
@@ -187,25 +189,53 @@ export async function loadGameDatabase() {
 
     monsterNameMap.set(id, name);
 
-    monsters.push(
-      new Monster({
-        id,
-        name,
-        element: row.Type || 'Neutral',
-        attackType: row.AttackType || 'Strike',
-        tier: row.Tier ?? 1,
-        health: row.Health ?? 0,
-        soul: row.Soul ?? 0,
-        strength: row.Strength ?? 0,
-        defense: row.Defense ?? 0,
-        mind: row.Mind ?? 0,
-        agility: row.Agility ?? 0,
-        passiveSkill,
-        skills,
-        description: row.Description || '',
-        loots
-      })
-    );
+    const monster = new Monster({
+      id,
+      name,
+      element: row.Type || 'Neutral',
+      attackType: row.AttackType || 'Strike',
+      tier: row.Tier ?? 1,
+      health: row.Health ?? 0,
+      soul: row.Soul ?? 0,
+      strength: row.Strength ?? 0,
+      defense: row.Defense ?? 0,
+      mind: row.Mind ?? 0,
+      agility: row.Agility ?? 0,
+      passiveSkill,
+      skills,
+      description: row.Description || '',
+      loots
+    });
+
+    monsters.push(monster);
+    monsterById.set(id, monster);
+  }
+
+  // Populate Wild Spawns directly from DT_Spawns
+  for (const [spawnId, row] of Object.entries(normalized.DT_Spawns || {})) {
+    const minLevel = row.MinLv || 1;
+    const maxLevel = row.MaxLv || minLevel;
+
+    for (const [prop, monsterId] of Object.entries(row)) {
+      const match = /^(Common|Rare|Epic)(N?)(\d*)$/.exec(prop);
+      if (!match) continue;
+
+      const monster = monsterById.get(monsterId);
+      if (!monster) continue;
+
+      const [, rarity, isNight] = match;
+      const timeOfDay = isNight ? 'Night' : 'Day';
+      monster.wildSpawns.push(
+        new MonsterWildSpawn({
+          id: spawnId,
+          slot: prop,
+          minLevel,
+          maxLevel,
+          timeOfDay,
+          rarity: /** @type {'Common' | 'Rare' | 'Epic'} */ (rarity)
+        })
+      );
+    }
   }
 
   // 3. Process Rooms

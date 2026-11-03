@@ -1,5 +1,6 @@
 // @ts-check
 import { getMonsterProfileImage, getMonsterSpriteImage } from '../services/assets.js';
+import { formatSpawnerId } from '../services/formatters.js';
 import { ActiveSkill, PassiveSkill } from './Skill.js';
 import { Item } from './Item.js';
 
@@ -41,6 +42,40 @@ export class LearnedSkill {
 }
 
 /**
+ * Wild encounter location entry for a Monster.
+ */
+export class MonsterWildSpawn {
+  /**
+   * @param {Object} data
+   * @param {string} data.id
+   * @param {string} data.slot
+   * @param {number} data.minLevel
+   * @param {number} data.maxLevel
+   * @param {'Day' | 'Night'} data.timeOfDay
+   * @param {'Common' | 'Rare' | 'Epic'} data.rarity
+   */
+  constructor(data) {
+    this.id = data.id;
+    this.slot = data.slot;
+    this.displayName = formatSpawnerId(this.id);
+    this.minLevel = data.minLevel;
+    this.maxLevel = data.maxLevel;
+    this.timeOfDay = data.timeOfDay;
+    this.rarity = data.rarity;
+  }
+
+  get key() {
+    return `${this.id}_${this.slot}`;
+  }
+
+  get levelLabel() {
+    return this.minLevel === this.maxLevel
+      ? `Lv. ${this.minLevel}`
+      : `Lv. ${this.minLevel}–${this.maxLevel}`;
+  }
+}
+
+/**
  * Monster entity representing a summonable or fusible specimen in Monster Alchemy.
  */
 export class Monster {
@@ -61,6 +96,7 @@ export class Monster {
    * @param {LearnedSkill[]} [data.skills]
    * @param {string} [data.description]
    * @param {MonsterLoot[]} [data.loots]
+   * @param {MonsterWildSpawn[]} [data.wildSpawns]
    */
   constructor(data) {
     this.id = data.id;
@@ -88,5 +124,8 @@ export class Monster {
 
     this.loots = data.loots || [];
     this.lootSummary = this.loots.map((l) => l.item.name).join(', ');
+
+    /** @type {MonsterWildSpawn[]} */
+    this.wildSpawns = data.wildSpawns || [];
   }
 }

@@ -126,3 +126,15 @@ export function parseGenericFusionToken(token) {
 
   return { name: parts.join(' '), icons };
 }
+
+/**
+ * Formats a spawner tag ID into a readable display label by stripping the
+ * leading "Spawn." prefix and joining sub-tokens with a middot.
+ * e.g. "Spawn.SPeninsula.Start" -> "SPeninsula · Start"
+ *
+ * @param {string} id
+ * @returns {string}
+ */
+export function formatSpawnerId(id) {
+  return id.replace(/^Spawn\./i, '').replace(/\./g, ' · ');
+}

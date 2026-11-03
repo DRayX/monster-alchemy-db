@@ -8,6 +8,7 @@ import { getRarityBadgeClass } from './ItemChip.js';
 import { StatBar } from './StatBar.js';
 import { CraftingRecipeCard } from './CraftingRecipeCard.js';
 import { FusionCard } from './FusionCard.js';
+import { WildSpawnCard } from './WildSpawnCard.js';
 import { NotFoundCard } from './NotFoundCard.js';
 
 /**
@@ -225,13 +226,25 @@ const TEMPLATE = /* html */ `
                   {{ loot.item.name }} &rarr;
                 </RouterLink>
               </div>
-              <span :class="rarityBadgeClass(loot.rarity)">
+              <span :class="getRarityBadgeClass(loot.rarity)">
                 {{ loot.rarity }} Loot
               </span>
             </div>
           </div>
           <div v-else class="pa3 bg-near-black ba b--white-10 br2 silver f6">
             No loot drops recorded for this monster.
+          </div>
+
+          <h2 class="f5 fw7 mt4 mb3 near-white">Wild Spawns</h2>
+          <div v-if="monster.wildSpawns.length > 0">
+            <WildSpawnCard
+              v-for="spawn in monster.wildSpawns"
+              :key="spawn.key"
+              :spawn="spawn"
+            />
+          </div>
+          <div v-else class="pa3 bg-near-black ba b--white-10 br2 silver f6">
+            Not encountered in the wild.
           </div>
         </section>
 
@@ -286,7 +299,7 @@ const TEMPLATE = /* html */ `
 
 export const MonsterDetail = defineComponent({
   name: 'MonsterDetail',
-  components: { TypeBadge, StatBar, CraftingRecipeCard, FusionCard, NotFoundCard },
+  components: { TypeBadge, StatBar, CraftingRecipeCard, FusionCard, WildSpawnCard, NotFoundCard },
   setup() {
     const route = useRoute();
 
@@ -320,7 +333,7 @@ export const MonsterDetail = defineComponent({
       summoningRecipes,
       fusionResults,
       usedInFusions,
-      rarityBadgeClass: getRarityBadgeClass,
+      getRarityBadgeClass,
       getIcon,
       STAT_BARS
     };

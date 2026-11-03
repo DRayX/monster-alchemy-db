@@ -1,9 +1,10 @@
 // @ts-check
-import { computed, defineComponent } from 'vue';
+import { computed, defineComponent, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import { db } from '../store.js';
 import { getRarityBadgeClass } from './ItemChip.js';
 import { CraftingRecipeCard } from './CraftingRecipeCard.js';
+import { WildSpawnCard } from './WildSpawnCard.js';
 import { NotFoundCard } from './NotFoundCard.js';
 
 const TEMPLATE = /* html */ `
@@ -63,30 +64,61 @@ const TEMPLATE = /* html */ `
             <div
               v-for="entry in droppedByMonsters"
               :key="entry.monster.id + '_' + entry.rarity"
-              class="flex items-center justify-between pa3 bg-near-black ba b--white-10 br2 mb2"
+              class="pa3 bg-near-black ba b--white-10 br2 mb2"
             >
-              <div class="flex items-center">
-                <img
-                  :src="entry.monster.profileImage"
-                  :alt="entry.monster.name"
-                  class="icon-32 br2 bg-dark-gray ba b--white-10 mr3 flex-shrink-0 pixelated"
-                  loading="lazy"
-                />
-                <div>
-                  <RouterLink
-                    :to="'/monsters/' + entry.monster.id"
-                    class="link near-white hover-light-purple b f5"
-                  >
-                    {{ entry.monster.name }} &rarr;
-                  </RouterLink>
-                  <div class="f7 silver mt1">
-                    Tier {{ entry.monster.tier }} &bull; {{ entry.monster.element }} ({{ entry.monster.attackType }})
+              <div class="flex items-center justify-between flex-wrap">
+                <div class="flex items-center">
+                  <img
+                    :src="entry.monster.profileImage"
+                    :alt="entry.monster.name"
+                    class="icon-32 br2 bg-dark-gray ba b--white-10 mr3 flex-shrink-0 pixelated"
+                    loading="lazy"
+                  />
+                  <div>
+                    <div class="flex items-center flex-wrap">
+                      <RouterLink
+                        :to="'/monsters/' + entry.monster.id"
+                        class="link near-white hover-light-purple b f5 mr2"
+                      >
+                        {{ entry.monster.name }} &rarr;
+                      </RouterLink>
+                      <button
+                        v-if="entry.monster.wildSpawns.length > 0"
+                        type="button"
+                        @click="toggleMonsterSpawns(entry.monster.id)"
+                        class="bn bg-transparent light-blue hover-white pointer f7 pv1 ph2 br2 bg-white-05 ba b--white-10 inline-flex items-center"
+                        :title="isSpawnsExpanded(entry.monster.id) ? 'Hide wild spawns' : 'View wild spawns'"
+                      >
+                        <span>{{ entry.monster.wildSpawns.length }} {{ entry.monster.wildSpawns.length === 1 ? 'spawn' : 'spawns' }}</span>
+                        <span class="ml1">{{ isSpawnsExpanded(entry.monster.id) ? '▴' : '▾' }}</span>
+                      </button>
+                      <span v-else class="f7 gray i">No wild spawns</span>
+                    </div>
+                    <div class="f7 silver mt1">
+                      Tier {{ entry.monster.tier }} &bull; {{ entry.monster.element }} ({{ entry.monster.attackType }})
+                    </div>
                   </div>
                 </div>
+                <span :class="getRarityBadgeClass(entry.rarity)" class="mt2 mt0-ns">
+                  {{ entry.rarity }} Loot
+                </span>
               </div>
-              <span :class="rarityBadgeClass(entry.rarity)">
-                {{ entry.rarity }} Loot
-              </span>
+
+              <!-- Collapsible wild spawns drill-down -->
+              <div
+                v-if="isSpawnsExpanded(entry.monster.id) && entry.monster.wildSpawns.length > 0"
+                class="mt3 pt2 bt b--white-10"
+              >
+                <div class="f7 gray mb2">Wild Encounter Locations:</div>
+                <div class="flex flex-column">
+                  <WildSpawnCard
+                    v-for="spawn in entry.monster.wildSpawns"
+                    :key="spawn.key"
+                    :spawn="spawn"
+                    variant="row"
+                  />
+                </div>
+              </div>
             </div>
           </div>
 
@@ -178,7 +210,7 @@ const TEMPLATE = /* html */ `
 
 export const ItemDetail = defineComponent({
   name: 'ItemDetail',
-  components: { CraftingRecipeCard, NotFoundCard },
+  components: { CraftingRecipeCard, WildSpawnCard, NotFoundCard },
   setup() {
     const route = useRoute();
 
@@ -214,13 +246,28 @@ export const ItemDetail = defineComponent({
       })
     );
 
+    const expandedMonsterIds = ref(/** @type {Set<string>} */ (new Set()));
+    const toggleMonsterSpawns = (/** @type {string} */ monsterId) => {
+      const next = new Set(expandedMonsterIds.value);
+      if (next.has(monsterId)) {
+        next.delete(monsterId);
+      } else {
+        next.add(monsterId);
+      }
+      expandedMonsterIds.value = next;
+    };
+    const isSpawnsExpanded = (/** @type {string} */ monsterId) =>
+      expandedMonsterIds.value.has(monsterId);
+
     return {
       itemId,
       item,
       droppedByMonsters,
       craftedInRecipes,
       usedInRecipes,
-      rarityBadgeClass: getRarityBadgeClass
+      toggleMonsterSpawns,
+      isSpawnsExpanded,
+      getRarityBadgeClass
     };
   },
   template: TEMPLATE

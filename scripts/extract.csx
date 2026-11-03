@@ -68,7 +68,8 @@ static readonly string[] WEBAPP_DATA_TABLE_NAMES = new[]
     "DT_MonsterSkillLevels",
     "DT_ActiveSkills",
     "DT_PassiveSkills",
-    "RDT_DialogueDecoratorImage"
+    "RDT_DialogueDecoratorImage",
+    "DT_Spawns"
 };
 
 /// <summary>
