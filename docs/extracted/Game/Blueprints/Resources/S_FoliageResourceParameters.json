@@ -1,0 +1,132 @@
+[
+  {
+    "Type": "UserDefinedStruct",
+    "Name": "S_FoliageResourceParameters",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedStruct'",
+    "Package": "/Game/Blueprints/Resources/S_FoliageResourceParameters",
+    "Properties": {
+      "Guid": "35FF6863-4516D6AE-3A2F2B82-910F2AEA"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "ResourceMaxHealth_13_661E46FA4993E50BB002B093336426D4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "DropAmount_11_40E4E593442C785E85AE8CA030591865",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "DropExp_24_B800CB3141E4778E93D44BA00F299B3D",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "MapProperty",
+        "Name": "Requierements_21_FB6085E44DAB35554BDCBD9C10FD7366",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 80,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "KeyProp": {
+          "Type": "StructProperty",
+          "Name": "Requierements_21_FB6085E44DAB35554BDCBD9C10FD7366",
+          "Flags": "RF_Public",
+          "ElementSize": 2,
+          "Struct": {
+            "ObjectName": "UserDefinedStruct'S_MonsterRequierement'",
+            "ObjectPath": "/Game/Blueprints/Core/S_MonsterRequierement.0"
+          }
+        },
+        "ValueProp": {
+          "Type": "IntProperty",
+          "Name": "Requierements_21_FB6085E44DAB35554BDCBD9C10FD7366_Value",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "DropPool_Base_3_2D6DA7D1472110B909BD0BACE99401AA",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "DropPool_Base_3_2D6DA7D1472110B909BD0BACE99401AA",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "DropPool_Rare_7_EC6C9E9245CC287D89E5AC809E1F1306",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "DropPool_Rare_7_EC6C9E9245CC287D89E5AC809E1F1306",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "DropPool_Epic_8_A98AF7E546A171143E90599C293308B9",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "DropPool_Epic_8_A98AF7E546A171143E90599C293308B9",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SoundHit_16_688833D046F25A2CCE0459AC12C1F810",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "Class'SoundBase'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "StructFlags": 0,
+    "DefaultProperties": {
+      "ResourceMaxHealth_13_661E46FA4993E50BB002B093336426D4": 40,
+      "DropAmount_11_40E4E593442C785E85AE8CA030591865": 4,
+      "DropExp_24_B800CB3141E4778E93D44BA00F299B3D": 1,
+      "Requierements_21_FB6085E44DAB35554BDCBD9C10FD7366": [
+        {
+          "Key": {
+            "MonsterType_4_2B53370E4FBFD66E93E967943FFDE32D": "EMonsterType::NewEnumerator5",
+            "AttackType_5_755FD91E4E2826F03CA349A997BFDFDF": "EAttackType::NewEnumerator1"
+          },
+          "Value": 1
+        }
+      ],
+      "DropPool_Base_3_2D6DA7D1472110B909BD0BACE99401AA": [
+        "Stone"
+      ],
+      "DropPool_Rare_7_EC6C9E9245CC287D89E5AC809E1F1306": [],
+      "DropPool_Epic_8_A98AF7E546A171143E90599C293308B9": [],
+      "SoundHit_16_688833D046F25A2CCE0459AC12C1F810": {
+        "ObjectName": "SoundCue'Cue_Hit_Strike'",
+        "ObjectPath": "/Game/Sounds/Cue_Hit_Strike.0"
+      }
+    }
+  }
+]

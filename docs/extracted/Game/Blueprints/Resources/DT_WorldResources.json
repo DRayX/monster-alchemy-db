@@ -1,0 +1,623 @@
+[
+  {
+    "Type": "DataTable",
+    "Name": "DT_WorldResources",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DataTable'",
+    "Package": "/Game/Blueprints/Resources/DT_WorldResources",
+    "Properties": {
+      "RowStruct": {
+        "ObjectName": "UserDefinedStruct'S_FoliageResourceParameters'",
+        "ObjectPath": "/Game/Blueprints/Resources/S_FoliageResourceParameters.0"
+      }
+    },
+    "Rows": {
+      "WR_Stone": {
+        "ResourceMaxHealth_13_661E46FA4993E50BB002B093336426D4": 40,
+        "DropAmount_11_40E4E593442C785E85AE8CA030591865": 4,
+        "DropExp_24_B800CB3141E4778E93D44BA00F299B3D": 1,
+        "Requierements_21_FB6085E44DAB35554BDCBD9C10FD7366": [
+          {
+            "Key": {
+              "MonsterType_4_2B53370E4FBFD66E93E967943FFDE32D": "EMonsterType::NewEnumerator5",
+              "AttackType_5_755FD91E4E2826F03CA349A997BFDFDF": "EAttackType::NewEnumerator1"
+            },
+            "Value": 1
+          }
+        ],
+        "DropPool_Base_3_2D6DA7D1472110B909BD0BACE99401AA": [
+          "Stone"
+        ],
+        "DropPool_Rare_7_EC6C9E9245CC287D89E5AC809E1F1306": [],
+        "DropPool_Epic_8_A98AF7E546A171143E90599C293308B9": [
+          "Oranite"
+        ],
+        "SoundHit_16_688833D046F25A2CCE0459AC12C1F810": {
+          "ObjectName": "SoundCue'Cue_Hit_Strike'",
+          "ObjectPath": "/Game/Sounds/Cue_Hit_Strike.0"
+        }
+      },
+      "WR_Stone_Big": {
+        "ResourceMaxHealth_13_661E46FA4993E50BB002B093336426D4": 150,
+        "DropAmount_11_40E4E593442C785E85AE8CA030591865": 6,
+        "DropExp_24_B800CB3141E4778E93D44BA00F299B3D": 1,
+        "Requierements_21_FB6085E44DAB35554BDCBD9C10FD7366": [
+          {
+            "Key": {
+              "MonsterType_4_2B53370E4FBFD66E93E967943FFDE32D": "EMonsterType::NewEnumerator5",
+              "AttackType_5_755FD91E4E2826F03CA349A997BFDFDF": "EAttackType::NewEnumerator1"
+            },
+            "Value": 3
+          }
+        ],
+        "DropPool_Base_3_2D6DA7D1472110B909BD0BACE99401AA": [
+          "Stone"
+        ],
+        "DropPool_Rare_7_EC6C9E9245CC287D89E5AC809E1F1306": [],
+        "DropPool_Epic_8_A98AF7E546A171143E90599C293308B9": [],
+        "SoundHit_16_688833D046F25A2CCE0459AC12C1F810": {
+          "ObjectName": "SoundCue'Cue_Hit_Strike'",
+          "ObjectPath": "/Game/Sounds/Cue_Hit_Strike.0"
+        }
+      },
+      "WR_Salt": {
+        "ResourceMaxHealth_13_661E46FA4993E50BB002B093336426D4": 50,
+        "DropAmount_11_40E4E593442C785E85AE8CA030591865": 2,
+        "DropExp_24_B800CB3141E4778E93D44BA00F299B3D": 3,
+        "Requierements_21_FB6085E44DAB35554BDCBD9C10FD7366": [
+          {
+            "Key": {
+              "MonsterType_4_2B53370E4FBFD66E93E967943FFDE32D": "EMonsterType::NewEnumerator5",
+              "AttackType_5_755FD91E4E2826F03CA349A997BFDFDF": "EAttackType::NewEnumerator1"
+            },
+            "Value": 2
+          }
+        ],
+        "DropPool_Base_3_2D6DA7D1472110B909BD0BACE99401AA": [
+          "Salt"
+        ],
+        "DropPool_Rare_7_EC6C9E9245CC287D89E5AC809E1F1306": [],
+        "DropPool_Epic_8_A98AF7E546A171143E90599C293308B9": [],
+        "SoundHit_16_688833D046F25A2CCE0459AC12C1F810": {
+          "ObjectName": "SoundCue'Cue_Hit_Strike'",
+          "ObjectPath": "/Game/Sounds/Cue_Hit_Strike.0"
+        }
+      },
+      "WR_BonePile": {
+        "ResourceMaxHealth_13_661E46FA4993E50BB002B093336426D4": 100,
+        "DropAmount_11_40E4E593442C785E85AE8CA030591865": 3,
+        "DropExp_24_B800CB3141E4778E93D44BA00F299B3D": 2,
+        "Requierements_21_FB6085E44DAB35554BDCBD9C10FD7366": [
+          {
+            "Key": {
+              "MonsterType_4_2B53370E4FBFD66E93E967943FFDE32D": "EMonsterType::NewEnumerator5",
+              "AttackType_5_755FD91E4E2826F03CA349A997BFDFDF": "EAttackType::NewEnumerator1"
+            },
+            "Value": 2
+          }
+        ],
+        "DropPool_Base_3_2D6DA7D1472110B909BD0BACE99401AA": [
+          "Bone"
+        ],
+        "DropPool_Rare_7_EC6C9E9245CC287D89E5AC809E1F1306": [],
+        "DropPool_Epic_8_A98AF7E546A171143E90599C293308B9": [],
+        "SoundHit_16_688833D046F25A2CCE0459AC12C1F810": {
+          "ObjectName": "SoundCue'Cue_Hit_Strike'",
+          "ObjectPath": "/Game/Sounds/Cue_Hit_Strike.0"
+        }
+      },
+      "WR_Iron": {
+        "ResourceMaxHealth_13_661E46FA4993E50BB002B093336426D4": 200,
+        "DropAmount_11_40E4E593442C785E85AE8CA030591865": 2,
+        "DropExp_24_B800CB3141E4778E93D44BA00F299B3D": 5,
+        "Requierements_21_FB6085E44DAB35554BDCBD9C10FD7366": [
+          {
+            "Key": {
+              "MonsterType_4_2B53370E4FBFD66E93E967943FFDE32D": "EMonsterType::NewEnumerator5",
+              "AttackType_5_755FD91E4E2826F03CA349A997BFDFDF": "EAttackType::NewEnumerator1"
+            },
+            "Value": 3
+          }
+        ],
+        "DropPool_Base_3_2D6DA7D1472110B909BD0BACE99401AA": [
+          "IronOre"
+        ],
+        "DropPool_Rare_7_EC6C9E9245CC287D89E5AC809E1F1306": [],
+        "DropPool_Epic_8_A98AF7E546A171143E90599C293308B9": [],
+        "SoundHit_16_688833D046F25A2CCE0459AC12C1F810": {
+          "ObjectName": "SoundCue'Cue_Hit_Strike'",
+          "ObjectPath": "/Game/Sounds/Cue_Hit_Strike.0"
+        }
+      },
+      "WR_Tree": {
+        "ResourceMaxHealth_13_661E46FA4993E50BB002B093336426D4": 40,
+        "DropAmount_11_40E4E593442C785E85AE8CA030591865": 4,
+        "DropExp_24_B800CB3141E4778E93D44BA00F299B3D": 1,
+        "Requierements_21_FB6085E44DAB35554BDCBD9C10FD7366": [
+          {
+            "Key": {
+              "MonsterType_4_2B53370E4FBFD66E93E967943FFDE32D": "EMonsterType::NewEnumerator5",
+              "AttackType_5_755FD91E4E2826F03CA349A997BFDFDF": "EAttackType::NewEnumerator2"
+            },
+            "Value": 1
+          }
+        ],
+        "DropPool_Base_3_2D6DA7D1472110B909BD0BACE99401AA": [
+          "Wood"
+        ],
+        "DropPool_Rare_7_EC6C9E9245CC287D89E5AC809E1F1306": [
+          "Zana"
+        ],
+        "DropPool_Epic_8_A98AF7E546A171143E90599C293308B9": [],
+        "SoundHit_16_688833D046F25A2CCE0459AC12C1F810": {
+          "ObjectName": "SoundCue'Cue_Hit_Slash'",
+          "ObjectPath": "/Game/Sounds/Cue_Hit_Slash.0"
+        }
+      },
+      "WR_Tree_Log": {
+        "ResourceMaxHealth_13_661E46FA4993E50BB002B093336426D4": 50,
+        "DropAmount_11_40E4E593442C785E85AE8CA030591865": 3,
+        "DropExp_24_B800CB3141E4778E93D44BA00F299B3D": 1,
+        "Requierements_21_FB6085E44DAB35554BDCBD9C10FD7366": [
+          {
+            "Key": {
+              "MonsterType_4_2B53370E4FBFD66E93E967943FFDE32D": "EMonsterType::NewEnumerator5",
+              "AttackType_5_755FD91E4E2826F03CA349A997BFDFDF": "EAttackType::NewEnumerator2"
+            },
+            "Value": 1
+          }
+        ],
+        "DropPool_Base_3_2D6DA7D1472110B909BD0BACE99401AA": [
+          "Wood"
+        ],
+        "DropPool_Rare_7_EC6C9E9245CC287D89E5AC809E1F1306": [],
+        "DropPool_Epic_8_A98AF7E546A171143E90599C293308B9": [],
+        "SoundHit_16_688833D046F25A2CCE0459AC12C1F810": {
+          "ObjectName": "SoundCue'Cue_Hit_Slash'",
+          "ObjectPath": "/Game/Sounds/Cue_Hit_Slash.0"
+        }
+      },
+      "WR_Tree_Palm": {
+        "ResourceMaxHealth_13_661E46FA4993E50BB002B093336426D4": 50,
+        "DropAmount_11_40E4E593442C785E85AE8CA030591865": 4,
+        "DropExp_24_B800CB3141E4778E93D44BA00F299B3D": 1,
+        "Requierements_21_FB6085E44DAB35554BDCBD9C10FD7366": [
+          {
+            "Key": {
+              "MonsterType_4_2B53370E4FBFD66E93E967943FFDE32D": "EMonsterType::NewEnumerator5",
+              "AttackType_5_755FD91E4E2826F03CA349A997BFDFDF": "EAttackType::NewEnumerator2"
+            },
+            "Value": 1
+          }
+        ],
+        "DropPool_Base_3_2D6DA7D1472110B909BD0BACE99401AA": [
+          "Wood"
+        ],
+        "DropPool_Rare_7_EC6C9E9245CC287D89E5AC809E1F1306": [
+          "Liconut"
+        ],
+        "DropPool_Epic_8_A98AF7E546A171143E90599C293308B9": [],
+        "SoundHit_16_688833D046F25A2CCE0459AC12C1F810": {
+          "ObjectName": "SoundCue'Cue_Hit_Slash'",
+          "ObjectPath": "/Game/Sounds/Cue_Hit_Slash.0"
+        }
+      },
+      "WR_Tree_Naked": {
+        "ResourceMaxHealth_13_661E46FA4993E50BB002B093336426D4": 60,
+        "DropAmount_11_40E4E593442C785E85AE8CA030591865": 4,
+        "DropExp_24_B800CB3141E4778E93D44BA00F299B3D": 1,
+        "Requierements_21_FB6085E44DAB35554BDCBD9C10FD7366": [
+          {
+            "Key": {
+              "MonsterType_4_2B53370E4FBFD66E93E967943FFDE32D": "EMonsterType::NewEnumerator5",
+              "AttackType_5_755FD91E4E2826F03CA349A997BFDFDF": "EAttackType::NewEnumerator2"
+            },
+            "Value": 1
+          }
+        ],
+        "DropPool_Base_3_2D6DA7D1472110B909BD0BACE99401AA": [
+          "Wood"
+        ],
+        "DropPool_Rare_7_EC6C9E9245CC287D89E5AC809E1F1306": [],
+        "DropPool_Epic_8_A98AF7E546A171143E90599C293308B9": [],
+        "SoundHit_16_688833D046F25A2CCE0459AC12C1F810": {
+          "ObjectName": "SoundCue'Cue_Hit_Slash'",
+          "ObjectPath": "/Game/Sounds/Cue_Hit_Slash.0"
+        }
+      },
+      "WR_Tree_Log_Dungeon": {
+        "ResourceMaxHealth_13_661E46FA4993E50BB002B093336426D4": 50,
+        "DropAmount_11_40E4E593442C785E85AE8CA030591865": 3,
+        "DropExp_24_B800CB3141E4778E93D44BA00F299B3D": 1,
+        "Requierements_21_FB6085E44DAB35554BDCBD9C10FD7366": [
+          {
+            "Key": {
+              "MonsterType_4_2B53370E4FBFD66E93E967943FFDE32D": "EMonsterType::NewEnumerator5",
+              "AttackType_5_755FD91E4E2826F03CA349A997BFDFDF": "EAttackType::NewEnumerator2"
+            },
+            "Value": 2
+          }
+        ],
+        "DropPool_Base_3_2D6DA7D1472110B909BD0BACE99401AA": [
+          "Wood"
+        ],
+        "DropPool_Rare_7_EC6C9E9245CC287D89E5AC809E1F1306": [],
+        "DropPool_Epic_8_A98AF7E546A171143E90599C293308B9": [],
+        "SoundHit_16_688833D046F25A2CCE0459AC12C1F810": {
+          "ObjectName": "SoundCue'Cue_Hit_Slash'",
+          "ObjectPath": "/Game/Sounds/Cue_Hit_Slash.0"
+        }
+      },
+      "WR_Tree_Yellow": {
+        "ResourceMaxHealth_13_661E46FA4993E50BB002B093336426D4": 80,
+        "DropAmount_11_40E4E593442C785E85AE8CA030591865": 4,
+        "DropExp_24_B800CB3141E4778E93D44BA00F299B3D": 2,
+        "Requierements_21_FB6085E44DAB35554BDCBD9C10FD7366": [
+          {
+            "Key": {
+              "MonsterType_4_2B53370E4FBFD66E93E967943FFDE32D": "EMonsterType::NewEnumerator5",
+              "AttackType_5_755FD91E4E2826F03CA349A997BFDFDF": "EAttackType::NewEnumerator2"
+            },
+            "Value": 1
+          }
+        ],
+        "DropPool_Base_3_2D6DA7D1472110B909BD0BACE99401AA": [
+          "Wood"
+        ],
+        "DropPool_Rare_7_EC6C9E9245CC287D89E5AC809E1F1306": [
+          "Rurian"
+        ],
+        "DropPool_Epic_8_A98AF7E546A171143E90599C293308B9": [],
+        "SoundHit_16_688833D046F25A2CCE0459AC12C1F810": {
+          "ObjectName": "SoundCue'Cue_Hit_Slash'",
+          "ObjectPath": "/Game/Sounds/Cue_Hit_Slash.0"
+        }
+      },
+      "WR_Tree_Yellow_Young": {
+        "ResourceMaxHealth_13_661E46FA4993E50BB002B093336426D4": 80,
+        "DropAmount_11_40E4E593442C785E85AE8CA030591865": 4,
+        "DropExp_24_B800CB3141E4778E93D44BA00F299B3D": 2,
+        "Requierements_21_FB6085E44DAB35554BDCBD9C10FD7366": [
+          {
+            "Key": {
+              "MonsterType_4_2B53370E4FBFD66E93E967943FFDE32D": "EMonsterType::NewEnumerator5",
+              "AttackType_5_755FD91E4E2826F03CA349A997BFDFDF": "EAttackType::NewEnumerator2"
+            },
+            "Value": 1
+          }
+        ],
+        "DropPool_Base_3_2D6DA7D1472110B909BD0BACE99401AA": [
+          "Wood"
+        ],
+        "DropPool_Rare_7_EC6C9E9245CC287D89E5AC809E1F1306": [],
+        "DropPool_Epic_8_A98AF7E546A171143E90599C293308B9": [
+          "Rurian"
+        ],
+        "SoundHit_16_688833D046F25A2CCE0459AC12C1F810": {
+          "ObjectName": "SoundCue'Cue_Hit_Slash'",
+          "ObjectPath": "/Game/Sounds/Cue_Hit_Slash.0"
+        }
+      },
+      "WR_Tree_Corrupted": {
+        "ResourceMaxHealth_13_661E46FA4993E50BB002B093336426D4": 100,
+        "DropAmount_11_40E4E593442C785E85AE8CA030591865": 4,
+        "DropExp_24_B800CB3141E4778E93D44BA00F299B3D": 1,
+        "Requierements_21_FB6085E44DAB35554BDCBD9C10FD7366": [
+          {
+            "Key": {
+              "MonsterType_4_2B53370E4FBFD66E93E967943FFDE32D": "EMonsterType::NewEnumerator5",
+              "AttackType_5_755FD91E4E2826F03CA349A997BFDFDF": "EAttackType::NewEnumerator2"
+            },
+            "Value": 1
+          }
+        ],
+        "DropPool_Base_3_2D6DA7D1472110B909BD0BACE99401AA": [
+          "Wood"
+        ],
+        "DropPool_Rare_7_EC6C9E9245CC287D89E5AC809E1F1306": [
+          "BlackWood"
+        ],
+        "DropPool_Epic_8_A98AF7E546A171143E90599C293308B9": [
+          "HollowBerry"
+        ],
+        "SoundHit_16_688833D046F25A2CCE0459AC12C1F810": {
+          "ObjectName": "SoundCue'Cue_Hit_Slash'",
+          "ObjectPath": "/Game/Sounds/Cue_Hit_Slash.0"
+        }
+      },
+      "WR_Tree_Swamp": {
+        "ResourceMaxHealth_13_661E46FA4993E50BB002B093336426D4": 300,
+        "DropAmount_11_40E4E593442C785E85AE8CA030591865": 4,
+        "DropExp_24_B800CB3141E4778E93D44BA00F299B3D": 5,
+        "Requierements_21_FB6085E44DAB35554BDCBD9C10FD7366": [
+          {
+            "Key": {
+              "MonsterType_4_2B53370E4FBFD66E93E967943FFDE32D": "EMonsterType::NewEnumerator5",
+              "AttackType_5_755FD91E4E2826F03CA349A997BFDFDF": "EAttackType::NewEnumerator2"
+            },
+            "Value": 2
+          }
+        ],
+        "DropPool_Base_3_2D6DA7D1472110B909BD0BACE99401AA": [
+          "BlackWood"
+        ],
+        "DropPool_Rare_7_EC6C9E9245CC287D89E5AC809E1F1306": [
+          "HollowBerry"
+        ],
+        "DropPool_Epic_8_A98AF7E546A171143E90599C293308B9": [],
+        "SoundHit_16_688833D046F25A2CCE0459AC12C1F810": {
+          "ObjectName": "SoundCue'Cue_Hit_Slash'",
+          "ObjectPath": "/Game/Sounds/Cue_Hit_Slash.0"
+        }
+      },
+      "WR_Tree_Mushroom": {
+        "ResourceMaxHealth_13_661E46FA4993E50BB002B093336426D4": 80,
+        "DropAmount_11_40E4E593442C785E85AE8CA030591865": 3,
+        "DropExp_24_B800CB3141E4778E93D44BA00F299B3D": 2,
+        "Requierements_21_FB6085E44DAB35554BDCBD9C10FD7366": [
+          {
+            "Key": {
+              "MonsterType_4_2B53370E4FBFD66E93E967943FFDE32D": "EMonsterType::NewEnumerator5",
+              "AttackType_5_755FD91E4E2826F03CA349A997BFDFDF": "EAttackType::NewEnumerator2"
+            },
+            "Value": 2
+          }
+        ],
+        "DropPool_Base_3_2D6DA7D1472110B909BD0BACE99401AA": [
+          "CondensedSpores"
+        ],
+        "DropPool_Rare_7_EC6C9E9245CC287D89E5AC809E1F1306": [],
+        "DropPool_Epic_8_A98AF7E546A171143E90599C293308B9": [],
+        "SoundHit_16_688833D046F25A2CCE0459AC12C1F810": {
+          "ObjectName": "SoundCue'Cue_Hit_Slash'",
+          "ObjectPath": "/Game/Sounds/Cue_Hit_Slash.0"
+        }
+      },
+      "WR_Tree_Big": {
+        "ResourceMaxHealth_13_661E46FA4993E50BB002B093336426D4": 500,
+        "DropAmount_11_40E4E593442C785E85AE8CA030591865": 8,
+        "DropExp_24_B800CB3141E4778E93D44BA00F299B3D": 2,
+        "Requierements_21_FB6085E44DAB35554BDCBD9C10FD7366": [
+          {
+            "Key": {
+              "MonsterType_4_2B53370E4FBFD66E93E967943FFDE32D": "EMonsterType::NewEnumerator5",
+              "AttackType_5_755FD91E4E2826F03CA349A997BFDFDF": "EAttackType::NewEnumerator2"
+            },
+            "Value": 3
+          }
+        ],
+        "DropPool_Base_3_2D6DA7D1472110B909BD0BACE99401AA": [
+          "Wood"
+        ],
+        "DropPool_Rare_7_EC6C9E9245CC287D89E5AC809E1F1306": [],
+        "DropPool_Epic_8_A98AF7E546A171143E90599C293308B9": [],
+        "SoundHit_16_688833D046F25A2CCE0459AC12C1F810": {
+          "ObjectName": "SoundCue'Cue_Hit_Slash'",
+          "ObjectPath": "/Game/Sounds/Cue_Hit_Slash.0"
+        }
+      },
+      "WR_Tree_Snow": {
+        "ResourceMaxHealth_13_661E46FA4993E50BB002B093336426D4": 300,
+        "DropAmount_11_40E4E593442C785E85AE8CA030591865": 4,
+        "DropExp_24_B800CB3141E4778E93D44BA00F299B3D": 5,
+        "Requierements_21_FB6085E44DAB35554BDCBD9C10FD7366": [
+          {
+            "Key": {
+              "MonsterType_4_2B53370E4FBFD66E93E967943FFDE32D": "EMonsterType::NewEnumerator5",
+              "AttackType_5_755FD91E4E2826F03CA349A997BFDFDF": "EAttackType::NewEnumerator2"
+            },
+            "Value": 2
+          }
+        ],
+        "DropPool_Base_3_2D6DA7D1472110B909BD0BACE99401AA": [
+          "Wood"
+        ],
+        "DropPool_Rare_7_EC6C9E9245CC287D89E5AC809E1F1306": [
+          "Nabana"
+        ],
+        "DropPool_Epic_8_A98AF7E546A171143E90599C293308B9": [],
+        "SoundHit_16_688833D046F25A2CCE0459AC12C1F810": {
+          "ObjectName": "SoundCue'Cue_Hit_Slash'",
+          "ObjectPath": "/Game/Sounds/Cue_Hit_Slash.0"
+        }
+      },
+      "WR_Tree_Snow_Naked": {
+        "ResourceMaxHealth_13_661E46FA4993E50BB002B093336426D4": 300,
+        "DropAmount_11_40E4E593442C785E85AE8CA030591865": 4,
+        "DropExp_24_B800CB3141E4778E93D44BA00F299B3D": 5,
+        "Requierements_21_FB6085E44DAB35554BDCBD9C10FD7366": [
+          {
+            "Key": {
+              "MonsterType_4_2B53370E4FBFD66E93E967943FFDE32D": "EMonsterType::NewEnumerator5",
+              "AttackType_5_755FD91E4E2826F03CA349A997BFDFDF": "EAttackType::NewEnumerator2"
+            },
+            "Value": 2
+          }
+        ],
+        "DropPool_Base_3_2D6DA7D1472110B909BD0BACE99401AA": [
+          "Wood"
+        ],
+        "DropPool_Rare_7_EC6C9E9245CC287D89E5AC809E1F1306": [],
+        "DropPool_Epic_8_A98AF7E546A171143E90599C293308B9": [],
+        "SoundHit_16_688833D046F25A2CCE0459AC12C1F810": {
+          "ObjectName": "SoundCue'Cue_Hit_Slash'",
+          "ObjectPath": "/Game/Sounds/Cue_Hit_Slash.0"
+        }
+      },
+      "WR_Grave": {
+        "ResourceMaxHealth_13_661E46FA4993E50BB002B093336426D4": 100,
+        "DropAmount_11_40E4E593442C785E85AE8CA030591865": 1,
+        "DropExp_24_B800CB3141E4778E93D44BA00F299B3D": 10,
+        "Requierements_21_FB6085E44DAB35554BDCBD9C10FD7366": [
+          {
+            "Key": {
+              "MonsterType_4_2B53370E4FBFD66E93E967943FFDE32D": "EMonsterType::NewEnumerator4",
+              "AttackType_5_755FD91E4E2826F03CA349A997BFDFDF": "EAttackType::NewEnumerator1"
+            },
+            "Value": 1
+          }
+        ],
+        "DropPool_Base_3_2D6DA7D1472110B909BD0BACE99401AA": [
+          "Corpse",
+          "Bone",
+          "Coin",
+          "RottenMeat"
+        ],
+        "DropPool_Rare_7_EC6C9E9245CC287D89E5AC809E1F1306": [],
+        "DropPool_Epic_8_A98AF7E546A171143E90599C293308B9": [
+          "CursedSkull"
+        ],
+        "SoundHit_16_688833D046F25A2CCE0459AC12C1F810": {
+          "ObjectName": "SoundCue'Cue_Hit_Strike'",
+          "ObjectPath": "/Game/Sounds/Cue_Hit_Strike.0"
+        }
+      },
+      "WR_Bubble_Goo": {
+        "ResourceMaxHealth_13_661E46FA4993E50BB002B093336426D4": 60,
+        "DropAmount_11_40E4E593442C785E85AE8CA030591865": 4,
+        "DropExp_24_B800CB3141E4778E93D44BA00F299B3D": 2,
+        "Requierements_21_FB6085E44DAB35554BDCBD9C10FD7366": [
+          {
+            "Key": {
+              "MonsterType_4_2B53370E4FBFD66E93E967943FFDE32D": "EMonsterType::NewEnumerator5",
+              "AttackType_5_755FD91E4E2826F03CA349A997BFDFDF": "EAttackType::NewEnumerator3"
+            },
+            "Value": 1
+          }
+        ],
+        "DropPool_Base_3_2D6DA7D1472110B909BD0BACE99401AA": [
+          "Goo"
+        ],
+        "DropPool_Rare_7_EC6C9E9245CC287D89E5AC809E1F1306": [
+          "GooeyMix"
+        ],
+        "DropPool_Epic_8_A98AF7E546A171143E90599C293308B9": [],
+        "SoundHit_16_688833D046F25A2CCE0459AC12C1F810": {
+          "ObjectName": "SoundCue'Cue_Hit_Strike'",
+          "ObjectPath": "/Game/Sounds/Cue_Hit_Strike.0"
+        }
+      },
+      "WR_Bubble_Ember": {
+        "ResourceMaxHealth_13_661E46FA4993E50BB002B093336426D4": 100,
+        "DropAmount_11_40E4E593442C785E85AE8CA030591865": 2,
+        "DropExp_24_B800CB3141E4778E93D44BA00F299B3D": 5,
+        "Requierements_21_FB6085E44DAB35554BDCBD9C10FD7366": [
+          {
+            "Key": {
+              "MonsterType_4_2B53370E4FBFD66E93E967943FFDE32D": "EMonsterType::NewEnumerator1",
+              "AttackType_5_755FD91E4E2826F03CA349A997BFDFDF": "EAttackType::NewEnumerator3"
+            },
+            "Value": 1
+          }
+        ],
+        "DropPool_Base_3_2D6DA7D1472110B909BD0BACE99401AA": [
+          "FlameTendon"
+        ],
+        "DropPool_Rare_7_EC6C9E9245CC287D89E5AC809E1F1306": [
+          "EmberGel"
+        ],
+        "DropPool_Epic_8_A98AF7E546A171143E90599C293308B9": [],
+        "SoundHit_16_688833D046F25A2CCE0459AC12C1F810": {
+          "ObjectName": "SoundCue'Cue_Hit_Strike'",
+          "ObjectPath": "/Game/Sounds/Cue_Hit_Strike.0"
+        }
+      },
+      "WR_Bubble_Ectoplasm": {
+        "ResourceMaxHealth_13_661E46FA4993E50BB002B093336426D4": 100,
+        "DropAmount_11_40E4E593442C785E85AE8CA030591865": 2,
+        "DropExp_24_B800CB3141E4778E93D44BA00F299B3D": 5,
+        "Requierements_21_FB6085E44DAB35554BDCBD9C10FD7366": [
+          {
+            "Key": {
+              "MonsterType_4_2B53370E4FBFD66E93E967943FFDE32D": "EMonsterType::NewEnumerator4",
+              "AttackType_5_755FD91E4E2826F03CA349A997BFDFDF": "EAttackType::NewEnumerator3"
+            },
+            "Value": 1
+          }
+        ],
+        "DropPool_Base_3_2D6DA7D1472110B909BD0BACE99401AA": [
+          "Ectoplasm"
+        ],
+        "DropPool_Rare_7_EC6C9E9245CC287D89E5AC809E1F1306": [],
+        "DropPool_Epic_8_A98AF7E546A171143E90599C293308B9": [
+          "CursedSkull"
+        ],
+        "SoundHit_16_688833D046F25A2CCE0459AC12C1F810": {
+          "ObjectName": "SoundCue'Cue_Hit_Strike'",
+          "ObjectPath": "/Game/Sounds/Cue_Hit_Strike.0"
+        }
+      },
+      "WR_Bubble_Hydro": {
+        "ResourceMaxHealth_13_661E46FA4993E50BB002B093336426D4": 100,
+        "DropAmount_11_40E4E593442C785E85AE8CA030591865": 2,
+        "DropExp_24_B800CB3141E4778E93D44BA00F299B3D": 5,
+        "Requierements_21_FB6085E44DAB35554BDCBD9C10FD7366": [
+          {
+            "Key": {
+              "MonsterType_4_2B53370E4FBFD66E93E967943FFDE32D": "EMonsterType::NewEnumerator2",
+              "AttackType_5_755FD91E4E2826F03CA349A997BFDFDF": "EAttackType::NewEnumerator3"
+            },
+            "Value": 1
+          }
+        ],
+        "DropPool_Base_3_2D6DA7D1472110B909BD0BACE99401AA": [
+          "Hydrogland"
+        ],
+        "DropPool_Rare_7_EC6C9E9245CC287D89E5AC809E1F1306": [
+          "MarineEssence"
+        ],
+        "DropPool_Epic_8_A98AF7E546A171143E90599C293308B9": [],
+        "SoundHit_16_688833D046F25A2CCE0459AC12C1F810": {
+          "ObjectName": "SoundCue'Cue_Hit_Strike'",
+          "ObjectPath": "/Game/Sounds/Cue_Hit_Strike.0"
+        }
+      },
+      "WR_Crystal": {
+        "ResourceMaxHealth_13_661E46FA4993E50BB002B093336426D4": 500,
+        "DropAmount_11_40E4E593442C785E85AE8CA030591865": 2,
+        "DropExp_24_B800CB3141E4778E93D44BA00F299B3D": 30,
+        "Requierements_21_FB6085E44DAB35554BDCBD9C10FD7366": [
+          {
+            "Key": {
+              "MonsterType_4_2B53370E4FBFD66E93E967943FFDE32D": "EMonsterType::NewEnumerator5",
+              "AttackType_5_755FD91E4E2826F03CA349A997BFDFDF": "EAttackType::NewEnumerator1"
+            },
+            "Value": 3
+          }
+        ],
+        "DropPool_Base_3_2D6DA7D1472110B909BD0BACE99401AA": [
+          "CrystaliumOre"
+        ],
+        "DropPool_Rare_7_EC6C9E9245CC287D89E5AC809E1F1306": [],
+        "DropPool_Epic_8_A98AF7E546A171143E90599C293308B9": [],
+        "SoundHit_16_688833D046F25A2CCE0459AC12C1F810": {
+          "ObjectName": "SoundCue'Cue_Hit_Strike'",
+          "ObjectPath": "/Game/Sounds/Cue_Hit_Strike.0"
+        }
+      },
+      "WR_MudFlower": {
+        "ResourceMaxHealth_13_661E46FA4993E50BB002B093336426D4": 100,
+        "DropAmount_11_40E4E593442C785E85AE8CA030591865": 1,
+        "DropExp_24_B800CB3141E4778E93D44BA00F299B3D": 20,
+        "Requierements_21_FB6085E44DAB35554BDCBD9C10FD7366": [
+          {
+            "Key": {
+              "MonsterType_4_2B53370E4FBFD66E93E967943FFDE32D": "EMonsterType::NewEnumerator5",
+              "AttackType_5_755FD91E4E2826F03CA349A997BFDFDF": "EAttackType::NewEnumerator2"
+            },
+            "Value": 1
+          }
+        ],
+        "DropPool_Base_3_2D6DA7D1472110B909BD0BACE99401AA": [
+          "MuddyPetal"
+        ],
+        "DropPool_Rare_7_EC6C9E9245CC287D89E5AC809E1F1306": [],
+        "DropPool_Epic_8_A98AF7E546A171143E90599C293308B9": [],
+        "SoundHit_16_688833D046F25A2CCE0459AC12C1F810": {
+          "ObjectName": "SoundCue'Cue_Hit_Slash'",
+          "ObjectPath": "/Game/Sounds/Cue_Hit_Slash.0"
+        }
+      }
+    }
+  }
+]

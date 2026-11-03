@@ -10,6 +10,7 @@ import { loadGameDatabase } from './services/loader.js';
  * @typedef {import('./models/Recipe.js').FusionRecipe} FusionRecipe
  * @typedef {import('./models/Skill.js').ActiveSkill} ActiveSkill
  * @typedef {import('./models/Skill.js').PassiveSkill} PassiveSkill
+ * @typedef {import('./models/WorldResource.js').WorldResource} WorldResource
  */
 
 /**
@@ -30,6 +31,8 @@ export const db = reactive({
   activeSkills: [],
   /** @type {PassiveSkill[]} */
   passiveSkills: [],
+  /** @type {WorldResource[]} */
+  worldResources: [],
   /** @type {boolean} */
   isLoading: true,
   /** @type {?string} */
@@ -44,7 +47,7 @@ export async function initDatabase() {
   db.isLoading = true;
   db.error = null;
   try {
-    const { monsters, items, rooms, recipes, fusions, activeSkills, passiveSkills } = await loadGameDatabase();
+    const { monsters, items, rooms, recipes, fusions, activeSkills, passiveSkills, worldResources } = await loadGameDatabase();
     db.monsters = monsters;
     db.items = items;
     db.rooms = rooms;
@@ -52,6 +55,7 @@ export async function initDatabase() {
     db.fusions = fusions;
     db.activeSkills = activeSkills;
     db.passiveSkills = passiveSkills;
+    db.worldResources = worldResources;
   } catch (err) {
     db.error =
       err instanceof Error ? err.message : 'Unknown error loading Unreal data dumps';

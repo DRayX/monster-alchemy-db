@@ -13,6 +13,7 @@ export class Item {
    * @param {number} [data.dropCount]
    * @param {number} [data.craftedCount]
    * @param {number} [data.usedInCount]
+   * @param {number} [data.gatherCount]
    */
   constructor(data) {
     this.id = data.id;
@@ -22,6 +23,7 @@ export class Item {
     this.dropCount = data.dropCount ?? 0;
     this.craftedCount = data.craftedCount ?? 0;
     this.usedInCount = data.usedInCount ?? 0;
+    this.gatherCount = data.gatherCount ?? 0;
   }
 
   get isDropped() {
@@ -34,5 +36,9 @@ export class Item {
 
   get isIngredient() {
     return this.usedInCount > 0;
+  }
+
+  get isGatherable() {
+    return this.gatherCount > 0;
   }
 }

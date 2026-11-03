@@ -10,6 +10,7 @@ import { Item } from '../models/Item.js';
 import { Room } from '../models/Room.js';
 import { CraftingRecipe, RecipeIngredient, FusionOperand, FusionRecipe, GenericFusionInputs } from '../models/Recipe.js';
 import { ActiveSkill, PassiveSkill } from '../models/Skill.js';
+import { WorldResource, WorldResourceRequirement, WorldResourceDrop } from '../models/WorldResource.js';
 
 /**
  * @typedef {import('../types.js').NormalizedUnrealRow} NormalizedUnrealRow
@@ -44,7 +45,7 @@ async function loadJsonMap(urls) {
 
 /**
  * Loads and processes all game tables, structs, and enums from `./extracted/Game/`.
- * @returns {Promise<{ monsters: Monster[], items: Item[], rooms: Room[], recipes: CraftingRecipe[], fusions: FusionRecipe[], activeSkills: ActiveSkill[], passiveSkills: PassiveSkill[] }>}
+ * @returns {Promise<{ monsters: Monster[], items: Item[], rooms: Room[], recipes: CraftingRecipe[], fusions: FusionRecipe[], activeSkills: ActiveSkill[], passiveSkills: PassiveSkill[], worldResources: WorldResource[] }>}
  */
 export async function loadGameDatabase() {
   const [structs, enums, tables] = await Promise.all([
@@ -376,6 +377,55 @@ export async function loadGameDatabase() {
     fusionRoom.fusionRecipes = fusions;
   }
 
+  // 6. Process World Resources
+  /** @type {WorldResource[]} */
+  const worldResources = [];
+
+  for (const [nodeId, row] of Object.entries(normalized.DT_WorldResources || {})) {
+    const maxHealth = row.ResourceMaxHealth ?? 0;
+    const dropAmount = row.DropAmount ?? 0;
+    const dropExp = row.DropExp ?? 0;
+
+    /** @type {WorldResourceRequirement[]} */
+    const requirements = [];
+    for (const entry of row.Requierements) {
+      requirements.push(
+        new WorldResourceRequirement(
+          entry.Key.MonsterType || 'Any',
+          entry.Key.AttackType || 'Any',
+          entry.Value
+        )
+      );
+    }
+
+    /** @type {WorldResourceDrop[]} */
+    const drops = [];
+
+    for (const [pool, items] of [
+      ['Base', row.DropPool_Base],
+      ['Rare', row.DropPool_Rare],
+      ['Epic', row.DropPool_Epic]
+    ]) {
+      for (const itemId of items) {
+        const item = itemById.get(itemId);
+        if (!item) continue;
+        item.gatherCount++;
+        drops.push(new WorldResourceDrop(item, pool));
+      }
+    }
+
+    worldResources.push(
+      new WorldResource({
+        id: nodeId,
+        maxHealth,
+        dropAmount,
+        dropExp,
+        requirements,
+        drops
+      })
+    );
+  }
+
   const rooms = Array.from(roomById.values());
 
   const items = Array.from(itemById.values());
@@ -383,5 +433,5 @@ export async function loadGameDatabase() {
   const activeSkills = Array.from(activeSkillsById.values());
   const passiveSkills = Array.from(passiveSkillsById.values());
 
-  return { monsters, items, rooms, recipes, fusions, activeSkills, passiveSkills };
+  return { monsters, items, rooms, recipes, fusions, activeSkills, passiveSkills, worldResources };
 }

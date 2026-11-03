@@ -7,6 +7,7 @@ import { SortableTable } from './SortableTable.js';
 const COLUMNS = [
   { key: 'name', label: 'Resource / Item' },
   { key: 'dropCount', label: 'Drops', align: 'right' },
+  { key: 'gatherCount', label: 'Gathered', align: 'right' },
   { key: 'craftedCount', label: 'Recipes', align: 'right' },
   { key: 'usedInCount', label: 'Used In', align: 'right' },
   { key: 'description', label: 'Description', sortable: false }
@@ -38,6 +39,7 @@ const TEMPLATE = /* html */ `
         >
           <option value="ALL">All Resources</option>
           <option value="DROPPED">Dropped by Monsters</option>
+          <option value="GATHERED">Gathered in Overworld</option>
           <option value="CRAFTED">Crafted in Rooms</option>
           <option value="INGREDIENT">Used as Ingredient</option>
         </select>
@@ -75,6 +77,11 @@ const TEMPLATE = /* html */ `
           </span>
         </td>
         <td class="pa3 tr b near-white">
+          <span v-if="item.isGatherable" class="dib ph2 pv1 br-pill f7 bg-near-black ba b--white-10 light-green">
+            {{ item.gatherCount }}
+          </span>
+        </td>
+        <td class="pa3 tr b near-white">
           <span v-if="item.isCrafted" class="dib ph2 pv1 br-pill f7 bg-near-black ba b--white-10 light-purple">
             {{ item.craftedCount }}
           </span>
@@ -103,6 +110,7 @@ export const ItemTable = defineComponent({
         const matchesSource =
           selectedSource.value === 'ALL' ||
           (selectedSource.value === 'DROPPED' && item.isDropped) ||
+          (selectedSource.value === 'GATHERED' && item.isGatherable) ||
           (selectedSource.value === 'CRAFTED' && item.isCrafted) ||
           (selectedSource.value === 'INGREDIENT' && item.isIngredient);
         const matchesQuery =

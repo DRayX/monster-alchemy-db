@@ -138,3 +138,19 @@ export function parseGenericFusionToken(token) {
 export function formatSpawnerId(id) {
   return id.replace(/^Spawn\./i, '').replace(/\./g, ' · ');
 }
+
+/**
+ * Formats a world resource node tag ID into a readable display label by stripping the
+ * leading "WR_" prefix, splitting camelCase words, and joining sub-tokens with a middot.
+ * e.g. "WR_Stone_Big" -> "Stone · Big", "WR_BonePile" -> "Bone Pile"
+ *
+ * @param {string} id
+ * @returns {string}
+ */
+export function formatWorldResourceId(id) {
+  return id
+    .replace(/^WR_/i, '')
+    .replace(/([a-z])([A-Z])/g, '$1 $2')
+    .replace(/_/g, ' · ');
+}
+

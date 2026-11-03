@@ -5,6 +5,7 @@ import { db } from '../store.js';
 import { getRarityBadgeClass } from './ItemChip.js';
 import { CraftingRecipeCard } from './CraftingRecipeCard.js';
 import { WildSpawnCard } from './WildSpawnCard.js';
+import { WorldResourceCard } from './WorldResourceCard.js';
 import { NotFoundCard } from './NotFoundCard.js';
 
 const TEMPLATE = /* html */ `
@@ -129,6 +130,26 @@ const TEMPLATE = /* html */ `
             Not dropped by any monsters.
           </div>
 
+          <h2 class="f5 fw7 mt4 mb3 near-white">
+            Gathered From World Resources ({{ gatheredFromResources.length }})
+          </h2>
+
+          <div v-if="gatheredFromResources.length > 0" class="mb4">
+            <WorldResourceCard
+              v-for="entry in gatheredFromResources"
+              :key="entry.resource.id + '_' + entry.pool"
+              :resource="entry.resource"
+              :pool="entry.pool"
+            />
+          </div>
+
+          <div
+            v-else
+            class="pa3 bg-near-black ba b--white-10 br2 silver f6 mb4"
+          >
+            Not gatherable from overworld resource nodes.
+          </div>
+
           <h2 class="f5 fw7 mt0 mb3 near-white">
             Crafted In Room Recipes ({{ craftedInRecipes.length }})
           </h2>
@@ -210,7 +231,7 @@ const TEMPLATE = /* html */ `
 
 export const ItemDetail = defineComponent({
   name: 'ItemDetail',
-  components: { CraftingRecipeCard, WildSpawnCard, NotFoundCard },
+  components: { CraftingRecipeCard, WildSpawnCard, WorldResourceCard, NotFoundCard },
   setup() {
     const route = useRoute();
 
@@ -227,6 +248,19 @@ export const ItemDetail = defineComponent({
         for (const loot of mon.loots) {
           if (loot.item.id === itemId.value) {
             results.push({ monster: mon, rarity: loot.rarity });
+          }
+        }
+      }
+      return results;
+    });
+
+    const gatheredFromResources = computed(() => {
+      /** @type {Array<{ resource: import('../models/WorldResource.js').WorldResource, pool: 'Base' | 'Rare' | 'Epic' }>} */
+      const results = [];
+      for (const res of db.worldResources) {
+        for (const drop of res.drops) {
+          if (drop.item.id === itemId.value) {
+            results.push({ resource: res, pool: drop.pool });
           }
         }
       }
@@ -263,6 +297,7 @@ export const ItemDetail = defineComponent({
       itemId,
       item,
       droppedByMonsters,
+      gatheredFromResources,
       craftedInRecipes,
       usedInRecipes,
       toggleMonsterSpawns,

@@ -1,0 +1,41 @@
+[
+  {
+    "Type": "UserDefinedStruct",
+    "Name": "S_MonsterRequierement",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedStruct'",
+    "Package": "/Game/Blueprints/Core/S_MonsterRequierement",
+    "Properties": {
+      "Guid": "9572D81F-41378663-2CF605AC-376C04BE"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ByteProperty",
+        "Name": "MonsterType_4_2B53370E4FBFD66E93E967943FFDE32D",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'EMonsterType'",
+          "ObjectPath": "/Game/Blueprints/Monsters/EMonsterType.0"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "AttackType_5_755FD91E4E2826F03CA349A997BFDFDF",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'EAttackType'",
+          "ObjectPath": "/Game/Blueprints/Monsters/EAttackType.0"
+        }
+      }
+    ],
+    "StructFlags": 0,
+    "DefaultProperties": {
+      "MonsterType_4_2B53370E4FBFD66E93E967943FFDE32D": "EMonsterType::NewEnumerator5",
+      "AttackType_5_755FD91E4E2826F03CA349A997BFDFDF": "EAttackType::NewEnumerator0"
+    }
+  }
+]

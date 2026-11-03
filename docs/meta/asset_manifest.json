@@ -12,12 +12,15 @@
     "DT_ResourceData": "/Game/Sprites/Tables/DT_ResourceData.json",
     "DT_Rooms": "/Game/Blueprints/Tables/DT_Rooms.json",
     "DT_Spawns": "/Game/Blueprints/World/Spawners/DT_Spawns.json",
+    "DT_WorldResources": "/Game/Blueprints/Resources/DT_WorldResources.json",
     "RDT_DialogueDecoratorImage": "/Game/Blueprints/Widgets/Resources/TextStyle/RDT_DialogueDecoratorImage.json"
   },
   "structs": {
     "S_ActiveSkillTable": "/Game/Blueprints/Skills/S_ActiveSkillTable.json",
     "S_CraftRecipe": "/Game/Blueprints/Items/S_CraftRecipe.json",
+    "S_FoliageResourceParameters": "/Game/Blueprints/Resources/S_FoliageResourceParameters.json",
     "S_FusionTable": "/Game/Blueprints/Monsters/S_FusionTable.json",
+    "S_MonsterRequierement": "/Game/Blueprints/Core/S_MonsterRequierement.json",
     "S_MonsterRewards": "/Game/Blueprints/Monsters/S_MonsterRewards.json",
     "S_MonsterSkillLevelTable": "/Game/Blueprints/Skills/S_MonsterSkillLevelTable.json",
     "S_Monster_Table": "/Game/Blueprints/Monsters/S_Monster_Table.json",

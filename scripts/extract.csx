@@ -69,7 +69,8 @@ static readonly string[] WEBAPP_DATA_TABLE_NAMES = new[]
     "DT_ActiveSkills",
     "DT_PassiveSkills",
     "RDT_DialogueDecoratorImage",
-    "DT_Spawns"
+    "DT_Spawns",
+    "DT_WorldResources"
 };
 
 /// <summary>
