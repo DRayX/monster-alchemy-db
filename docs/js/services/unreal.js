@@ -68,16 +68,6 @@ export function extractUserDefinedStructName(ref) {
 }
 
 /**
- * Extracts the UserDefinedStruct name referenced by a DataTable's RowStruct property.
- * Returns null if the DataTable uses a native C++ engine struct (e.g. RichImageRow).
- * @param {UnrealDataTableAsset[]} rawTableJson
- * @returns {string | null}
- */
-export function getTableRowStructName(rawTableJson) {
-  return extractUserDefinedStructName(rawTableJson?.[0]?.Properties?.RowStruct);
-}
-
-/**
  * Normalizes a single Unreal property value according to its schema descriptor,
  * recursively normalizing nested `StructProperty`, `ArrayProperty`, and `MapProperty` values.
  *
@@ -169,7 +159,7 @@ function normalizeStructRow(rawRow, structName, structs, enumLookup) {
  * @returns {Record<string, NormalizedUnrealRow>}
  */
 export function extractNormalizedRows(rawTableJson, structs, enumLookup = {}) {
-  const structName = getTableRowStructName(rawTableJson);
+  const structName = extractUserDefinedStructName(rawTableJson?.[0]?.Properties?.RowStruct);
   if (structName && !structs[structName]) {
     throw new Error(`[Loader] No struct definition found for table struct '${structName}'`);
   }
