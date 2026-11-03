@@ -70,7 +70,6 @@ export async function loadGameDatabase() {
   /** @type {Map<string, ActiveSkill>} */
   const activeSkillsById = new Map();
   for (const [id, row] of Object.entries(normalized.DT_ActiveSkills || {})) {
-    if (!id || id === 'None') continue;
     activeSkillsById.set(
       id,
       new ActiveSkill({
@@ -91,7 +90,6 @@ export async function loadGameDatabase() {
   /** @type {Map<string, PassiveSkill>} */
   const passiveSkillsById = new Map();
   for (const [id, row] of Object.entries(normalized.DT_PassiveSkills || {})) {
-    if (!id || id === 'None') continue;
     passiveSkillsById.set(
       id,
       new PassiveSkill({
@@ -107,7 +105,6 @@ export async function loadGameDatabase() {
   const itemById = new Map();
 
   for (const [id, row] of Object.entries(normalized.DT_ResourceData || {})) {
-    if (!id || id === 'None') continue;
     itemById.set(
       id,
       new Item({
@@ -116,19 +113,6 @@ export async function loadGameDatabase() {
         description: row.Description || ''
       })
     );
-  }
-
-  /**
-   * @param {string} itemId
-   * @returns {Item}
-   */
-  function ensureItem(itemId) {
-    let existing = itemById.get(itemId);
-    if (!existing) {
-      existing = new Item({ id: itemId });
-      itemById.set(itemId, existing);
-    }
-    return existing;
   }
 
   // 2. Process Monsters & Rewards
@@ -143,21 +127,17 @@ export async function loadGameDatabase() {
     const name = row.Name || id;
     const reward = normalized.DT_MonsterRewards?.[id];
 
-    /** @type {Array<{ key: string | undefined, rarity: 'Common' | 'Rare' | 'Epic' }>} */
-    const lootSlots = [
-      { key: reward?.CommonLoot, rarity: 'Common' },
-      { key: reward?.RareLoot, rarity: 'Rare' },
-      { key: reward?.EpicLoot, rarity: 'Epic' }
-    ];
-
     /** @type {MonsterLoot[]} */
     const loots = [];
-    for (const slot of lootSlots) {
-      if (slot.key && slot.key !== 'None') {
-        const itm = ensureItem(slot.key);
-        itm.dropCount += 1;
-        loots.push(new MonsterLoot(slot.rarity, itm));
-      }
+    for (const [rarity, key] of [
+      ['Common', reward?.CommonLoot],
+      ['Rare', reward?.RareLoot],
+      ['Epic', reward?.EpicLoot]
+    ]) {
+      const itm = itemById.get(key);
+      if (!itm) continue;
+      itm.dropCount += 1;
+      loots.push(new MonsterLoot(rarity, itm));
     }
 
     const passiveSkill = passiveSkillsById.get(row.Passive) ?? null;
@@ -166,24 +146,16 @@ export async function loadGameDatabase() {
     /** @type {LearnedSkill[]} */
     const skills = [];
     if (skillRow) {
-      /** @type {Array<{ level: number, skillKey: string | undefined }>} */
-      const skillSlots = [
-        { level: 1, skillKey: skillRow.BaseSkill },
-        { level: skillRow.SkillLevel1 || 1, skillKey: skillRow.Skill1 },
-        { level: skillRow.SkillLevel2 || 1, skillKey: skillRow.Skill2 },
-        { level: skillRow.SkillLevel3 || 1, skillKey: skillRow.Skill3 },
-        { level: skillRow.SkillLevel4 || 1, skillKey: skillRow.Skill4 }
-      ];
-
-      for (const slot of skillSlots) {
-        if (slot.skillKey && slot.skillKey !== 'None') {
-          const skill =
-            activeSkillsById.get(slot.skillKey) ||
-            passiveSkillsById.get(slot.skillKey);
-          if (skill) {
-            skills.push(new LearnedSkill(slot.level, skill));
-          }
-        }
+      for (const [level, skillKey] of [
+        [1, skillRow.BaseSkill],
+        [skillRow.SkillLevel1, skillRow.Skill1],
+        [skillRow.SkillLevel2, skillRow.Skill2],
+        [skillRow.SkillLevel3, skillRow.Skill3],
+        [skillRow.SkillLevel4, skillRow.Skill4]
+      ]) {
+        const skill = activeSkillsById.get(skillKey) || passiveSkillsById.get(skillKey);
+        if (!skill) continue;
+        skills.push(new LearnedSkill(Number(level), skill));
       }
     }
 
@@ -276,27 +248,24 @@ export async function loadGameDatabase() {
     } else if (outputType === 'Structure') {
       outputName = roomById.get(resultId)?.name || resultId;
     } else {
-      const itm = ensureItem(resultId);
+      const itm = itemById.get(resultId);
+      if (!itm) continue;
       itm.craftedCount += 1;
       outputName = itm.name;
     }
 
-    /** @type {Array<{ resId: string | undefined, amt: number | undefined }>} */
-    const rawSlots = [
-      { resId: row.Resource1, amt: row.Amount1 },
-      { resId: row.Resource2, amt: row.Amount2 },
-      { resId: row.Resource3, amt: row.Amount3 },
-      { resId: row.Resource4, amt: row.Amount4 }
-    ];
-
     /** @type {RecipeIngredient[]} */
     const ingredients = [];
-    for (const slot of rawSlots) {
-      if (slot.resId && slot.resId !== 'None' && slot.amt && slot.amt > 0) {
-        const ingItem = ensureItem(slot.resId);
-        ingItem.usedInCount += 1;
-        ingredients.push(new RecipeIngredient(slot.amt, ingItem));
-      }
+    for (const [resId, amt] of [
+      [row.Resource1, row.Amount1],
+      [row.Resource2, row.Amount2],
+      [row.Resource3, row.Amount3],
+      [row.Resource4, row.Amount4]
+    ]) {
+      const ingItem = itemById.get(resId);
+      if (!ingItem) continue;
+      ingItem.usedInCount += 1;
+      ingredients.push(new RecipeIngredient(Number(amt), ingItem));
     }
 
     /** @type {CraftingRecipe} */
