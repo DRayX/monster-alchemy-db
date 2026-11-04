@@ -46,7 +46,7 @@ const TEMPLATE = /* html */ `
       <tbody class="lh-copy">
         <tr
           v-for="row in sortedRows"
-          :key="String(getCellValue(row, rowKey))"
+          :key="getCellValue(row, rowKey)"
           class="bb b--white-10 hover-bg-black-30"
         >
           <slot name="row" :row="row" />
