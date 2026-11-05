@@ -8,9 +8,12 @@ An interactive web database for **Monster Alchemy**, parsed directly from raw Un
 
 ## Features
 
+- **Interactive World Map**: Interactive overworld map powered by Leaflet 2.0 and custom `SimpleCRS` coordinate projection. Maps 16,500+ overworld POIs (chests, obelisks, towers, monster spawners, recipe scrolls, coliseums, dungeon doors, shops, inns, dialogue NPCs, and common trees/rocks) with marker clustering, viewport culling, real-time coordinate inspection, search filtering, and interactive drop table / encounter popups.
 - **Monster Bestiary**: Full reference of all monsters with elemental affinities, attack types, star-rated tiers, complete base stats (HP, Soul, Strength, Defense, Mind, Agility), stat totals, passive traits, active skill progression, loot drops, and summoning recipes.
+- **Wild Monster Encounters**: Encounter probabilities, day/night conditions, and level ranges mapped to overworld spawners across the archipelago with direct map pin cross-references.
 - **Chimeric Chamber / Fusions**: Complete chimeric fusion database supporting both explicit monster fusions and generic (elemental / attack type) fusions with interactive drill-down cards and matching trait badges.
-- **Resources & Alchemical Items**: Searchable catalog of reagents, materials, and items detailing monster drop sources, crafting outputs, and recipe ingredient usages.
+- **Resources & Alchemical Items**: Searchable catalog of reagents, materials, and items detailing monster drop sources, crafting outputs, world gathering nodes, and recipe ingredient usages.
+- **World Gathering Nodes**: Overworld gathering resource nodes with companion monster trait requirements, harvest tools, and drop rate pools.
 - **Crafting Rooms**: Multi-room crafting catalog detailing construction costs, recipes, inputs, and yield counts.
 - **Home Page Dashboard**: Quick navigation, Featured Monsters showcase, and statistical distribution breakdowns across Elements, Attack Types, and Tiers.
 - **Sortable & Filterable Tables**: Sortable data tables with original order toggle, real-time multi-facet filtering (search, elements, attack types, tiers, item sources), and sticky headers.
@@ -19,8 +22,11 @@ An interactive web database for **Monster Alchemy**, parsed directly from raw Un
 
 ## Technical Architecture
 
-- **Zero-Build Compilation**: Uses native browser ES modules (`<script type="module">`) and `<script type="importmap">` to load Vue 3 and Vue Router directly from CDNs. No bundler (Vite, Webpack, Rollup) required. Ready to serve as static files on GitHub Pages or any static HTTP host.
+- **Zero-Build Compilation**: Uses native browser ES modules (`<script type="module">`) and `<script type="importmap">` to load Vue 3, Vue Router, Leaflet 2.0, and Leaflet.markercluster directly from CDNs. No bundler (Vite, Webpack, Rollup) required. Ready to serve as static files on GitHub Pages or any static HTTP host.
+- **Modern Leaflet 2.0 & MarkerCluster 2.0**: Built with Leaflet 2.0.0-beta.1 native ES modules using pure ES6 class constructors (`LeafletMap`, `Marker`, `DivIcon`, `ImageOverlay`, `SimpleCRS`, `MarkerClusterGroup`), completely eliminating legacy factory functions (`L.*`) and third-party bundler shims.
 - **Direct Unreal Engine Data Normalization**: Parses real Unreal Engine DataTables (`DT_*.json`), UserDefinedStruct definitions (`S_*.json`), and UserDefinedEnums (`E*.json`) in-browser on startup without mutating source files. Dynamically inspects each DataTable's native `RowStruct` header to automatically bind the correct schema.
+- **Blueprint Hierarchy & CDO Property Normalization**: Walks Unreal Engine `UBlueprintGeneratedClass` inheritance hierarchies (`SuperStruct` / `Super`) at runtime, dynamically merging Class Default Object (CDO) default properties and unwrapping nested struct, array, enum, and text descriptors via `normalizeBlueprintProperties()`.
+- **Case-Insensitive `FName` Lookups**: Implements `CaseInsensitiveMap` to mirror Unreal Engine's native `FName` comparison semantics across all database entity indexes while preserving canonical key casing.
 - **Dynamic Asset Manifest & Metadata Snapshot**: Utilizes `docs/meta/asset_manifest.json` as the single source of truth for all canonical asset URLs (tables, structs, enums, monster avatars, sprite sheets, resource icons, room icons, type icons, and stat icons). A build snapshot (`docs/meta/build_info.json`) dynamically supplies the current Steam build ID and release metadata to the UI.
 - **Synchronous Visual Resolvers**: Monster profile images, idle sprite sheets, item icons, and crafting room icons are resolved synchronously directly inside domain model constructors with transparent fallback support, eliminating broken images and async loader cascades.
 - **Strict JSDoc Type Checking**: Every JavaScript file uses `// @ts-check` with comprehensive JSDoc type annotations verified with TypeScript (`tsc -p jsconfig.json --noEmit`) using ES2025 JSON import attributes (`with { type: 'json' }`).
@@ -43,30 +49,48 @@ docs/
 └── js/
     ├── app.js                    # Application bootstrap and root layout
     ├── router.js                 # Vue Router routes, document titles, and scroll reset
-    ├── store.js                  # Reactive global database store (`db`)
+    ├── store.js                  # Reactive global database store (`db`) and fast indexes (`dbIndexes`)
     ├── types.d.ts                # Shared TypeScript type declarations
-    ├── models/                   # Domain models (Monster, Item, Room, Recipe, Skill)
+    ├── models/                   # Domain models
+    │   ├── Item.js               # Items & reagents
+    │   ├── Location.js           # Zones, landmarks & map markers
+    │   ├── Monster.js            # Monsters, stats, loots & wild spawns
+    │   ├── Recipe.js             # Crafting & fusion recipes
+    │   ├── Room.js               # Alchemy crafting rooms
+    │   ├── Skill.js              # Active & passive skills
+    │   ├── WorldPoi.js           # Overworld POIs & actors
+    │   └── WorldResource.js      # Gatherable harvest nodes
     ├── services/
     │   ├── assets.js             # Game asset & sprite URL resolvers (backed by manifest)
-    │   ├── formatters.js         # Skill description & type badge formatters
-    │   ├── unreal.js             # Dynamic DataTable, Struct & Enum schema normalization
-    │   └── loader.js             # Domain entity builder & database loader
+    │   ├── formatters.js         # Skill description, rarity, and badge formatters
+    │   ├── loader.js             # Domain entity builder & database loader
+    │   ├── mapUtils.js           # Coordinate conversion, category metadata, and cluster helpers
+    │   └── unreal.js             # Dynamic DataTable, Struct, Blueprint & Enum normalization
     └── components/               # Vue UI components
-        ├── AppNavbar.js          # Sidebar navigation (with dynamic build ID)
-        ├── HomePage.js           # Dashboard & distributions
-        ├── MonsterTable.js       # Monsterpedia data table
-        ├── MonsterDetail.js      # Monster profile, stats, and sprite sheet
-        ├── ItemTable.js          # Items catalog
-        ├── ItemDetail.js         # Resource details & usages
-        ├── RoomDetail.js         # Crafting room & fusion recipes
-        ├── SortableTable.js      # Generic sortable data table
-        ├── TypeBadge.js          # Element & attack type badges
-        ├── ItemChip.js           # Item pill chips
-        ├── StatBar.js            # Visual monster stat bar
+        ├── AppNavbar.js          # Navigation bar with dynamic build ID & live POI counter
         ├── CraftingRecipeCard.js # Shared room crafting recipe card
         ├── FusionCard.js         # Expandable fusion preview card
         ├── FusionOperandBadge.js # Monster or generic trait fusion operand badge
-        └── NotFoundCard.js       # 404 entity fallback card
+        ├── HomePage.js           # Dashboard & distributions
+        ├── ItemChip.js           # Item pill chips
+        ├── ItemDetail.js         # Resource details, drop sources & crafting usages
+        ├── ItemTable.js          # Items catalog
+        ├── MonsterDetail.js      # Monster profile, stats, skills, spawns, and sprites
+        ├── MonsterTable.js       # Monsterpedia data table
+        ├── NotFoundCard.js       # 404 entity fallback card
+        ├── RoomDetail.js         # Crafting room & fusion recipes
+        ├── SortableTable.js      # Generic sortable data table
+        ├── StatBar.js            # Visual monster stat bar
+        ├── TypeBadge.js          # Element & attack type badges
+        ├── WildSpawnCard.js      # Wild spawner encounter rate card
+        ├── WorldResourceCard.js  # Overworld harvest node & companion requirement card
+        └── map/                  # Interactive world map components
+            ├── EncounterPopups.js   # Spawner and monster encounter popups
+            ├── InteractionPopups.js # Chest, obelisk, tower, shop, and NPC popups
+            ├── PopupShell.js        # Shared modal shell with thin scrollbar
+            ├── WorldMap.js          # Leaflet map container, layers, and search drawer
+            └── WorldMapPopup.js     # Polymorphic popup router
+```
 
 scripts/
 ├── download.csx                  # Steam depot downloader (SteamKit2)
@@ -138,7 +162,7 @@ pnpm mappings -- --exe ./depot/MonsterAlchemy/Binaries/Win64/MonsterAlchemy-Win6
 
 ### 3. Extract Game Assets & Build Manifest (`extract.csx`)
 
-Mounts the Unreal Engine `.pak` / `.ucas` / `.utoc` containers using [CUE4Parse](https://github.com/FabianFG/CUE4Parse) and the `.usmap` mapping file. Extracts DataTables, Structs, Enums, UI icons, monster profile icons, and sprite sheets to `./docs/extracted/`, then builds the unified canonical manifest at `docs/meta/asset_manifest.json`.
+Mounts the Unreal Engine `.pak` / `.ucas` / `.utoc` containers using [CUE4Parse](https://github.com/FabianFG/CUE4Parse) and the `.usmap` mapping file. Extracts DataTables, Structs, Enums, Blueprint generated classes, overworld actors/POIs across World Partition cells (`MainLevel_Pois.json`), map textures, UI icons, monster profile icons, and sprite sheets to `./docs/extracted/`, then builds the unified canonical manifest at `docs/meta/asset_manifest.json`.
 
 ```bash
 pnpm extract

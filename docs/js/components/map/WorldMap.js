@@ -12,8 +12,14 @@ import {
   getCurrentInstance
 } from 'vue';
 import { useRoute } from 'vue-router';
-import * as L from 'leaflet';
-import { markerClusterGroup } from 'leaflet.markercluster';
+import {
+  LeafletMap,
+  Marker,
+  DivIcon,
+  ImageOverlay,
+  SimpleCRS
+} from 'leaflet';
+import { MarkerClusterGroup } from 'leaflet.markercluster';
 import { db, dbIndexes } from '../../store.js';
 import {
   WORLD_MAP_URL,
@@ -29,7 +35,8 @@ import {
   getPoiLocationId,
   getPoiCustomIcon,
   getSpawnerEncounters,
-  isCountedPoi
+  isCountedPoi,
+  isClusteredCategory
 } from '../../services/mapUtils.js';
 import { WorldMapPopup } from './WorldMapPopup.js';
 
@@ -78,22 +85,13 @@ const TEMPLATE = /* html */ `
 
       <!-- Search Input & Reset Button -->
       <div class="mb3">
-        <div class="relative mb2">
-          <input
-            v-model="searchQuery"
-            type="search"
-            placeholder="Filter monsters, items..."
-            class="w-100 bg-near-black near-white ba b--white-20 br2 ph3 pv2 f7 outline-0 focus-b--purple box-border"
-          />
-          <button
-            v-if="searchQuery"
-            @click="searchQuery = ''"
-            type="button"
-            class="absolute right-0 top-0 bottom-0 bn bg-transparent silver hover-white pointer ph2 f7"
-          >
-            ✕
-          </button>
-        </div>
+        <input
+          v-model="searchQuery"
+          type="search"
+          placeholder="Filter monsters, items..."
+          class="input-reset w-100 bg-near-black near-white ba b--white-20 br2 ph3 pv2 f7 outline-0 focus-b--purple box-border mb2"
+          aria-label="Filter map POIs"
+        />
         <button
           type="button"
           @click="resetView"
@@ -270,15 +268,15 @@ export const WorldMap = defineComponent({
     /** @type {import('vue').Ref<{ x: number, y: number } | null>} */
     const hoverCoords = ref(null);
 
-    /** @type {L.Map | null} */
+    /** @type {LeafletMap | null} */
     let map = null;
-    /** @type {Map<string, BatchLayerGroup | L.MarkerClusterGroup>} */
+    /** @type {Map<string, BatchLayerGroup | MarkerClusterGroup>} */
     const categoryLayers = new Map();
-    /** @type {Map<string, L.Marker[]>} */
+    /** @type {Map<string, Marker[]>} */
     const categoryMarkers = new Map();
-    /** @type {Map<string, L.Marker>} */
+    /** @type {Map<string, Marker>} */
     const markerByPoiId = new Map();
-    /** @type {L.Marker | null} */
+    /** @type {Marker | null} */
     let activeMarker = null;
 
     const currentInstance = getCurrentInstance();
@@ -304,19 +302,20 @@ export const WorldMap = defineComponent({
      * Creates an isolated MarkerClusterGroup for a specific dense category.
      *
      * @param {string} category
-     * @returns {L.MarkerClusterGroup}
+     * @returns {MarkerClusterGroup}
      */
     function createClusterGroup(category) {
-      return markerClusterGroup({
+      const isDense = Boolean(CATEGORIES[category]?.dense);
+      return new MarkerClusterGroup({
         maxClusterRadius: 40,
         disableClusteringAtZoom: 1,
-        removeOutsideVisibleBounds: false,
+        removeOutsideVisibleBounds: isDense,
         showCoverageOnHover: false,
         zoomToBoundsOnClick: true,
         spiderfyOnMaxZoom: true,
         iconCreateFunction(/** @type {import('leaflet.markercluster').MarkerCluster} */ cluster) {
           const count = cluster.getChildCount();
-          return L.divIcon({
+          return new DivIcon({
             className: 'custom-cluster-marker',
             html: `
               <div class="relative flex items-center justify-center pointer" style="width: 28px; height: 28px;">
@@ -337,7 +336,7 @@ export const WorldMap = defineComponent({
 
     /**
      * Activates pin styling on the specified marker and deactivates the previous one.
-     * @param {L.Marker} marker
+     * @param {Marker} marker
      */
     function activateMarker(marker) {
       if (activeMarker && activeMarker !== marker) {
@@ -363,14 +362,14 @@ export const WorldMap = defineComponent({
     });
 
     /**
-     * Instantiates an L.Marker and wires up its popups and DOM interactions.
+     * Instantiates a Marker and wires up its popups and DOM interactions.
      * @param {import('../../models/WorldPoi.js').WorldPoi} poi
-     * @returns {L.Marker}
+     * @returns {Marker}
      */
     function createMarker(poi) {
       const latLng = worldToLatLng(poi.location);
       const icon = createMarkerIcon(poi);
-      const marker = L.marker(latLng, { icon });
+      const marker = new Marker(latLng, { icon });
 
       if (poi.category !== 'zone') {
         marker.bindPopup(() => mountPopup(poi), {
@@ -395,7 +394,7 @@ export const WorldMap = defineComponent({
     /**
      * Retrieves or instantiates cached markers for a category on-demand.
      * @param {string} category
-     * @returns {L.Marker[]}
+     * @returns {Marker[]}
      */
     function getCategoryMarkers(category) {
       let markers = categoryMarkers.get(category);
@@ -410,12 +409,12 @@ export const WorldMap = defineComponent({
     /**
      * Retrieves or creates the dedicated Leaflet layer group for a category.
      * @param {string} category
-     * @returns {BatchLayerGroup | L.MarkerClusterGroup}
+     * @returns {BatchLayerGroup | MarkerClusterGroup}
      */
     function getCategoryLayer(category) {
       let layer = categoryLayers.get(category);
       if (!layer) {
-        layer = CATEGORIES[category]?.clustered
+        layer = isClusteredCategory(category)
           ? createClusterGroup(category)
           : new BatchLayerGroup();
         categoryLayers.set(category, layer);
@@ -433,7 +432,7 @@ export const WorldMap = defineComponent({
       layer.clearLayers();
 
       const markers = getCategoryMarkers(category);
-      /** @type {L.Marker[]} */
+      /** @type {Marker[]} */
       let visible = markers;
 
       if (q) {
@@ -451,16 +450,16 @@ export const WorldMap = defineComponent({
     }
 
     /**
-     * Generates an L.DivIcon for a specific POI.
+     * Generates a DivIcon for a specific POI.
      *
      * @param {import('../../models/WorldPoi.js').WorldPoi} poi
      * @param {boolean} [isActive]
-     * @returns {L.DivIcon}
+     * @returns {DivIcon}
      */
     function createMarkerIcon(poi, isActive = false) {
       if (poi.category === 'zone') {
         const zoneName = poi.label;
-        return L.divIcon({
+        return new DivIcon({
           className: 'map-zone-label-container',
           html: `<div class="map-zone-label">${zoneName}</div>`,
           iconSize: [0, 0],
@@ -471,7 +470,7 @@ export const WorldMap = defineComponent({
       const customIcon = getPoiCustomIcon(poi);
       const activeClass = isActive ? 'pin-active' : '';
 
-      return L.divIcon({
+      return new DivIcon({
         className: 'custom-map-pin',
         html: TEMPLATE_MARKER_ICON(poi.category, customIcon, activeClass),
         iconSize: [24, 24],
@@ -489,11 +488,11 @@ export const WorldMap = defineComponent({
     const totalMarkerCount = computed(() => mapPois.value.filter(isCountedPoi).length);
 
     const totalCategoryCount = computed(
-      () => Object.values(CATEGORIES).filter((cat) => cat.counted !== false).length
+      () => Object.values(CATEGORIES).filter((cat) => !cat.dense).length
     );
 
     const activeCategoryCount = computed(
-      () => selectedCategories.value.filter((id) => CATEGORIES[id]?.counted !== false).length
+      () => selectedCategories.value.filter((id) => !CATEGORIES[id]?.dense).length
     );
 
     /**
@@ -710,8 +709,8 @@ export const WorldMap = defineComponent({
     onMounted(() => {
       if (!mapContainer.value) return;
 
-      map = L.map(mapContainer.value, {
-        crs: L.CRS.Simple,
+      map = new LeafletMap(mapContainer.value, {
+        crs: SimpleCRS,
         minZoom: -3,
         maxZoom: 2,
         zoomSnap: 0.5,
@@ -719,12 +718,12 @@ export const WorldMap = defineComponent({
       });
 
       // Overlay the 4096x4096 map texture
-      /** @type {L.LatLngBoundsExpression} */
+      /** @type {import('leaflet').LatLngBoundsExpression} */
       const mapBounds = [
         [MAP_BOUNDS.minY, MAP_BOUNDS.minX],
         [MAP_BOUNDS.maxY, MAP_BOUNDS.maxX]
       ];
-      L.imageOverlay(WORLD_MAP_URL, mapBounds).addTo(map);
+      new ImageOverlay(WORLD_MAP_URL, mapBounds).addTo(map);
 
       // Restrict camera bounds so user cannot pan indefinitely into the void
       map.setMaxBounds([

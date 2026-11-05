@@ -141,12 +141,3 @@ export interface WorldBattleMember {
   mutation: string;
 }
 
-declare module 'leaflet.markercluster' {
-  import * as L from 'leaflet';
-  export function markerClusterGroup(options?: L.MarkerClusterGroupOptions): L.MarkerClusterGroup;
-  export class MarkerClusterGroup extends L.FeatureGroup {}
-  export class MarkerCluster extends L.Marker {
-    getChildCount(): number;
-  }
-}
-

@@ -1,5 +1,5 @@
 // @ts-check
-import * as L from 'leaflet';
+import { LayerGroup, Layer, Marker } from 'leaflet';
 import { db, dbIndexes } from '../store.js';
 import { WorldPoi } from '../models/WorldPoi.js';
 import { CaseInsensitiveMap } from './unreal.js';
@@ -36,7 +36,7 @@ export function spriteStyle(position, aspectRatio, translateY = '') {
 
 /**
  * Category metadata for filter buttons, marker icon lookups, and category-level styles.
- * @type {Record<string, { label: string, icon: string, extraStyle?: string, dense?: boolean, canBeHidden?: boolean, counted?: boolean, clustered?: boolean }>}
+ * @type {Record<string, { label: string, icon: string, extraStyle?: string, dense?: boolean, canBeHidden?: boolean, clustered?: boolean }>}
  */
 export const CATEGORIES = {
   zone: { label: 'Zones', icon: MAP_ICON },
@@ -64,7 +64,7 @@ export const CATEGORIES = {
   coliseum: { label: 'Coliseums', icon: getItemIcon('Emblem_Blades') },
   spawner: { label: 'Spawners', icon: SPAWNER_ICON, clustered: true },
   resource: { label: 'Resources', icon: getIcon('Work'), clustered: true },
-  foliage: { label: 'Common Trees & Rocks', icon: getItemIcon('Wood'), clustered: true, dense: true, counted: false }
+  foliage: { label: 'Common Trees & Rocks', icon: getItemIcon('Wood'), dense: true }
 };
 
 /**
@@ -76,7 +76,19 @@ export const CATEGORIES = {
  */
 export function isCountedPoi(poi) {
   const cat = CATEGORIES[poi.category];
-  return cat !== undefined && cat.counted !== false;
+  return Boolean(cat && !cat.dense);
+}
+
+/**
+ * Returns whether a category uses marker clustering.
+ * Dense ambient layers and explicitly clustered categories are clustered.
+ *
+ * @param {string} category
+ * @returns {boolean}
+ */
+export function isClusteredCategory(category) {
+  const cat = CATEGORIES[category];
+  return Boolean(cat && (cat.clustered || cat.dense));
 }
 
 /** @type {Record<string, string>} */
@@ -102,10 +114,10 @@ export const CATEGORY_COLORS = {
  * LayerGroup subclass providing addLayers() for batch addition,
  * establishing interface parity with MarkerClusterGroup.
  */
-export class BatchLayerGroup extends L.LayerGroup {
+export class BatchLayerGroup extends LayerGroup {
   /**
    * Adds an array of layers to the group.
-   * @param {L.Layer[]} layers
+   * @param {Layer[]} layers
    * @returns {this}
    */
   addLayers(layers) {
@@ -118,7 +130,7 @@ export class BatchLayerGroup extends L.LayerGroup {
   /**
    * Centers the map on the layer and invokes the callback once movement finishes,
    * establishing interface and behavioral parity with MarkerClusterGroup.zoomToShowLayer().
-   * @param {L.Marker} layer
+   * @param {Marker} layer
    * @param {() => void} [callback]
    */
   zoomToShowLayer(layer, callback) {
@@ -257,7 +269,7 @@ export const MAP_BOUNDS = Object.freeze({
 
 /**
  * Converts Unreal world coordinates { x, y } to Leaflet LatLng [lat, lng]
- * for a Leaflet map using L.CRS.Simple and bounds [[0, 0], [4096, 4096]].
+ * for a Leaflet map using SimpleCRS and bounds [[0, 0], [4096, 4096]].
  *
  * In Leaflet CRS.Simple:
  * - lat: vertical axis (0 is bottom/South, 4096 is top/North).

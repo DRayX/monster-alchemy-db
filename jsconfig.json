@@ -7,15 +7,6 @@
     "checkJs": true,
     "noEmit": true,
     "strict": true,
-    "baseUrl": "./docs",
-    "paths": {
-      "vue": ["./node_modules/vue/dist/vue.d.ts"],
-      "vue-router": ["./node_modules/vue-router/dist/vue-router.d.ts"],
-      "leaflet": [
-        "../node_modules/@types/leaflet/index.d.ts",
-        "../node_modules/@types/leaflet.markercluster/index.d.ts"
-      ]
-    },
     "lib": ["ES2024", "DOM", "DOM.Iterable"]
   },
   "include": [
