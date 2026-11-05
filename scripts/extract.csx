@@ -410,8 +410,7 @@ ExtractDataTablesAndTypesAsync(DefaultFileProvider provider, Dictionary<string, 
 
             DiscoverDependencies(primaryExport, pendingQueue, seenPackages);
 
-            var jsonStr = JsonConvert.SerializeObject(exports, Formatting.Indented);
-            await SaveFileAsync(Path.Combine(outputDir, lookupPath + ".json"), jsonStr);
+            await SaveJsonAsync(Path.Combine(outputDir, lookupPath + ".json"), exports);
 
             var assetName = Path.GetFileName(packagePath);
             var canonicalPackagePath = "/" + lookupPath + ".json";
