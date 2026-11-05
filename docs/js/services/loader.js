@@ -2,15 +2,25 @@
 import {
   DATA_TABLE_URLS,
   STRUCT_URLS,
-  ENUM_URLS
+  ENUM_URLS,
+  BLUEPRINT_URLS,
+  WORLD_POIS_URL
 } from './assets.js';
-import { parseUnrealEnum, extractNormalizedRows } from './unreal.js';
+import {
+  parseUnrealEnum,
+  extractNormalizedRows,
+  normalizeBlueprintProperties,
+  CaseInsensitiveMap
+} from './unreal.js';
 import { Monster, MonsterLoot, LearnedSkill, MonsterWildSpawn } from '../models/Monster.js';
 import { Item } from '../models/Item.js';
 import { Room } from '../models/Room.js';
 import { CraftingRecipe, RecipeIngredient, FusionOperand, FusionRecipe, GenericFusionInputs } from '../models/Recipe.js';
 import { ActiveSkill, PassiveSkill } from '../models/Skill.js';
 import { WorldResource, WorldResourceRequirement, WorldResourceDrop } from '../models/WorldResource.js';
+import { Location } from '../models/Location.js';
+import { WorldPoi } from '../models/WorldPoi.js';
+import { unrollFoliageComponent, resolveColiseumLocations, consolidateZoneCentroids } from './mapUtils.js';
 
 /**
  * @typedef {import('../types.js').NormalizedUnrealRow} NormalizedUnrealRow
@@ -45,14 +55,18 @@ async function loadJsonMap(urls) {
 
 /**
  * Loads and processes all game tables, structs, and enums from `./extracted/Game/`.
- * @returns {Promise<{ monsters: Monster[], items: Item[], rooms: Room[], recipes: CraftingRecipe[], fusions: FusionRecipe[], activeSkills: ActiveSkill[], passiveSkills: PassiveSkill[], worldResources: WorldResource[] }>}
+ * @returns {Promise<{ monsters: Monster[], items: Item[], rooms: Room[], recipes: CraftingRecipe[], fusions: FusionRecipe[], activeSkills: ActiveSkill[], passiveSkills: PassiveSkill[], worldResources: WorldResource[], locations: Location[], worldPois: WorldPoi[] }>}
  */
 export async function loadGameDatabase() {
-  const [structs, enums, tables] = await Promise.all([
+  const [structs, enums, tables, blueprints, rawPoisJson] = await Promise.all([
     loadJsonMap(STRUCT_URLS),
     loadJsonMap(ENUM_URLS),
-    loadJsonMap(DATA_TABLE_URLS)
+    loadJsonMap(DATA_TABLE_URLS),
+    loadJsonMap(BLUEPRINT_URLS),
+    loadJson(WORLD_POIS_URL)
   ]);
+
+  const schemas = { ...structs, ...blueprints };
 
   /** @type {Record<string, string>} */
   const enumLookup = {};
@@ -380,6 +394,8 @@ export async function loadGameDatabase() {
   // 6. Process World Resources
   /** @type {WorldResource[]} */
   const worldResources = [];
+  /** @type {Map<string, WorldResource>} */
+  const worldResourcesById = new Map();
 
   for (const [nodeId, row] of Object.entries(normalized.DT_WorldResources || {})) {
     const maxHealth = row.ResourceMaxHealth ?? 0;
@@ -414,17 +430,69 @@ export async function loadGameDatabase() {
       }
     }
 
-    worldResources.push(
-      new WorldResource({
-        id: nodeId,
-        maxHealth,
-        dropAmount,
-        dropExp,
-        requirements,
-        drops
+    const res = new WorldResource({
+      id: nodeId,
+      maxHealth,
+      dropAmount,
+      dropExp,
+      requirements,
+      drops
+    });
+    worldResources.push(res);
+    worldResourcesById.set(nodeId, res);
+  }
+
+  // 7. Process Locations
+  /** @type {Location[]} */
+  const locations = [];
+  /** @type {CaseInsensitiveMap<string>} */
+  const locationsById = new CaseInsensitiveMap();
+  for (const [id, row] of Object.entries(normalized.DT_Locations || {})) {
+    const loc = new Location({ id, name: row.Text });
+    locations.push(loc);
+    locationsById.set(id, loc.name);
+  }
+
+  // 8. Process World POIs
+  /** @type {WorldPoi[]} */
+  const worldPois = [];
+
+  for (const rawPoi of rawPoisJson || []) {
+    const location = rawPoi.Location
+      ? { x: rawPoi.Location.X, y: rawPoi.Location.Y, z: rawPoi.Location.Z }
+      : null;
+    if (!location) continue;
+
+    // Foliage components: unroll instances dynamically and normalize world coordinates at runtime
+    const foliageNodes = unrollFoliageComponent(rawPoi, worldResourcesById);
+    if (foliageNodes) {
+      worldPois.push(...foliageNodes);
+      continue;
+    }
+
+    const tag = rawPoi.Properties?.Tag?.TagName || '';
+    const properties = normalizeBlueprintProperties(
+      rawPoi.Properties || {},
+      rawPoi.Type,
+      schemas,
+      enumLookup
+    );
+
+    worldPois.push(
+      new WorldPoi({
+        id: rawPoi.Name,
+        type: rawPoi.Type,
+        label: rawPoi.ActorLabel,
+        cell: rawPoi.Cell,
+        location,
+        tag,
+        properties
       })
     );
   }
+
+  resolveColiseumLocations(worldPois);
+  const consolidatedPois = consolidateZoneCentroids(worldPois, locationsById);
 
   const rooms = Array.from(roomById.values());
 
@@ -433,5 +501,16 @@ export async function loadGameDatabase() {
   const activeSkills = Array.from(activeSkillsById.values());
   const passiveSkills = Array.from(passiveSkillsById.values());
 
-  return { monsters, items, rooms, recipes, fusions, activeSkills, passiveSkills, worldResources };
+  return {
+    monsters,
+    items,
+    rooms,
+    recipes,
+    fusions,
+    activeSkills,
+    passiveSkills,
+    worldResources,
+    locations,
+    worldPois: consolidatedPois
+  };
 }

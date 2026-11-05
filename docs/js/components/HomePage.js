@@ -1,6 +1,7 @@
 // @ts-check
 import { computed, defineComponent } from 'vue';
 import { db } from '../store.js';
+import { isCountedPoi } from '../services/mapUtils.js';
 import { TypeBadge } from './TypeBadge.js';
 import { ItemChip } from './ItemChip.js';
 
@@ -29,9 +30,15 @@ const TEMPLATE = /* html */ `
         </RouterLink>
         <RouterLink
           to="/items"
-          class="link dib ph3 pv2 br2 bg-mid-gray near-white ba b--white-20 b f6 mb2 dim"
+          class="link dib ph3 pv2 br2 bg-mid-gray near-white ba b--white-20 b f6 mr3 mb2 dim"
         >
           Browse Resources &amp; Items ({{ db.items.length }})
+        </RouterLink>
+        <RouterLink
+          to="/map"
+          class="link dib ph3 pv2 br2 bg-mid-gray near-white ba b--white-20 b f6 mb2 dim"
+        >
+          Interactive World Map ({{ poiCount }})
         </RouterLink>
       </div>
     </header>
@@ -55,7 +62,16 @@ const TEMPLATE = /* html */ `
         <div class="f7 gray">Materials, Reagents, &amp; Consumables</div>
       </RouterLink>
 
-      <div class="flex-auto bg-dark-gray ba b--white-10 br3 pa3 mh2-ns">
+      <RouterLink
+        to="/map"
+        class="flex-auto link bg-dark-gray ba b--white-10 hover-b--purple br3 pa3 mb3 mb0-ns mh2-ns pointer dim"
+      >
+        <div class="f7 silver ttu tracked">World Map</div>
+        <div class="f2 fw8 near-white mv1">{{ poiCount }}</div>
+        <div class="f7 gray">POIs Across {{ db.locations.length }} Regions</div>
+      </RouterLink>
+
+      <div class="flex-auto bg-dark-gray ba b--white-10 br3 pa3 mb3 mb0-ns mh2-ns">
         <div class="f7 silver ttu tracked">Recipes</div>
         <div class="f2 fw8 near-white mv1">{{ totalRecipes }}</div>
         <div class="f7 gray">Across {{ db.rooms.length }} Alchemical Rooms</div>
@@ -204,12 +220,17 @@ export const HomePage = defineComponent({
         .filter((m) => m !== undefined)
     );
 
+    const poiCount = computed(() =>
+      db.worldPois.filter(isCountedPoi).length
+    );
+
     return {
       db,
       elementCounts,
       distributionSections,
       totalRecipes,
-      featuredMonsters
+      featuredMonsters,
+      poiCount
     };
   },
   template: TEMPLATE

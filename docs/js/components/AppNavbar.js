@@ -1,11 +1,13 @@
 // @ts-check
 import { defineComponent, ref, computed } from 'vue';
 import { db } from '../store.js';
+import { isCountedPoi } from '../services/mapUtils.js';
 import {
   MONSTER_MANAGER_ICON,
   PLAYER_ICON,
   TOWER_ICON,
-  SHOP_ICON
+  SHOP_ICON,
+  MAP_ICON
 } from '../services/assets.js';
 import buildInfo from '../../meta/build_info.json' with { type: 'json' };
 
@@ -79,6 +81,22 @@ const TEMPLATE = /* html */ `
         </span>
       </RouterLink>
 
+      <RouterLink
+        to="/map"
+        active-class="bg-purple white b"
+        class="flex items-center pa2 ph3 br2 link near-white hover-bg-black-30 mb1"
+      >
+        <img
+          :src="MAP_ICON"
+          alt="World Map"
+          class="mr2 dib v-mid flex-shrink-0 pixelated icon-18"
+        />
+        <span class="flex-auto f6">World Map</span>
+        <span class="f7 bg-black-40 near-white ph2 pv1 br-pill ba b--white-20">
+          {{ poiCount }}
+        </span>
+      </RouterLink>
+
       <!-- Crafting Rooms Section -->
       <div class="mt3 pt2 bt b--white-10">
         <button
@@ -140,6 +158,10 @@ export const AppNavbar = defineComponent({
       db.rooms.filter((r) => r.totalRecipeCount > 0)
     );
 
+    const poiCount = computed(() =>
+      db.worldPois.filter(isCountedPoi).length
+    );
+
     function toggleRoomsSection() {
       roomsExpanded.value = !roomsExpanded.value;
     }
@@ -147,11 +169,13 @@ export const AppNavbar = defineComponent({
     return {
       db,
       craftingRooms,
+      poiCount,
       roomsExpanded,
       MONSTER_MANAGER_ICON,
       PLAYER_ICON,
       TOWER_ICON,
       SHOP_ICON,
+      MAP_ICON,
       DATA_BUILD_ID,
       steamDbUrl,
       toggleRoomsSection

@@ -41,6 +41,24 @@ export const ENUM_URLS = Object.fromEntries(
 );
 
 /**
+ * Pre-resolved Blueprint class definition JSON asset URLs (`BP_*.json`).
+ * @type {Record<string, string>}
+ */
+export const BLUEPRINT_URLS = Object.fromEntries(
+  Object.entries(manifest.blueprints || {}).map(([k, p]) => [k, resolvePath(p)])
+);
+
+/**
+ * Pre-resolved URL for overworld map texture (`Map.png`).
+ */
+export const WORLD_MAP_URL = resolvePath(manifest.worldMap);
+
+/**
+ * Pre-resolved URL for overworld POIs JSON (`MainLevel_Pois.json`).
+ */
+export const WORLD_POIS_URL = resolvePath(manifest.worldPois);
+
+/**
  * 1x1 transparent SVG data URI used as a clean fallback for missing assets.
  */
 export const TRANSPARENT_PIXEL =
@@ -70,6 +88,16 @@ export const MONSTER_MANAGER_ICON = getRoomIcon('MonsterManager');
 export const PLAYER_ICON = resolvePath(manifest.generalIcons.Player) || TRANSPARENT_PIXEL;
 export const TOWER_ICON = resolvePath(manifest.generalIcons.Tower) || TRANSPARENT_PIXEL;
 export const SHOP_ICON = resolvePath(manifest.generalIcons.Shop) || TRANSPARENT_PIXEL;
+export const MAP_ICON = resolvePath(manifest.generalIcons.Map) || TRANSPARENT_PIXEL;
+export const SPAWNER_ICON = resolvePath(manifest.generalIcons.Spawner) || TRANSPARENT_PIXEL;
+export const CHEST_ICON = resolvePath(manifest.generalIcons.Chest) || TRANSPARENT_PIXEL;
+export const SCROLL_ICON = resolvePath(manifest.generalIcons.Scroll) || TRANSPARENT_PIXEL;
+export const OBELISK_ICON = resolvePath(manifest.generalIcons.Obelisk) || TRANSPARENT_PIXEL;
+export const QUEST_ICON = resolvePath(manifest.generalIcons.Quest) || TRANSPARENT_PIXEL;
+export const FIGHT_ICON = resolvePath(manifest.generalIcons.Fight) || TRANSPARENT_PIXEL;
+export const DUNGEON_ICON = resolvePath(manifest.generalIcons.Dungeon) || TRANSPARENT_PIXEL;
+export const INN_ICON = resolvePath(manifest.generalIcons.Inn) || TRANSPARENT_PIXEL;
+export const FERRY_ICON = resolvePath(manifest.generalIcons.Ferry) || TRANSPARENT_PIXEL;
 
 /**
  * Returns the relative URL for a monster's profile image (`P_<id>.png`).

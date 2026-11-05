@@ -98,3 +98,55 @@ export interface UnrealEnumAsset {
 
 /** Normalized Unreal Engine DataTable row dictionary keyed by clean base property names. */
 export type NormalizedUnrealRow = Record<string, any>;
+
+/** Three-dimensional world coordinates in Unreal units. */
+export interface WorldCoordinates {
+  x: number;
+  y: number;
+  z: number;
+}
+
+/** High-level category for overworld POIs. */
+export type PoiCategory =
+  | 'spawner'
+  | 'tower'
+  | 'chest'
+  | 'recipe'
+  | 'obelisk'
+  | 'shop'
+  | 'inn'
+  | 'ferry'
+  | 'battle'
+  | 'quest'
+  | 'resource'
+  | 'foliage'
+  | 'dungeon'
+  | 'dungeon_exit'
+  | 'coliseum'
+  | 'manager'
+  | 'zone';
+
+/** Item sold by a merchant shop POI in the overworld. */
+export interface WorldShopItem {
+  itemId: string;
+  price: number;
+  amount: number;
+}
+
+/** Team member of an enemy battle encounter (trainer or overworld boss) in the overworld. */
+export interface WorldBattleMember {
+  monsterId: string;
+  level: number;
+  isBoss: boolean;
+  mutation: string;
+}
+
+declare module 'leaflet.markercluster' {
+  import * as L from 'leaflet';
+  export function markerClusterGroup(options?: L.MarkerClusterGroupOptions): L.MarkerClusterGroup;
+  export class MarkerClusterGroup extends L.FeatureGroup {}
+  export class MarkerCluster extends L.Marker {
+    getChildCount(): number;
+  }
+}
+

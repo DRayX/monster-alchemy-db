@@ -8,6 +8,7 @@ import { MonsterDetail } from './components/MonsterDetail.js';
 import { ItemTable } from './components/ItemTable.js';
 import { ItemDetail } from './components/ItemDetail.js';
 import { RoomDetail } from './components/RoomDetail.js';
+import { WorldMap } from './components/map/WorldMap.js';
 
 /**
  * @typedef {import('vue-router').RouteLocationNormalizedLoaded | import('vue-router').RouteLocationNormalized} RouteLocation
@@ -82,6 +83,15 @@ export const routes = [
         const room = db.rooms.find((r) => r.id === id);
         return room?.name || id;
       }
+    }
+  },
+  {
+    path: '/map',
+    name: 'world-map',
+    component: WorldMap,
+    meta: {
+      /** @type {RouteTitle} */
+      title: () => 'World Map'
     }
   },
   {
