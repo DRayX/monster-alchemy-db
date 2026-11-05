@@ -68,6 +68,20 @@ export interface UnrealStructAsset {
   ChildProperties?: UnrealStructChildProperty[];
 }
 
+/** Raw Unreal Engine Blueprint export entry (`BP_*.json`). */
+export interface UnrealBlueprintExport {
+  Type: string;
+  Name: string;
+  Class?: string;
+  Super?: UnrealObjectRef;
+  SuperStruct?: UnrealObjectRef;
+  ChildProperties?: UnrealStructChildProperty[];
+  Properties?: Record<string, any>;
+}
+
+/** Raw Unreal Engine Blueprint JSON asset (`BP_*.json`). */
+export type UnrealBlueprintAsset = UnrealBlueprintExport[];
+
 /** Raw Unreal Engine enum display name entry (`E*.json`). */
 export interface UnrealEnumDisplayEntry {
   Key: string;
