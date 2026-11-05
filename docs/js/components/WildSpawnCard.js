@@ -1,6 +1,6 @@
 // @ts-check
 import { defineComponent } from 'vue';
-import { getRarityBadgeClass } from './ItemChip.js';
+import { getRarityBadgeClass } from '../services/formatters.js';
 
 const TEMPLATE = /* html */ `
   <div

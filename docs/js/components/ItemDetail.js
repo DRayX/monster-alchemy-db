@@ -2,7 +2,7 @@
 import { computed, defineComponent, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import { db } from '../store.js';
-import { getRarityBadgeClass } from './ItemChip.js';
+import { getRarityBadgeClass } from '../services/formatters.js';
 import { CraftingRecipeCard } from './CraftingRecipeCard.js';
 import { WildSpawnCard } from './WildSpawnCard.js';
 import { WorldResourceCard } from './WorldResourceCard.js';

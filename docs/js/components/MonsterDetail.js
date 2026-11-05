@@ -4,7 +4,7 @@ import { useRoute } from 'vue-router';
 import { db } from '../store.js';
 import { getIcon } from '../services/assets.js';
 import { TypeBadge } from './TypeBadge.js';
-import { getRarityBadgeClass } from './ItemChip.js';
+import { getRarityBadgeClass } from '../services/formatters.js';
 import { StatBar } from './StatBar.js';
 import { CraftingRecipeCard } from './CraftingRecipeCard.js';
 import { FusionCard } from './FusionCard.js';

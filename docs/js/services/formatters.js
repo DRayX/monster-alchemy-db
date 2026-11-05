@@ -49,6 +49,50 @@ export function getTypeColorClass(type) {
   return TYPE_COLOR_CLASSES[key] || '';
 }
 
+/** @type {Record<string, string>} */
+export const LOOT_RARITY_CLASSES = {
+  Common: 'b--white-20 near-white',
+  Rare: 'b--light-blue light-blue',
+  Epic: 'b--light-purple light-purple'
+};
+
+/** @type {Record<string, string>} */
+export const LOOT_RARITY_BADGES = {
+  Common: 'bg-mid-gray light-silver b--silver',
+  Rare: 'bg-navy light-blue b--light-blue',
+  Epic: 'bg-purple washed-red b--light-purple'
+};
+
+/**
+ * Canonical sorting weights for game encounter and loot rarities (Common < Rare < Epic).
+ * @type {Record<string, number>}
+ */
+export const RARITY_WEIGHT = {
+  Common: 1,
+  Rare: 2,
+  Epic: 3
+};
+
+/**
+ * Returns CSS classes for a loot rarity badge pill.
+ * @param {string} rarity
+ * @returns {string}
+ */
+export function getRarityBadgeClass(rarity) {
+  const color = LOOT_RARITY_BADGES[rarity] || 'bg-mid-gray near-white b--silver';
+  return `dib ph2 pv1 br-pill f7 b ba ${color}`;
+}
+
+/**
+ * Returns CSS classes for an interactive loot or ingredient chip.
+ * @param {string} [rarity]
+ * @returns {string}
+ */
+export function getRarityChipClass(rarity) {
+  const color = (rarity && LOOT_RARITY_CLASSES[rarity]) || 'b--white-10 near-white';
+  return `link inline-flex items-center ph2 pv1 br2 bg-near-black ba hover-b--purple f7 mr1 mb1 ${color}`;
+}
+
 /**
  * Formats skill descriptions that contain Unreal rich text tags like `<img id="Poison"/>`
  * into clean HTML with colored badges and extracted icons.
@@ -58,7 +102,7 @@ export function getTypeColorClass(type) {
  */
 export function formatSkillDescription(desc) {
   if (!desc) return '';
-  return desc.replace(/<img\s+id="([^"]+)"\s*\/>(\s*)(\b\1\b)?/gi, (match, tag, whitespace, trailingWord) => {
+  return desc.replace(/<img\s+id="([^"]+)"\s*\/>(\s*)(\b\1\b)?/gi, (_match, tag, whitespace, trailingWord) => {
     const word = trailingWord || tag;
     const iconUrl = getIcon(tag);
     const colorClass = getTypeColorClass(tag);
