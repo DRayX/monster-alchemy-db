@@ -1,0 +1,97 @@
+[
+  {
+    "Type": "UserDefinedEnum",
+    "Name": "EMutation",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedEnum'",
+    "Package": "/Game/Blueprints/Battle/EMutation",
+    "Properties": {
+      "DisplayNameMap": [
+        {
+          "Key": "NewEnumerator0",
+          "Value": {
+            "Namespace": "",
+            "Key": "C9306CE2424BE0086660E1B9918B622F",
+            "SourceString": "None",
+            "LocalizedString": "None"
+          }
+        },
+        {
+          "Key": "NewEnumerator1",
+          "Value": {
+            "Namespace": "",
+            "Key": "9D57F44A4D15212EA9B5669CC3B0772A",
+            "SourceString": "Gigantic",
+            "LocalizedString": "Gigantic"
+          }
+        },
+        {
+          "Key": "NewEnumerator2",
+          "Value": {
+            "Namespace": "",
+            "Key": "32F4DE7A4DA66B5246BF968276DCBA96",
+            "SourceString": "Hollow",
+            "LocalizedString": "Hollow"
+          }
+        },
+        {
+          "Key": "NewEnumerator3",
+          "Value": {
+            "Namespace": "",
+            "Key": "6EE3B73D46622AFC9E307FA01A5D1D47",
+            "SourceString": "Corrupted",
+            "LocalizedString": "Corrupted"
+          }
+        },
+        {
+          "Key": "NewEnumerator4",
+          "Value": {
+            "Namespace": "",
+            "Key": "911507894E9320B1887222BA00EEE0BB",
+            "SourceString": "Nocturnal ",
+            "LocalizedString": "Nocturnal "
+          }
+        },
+        {
+          "Key": "NewEnumerator5",
+          "Value": {
+            "Namespace": "",
+            "Key": "E043FF184E61D111DA477C9D0ECEC246",
+            "SourceString": "Spectral",
+            "LocalizedString": "Spectral"
+          }
+        },
+        {
+          "Key": "NewEnumerator6",
+          "Value": {
+            "Namespace": "",
+            "Key": "4FE0D40F4E8E5F9D5A32A48F947F69A4",
+            "SourceString": "Tiny",
+            "LocalizedString": "Tiny"
+          }
+        },
+        {
+          "Key": "NewEnumerator7",
+          "Value": {
+            "Namespace": "",
+            "Key": "042BE23C4B9F1F66FE4DB086E1C20A3C",
+            "SourceString": "Mystic",
+            "LocalizedString": "Mystic"
+          }
+        }
+      ]
+    },
+    "Names": {
+      "EMutation::NewEnumerator0": 0,
+      "EMutation::NewEnumerator1": 1,
+      "EMutation::NewEnumerator7": 2,
+      "EMutation::NewEnumerator3": 3,
+      "EMutation::NewEnumerator4": 4,
+      "EMutation::NewEnumerator5": 5,
+      "EMutation::NewEnumerator2": 6,
+      "EMutation::NewEnumerator6": 7,
+      "EMutation::EMutation_MAX": 8
+    },
+    "CppForm": "Namespaced"
+  }
+]

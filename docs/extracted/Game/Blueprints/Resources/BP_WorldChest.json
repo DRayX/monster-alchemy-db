@@ -1,0 +1,846 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_WorldChest_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprints/Resources/BP_WorldChest",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactable_C'",
+      "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.0"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_WorldChest_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.18"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_WorldChest_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.9"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_WorldChest_C:ExecuteUbergraph_BP_WorldChest'",
+        "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.3"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_WorldChest_C:UserConstructionScript'",
+        "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.8"
+      },
+      {
+        "ObjectName": "Function'BP_WorldChest_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.5"
+      },
+      {
+        "ObjectName": "Function'BP_WorldChest_C:Interact'",
+        "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.4"
+      },
+      {
+        "ObjectName": "Function'BP_WorldChest_C:Respawn'",
+        "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.6"
+      },
+      {
+        "ObjectName": "Function'BP_WorldChest_C:SpawnItems'",
+        "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.7"
+      },
+      {
+        "ObjectName": "Function'BP_WorldChest_C:ExecuteUbergraph_BP_WorldChest'",
+        "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.3"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ParticleSystem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PaperFlipbook",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'PaperFlipbookComponent'",
+          "ObjectPath": "/Script/Paper2D"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PointLight",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'PointLightComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "MapProperty",
+        "Name": "ItemPool",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 80,
+        "PropertyFlags": "Edit | BlueprintVisible | ExposeOnSpawn",
+        "KeyProp": {
+          "Type": "NameProperty",
+          "Name": "ItemPool",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        },
+        "ValueProp": {
+          "Type": "IntProperty",
+          "Name": "ItemPool_Value",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CurrentItem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "TmpAmount",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "ActorSavedGUID",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_WorldChest": {
+        "ObjectName": "Function'BP_WorldChest_C:ExecuteUbergraph_BP_WorldChest'",
+        "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.3"
+      },
+      "SpawnItems": {
+        "ObjectName": "Function'BP_WorldChest_C:SpawnItems'",
+        "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.7"
+      },
+      "Respawn": {
+        "ObjectName": "Function'BP_WorldChest_C:Respawn'",
+        "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.6"
+      },
+      "Interact": {
+        "ObjectName": "Function'BP_WorldChest_C:Interact'",
+        "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.4"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_WorldChest_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.5"
+      },
+      "UserConstructionScript": {
+        "ObjectName": "Function'BP_WorldChest_C:UserConstructionScript'",
+        "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.8"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_WorldChest_C'Default__BP_WorldChest_C'",
+      "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_WorldChest_C",
+    "Name": "Default__BP_WorldChest_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Resources/BP_WorldChest.BP_WorldChest_C'",
+    "Package": "/Game/Blueprints/Resources/BP_WorldChest",
+    "Template": {
+      "ObjectName": "BP_Interactable_C'Default__BP_Interactable_C'",
+      "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.1"
+    },
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "Capsule_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WorldChest_C'",
+      "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.0"
+    },
+    "Template": {
+      "ObjectName": "CapsuleComponent'BP_Interactable_C:Capsule_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.2"
+    },
+    "Properties": {
+      "CapsuleHalfHeight": 95.8072,
+      "CapsuleRadius": 85.42756,
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 60.0
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_WorldChest",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WorldChest_C'",
+      "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_IsClosed_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerCharacter_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_Map_Keys_Keys",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "CallFunc_Map_Keys_Keys",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Player_C'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Player.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Array_IsValidIndex_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Map_Find_Value",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Map_Find_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_NotEqual_NameName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnSystemAtLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_CheckEvent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetMonsterGameInstance_AsMonster_Game_Instance",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'MonsterGameInstance_C'",
+          "ObjectPath": "/Game/Blueprints/Core/MonsterGameInstance.0"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_Event_Index",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerCharacter_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Player_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Player_C'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Player.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_AddItemToInventory_AmountAdded",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Has_Been_Initd_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "Interact",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WorldChest_C'",
+      "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_Interactable_C:Interact'",
+      "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "Index",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WorldChest_C'",
+      "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Respawn",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WorldChest_C'",
+      "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SpawnItems",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WorldChest_C'",
+      "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UserConstructionScript",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WorldChest_C'",
+      "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:UserConstructionScript'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Conv_GuidToString_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_Guid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_Conv_StringToName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WorldChest_C'",
+      "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.0"
+    },
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'CapsuleComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "CapsuleComponent'BP_WorldChest_C:Capsule_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.2"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_Interactable_C'",
+              "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.0"
+            },
+            "SCSVariableName": "Capsule",
+            "AssociatedGuid": "882CA35F-41F66581-E9296485-13E4CBF3"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PaperFlipbookComponent",
+    "Name": "PaperFlipbook_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PaperFlipbookComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WorldChest_C'",
+      "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.0"
+    },
+    "Properties": {
+      "SourceFlipbook": {
+        "ObjectName": "PaperFlipbook'FB_ChestOpen'",
+        "ObjectPath": "/Game/Art/Buildings/Chest/FB_ChestOpen.0"
+      },
+      "PlayRate": 0.0,
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'M_MonsterLitSprite'",
+          "ObjectPath": "/Game/Art/Sprites/M_MonsterLitSprite.0"
+        }
+      ],
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 11.189945,
+        "Z": 5.8358438E-08
+      },
+      "RelativeScale3D": {
+        "X": 10.0,
+        "Y": 10.0,
+        "Z": 10.0
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleSystem_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WorldChest_C'",
+      "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.0"
+    },
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'P_ky_hit_shine_chest'",
+        "ObjectPath": "/Game/AdvancedMagicFX12/particles/P_ky_hit_shine_chest.14"
+      },
+      "RelativeLocation": {
+        "X": -5.438343E-07,
+        "Y": 0.0,
+        "Z": 104.48757
+      },
+      "RelativeScale3D": {
+        "X": 2.0,
+        "Y": 2.0,
+        "Z": 2.0
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "PointLightComponent",
+    "Name": "PointLight_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PointLightComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WorldChest_C'",
+      "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.0"
+    },
+    "Properties": {
+      "AttenuationRadius": 347.3606,
+      "Intensity": 8000.0,
+      "LightColor": {
+        "B": 107,
+        "G": 215,
+        "R": 255,
+        "A": 255,
+        "Hex": "FFD76B"
+      },
+      "CastShadows": false,
+      "RelativeLocation": {
+        "X": -3.9505488E-07,
+        "Y": 50.793415,
+        "Z": 106.04791
+      }
+    },
+    "IntensityNits": 0.0
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WorldChest_C'",
+      "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_WorldChest_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.18"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_WorldChest_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.13"
+      },
+      "VariableGuid": "B53768F1-4FD6EC74-441038B3-A842D3BE",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_WorldChest_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.18"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'PointLightComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PointLightComponent'BP_WorldChest_C:PointLight_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.12"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_Interactable_C",
+      "VariableGuid": "C305BBF9-42687B23-58CFF0AA-52585577",
+      "InternalVariableName": "PointLight"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_WorldChest_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.18"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'PaperFlipbookComponent'",
+        "ObjectPath": "/Script/Paper2D"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PaperFlipbookComponent'BP_WorldChest_C:PaperFlipbook_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.10"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_Interactable_C",
+      "VariableGuid": "07611C97-4916C3AD-C0C2F8B6-CE258D59",
+      "InternalVariableName": "PaperFlipbook"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_WorldChest_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.18"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'BP_WorldChest_C:ParticleSystem_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.11"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_Interactable_C",
+      "VariableGuid": "06BEF215-47B35E8F-44CE19B9-D5A1A97B",
+      "InternalVariableName": "ParticleSystem"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_WorldChest_C'",
+      "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_WorldChest_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_WorldChest_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_WorldChest_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.17"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_WorldChest_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_WorldChest_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_WorldChest_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.17"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_WorldChest_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprints/Resources/BP_WorldChest.14"
+      }
+    }
+  }
+]

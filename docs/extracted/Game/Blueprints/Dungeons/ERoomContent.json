@@ -1,0 +1,207 @@
+[
+  {
+    "Type": "UserDefinedEnum",
+    "Name": "ERoomContent",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedEnum'",
+    "Package": "/Game/Blueprints/Dungeons/ERoomContent",
+    "Properties": {
+      "DisplayNameMap": [
+        {
+          "Key": "NewEnumerator0",
+          "Value": {
+            "Namespace": "",
+            "Key": "4541A02E49B312A5571C708DFB6F0A5B",
+            "SourceString": "None",
+            "LocalizedString": "None"
+          }
+        },
+        {
+          "Key": "NewEnumerator1",
+          "Value": {
+            "Namespace": "",
+            "Key": "6B5C85C049D179CD682712B83AC446A2",
+            "SourceString": "Battle",
+            "LocalizedString": "Battle"
+          }
+        },
+        {
+          "Key": "NewEnumerator2",
+          "Value": {
+            "Namespace": "",
+            "Key": "C72A55824D6E693B7FBBC28A7CF68EC9",
+            "SourceString": "Key",
+            "LocalizedString": "Key"
+          }
+        },
+        {
+          "Key": "NewEnumerator3",
+          "Value": {
+            "Namespace": "",
+            "Key": "4400972A4E25DA6C1B8B019A90DCE0AE",
+            "SourceString": "End",
+            "LocalizedString": "End"
+          }
+        },
+        {
+          "Key": "NewEnumerator4",
+          "Value": {
+            "Namespace": "",
+            "Key": "5AAAE1B24FF8E55739D63596BC27F854",
+            "SourceString": "SmallLoot",
+            "LocalizedString": "SmallLoot"
+          }
+        },
+        {
+          "Key": "NewEnumerator5",
+          "Value": {
+            "Namespace": "",
+            "Key": "FB2AC12943BCCA29D8099DBADAFB96C2",
+            "SourceString": "ChestLoot",
+            "LocalizedString": "ChestLoot"
+          }
+        },
+        {
+          "Key": "NewEnumerator6",
+          "Value": {
+            "Namespace": "",
+            "Key": "D0128AEF49902C51148C26A7303182D8",
+            "SourceString": "UniqueLoot",
+            "LocalizedString": "UniqueLoot"
+          }
+        },
+        {
+          "Key": "NewEnumerator7",
+          "Value": {
+            "Namespace": "",
+            "Key": "C5CB1E10463578985CE10C9F2E957742",
+            "SourceString": "RescueMonster",
+            "LocalizedString": "RescueMonster"
+          }
+        },
+        {
+          "Key": "NewEnumerator8",
+          "Value": {
+            "Namespace": "",
+            "Key": "D74585A44D453083F326D99F54C4F1C7",
+            "SourceString": "Fountain",
+            "LocalizedString": "Fountain"
+          }
+        },
+        {
+          "Key": "NewEnumerator9",
+          "Value": {
+            "Namespace": "",
+            "Key": "CA4F39E84885E11385BD24802E34889B",
+            "SourceString": "HealingLoot",
+            "LocalizedString": "HealingLoot"
+          }
+        },
+        {
+          "Key": "NewEnumerator10",
+          "Value": {
+            "Namespace": "",
+            "Key": "1875323A47ACE01A8C97B4948EF36806",
+            "SourceString": "ExpLoot",
+            "LocalizedString": "ExpLoot"
+          }
+        },
+        {
+          "Key": "NewEnumerator11",
+          "Value": {
+            "Namespace": "",
+            "Key": "4A35FF6D47568825DD12309E1F856BEA",
+            "SourceString": "NPCBattle",
+            "LocalizedString": "NPCBattle"
+          }
+        },
+        {
+          "Key": "NewEnumerator12",
+          "Value": {
+            "Namespace": "",
+            "Key": "2BD6F48A4B084937F20017B69A50DD53",
+            "SourceString": "CoinLoot",
+            "LocalizedString": "CoinLoot"
+          }
+        },
+        {
+          "Key": "NewEnumerator13",
+          "Value": {
+            "Namespace": "",
+            "Key": "ADCEF5BE47E270D03195ADAFF58D94C4",
+            "SourceString": "Boss",
+            "LocalizedString": "Boss"
+          }
+        },
+        {
+          "Key": "NewEnumerator14",
+          "Value": {
+            "Namespace": "",
+            "Key": "C211D5A243C846325ADED89A5B3F784A",
+            "SourceString": "NPCDialogue",
+            "LocalizedString": "NPCDialogue"
+          }
+        },
+        {
+          "Key": "NewEnumerator15",
+          "Value": {
+            "Namespace": "",
+            "Key": "32181B7840C4BB3FE582069D64ECA28B",
+            "SourceString": "PotionSeller",
+            "LocalizedString": "PotionSeller"
+          }
+        },
+        {
+          "Key": "NewEnumerator16",
+          "Value": {
+            "Namespace": "",
+            "Key": "601A09794E47657EABFF9B83E347D137",
+            "SourceString": "ResourceRoom",
+            "LocalizedString": "ResourceRoom"
+          }
+        },
+        {
+          "Key": "NewEnumerator17",
+          "Value": {
+            "Namespace": "",
+            "Key": "F635CE034A57D53C7973E9AA657247C4",
+            "SourceString": "ResourceRoomSmall",
+            "LocalizedString": "ResourceRoomSmall"
+          }
+        },
+        {
+          "Key": "NewEnumerator18",
+          "Value": {
+            "Namespace": "",
+            "Key": "5D835AE0430B2ECF7501458340F305BC",
+            "SourceString": "EndLoot",
+            "LocalizedString": "EndLoot"
+          }
+        }
+      ]
+    },
+    "Names": {
+      "ERoomContent::NewEnumerator0": 0,
+      "ERoomContent::NewEnumerator2": 1,
+      "ERoomContent::NewEnumerator3": 2,
+      "ERoomContent::NewEnumerator1": 3,
+      "ERoomContent::NewEnumerator4": 4,
+      "ERoomContent::NewEnumerator5": 5,
+      "ERoomContent::NewEnumerator6": 6,
+      "ERoomContent::NewEnumerator18": 7,
+      "ERoomContent::NewEnumerator7": 8,
+      "ERoomContent::NewEnumerator8": 9,
+      "ERoomContent::NewEnumerator12": 10,
+      "ERoomContent::NewEnumerator9": 11,
+      "ERoomContent::NewEnumerator10": 12,
+      "ERoomContent::NewEnumerator11": 13,
+      "ERoomContent::NewEnumerator13": 14,
+      "ERoomContent::NewEnumerator14": 15,
+      "ERoomContent::NewEnumerator15": 16,
+      "ERoomContent::NewEnumerator16": 17,
+      "ERoomContent::NewEnumerator17": 18,
+      "ERoomContent::ERoomContent_MAX": 19
+    },
+    "CppForm": "Namespaced"
+  }
+]

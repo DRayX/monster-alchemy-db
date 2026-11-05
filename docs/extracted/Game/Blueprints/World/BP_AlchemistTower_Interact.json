@@ -1,0 +1,2667 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_AlchemistTower_Interact_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprints/World/BP_AlchemistTower_Interact",
+    "Properties": {
+      "DynamicBindingObjects": [
+        {
+          "ObjectName": "ComponentDelegateBinding'BP_AlchemistTower_Interact_C:ComponentDelegateBinding_0'",
+          "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.6"
+        }
+      ],
+      "Timelines": [
+        {
+          "ObjectName": "TimelineTemplate'BP_AlchemistTower_Interact_C:Timeline_Template'",
+          "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.53"
+        },
+        {
+          "ObjectName": "TimelineTemplate'BP_AlchemistTower_Interact_C:Timeline_0_Template'",
+          "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.52"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.46"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_AlchemistTower_Interact_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.27"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:ExecuteUbergraph_BP_AlchemistTower_Interact'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.13"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:GetUniqueID'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.14"
+      },
+      {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:UserConstructionScript'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.26"
+      },
+      {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:Timeline__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.23"
+      },
+      {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:Timeline__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.24"
+      },
+      {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:Timeline_0__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.20"
+      },
+      {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:Timeline_0__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.22"
+      },
+      {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:Timeline_0__NewTrack_1__EventFunc'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.21"
+      },
+      {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.17"
+      },
+      {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:ActivateAnimation'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.10"
+      },
+      {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:OnInteracted_Event_0'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.15"
+      },
+      {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:BndEvt__BP_AlchemistTower_Interact_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.11"
+      },
+      {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:ResetDoonce'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.18"
+      },
+      {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:TeleportPlayer'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.19"
+      },
+      {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:BndEvt__BP_AlchemistTower_Interact_Sphere_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.12"
+      },
+      {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:TransitionCompleted_Event'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.25"
+      },
+      {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:OnStoryEventFinished_Event'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.16"
+      },
+      {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:ExecuteUbergraph_BP_AlchemistTower_Interact'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.13"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NS_ky_hit_dark1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Sphere",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SphereComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BPC_MapMarker",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BPC_MapMarker_C'",
+          "ObjectPath": "/Game/Blueprints/Map/BPC_MapMarker.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "TeleportTarget",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NS_ky_hit_dark",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MagicBarrier",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Interact",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ChildActorComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Box",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'BoxComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MetalDoor",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Symbol",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Tower",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Scene",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Timeline_0_NewTrack_0_DA6B457C46853C1583C92797552E06ED",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Timeline_0__Direction_DA6B457C46853C1583C92797552E06ED",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Timeline_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Timeline_NewTrack_0_C9E908624E843BECD74351B77683E096",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Timeline__Direction_C9E908624E843BECD74351B77683E096",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Timeline",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "TpRef",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Interactable_ExpObelisk_C'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.0"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "ActorSavedGUID",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DoorMat",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "WaypointID",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Zone",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_AlchemistTower_Interact": {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:ExecuteUbergraph_BP_AlchemistTower_Interact'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.13"
+      },
+      "OnStoryEventFinished_Event": {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:OnStoryEventFinished_Event'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.16"
+      },
+      "TransitionCompleted_Event": {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:TransitionCompleted_Event'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.25"
+      },
+      "BndEvt__BP_AlchemistTower_Interact_Sphere_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature": {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:BndEvt__BP_AlchemistTower_Interact_Sphere_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.12"
+      },
+      "TeleportPlayer": {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:TeleportPlayer'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.19"
+      },
+      "ResetDoonce": {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:ResetDoonce'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.18"
+      },
+      "BndEvt__BP_AlchemistTower_Interact_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature": {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:BndEvt__BP_AlchemistTower_Interact_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.11"
+      },
+      "OnInteracted_Event_0": {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:OnInteracted_Event_0'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.15"
+      },
+      "ActivateAnimation": {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:ActivateAnimation'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.10"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.17"
+      },
+      "Timeline_0__NewTrack_1__EventFunc": {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:Timeline_0__NewTrack_1__EventFunc'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.21"
+      },
+      "Timeline_0__UpdateFunc": {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:Timeline_0__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.22"
+      },
+      "Timeline_0__FinishedFunc": {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:Timeline_0__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.20"
+      },
+      "Timeline__UpdateFunc": {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:Timeline__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.24"
+      },
+      "Timeline__FinishedFunc": {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:Timeline__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.23"
+      },
+      "UserConstructionScript": {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:UserConstructionScript'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.26"
+      },
+      "GetUniqueID": {
+        "ObjectName": "Function'BP_AlchemistTower_Interact_C:GetUniqueID'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.14"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "BlueprintGeneratedClass'BPI_UniqueID_C'",
+          "ObjectPath": "/Game/Blueprints/Map/BPI_UniqueID.0"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_AlchemistTower_Interact_C'Default__BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal",
+      "ImplementedInterfaces": "((Interface=\"/Script/Engine.BlueprintGeneratedClass'/Game/Blueprints/Map/BPI_UniqueID.BPI_UniqueID_C'\"))"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Box_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "Properties": {
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionProfileName": "OverlapAll"
+      },
+      "RelativeLocation": {
+        "X": -6.9056314E-06,
+        "Y": -299.60126,
+        "Z": 315.05585
+      },
+      "RelativeScale3D": {
+        "X": 9.636584,
+        "Y": 6.568201,
+        "Z": 8.6235895
+      }
+    }
+  },
+  {
+    "Type": "BP_AlchemistTower_Interact_C",
+    "Name": "Default__BP_AlchemistTower_Interact_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/World/BP_AlchemistTower_Interact.BP_AlchemistTower_Interact_C'",
+    "Package": "/Game/Blueprints/World/BP_AlchemistTower_Interact",
+    "Properties": {
+      "UberGraphFrame": {},
+      "Zone": "Plains"
+    }
+  },
+  {
+    "Type": "BP_Interactable_C",
+    "Name": "Interact_GEN_VARIABLE_BP_Interactable_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Core/BP_Interactable.BP_Interactable_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_AlchemistTower_Interact_C:Interact_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.5"
+    },
+    "Template": {
+      "ObjectName": "BP_Interactable_C'Default__BP_Interactable_C'",
+      "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.1"
+    },
+    "ActorLabel": "BP_Interactable",
+    "ActorInstanceGuid": {
+      "ActorGuid": "00000000-00000000-00000000-00000000",
+      "ActorInstanceGuid": "00000000-00000000-00000000-00000000"
+    }
+  },
+  {
+    "Type": "BPC_MapMarker_C",
+    "Name": "BPC_MapMarker_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Map/BPC_MapMarker.BPC_MapMarker_C'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "Template": {
+      "ObjectName": "BPC_MapMarker_C'Default__BPC_MapMarker_C'",
+      "ObjectPath": "/Game/Blueprints/Map/BPC_MapMarker.1"
+    },
+    "Properties": {
+      "Icon": {
+        "ObjectName": "Texture2D'T_Icon_Tower'",
+        "ObjectPath": "/Game/Art/UI/T_Icon_Tower.0"
+      },
+      "Maker Type": "E_MapMarkerType::NewEnumerator3"
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Interact_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "Properties": {
+      "ChildActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_Interactable_C'",
+        "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.0"
+      },
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Interactable_C'BP_AlchemistTower_Interact_C:Interact_GEN_VARIABLE.Interact_GEN_VARIABLE_BP_Interactable_C_CAT'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.3"
+      },
+      "RelativeLocation": {
+        "X": -2.2737368E-13,
+        "Y": -737.3197,
+        "Z": 168.5285
+      },
+      "RelativeScale3D": {
+        "X": 0.755603,
+        "Y": 0.755603,
+        "Z": 0.755603
+      }
+    }
+  },
+  {
+    "Type": "ComponentDelegateBinding",
+    "Name": "ComponentDelegateBinding_0",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ComponentDelegateBinding'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "Properties": {
+      "ComponentDelegateBindings": [
+        {
+          "ComponentPropertyName": "Sphere",
+          "DelegatePropertyName": "OnComponentBeginOverlap",
+          "FunctionNameToBind": "BndEvt__BP_AlchemistTower_Interact_Sphere_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature"
+        },
+        {
+          "ComponentPropertyName": "Box",
+          "DelegatePropertyName": "OnComponentBeginOverlap",
+          "FunctionNameToBind": "BndEvt__BP_AlchemistTower_Interact_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.3,
+            "Value": 1.0,
+            "ArriveTangent": 7.2879033,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 7.2878766,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0_1",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.6240911,
+            "Value": 0.9982927,
+            "ArriveTangent": 4.8741136,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 4.8740973,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.635336,
+            "Value": 0.863363,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.64730495,
+            "Value": 0.99618495,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_1",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.6262926,
+            "Value": 0.67905664,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      },
+      "bIsEventCurve": true
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ActivateAnimation",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "BndEvt__BP_AlchemistTower_Interact_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "OverlappedComponent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "OtherActor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "OtherComp",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "OtherBodyIndex",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bFromSweep",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "SweepResult",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "BndEvt__BP_AlchemistTower_Interact_Sphere_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "OverlappedComponent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "OtherActor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "OtherComp",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "OtherBodyIndex",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bFromSweep",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "SweepResult",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_AlchemistTower_Interact",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'BP_SystemManager_C:OnStoryEventFinished__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_SystemManager.33"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_IsClosed_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Has_Been_Initd_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Has_Been_Initd_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetAllActorsOfClassWithTag_OutActors",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_GetAllActorsOfClassWithTag_OutActors",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "BlueprintGeneratedClass'BP_Interactable_ExpObelisk_C'",
+            "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.0"
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Interactable_ExpObelisk_C'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnEmitterAttached_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_CheckEvent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateDynamicMaterialInstance_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_SelfRef",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Interactable_C'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Interactable",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Interactable_C'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_MessageBig_C'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_MessageBig.19"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_OverlappedComponent_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_OtherActor_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_OtherComp_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_ComponentBoundEvent_OtherBodyIndex_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_ComponentBoundEvent_bFromSweep_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_ComponentBoundEvent_SweepResult_1",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ConstParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Player_C'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Player.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_IsClosed_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetMonsterSaveData_RefSaveGame",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_SaveGameMonster_C'",
+          "ObjectPath": "/Game/Blueprints/Core/Save/BP_SaveGameMonster.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_OverlappedComponent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_OtherActor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_OtherComp",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_ComponentBoundEvent_OtherBodyIndex",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_ComponentBoundEvent_bFromSweep",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_ComponentBoundEvent_SweepResult",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ConstParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_AddUnique_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Player_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Player_C'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Player.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_CheckEvent_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HealAllMonsters_heal1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HealAllMonsters_workin1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetActorOfClass_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_TransitionManager_C'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_TransitionManager.0"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'BP_TransitionManager_C:TransitionCompleted__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_TransitionManager.5"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Add_VectorVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_MovePlayerTo_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_MovePlayerProxy_C'",
+          "ObjectPath": "/Game/Blueprints/Cinematic/BP_MovePlayerProxy.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HealAllMonsters_heal1_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HealAllMonsters_workin1_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HealAllMonsters_heal1_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HealAllMonsters_workin1_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetMonsterSaveData_RefSaveGame_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_SaveGameMonster_C'",
+          "ObjectPath": "/Game/Blueprints/Core/Save/BP_SaveGameMonster.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetActorOfClass_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_SystemManager_C'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_SystemManager.0"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_LessEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_Transition_C'",
+          "ObjectPath": "/Game/Blueprints/Widgets/Resources/borders/W_Transition.16"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerCharacter_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerCharacter_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Player_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Player_C'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Player.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Player_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Player_C'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Player.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_4",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerCharacter_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Player_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Player_C'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Player.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_5",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerCharacter_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerCharacter_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Player_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Player_C'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Player.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_6",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Player_6",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Player_C'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Player.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_7",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetMonsterSaveData_RefSaveGame_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_SaveGameMonster_C'",
+          "ObjectPath": "/Game/Blueprints/Core/Save/BP_SaveGameMonster.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_MessageBig_C'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_MessageBig.19"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_Map_C'",
+          "ObjectPath": "/Game/Blueprints/Map/W_Map.100"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'BP_Interactable_C:OnInteracted__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.6"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Conv_DoubleToVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetMonsterSaveData_RefSaveGame_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_SaveGameMonster_C'",
+          "ObjectPath": "/Game/Blueprints/Core/Save/BP_SaveGameMonster.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetActorOfClass_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_SystemManager_C'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_SystemManager.0"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_Alpha_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_Alpha_ImplicitCast_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetScalarParameterValue_Value_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetUniqueID",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "ID",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "Parm | OutParm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInteracted_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "SelfRef",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Interactable_C'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.0"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnStoryEventFinished_Event",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ResetDoonce",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TeleportPlayer",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_0__FinishedFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_0__NewTrack_1__EventFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_0__UpdateFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline__FinishedFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline__UpdateFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TransitionCompleted_Event",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UserConstructionScript",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:UserConstructionScript'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_Guid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Conv_GuidToString_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_Conv_StringToName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NS_ky_hit_dark1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'NS_ky_hit_dark'",
+        "ObjectPath": "/Game/AdvancedMagicFX12/particles/Niagara/NS_ky_hit_dark.47"
+      },
+      "OverrideParameters": {},
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 5254.0815
+      },
+      "RelativeScale3D": {
+        "X": 10.0,
+        "Y": 10.0,
+        "Z": 10.0
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NS_ky_hit_dark_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'NS_ky_hit_dark'",
+        "ObjectPath": "/Game/AdvancedMagicFX12/particles/Niagara/NS_ky_hit_dark.47"
+      },
+      "OverrideParameters": {},
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -729.5379,
+        "Z": 408.37775
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Scene_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "TeleportTarget_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": -4.5474735E-13,
+        "Y": -1610.0002,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.46"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_AlchemistTower_Interact_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.30"
+      },
+      "VariableGuid": "5C074FE3-4101F326-1AFE1887-3C87462D",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.46"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_AlchemistTower_Interact_C:Tower_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.51"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.37"
+        }
+      ],
+      "VariableGuid": "5ADB5A51-456397B7-83EF8B9C-285C2083",
+      "InternalVariableName": "Tower"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_10",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.46"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPC_MapMarker_C'",
+        "ObjectPath": "/Game/Blueprints/Map/BPC_MapMarker.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BPC_MapMarker_C'BP_AlchemistTower_Interact_C:BPC_MapMarker_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.4"
+      },
+      "VariableGuid": "E76876F7-4D933FA3-329E6FA1-6A5423FB",
+      "InternalVariableName": "BPC_MapMarker"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_11",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.46"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SphereComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SphereComponent'BP_AlchemistTower_Interact_C:Sphere_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.47"
+      },
+      "VariableGuid": "689A3EBF-49BDB440-40C8A882-8697AB0D",
+      "InternalVariableName": "Sphere"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_12",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.46"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_AlchemistTower_Interact_C:NS_ky_hit_dark1_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.28"
+      },
+      "VariableGuid": "409CB86D-4E4A9943-F3882FB1-2AA385EF",
+      "InternalVariableName": "NS_ky_hit_dark1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.46"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_AlchemistTower_Interact_C:MagicBarrier_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.48"
+      },
+      "VariableGuid": "F6ABAF27-4C7ACD09-6D2EED91-8F5495C7",
+      "InternalVariableName": "MagicBarrier"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.46"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_AlchemistTower_Interact_C:Symbol_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.50"
+      },
+      "VariableGuid": "0BD20C37-4EDF7DCD-15B377A5-ED5B852D",
+      "InternalVariableName": "Symbol"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.46"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_AlchemistTower_Interact_C:MetalDoor_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.49"
+      },
+      "VariableGuid": "ABAB2153-40A8A732-61632CB6-4EEDACEB",
+      "InternalVariableName": "MetalDoor"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.46"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BP_AlchemistTower_Interact_C:Box_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.1"
+      },
+      "VariableGuid": "F83A4986-489D092B-D6766AA3-053CCCB4",
+      "InternalVariableName": "Box"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.46"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ChildActorComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ChildActorComponent'BP_AlchemistTower_Interact_C:Interact_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.5"
+      },
+      "VariableGuid": "A71EA204-4ABC5262-C0C8B390-F1179CE1",
+      "InternalVariableName": "Interact"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.46"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_AlchemistTower_Interact_C:Scene_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.31"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.34"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.39"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.40"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.41"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.42"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.38"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.44"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.45"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.36"
+        }
+      ],
+      "VariableGuid": "E311FEA8-4738C69B-DDBCE8BA-47CD70AD",
+      "InternalVariableName": "Scene"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_8",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.46"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_AlchemistTower_Interact_C:NS_ky_hit_dark_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.29"
+      },
+      "VariableGuid": "F03EE5FF-4B9887B5-5BEEE8A2-B1136D90",
+      "InternalVariableName": "NS_ky_hit_dark"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_9",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.46"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_AlchemistTower_Interact_C:TeleportTarget_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.32"
+      },
+      "VariableGuid": "66155B93-46047EFD-AEB66A99-29417601",
+      "InternalVariableName": "TeleportTarget"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.43"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.35"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.43"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.34"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.39"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.40"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.41"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.42"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.38"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.44"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.45"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.35"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.36"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.37"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_AlchemistTower_Interact_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.33"
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "Sphere_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SphereComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "Properties": {
+      "SphereRadius": 1451.401
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "MagicBarrier_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_AlchemyTower_MagicDoor'",
+        "ObjectPath": "/Game/Art/Buildings/AlchemyTower/SM_AlchemyTower_MagicDoor.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_MagicDoorV3'",
+          "ObjectPath": "/Game/Art/Buildings/AlchemyTower/MI_MagicDoorV3.0"
+        }
+      ],
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 35.0,
+        "Z": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.755603,
+        "Y": 0.755603,
+        "Z": 0.755603
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "MetalDoor_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Colisseum_Door'",
+        "ObjectPath": "/Game/Art/Buildings/Colisseum/SM_Colisseum_Door.2"
+      },
+      "bUseDefaultCollision": true,
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'M_DoorOpening_Inst'",
+          "ObjectPath": "/Game/Materials/M_DoorOpening_Inst.0"
+        }
+      ],
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionProfileName": "Custom"
+      },
+      "RelativeLocation": {
+        "X": -3.6423664E-06,
+        "Y": -646.01373,
+        "Z": 112.81341
+      },
+      "RelativeRotation": {
+        "Pitch": -0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 2.110429,
+        "Y": 2.0499823,
+        "Z": 2.8720624
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Symbol_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_AlchemyTower_MagicDoor'",
+        "ObjectPath": "/Game/Art/Buildings/AlchemyTower/SM_AlchemyTower_MagicDoor.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_SymbolTower'",
+          "ObjectPath": "/Game/Art/Buildings/AlchemyTower/MI_SymbolTower.0"
+        }
+      ],
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -1E-06,
+        "Y": -28.860432,
+        "Z": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.755603,
+        "Y": 0.755603,
+        "Z": 0.755603
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Tower_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_AlchemyTowerV5'",
+        "ObjectPath": "/Game/Art/Buildings/AlchemyTower/SM_AlchemyTowerV5.2"
+      },
+      "bUseDefaultCollision": true,
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionProfileName": "Custom"
+      },
+      "RelativeScale3D": {
+        "X": 0.755603,
+        "Y": 0.755603,
+        "Z": 0.755603
+      }
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "Timeline_0_Template",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "Properties": {
+      "TimelineLength": 1.0,
+      "LengthMode": "ETimelineLengthMode::TL_LastKeyFrame",
+      "EventTracks": [
+        {
+          "FunctionName": "Timeline_0__NewTrack_1__EventFunc",
+          "CurveKeys": {
+            "ObjectName": "CurveFloat'BP_AlchemistTower_Interact_C:CurveFloat_1'",
+            "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.9"
+          },
+          "TrackName": "NewTrack_1",
+          "bIsExternalCurve": false
+        }
+      ],
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_AlchemistTower_Interact_C:CurveFloat_0_1'",
+            "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.8"
+          },
+          "PropertyName": "Timeline_0_NewTrack_0_DA6B457C46853C1583C92797552E06ED",
+          "TrackName": "NewTrack_0",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "DA6B457C-46853C15-83C92797-552E06ED",
+      "VariableName": "Timeline_0",
+      "DirectionPropertyName": "Timeline_0__Direction_DA6B457C46853C1583C92797552E06ED",
+      "UpdateFunctionName": "Timeline_0__UpdateFunc",
+      "FinishedFunctionName": "Timeline_0__FinishedFunc"
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "Timeline_Template",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AlchemistTower_Interact_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.0"
+    },
+    "Properties": {
+      "TimelineLength": 1.0,
+      "LengthMode": "ETimelineLengthMode::TL_LastKeyFrame",
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_AlchemistTower_Interact_C:CurveFloat_0'",
+            "ObjectPath": "/Game/Blueprints/World/BP_AlchemistTower_Interact.7"
+          },
+          "PropertyName": "Timeline_NewTrack_0_C9E908624E843BECD74351B77683E096",
+          "TrackName": "NewTrack_0",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "C9E90862-4E843BEC-D74351B7-7683E096",
+      "VariableName": "Timeline",
+      "DirectionPropertyName": "Timeline__Direction_C9E908624E843BECD74351B77683E096",
+      "UpdateFunctionName": "Timeline__UpdateFunc",
+      "FinishedFunctionName": "Timeline__FinishedFunc"
+    }
+  }
+]

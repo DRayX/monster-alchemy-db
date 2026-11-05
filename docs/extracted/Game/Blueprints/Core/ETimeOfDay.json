@@ -1,0 +1,47 @@
+[
+  {
+    "Type": "UserDefinedEnum",
+    "Name": "ETimeOfDay",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedEnum'",
+    "Package": "/Game/Blueprints/Core/ETimeOfDay",
+    "Properties": {
+      "DisplayNameMap": [
+        {
+          "Key": "NewEnumerator0",
+          "Value": {
+            "Namespace": "",
+            "Key": "20A1D4FC421FEE835B46FF8419193278",
+            "SourceString": "Day",
+            "LocalizedString": "Day"
+          }
+        },
+        {
+          "Key": "NewEnumerator1",
+          "Value": {
+            "Namespace": "",
+            "Key": "1AACE06F4C5E37354D56DFB23298AB1D",
+            "SourceString": "Dawn",
+            "LocalizedString": "Dawn"
+          }
+        },
+        {
+          "Key": "NewEnumerator2",
+          "Value": {
+            "Namespace": "",
+            "Key": "F449B1FC466BCC94CCB6399CBF6EA52A",
+            "SourceString": "Night",
+            "LocalizedString": "Night"
+          }
+        }
+      ]
+    },
+    "Names": {
+      "ETimeOfDay::NewEnumerator0": 0,
+      "ETimeOfDay::NewEnumerator1": 1,
+      "ETimeOfDay::NewEnumerator2": 2,
+      "ETimeOfDay::ETimeOfDay_MAX": 3
+    },
+    "CppForm": "Namespaced"
+  }
+]

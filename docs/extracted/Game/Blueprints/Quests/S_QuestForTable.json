@@ -1,0 +1,156 @@
+[
+  {
+    "Type": "UserDefinedStruct",
+    "Name": "S_QuestForTable",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedStruct'",
+    "Package": "/Game/Blueprints/Quests/S_QuestForTable",
+    "Properties": {
+      "Guid": "09291C16-454121B1-7C14B88C-B8BB0580"
+    },
+    "ChildProperties": [
+      {
+        "Type": "TextProperty",
+        "Name": "Name_10_9B02A3934604113A068ED392019D63FD",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Description_8_E60C19C84C23AC72B938BAAB357F372B",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "QuestType_17_46F62152436D7C24E06DA8A640A1BB34",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'EQuestType'",
+          "ObjectPath": "/Game/Blueprints/Quests/EQuestType.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Main_41_42BF86DF4EC35E449B7BA0AE6AB34A86",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "MapProperty",
+        "Name": "ResourceRequierements_23_20830B5E43C0495FFDF4F58D9B682D75",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 80,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "KeyProp": {
+          "Type": "NameProperty",
+          "Name": "ResourceRequierements_23_20830B5E43C0495FFDF4F58D9B682D75",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        },
+        "ValueProp": {
+          "Type": "IntProperty",
+          "Name": "ResourceRequierements_23_20830B5E43C0495FFDF4F58D9B682D75_Value",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "MapProperty",
+        "Name": "MonsterRequierements_25_D253E49C44AA682C4E5ABAB0FDCB2740",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 80,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "KeyProp": {
+          "Type": "NameProperty",
+          "Name": "MonsterRequierements_25_D253E49C44AA682C4E5ABAB0FDCB2740",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        },
+        "ValueProp": {
+          "Type": "IntProperty",
+          "Name": "MonsterRequierements_25_D253E49C44AA682C4E5ABAB0FDCB2740_Value",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "EventRequierements_28_ED125C934BF7E97238CC9581B23D5EF1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "EventRequierements_28_ED125C934BF7E97238CC9581B23D5EF1",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "RewardEXP_32_C19CACEA43CAC63989C49B8FF54A490F",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "MapProperty",
+        "Name": "RewardResources_38_330C98324C5DD86D53C2DBBCF069A60D",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 80,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "KeyProp": {
+          "Type": "NameProperty",
+          "Name": "RewardResources_38_330C98324C5DD86D53C2DBBCF069A60D",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        },
+        "ValueProp": {
+          "Type": "IntProperty",
+          "Name": "RewardResources_38_330C98324C5DD86D53C2DBBCF069A60D_Value",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "RewardRecipe_39_DFC6A2C44BE5172BACDC319159679B04",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      }
+    ],
+    "StructFlags": 0,
+    "DefaultProperties": {
+      "Name_10_9B02A3934604113A068ED392019D63FD": {
+        "Namespace": "",
+        "Key": "075EF4704553A81A485D79A8238AF84D",
+        "SourceString": "Quest",
+        "LocalizedString": "Quest"
+      },
+      "Description_8_E60C19C84C23AC72B938BAAB357F372B": {
+        "CultureInvariantString": null
+      },
+      "QuestType_17_46F62152436D7C24E06DA8A640A1BB34": "EQuestType::NewEnumerator0",
+      "Main_41_42BF86DF4EC35E449B7BA0AE6AB34A86": false,
+      "ResourceRequierements_23_20830B5E43C0495FFDF4F58D9B682D75": [],
+      "MonsterRequierements_25_D253E49C44AA682C4E5ABAB0FDCB2740": [],
+      "EventRequierements_28_ED125C934BF7E97238CC9581B23D5EF1": [],
+      "RewardEXP_32_C19CACEA43CAC63989C49B8FF54A490F": 50,
+      "RewardResources_38_330C98324C5DD86D53C2DBBCF069A60D": [],
+      "RewardRecipe_39_DFC6A2C44BE5172BACDC319159679B04": "None"
+    }
+  }
+]

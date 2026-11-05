@@ -1,0 +1,1745 @@
+[
+  {
+    "Type": "BillboardComponent",
+    "Name": "Billboard_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'BillboardComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_FetchShowQuest_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.1"
+    },
+    "Template": {
+      "ObjectName": "BillboardComponent'BP_NPC_StaticDialogue_C:Billboard_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue.0"
+    },
+    "Properties": {
+      "Sprite": {
+        "ObjectName": "Texture2D'T_Icon_Quest_01'",
+        "ObjectPath": "/Game/Art/UI/T_Icon_Quest_01.0"
+      },
+      "bHiddenInGame": false
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_NPC_StaticDialogue_FetchShowQuest_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue.1"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_NPC_StaticDialogue_FetchShowQuest_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.20"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_NPC_StaticDialogue_FetchShowQuest_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.15"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_FetchShowQuest_C:ExecuteUbergraph_BP_NPC_StaticDialogue_FetchShowQuest'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.7"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_FetchShowQuest_C:UserConstructionScript'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.13"
+      },
+      {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_FetchShowQuest_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.12"
+      },
+      {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_FetchShowQuest_C:OnDialogueEnd_Event'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.10"
+      },
+      {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_FetchShowQuest_C:YesButtonDispatcher_Event'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.14"
+      },
+      {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_FetchShowQuest_C:CompleteQuestDialogue'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.6"
+      },
+      {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_FetchShowQuest_C:OnDialogueEnd_Event_1'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.11"
+      },
+      {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_FetchShowQuest_C:Interaction Logic'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.9"
+      },
+      {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_FetchShowQuest_C:GiveRewards'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.8"
+      },
+      {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_FetchShowQuest_C:ExecuteUbergraph_BP_NPC_StaticDialogue_FetchShowQuest'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.7"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BPC_MapMarker",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BPC_MapMarker_C'",
+          "ObjectPath": "/Game/Blueprints/Map/BPC_MapMarker.0"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "QuestID",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CheckRequirements",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "MonsterRequirement",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "QuestInfo",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 320,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'S_QuestForTable'",
+          "ObjectPath": "/Game/Blueprints/Quests/S_QuestForTable.0"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_NPC_StaticDialogue_FetchShowQuest": {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_FetchShowQuest_C:ExecuteUbergraph_BP_NPC_StaticDialogue_FetchShowQuest'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.7"
+      },
+      "GiveRewards": {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_FetchShowQuest_C:GiveRewards'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.8"
+      },
+      "Interaction Logic": {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_FetchShowQuest_C:Interaction Logic'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.9"
+      },
+      "OnDialogueEnd_Event_1": {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_FetchShowQuest_C:OnDialogueEnd_Event_1'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.11"
+      },
+      "CompleteQuestDialogue": {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_FetchShowQuest_C:CompleteQuestDialogue'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.6"
+      },
+      "YesButtonDispatcher_Event": {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_FetchShowQuest_C:YesButtonDispatcher_Event'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.14"
+      },
+      "OnDialogueEnd_Event": {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_FetchShowQuest_C:OnDialogueEnd_Event'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.10"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_FetchShowQuest_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.12"
+      },
+      "UserConstructionScript": {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_FetchShowQuest_C:UserConstructionScript'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.13"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_NPC_StaticDialogue_FetchShowQuest_C'Default__BP_NPC_StaticDialogue_FetchShowQuest_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_NPC_StaticDialogue_FetchShowQuest_C",
+    "Name": "Default__BP_NPC_StaticDialogue_FetchShowQuest_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.BP_NPC_StaticDialogue_FetchShowQuest_C'",
+    "Package": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest",
+    "Template": {
+      "ObjectName": "BP_NPC_StaticDialogue_C'Default__BP_NPC_StaticDialogue_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue.2"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "CheckRequirements": true,
+      "QuestInfo": {
+        "Name_10_9B02A3934604113A068ED392019D63FD": {
+          "Namespace": "",
+          "Key": "075EF4704553A81A485D79A8238AF84D",
+          "SourceString": "Quest",
+          "LocalizedString": "Quest"
+        },
+        "Description_8_E60C19C84C23AC72B938BAAB357F372B": {
+          "CultureInvariantString": null
+        },
+        "QuestType_17_46F62152436D7C24E06DA8A640A1BB34": "EQuestType::NewEnumerator0",
+        "Main_41_42BF86DF4EC35E449B7BA0AE6AB34A86": false,
+        "ResourceRequierements_23_20830B5E43C0495FFDF4F58D9B682D75": [],
+        "MonsterRequierements_25_D253E49C44AA682C4E5ABAB0FDCB2740": [],
+        "EventRequierements_28_ED125C934BF7E97238CC9581B23D5EF1": [],
+        "RewardEXP_32_C19CACEA43CAC63989C49B8FF54A490F": 50,
+        "RewardResources_38_330C98324C5DD86D53C2DBBCF069A60D": [],
+        "RewardRecipe_39_DFC6A2C44BE5172BACDC319159679B04": "None"
+      },
+      "GlobalExp": 100,
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_NPC_StaticDialogue_FetchShowQuest_C:CharacterMesh0'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.21"
+      },
+      "CharacterMovement": {
+        "ObjectName": "CharacterMovementComponent'Default__BP_NPC_StaticDialogue_FetchShowQuest_C:CharMoveComp'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.5"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "CapsuleComponent'Default__BP_NPC_StaticDialogue_FetchShowQuest_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.4"
+      },
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent'Default__BP_NPC_StaticDialogue_FetchShowQuest_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.4"
+      }
+    }
+  },
+  {
+    "Type": "BPC_MapMarker_C",
+    "Name": "BPC_MapMarker_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Map/BPC_MapMarker.BPC_MapMarker_C'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_FetchShowQuest_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.1"
+    },
+    "Template": {
+      "ObjectName": "BPC_MapMarker_C'Default__BPC_MapMarker_C'",
+      "ObjectPath": "/Game/Blueprints/Map/BPC_MapMarker.1"
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Outer": {
+      "ObjectName": "BP_NPC_StaticDialogue_FetchShowQuest_C'Default__BP_NPC_StaticDialogue_FetchShowQuest_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.2"
+    },
+    "Template": {
+      "ObjectName": "CapsuleComponent'Default__BP_NPC_StaticDialogue_C:CollisionCylinder'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue.3"
+    }
+  },
+  {
+    "Type": "CharacterMovementComponent",
+    "Name": "CharMoveComp",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CharacterMovementComponent'",
+    "Outer": {
+      "ObjectName": "BP_NPC_StaticDialogue_FetchShowQuest_C'Default__BP_NPC_StaticDialogue_FetchShowQuest_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.2"
+    },
+    "Template": {
+      "ObjectName": "CharacterMovementComponent'Default__BP_NPC_StaticDialogue_C:CharMoveComp'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue.4"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "CompleteQuestDialogue",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_FetchShowQuest_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.1"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_NPC_StaticDialogue_FetchShowQuest",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_FetchShowQuest_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'W_Dialogue_C:OnDialogueEnd__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_Dialogue.9"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetMonsterGameInstance_AsMonster_Game_Instance",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'MonsterGameInstance_C'",
+          "ObjectPath": "/Game/Blueprints/Core/MonsterGameInstance.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetMonsterGameInstance_AsMonster_Game_Instance_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'MonsterGameInstance_C'",
+          "ObjectPath": "/Game/Blueprints/Core/MonsterGameInstance.0"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetMonsterGameInstance_AsMonster_Game_Instance_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'MonsterGameInstance_C'",
+          "ObjectPath": "/Game/Blueprints/Core/MonsterGameInstance.0"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'W_DecisionPopup_C:YesButtonDispatcher__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_DecisionPopup.13"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetDataTableRowFromName_OutRow",
+        "Flags": "RF_Public",
+        "ElementSize": 320,
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'S_QuestForTable'",
+          "ObjectPath": "/Game/Blueprints/Quests/S_QuestForTable.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GetDataTableRowFromName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsQuestActive__ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_DecisionPopup_C'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_DecisionPopup.48"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsQuestComplete__ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetDataTableRowFromName_OutRow_1",
+        "Flags": "RF_Public",
+        "ElementSize": 320,
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'S_QuestForTable'",
+          "ObjectPath": "/Game/Blueprints/Quests/S_QuestForTable.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GetDataTableRowFromName_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_Map_Keys_Keys",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "CallFunc_Map_Keys_Keys",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_Map_Keys_Keys_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "CallFunc_Map_Keys_Keys_1",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Map_Find_Value",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Map_Find_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GetItemStack_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetItemStack_ItemStack",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'O_ItemStack_C'",
+          "ObjectPath": "/Game/Blueprints/Items/O_ItemStack.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GreaterEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchEnum_CmpSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_Map_Keys_Keys_2",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "CallFunc_Map_Keys_Keys_2",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetMonsterGameInstance_AsMonster_Game_Instance_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'MonsterGameInstance_C'",
+          "ObjectPath": "/Game/Blueprints/Core/MonsterGameInstance.0"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerCharacter_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Player_C'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Player.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetMonsterGameInstance_AsMonster_Game_Instance_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'MonsterGameInstance_C'",
+          "ObjectPath": "/Game/Blueprints/Core/MonsterGameInstance.0"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetDataTableRowNames_OutRowNames",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "CallFunc_GetDataTableRowNames_OutRowNames",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_Dialogue_C'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_Dialogue.47"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_Map_Keys_Keys_3",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "CallFunc_Map_Keys_Keys_3",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_Array_Get_Item_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Map_Find_Value_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Map_Find_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_AddItemToInventory_AmountAdded",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Array_Contains_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetDataTableRowFromName_OutRow_2",
+        "Flags": "RF_Public",
+        "ElementSize": 88,
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'S_CraftRecipe'",
+          "ObjectPath": "/Game/Blueprints/Items/S_CraftRecipe.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GetDataTableRowFromName_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_TextIsEmpty_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_NotEqual_NameName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetDataTableRowFromName_OutRow_3",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'S_ResourceData'",
+          "ObjectPath": "/Game/Sprites/Tables/S_ResourceData.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GetDataTableRowFromName_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetDataTableRowFromName_OutRow_4",
+        "Flags": "RF_Public",
+        "ElementSize": 80,
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'S_Monster_Table'",
+          "ObjectPath": "/Game/Blueprints/Monsters/S_Monster_Table.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GetDataTableRowFromName_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'W_Dialogue_C:OnDialogueEnd__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_Dialogue.9"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_3",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'W_Dialogue_C:OnDialogueEnd__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_Dialogue.9"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_4",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'W_Dialogue_C:OnDialogueEnd__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_Dialogue.9"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsQuestComplete__ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_5",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'W_Dialogue_C:OnDialogueEnd__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_Dialogue.9"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'O_Monster_C'",
+          "ObjectPath": "/Game/Blueprints/Battle/O_Monster.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerCharacter_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Player_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Player_C'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Player.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable_3",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_DecisionPopup_C'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_DecisionPopup.48"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable_3",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_Array_Get_Item_3",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Map_Find_Value_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Map_Find_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_RemoveItemFromInventory_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_RemoveItemFromInventory_ItemStack",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'O_ItemStack_C'",
+          "ObjectPath": "/Game/Blueprints/Items/O_ItemStack.0"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable_4",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_True_if_break_was_hit_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_Array_Get_Item_4",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_NameName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_MakeLiteralText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Conv_TextToString_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_GetQuestDescription_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_GetQuestDescription_ItemString",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_MakeLiteralText_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Conv_TextToString_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_StringToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_GetQuestDescription_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_GetQuestDescription_ItemString_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsQuestActive__ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_StringToText_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable_4",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_True_if_break_was_hit_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_6",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'W_DecisionPopup_C:YesButtonDispatcher__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_DecisionPopup.13"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable_5",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable_5",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'O_Monster_C'",
+          "ObjectPath": "/Game/Blueprints/Battle/O_Monster.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_NameName_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_Dialogue_C'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_Dialogue.47"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_Dialogue_C'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_Dialogue.47"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_Dialogue_C'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_Dialogue.47"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "GiveRewards",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_FetchShowQuest_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.1"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_NPC_StaticDialogue_C:GiveRewards'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue.8"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Interaction Logic",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_FetchShowQuest_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.1"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_NPC_StaticDialogue_C:Interaction Logic'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue.10"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnDialogueEnd_Event",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_FetchShowQuest_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.1"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_NPC_StaticDialogue_C:OnDialogueEnd_Event'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue.12"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnDialogueEnd_Event_1",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_FetchShowQuest_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.1"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_FetchShowQuest_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.1"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_NPC_C:ReceiveBeginPlay'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC.26"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UserConstructionScript",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_FetchShowQuest_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.1"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_NPC_StaticDialogue_C:UserConstructionScript'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue.18"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetDataTableRowFromName_OutRow",
+        "Flags": "RF_Public",
+        "ElementSize": 320,
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'S_QuestForTable'",
+          "ObjectPath": "/Game/Blueprints/Quests/S_QuestForTable.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GetDataTableRowFromName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "YesButtonDispatcher_Event",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_FetchShowQuest_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.1"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_FetchShowQuest_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.1"
+    },
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'PaperFlipbookComponent'",
+            "ObjectPath": "/Script/Paper2D"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "PaperFlipbookComponent'BP_NPC_StaticDialogue_FetchShowQuest_C:PaperFlipbook_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.16"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_NPC_C'",
+              "ObjectPath": "/Game/Blueprints/Characters/BP_NPC.0"
+            },
+            "SCSVariableName": "PaperFlipbook",
+            "AssociatedGuid": "A54DD733-4BE95C88-A1E5FBA5-8EACA964"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'BillboardComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BillboardComponent'BP_NPC_StaticDialogue_FetchShowQuest_C:Billboard_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.0"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_C'",
+              "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue.1"
+            },
+            "SCSVariableName": "Billboard",
+            "AssociatedGuid": "9FA3140F-408F6330-56828385-E047809B"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PaperFlipbookComponent",
+    "Name": "PaperFlipbook_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'PaperFlipbookComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_FetchShowQuest_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.1"
+    },
+    "Template": {
+      "ObjectName": "PaperFlipbookComponent'BP_NPC_StaticDialogue_C:PaperFlipbook_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue.20"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 1.1791428E-06,
+        "Y": 2.842171E-14,
+        "Z": -100.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_FetchShowQuest_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_NPC_StaticDialogue_FetchShowQuest_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.20"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_NPC_StaticDialogue_FetchShowQuest_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.17"
+      },
+      "VariableGuid": "A7E50B13-4E4B8D66-7389BD90-C937E10B",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_NPC_StaticDialogue_FetchShowQuest_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.20"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPC_MapMarker_C'",
+        "ObjectPath": "/Game/Blueprints/Map/BPC_MapMarker.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BPC_MapMarker_C'BP_NPC_StaticDialogue_FetchShowQuest_C:BPC_MapMarker_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.3"
+      },
+      "VariableGuid": "933BD50F-4B29662C-4F443EA8-8A60C452",
+      "InternalVariableName": "BPC_MapMarker"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_FetchShowQuest_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.1"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_NPC_StaticDialogue_FetchShowQuest_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.19"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_NPC_StaticDialogue_FetchShowQuest_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.19"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_NPC_StaticDialogue_FetchShowQuest_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.18"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "CharacterMesh0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_NPC_StaticDialogue_FetchShowQuest_C'Default__BP_NPC_StaticDialogue_FetchShowQuest_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.2"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'Default__BP_NPC_StaticDialogue_C:CharacterMesh0'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue.25"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BP_NPC_StaticDialogue_FetchShowQuest_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_FetchShowQuest.4"
+      }
+    }
+  }
+]

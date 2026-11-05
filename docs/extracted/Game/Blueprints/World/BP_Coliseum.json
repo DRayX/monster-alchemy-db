@@ -1,0 +1,2896 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Coliseum_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprints/World/BP_Coliseum",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Coliseum_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.40"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Coliseum_C:ExecuteUbergraph_BP_Coliseum'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.12"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Coliseum_C:GetEnemyMaxLevel'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.13"
+      },
+      {
+        "ObjectName": "Function'BP_Coliseum_C:StopCinematics'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.28"
+      },
+      {
+        "ObjectName": "Function'BP_Coliseum_C:PlayCine'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.23"
+      },
+      {
+        "ObjectName": "Function'BP_Coliseum_C:StartChallenge'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.27"
+      },
+      {
+        "ObjectName": "Function'BP_Coliseum_C:OnBattleEnded_Event'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.17"
+      },
+      {
+        "ObjectName": "Function'BP_Coliseum_C:StartBattle'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.26"
+      },
+      {
+        "ObjectName": "Function'BP_Coliseum_C:AnimEnd_Event'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.2"
+      },
+      {
+        "ObjectName": "Function'BP_Coliseum_C:BattleEnded'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.4"
+      },
+      {
+        "ObjectName": "Function'BP_Coliseum_C:EnteredColiseum'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.11"
+      },
+      {
+        "ObjectName": "Function'BP_Coliseum_C:LeftColiseum'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.15"
+      },
+      {
+        "ObjectName": "Function'BP_Coliseum_C:UpdateEnemy'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.31"
+      },
+      {
+        "ObjectName": "Function'BP_Coliseum_C:ResetColiseum'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.25"
+      },
+      {
+        "ObjectName": "Function'BP_Coliseum_C:Transition'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.30"
+      },
+      {
+        "ObjectName": "Function'BP_Coliseum_C:AnimEnd_Event_0'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.3"
+      },
+      {
+        "ObjectName": "Function'BP_Coliseum_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.24"
+      },
+      {
+        "ObjectName": "Function'BP_Coliseum_C:OnBattleEnded_Event_0'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.18"
+      },
+      {
+        "ObjectName": "Function'BP_Coliseum_C:CustomEvent_End'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.9"
+      },
+      {
+        "ObjectName": "Function'BP_Coliseum_C:CustomEvent_1'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.6"
+      },
+      {
+        "ObjectName": "Function'BP_Coliseum_C:CustomEvent_2'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.7"
+      },
+      {
+        "ObjectName": "Function'BP_Coliseum_C:CustomEvent_3'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.8"
+      },
+      {
+        "ObjectName": "Function'BP_Coliseum_C:OnChallengeCompleted_Event'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.20"
+      },
+      {
+        "ObjectName": "Function'BP_Coliseum_C:CustomEvent_0'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.5"
+      },
+      {
+        "ObjectName": "Function'BP_Coliseum_C:ToggleHideActors'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.29"
+      },
+      {
+        "ObjectName": "Function'BP_Coliseum_C:IntroEnded'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.14"
+      },
+      {
+        "ObjectName": "Function'BP_Coliseum_C:EndFinishTransition'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.10"
+      },
+      {
+        "ObjectName": "Function'BP_Coliseum_C:OnEnd_Event'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.22"
+      },
+      {
+        "ObjectName": "Function'BP_Coliseum_C:OnDialogueEnd_Event'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.21"
+      },
+      {
+        "ObjectName": "Function'BP_Coliseum_C:ExecuteUbergraph_BP_Coliseum'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.12"
+      },
+      {
+        "ObjectName": "Function'BP_Coliseum_C:OnBattleEnded__DelegateSignature'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.16"
+      },
+      {
+        "ObjectName": "Function'BP_Coliseum_C:OnChallengeCompleted__DelegateSignature'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.19"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SpawnSpot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "EnemyFlipbook",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'PaperFlipbookComponent'",
+          "ObjectPath": "/Script/Paper2D"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CenterSpot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "Battles",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "Battles",
+          "Flags": "RF_Public",
+          "ElementSize": 24,
+          "Struct": {
+            "ObjectName": "UserDefinedStruct'S_BattleData'",
+            "ObjectPath": "/Game/Blueprints/Battle/S_BattleData.0"
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Battle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'O_BattleInfo_C'",
+          "ObjectPath": "/Game/Blueprints/Battle/O_BattleInfo.0"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "BattleIndex",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "MulticastInlineDelegateProperty",
+        "Name": "OnChallengeCompleted",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | BlueprintAssignable | BlueprintCallable",
+        "SignatureFunction": {
+          "ObjectName": "Function'BP_Coliseum_C:OnChallengeCompleted__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.19"
+        }
+      },
+      {
+        "Type": "MulticastInlineDelegateProperty",
+        "Name": "OnBattleEnded",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | BlueprintAssignable | BlueprintCallable",
+        "SignatureFunction": {
+          "ObjectName": "Function'BP_Coliseum_C:OnBattleEnded__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.16"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "ActorsToHide",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Inner": {
+          "Type": "SoftObjectProperty",
+          "Name": "ActorsToHide",
+          "Flags": "RF_Public",
+          "ElementSize": 48,
+          "PropertyClass": {
+            "ObjectName": "Class'Actor'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "RefCamera",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 48,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_CustomCamera_C'",
+          "ObjectPath": "/Game/Blueprints/World/BP_CustomCamera.0"
+        }
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "RefExit",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 48,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_TeleportVolume_C'",
+          "ObjectPath": "/Game/Blueprints/World/BP_TeleportVolume.0"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "Enemies",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "Enemies",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'PaperFlipbook'",
+            "ObjectPath": "/Script/Paper2D"
+          }
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "ID",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "OriginZone",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "0_StartText",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "1_Round1_Start",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "2_Round1_Victory",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "3_Round2_Start",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "4_Round2_Victory",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "5_Round3_Start",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "6_ChampionDialogue",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "7_Round3_Victory",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "Seq_Intro",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 48,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "Class'LevelSequenceActor'",
+          "ObjectPath": "/Script/LevelSequence"
+        }
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "Seq_Win",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 48,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "Class'LevelSequenceActor'",
+          "ObjectPath": "/Script/LevelSequence"
+        }
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "Seq_Present",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 48,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "Class'LevelSequenceActor'",
+          "ObjectPath": "/Script/LevelSequence"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "RewardRecipe",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "RewardEmblem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "StoryEvent",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      }
+    ],
+    "FuncMap": {
+      "OnChallengeCompleted__DelegateSignature": {
+        "ObjectName": "Function'BP_Coliseum_C:OnChallengeCompleted__DelegateSignature'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.19"
+      },
+      "OnBattleEnded__DelegateSignature": {
+        "ObjectName": "Function'BP_Coliseum_C:OnBattleEnded__DelegateSignature'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.16"
+      },
+      "ExecuteUbergraph_BP_Coliseum": {
+        "ObjectName": "Function'BP_Coliseum_C:ExecuteUbergraph_BP_Coliseum'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.12"
+      },
+      "OnDialogueEnd_Event": {
+        "ObjectName": "Function'BP_Coliseum_C:OnDialogueEnd_Event'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.21"
+      },
+      "OnEnd_Event": {
+        "ObjectName": "Function'BP_Coliseum_C:OnEnd_Event'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.22"
+      },
+      "EndFinishTransition": {
+        "ObjectName": "Function'BP_Coliseum_C:EndFinishTransition'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.10"
+      },
+      "IntroEnded": {
+        "ObjectName": "Function'BP_Coliseum_C:IntroEnded'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.14"
+      },
+      "ToggleHideActors": {
+        "ObjectName": "Function'BP_Coliseum_C:ToggleHideActors'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.29"
+      },
+      "CustomEvent_0": {
+        "ObjectName": "Function'BP_Coliseum_C:CustomEvent_0'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.5"
+      },
+      "OnChallengeCompleted_Event": {
+        "ObjectName": "Function'BP_Coliseum_C:OnChallengeCompleted_Event'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.20"
+      },
+      "CustomEvent_3": {
+        "ObjectName": "Function'BP_Coliseum_C:CustomEvent_3'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.8"
+      },
+      "CustomEvent_2": {
+        "ObjectName": "Function'BP_Coliseum_C:CustomEvent_2'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.7"
+      },
+      "CustomEvent_1": {
+        "ObjectName": "Function'BP_Coliseum_C:CustomEvent_1'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.6"
+      },
+      "CustomEvent_End": {
+        "ObjectName": "Function'BP_Coliseum_C:CustomEvent_End'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.9"
+      },
+      "OnBattleEnded_Event_0": {
+        "ObjectName": "Function'BP_Coliseum_C:OnBattleEnded_Event_0'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.18"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_Coliseum_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.24"
+      },
+      "AnimEnd_Event_0": {
+        "ObjectName": "Function'BP_Coliseum_C:AnimEnd_Event_0'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.3"
+      },
+      "Transition": {
+        "ObjectName": "Function'BP_Coliseum_C:Transition'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.30"
+      },
+      "ResetColiseum": {
+        "ObjectName": "Function'BP_Coliseum_C:ResetColiseum'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.25"
+      },
+      "UpdateEnemy": {
+        "ObjectName": "Function'BP_Coliseum_C:UpdateEnemy'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.31"
+      },
+      "LeftColiseum": {
+        "ObjectName": "Function'BP_Coliseum_C:LeftColiseum'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.15"
+      },
+      "EnteredColiseum": {
+        "ObjectName": "Function'BP_Coliseum_C:EnteredColiseum'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.11"
+      },
+      "BattleEnded": {
+        "ObjectName": "Function'BP_Coliseum_C:BattleEnded'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.4"
+      },
+      "AnimEnd_Event": {
+        "ObjectName": "Function'BP_Coliseum_C:AnimEnd_Event'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.2"
+      },
+      "StartBattle": {
+        "ObjectName": "Function'BP_Coliseum_C:StartBattle'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.26"
+      },
+      "OnBattleEnded_Event": {
+        "ObjectName": "Function'BP_Coliseum_C:OnBattleEnded_Event'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.17"
+      },
+      "StartChallenge": {
+        "ObjectName": "Function'BP_Coliseum_C:StartChallenge'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.27"
+      },
+      "PlayCine": {
+        "ObjectName": "Function'BP_Coliseum_C:PlayCine'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.23"
+      },
+      "StopCinematics": {
+        "ObjectName": "Function'BP_Coliseum_C:StopCinematics'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.28"
+      },
+      "GetEnemyMaxLevel": {
+        "ObjectName": "Function'BP_Coliseum_C:GetEnemyMaxLevel'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.13"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Coliseum_C'Default__BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_Coliseum_C",
+    "Name": "Default__BP_Coliseum_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/World/BP_Coliseum.BP_Coliseum_C'",
+    "Package": "/Game/Blueprints/World/BP_Coliseum",
+    "Properties": {
+      "UberGraphFrame": {},
+      "OnChallengeCompleted": {
+        "InvocationList": []
+      },
+      "OnBattleEnded": {
+        "InvocationList": []
+      },
+      "OriginZone": "Town",
+      "0_StartText": {
+        "TableId": "/Game/StringTables/NPCs/Full/ST_NPC_MARLO.ST_NPC_MARLO",
+        "Key": "NPC_COLISEUM_MARLO_1",
+        "SourceString": "HERE WE ARE!\nA NEW CHALLENGER HAS ARRIVED!\nA STRANGE ONE... NEITHER AKAW NOR ZANEL!\nLET’S SEE IF IT HAS WHAT IT TAKES!",
+        "LocalizedString": "HERE WE ARE!\nA NEW CHALLENGER HAS ARRIVED!\nA STRANGE ONE... NEITHER AKAW NOR ZANEL!\nLET’S SEE IF IT HAS WHAT IT TAKES!"
+      },
+      "1_Round1_Start": {
+        "TableId": "/Game/StringTables/NPCs/Full/ST_NPC_MARLO.ST_NPC_MARLO",
+        "Key": "NPC_COLISEUM_MARLO_2",
+        "SourceString": "FOR THE FIRST ROUND WE WILL BE HAVING LEDILO THE GOBLIN FANATIC!\nLET'S FIGHT!",
+        "LocalizedString": "FOR THE FIRST ROUND WE WILL BE HAVING LEDILO THE GOBLIN FANATIC!\nLET'S FIGHT!"
+      },
+      "2_Round1_Victory": {
+        "TableId": "/Game/StringTables/NPCs/Full/ST_NPC_MARLO.ST_NPC_MARLO",
+        "Key": "NPC_COLISEUM_MARLO_3",
+        "SourceString": "HUHH?!\nTHE NEW CHALLENGER WINS IT'S FIRST FIGHT! IMPRESSIVE!",
+        "LocalizedString": "HUHH?!\nTHE NEW CHALLENGER WINS IT'S FIRST FIGHT! IMPRESSIVE!"
+      },
+      "3_Round2_Start": {
+        "TableId": "/Game/StringTables/NPCs/Full/ST_NPC_MARLO.ST_NPC_MARLO",
+        "Key": "NPC_COLISEUM_MARLO_4",
+        "SourceString": "SECOND ROUND VERSUS SHLANIDER, THE FEATHER MENACE!\nSTART!",
+        "LocalizedString": "SECOND ROUND VERSUS SHLANIDER, THE FEATHER MENACE!\nSTART!"
+      },
+      "4_Round2_Victory": {
+        "TableId": "/Game/StringTables/NPCs/Full/ST_NPC_MARLO.ST_NPC_MARLO",
+        "Key": "NPC_COLISEUM_MARLO_5",
+        "SourceString": "THE NEW CHALLENGER WINS AGAIN! IS IT THE BEGINNER'S LUCK?\nNOW...\nTHE TIME HAS COME...\nEVERYONE STAND UP!",
+        "LocalizedString": "THE NEW CHALLENGER WINS AGAIN! IS IT THE BEGINNER'S LUCK?\nNOW...\nTHE TIME HAS COME...\nEVERYONE STAND UP!"
+      },
+      "5_Round3_Start": {
+        "TableId": "/Game/StringTables/NPCs/Full/ST_NPC_MARLO.ST_NPC_MARLO",
+        "Key": "NPC_COLISEUM_MARLO_6",
+        "SourceString": "HERE IT IS!\nTHE MIGHTY!\nTHE UNBENDING!\nSIR TEMPLED STEELO!!! \nWILL THE NEW CHALLENGER BE ABLE TO PUT UP A FIGHT?! \nFINAL ROUND!\nSTART!",
+        "LocalizedString": "HERE IT IS!\nTHE MIGHTY!\nTHE UNBENDING!\nSIR TEMPLED STEELO!!! \nWILL THE NEW CHALLENGER BE ABLE TO PUT UP A FIGHT?! \nFINAL ROUND!\nSTART!"
+      },
+      "6_ChampionDialogue": {
+        "TableId": "/Game/StringTables/NPCs/Full/ST_NPC_MARLO.ST_NPC_MARLO",
+        "Key": "NPC_COLISEUM_MARLO_7",
+        "SourceString": "Oh please, you honestly think you can win against this one? \nSpare me the embarrassment of crushing you too thoroughly.",
+        "LocalizedString": "Oh please, you honestly think you can win against this one? \nSpare me the embarrassment of crushing you too thoroughly."
+      },
+      "7_Round3_Victory": {
+        "TableId": "/Game/StringTables/NPCs/Full/ST_NPC_MARLO.ST_NPC_MARLO",
+        "Key": "NPC_COLISEUM_MARLO_8",
+        "SourceString": "BY ALL THE GODS! \nWHAT A STUNNING REVERSAL! \nAGAINST ALL ODDS... THE CHALLENGER HAS TRIUMPHED!\nAND SO THE KNIGHT'S REIGN OF PRIDE ENDS HERE! \nLET THE ARENA ROAR FOR OUR NEW CHAMPION!!!",
+        "LocalizedString": "BY ALL THE GODS! \nWHAT A STUNNING REVERSAL! \nAGAINST ALL ODDS... THE CHALLENGER HAS TRIUMPHED!\nAND SO THE KNIGHT'S REIGN OF PRIDE ENDS HERE! \nLET THE ARENA ROAR FOR OUR NEW CHAMPION!!!"
+      },
+      "RewardEmblem": "Artifact"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimEnd_Event",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimEnd_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "BattleEnded",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "CustomEvent_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "CustomEvent_1",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "CustomEvent_2",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "CustomEvent_3",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "CustomEvent_End",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EndFinishTransition",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EnteredColiseum",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Coliseum",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValidSoftObjectReference_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Custom_Camera",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_CustomCamera_C'",
+          "ObjectPath": "/Game/Blueprints/World/BP_CustomCamera.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetMonsterGameInstance_AsMonster_Game_Instance",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'MonsterGameInstance_C'",
+          "ObjectPath": "/Game/Blueprints/Core/MonsterGameInstance.0"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerCharacter_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Player_C'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Player.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_Win_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Subtract_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetEnemyMaxLevel_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetLevelRebalance_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsActor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'BP_TeleportVolume_C:OnEnd__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/World/BP_TeleportVolume.5"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Teleport_Volume",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_TeleportVolume_C'",
+          "ObjectPath": "/Game/Blueprints/World/BP_TeleportVolume.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Teleport_Volume_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_TeleportVolume_C'",
+          "ObjectPath": "/Game/Blueprints/World/BP_TeleportVolume.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_4",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetActorOfClass_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_SystemManager_C'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_SystemManager.0"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'BP_TeleportVolume_C:OnEnd__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/World/BP_TeleportVolume.5"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Subtract_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerCharacter_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PaperFlipbook'",
+          "ObjectPath": "/Script/Paper2D"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Player_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Player_C'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Player.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_5",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_SetFlipbook_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetActorLocation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_K2_SetActorLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_SetFlipbook_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PaperFlipbook'",
+          "ObjectPath": "/Script/Paper2D"
+        }
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Conv_NameToString_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'W_DungeonTransition_C:AnimEnd__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Dungeons/W_DungeonTransition.3"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_3",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'W_Dialogue_C:OnDialogueEnd__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_Dialogue.9"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_CustomEvent_BattleN",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_DungeonTransition_C'",
+          "ObjectPath": "/Game/Blueprints/Dungeons/W_DungeonTransition.20"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchInteger_CmpSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_4",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'W_Dialogue_C:OnDialogueEnd__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_Dialogue.9"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_5",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'BP_Player_C:OnBattleEnded__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Player.55"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_Win",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'O_BattleInfo_C'",
+          "ObjectPath": "/Game/Blueprints/Battle/O_BattleInfo.0"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_6",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'W_Dialogue_C:OnDialogueEnd__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_Dialogue.9"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_bNewHidden",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_PlayCine_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_PlayCine_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_PlayCine_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_PlayCine_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_PlayCine_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_PlayCine_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_PlayCine_ReturnValue_6",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsLevel_Sequence_Actor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LevelSequenceActor'",
+          "ObjectPath": "/Script/LevelSequence"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_6",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetSequencePlayer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LevelSequencePlayer'",
+          "ObjectPath": "/Script/LevelSequence"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_NotEqual_NameName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_GetRecipeResult_Result",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_GetRecipeResult_Name",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_FormatArgumentData",
+        "Flags": "RF_Public",
+        "ElementSize": 72,
+        "Struct": {
+          "ObjectName": "Class'FormatArgumentData'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "K2Node_MakeArray_Array",
+          "Flags": "RF_Public",
+          "ElementSize": 72,
+          "Struct": {
+            "ObjectName": "Class'FormatArgumentData'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Format_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetMonsterGameInstance_AsMonster_Game_Instance_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'MonsterGameInstance_C'",
+          "ObjectPath": "/Game/Blueprints/Core/MonsterGameInstance.0"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_PlayCine_ReturnValue_7",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsLevel_Sequence_Actor_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LevelSequenceActor'",
+          "ObjectPath": "/Script/LevelSequence"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_7",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetSequencePlayer_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LevelSequencePlayer'",
+          "ObjectPath": "/Script/LevelSequence"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerController_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PlayerController'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Controller",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Controller_C'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Controller.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_8",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue_6",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValidSoftObjectReference_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Custom_Camera_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_CustomCamera_C'",
+          "ObjectPath": "/Game/Blueprints/World/BP_CustomCamera.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_9",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetMonsterGameInstance_AsMonster_Game_Instance_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'MonsterGameInstance_C'",
+          "ObjectPath": "/Game/Blueprints/Core/MonsterGameInstance.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerCharacter_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Player_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Player_C'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Player.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_10",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetMonsterSaveData_RefSaveGame",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_SaveGameMonster_C'",
+          "ObjectPath": "/Game/Blueprints/Core/Save/BP_SaveGameMonster.0"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_AddItemToInventory_AmountAdded",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetDataTableRowFromName_OutRow",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'S_ResourceData'",
+          "ObjectPath": "/Game/Sprites/Tables/S_ResourceData.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GetDataTableRowFromName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_FormatArgumentData_1",
+        "Flags": "RF_Public",
+        "ElementSize": 72,
+        "Struct": {
+          "ObjectName": "Class'FormatArgumentData'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_7",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'W_Dialogue_C:OnDialogueEnd__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_Dialogue.9"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "K2Node_MakeArray_Array_1",
+          "Flags": "RF_Public",
+          "ElementSize": 72,
+          "Struct": {
+            "ObjectName": "Class'FormatArgumentData'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Format_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_8",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'W_MessageInfo_C:OnEnd__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_MessageInfo.9"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_MessageInfo_C'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_MessageInfo.36"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue_7",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_9",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'W_MessageInfo_C:OnEnd__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_MessageInfo.9"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Custom_Camera_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_CustomCamera_C'",
+          "ObjectPath": "/Game/Blueprints/World/BP_CustomCamera.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_11",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue_8",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetMonsterGameInstance_AsMonster_Game_Instance_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'MonsterGameInstance_C'",
+          "ObjectPath": "/Game/Blueprints/Core/MonsterGameInstance.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Custom_Camera_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_CustomCamera_C'",
+          "ObjectPath": "/Game/Blueprints/World/BP_CustomCamera.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_12",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_MessageInfo_C'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_MessageInfo.36"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_FadeTransition_2anims_C'",
+          "ObjectPath": "/Game/Blueprints/Dungeons/W_FadeTransition_2anims.15"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_Dialogue_C'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_Dialogue.47"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_10",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'W_Dialogue_C:OnDialogueEnd__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_Dialogue.9"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_Dialogue_C'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_Dialogue.47"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_11",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'BP_Coliseum_C:OnChallengeCompleted__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.19"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue_6",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_Dialogue_C'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_Dialogue.47"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue_7",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_DungeonTransition_C'",
+          "ObjectPath": "/Game/Blueprints/Dungeons/W_DungeonTransition.20"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_12",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'W_DungeonTransition_C:AnimEnd__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Dungeons/W_DungeonTransition.3"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue_8",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_Dialogue_C'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_Dialogue.47"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_13",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'W_Dialogue_C:OnDialogueEnd__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_Dialogue.9"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue_9",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_DungeonTransition_C'",
+          "ObjectPath": "/Game/Blueprints/Dungeons/W_DungeonTransition.20"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_14",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'W_DungeonTransition_C:AnimEnd__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Dungeons/W_DungeonTransition.3"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue_10",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_Dialogue_C'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_Dialogue.47"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_15",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'W_Dialogue_C:OnDialogueEnd__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_Dialogue.9"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue_11",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_Dialogue_C'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_Dialogue.47"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_16",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'BP_Coliseum_C:OnBattleEnded__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.16"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue_12",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_Dialogue_C'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_Dialogue.47"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_17",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'W_DungeonTransition_C:AnimEnd__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Dungeons/W_DungeonTransition.3"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue_13",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_DungeonTransition_C'",
+          "ObjectPath": "/Game/Blueprints/Dungeons/W_DungeonTransition.20"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_18",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'W_Dialogue_C:OnDialogueEnd__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_Dialogue.9"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue_14",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_Dialogue_C'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_Dialogue.47"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Temp_name_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Temp_name_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetEnemyMaxLevel",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ArrayProperty",
+        "Name": "Array",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "Array",
+          "Flags": "RF_Public",
+          "ElementSize": 20,
+          "Struct": {
+            "ObjectName": "UserDefinedStruct'S_MonsterForBattle'",
+            "ObjectPath": "/Game/Blueprints/Battle/S_MonsterForBattle.0"
+          }
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "T",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'S_MonsterForBattle'",
+          "ObjectPath": "/Game/Blueprints/Battle/S_MonsterForBattle.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Max_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "IntroEnded",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "LeftColiseum",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBattleEnded__DelegateSignature",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "BattleN",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_Delegate | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBattleEnded_Event",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "Win",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBattleEnded_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "BattleN",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnChallengeCompleted__DelegateSignature",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "Win",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_Delegate | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnChallengeCompleted_Event",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "Win",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnDialogueEnd_Event",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnEnd_Event",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PlayCine",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "Sequence",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'LevelSequenceActor'",
+          "ObjectPath": "/Script/LevelSequence"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsLevel_Sequence_Actor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LevelSequenceActor'",
+          "ObjectPath": "/Script/LevelSequence"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetSequencePlayer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LevelSequencePlayer'",
+          "ObjectPath": "/Script/LevelSequence"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetEndTime_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'QualifiedFrameTime'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Conv_QualifiedFrameTimeToSeconds_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ResetColiseum",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "StartBattle",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "StartChallenge",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "StopCinematics",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsLevel_Sequence_Actor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LevelSequenceActor'",
+          "ObjectPath": "/Script/LevelSequence"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsLevel_Sequence_Actor_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LevelSequenceActor'",
+          "ObjectPath": "/Script/LevelSequence"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetSequencePlayer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LevelSequencePlayer'",
+          "ObjectPath": "/Script/LevelSequence"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetSequencePlayer_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LevelSequencePlayer'",
+          "ObjectPath": "/Script/LevelSequence"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsLevel_Sequence_Actor_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LevelSequenceActor'",
+          "ObjectPath": "/Script/LevelSequence"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetSequencePlayer_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LevelSequencePlayer'",
+          "ObjectPath": "/Script/LevelSequence"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ToggleHideActors",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bNewHidden",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Transition",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateEnemy",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "PaperFlipbookComponent",
+    "Name": "EnemyFlipbook_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PaperFlipbookComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "Properties": {
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'M_MonsterLitSprite'",
+          "ObjectPath": "/Game/Art/Sprites/M_MonsterLitSprite.0"
+        }
+      ],
+      "RelativeScale3D": {
+        "X": 10.0,
+        "Y": 10.0,
+        "Z": 10.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "CenterSpot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SpawnSpot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Coliseum_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.40"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Coliseum_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.34"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Coliseum_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.37"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Coliseum_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.38"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Coliseum_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.39"
+        }
+      ],
+      "VariableGuid": "6BBE3617-4A572D84-D76B24A4-FB02F598",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Coliseum_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.40"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Coliseum_C:CenterSpot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.33"
+      },
+      "VariableGuid": "F5927701-4EF77B96-5A65E0A6-71BD41F2",
+      "InternalVariableName": "CenterSpot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Coliseum_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.40"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'PaperFlipbookComponent'",
+        "ObjectPath": "/Script/Paper2D"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PaperFlipbookComponent'BP_Coliseum_C:EnemyFlipbook_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.32"
+      },
+      "VariableGuid": "E4765DE9-4102C853-C62C4E94-42DCE255",
+      "InternalVariableName": "EnemyFlipbook"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Coliseum_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.40"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Coliseum_C:SpawnSpot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.35"
+      },
+      "VariableGuid": "F6F69EC4-4151A52C-6C56B29E-F1EE5810",
+      "InternalVariableName": "SpawnSpot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Coliseum_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.36"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Coliseum_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.36"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Coliseum_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.37"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Coliseum_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.38"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Coliseum_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.39"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Coliseum_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.36"
+      }
+    }
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "Type": "UserDefinedStruct",
+    "Name": "SFloorInfo",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedStruct'",
+    "Package": "/Game/Blueprints/Dungeons/SFloorInfo",
+    "Properties": {
+      "Guid": "350DF3ED-42349EA8-B23FA7A9-843DD5BE"
+    },
+    "ChildProperties": [
+      {
+        "Type": "MapProperty",
+        "Name": "FloorLoot_4_372268F840B3B4957B1D049530C42A0B",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 80,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "KeyProp": {
+          "Type": "ByteProperty",
+          "Name": "FloorLoot_4_372268F840B3B4957B1D049530C42A0B",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": {
+            "ObjectName": "UserDefinedEnum'ERoomContent'",
+            "ObjectPath": "/Game/Blueprints/Dungeons/ERoomContent.0"
+          }
+        },
+        "ValueProp": {
+          "Type": "IntProperty",
+          "Name": "FloorLoot_4_372268F840B3B4957B1D049530C42A0B_Value",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      }
+    ],
+    "StructFlags": 0,
+    "DefaultProperties": {
+      "FloorLoot_4_372268F840B3B4957B1D049530C42A0B": []
+    }
+  }
+]

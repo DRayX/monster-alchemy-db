@@ -1,0 +1,41 @@
+[
+  {
+    "Type": "UserDefinedStruct",
+    "Name": "S_ShopConfig",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedStruct'",
+    "Package": "/Game/Blueprints/Widgets/Shop/S_ShopConfig",
+    "Properties": {
+      "Guid": "F00185EB-41EB8109-24070E97-AED6FEF9"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "Item_6_CECD7496410BDF562655259ECD8AFECE",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Amount_11_7253C92344A3835AEBB69F861B2D24B1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Price_12_546F1FE54388B5827F95EEA885B19536",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      }
+    ],
+    "StructFlags": 0,
+    "DefaultProperties": {
+      "Item_6_CECD7496410BDF562655259ECD8AFECE": "None",
+      "Amount_11_7253C92344A3835AEBB69F861B2D24B1": 0,
+      "Price_12_546F1FE54388B5827F95EEA885B19536": 0
+    }
+  }
+]

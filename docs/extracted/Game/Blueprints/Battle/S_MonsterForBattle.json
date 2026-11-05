@@ -1,0 +1,59 @@
+[
+  {
+    "Type": "UserDefinedStruct",
+    "Name": "S_MonsterForBattle",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedStruct'",
+    "Package": "/Game/Blueprints/Battle/S_MonsterForBattle",
+    "Properties": {
+      "Guid": "BC0F9231-4BD1FD97-D1B6F087-890DB740"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "Class_2_AAE606B94C66111666A742B479FD1170",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Level_7_42A5BA38402A55480A6D19931D3F28A2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Boss_9_D334069149BC5A99C8228D966004D954",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Mutation_12_6D2C26AF43435FFF3E032C9FA6FBB3E0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'EMutation'",
+          "ObjectPath": "/Game/Blueprints/Battle/EMutation.0"
+        }
+      }
+    ],
+    "StructFlags": 0,
+    "DefaultProperties": {
+      "Class_2_AAE606B94C66111666A742B479FD1170": "None",
+      "Level_7_42A5BA38402A55480A6D19931D3F28A2": 0,
+      "Boss_9_D334069149BC5A99C8228D966004D954": false,
+      "Mutation_12_6D2C26AF43435FFF3E032C9FA6FBB3E0": "EMutation::NewEnumerator0"
+    }
+  }
+]

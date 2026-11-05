@@ -1,0 +1,57 @@
+[
+  {
+    "Type": "UserDefinedEnum",
+    "Name": "EDirection",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedEnum'",
+    "Package": "/Game/Blueprints/Dungeons/EDirection",
+    "Properties": {
+      "DisplayNameMap": [
+        {
+          "Key": "NewEnumerator0",
+          "Value": {
+            "Namespace": "",
+            "Key": "925BD18C4717599F7D90AC82E9DDED27",
+            "SourceString": "Up",
+            "LocalizedString": "Up"
+          }
+        },
+        {
+          "Key": "NewEnumerator1",
+          "Value": {
+            "Namespace": "",
+            "Key": "E6A64C224701266CD643BB9046809148",
+            "SourceString": "Down",
+            "LocalizedString": "Down"
+          }
+        },
+        {
+          "Key": "NewEnumerator2",
+          "Value": {
+            "Namespace": "",
+            "Key": "40E8013042AD4276F952B393DF904C89",
+            "SourceString": "Right",
+            "LocalizedString": "Right"
+          }
+        },
+        {
+          "Key": "NewEnumerator3",
+          "Value": {
+            "Namespace": "",
+            "Key": "0EB7EBA14C71DF7479F504829C536558",
+            "SourceString": "Left",
+            "LocalizedString": "Left"
+          }
+        }
+      ]
+    },
+    "Names": {
+      "EDirection::NewEnumerator0": 0,
+      "EDirection::NewEnumerator1": 1,
+      "EDirection::NewEnumerator2": 2,
+      "EDirection::NewEnumerator3": 3,
+      "EDirection::EDirection_MAX": 4
+    },
+    "CppForm": "Namespaced"
+  }
+]

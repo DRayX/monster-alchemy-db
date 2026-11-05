@@ -1,0 +1,25 @@
+[
+  {
+    "Type": "UserDefinedStruct",
+    "Name": "S_Int",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedStruct'",
+    "Package": "/Game/Blueprints/Widgets/Classes/S_Int",
+    "Properties": {
+      "Guid": "EA08BF98-4DD9EBE2-A4CDDCAE-C548BA30"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "N_6_791AAD014527ABE19BA3B7BCB82B97C4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      }
+    ],
+    "StructFlags": 0,
+    "DefaultProperties": {
+      "N_6_791AAD014527ABE19BA3B7BCB82B97C4": 0
+    }
+  }
+]

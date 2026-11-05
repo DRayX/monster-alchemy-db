@@ -1,0 +1,617 @@
+[
+  {
+    "Type": "DataTable",
+    "Name": "DT_Locations",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DataTable'",
+    "Package": "/Game/Blueprints/Tables/DT_Locations",
+    "Properties": {
+      "RowStruct": {
+        "ObjectName": "UserDefinedStruct'S_Text'",
+        "ObjectPath": "/Game/Blueprints/Widgets/Classes/S_Text.0"
+      }
+    },
+    "Rows": {
+      "AlchemistTower": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "247167D7465EED08AAE919B86872FCA0",
+          "SourceString": "Alchemist Tower",
+          "LocalizedString": "Alchemist Tower"
+        }
+      },
+      "SouthernPeninsula": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "202756344C4EA4724F1732B826EB27CC",
+          "SourceString": "Southern Peninsula",
+          "LocalizedString": "Southern Peninsula"
+        }
+      },
+      "Ba-lhaBridge": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "B499342A420FB03DC258A7946B27F46F",
+          "SourceString": "Ba-lha Bridge",
+          "LocalizedString": "Ba-lha Bridge"
+        }
+      },
+      "BalhaVillage": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "AA11EF0F4ED6A4E4C970E9A4063E4FDF",
+          "SourceString": "Balha Village",
+          "LocalizedString": "Balha Village"
+        }
+      },
+      "IsolatedHut": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "A9FC7E6C461C651C31BCCA9292A06CC7",
+          "SourceString": "Isolated Hut",
+          "LocalizedString": "Isolated Hut"
+        }
+      },
+      "RiverCrossing": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "F8355DAE4A8AD097DADF83B4F17D932D",
+          "SourceString": "River Crossing",
+          "LocalizedString": "River Crossing"
+        }
+      },
+      "SandMountain": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "8EE2536740698CB1D199FFBED7C8DEBD",
+          "SourceString": "Sand Mountain",
+          "LocalizedString": "Sand Mountain"
+        }
+      },
+      "SeasideCamp": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "C454080C46E1EB93D0355DA63B7185C5",
+          "SourceString": "Seaside Camp",
+          "LocalizedString": "Seaside Camp"
+        }
+      },
+      "Shipwreck": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "2796A253485835AB67496ABC7B8BF6F7",
+          "SourceString": "Misadventurous Shiprwreck",
+          "LocalizedString": "Misadventurous Shiprwreck"
+        }
+      },
+      "DungeonCuriousCavelet": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "BA8C102A46ED2C5FC108C4981EB00210",
+          "SourceString": "Curious Cavelet",
+          "LocalizedString": "Curious Cavelet"
+        }
+      },
+      "SecretVIllage": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "240616E14775D9D0A811C8B7DB50C0E7",
+          "SourceString": "Secret VIllage",
+          "LocalizedString": "Secret VIllage"
+        }
+      },
+      "MarloTown": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "97D8FAD445B86E8DC1AE3981DBC06B6D",
+          "SourceString": "Marlo Town",
+          "LocalizedString": "Marlo Town"
+        }
+      },
+      "ColiseumOfBlades": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "B4F3CCC642758756CC87B39EF88B8973",
+          "SourceString": "Coliseum of Blades",
+          "LocalizedString": "Coliseum of Blades"
+        }
+      },
+      "HarvestFightFair": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "5DD19ED743302ECD53637A94E59D7D84",
+          "SourceString": "Harvest Fight Fair",
+          "LocalizedString": "Harvest Fight Fair"
+        }
+      },
+      "LilyCanyon": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "3DC89E3440ED752D4804C8A6D8579C8A",
+          "SourceString": "Lily Canyon",
+          "LocalizedString": "Lily Canyon"
+        }
+      },
+      "PondVillage": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "7323A6C544BF04E411AAFC82843D5F0B",
+          "SourceString": "Pond Village",
+          "LocalizedString": "Pond Village"
+        }
+      },
+      "Sythel": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "EDD2AE6C4B81000A1D604E8DF336F97A",
+          "SourceString": "Sythel",
+          "LocalizedString": "Sythel"
+        }
+      },
+      "Village": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "9380F3124F21B2914596568160992438",
+          "SourceString": "Village",
+          "LocalizedString": "Village"
+        }
+      },
+      "SnowMount": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "46C3C73741C93439ED25B99365609F11",
+          "SourceString": "Snow Mount",
+          "LocalizedString": "Snow Mount"
+        }
+      },
+      "Baquen": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "98C901264FCE45E5AD777D987EA5F4F6",
+          "SourceString": "Baquén",
+          "LocalizedString": "Baquén"
+        }
+      },
+      "AbandonedCity": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "09E23F51435962DA3A32EE91795BD791",
+          "SourceString": "Abandoned City",
+          "LocalizedString": "Abandoned City"
+        }
+      },
+      "GhostVillage": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "D64477F44EA514992D63C2BB21BF8824",
+          "SourceString": "Ghost Village",
+          "LocalizedString": "Ghost Village"
+        }
+      },
+      "Zenilia": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "7680BE0B4EDD370CBB1F0890B9DE5087",
+          "SourceString": "Zenilia",
+          "LocalizedString": "Zenilia"
+        }
+      },
+      "TidesInn": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "4486A3EA46F22CA243A87EAADF08CC86",
+          "SourceString": "Tranquil Tides Inn",
+          "LocalizedString": "Tranquil Tides Inn"
+        }
+      },
+      "MechanicalRuins": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "73B5DE5F479725B3AAD60EB551069447",
+          "SourceString": "Mechanical Ruins",
+          "LocalizedString": "Mechanical Ruins"
+        }
+      },
+      "MarloForest": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "D5BA72C448EAB563AD31E9BA77C94E70",
+          "SourceString": "Marlo Forest",
+          "LocalizedString": "Marlo Forest"
+        }
+      },
+      "PlateauDesert": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "9998B8C14104B26A71AA33B06FA2E37D",
+          "SourceString": "Dasht Plateau",
+          "LocalizedString": "Dasht Plateau"
+        }
+      },
+      "Monsatery": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "7109D5B3498398046363DB80E7B28128",
+          "SourceString": "Index Monsatery",
+          "LocalizedString": "Index Monsatery"
+        }
+      },
+      "Shrine": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "F6D6B8024468C6B530C3F0AF0B4A1A84",
+          "SourceString": "Index Shrine",
+          "LocalizedString": "Index Shrine"
+        }
+      },
+      "XanticHills": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "0400B66B47A28E097851BC9DBF7614E0",
+          "SourceString": "Xantic Hills",
+          "LocalizedString": "Xantic Hills"
+        }
+      },
+      "HauntedHouse": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "4FFEAEE14B48D79945CB78910F85A342",
+          "SourceString": "Haunted House",
+          "LocalizedString": "Haunted House"
+        }
+      },
+      "BrokenBridge": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "3BD5AE804D813EB4B5337FB477DE3DEA",
+          "SourceString": "Broken Bridge",
+          "LocalizedString": "Broken Bridge"
+        }
+      },
+      "Watchtower": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "17E2ECED4106DD300E333F94D642441A",
+          "SourceString": "Watchtower",
+          "LocalizedString": "Watchtower"
+        }
+      },
+      "StrandedVanguard": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "94BB969749ABA41FD84E95B86CF5520A",
+          "SourceString": "Stranded Vanguard",
+          "LocalizedString": "Stranded Vanguard"
+        }
+      },
+      "BoneZone": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "8E3A623E4EA8935E3EA8A8AF3E87A66E",
+          "SourceString": "The Bone Zone",
+          "LocalizedString": "The Bone Zone"
+        }
+      },
+      "NecromancerCamp": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "18CD6B6E467C1948EA7BF299FB525E71",
+          "SourceString": "Necromancer Camp",
+          "LocalizedString": "Necromancer Camp"
+        }
+      },
+      "ForgottenKingdom": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "266CBB3340FDE12F286D3E94E514F4AB",
+          "SourceString": "Forgotten Kingdom",
+          "LocalizedString": "Forgotten Kingdom"
+        }
+      },
+      "Cemetery": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "224DB9FC41CEA9EB9E98F8A1067A584D",
+          "SourceString": "Cemetery",
+          "LocalizedString": "Cemetery"
+        }
+      },
+      "Shipwreck2": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "2796A253485835AB67496ABC7B8BF6F7",
+          "SourceString": "Misadventurous Shiprwreck",
+          "LocalizedString": "Misadventurous Shiprwreck"
+        }
+      },
+      "BubbleForest": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "45F5859B406CC41D812CC9B2036CFCE7",
+          "SourceString": "Bubble Forest",
+          "LocalizedString": "Bubble Forest"
+        }
+      },
+      "Mangrove": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "6488531245C4B0791EFF029CBE117C8A",
+          "SourceString": "Mangrove",
+          "LocalizedString": "Mangrove"
+        }
+      },
+      "AkawCamp": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "F6A549214A59B1B3CD5A98B01D21A930",
+          "SourceString": "Akaw Resistance Camp",
+          "LocalizedString": "Akaw Resistance Camp"
+        }
+      },
+      "MediusSett": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "E031A34549BF82CB66F95284B3F748AF",
+          "SourceString": "Medius Settlement",
+          "LocalizedString": "Medius Settlement"
+        }
+      },
+      "CrazyVillage": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "82C457E7442D55A8D7DCC6AA67882901",
+          "SourceString": "Crazy Village",
+          "LocalizedString": "Crazy Village"
+        }
+      },
+      "DragonMount": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "F1E4E6A04A9EEBFB1C1A1696B532A248",
+          "SourceString": "Roaring Mount",
+          "LocalizedString": "Roaring Mount"
+        }
+      },
+      "Chasm": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "A19566614EBBFB50854392ABF25B255D",
+          "SourceString": "Chasm",
+          "LocalizedString": "Chasm"
+        }
+      },
+      "LanVillage": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "6822578E4C553A09BEE0E6B222832E2E",
+          "SourceString": "Lan Village",
+          "LocalizedString": "Lan Village"
+        }
+      },
+      "IsleOfIron": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "489338454EEE72160F0184AFF92A33AB",
+          "SourceString": "Isle Of Iron",
+          "LocalizedString": "Isle Of Iron"
+        }
+      },
+      "SpiritualRetreat": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "8A32BF8945627E3311CBC6BD8C373005",
+          "SourceString": "Spiritual Retreat",
+          "LocalizedString": "Spiritual Retreat"
+        }
+      },
+      "OrdersFrontier": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "90EA690F41351B65DF42478ECDEC936D",
+          "SourceString": "Order's Frontier",
+          "LocalizedString": "Order's Frontier"
+        }
+      },
+      "TropicalMaze": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "76AAD24D4340381F15B4C09006C2498A",
+          "SourceString": "Tropical Maze",
+          "LocalizedString": "Tropical Maze"
+        }
+      },
+      "SaltyIsland": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "116180F448FD5A7965010B87049203CC",
+          "SourceString": "Salty Island",
+          "LocalizedString": "Salty Island"
+        }
+      },
+      "NcanMarket": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "CF99501845FDA551F02EF78DF40D7FBF",
+          "SourceString": "Ncan Market",
+          "LocalizedString": "Ncan Market"
+        }
+      },
+      "PolluxFort": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "9D8168FD4AAA58B08F8810BDB4C904CA",
+          "SourceString": "Pollux Fort",
+          "LocalizedString": "Pollux Fort"
+        }
+      },
+      "MountZoondar": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "EF27759C44BEEE1F58E9B58D522B27FE",
+          "SourceString": "Mount Zoondar",
+          "LocalizedString": "Mount Zoondar"
+        }
+      },
+      "OrangeVillage": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "50BDBEA2440304E1AB3A168082686362",
+          "SourceString": "Oran Village",
+          "LocalizedString": "Oran Village"
+        }
+      },
+      "ElementalGrove": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "FE4B9CCA4D5C302B4DB02A9F5119206F",
+          "SourceString": "Elemental Grove",
+          "LocalizedString": "Elemental Grove"
+        }
+      },
+      "UpperDistrict": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "8C629A464289DC323B737387FA62A5F7",
+          "SourceString": "Upper District",
+          "LocalizedString": "Upper District"
+        }
+      },
+      "CastleDungeon": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "BB4E36C74625D26A264A6F8B59F9CC83",
+          "SourceString": "Castle Dungeons",
+          "LocalizedString": "Castle Dungeons"
+        }
+      },
+      "UncannyValley": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "050EE0884D6AEAE609C7578509DBA1FE",
+          "SourceString": "Uncanny Valley",
+          "LocalizedString": "Uncanny Valley"
+        }
+      },
+      "PaleRoute": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "D2AAF4AB4DAA08F508E8A18473DB4F98",
+          "SourceString": "Pale Route",
+          "LocalizedString": "Pale Route"
+        }
+      },
+      "PirateIsland": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "DCCF56A242ACCEC7D7EC71B07BF1A7CE",
+          "SourceString": "Pirate Island",
+          "LocalizedString": "Pirate Island"
+        }
+      },
+      "BoboIsland": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "09CC377E484DFE12138E699BC4311912",
+          "SourceString": "Bobo Island",
+          "LocalizedString": "Bobo Island"
+        }
+      },
+      "PlinkyIsland": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "FE2DB66746651D150871B99B00969C36",
+          "SourceString": "Plinky Island",
+          "LocalizedString": "Plinky Island"
+        }
+      },
+      "CrassulaIsland": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "A221F217425AC1224879EC9F2B78AAB2",
+          "SourceString": "Crassula Island",
+          "LocalizedString": "Crassula Island"
+        }
+      },
+      "AbiesIsland": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "9927055C46EA1B2CD858ECB63133831E",
+          "SourceString": "Abies Island",
+          "LocalizedString": "Abies Island"
+        }
+      },
+      "BrawlIsland": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "F939CC174E75A4B641765BAE2943A022",
+          "SourceString": "Brawl Island",
+          "LocalizedString": "Brawl Island"
+        }
+      },
+      "IllusionIsland": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "BF29EA5B4CA3705FB6C34CA437FDF831",
+          "SourceString": "Illusion Island",
+          "LocalizedString": "Illusion Island"
+        }
+      },
+      "Mausoleum": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "9883EE344FB39E01D1B5EA954AF4B162",
+          "SourceString": "Mausoleum",
+          "LocalizedString": "Mausoleum"
+        }
+      },
+      "ZoondarMine1": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "2D5179E54BD5E3F3072C3A9B96642B08",
+          "SourceString": "Zoondar Mines",
+          "LocalizedString": "Zoondar Mines"
+        }
+      },
+      "ZoondarMine2": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "2A1842294BE39AA8A786688BFB007A8F",
+          "SourceString": "Deep Zoondar Mines",
+          "LocalizedString": "Deep Zoondar Mines"
+        }
+      },
+      "AlmasWell": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "5C6944A645BB1A310BBF4B90FE711B49",
+          "SourceString": "Alma's Well",
+          "LocalizedString": "Alma's Well"
+        }
+      },
+      "Monastery": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "2735058F40D2EC73F0BAD9BAB3CA6692",
+          "SourceString": "Index Monastery",
+          "LocalizedString": "Index Monastery"
+        }
+      },
+      "ColiseumOfEssence": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "0CE5FE6E471AFD9DA63FCA821640D981",
+          "SourceString": "Coliseum of Essence",
+          "LocalizedString": "Coliseum of Essence"
+        }
+      },
+      "ColiseumOfPowder": {
+        "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+          "Namespace": "",
+          "Key": "A6949AD54EDB0AE6BAE61C9990C77518",
+          "SourceString": "Coliseum of Powder",
+          "LocalizedString": "Coliseum of Powder"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,371 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Interactable_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprints/Core/BP_Interactable",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Interactable_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.11"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Interactable_C:ExecuteUbergraph_BP_Interactable'",
+        "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.3"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Interactable_C:IsBlocked?'",
+        "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.5"
+      },
+      {
+        "ObjectName": "Function'BP_Interactable_C:StopInteract'",
+        "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.7"
+      },
+      {
+        "ObjectName": "Function'BP_Interactable_C:Interact'",
+        "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.4"
+      },
+      {
+        "ObjectName": "Function'BP_Interactable_C:ExecuteUbergraph_BP_Interactable'",
+        "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.3"
+      },
+      {
+        "ObjectName": "Function'BP_Interactable_C:OnInteracted__DelegateSignature'",
+        "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.6"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Capsule",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'CapsuleComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "MulticastInlineDelegateProperty",
+        "Name": "OnInteracted",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | BlueprintAssignable | BlueprintCallable",
+        "SignatureFunction": {
+          "ObjectName": "Function'BP_Interactable_C:OnInteracted__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.6"
+        }
+      }
+    ],
+    "FuncMap": {
+      "OnInteracted__DelegateSignature": {
+        "ObjectName": "Function'BP_Interactable_C:OnInteracted__DelegateSignature'",
+        "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.6"
+      },
+      "ExecuteUbergraph_BP_Interactable": {
+        "ObjectName": "Function'BP_Interactable_C:ExecuteUbergraph_BP_Interactable'",
+        "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.3"
+      },
+      "Interact": {
+        "ObjectName": "Function'BP_Interactable_C:Interact'",
+        "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.4"
+      },
+      "StopInteract": {
+        "ObjectName": "Function'BP_Interactable_C:StopInteract'",
+        "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.7"
+      },
+      "IsBlocked?": {
+        "ObjectName": "Function'BP_Interactable_C:IsBlocked?'",
+        "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.5"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "BlueprintGeneratedClass'BPI_Interact_C'",
+          "ObjectPath": "/Game/Blueprints/Core/BPI_Interact.0"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Interactable_C'Default__BP_Interactable_C'",
+      "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal",
+      "ImplementedInterfaces": "((Interface=\"/Script/Engine.BlueprintGeneratedClass'/Game/Blueprints/Core/BPI_Interact.BPI_Interact_C'\"))"
+    }
+  },
+  {
+    "Type": "BP_Interactable_C",
+    "Name": "Default__BP_Interactable_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Core/BP_Interactable.BP_Interactable_C'",
+    "Package": "/Game/Blueprints/Core/BP_Interactable",
+    "Properties": {
+      "UberGraphFrame": {},
+      "OnInteracted": {
+        "InvocationList": []
+      },
+      "Tags": [
+        "HideMap"
+      ]
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "Capsule_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactable_C'",
+      "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.0"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 20.0
+      },
+      "bCanEverAffectNavigation": false
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Interactable",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactable_C'",
+      "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_Event_Index",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "Interact",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactable_C'",
+      "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "Index",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "IsBlocked?",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactable_C'",
+      "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInteracted__DelegateSignature",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactable_C'",
+      "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "SelfRef",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Interactable_C'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.0"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_Delegate | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "StopInteract",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactable_C'",
+      "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.0"
+    },
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactable_C'",
+      "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactable_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.11"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Interactable_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.8"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Interactable_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.10"
+        }
+      ],
+      "VariableGuid": "0E708310-45FFC251-B7857FBC-BD6C276B",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactable_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.11"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'CapsuleComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "CapsuleComponent'BP_Interactable_C:Capsule_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.2"
+      },
+      "VariableGuid": "882CA35F-41F66581-E9296485-13E4CBF3",
+      "InternalVariableName": "Capsule"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactable_C'",
+      "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Interactable_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.9"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Interactable_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactable_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.10"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Interactable_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.9"
+      }
+    }
+  }
+]

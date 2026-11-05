@@ -1,0 +1,47 @@
+[
+  {
+    "Type": "UserDefinedStruct",
+    "Name": "S_BattleData",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedStruct'",
+    "Package": "/Game/Blueprints/Battle/S_BattleData",
+    "Properties": {
+      "Guid": "949E45E4-444011F0-662E5E93-5EB6DA8B"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ArrayProperty",
+        "Name": "Team_3_281F81E443F6439F13134FA84FB25EDD",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "Team_3_281F81E443F6439F13134FA84FB25EDD",
+          "Flags": "RF_Public",
+          "ElementSize": 20,
+          "Struct": {
+            "ObjectName": "UserDefinedStruct'S_MonsterForBattle'",
+            "ObjectPath": "/Game/Blueprints/Battle/S_MonsterForBattle.0"
+          }
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "AI_7_AC64E3E040666138EC7EA7B6047D9CE7",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'EBattleAIType'",
+          "ObjectPath": "/Game/Blueprints/Battle/EBattleAIType.0"
+        }
+      }
+    ],
+    "StructFlags": 0,
+    "DefaultProperties": {
+      "Team_3_281F81E443F6439F13134FA84FB25EDD": [],
+      "AI_7_AC64E3E040666138EC7EA7B6047D9CE7": "EBattleAIType::NewEnumerator0"
+    }
+  }
+]

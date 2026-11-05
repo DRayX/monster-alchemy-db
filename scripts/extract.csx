@@ -23,14 +23,17 @@ using CUE4Parse.Encryption.Aes;
 using CUE4Parse.FileProvider;
 using CUE4Parse.MappingsProvider.Usmap;
 using CUE4Parse.UE4.Assets.Exports;
+using CUE4Parse.UE4.Assets.Exports.Component.StaticMesh;
 using CUE4Parse.UE4.Assets.Exports.Engine;
 using CUE4Parse.UE4.Assets.Exports.Texture;
 using CUE4Parse.UE4.Assets.Objects;
 using CUE4Parse.UE4.Objects.Core.Misc;
+using CUE4Parse.UE4.Objects.Core.Math;
 using CUE4Parse.UE4.Objects.UObject;
 using CUE4Parse.UE4.Versions;
 using CUE4Parse_Conversion.Textures;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using SkiaSharp;
 
 class Options
@@ -70,7 +73,8 @@ static readonly string[] WEBAPP_DATA_TABLE_NAMES = new[]
     "DT_PassiveSkills",
     "RDT_DialogueDecoratorImage",
     "DT_Spawns",
-    "DT_WorldResources"
+    "DT_WorldResources",
+    "DT_Locations"
 };
 
 /// <summary>
@@ -81,6 +85,48 @@ static readonly (string Key, string Asset)[] GENERAL_ICON_DEFINITIONS = new[]
     ("Player", "T_Icon_Player"),
     ("Tower", "T_Icon_Tower"),
     ("Shop", "T_Icon_Shop"),
+    ("Map", "T_Icon_MarkerRed"),
+    ("Spawner", "T_AlertMonster_Icon"),
+    ("Chest", "Chest"),
+    ("Scroll", "T_Icon_Scroll"),
+    ("Obelisk", "Teleport"),
+    ("Quest", "T_Icon_Quest_01"),
+    ("Fight", "T_IconFight"),
+    ("Dungeon", "T_DungeonDoor"),
+    ("Inn", "T_Icon_Inn"),
+    ("Ferry", "T_Map_PirateIsland")
+};
+
+/// <summary>
+/// Canonical overworld map texture Unreal asset name.
+/// </summary>
+const string WORLD_MAP_ASSET_NAME = "Map";
+
+/// <summary>
+/// Set of overworld POI classes to extract from World Partition cells and persistent level.
+/// </summary>
+static readonly HashSet<string> WORLD_POI_CLASSES = new(StringComparer.OrdinalIgnoreCase)
+{
+    "BP_Spawner_C",
+    "BP_WorldChest_C",
+    "BP_Recipe_C",
+    "BP_Interactable_ExpObelisk_C",
+    "BP_NPC_StaticDialogue_Shop_C",
+    "BP_NPC_StaticDialogue_FetchShowQuest_C",
+    "BP_DungeonDoor_C",
+    "BP_DungeonDoor_Exit_C",
+    "BP_DungeonManager_C",
+    "BP_ColisseumDoor_C",
+    "BP_Coliseum_C",
+    "BP_Coliseum_Child_C",
+    "BP_ZoneDiscoveryVolume_C",
+    "BP_AlchemistTower_Interact_C",
+    "BP_NPC_StaticDialogue_Inn_C",
+    "BP_NPC_StaticDialogue_Navigator_Island_C",
+    "BP_NPC_StaticDialogue_Navigator_Baq_C",
+    "BP_NPC_Battle_C",
+    "BP_NPC_Battle_FKingdom_C",
+    "BP_NPC_Battle_Knight_C"
 };
 
 // ============================================================================
@@ -189,6 +235,13 @@ void DiscoverDependencies(UObject? export, Queue<string> pendingQueue, HashSet<s
             if (cleanPath.StartsWith("/Game/", StringComparison.OrdinalIgnoreCase) && seenPackages.Add(cleanPath))
                 pendingQueue.Enqueue(cleanPath);
         }
+    }
+
+    if (export is UStruct ust && ust.SuperStruct.ResolvedObject is { } superObj && superObj.Class?.Name.Text == "BlueprintGeneratedClass")
+    {
+        var cleanSuperPath = StripExportIndex(superObj.GetPathName());
+        if (cleanSuperPath.StartsWith("/Game/", StringComparison.OrdinalIgnoreCase) && seenPackages.Add(cleanSuperPath))
+            pendingQueue.Enqueue(cleanSuperPath);
     }
 }
 
@@ -312,6 +365,7 @@ async Task<(
     SortedDictionary<string, string> DataTables,
     SortedDictionary<string, string> Structs,
     SortedDictionary<string, string> Enums,
+    SortedDictionary<string, string> Blueprints,
     List<string> MonsterIds,
     List<string> ResourceIds,
     SortedDictionary<string, string> RoomIcons,
@@ -343,8 +397,23 @@ ExtractDataTablesAndTypesAsync(DefaultFileProvider provider, Dictionary<string, 
     var dataTablesMap = new SortedDictionary<string, string>(StringComparer.Ordinal);
     var structsMap = new SortedDictionary<string, string>(StringComparer.Ordinal);
     var enumsMap = new SortedDictionary<string, string>(StringComparer.Ordinal);
+    var blueprintsMap = new SortedDictionary<string, string>(StringComparer.Ordinal);
 
-    Console.WriteLine("==> [Phase 1/5] Extracting DataTables, Structs, and Enums...");
+    Console.WriteLine($"[Discovery] Enqueuing {WORLD_POI_CLASSES.Count} world POI Blueprint class(es)...");
+    foreach (var poiClass in WORLD_POI_CLASSES)
+    {
+        var baseName = poiClass.EndsWith("_C", StringComparison.OrdinalIgnoreCase)
+            ? poiClass.Substring(0, poiClass.Length - 2)
+            : poiClass;
+
+        var gamePath = ResolveAssetPackage(vfsByName, baseName, "WorldPoiBlueprint");
+        if (gamePath != null && seenPackages.Add(gamePath))
+        {
+            pendingQueue.Enqueue(gamePath);
+        }
+    }
+
+    Console.WriteLine("==> [Phase 1/5] Extracting DataTables, Structs, Enums, and Blueprints...");
 
     while (pendingQueue.Count > 0)
     {
@@ -408,18 +477,28 @@ ExtractDataTablesAndTypesAsync(DefaultFileProvider provider, Dictionary<string, 
                 }
             }
 
-            DiscoverDependencies(primaryExport, pendingQueue, seenPackages);
+            foreach (var exp in exports.OfType<UStruct>())
+            {
+                DiscoverDependencies(exp, pendingQueue, seenPackages);
+            }
+            if (primaryExport is UDataTable)
+            {
+                DiscoverDependencies(primaryExport, pendingQueue, seenPackages);
+            }
 
             await SaveJsonAsync(Path.Combine(outputDir, lookupPath + ".json"), exports);
 
             var assetName = Path.GetFileName(packagePath);
             var canonicalPackagePath = "/" + lookupPath + ".json";
 
+            var bgcExport = exports.FirstOrDefault(e => e.ExportType == "BlueprintGeneratedClass");
+
             var (map, tag) = primaryExport?.ExportType switch
             {
                 "DataTable" => (dataTablesMap, "DataTable"),
                 "UserDefinedStruct" => (structsMap, "Struct"),
                 "UserDefinedEnum" => (enumsMap, "Enum"),
+                _ when bgcExport != null => (blueprintsMap, "Blueprint"),
                 _ => (null, primaryExport?.ExportType ?? "Unknown")
             };
 
@@ -435,10 +514,10 @@ ExtractDataTablesAndTypesAsync(DefaultFileProvider provider, Dictionary<string, 
         }
     }
 
-    return (dataTablesMap, structsMap, enumsMap, monsterIds, resourceIds, roomIconMap, roomTexturesToExtract, decoratorIconMap, decoratorTexturesToExtract);
+    return (dataTablesMap, structsMap, enumsMap, blueprintsMap, monsterIds, resourceIds, roomIconMap, roomTexturesToExtract, decoratorIconMap, decoratorTexturesToExtract);
 }
 
-async Task<(SortedDictionary<string, string> UiIcons, SortedDictionary<string, string> RoomIcons, SortedDictionary<string, string> GeneralIcons)> ExtractUiIconsAsync(
+async Task<(SortedDictionary<string, string> UiIcons, SortedDictionary<string, string> RoomIcons, SortedDictionary<string, string> GeneralIcons, string? WorldMap)> ExtractUiIconsAsync(
     DefaultFileProvider provider,
     Dictionary<string, List<string>> vfsByName,
     SortedDictionary<string, string> roomIcons,
@@ -448,7 +527,7 @@ async Task<(SortedDictionary<string, string> UiIcons, SortedDictionary<string, s
     string outputDir)
 {
     Console.WriteLine();
-    Console.WriteLine("==> [Phase 2/5] Extracting UI & Icon Textures...");
+    Console.WriteLine("==> [Phase 2/5] Extracting UI, Icon & Map Textures...");
 
     var generalIcons = new SortedDictionary<string, string>(StringComparer.OrdinalIgnoreCase);
     var uiTexturesToExtract = new HashSet<string>(roomTextures, StringComparer.OrdinalIgnoreCase);
@@ -460,10 +539,22 @@ async Task<(SortedDictionary<string, string> UiIcons, SortedDictionary<string, s
             Console.WriteLine($"  [Warning] General icon asset '{assetName}' not found in VFS archives.");
     }
 
-    Console.WriteLine($"  Discovered {uiTexturesToExtract.Count} UI/icon texture(s). Extracting textures...");
+    string? worldMap = null;
+    var mapPackage = ResolveAssetPackage(vfsByName, WORLD_MAP_ASSET_NAME, "world map texture");
+    if (mapPackage != null)
+    {
+        worldMap = mapPackage + ".png";
+        uiTexturesToExtract.Add(mapPackage);
+    }
+    else
+    {
+        Console.WriteLine($"  [Warning] World map texture asset '{WORLD_MAP_ASSET_NAME}' not found in VFS archives.");
+    }
+
+    Console.WriteLine($"  Discovered {uiTexturesToExtract.Count} UI/icon/map texture(s). Extracting textures...");
     await ExtractTexturesAsync(provider, uiTexturesToExtract, outputDir, "UI/Icon");
 
-    return (decoratorIcons, roomIcons, generalIcons);
+    return (decoratorIcons, roomIcons, generalIcons, worldMap);
 }
 
 async Task<(SortedDictionary<string, string> Icons, SortedDictionary<string, string> Sprites)> ExtractMonsterVisualsAsync(
@@ -527,6 +618,153 @@ async Task<SortedDictionary<string, string>> ExtractResourceVisualsAsync(
         "Resource");
 }
 
+bool TryGetActorTransform(UObject exp, out FVector loc, out FVector? scale, out FRotator? rot)
+{
+    loc = default;
+    scale = null;
+    rot = null;
+
+    if (!exp.TryGetValue(out FPackageIndex rootIdx, "RootComponent") || !rootIdx.TryLoad(out var rootComp))
+        return false;
+
+    if (!rootComp.TryGetValue(out loc, "RelativeLocation"))
+        return false;
+
+    if (rootComp.TryGetValue(out FVector s, "RelativeScale3D"))
+        scale = s;
+
+    if (rootComp.TryGetValue(out FRotator r, "RelativeRotation"))
+        rot = r;
+
+    return true;
+}
+
+async Task<string> ExtractWorldPoisAsync(DefaultFileProvider provider, string outputDir)
+{
+    Console.WriteLine();
+    Console.WriteLine("==> [Phase 5/5] Extracting World POIs...");
+
+    var cells = provider.Files.Values
+        .Where(f => f.Path.StartsWith("MonsterAlchemy/Content/Levels/MainLevel", StringComparison.OrdinalIgnoreCase) && f.Path.EndsWith(".umap", StringComparison.OrdinalIgnoreCase))
+        .ToList();
+
+    Console.WriteLine($"  Scanning {cells.Count} level file(s) (persistent level + World Partition cells)...");
+
+    var pois = new List<JObject>();
+
+    foreach (var cell in cells)
+    {
+        if (!provider.TryLoadPackage(cell.Path, out var pkg))
+            continue;
+
+        string cellName = Path.GetFileNameWithoutExtension(cell.Path);
+
+        foreach (var exp in pkg.GetExports())
+        {
+            if (WORLD_POI_CLASSES.Contains(exp.ExportType))
+            {
+                var obj = JObject.FromObject(exp);
+                obj["Cell"] = cellName;
+
+                if (TryGetActorTransform(exp, out var loc, out var scale, out var rot))
+                {
+                    obj["Location"] = new JObject
+                    {
+                        ["X"] = loc.X,
+                        ["Y"] = loc.Y,
+                        ["Z"] = loc.Z
+                    };
+
+                    if (scale != null)
+                    {
+                        obj["Scale"] = new JObject
+                        {
+                            ["X"] = scale.Value.X,
+                            ["Y"] = scale.Value.Y,
+                            ["Z"] = scale.Value.Z
+                        };
+                    }
+
+                    if (rot != null)
+                    {
+                        obj["Rotation"] = new JObject
+                        {
+                            ["Pitch"] = rot.Value.Pitch,
+                            ["Yaw"] = rot.Value.Yaw,
+                            ["Roll"] = rot.Value.Roll
+                        };
+                    }
+                }
+
+                pois.Add(obj);
+            }
+            else if (exp.ExportType.StartsWith("BP_InstancedInteractiveFoliageComponent_", StringComparison.OrdinalIgnoreCase) && exp is UFoliageInstancedStaticMeshComponent foliageComp)
+            {
+                if (foliageComp.PerInstanceSMData == null || foliageComp.PerInstanceSMData.Length == 0)
+                    continue;
+
+                FVector origin = FVector.ZeroVector;
+                if (exp.Outer?.Object?.Value is UObject outerObj && outerObj.TryGetValue(out FPackageIndex rootIdx, "RootComponent") && rootIdx.TryLoad(out var rootComp) && rootComp.TryGetValue(out FVector rootLoc, "RelativeLocation"))
+                {
+                    origin = rootLoc;
+                }
+
+                // Dynamically read the native Resource_ID from the component's blueprint CDO template hierarchy
+                string resourceId = "";
+                var cdo = exp.Template?.Object?.Value as UObject;
+                while (cdo != null)
+                {
+                    if (cdo.TryGetValue(out FName resId, "Resource_ID"))
+                    {
+                        resourceId = resId.Text;
+                        break;
+                    }
+                    cdo = cdo.Template?.Object?.Value as UObject;
+                }
+
+                var obj = new JObject
+                {
+                    ["Type"] = exp.ExportType,
+                    ["Name"] = exp.Name,
+                    ["Cell"] = cellName,
+                    ["ResourceID"] = resourceId,
+                    ["Location"] = new JObject
+                    {
+                        ["X"] = origin.X,
+                        ["Y"] = origin.Y,
+                        ["Z"] = origin.Z
+                    },
+                    ["Instances"] = JArray.FromObject(foliageComp.PerInstanceSMData.Select(i => new
+                    {
+                        X = i.TransformData.Translation.X,
+                        Y = i.TransformData.Translation.Y,
+                        Z = i.TransformData.Translation.Z
+                    }))
+                };
+
+                pois.Add(obj);
+            }
+        }
+    }
+
+    var sorted = pois
+        .OrderBy(a => (string?)a["Type"], StringComparer.Ordinal)
+        .ThenBy(a => (string?)a["Name"], StringComparer.Ordinal)
+        .ToList();
+
+    Console.WriteLine($"  Discovered {sorted.Count} world POI(s) across {sorted.Select(a => (string?)a["Type"]).Distinct().Count()} classes:");
+    foreach (var group in sorted.GroupBy(a => (string?)a["Type"]).OrderBy(g => g.Key))
+    {
+        Console.WriteLine($"    - {group.Key,-38}: {group.Count()} POI(s)");
+    }
+
+    var outFile = Path.Combine(outputDir, "Game", "World", "MainLevel_Pois.json");
+    await SaveJsonAsync(outFile, sorted);
+    Console.WriteLine($"  [World] Generated {outFile}");
+
+    return "/Game/World/MainLevel_Pois.json";
+}
+
 // ============================================================================
 // Main Execution
 // ============================================================================
@@ -555,12 +793,16 @@ async Task<int> RunExtractAsync(Options opts)
         var icons = await ExtractUiIconsAsync(provider, vfsByName, data.RoomIcons, data.RoomTextures, data.DecoratorIcons, data.DecoratorTextures, outputDir);
         var monsters = await ExtractMonsterVisualsAsync(provider, vfsByName, data.MonsterIds, outputDir);
         var resourceIcons = await ExtractResourceVisualsAsync(provider, vfsByName, data.ResourceIds, outputDir);
+        var worldPoisPath = await ExtractWorldPoisAsync(provider, outputDir);
 
         var manifest = new
         {
             dataTables = data.DataTables,
             structs = data.Structs,
             enums = data.Enums,
+            blueprints = data.Blueprints,
+            worldMap = icons.WorldMap,
+            worldPois = worldPoisPath,
             monsterIcons = monsters.Icons,
             monsterSprites = monsters.Sprites,
             resourceIcons,
@@ -580,6 +822,7 @@ async Task<int> RunExtractAsync(Options opts)
         Console.WriteLine($"   DataTables:    {data.DataTables.Count}");
         Console.WriteLine($"   Structs:       {data.Structs.Count}");
         Console.WriteLine($"   Enums:         {data.Enums.Count}");
+        Console.WriteLine($"   Blueprints:    {data.Blueprints.Count}");
         Console.WriteLine($"   Icon Map:      {monsters.Icons.Count} mappings");
         Console.WriteLine($"   Sprite Map:    {monsters.Sprites.Count} mappings");
         Console.WriteLine($"   Res Icon Map:  {resourceIcons.Count} mappings");

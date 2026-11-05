@@ -1,0 +1,67 @@
+[
+  {
+    "Type": "UserDefinedEnum",
+    "Name": "EBattleAIType",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedEnum'",
+    "Package": "/Game/Blueprints/Battle/EBattleAIType",
+    "Properties": {
+      "DisplayNameMap": [
+        {
+          "Key": "NewEnumerator0",
+          "Value": {
+            "Namespace": "",
+            "Key": "EECFB68440450BD16E0571AF763D3249",
+            "SourceString": "RandomNoSkill",
+            "LocalizedString": "RandomNoSkill"
+          }
+        },
+        {
+          "Key": "NewEnumerator1",
+          "Value": {
+            "Namespace": "",
+            "Key": "B42547B14A9F7C7A6576CD92544DEA15",
+            "SourceString": "RandomSkill",
+            "LocalizedString": "RandomSkill"
+          }
+        },
+        {
+          "Key": "NewEnumerator2",
+          "Value": {
+            "Namespace": "",
+            "Key": "D714B9714B8DA9ABD193C896AFFFA248",
+            "SourceString": "WeakestSkill",
+            "LocalizedString": "WeakestSkill"
+          }
+        },
+        {
+          "Key": "NewEnumerator3",
+          "Value": {
+            "Namespace": "",
+            "Key": "918CFC63458A58E653A96EB122DF1B56",
+            "SourceString": "WeakestNoSkill",
+            "LocalizedString": "WeakestNoSkill"
+          }
+        },
+        {
+          "Key": "NewEnumerator4",
+          "Value": {
+            "Namespace": "",
+            "Key": "F01B39BB42D7AA772915A0B2B0893C36",
+            "SourceString": "Smart",
+            "LocalizedString": "Smart"
+          }
+        }
+      ]
+    },
+    "Names": {
+      "EBattleAIType::NewEnumerator0": 0,
+      "EBattleAIType::NewEnumerator1": 1,
+      "EBattleAIType::NewEnumerator2": 2,
+      "EBattleAIType::NewEnumerator3": 3,
+      "EBattleAIType::NewEnumerator4": 4,
+      "EBattleAIType::EBattleAIType_MAX": 5
+    },
+    "CppForm": "Namespaced"
+  }
+]

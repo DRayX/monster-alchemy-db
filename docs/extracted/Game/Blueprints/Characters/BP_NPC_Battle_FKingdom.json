@@ -1,0 +1,352 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_NPC_Battle_FKingdom_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprints/Characters/BP_NPC_Battle_FKingdom",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_Battle_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle.2"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_NPC_Battle_FKingdom_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle_FKingdom.10"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_NPC_Battle_FKingdom_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle_FKingdom.7"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_NPC_Battle_FKingdom_C:ExecuteUbergraph_BP_NPC_Battle_FKingdom'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle_FKingdom.4"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_NPC_Battle_FKingdom_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle_FKingdom.6"
+      },
+      {
+        "ObjectName": "Function'BP_NPC_Battle_FKingdom_C:OnBattleVictory_Event'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle_FKingdom.5"
+      },
+      {
+        "ObjectName": "Function'BP_NPC_Battle_FKingdom_C:ExecuteUbergraph_BP_NPC_Battle_FKingdom'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle_FKingdom.4"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "DoorRef",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 48,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_ForgottenKingdomDoor_C'",
+          "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.0"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_NPC_Battle_FKingdom": {
+        "ObjectName": "Function'BP_NPC_Battle_FKingdom_C:ExecuteUbergraph_BP_NPC_Battle_FKingdom'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle_FKingdom.4"
+      },
+      "OnBattleVictory_Event": {
+        "ObjectName": "Function'BP_NPC_Battle_FKingdom_C:OnBattleVictory_Event'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle_FKingdom.5"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_NPC_Battle_FKingdom_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle_FKingdom.6"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_NPC_Battle_FKingdom_C'Default__BP_NPC_Battle_FKingdom_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle_FKingdom.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_NPC_Battle_FKingdom_C",
+    "Name": "Default__BP_NPC_Battle_FKingdom_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Characters/BP_NPC_Battle_FKingdom.BP_NPC_Battle_FKingdom_C'",
+    "Package": "/Game/Blueprints/Characters/BP_NPC_Battle_FKingdom",
+    "Template": {
+      "ObjectName": "BP_NPC_Battle_C'Default__BP_NPC_Battle_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle.3"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_NPC_Battle_FKingdom_C:CharacterMesh0'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle_FKingdom.11"
+      },
+      "CharacterMovement": {
+        "ObjectName": "CharacterMovementComponent'Default__BP_NPC_Battle_FKingdom_C:CharMoveComp'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle_FKingdom.3"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "CapsuleComponent'Default__BP_NPC_Battle_FKingdom_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle_FKingdom.2"
+      },
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent'Default__BP_NPC_Battle_FKingdom_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle_FKingdom.2"
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Outer": {
+      "ObjectName": "BP_NPC_Battle_FKingdom_C'Default__BP_NPC_Battle_FKingdom_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle_FKingdom.1"
+    },
+    "Template": {
+      "ObjectName": "CapsuleComponent'Default__BP_NPC_Battle_C:CollisionCylinder'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle.4"
+    }
+  },
+  {
+    "Type": "CharacterMovementComponent",
+    "Name": "CharMoveComp",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CharacterMovementComponent'",
+    "Outer": {
+      "ObjectName": "BP_NPC_Battle_FKingdom_C'Default__BP_NPC_Battle_FKingdom_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle_FKingdom.1"
+    },
+    "Template": {
+      "ObjectName": "CharacterMovementComponent'Default__BP_NPC_Battle_C:CharMoveComp'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle.5"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_NPC_Battle_FKingdom",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_Battle_FKingdom_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle_FKingdom.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'BP_NPC_Battle_C:OnBattleVictory__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle.15"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_SelfRef",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_NPC_Battle_C'",
+          "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle.2"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Forgotten_Kingdom_Door",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_ForgottenKingdomDoor_C'",
+          "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBattleVictory_Event",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_Battle_FKingdom_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle_FKingdom.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "SelfRef",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_NPC_Battle_C'",
+          "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle.2"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_Battle_FKingdom_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle_FKingdom.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_NPC_Battle_C:ReceiveBeginPlay'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle.19"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_Battle_FKingdom_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle_FKingdom.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_Battle_FKingdom_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle_FKingdom.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_NPC_Battle_FKingdom_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle_FKingdom.10"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_NPC_Battle_FKingdom_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle_FKingdom.8"
+      },
+      "VariableGuid": "5203E3DD-4BD74B15-F5625281-7F8C102C",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_Battle_FKingdom_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle_FKingdom.0"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_NPC_Battle_FKingdom_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle_FKingdom.9"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "CharacterMesh0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_NPC_Battle_FKingdom_C'Default__BP_NPC_Battle_FKingdom_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle_FKingdom.1"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'Default__BP_NPC_Battle_C:CharacterMesh0'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle.33"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BP_NPC_Battle_FKingdom_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle_FKingdom.2"
+      }
+    }
+  }
+]

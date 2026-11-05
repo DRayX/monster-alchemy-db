@@ -1,0 +1,27 @@
+[
+  {
+    "Type": "UserDefinedStruct",
+    "Name": "S_Text",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedStruct'",
+    "Package": "/Game/Blueprints/Widgets/Classes/S_Text",
+    "Properties": {
+      "Guid": "EFB2F0E4-4D078E98-A3D912B3-29CB6D91"
+    },
+    "ChildProperties": [
+      {
+        "Type": "TextProperty",
+        "Name": "Text_2_7F567A754AC357CC98B75A957FFB1C82",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      }
+    ],
+    "StructFlags": 0,
+    "DefaultProperties": {
+      "Text_2_7F567A754AC357CC98B75A957FFB1C82": {
+        "CultureInvariantString": null
+      }
+    }
+  }
+]

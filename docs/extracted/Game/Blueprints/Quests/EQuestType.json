@@ -1,0 +1,57 @@
+[
+  {
+    "Type": "UserDefinedEnum",
+    "Name": "EQuestType",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedEnum'",
+    "Package": "/Game/Blueprints/Quests/EQuestType",
+    "Properties": {
+      "DisplayNameMap": [
+        {
+          "Key": "NewEnumerator0",
+          "Value": {
+            "Namespace": "",
+            "Key": "BEA1F1D94EA1D3429743669BF256F17D",
+            "SourceString": "GiveItems",
+            "LocalizedString": "GiveItems"
+          }
+        },
+        {
+          "Key": "NewEnumerator1",
+          "Value": {
+            "Namespace": "",
+            "Key": "C3E758FA4B8AA005D108CA8521CACF09",
+            "SourceString": "ShowItems",
+            "LocalizedString": "ShowItems"
+          }
+        },
+        {
+          "Key": "NewEnumerator2",
+          "Value": {
+            "Namespace": "",
+            "Key": "A72A1BCE4E5819E9913F219C09075205",
+            "SourceString": "Event",
+            "LocalizedString": "Event"
+          }
+        },
+        {
+          "Key": "NewEnumerator4",
+          "Value": {
+            "Namespace": "",
+            "Key": "CC8DF11544C91FBC4C97AFAAE0480A2B",
+            "SourceString": "Speak",
+            "LocalizedString": "Speak"
+          }
+        }
+      ]
+    },
+    "Names": {
+      "EQuestType::NewEnumerator0": 0,
+      "EQuestType::NewEnumerator1": 1,
+      "EQuestType::NewEnumerator4": 2,
+      "EQuestType::NewEnumerator2": 3,
+      "EQuestType::EQuestType_MAX": 4
+    },
+    "CppForm": "Namespaced"
+  }
+]

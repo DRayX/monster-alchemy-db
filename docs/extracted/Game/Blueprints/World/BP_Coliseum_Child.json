@@ -1,0 +1,218 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Coliseum_Child_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprints/World/BP_Coliseum_Child",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Coliseum_Child_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum_Child.7"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Coliseum_Child_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum_Child.2"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Coliseum_Child_C'Default__BP_Coliseum_Child_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum_Child.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_Coliseum_Child_C",
+    "Name": "Default__BP_Coliseum_Child_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/World/BP_Coliseum_Child.BP_Coliseum_Child_C'",
+    "Package": "/Game/Blueprints/World/BP_Coliseum_Child",
+    "Template": {
+      "ObjectName": "BP_Coliseum_C'Default__BP_Coliseum_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.1"
+    },
+    "Properties": {
+      "Enemies": [
+        {
+          "ObjectName": "PaperFlipbook'FB_Akaw_02_Idle'",
+          "ObjectPath": "/Game/Art/Sprites/NPCs/Akaw/FB_Akaw_02_Idle.0"
+        },
+        {
+          "ObjectName": "PaperFlipbook'FB_Zanel_07_Idle'",
+          "ObjectPath": "/Game/Art/Sprites/NPCs/Zanel/FB_Zanel_07_Idle.0"
+        },
+        {
+          "ObjectName": "PaperFlipbook'FB_Zanel_05_Idle'",
+          "ObjectPath": "/Game/Art/Sprites/NPCs/Zanel/FB_Zanel_05_Idle.0"
+        }
+      ],
+      "ID": "Marlo"
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_Child_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum_Child.0"
+    },
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'SceneComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SceneComponent'BP_Coliseum_Child_C:CenterSpot_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/World/BP_Coliseum_Child.4"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+              "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+            },
+            "SCSVariableName": "CenterSpot",
+            "AssociatedGuid": "F5927701-4EF77B96-5A65E0A6-71BD41F2"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'PaperFlipbookComponent'",
+            "ObjectPath": "/Script/Paper2D"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "PaperFlipbookComponent'BP_Coliseum_Child_C:EnemyFlipbook_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/World/BP_Coliseum_Child.3"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+              "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+            },
+            "SCSVariableName": "EnemyFlipbook",
+            "AssociatedGuid": "E4765DE9-4102C853-C62C4E94-42DCE255"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PaperFlipbookComponent",
+    "Name": "EnemyFlipbook_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'PaperFlipbookComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_Child_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum_Child.0"
+    },
+    "Template": {
+      "ObjectName": "PaperFlipbookComponent'BP_Coliseum_C:EnemyFlipbook_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.32"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 1915.5737,
+        "Y": 0.0,
+        "Z": -338.58115
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 180.0,
+        "Roll": -0.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "CenterSpot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_Child_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum_Child.0"
+    },
+    "Template": {
+      "ObjectName": "SceneComponent'BP_Coliseum_C:CenterSpot_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.33"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 1914.6448,
+        "Y": 0.0,
+        "Z": -348.6055
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_Child_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum_Child.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Coliseum_Child_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum_Child.7"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Coliseum_Child_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum_Child.5"
+      },
+      "VariableGuid": "C6ADB698-42A6C011-20B197A2-343084C7",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_Child_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Coliseum_Child.0"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Coliseum_Child_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Coliseum_Child.6"
+      }
+    }
+  }
+]

@@ -1,0 +1,1188 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Interactable_ExpObelisk_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprints/World/BP_Interactable_ExpObelisk",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactable_C'",
+      "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.0"
+    },
+    "Properties": {
+      "Timelines": [
+        {
+          "ObjectName": "TimelineTemplate'BP_Interactable_ExpObelisk_C:Timeline_Template'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.28"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Interactable_ExpObelisk_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.26"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Interactable_ExpObelisk_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.11"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Interactable_ExpObelisk_C:ExecuteUbergraph_BP_Interactable_ExpObelisk'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.5"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Interactable_ExpObelisk_C:UserConstructionScript'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.10"
+      },
+      {
+        "ObjectName": "Function'BP_Interactable_ExpObelisk_C:Timeline__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.8"
+      },
+      {
+        "ObjectName": "Function'BP_Interactable_ExpObelisk_C:Timeline__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.9"
+      },
+      {
+        "ObjectName": "Function'BP_Interactable_ExpObelisk_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.7"
+      },
+      {
+        "ObjectName": "Function'BP_Interactable_ExpObelisk_C:Interact'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.6"
+      },
+      {
+        "ObjectName": "Function'BP_Interactable_ExpObelisk_C:ExecuteUbergraph_BP_Interactable_ExpObelisk'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.5"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ParticleSystem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PaperSprite",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'PaperSpriteComponent'",
+          "ObjectPath": "/Script/Paper2D"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MagicFlies",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Collision",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'CapsuleComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Beam",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PointLight",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'PointLightComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "TeleportTarget",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Timeline_NewTrack_0_52DD169F4533D39D5DECDCA39D0E1ED0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Timeline__Direction_52DD169F4533D39D5DECDCA39D0E1ED0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Timeline",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "ActorSavedGUID",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Exp",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | ExposeOnSpawn"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Interactable_ExpObelisk": {
+        "ObjectName": "Function'BP_Interactable_ExpObelisk_C:ExecuteUbergraph_BP_Interactable_ExpObelisk'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.5"
+      },
+      "Interact": {
+        "ObjectName": "Function'BP_Interactable_ExpObelisk_C:Interact'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.6"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_Interactable_ExpObelisk_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.7"
+      },
+      "Timeline__UpdateFunc": {
+        "ObjectName": "Function'BP_Interactable_ExpObelisk_C:Timeline__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.9"
+      },
+      "Timeline__FinishedFunc": {
+        "ObjectName": "Function'BP_Interactable_ExpObelisk_C:Timeline__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.8"
+      },
+      "UserConstructionScript": {
+        "ObjectName": "Function'BP_Interactable_ExpObelisk_C:UserConstructionScript'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.10"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Interactable_ExpObelisk_C'Default__BP_Interactable_ExpObelisk_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_Interactable_ExpObelisk_C",
+    "Name": "Default__BP_Interactable_ExpObelisk_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/World/BP_Interactable_ExpObelisk.BP_Interactable_ExpObelisk_C'",
+    "Package": "/Game/Blueprints/World/BP_Interactable_ExpObelisk",
+    "Template": {
+      "ObjectName": "BP_Interactable_C'Default__BP_Interactable_C'",
+      "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.1"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "Exp": 80
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "Capsule_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactable_ExpObelisk_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.0"
+    },
+    "Template": {
+      "ObjectName": "CapsuleComponent'BP_Interactable_C:Capsule_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.2"
+    },
+    "Properties": {
+      "CapsuleHalfHeight": 261.69727,
+      "CapsuleRadius": 150.0,
+      "RelativeLocation": {
+        "X": 3.852134E-06,
+        "Y": 0.0,
+        "Z": 134.0187
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 180.05988,
+        "Roll": 179.94012
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "Collision_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactable_ExpObelisk_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.0"
+    },
+    "Properties": {
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "Custom",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 2.8614754E-06,
+        "Y": -23.033564,
+        "Z": 218.35555
+      },
+      "RelativeRotation": {
+        "Pitch": -1.9335213E-14,
+        "Yaw": -6.6247045E-16,
+        "Roll": -15.0
+      },
+      "RelativeScale3D": {
+        "X": 12.0,
+        "Y": 4.7996387,
+        "Z": 6.749321
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactable_ExpObelisk_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.0"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 1.0,
+            "ArriveTangent": 12.043878,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 12.043873,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.10645121,
+            "Value": 0.993155,
+            "ArriveTangent": -1.9021059,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": -1.9021053,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.5,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Interactable_ExpObelisk",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactable_ExpObelisk_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Has_Been_Initd_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_IsClosed_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_Event_Index",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_NotEqual_NameName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_CheckEvent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_SetSprite_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_SetSprite_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_MessageBig_C'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_MessageBig.19"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_NetQuantize_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector_NetQuantize'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetIntensity_NewIntensity_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_Alpha_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "Interact",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactable_ExpObelisk_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_Interactable_C:Interact'",
+      "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "Index",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactable_ExpObelisk_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline__FinishedFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactable_ExpObelisk_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline__UpdateFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactable_ExpObelisk_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UserConstructionScript",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactable_ExpObelisk_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:UserConstructionScript'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Conv_GuidToString_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_Guid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_Conv_StringToName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactable_ExpObelisk_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.0"
+    },
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'CapsuleComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "CapsuleComponent'BP_Interactable_ExpObelisk_C:Capsule_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.2"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_Interactable_C'",
+              "ObjectPath": "/Game/Blueprints/Core/BP_Interactable.0"
+            },
+            "SCSVariableName": "Capsule",
+            "AssociatedGuid": "882CA35F-41F66581-E9296485-13E4CBF3"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "MagicFlies_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactable_ExpObelisk_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.0"
+    },
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'NS_Teleport_Magicfly'",
+        "ObjectPath": "/Game/Art/Buildings/Teleport/NS_Teleport_Magicfly.22"
+      },
+      "OverrideParameters": {},
+      "RelativeLocation": {
+        "X": 3.852134E-06,
+        "Y": 2.6604204E-07,
+        "Z": 320.56918
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "PaperSpriteComponent",
+    "Name": "PaperSprite_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PaperSpriteComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactable_ExpObelisk_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.0"
+    },
+    "Properties": {
+      "SourceSprite": {
+        "ObjectName": "PaperSprite'Teleport_Sprite_1'",
+        "ObjectPath": "/Game/Art/Buildings/Teleport/Teleport_Sprite_1.1"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'DefaultLitSpriteMaterial_dithering_Teleport'",
+          "ObjectPath": "/Game/Art/Buildings/Teleport/DefaultLitSpriteMaterial_dithering_Teleport.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": 0.043162044,
+        "Y": 21.811771,
+        "Z": -9.682005
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": -10.0
+      },
+      "RelativeScale3D": {
+        "X": 10.0,
+        "Y": 10.0,
+        "Z": 10.0
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleSystem_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactable_ExpObelisk_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.0"
+    },
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'P_ky_hit_shine_Exp'",
+        "ObjectPath": "/Game/AdvancedMagicFX12/particles/P_ky_hit_shine_Exp.14"
+      },
+      "RelativeLocation": {
+        "X": 2.1932906E-06,
+        "Y": 0.0,
+        "Z": 202.40776
+      },
+      "RelativeScale3D": {
+        "X": 2.0,
+        "Y": 2.0,
+        "Z": 2.0
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "PointLightComponent",
+    "Name": "PointLight_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PointLightComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactable_ExpObelisk_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.0"
+    },
+    "Properties": {
+      "SourceRadius": 50.0,
+      "IntensityUnits": "ELightUnits::Candelas",
+      "AttenuationRadius": 2487.73,
+      "Intensity": 70.0,
+      "LightColor": {
+        "B": 255,
+        "G": 195,
+        "R": 0,
+        "A": 255,
+        "Hex": "00C3FF"
+      },
+      "CastShadows": false,
+      "RelativeLocation": {
+        "X": 3.852134E-06,
+        "Y": 165.206,
+        "Z": 464.0187
+      }
+    },
+    "IntensityNits": 22.28169
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactable_ExpObelisk_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "TeleportTarget_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactable_ExpObelisk_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.0"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 3.852134E-06,
+        "Y": 617.20557,
+        "Z": 114.01869
+      }
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactable_ExpObelisk_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.26"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Interactable_ExpObelisk_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.16"
+      },
+      "VariableGuid": "42AC3824-41BE58B1-F672A2B4-EC8086CB",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactable_ExpObelisk_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.26"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Interactable_ExpObelisk_C:TeleportTarget_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.17"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_Interactable_C",
+      "VariableGuid": "3A01EDE1-4CA7EAA6-AEE958B8-4E52A2E9",
+      "InternalVariableName": "TeleportTarget"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactable_ExpObelisk_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.26"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'PointLightComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PointLightComponent'BP_Interactable_ExpObelisk_C:PointLight_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.15"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_Interactable_C",
+      "VariableGuid": "A9017CB2-40C1DFED-02A466AC-B463A66C",
+      "InternalVariableName": "PointLight"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactable_ExpObelisk_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.26"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_Interactable_ExpObelisk_C:Beam_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.27"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_Interactable_C",
+      "VariableGuid": "DB6C0432-4FDF8BEE-B79CDCB3-34D6338B",
+      "InternalVariableName": "Beam"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactable_ExpObelisk_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.26"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_Interactable_ExpObelisk_C:MagicFlies_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.12"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_Interactable_C",
+      "VariableGuid": "F4358BC7-430032A0-88A53E84-7DB0829A",
+      "InternalVariableName": "MagicFlies"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactable_ExpObelisk_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.26"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'PaperSpriteComponent'",
+        "ObjectPath": "/Script/Paper2D"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PaperSpriteComponent'BP_Interactable_ExpObelisk_C:PaperSprite_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.13"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_Interactable_C",
+      "VariableGuid": "63635886-4940FD47-2B6F989B-4CC6EB39",
+      "InternalVariableName": "PaperSprite"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactable_ExpObelisk_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.26"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'BP_Interactable_ExpObelisk_C:ParticleSystem_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.14"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_Interactable_C",
+      "VariableGuid": "54D61F9B-41CDE96B-C74A4EAF-7F22B062",
+      "InternalVariableName": "ParticleSystem"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_8",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Interactable_ExpObelisk_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.26"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'CapsuleComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "CapsuleComponent'BP_Interactable_ExpObelisk_C:Collision_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.3"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_Interactable_C",
+      "VariableGuid": "2FFD676F-44150E02-6FB1C1B2-C5ED7BDC",
+      "InternalVariableName": "Collision"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactable_ExpObelisk_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Interactable_ExpObelisk_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactable_ExpObelisk_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactable_ExpObelisk_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactable_ExpObelisk_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactable_ExpObelisk_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.22"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactable_ExpObelisk_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactable_ExpObelisk_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.24"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Interactable_ExpObelisk_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactable_ExpObelisk_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactable_ExpObelisk_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactable_ExpObelisk_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactable_ExpObelisk_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.22"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactable_ExpObelisk_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Interactable_ExpObelisk_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.24"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Interactable_ExpObelisk_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.18"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Beam_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactable_ExpObelisk_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_BeamStraight'",
+        "ObjectPath": "/Game/Art/NinaTemplate/GeneralArt/Lighting/SM_BeamStraight.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'M_MagicShield_2_Inst1'",
+          "ObjectPath": "/Game/Stylized_Mobile_Effects/Materials/M_MagicShield_2_Inst1.0"
+        }
+      ],
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 2.1144353E-05,
+        "Y": -54.064674,
+        "Z": 259.65253
+      },
+      "RelativeRotation": {
+        "Pitch": -6.971717E-07,
+        "Yaw": 180.0,
+        "Roll": 195.0
+      },
+      "RelativeScale3D": {
+        "X": 6.0,
+        "Y": 1.0,
+        "Z": 16.020006
+      }
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "Timeline_Template",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Interactable_ExpObelisk_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.0"
+    },
+    "Properties": {
+      "TimelineLength": 1.5,
+      "LengthMode": "ETimelineLengthMode::TL_LastKeyFrame",
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_Interactable_ExpObelisk_C:CurveFloat_0'",
+            "ObjectPath": "/Game/Blueprints/World/BP_Interactable_ExpObelisk.4"
+          },
+          "PropertyName": "Timeline_NewTrack_0_52DD169F4533D39D5DECDCA39D0E1ED0",
+          "TrackName": "NewTrack_0",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "52DD169F-4533D39D-5DECDCA3-9D0E1ED0",
+      "VariableName": "Timeline",
+      "DirectionPropertyName": "Timeline__Direction_52DD169F4533D39D5DECDCA39D0E1ED0",
+      "UpdateFunctionName": "Timeline__UpdateFunc",
+      "FinishedFunctionName": "Timeline__FinishedFunc"
+    }
+  }
+]
