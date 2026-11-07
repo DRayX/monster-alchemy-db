@@ -56,7 +56,7 @@ export const LOOT_RARITY_CLASSES = {
   Epic: 'b--light-purple light-purple'
 };
 
-/** @type {Record<string, string>} */
+/** @type {Record<'Common' | 'Rare' | 'Epic', string>} */
 export const LOOT_RARITY_BADGES = {
   Common: 'bg-mid-gray light-silver b--silver',
   Rare: 'bg-navy light-blue b--light-blue',
@@ -75,12 +75,42 @@ export const RARITY_WEIGHT = {
 
 /**
  * Returns CSS classes for a loot rarity badge pill.
- * @param {string} rarity
+ * @param {'Common' | 'Rare' | 'Epic'} rarity
  * @returns {string}
  */
 export function getRarityBadgeClass(rarity) {
-  const color = LOOT_RARITY_BADGES[rarity] || 'bg-mid-gray near-white b--silver';
-  return `dib ph2 pv1 br-pill f7 b ba ${color}`;
+  return `dib ph2 pv1 br-pill f7 b ba ${LOOT_RARITY_BADGES[rarity]}`;
+}
+
+/** @type {Record<'Resource' | 'Monster' | 'Structure', string>} */
+export const OUTPUT_TYPE_BADGES = {
+  Monster: 'bg-purple washed-red b--light-purple',
+  Structure: 'bg-gold near-black b--gold',
+  Resource: 'bg-navy light-blue b--light-blue'
+};
+
+/**
+ * Returns CSS classes for a crafting recipe output type badge pill.
+ * @param {'Resource' | 'Monster' | 'Structure'} outputType
+ * @returns {string}
+ */
+export function getOutputTypeBadgeClass(outputType) {
+  return `dib ph2 pv1 br-pill f7 b ba ${OUTPUT_TYPE_BADGES[outputType]}`;
+}
+
+/** @type {Record<'Explicit' | 'Generic', string>} */
+export const FUSION_TYPE_BADGES = {
+  Explicit: 'bg-purple washed-red b--light-purple',
+  Generic: 'bg-navy light-blue b--light-blue'
+};
+
+/**
+ * Returns CSS classes for a monster fusion type badge pill (`Explicit` or `Generic`).
+ * @param {'Explicit' | 'Generic'} fusionType
+ * @returns {string}
+ */
+export function getFusionTypeBadgeClass(fusionType) {
+  return `dib ph2 pv1 br-pill f7 b ba ${FUSION_TYPE_BADGES[fusionType]}`;
 }
 
 /**

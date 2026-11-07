@@ -94,7 +94,7 @@ const TEMPLATE = /* html */ `
               <img
                 :src="mon.profileImage"
                 :alt="mon.name"
-                class="icon-32 br2 bg-dark-gray ba b--white-10 mr3 flex-shrink-0 pixelated"
+                class="icon-36 br2 bg-dark-gray ba b--white-10 mr3 flex-shrink-0 pixelated"
                 loading="lazy"
               />
               <div>

@@ -1,5 +1,6 @@
 // @ts-check
 import { defineComponent, ref } from 'vue';
+import { getFusionTypeBadgeClass } from '../services/formatters.js';
 import { FusionOperandBadge } from './FusionOperandBadge.js';
 
 const TEMPLATE = /* html */ `
@@ -27,7 +28,7 @@ const TEMPLATE = /* html */ `
         <!-- Optional Fusion Type Badge -->
         <span
           v-if="showType && !showResult"
-          class="dib ph2 pv1 br-pill f7 bg-dark-gray silver ba b--white-10"
+          :class="getFusionTypeBadgeClass(fusion.fusionType)"
         >
           {{ fusion.fusionType }}
         </span>
@@ -95,7 +96,8 @@ export const FusionCard = defineComponent({
 
     return {
       isExpanded,
-      toggleExpand
+      toggleExpand,
+      getFusionTypeBadgeClass
     };
   },
   template: TEMPLATE

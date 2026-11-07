@@ -18,11 +18,8 @@ const TEMPLATE = /* html */ `
     </div>
     <div class="flex items-center" :class="variant === 'row' ? 'mt1 mt0-ns' : 'mt2 mt0-ns'">
       <span
-        class="dib br-pill f7 b mr1"
-        :class="[
-          spawn.timeOfDay === 'Day' ? 'bg-gold near-black' : 'bg-dark-blue washed-blue',
-          variant === 'row' ? 'ph1 pv0' : 'ph2 pv1'
-        ]"
+        class="dib ph2 pv1 br-pill f7 b mr1 nowrap ba b--transparent"
+        :class="spawn.timeOfDay === 'Day' ? 'bg-gold near-black' : 'bg-dark-blue washed-blue'"
       >
         {{ spawn.timeOfDay === 'Day' ? '☀️ Day' : '🌙 Night' }}
       </span>

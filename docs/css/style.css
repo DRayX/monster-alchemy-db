@@ -37,14 +37,14 @@
   height: 24px;
 }
 
-.icon-32 {
-  width: 32px;
-  height: 32px;
+.icon-36 {
+  width: 36px;
+  height: 36px;
 }
 
-.icon-64 {
-  width: 64px;
-  height: 64px;
+.icon-72 {
+  width: 72px;
+  height: 72px;
 }
 
 /* Typography extension beyond Tachyons f7 */

@@ -2,7 +2,7 @@
 import { computed, defineComponent, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import { db } from '../store.js';
-import { getRarityBadgeClass } from '../services/formatters.js';
+import { getRarityBadgeClass, getOutputTypeBadgeClass } from '../services/formatters.js';
 import { CraftingRecipeCard } from './CraftingRecipeCard.js';
 import { WildSpawnCard } from './WildSpawnCard.js';
 import { WorldResourceCard } from './WorldResourceCard.js';
@@ -27,26 +27,15 @@ const TEMPLATE = /* html */ `
 
     <div v-else>
       <header class="pa4 bg-dark-gray ba b--white-10 br3 mb4">
-        <div class="flex flex-wrap items-center justify-between">
-          <div class="flex items-center">
-            <img
-              :src="item.icon"
-              :alt="item.name"
-              class="icon-64 br3 bg-near-black ba b--white-10 mr3 pa2 flex-shrink-0 pixelated"
-            />
-            <div>
-              <div class="f7 gray code mb1">{{ item.id }}</div>
-              <h1 class="f2 fw8 ma0 near-white">{{ item.name }}</h1>
-            </div>
-          </div>
-
-          <div class="flex items-center mt3 mt0-ns">
-            <span class="dib ph3 pv1 br2 bg-near-black ba b--white-10 f6 silver mr2">
-              Drops: {{ droppedByMonsters.length }}
-            </span>
-            <span class="dib ph3 pv1 br2 bg-near-black ba b--white-10 f6 silver">
-              Used In: {{ usedInRecipes.length }}
-            </span>
+        <div class="flex items-center">
+          <img
+            :src="item.icon"
+            :alt="item.name"
+            class="icon-72 br3 bg-near-black ba b--white-10 mr3 pa1 flex-shrink-0 pixelated"
+          />
+          <div>
+            <div class="f7 gray code mb1">{{ item.id }}</div>
+            <h1 class="f2 fw8 ma0 near-white">{{ item.name }}</h1>
           </div>
         </div>
 
@@ -72,7 +61,7 @@ const TEMPLATE = /* html */ `
                   <img
                     :src="entry.monster.profileImage"
                     :alt="entry.monster.name"
-                    class="icon-32 br2 bg-dark-gray ba b--white-10 mr3 flex-shrink-0 pixelated"
+                    class="icon-36 br2 bg-dark-gray ba b--white-10 mr3 flex-shrink-0 pixelated"
                     loading="lazy"
                   />
                   <div>
@@ -182,10 +171,7 @@ const TEMPLATE = /* html */ `
                 <img
                   :src="entry.recipe.outputIcon"
                   :alt="entry.recipe.outputName"
-                  :class="[
-                    'icon-32 br2 bg-dark-gray ba b--white-10 mr3 flex-shrink-0 pixelated',
-                    entry.recipe.outputType === 'Monster' ? '' : 'pa1'
-                  ]"
+                  class="icon-36 br2 bg-dark-gray ba b--white-10 mr3 flex-shrink-0 pixelated"
                   loading="lazy"
                 />
                 <div>
@@ -214,7 +200,7 @@ const TEMPLATE = /* html */ `
                   </div>
                 </div>
               </div>
-              <span class="dib ph2 pv1 br-pill f7 b bg-mid-gray near-white ba b--white-20">
+              <span :class="getOutputTypeBadgeClass(entry.recipe.outputType)">
                 {{ entry.recipe.outputType }}
               </span>
             </div>
@@ -302,7 +288,8 @@ export const ItemDetail = defineComponent({
       usedInRecipes,
       toggleMonsterSpawns,
       isSpawnsExpanded,
-      getRarityBadgeClass
+      getRarityBadgeClass,
+      getOutputTypeBadgeClass
     };
   },
   template: TEMPLATE

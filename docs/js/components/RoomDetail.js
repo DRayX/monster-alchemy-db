@@ -3,6 +3,7 @@ import { ref, computed, watch, defineComponent } from 'vue';
 import { useRoute } from 'vue-router';
 import { db } from '../store.js';
 import { getIcon } from '../services/assets.js';
+import { getOutputTypeBadgeClass, getFusionTypeBadgeClass } from '../services/formatters.js';
 import { SortableTable } from './SortableTable.js';
 import { ItemChip } from './ItemChip.js';
 import { FusionOperandBadge } from './FusionOperandBadge.js';
@@ -40,16 +41,12 @@ const TEMPLATE = /* html */ `
       <header class="pa4 bg-dark-gray ba b--white-10 br3 mb4">
         <div class="flex flex-wrap items-center justify-between">
           <div class="flex items-center">
-            <div
+            <img
               v-if="room.icon"
-              class="icon-64 br3 bg-near-black ba b--white-10 flex items-center justify-center mr3 f2 flex-shrink-0 overflow-hidden pa1"
-            >
-              <img
-                :src="room.icon"
-                :alt="room.name"
-                class="w-100 h-100 pixelated"
-              />
-            </div>
+              :src="room.icon"
+              :alt="room.name"
+              class="icon-72 br3 bg-near-black ba b--white-10 mr3 pa1 flex-shrink-0 pixelated"
+            />
             <div>
               <div class="f7 gray code mb1">{{ room.id }}</div>
               <h1 class="f2 fw8 ma0 near-white">{{ room.name }}</h1>
@@ -130,7 +127,7 @@ const TEMPLATE = /* html */ `
                 <img
                   :src="fusion.resultIcon"
                   :alt="fusion.resultName"
-                  class="icon-32 br2 bg-near-black ba b--white-10 mr2 flex-shrink-0 pixelated"
+                  class="icon-36 br2 bg-near-black ba b--white-10 mr2 flex-shrink-0 pixelated"
                   loading="lazy"
                 />
                 <div>
@@ -145,14 +142,7 @@ const TEMPLATE = /* html */ `
               </div>
             </td>
             <td class="pa3">
-              <span
-                :class="[
-                  'dib ph2 pv1 br-pill f7 b ba',
-                  fusion.fusionType === 'Explicit'
-                    ? 'bg-purple washed-red b--light-purple'
-                    : 'bg-navy light-blue b--light-blue'
-                ]"
-              >
+              <span :class="getFusionTypeBadgeClass(fusion.fusionType)">
                 {{ fusion.fusionType }}
               </span>
             </td>
@@ -198,10 +188,7 @@ const TEMPLATE = /* html */ `
                 <img
                   :src="recipe.outputIcon"
                   :alt="recipe.outputName"
-                  :class="[
-                    'icon-32 br2 bg-near-black ba b--white-10 mr2 flex-shrink-0 pixelated',
-                    recipe.outputType === 'Monster' ? '' : 'pa1'
-                  ]"
+                  class="icon-36 br2 bg-near-black ba b--white-10 mr2 flex-shrink-0 pixelated"
                   loading="lazy"
                 />
                 <div>
@@ -216,16 +203,7 @@ const TEMPLATE = /* html */ `
               </div>
             </td>
             <td class="pa3">
-              <span
-                :class="[
-                  'dib ph2 pv1 br-pill f7 b ba',
-                  recipe.outputType === 'Monster'
-                    ? 'bg-purple washed-red b--light-purple'
-                    : recipe.outputType === 'Structure'
-                    ? 'bg-gold near-black b--gold'
-                    : 'bg-navy light-blue b--light-blue'
-                ]"
-              >
+              <span :class="getOutputTypeBadgeClass(recipe.outputType)">
                 {{ recipe.outputType }}
               </span>
             </td>
@@ -328,7 +306,9 @@ export const RoomDetail = defineComponent({
       selectedFusionType,
       filteredRecipes,
       filteredFusions,
-      getIcon
+      getIcon,
+      getOutputTypeBadgeClass,
+      getFusionTypeBadgeClass
     };
   }
 });

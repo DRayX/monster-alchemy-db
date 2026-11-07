@@ -22,7 +22,7 @@ const TEMPLATE = /* html */ `
         <img
           :src="PLAYER_ICON"
           alt="Monster Alchemy"
-          class="icon-32 mr3 dib v-mid flex-shrink-0 pixelated"
+          class="icon-36 mr3 dib v-mid flex-shrink-0 pixelated"
         />
         <div>
           <div class="b f5 tracked-tight">Monster Alchemy</div>

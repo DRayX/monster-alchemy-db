@@ -57,7 +57,7 @@ const TEMPLATE = /* html */ `
             <img
               :src="item.icon"
               :alt="item.name"
-              class="icon-32 br2 bg-near-black ba b--white-10 mr3 pa1 flex-shrink-0 pixelated"
+              class="icon-36 br2 bg-near-black ba b--white-10 mr3 flex-shrink-0 pixelated"
               loading="lazy"
             />
             <div>
