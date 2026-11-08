@@ -94,6 +94,7 @@ export const CHEST_ICON = resolvePath(manifest.generalIcons.Chest) || TRANSPAREN
 export const SCROLL_ICON = resolvePath(manifest.generalIcons.Scroll) || TRANSPARENT_PIXEL;
 export const OBELISK_ICON = resolvePath(manifest.generalIcons.Obelisk) || TRANSPARENT_PIXEL;
 export const QUEST_ICON = resolvePath(manifest.generalIcons.Quest) || TRANSPARENT_PIXEL;
+export const DIALOGUE_ICON = resolvePath(manifest.generalIcons.Dialogue) || TRANSPARENT_PIXEL;
 export const FIGHT_ICON = resolvePath(manifest.generalIcons.Fight) || TRANSPARENT_PIXEL;
 export const DUNGEON_ICON = resolvePath(manifest.generalIcons.Dungeon) || TRANSPARENT_PIXEL;
 export const INN_ICON = resolvePath(manifest.generalIcons.Inn) || TRANSPARENT_PIXEL;

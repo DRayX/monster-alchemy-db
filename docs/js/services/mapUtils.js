@@ -2,7 +2,7 @@
 import { LayerGroup, Layer, Marker } from 'leaflet';
 import { db, dbIndexes } from '../store.js';
 import { WorldPoi } from '../models/WorldPoi.js';
-import { CaseInsensitiveMap } from './unreal.js';
+import { CaseInsensitiveMap, getBlueprintHierarchy } from './unreal.js';
 import { RARITY_WEIGHT } from './formatters.js';
 import {
   MAP_ICON,
@@ -12,6 +12,8 @@ import {
   OBELISK_ICON,
   SHOP_ICON,
   QUEST_ICON,
+  DIALOGUE_ICON,
+  PLAYER_ICON,
   DUNGEON_ICON,
   FIGHT_ICON,
   TOWER_ICON,
@@ -36,7 +38,7 @@ export function spriteStyle(position, aspectRatio, translateY = '') {
 
 /**
  * Category metadata for filter buttons, marker icon lookups, and category-level styles.
- * @type {Record<string, { label: string, icon: string, extraStyle?: string, dense?: boolean, canBeHidden?: boolean, clustered?: boolean }>}
+ * @type {Record<string, { label: string, icon: string, extraStyle?: string, dense?: boolean, clustered?: boolean, lineColor?: string }>}
  */
 export const CATEGORIES = {
   zone: { label: 'Zones', icon: MAP_ICON },
@@ -45,10 +47,9 @@ export const CATEGORIES = {
     label: 'Chests',
     icon: CHEST_ICON,
     clustered: true,
-    canBeHidden: true,
     extraStyle: spriteStyle('left center', '38/28', '-23%')
   },
-  recipe: { label: 'Recipes', icon: SCROLL_ICON, canBeHidden: true },
+  recipe: { label: 'Recipes', icon: SCROLL_ICON },
   obelisk: {
     label: 'Obelisks',
     icon: OBELISK_ICON,
@@ -59,9 +60,17 @@ export const CATEGORIES = {
   ferry: { label: 'Ferries', icon: FERRY_ICON },
   battle: { label: 'Battles', icon: FIGHT_ICON },
   quest: { label: 'Quests', icon: QUEST_ICON },
-  dungeon: { label: 'Dungeons', icon: DUNGEON_ICON },
-  dungeon_exit: { label: 'Dungeon Exits', icon: DUNGEON_ICON },
+  npc: { label: 'Talk NPCs', icon: DIALOGUE_ICON, clustered: true },
+  cinematic: { label: 'Cinematics', icon: PLAYER_ICON },
+  dungeon: { label: 'Dungeons', icon: DUNGEON_ICON, lineColor: '#ff4136' },
   coliseum: { label: 'Coliseums', icon: getItemIcon('Emblem_Blades') },
+  arcane: {
+    label: 'Arcane Puzzles',
+    icon: getIcon('Magic'),
+    lineColor: '#a463f2',
+    extraStyle: 'transform: scale(0.8);'
+  },
+  spring: { label: 'Springs', icon: getIcon('Agility'), lineColor: '#357edd', clustered: true },
   spawner: { label: 'Spawners', icon: SPAWNER_ICON, clustered: true },
   resource: { label: 'Resources', icon: getIcon('Work'), clustered: true },
   foliage: { label: 'Common Trees & Rocks', icon: getItemIcon('Wood'), dense: true }
@@ -69,14 +78,18 @@ export const CATEGORIES = {
 
 /**
  * Returns whether a world POI belongs to a counted user-facing category.
- * Internal level actors (e.g. managers) and dense ambient layers (e.g. foliage) are not counted.
+ * Internal level actors (e.g. managers), dense ambient layers (e.g. foliage),
+ * and secondary linked targets (e.g. dungeon exits, spring targets, arcane bridges/doors/cubes)
+ * are not counted in category totals.
  *
  * @param {WorldPoi} poi
  * @returns {boolean}
  */
 export function isCountedPoi(poi) {
   const cat = CATEGORIES[poi.category];
-  return Boolean(cat && !cat.dense);
+  if (!cat || cat.dense) return false;
+  if (poi.isLinkedSecondary) return false;
+  return true;
 }
 
 /**
@@ -105,10 +118,60 @@ export const CATEGORY_COLORS = {
   resource: 'gold',
   foliage: 'dark-green',
   quest: 'gold',
+  npc: 'light-blue',
+  cinematic: 'light-purple',
   dungeon: 'light-red',
-  dungeon_exit: 'orange',
-  coliseum: 'light-red'
+  coliseum: 'light-red',
+  arcane: 'light-purple',
+  spring: 'light-blue'
 };
+
+/** @type {Record<string, import('../types.js').PoiCategory>} */
+export const BLUEPRINT_CATEGORY_MAP = {
+  BP_Spawner: 'spawner',
+  BP_AlchemistTower_Interact: 'tower',
+  BP_WorldChest: 'chest',
+  BP_Recipe: 'recipe',
+  BP_Interactable_ExpObelisk: 'obelisk',
+  BP_NPC_StaticDialogue_Shop: 'shop',
+  BP_NPC_StaticDialogue_Inn: 'inn',
+  BP_NPC_StaticDialogue_Navigator_Island: 'ferry',
+  BP_NPC_StaticDialogue_Navigator_Baq: 'ferry',
+  BP_NPC_StaticDialogue_FetchShowQuest: 'quest',
+  BP_NPC_StaticDialogue: 'npc',
+  BP_NPC_Battle: 'battle',
+  BP_Cinematic: 'cinematic',
+  BP_DungeonDoor: 'dungeon',
+  BP_DungeonDoor_Exit: 'dungeon',
+  BP_ColisseumDoor: 'coliseum',
+  BP_DungeonManager: 'manager',
+  BP_Coliseum: 'manager',
+  BP_ZoneDiscoveryVolume: 'zone',
+  BP_ArcaneEye: 'arcane',
+  BP_ArcaneObject: 'arcane',
+  BP_ArcaneTrigger: 'arcane',
+  BP_ArcaneCube: 'arcane',
+  BP_Spring: 'spring',
+  BP_Spring_Target: 'spring'
+};
+
+/**
+ * Resolves the functional category for a Blueprint POI class by walking its
+ * Blueprint inheritance hierarchy (`SuperStruct` / `Super`) in `schemas`.
+ *
+ * @param {string} type
+ * @param {Record<string, any>} [schemas]
+ * @returns {import('../types.js').PoiCategory}
+ */
+export function getPoiCategory(type, schemas = {}) {
+  for (const { name } of getBlueprintHierarchy(type, schemas)) {
+    const category = BLUEPRINT_CATEGORY_MAP[name];
+    if (category) {
+      return category;
+    }
+  }
+  throw new Error(`[mapUtils] Unrecognized POI blueprint class: "${type}"`);
+}
 
 /**
  * LayerGroup subclass providing addLayers() for batch addition,
@@ -161,14 +224,16 @@ export function renderIconHtml(category, customIcon = '', extraClass = 'icon-16'
 }
 
 /**
- * Extracts the target POI name from an Unreal object reference.
+ * Extracts the target POI name from an Unreal object reference (hard ObjectName or soft SubPathString).
  * e.g. "BP_DungeonManager_C'MainLevel:PersistentLevel.BP_DungeonManager_C_UAID_...'" -> "BP_DungeonManager_C_UAID_..."
+ * or { SubPathString: "PersistentLevel.BP_Spring_Target_C_UAID_..." } -> "BP_Spring_Target_C_UAID_..."
  * @param {any} ref
  * @returns {string}
  */
 export function getReferencedPoiId(ref) {
-  const objName = typeof ref === 'object' && ref ? ref.ObjectName || '' : String(ref || '');
-  const match = objName.match(/PersistentLevel\.([^']+)/);
+  if (!ref) return '';
+  const str = typeof ref === 'object' ? ref.SubPathString || ref.ObjectName || '' : String(ref);
+  const match = str.match(/PersistentLevel\.([^']+)/);
   return match ? match[1] : '';
 }
 
@@ -184,7 +249,7 @@ export function getPoiLocationId(poi) {
     const col = dbIndexes.worldPois.get(getReferencedPoiId(poi.properties.RefColiseum));
     return col?.properties.LocationID || '';
   }
-  if (poi.category === 'dungeon' || poi.category === 'dungeon_exit') {
+  if (poi.category === 'dungeon') {
     const dm = dbIndexes.worldPois.get(getReferencedPoiId(poi.properties.DungeonRef));
     return dm?.properties.LocationID || '';
   }
@@ -244,6 +309,262 @@ export function getSpawnerEncounters(tag) {
     }
   }
   return _spawnerEncountersIndex.get(tag) || [];
+}
+
+/**
+ * Visitor that collects lowercase searchable text tokens for a WorldPoi or shared archetype.
+ */
+class PoiSearchVisitor {
+  constructor() {
+    /** @type {string[]} */
+    this.tokens = [];
+  }
+
+  /**
+   * @param {...(string | undefined | null)} values
+   */
+  addText(...values) {
+    for (const val of values) {
+      if (val && val !== 'None') {
+        this.tokens.push(val.toLowerCase());
+      }
+    }
+  }
+
+  /**
+   * @param {string | undefined} recipeKey
+   */
+  addRecipe(recipeKey) {
+    if (!recipeKey || recipeKey === 'None') return;
+    this.addText(recipeKey);
+    const recipe = dbIndexes.recipes.get(recipeKey);
+    if (recipe) {
+      this.addText(recipe.outputName, recipe.roomName);
+    }
+  }
+
+  /**
+   * @param {string | undefined} itemId
+   */
+  addItem(itemId) {
+    if (!itemId || itemId === 'None') return;
+    this.addText(itemId, dbIndexes.items.get(itemId)?.name);
+    this.addRecipe(itemId);
+  }
+
+  /**
+   * @param {Array<{ Key: string, Value?: number }> | undefined} pool
+   */
+  addItemPool(pool) {
+    if (!Array.isArray(pool)) return;
+    for (const entry of pool) {
+      this.addItem(entry?.Key);
+    }
+  }
+
+  /**
+   * @param {string | undefined} monsterId
+   */
+  addMonster(monsterId) {
+    if (!monsterId || monsterId === 'None') return;
+    this.addText(monsterId, dbIndexes.monsters.get(monsterId)?.name);
+  }
+
+  /**
+   * @param {import('../types.js').WorldBattleMember[]} team
+   */
+  addBattleTeam(team) {
+    for (const member of team) {
+      this.addMonster(member.monsterId);
+    }
+  }
+
+  /**
+   * @param {string} locId
+   */
+  addLocation(locId) {
+    if (!locId) return;
+    this.addText(locId, dbIndexes.locations.get(locId)?.name);
+  }
+
+  /**
+   * @returns {string}
+   */
+  toString() {
+    return this.tokens.join('\n');
+  }
+}
+
+/** @type {CaseInsensitiveMap<string>} */
+const _spawnerSearchCache = new CaseInsensitiveMap();
+/** @type {CaseInsensitiveMap<string>} */
+const _resourceSearchCache = new CaseInsensitiveMap();
+/** @type {WeakMap<WorldPoi, string>} */
+let _poiSearchCache = new WeakMap();
+
+/**
+ * Returns the cached searchable text for a shared spawner tag archetype.
+ * @param {string} tag
+ * @returns {string}
+ */
+function getSpawnerArchetypeSearchText(tag) {
+  if (!tag) return '';
+  let cached = _spawnerSearchCache.get(tag);
+  if (cached === undefined) {
+    const v = new PoiSearchVisitor();
+    v.addText(tag);
+    for (const enc of getSpawnerEncounters(tag)) {
+      v.addMonster(enc.monster.id);
+    }
+    cached = v.toString();
+    _spawnerSearchCache.set(tag, cached);
+  }
+  return cached;
+}
+
+/**
+ * Returns the cached searchable text for a shared world resource archetype.
+ * @param {string} key
+ * @returns {string}
+ */
+function getResourceArchetypeSearchText(key) {
+  if (!key) return '';
+  let cached = _resourceSearchCache.get(key);
+  if (cached === undefined) {
+    const v = new PoiSearchVisitor();
+    const res = dbIndexes.worldResources.get(key);
+    v.addText(key, res?.displayName);
+    if (res) {
+      for (const drop of res.drops) {
+        v.addText(drop.item.id, drop.item.name);
+      }
+    }
+    cached = v.toString();
+    _resourceSearchCache.set(key, cached);
+  }
+  return cached;
+}
+
+/**
+ * Category-specific search visitors that populate searchable domain terms for a POI.
+ * @type {Partial<Record<import('../types.js').PoiCategory, (poi: WorldPoi, v: PoiSearchVisitor) => void>>}
+ */
+const CATEGORY_SEARCH_VISITORS = {
+  zone(poi, v) {
+    v.addLocation(poi.properties.ZoneID);
+  },
+  tower(poi, v) {
+    v.addText(poi.properties.Text);
+  },
+  chest(poi, v) {
+    v.addItemPool(poi.properties.ItemPool);
+  },
+  recipe(poi, v) {
+    v.addRecipe(poi.properties.Recipe);
+    v.addText(poi.properties.Text);
+  },
+  obelisk(poi, v) {
+    v.addText(poi.properties.Text);
+  },
+  shop(poi, v) {
+    v.addText(poi.properties.Text);
+    for (const ware of poi.shopItems) {
+      v.addItem(ware.itemId);
+    }
+  },
+  inn(poi, v) {
+    v.addText(poi.properties.Text);
+  },
+  ferry(poi, v) {
+    v.addText(poi.properties.Text);
+  },
+  battle(poi, v) {
+    v.addText(poi.properties.Text_BeforeBattle, poi.properties.Text_AfterBattle);
+    v.addRecipe(poi.properties.Recipe);
+    v.addRecipe(poi.properties.RewardRecipe);
+    v.addBattleTeam(poi.battleTeam);
+  },
+  cinematic(poi, v) {
+    v.addText(poi.properties.CinematicID, poi.properties['In Text'], poi.properties.Text);
+    v.addRecipe(poi.properties.RewardRecipe);
+    v.addRecipe(poi.properties.Recipe);
+    v.addBattleTeam(poi.battleTeam);
+  },
+  npc(poi, v) {
+    v.addText(poi.properties.Text, poi.properties.SecondText);
+    v.addRecipe(poi.properties.Recipe);
+    v.addItemPool(poi.properties.ItemPool);
+  },
+  quest(poi, v) {
+    v.addText(poi.properties.Text);
+    v.addRecipe(poi.properties.Recipe);
+    const q = poi.properties.QuestInfo;
+    if (q) {
+      v.addText(q.Name, q.Description);
+      v.addRecipe(q.RewardRecipe);
+      v.addItemPool(q.ResourceRequierements);
+      v.addItemPool(q.RewardResources);
+      if (Array.isArray(q.MonsterRequierements)) {
+        for (const m of q.MonsterRequierements) {
+          v.addMonster(m?.Key);
+        }
+      }
+    }
+  },
+  dungeon(poi, v) {
+    v.addLocation(getPoiLocationId(poi));
+  },
+  arcane(poi, v) {
+    v.addText(poi.label, poi.type);
+  },
+  spring(poi, v) {
+    v.addText(poi.label, poi.type);
+  },
+  coliseum(poi, v) {
+    v.addLocation(getPoiLocationId(poi));
+    const col = dbIndexes.worldPois.get(getReferencedPoiId(poi.properties.RefColiseum));
+    if (col) {
+      v.addItem(col.properties.RewardEmblem);
+      v.addRecipe(col.properties.RewardRecipe);
+      for (const round of col.coliseumRounds) {
+        v.addBattleTeam(round.team);
+      }
+    }
+  }
+};
+
+/**
+ * Checks whether a POI matches a lowercase search query using shared archetype caches
+ * for dense categories (`spawner`, `resource`, `foliage`) and per-POI visitor caches for others.
+ *
+ * @param {WorldPoi} poi
+ * @param {string} q Lowercase search query
+ * @returns {boolean}
+ */
+export function matchesPoiSearch(poi, q) {
+  if (poi.category === 'resource' || poi.category === 'foliage') {
+    if (getResourceArchetypeSearchText(poi.resourceTableKey).includes(q)) {
+      return true;
+    }
+  } else if (poi.category === 'spawner') {
+    if (getSpawnerArchetypeSearchText(poi.tag).includes(q)) {
+      return true;
+    }
+  }
+
+  let instanceText = _poiSearchCache.get(poi);
+  if (instanceText === undefined) {
+    const v = new PoiSearchVisitor();
+    v.addText(poi.label, poi.tag, poi.id);
+    const visit = CATEGORY_SEARCH_VISITORS[poi.category];
+    if (visit) {
+      visit(poi, v);
+    }
+    instanceText = v.toString();
+    _poiSearchCache.set(poi, instanceText);
+  }
+
+  return instanceText.includes(q);
 }
 
 /**
@@ -382,6 +703,7 @@ export function consolidateZoneCentroids(pois, locationsById = new Map()) {
       new WorldPoi({
         id: `Zone_${zoneId}`,
         type: rep.type,
+        category: 'zone',
         label: locName,
         cell: rep.cell,
         location: {
@@ -433,11 +755,10 @@ export function unrollFoliageComponent(rawPoi, worldResourcesById) {
   }
 
   const resourceId = rawPoi.ResourceID;
-  const worldResource = worldResourcesById.get(resourceId);
   const category = /** @type {import('../types.js').PoiCategory} */ (
     AMBIENT_FOLIAGE_KEYS.has(resourceId) ? 'foliage' : 'resource'
   );
-  const label = worldResource?.displayName || '';
+  const shortName = rawPoi.Name.replace(/^BP_InstancedInteractiveFoliageComponent_/, '');
   const originX = rawPoi.Location.X;
   const originY = rawPoi.Location.Y;
   const originZ = rawPoi.Location.Z;
@@ -446,12 +767,13 @@ export function unrollFoliageComponent(rawPoi, worldResourcesById) {
   const nodes = [];
   for (let i = 0; i < rawPoi.Instances.length; i++) {
     const inst = rawPoi.Instances[i];
+    const id = `${rawPoi.Name}_${i}`;
     nodes.push(
       new WorldPoi({
-        id: `${rawPoi.Name}_${i}`,
+        id,
         type: rawPoi.Type,
         category,
-        label,
+        label: `${shortName}_${i}`,
         cell: rawPoi.Cell,
         location: {
           x: originX + inst.X,

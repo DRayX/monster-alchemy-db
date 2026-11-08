@@ -20,7 +20,12 @@ import { ActiveSkill, PassiveSkill } from '../models/Skill.js';
 import { WorldResource, WorldResourceRequirement, WorldResourceDrop } from '../models/WorldResource.js';
 import { Location } from '../models/Location.js';
 import { WorldPoi } from '../models/WorldPoi.js';
-import { unrollFoliageComponent, resolveColiseumLocations, consolidateZoneCentroids } from './mapUtils.js';
+import {
+  getPoiCategory,
+  unrollFoliageComponent,
+  resolveColiseumLocations,
+  consolidateZoneCentroids
+} from './mapUtils.js';
 
 /**
  * @typedef {import('../types.js').NormalizedUnrealRow} NormalizedUnrealRow
@@ -483,6 +488,7 @@ export async function loadGameDatabase() {
       new WorldPoi({
         id: rawPoi.Name,
         type: rawPoi.Type,
+        category: getPoiCategory(rawPoi.Type, schemas),
         label: rawPoi.ActorLabel,
         cell: rawPoi.Cell,
         location,

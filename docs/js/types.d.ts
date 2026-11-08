@@ -118,13 +118,16 @@ export type PoiCategory =
   | 'ferry'
   | 'battle'
   | 'quest'
+  | 'npc'
+  | 'cinematic'
   | 'resource'
   | 'foliage'
   | 'dungeon'
-  | 'dungeon_exit'
   | 'coliseum'
   | 'manager'
-  | 'zone';
+  | 'zone'
+  | 'arcane'
+  | 'spring';
 
 /** Item sold by a merchant shop POI in the overworld. */
 export interface WorldShopItem {

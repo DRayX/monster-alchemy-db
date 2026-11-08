@@ -2,7 +2,6 @@
 import { defineComponent, computed } from 'vue';
 import { dbIndexes } from '../../store.js';
 import { getItemIcon, getIcon } from '../../services/assets.js';
-import { getPoiLocationId } from '../../services/mapUtils.js';
 import {
   PopupShell,
   PopupSection,
@@ -374,7 +373,64 @@ export const ObeliskPopup = defineComponent({
 });
 
 // ==========================================
-// 7. GeneralPopup (Inns, Towers, Ferries, Exits, and Fallbacks)
+// 7. NpcPopup
+// ==========================================
+const NPC_TEMPLATE = /* html */ `
+  <PopupShell :poi="poi" title="Dialogue NPC" :dialogue="npcDialogue">
+    <PopupSection v-if="npcRecipeReward || npcItemGifts.length > 0" title="Rewards:">
+      <RowLink
+        v-if="npcRecipeReward"
+        :to="npcRecipeReward.to"
+        :icon="npcRecipeReward.icon"
+        :title="npcRecipeReward.title"
+      >
+        <span :class="npcRecipeReward.badgeClass">{{ npcRecipeReward.badgeText }}</span>
+      </RowLink>
+      <RowLink
+        v-for="(item, idx) in npcItemGifts"
+        :key="idx"
+        :to="item.to"
+        :icon="item.icon"
+        :title="item.title"
+      >
+        <span class="f7 b gold">&times;{{ item.amount }}</span>
+      </RowLink>
+    </PopupSection>
+  </PopupShell>
+`;
+
+export const NpcPopup = defineComponent({
+  name: 'NpcPopup',
+  components: { PopupShell, PopupSection, RowLink },
+  props: {
+    poi: {
+      type: /** @type {import('vue').PropType<import('../../models/WorldPoi.js').WorldPoi>} */ (Object),
+      required: true
+    }
+  },
+  setup(props) {
+    const npcDialogue = computed(
+      () => props.poi.properties.Text || props.poi.properties.SecondText || ''
+    );
+    const npcRecipeReward = computed(() => resolveRecipe(props.poi.properties.Recipe));
+    const npcItemGifts = computed(() =>
+      (props.poi.properties.ItemPool || []).map((/** @type {any} */ entry) => ({
+        ...resolveItemOrRecipe(entry.Key),
+        amount: entry.Value
+      }))
+    );
+
+    return {
+      npcDialogue,
+      npcRecipeReward,
+      npcItemGifts
+    };
+  },
+  template: NPC_TEMPLATE
+});
+
+// ==========================================
+// 8. GeneralPopup (Inns, Towers, Ferries, Exits, and Fallbacks)
 // ==========================================
 const GENERAL_TEMPLATE = /* html */ `
   <PopupShell :poi="poi" :title="generalTitle" :dialogue="poi.properties.Text" />
@@ -399,11 +455,16 @@ export const GeneralPopup = defineComponent({
           return 'Innkeeper / Rest Point';
         case 'ferry':
           return p.type.includes('Baq') ? 'Baq Ferry Navigator' : 'Island Ferry Navigator';
-        case 'dungeon_exit': {
-          const locId = getPoiLocationId(p);
-          const dest = locId ? dbIndexes.locations.get(locId)?.name || locId : '';
-          return dest ? 'Exit from ' + dest : 'Dungeon Exit';
-        }
+        case 'spring':
+          return p.type === 'BP_Spring_Target_C' ? 'Spring Target' : 'Launch Spring';
+        case 'arcane':
+          if (p.type === 'BP_ArcaneEye_C') return 'Arcane Eye';
+          if (p.type === 'BP_ArcaneTrigger_C') return 'Arcane Trigger';
+          if (p.type === 'BP_ArcaneCube_C') return 'Arcane Cube';
+          if (p.type === 'BP_ArcaneObject_Bridge_C') return 'Arcane Bridge';
+          if (p.type === 'BP_ArcaneObject_Door_C') return 'Arcane Door';
+          if (p.type === 'BP_ForgottenKingdomDoor_C') return 'Forgotten Kingdom Door';
+          return 'Arcane Puzzle';
         default:
           return p.label;
       }

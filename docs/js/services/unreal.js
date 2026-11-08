@@ -282,6 +282,32 @@ export function extractBlueprintName(ref) {
 }
 
 /**
+ * Walks the Blueprint class inheritance chain from most-derived class up to the base class.
+ *
+ * @param {string} bpType Blueprint class type (e.g. 'BP_DungeonManager_C', 'BP_Coliseum_Child_C')
+ * @param {Record<string, any>} [schemas] Combined Struct and Blueprint definitions
+ * @returns {Array<{ name: string, asset: import('../types.js').UnrealBlueprintAsset | undefined }>}
+ */
+export function getBlueprintHierarchy(bpType, schemas = {}) {
+  /** @type {Array<{ name: string, asset: import('../types.js').UnrealBlueprintAsset | undefined }>} */
+  const chain = [];
+  let bpName = extractBlueprintName(bpType);
+
+  while (bpName) {
+    const bpAsset = /** @type {import('../types.js').UnrealBlueprintAsset | undefined} */ (
+      schemas[bpName]
+    );
+    chain.push({ name: bpName, asset: bpAsset });
+    if (!bpAsset) break;
+
+    const bgc = bpAsset.find((e) => e.Type === 'BlueprintGeneratedClass');
+    bpName = extractBlueprintName(bgc?.SuperStruct || bgc?.Super);
+  }
+
+  return chain;
+}
+
+/**
  * Normalizes a Blueprint instance's properties dictionary using its Blueprint class definition
  * and Class Default Object (CDO) template:
  * - Walks the Blueprint class hierarchy (`SuperStruct` / `Super`) to resolve inherited properties and CDO defaults.
@@ -297,18 +323,10 @@ export function extractBlueprintName(ref) {
  */
 export function normalizeBlueprintProperties(instanceProps, bpType, schemas, enumLookup = {}) {
   // 1. Build the Blueprint class inheritance hierarchy (from base class to derived class)
-  /** @type {import('../types.js').UnrealBlueprintAsset[]} */
-  const hierarchy = [];
-  let bpName = extractBlueprintName(bpType);
-
-  while (bpName) {
-    const bpAsset = /** @type {import('../types.js').UnrealBlueprintAsset | undefined} */ (schemas[bpName]);
-    if (!bpAsset) break;
-    hierarchy.unshift(bpAsset);
-
-    const bgc = bpAsset.find((e) => e.Type === 'BlueprintGeneratedClass');
-    bpName = extractBlueprintName(bgc?.SuperStruct || bgc?.Super);
-  }
+  const hierarchy = getBlueprintHierarchy(bpType, schemas)
+    .map((entry) => entry.asset)
+    .filter((asset) => asset !== undefined)
+    .reverse();
 
   // 2. CDO default property fallback (base class defaults overridden by derived, overridden by instance)
   /** @type {Record<string, any>} */

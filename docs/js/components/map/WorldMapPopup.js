@@ -8,6 +8,7 @@ import {
   ChestPopup,
   RecipePopup,
   ObeliskPopup,
+  NpcPopup,
   GeneralPopup
 } from './InteractionPopups.js';
 
@@ -17,10 +18,12 @@ const CATEGORY_COMPONENTS = {
   dungeon: DungeonPopup,
   coliseum: ColiseumPopup,
   battle: BattlePopup,
+  cinematic: BattlePopup,
   resource: ResourcePopup,
   foliage: ResourcePopup,
   shop: ShopPopup,
   quest: QuestPopup,
+  npc: NpcPopup,
   chest: ChestPopup,
   recipe: RecipePopup,
   obelisk: ObeliskPopup

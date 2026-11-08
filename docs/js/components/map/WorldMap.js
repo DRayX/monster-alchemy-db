@@ -2,6 +2,7 @@
 import {
   defineComponent,
   ref,
+  reactive,
   computed,
   onMounted,
   onUnmounted,
@@ -15,6 +16,7 @@ import { useRoute } from 'vue-router';
 import {
   LeafletMap,
   Marker,
+  Polyline,
   DivIcon,
   ImageOverlay,
   SimpleCRS
@@ -32,19 +34,13 @@ import {
   CATEGORIES,
   renderIconHtml,
   BatchLayerGroup,
-  getPoiLocationId,
   getPoiCustomIcon,
-  getSpawnerEncounters,
+  getReferencedPoiId,
   isCountedPoi,
-  isClusteredCategory
+  isClusteredCategory,
+  matchesPoiSearch
 } from '../../services/mapUtils.js';
 import { WorldMapPopup } from './WorldMapPopup.js';
-
-/**
- * @typedef {object} SpawnerEncounter
- * @property {import('../../models/Monster.js').Monster} monster
- * @property {import('../../models/Monster.js').MonsterWildSpawn} spawn
- */
 
 /**
  * @param {string} category
@@ -272,6 +268,8 @@ export const WorldMap = defineComponent({
     let map = null;
     /** @type {Map<string, BatchLayerGroup | MarkerClusterGroup>} */
     const categoryLayers = new Map();
+    /** @type {Map<string, BatchLayerGroup>} Dedicated layer for dashed link lines per category */
+    const categoryLinkLayers = new Map();
     /** @type {Map<string, Marker[]>} */
     const categoryMarkers = new Map();
     /** @type {Map<string, Marker>} */
@@ -390,6 +388,8 @@ export const WorldMap = defineComponent({
 
     /** @type {Map<string, string>} Tracks the search query populated in each category layer. */
     const layerQuery = new Map();
+    /** @type {Map<string, number>} Tracks the visible marker count per category layer. */
+    const categoryVisibleCounts = reactive(new Map());
 
     /**
      * Retrieves or instantiates cached markers for a category on-demand.
@@ -404,6 +404,20 @@ export const WorldMap = defineComponent({
         categoryMarkers.set(category, markers);
       }
       return markers;
+    }
+
+    /**
+     * Retrieves or creates the dedicated link lines layer group for a category.
+     * @param {string} category
+     * @returns {BatchLayerGroup}
+     */
+    function getCategoryLinkLayer(category) {
+      let layer = categoryLinkLayers.get(category);
+      if (!layer) {
+        layer = new BatchLayerGroup();
+        categoryLinkLayers.set(category, layer);
+      }
+      return layer;
     }
 
     /**
@@ -439,7 +453,7 @@ export const WorldMap = defineComponent({
         const pois = poisByCategory.value.get(category) || [];
         visible = [];
         for (let i = 0; i < pois.length; i++) {
-          if (matchesSearch(pois[i], q)) {
+          if (matchesPoiSearch(pois[i], q)) {
             visible.push(markers[i]);
           }
         }
@@ -447,6 +461,11 @@ export const WorldMap = defineComponent({
 
       layer.addLayers(visible);
       layerQuery.set(category, q);
+      const pois = poisByCategory.value.get(category) || [];
+      const primaryCount = q
+        ? pois.filter((p, i) => isCountedPoi(p) && matchesPoiSearch(p, q)).length
+        : pois.filter(isCountedPoi).length;
+      categoryVisibleCounts.set(category, primaryCount);
     }
 
     /**
@@ -496,106 +515,24 @@ export const WorldMap = defineComponent({
     );
 
     /**
-     * Computes the count of POIs belonging to each category.
+     * Computes the count of POIs belonging to each category, counting only primary elements.
      * @param {string} catId
      * @returns {number}
      */
     function getCategoryCount(catId) {
-      return poisByCategory.value.get(catId)?.length || 0;
+      const pois = poisByCategory.value.get(catId) || [];
+      return pois.filter(isCountedPoi).length;
     }
 
-    /**
-     * Checks if a POI matches an active search query string.
-     * @param {import('../../models/WorldPoi.js').WorldPoi} poi
-     * @param {string} q Lowercase search query
-     * @returns {boolean}
-     */
-    function matchesSearch(poi, q) {
-      if (
-        poi.label.toLowerCase().includes(q) ||
-        poi.tag.toLowerCase().includes(q) ||
-        poi.id.toLowerCase().includes(q)
-      ) {
-        return true;
-      }
-
-      const recipeKey = poi.properties.Recipe;
-      if (recipeKey) {
-        if (recipeKey.toLowerCase().includes(q)) return true;
-        const recipe = dbIndexes.recipes.get(recipeKey);
-        if (recipe && (recipe.outputName.toLowerCase().includes(q) || recipe.roomName.toLowerCase().includes(q))) {
-          return true;
+    const visibleMarkerCount = computed(() => {
+      let count = 0;
+      for (const catId of selectedCategories.value) {
+        if (!CATEGORIES[catId]?.dense) {
+          count += categoryVisibleCounts.get(catId) ?? 0;
         }
       }
-
-      const locId = getPoiLocationId(poi);
-      if (locId) {
-        if (locId.toLowerCase().includes(q)) return true;
-        if (dbIndexes.locations.get(locId)?.name.toLowerCase().includes(q)) return true;
-      }
-
-      const itemPool = poi.properties.ItemPool;
-      if (Array.isArray(itemPool)) {
-        const matches = itemPool.some((entry) => {
-          if (entry?.Key?.toLowerCase().includes(q)) return true;
-          const item = dbIndexes.items.get(entry?.Key);
-          return item ? item.name.toLowerCase().includes(q) : false;
-        });
-        if (matches) return true;
-      }
-
-      if (poi.category === 'spawner') {
-        const encounters = getSpawnerEncounters(poi.tag);
-        if (encounters.some(
-          (e) => e.monster.name.toLowerCase().includes(q) || e.monster.id.toLowerCase().includes(q)
-        )) {
-          return true;
-        }
-      }
-
-      if (poi.category === 'resource' || poi.category === 'foliage') {
-        const res = dbIndexes.worldResources.get(poi.resourceTableKey);
-        if (
-          res?.drops.some(
-            (d) => d.item.name.toLowerCase().includes(q) || d.item.id.toLowerCase().includes(q)
-          )
-        ) {
-          return true;
-        }
-      }
-
-      if (poi.category === 'quest') {
-        const questInfo = poi.properties.QuestInfo;
-        if (questInfo) {
-          if (questInfo.Name?.toLowerCase().includes(q)) return true;
-          if (questInfo.RewardRecipe?.toLowerCase().includes(q)) return true;
-          if (Array.isArray(questInfo.MonsterRequierements) && questInfo.MonsterRequierements.some((/** @type {any} */ m) => m.Key?.toLowerCase().includes(q))) {
-            return true;
-          }
-          if (Array.isArray(questInfo.ResourceRequierements) && questInfo.ResourceRequierements.some((/** @type {any} */ r) => r.Key?.toLowerCase().includes(q))) {
-            return true;
-          }
-        }
-      }
-
-      return false;
-    }
-
-    const filteredPois = computed(() => {
-      const q = searchQuery.value.trim().toLowerCase();
-
-      return mapPois.value.filter((poi) => {
-        if (!selectedCategories.value.includes(poi.category)) {
-          return false;
-        }
-        if (q && !matchesSearch(poi, q)) {
-          return false;
-        }
-        return true;
-      });
+      return count;
     });
-
-    const visibleMarkerCount = computed(() => filteredPois.value.filter(isCountedPoi).length);
 
     /**
      * Synchronizes active Leaflet category layer groups to match selected categories and search queries.
@@ -607,6 +544,7 @@ export const WorldMap = defineComponent({
       for (const category of Object.keys(CATEGORIES)) {
         const isSelected = selectedCategories.value.includes(category);
         const layer = getCategoryLayer(category);
+        const linkLayer = categoryLinkLayers.get(category);
 
         if (isSelected) {
           if (layerQuery.get(category) !== q) {
@@ -619,7 +557,145 @@ export const WorldMap = defineComponent({
           if (map.hasLayer(layer)) {
             map.removeLayer(layer);
           }
+          if (linkLayer && map.hasLayer(linkLayer)) {
+            map.removeLayer(linkLayer);
+          }
         }
+      }
+
+      syncLinkLines(q);
+    }
+
+    /**
+     * Rebuilds and synchronizes dashed link polylines between connected POIs
+     * on each category's dedicated link layer.
+     * (dungeons to exits, arcane eyes to targets, arcane triggers to cubes, springs to targets).
+     * @param {string} [q] Current search query
+     */
+    function syncLinkLines(q = '') {
+      if (!map) return;
+
+      const poisById = dbIndexes.worldPois;
+
+      /**
+       * @param {Polyline[]} list
+       * @param {import('../../models/WorldPoi.js').WorldPoi} sourcePoi
+       * @param {string} targetPoiId
+       * @param {string} color
+       */
+      function addLine(list, sourcePoi, targetPoiId, color) {
+        if (!targetPoiId) return;
+        const targetPoi = poisById.get(targetPoiId);
+        if (!targetPoi) return;
+
+        // If a search query is active, only draw line if either endpoint matches the query
+        if (q && !matchesPoiSearch(sourcePoi, q) && !matchesPoiSearch(targetPoi, q)) {
+          return;
+        }
+
+        const latLng1 = worldToLatLng(sourcePoi.location);
+        const latLng2 = worldToLatLng(targetPoi.location);
+
+        const line = new Polyline([latLng1, latLng2], {
+          color,
+          weight: 2,
+          opacity: 0.8,
+          dashArray: '6, 8',
+          interactive: false
+        });
+        list.push(line);
+      }
+
+      /**
+       * @param {string} category
+       * @param {Polyline[]} lines
+       */
+      function applyLinkLayer(category, lines) {
+        if (!map) return;
+        const linkLayer = getCategoryLinkLayer(category);
+        linkLayer.clearLayers();
+        linkLayer.addLayers(lines);
+        if (!map.hasLayer(linkLayer)) {
+          map.addLayer(linkLayer);
+        }
+      }
+
+      // 1. Dungeons -> Exits
+      if (selectedCategories.value.includes('dungeon')) {
+        /** @type {Polyline[]} */
+        const dungeonLines = [];
+        const dungeons = poisByCategory.value.get('dungeon') || [];
+        const exits = dungeons.filter((p) => p.type === 'BP_DungeonDoor_Exit_C');
+        const entrances = dungeons.filter((p) => p.type === 'BP_DungeonDoor_C');
+        const color = CATEGORIES.dungeon.lineColor || '#ff4136';
+
+        for (const entrance of entrances) {
+          const matchingExit = exits.find((e) => {
+            const doorRef = e.properties.DungeonDoor?.ObjectName || '';
+            return doorRef.includes(entrance.id);
+          });
+          if (matchingExit) {
+            addLine(dungeonLines, entrance, matchingExit.id, color);
+          }
+        }
+        applyLinkLayer('dungeon', dungeonLines);
+      }
+
+      // 2. Springs -> Targets
+      if (selectedCategories.value.includes('spring')) {
+        /** @type {Polyline[]} */
+        const springLines = [];
+        const springs = poisByCategory.value.get('spring') || [];
+        const color = CATEGORIES.spring.lineColor || '#357edd';
+        for (const spring of springs) {
+          if (spring.type === 'BP_Spring_C') {
+            const targetId = getReferencedPoiId(spring.properties.Target);
+            addLine(springLines, spring, targetId, color);
+          }
+        }
+        applyLinkLayer('spring', springLines);
+      }
+
+      // 3. Arcane Puzzles (Eyes -> Targets & Triggers -> Cubes)
+      if (selectedCategories.value.includes('arcane')) {
+        /** @type {Polyline[]} */
+        const arcaneLines = [];
+        const arcanePois = poisByCategory.value.get('arcane') || [];
+        const color = CATEGORIES.arcane.lineColor || '#a463f2';
+
+        // Eyes -> Targets
+        const eyes = arcanePois.filter((p) => p.type === 'BP_ArcaneEye_C');
+        const eyeTargets = new Set();
+        for (const eye of eyes) {
+          const targetId = getReferencedPoiId(eye.properties.ObjectRef);
+          if (targetId) {
+            eyeTargets.add(targetId);
+            addLine(arcaneLines, eye, targetId, color);
+          }
+        }
+
+        // Check reverse ArcaneEyeArray on ArcaneObjects (covers any unreferenced eyes)
+        const arcaneObjects = arcanePois.filter((p) => Array.isArray(p.properties.ArcaneEyeArray));
+        for (const obj of arcaneObjects) {
+          for (const eyeRef of obj.properties.ArcaneEyeArray) {
+            const eyeId = getReferencedPoiId(eyeRef);
+            if (eyeId && !eyeTargets.has(obj.id)) {
+              const eyePoi = poisById.get(eyeId);
+              if (eyePoi) {
+                addLine(arcaneLines, eyePoi, obj.id, color);
+              }
+            }
+          }
+        }
+
+        // Triggers -> Cubes
+        const triggers = arcanePois.filter((p) => p.type === 'BP_ArcaneTrigger_C');
+        for (const trigger of triggers) {
+          const cubeId = getReferencedPoiId(trigger.properties.LinkedElement);
+          addLine(arcaneLines, trigger, cubeId, color);
+        }
+
+        applyLinkLayer('arcane', arcaneLines);
       }
     }
 
@@ -631,9 +707,14 @@ export const WorldMap = defineComponent({
       for (const layer of categoryLayers.values()) {
         layer.clearLayers();
       }
+      for (const linkLayer of categoryLinkLayers.values()) {
+        linkLayer.clearLayers();
+      }
       categoryLayers.clear();
+      categoryLinkLayers.clear();
       categoryMarkers.clear();
       layerQuery.clear();
+      categoryVisibleCounts.clear();
       markerByPoiId.clear();
       activeMarker = null;
 
@@ -712,7 +793,7 @@ export const WorldMap = defineComponent({
       map = new LeafletMap(mapContainer.value, {
         crs: SimpleCRS,
         minZoom: -3,
-        maxZoom: 2,
+        maxZoom: 3.5,
         zoomSnap: 0.5,
         attributionControl: false
       });
@@ -764,9 +845,14 @@ export const WorldMap = defineComponent({
       for (const layer of categoryLayers.values()) {
         layer.clearLayers();
       }
+      for (const linkLayer of categoryLinkLayers.values()) {
+        linkLayer.clearLayers();
+      }
       categoryLayers.clear();
+      categoryLinkLayers.clear();
       categoryMarkers.clear();
       layerQuery.clear();
+      categoryVisibleCounts.clear();
       markerByPoiId.clear();
       activeMarker = null;
     });

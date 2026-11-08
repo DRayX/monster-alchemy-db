@@ -1,58 +1,5 @@
 // @ts-check
-import { extractBlueprintName } from '../services/unreal.js';
-import { CATEGORIES } from '../services/mapUtils.js';
-
-/**
- * Resolves the functional category for a Blueprint POI class.
- *
- * @param {string} type
- * @returns {import('../types.js').PoiCategory}
- */
-export function getPoiCategory(type) {
-  if (type.startsWith('BP_InstancedInteractiveFoliageComponent_')) {
-    return 'resource';
-  }
-
-  switch (extractBlueprintName(type)) {
-    case 'BP_Spawner':
-      return 'spawner';
-    case 'BP_AlchemistTower_Interact':
-      return 'tower';
-    case 'BP_WorldChest':
-      return 'chest';
-    case 'BP_Recipe':
-      return 'recipe';
-    case 'BP_Interactable_ExpObelisk':
-      return 'obelisk';
-    case 'BP_NPC_StaticDialogue_Shop':
-      return 'shop';
-    case 'BP_NPC_StaticDialogue_Inn':
-      return 'inn';
-    case 'BP_NPC_StaticDialogue_Navigator_Island':
-    case 'BP_NPC_StaticDialogue_Navigator_Baq':
-      return 'ferry';
-    case 'BP_NPC_Battle':
-    case 'BP_NPC_Battle_FKingdom':
-    case 'BP_NPC_Battle_Knight':
-      return 'battle';
-    case 'BP_NPC_StaticDialogue_FetchShowQuest':
-      return 'quest';
-    case 'BP_DungeonDoor':
-      return 'dungeon';
-    case 'BP_DungeonDoor_Exit':
-      return 'dungeon_exit';
-    case 'BP_ColisseumDoor':
-      return 'coliseum';
-    case 'BP_DungeonManager':
-    case 'BP_Coliseum':
-    case 'BP_Coliseum_Child':
-      return 'manager';
-    case 'BP_ZoneDiscoveryVolume':
-      return 'zone';
-    default:
-      throw new Error(`[WorldPoi] Unrecognized POI blueprint class: "${type}"`);
-  }
-}
+const HIDDEN_CATEGORIES = new Set(['chest', 'recipe']);
 
 /**
  * Domain model representing an interactive world point of interest (POI) in the overworld.
@@ -62,7 +9,7 @@ export class WorldPoi {
    * @param {object} params
    * @param {string} params.id Unique POI identifier (e.g. "BP_Spawner_C_UAID_...")
    * @param {string} params.type Blueprint POI class name (e.g. "BP_Spawner_C")
-   * @param {import('../types.js').PoiCategory} [params.category] Explicit category override
+   * @param {import('../types.js').PoiCategory} params.category Functional POI category
    * @param {string} [params.label] Editor/designer label (e.g. "BP_Spawner359")
    * @param {string} params.cell Level cell filename (e.g. "F4OE1V48ONG3HGD5CL8Z77FKJ")
    * @param {import('../types.js').WorldCoordinates} params.location World coordinates (x, y, z)
@@ -72,7 +19,7 @@ export class WorldPoi {
   constructor({ id, type, category, label, cell, location, tag = '', properties = {} }) {
     this.id = id;
     this.type = type;
-    this.category = category || getPoiCategory(type);
+    this.category = category;
     this.label = label || id;
     this.cell = cell;
     this.location = location;
@@ -82,11 +29,11 @@ export class WorldPoi {
 
   /**
    * Whether this POI is hidden/invisible in the overworld in-game.
-   * Only categories configured with `canBeHidden` can be hidden in-game.
+   * Only chests and recipes can be hidden in-game.
    * @returns {boolean}
    */
   get isHidden() {
-    return this.properties.bHidden === true && CATEGORIES[this.category]?.canBeHidden === true;
+    return this.properties.bHidden === true && HIDDEN_CATEGORIES.has(this.category);
   }
 
   /**
@@ -95,6 +42,20 @@ export class WorldPoi {
    */
   get resourceTableKey() {
     return this.properties.resourceTableKey || '';
+  }
+
+  /**
+   * Whether this POI is a secondary linked element/target (such as a dungeon exit,
+   * spring target, arcane door/bridge, or arcane cube) rather than a primary interactive source.
+   * Secondary linked targets are displayed on the map but excluded from category counts.
+   * @returns {boolean}
+   */
+  get isLinkedSecondary() {
+    if (this.type === 'BP_DungeonDoor_Exit_C') return true;
+    if (this.type === 'BP_Spring_Target_C') return true;
+    if (this.type.startsWith('BP_ArcaneObject')) return true;
+    if (this.type === 'BP_ArcaneCube_C') return true;
+    return false;
   }
 
   /**

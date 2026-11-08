@@ -150,7 +150,10 @@ export const DungeonPopup = defineComponent({
     }
   },
   setup(props) {
+    const isExit = computed(() => props.poi.type === 'BP_DungeonDoor_Exit_C');
+
     const dungeonManager = computed(() => {
+      if (isExit.value) return null;
       const targetId = getReferencedPoiId(props.poi.properties.DungeonRef);
       return dbIndexes.worldPois.get(targetId);
     });
@@ -158,6 +161,9 @@ export const DungeonPopup = defineComponent({
     const dungeonTitle = computed(() => {
       const locId = getPoiLocationId(props.poi);
       const dest = locId ? dbIndexes.locations.get(locId)?.name : '';
+      if (isExit.value) {
+        return dest ? `Exit from ${dest}` : 'Dungeon Exit';
+      }
       return dest ? `Dungeon: ${dest}` : 'Dungeon Entrance';
     });
 
@@ -178,11 +184,15 @@ export const DungeonPopup = defineComponent({
       };
     });
 
-    const dungeonRewardRecipe = computed(() => resolveRecipe(dungeonManager.value?.properties.CustomLootEnd));
+    const dungeonRewardRecipe = computed(() => {
+      const dm = dungeonManager.value;
+      return dm ? resolveRecipe(dm.properties.CustomLootEnd) : null;
+    });
 
-    const dungeonSpawns = computed(() =>
-      getSpawnerEncounters(dungeonManager.value?.properties.SpawnTag?.TagName || '')
-    );
+    const dungeonSpawns = computed(() => {
+      const dm = dungeonManager.value;
+      return dm ? getSpawnerEncounters(dm.properties.SpawnTag?.TagName || '') : [];
+    });
 
     const dungeonLevelLabel = computed(() => {
       const first = dungeonSpawns.value[0]?.spawn;
@@ -198,6 +208,7 @@ export const DungeonPopup = defineComponent({
     });
 
     return {
+      isExit,
       dungeonTitle,
       dungeonDepth,
       dungeonBoss,
@@ -327,10 +338,10 @@ export const ColiseumPopup = defineComponent({
 });
 
 // ==========================================
-// 4. BattlePopup
+// 4. BattlePopup (Battles & Cinematic Triggers)
 // ==========================================
 const BATTLE_TEMPLATE = /* html */ `
-  <PopupShell :poi="poi" title="Battle Encounter" :dialogue="battleDialogue">
+  <PopupShell :poi="poi" :title="battleTitle" :dialogue="battleDialogue">
     <RowLink
       v-for="(member, idx) in battleTeam"
       :key="idx"
@@ -345,13 +356,15 @@ const BATTLE_TEMPLATE = /* html */ `
         Lv. {{ member.level }}
       </span>
     </RowLink>
-    <PopupSection v-if="battleRewardRecipe" title="Reward:">
+    <PopupSection v-if="battleRewardRecipes.length > 0" title="Reward:">
       <RowLink
-        :to="battleRewardRecipe.to"
-        :icon="battleRewardRecipe.icon"
-        :title="battleRewardRecipe.title"
+        v-for="(recipe, rIdx) in battleRewardRecipes"
+        :key="rIdx"
+        :to="recipe.to"
+        :icon="recipe.icon"
+        :title="recipe.title"
       >
-        <span class="f7 light-blue">Recipe</span>
+        <span :class="recipe.badgeClass">{{ recipe.badgeText }}</span>
       </RowLink>
     </PopupSection>
   </PopupShell>
@@ -367,16 +380,36 @@ export const BattlePopup = defineComponent({
     }
   },
   setup(props) {
+    const battleTitle = computed(() => {
+      if (props.poi.category === 'cinematic') {
+        const id = props.poi.properties.CinematicID;
+        return id && id !== 'None' ? `Cinematic: ${id}` : 'Cinematic Trigger';
+      }
+      return 'Battle Encounter';
+    });
     const battleDialogue = computed(
-      () => props.poi.properties.Text_BeforeBattle || props.poi.properties.Text_AfterBattle || ''
+      () =>
+        props.poi.properties.Text_BeforeBattle ||
+        props.poi.properties.Text_AfterBattle ||
+        props.poi.properties['In Text'] ||
+        props.poi.properties.Text ||
+        ''
     );
     const battleTeam = computed(() => formatBattleTeam(props.poi.battleTeam));
-    const battleRewardRecipe = computed(() => resolveRecipe(props.poi.properties.Recipe));
+    const battleRewardRecipes = computed(() => {
+      const keys = new Set(
+        [props.poi.properties.Recipe, props.poi.properties.RewardRecipe].filter(
+          (k) => k && k !== 'None'
+        )
+      );
+      return [...keys].map((k) => resolveRecipe(k)).filter((r) => r !== null);
+    });
 
     return {
+      battleTitle,
       battleDialogue,
       battleTeam,
-      battleRewardRecipe
+      battleRewardRecipes
     };
   },
   template: BATTLE_TEMPLATE
