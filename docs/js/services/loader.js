@@ -202,6 +202,7 @@ export async function loadGameDatabase() {
   for (const [spawnId, row] of Object.entries(normalized.DT_Spawns || {})) {
     const minLevel = row.MinLv || 1;
     const maxLevel = row.MaxLv || minLevel;
+    const isDungeon = spawnId.startsWith('Spawn.Dungeon.');
 
     for (const [prop, monsterId] of Object.entries(row)) {
       const match = /^(Common|Rare|Epic)(N?)(\d*)$/.exec(prop);
@@ -211,7 +212,7 @@ export async function loadGameDatabase() {
       if (!monster) continue;
 
       const [, rarity, isNight] = match;
-      const timeOfDay = isNight ? 'Night' : 'Day';
+      const timeOfDay = isDungeon ? null : isNight ? 'Night' : 'Day';
       monster.wildSpawns.push(
         new MonsterWildSpawn({
           id: spawnId,

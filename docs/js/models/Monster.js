@@ -51,7 +51,7 @@ export class MonsterWildSpawn {
    * @param {string} data.slot
    * @param {number} data.minLevel
    * @param {number} data.maxLevel
-   * @param {'Day' | 'Night'} data.timeOfDay
+   * @param {'Day' | 'Night' | null} [data.timeOfDay]
    * @param {'Common' | 'Rare' | 'Epic'} data.rarity
    */
   constructor(data) {
@@ -60,7 +60,7 @@ export class MonsterWildSpawn {
     this.displayName = formatSpawnerId(this.id);
     this.minLevel = data.minLevel;
     this.maxLevel = data.maxLevel;
-    this.timeOfDay = data.timeOfDay;
+    this.timeOfDay = data.timeOfDay ?? null;
     this.rarity = data.rarity;
   }
 

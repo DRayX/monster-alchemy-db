@@ -76,7 +76,7 @@ export const SpawnerPopup = defineComponent({
       return minLv === maxLv ? `Lv. ${minLv}` : `Lv. ${minLv}–${maxLv}`;
     });
 
-    const dayEncounters = computed(() => encounters.value.filter((e) => e.spawn.timeOfDay !== 'Night'));
+    const dayEncounters = computed(() => encounters.value.filter((e) => e.spawn.timeOfDay === 'Day'));
     const nightEncounters = computed(() => encounters.value.filter((e) => e.spawn.timeOfDay === 'Night'));
 
     return {
