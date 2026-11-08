@@ -1,0 +1,715 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_ArcaneObject_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprints/World/BP_ArcaneObject",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_ArcaneObject_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.14"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_ArcaneObject_C:ExecuteUbergraph_BP_ArcaneObject'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.9"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_ArcaneObject_C:CheckActiveIDs'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.6"
+      },
+      {
+        "ObjectName": "Function'BP_ArcaneObject_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.10"
+      },
+      {
+        "ObjectName": "Function'BP_ArcaneObject_C:Activate_Event'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.3"
+      },
+      {
+        "ObjectName": "Function'BP_ArcaneObject_C:UpdateGuid'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.11"
+      },
+      {
+        "ObjectName": "Function'BP_ArcaneObject_C:ActivateObject'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.5"
+      },
+      {
+        "ObjectName": "Function'BP_ArcaneObject_C:DeactivateObject'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.7"
+      },
+      {
+        "ObjectName": "Function'BP_ArcaneObject_C:ActivateEffects'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.4"
+      },
+      {
+        "ObjectName": "Function'BP_ArcaneObject_C:DesactivateEffects'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.8"
+      },
+      {
+        "ObjectName": "Function'BP_ArcaneObject_C:ExecuteUbergraph_BP_ArcaneObject'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.9"
+      },
+      {
+        "ObjectName": "Function'BP_ArcaneObject_C:Activate__DelegateSignature'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.2"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "ArcaneEyeArray",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | ExposeOnSpawn",
+        "Inner": {
+          "Type": "SoftObjectProperty",
+          "Name": "ArcaneEyeArray",
+          "Flags": "RF_Public",
+          "ElementSize": 48,
+          "PropertyClass": {
+            "ObjectName": "BlueprintGeneratedClass'BP_ArcaneEye_C'",
+            "ObjectPath": "/Game/Blueprints/World/BP_ArcaneEye.0"
+          }
+        }
+      },
+      {
+        "Type": "MulticastInlineDelegateProperty",
+        "Name": "Activate",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | BlueprintAssignable | BlueprintCallable",
+        "SignatureFunction": {
+          "ObjectName": "Function'BP_ArcaneObject_C:Activate__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.2"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "ObjectGuid",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "FirstLoad",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "IDs",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "IDs",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      }
+    ],
+    "FuncMap": {
+      "Activate__DelegateSignature": {
+        "ObjectName": "Function'BP_ArcaneObject_C:Activate__DelegateSignature'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.2"
+      },
+      "ExecuteUbergraph_BP_ArcaneObject": {
+        "ObjectName": "Function'BP_ArcaneObject_C:ExecuteUbergraph_BP_ArcaneObject'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.9"
+      },
+      "DesactivateEffects": {
+        "ObjectName": "Function'BP_ArcaneObject_C:DesactivateEffects'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.8"
+      },
+      "ActivateEffects": {
+        "ObjectName": "Function'BP_ArcaneObject_C:ActivateEffects'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.4"
+      },
+      "DeactivateObject": {
+        "ObjectName": "Function'BP_ArcaneObject_C:DeactivateObject'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.7"
+      },
+      "ActivateObject": {
+        "ObjectName": "Function'BP_ArcaneObject_C:ActivateObject'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.5"
+      },
+      "UpdateGuid": {
+        "ObjectName": "Function'BP_ArcaneObject_C:UpdateGuid'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.11"
+      },
+      "Activate_Event": {
+        "ObjectName": "Function'BP_ArcaneObject_C:Activate_Event'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.3"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_ArcaneObject_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.10"
+      },
+      "CheckActiveIDs": {
+        "ObjectName": "Function'BP_ArcaneObject_C:CheckActiveIDs'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.6"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_ArcaneObject_C'Default__BP_ArcaneObject_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_ArcaneObject_C",
+    "Name": "Default__BP_ArcaneObject_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/World/BP_ArcaneObject.BP_ArcaneObject_C'",
+    "Package": "/Game/Blueprints/World/BP_ArcaneObject",
+    "Properties": {
+      "UberGraphFrame": {},
+      "Activate": {
+        "InvocationList": []
+      },
+      "FirstLoad": true
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "Activate__DelegateSignature",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.0"
+    },
+    "FunctionFlags": "FUNC_Public | FUNC_Delegate | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Activate_Event",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "SelfRef",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_ArcaneEye_C'",
+          "ObjectPath": "/Game/Blueprints/World/BP_ArcaneEye.0"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ActivateEffects",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "FirstLoad",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ActivateObject",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "CheckActiveIDs",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetMonsterSaveData_RefSaveGame",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_SaveGameMonster_C'",
+          "ObjectPath": "/Game/Blueprints/Core/Save/BP_SaveGameMonster.0"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Map_Find_Value",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Map_Find_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DeactivateObject",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DesactivateEffects",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "FirstLoad",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_ArcaneObject",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_SelfRef",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_ArcaneEye_C'",
+          "ObjectPath": "/Game/Blueprints/World/BP_ArcaneEye.0"
+        }
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Conv_GuidToString_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_Conv_StringToName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_FirstLoad_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "ConstParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_FirstLoad",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_ArcaneEye_C'",
+          "ObjectPath": "/Game/Blueprints/World/BP_ArcaneEye.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Arcane_Eye",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_ArcaneEye_C'",
+          "ObjectPath": "/Game/Blueprints/World/BP_ArcaneEye.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_AddUnique_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_CheckActiveIDs_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "CallFunc_Conv_ObjectToSoftObjectReference_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "PropertyFlags": "UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_C'",
+          "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.0"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateGuid",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_ArcaneObject_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.14"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_ArcaneObject_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.12"
+      },
+      "VariableGuid": "EE0C0745-43CE6651-40239CBB-861EE536",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_ArcaneObject_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.13"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_ArcaneObject_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.13"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_ArcaneObject_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.13"
+      }
+    }
+  }
+]

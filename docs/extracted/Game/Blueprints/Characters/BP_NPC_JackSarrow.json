@@ -1,0 +1,568 @@
+[
+  {
+    "Type": "BillboardComponent",
+    "Name": "Billboard_0_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BillboardComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_JackSarrow_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.1"
+    },
+    "Properties": {
+      "Sprite": {
+        "ObjectName": "Texture2D'T_IconFight'",
+        "ObjectPath": "/Game/Art/UI/T_IconFight.0"
+      },
+      "RelativeLocation": {
+        "X": 1E-06,
+        "Y": 0.0,
+        "Z": 300.0
+      },
+      "RelativeScale3D": {
+        "X": 15.0,
+        "Y": 15.0,
+        "Z": 15.0
+      },
+      "bHiddenInGame": false
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_NPC_JackSarrow_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprints/Characters/BP_NPC_JackSarrow",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_Battle_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle.2"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_NPC_JackSarrow_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.13"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_NPC_JackSarrow_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.8"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_NPC_JackSarrow_C:ExecuteUbergraph_BP_NPC_JackSarrow'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.5"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_NPC_JackSarrow_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.6"
+      },
+      {
+        "ObjectName": "Function'BP_NPC_JackSarrow_C:ToggleVisibility'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.7"
+      },
+      {
+        "ObjectName": "Function'BP_NPC_JackSarrow_C:ExecuteUbergraph_BP_NPC_JackSarrow'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.5"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Billboard_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'BillboardComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "JackSarrowBefore",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | ExposeOnSpawn"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "JackSarrowAfter",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | ExposeOnSpawn"
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "ActorsToHide",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Inner": {
+          "Type": "SoftObjectProperty",
+          "Name": "ActorsToHide",
+          "Flags": "RF_Public",
+          "ElementSize": 48,
+          "PropertyClass": {
+            "ObjectName": "Class'Actor'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_NPC_JackSarrow": {
+        "ObjectName": "Function'BP_NPC_JackSarrow_C:ExecuteUbergraph_BP_NPC_JackSarrow'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.5"
+      },
+      "ToggleVisibility": {
+        "ObjectName": "Function'BP_NPC_JackSarrow_C:ToggleVisibility'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.7"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_NPC_JackSarrow_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.6"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_NPC_JackSarrow_C'Default__BP_NPC_JackSarrow_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_NPC_JackSarrow_C",
+    "Name": "Default__BP_NPC_JackSarrow_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Characters/BP_NPC_JackSarrow.BP_NPC_JackSarrow_C'",
+    "Package": "/Game/Blueprints/Characters/BP_NPC_JackSarrow",
+    "Template": {
+      "ObjectName": "BP_NPC_Battle_C'Default__BP_NPC_Battle_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle.3"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_NPC_JackSarrow_C:CharacterMesh0'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.14"
+      },
+      "CharacterMovement": {
+        "ObjectName": "CharacterMovementComponent'Default__BP_NPC_JackSarrow_C:CharMoveComp'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.4"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "CapsuleComponent'Default__BP_NPC_JackSarrow_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.3"
+      },
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent'Default__BP_NPC_JackSarrow_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.3"
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Outer": {
+      "ObjectName": "BP_NPC_JackSarrow_C'Default__BP_NPC_JackSarrow_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.2"
+    },
+    "Template": {
+      "ObjectName": "CapsuleComponent'Default__BP_NPC_Battle_C:CollisionCylinder'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle.4"
+    }
+  },
+  {
+    "Type": "CharacterMovementComponent",
+    "Name": "CharMoveComp",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CharacterMovementComponent'",
+    "Outer": {
+      "ObjectName": "BP_NPC_JackSarrow_C'Default__BP_NPC_JackSarrow_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.2"
+    },
+    "Template": {
+      "ObjectName": "CharacterMovementComponent'Default__BP_NPC_Battle_C:CharMoveComp'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle.5"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_NPC_JackSarrow",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_JackSarrow_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_bNewHidden",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_NameName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_CheckEvent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_CheckEvent_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsActor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_JackSarrow_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.1"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_NPC_Battle_C:ReceiveBeginPlay'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle.19"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ToggleVisibility",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_JackSarrow_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bNewHidden",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_JackSarrow_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.1"
+    },
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'PaperFlipbookComponent'",
+            "ObjectPath": "/Script/Paper2D"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "PaperFlipbookComponent'BP_NPC_JackSarrow_C:PaperFlipbook_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.9"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_NPC_C'",
+              "ObjectPath": "/Game/Blueprints/Characters/BP_NPC.0"
+            },
+            "SCSVariableName": "PaperFlipbook",
+            "AssociatedGuid": "A54DD733-4BE95C88-A1E5FBA5-8EACA964"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PaperFlipbookComponent",
+    "Name": "PaperFlipbook_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'PaperFlipbookComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_JackSarrow_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.1"
+    },
+    "Template": {
+      "ObjectName": "PaperFlipbookComponent'BP_NPC_Battle_C:PaperFlipbook_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle.27"
+    },
+    "Properties": {
+      "SourceFlipbook": {
+        "ObjectName": "PaperFlipbook'FB_SackParrow_Idle'",
+        "ObjectPath": "/Game/Art/Sprites/NPCs/Zanel/SackParrow/FB_SackParrow_Idle.0"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_JackSarrow_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_NPC_JackSarrow_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.13"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_NPC_JackSarrow_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.10"
+      },
+      "VariableGuid": "988929EF-470C54E1-4E8354B4-54F5EE9F",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_NPC_JackSarrow_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.13"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BillboardComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BillboardComponent'BP_NPC_JackSarrow_C:Billboard_0_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.0"
+      },
+      "ParentComponentOrVariableName": "CharacterMesh0",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "B3D659D5-41D843A8-F7008085-E229EE8A",
+      "InternalVariableName": "Billboard_0"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_JackSarrow_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.1"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_NPC_JackSarrow_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.12"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_NPC_JackSarrow_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.12"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_NPC_JackSarrow_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.11"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "CharacterMesh0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_NPC_JackSarrow_C'Default__BP_NPC_JackSarrow_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.2"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'Default__BP_NPC_Battle_C:CharacterMesh0'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle.33"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BP_NPC_JackSarrow_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_JackSarrow.3"
+      }
+    }
+  }
+]

@@ -1,0 +1,241 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Spring_Target_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprints/World/BP_Spring_Target",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Spring_Target_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Spring_Target.7"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Sphere",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SphereComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Decal",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DecalComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Spring_Target_C'Default__BP_Spring_Target_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Spring_Target.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_Spring_Target_C",
+    "Name": "Default__BP_Spring_Target_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/World/BP_Spring_Target.BP_Spring_Target_C'",
+    "Package": "/Game/Blueprints/World/BP_Spring_Target"
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "Decal_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'DecalComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Spring_Target_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Spring_Target.0"
+    },
+    "Properties": {
+      "DecalMaterial": {
+        "ObjectName": "MaterialInstanceConstant'DecalPlaceholder'",
+        "ObjectPath": "/Fab/Placeholders/DecalPlaceholder.0"
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.7,
+        "Y": 0.7,
+        "Z": 0.7
+      },
+      "bHiddenInGame": true
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Spring_Target_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Spring_Target.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Spring_Target_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Spring_Target.7"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Spring_Target_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Spring_Target.3"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Spring_Target_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Spring_Target.5"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Spring_Target_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Spring_Target.6"
+        }
+      ],
+      "VariableGuid": "ED72BFC0-469E1ECC-A6636FA3-BA850EAE",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Spring_Target_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Spring_Target.7"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DecalComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DecalComponent'BP_Spring_Target_C:Decal_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Spring_Target.2"
+      },
+      "VariableGuid": "B1A675C6-41F68EFF-23974899-4EB6B0C7",
+      "InternalVariableName": "Decal"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Spring_Target_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Spring_Target.7"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SphereComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SphereComponent'BP_Spring_Target_C:Sphere_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Spring_Target.8"
+      },
+      "VariableGuid": "B723EACF-46E81E0A-E692B588-5FEB8C58",
+      "InternalVariableName": "Sphere"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Spring_Target_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Spring_Target.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Spring_Target_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Spring_Target.4"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Spring_Target_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Spring_Target.4"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Spring_Target_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Spring_Target.5"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Spring_Target_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Spring_Target.6"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Spring_Target_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprints/World/BP_Spring_Target.4"
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "Sphere_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SphereComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Spring_Target_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_Spring_Target.0"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 32.0
+      }
+    }
+  }
+]

@@ -94,7 +94,8 @@ static readonly (string Key, string Asset)[] GENERAL_ICON_DEFINITIONS = new[]
     ("Fight", "T_IconFight"),
     ("Dungeon", "T_DungeonDoor"),
     ("Inn", "T_Icon_Inn"),
-    ("Ferry", "T_Map_PirateIsland")
+    ("Ferry", "T_Map_PirateIsland"),
+    ("Dialogue", "T_Icon_Quest_02")
 };
 
 /// <summary>
@@ -103,7 +104,8 @@ static readonly (string Key, string Asset)[] GENERAL_ICON_DEFINITIONS = new[]
 const string WORLD_MAP_ASSET_NAME = "Map";
 
 /// <summary>
-/// Set of overworld POI classes to extract from World Partition cells and persistent level.
+/// Set of overworld POI classes (and base classes whose subclasses are matched via SuperStruct)
+/// to extract from World Partition cells and persistent level.
 /// </summary>
 static readonly HashSet<string> WORLD_POI_CLASSES = new(StringComparer.OrdinalIgnoreCase)
 {
@@ -111,22 +113,22 @@ static readonly HashSet<string> WORLD_POI_CLASSES = new(StringComparer.OrdinalIg
     "BP_WorldChest_C",
     "BP_Recipe_C",
     "BP_Interactable_ExpObelisk_C",
-    "BP_NPC_StaticDialogue_Shop_C",
-    "BP_NPC_StaticDialogue_FetchShowQuest_C",
     "BP_DungeonDoor_C",
     "BP_DungeonDoor_Exit_C",
     "BP_DungeonManager_C",
     "BP_ColisseumDoor_C",
     "BP_Coliseum_C",
-    "BP_Coliseum_Child_C",
     "BP_ZoneDiscoveryVolume_C",
     "BP_AlchemistTower_Interact_C",
-    "BP_NPC_StaticDialogue_Inn_C",
-    "BP_NPC_StaticDialogue_Navigator_Island_C",
-    "BP_NPC_StaticDialogue_Navigator_Baq_C",
+    "BP_NPC_StaticDialogue_C",
     "BP_NPC_Battle_C",
-    "BP_NPC_Battle_FKingdom_C",
-    "BP_NPC_Battle_Knight_C"
+    "BP_Cinematic_C",
+    "BP_ArcaneEye_C",
+    "BP_ArcaneObject_C",
+    "BP_ArcaneTrigger_C",
+    "BP_ArcaneCube_C",
+    "BP_Spring_C",
+    "BP_Spring_Target_C"
 };
 
 // ============================================================================
@@ -372,7 +374,7 @@ async Task<(
     HashSet<string> RoomTextures,
     SortedDictionary<string, string> DecoratorIcons,
     HashSet<string> DecoratorTextures)>
-ExtractDataTablesAndTypesAsync(DefaultFileProvider provider, Dictionary<string, List<string>> vfsByName, string outputDir)
+ExtractDataTablesAndTypesAsync(DefaultFileProvider provider, Dictionary<string, List<string>> vfsByName, IReadOnlyCollection<string> poiClasses, string outputDir)
 {
     var seenPackages = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
     var pendingQueue = new Queue<string>();
@@ -399,8 +401,8 @@ ExtractDataTablesAndTypesAsync(DefaultFileProvider provider, Dictionary<string, 
     var enumsMap = new SortedDictionary<string, string>(StringComparer.Ordinal);
     var blueprintsMap = new SortedDictionary<string, string>(StringComparer.Ordinal);
 
-    Console.WriteLine($"[Discovery] Enqueuing {WORLD_POI_CLASSES.Count} world POI Blueprint class(es)...");
-    foreach (var poiClass in WORLD_POI_CLASSES)
+    Console.WriteLine($"[Discovery] Enqueuing {poiClasses.Count} world POI Blueprint class(es)...");
+    foreach (var poiClass in poiClasses)
     {
         var baseName = poiClass.EndsWith("_C", StringComparison.OrdinalIgnoreCase)
             ? poiClass.Substring(0, poiClass.Length - 2)
@@ -639,10 +641,43 @@ bool TryGetActorTransform(UObject exp, out FVector loc, out FVector? scale, out 
     return true;
 }
 
-async Task<string> ExtractWorldPoisAsync(DefaultFileProvider provider, string outputDir)
+bool IsWorldPoiClass(UObject exp, Dictionary<string, bool> classCache)
+{
+    if (classCache.TryGetValue(exp.ExportType, out bool cached))
+        return cached;
+
+    if (WORLD_POI_CLASSES.Contains(exp.ExportType))
+    {
+        classCache[exp.ExportType] = true;
+        return true;
+    }
+
+    bool matched = false;
+    var cls = exp.Template?.Load()?.Class?.Load() as UStruct;
+    while (cls != null)
+    {
+        if (WORLD_POI_CLASSES.Contains(cls.Name))
+        {
+            matched = true;
+            break;
+        }
+        cls = cls.SuperStruct != null && cls.SuperStruct.TryLoad(out var sup) ? sup as UStruct : null;
+    }
+
+    classCache[exp.ExportType] = matched;
+    return matched;
+}
+
+bool IsDebugChildActor(UObject exp)
+{
+    return exp.TryGetValue(out FPackageIndex parentComp, "ParentComponent") &&
+           parentComp.ResolvedObject?.Outer?.Name.Text.StartsWith("BP_Debug_C", StringComparison.OrdinalIgnoreCase) == true;
+}
+
+async Task<(string Path, HashSet<string> Classes)> ExtractWorldPoisAsync(DefaultFileProvider provider, string outputDir)
 {
     Console.WriteLine();
-    Console.WriteLine("==> [Phase 5/5] Extracting World POIs...");
+    Console.WriteLine("==> [Phase 1/5] Extracting World POIs...");
 
     var cells = provider.Files.Values
         .Where(f => f.Path.StartsWith("MonsterAlchemy/Content/Levels/MainLevel", StringComparison.OrdinalIgnoreCase) && f.Path.EndsWith(".umap", StringComparison.OrdinalIgnoreCase))
@@ -651,6 +686,8 @@ async Task<string> ExtractWorldPoisAsync(DefaultFileProvider provider, string ou
     Console.WriteLine($"  Scanning {cells.Count} level file(s) (persistent level + World Partition cells)...");
 
     var pois = new List<JObject>();
+    var classCache = new Dictionary<string, bool>(StringComparer.OrdinalIgnoreCase);
+    var discoveredClasses = new HashSet<string>(WORLD_POI_CLASSES, StringComparer.OrdinalIgnoreCase);
 
     foreach (var cell in cells)
     {
@@ -661,39 +698,40 @@ async Task<string> ExtractWorldPoisAsync(DefaultFileProvider provider, string ou
 
         foreach (var exp in pkg.GetExports())
         {
-            if (WORLD_POI_CLASSES.Contains(exp.ExportType))
+            if (IsWorldPoiClass(exp, classCache))
             {
+                if (IsDebugChildActor(exp) || !TryGetActorTransform(exp, out var loc, out var scale, out var rot))
+                    continue;
+
+                discoveredClasses.Add(exp.ExportType);
+
                 var obj = JObject.FromObject(exp);
                 obj["Cell"] = cellName;
-
-                if (TryGetActorTransform(exp, out var loc, out var scale, out var rot))
+                obj["Location"] = new JObject
                 {
-                    obj["Location"] = new JObject
+                    ["X"] = loc.X,
+                    ["Y"] = loc.Y,
+                    ["Z"] = loc.Z
+                };
+
+                if (scale != null)
+                {
+                    obj["Scale"] = new JObject
                     {
-                        ["X"] = loc.X,
-                        ["Y"] = loc.Y,
-                        ["Z"] = loc.Z
+                        ["X"] = scale.Value.X,
+                        ["Y"] = scale.Value.Y,
+                        ["Z"] = scale.Value.Z
                     };
+                }
 
-                    if (scale != null)
+                if (rot != null)
+                {
+                    obj["Rotation"] = new JObject
                     {
-                        obj["Scale"] = new JObject
-                        {
-                            ["X"] = scale.Value.X,
-                            ["Y"] = scale.Value.Y,
-                            ["Z"] = scale.Value.Z
-                        };
-                    }
-
-                    if (rot != null)
-                    {
-                        obj["Rotation"] = new JObject
-                        {
-                            ["Pitch"] = rot.Value.Pitch,
-                            ["Yaw"] = rot.Value.Yaw,
-                            ["Roll"] = rot.Value.Roll
-                        };
-                    }
+                        ["Pitch"] = rot.Value.Pitch,
+                        ["Yaw"] = rot.Value.Yaw,
+                        ["Roll"] = rot.Value.Roll
+                    };
                 }
 
                 pois.Add(obj);
@@ -761,8 +799,9 @@ async Task<string> ExtractWorldPoisAsync(DefaultFileProvider provider, string ou
     var outFile = Path.Combine(outputDir, "Game", "World", "MainLevel_Pois.json");
     await SaveJsonAsync(outFile, sorted);
     Console.WriteLine($"  [World] Generated {outFile}");
+    Console.WriteLine();
 
-    return "/Game/World/MainLevel_Pois.json";
+    return ("/Game/World/MainLevel_Pois.json", discoveredClasses);
 }
 
 // ============================================================================
@@ -789,11 +828,11 @@ async Task<int> RunExtractAsync(Options opts)
     {
         var (provider, vfsByName) = InitializeProvider(opts);
 
-        var data = await ExtractDataTablesAndTypesAsync(provider, vfsByName, outputDir);
+        var (worldPoisPath, discoveredPoiClasses) = await ExtractWorldPoisAsync(provider, outputDir);
+        var data = await ExtractDataTablesAndTypesAsync(provider, vfsByName, discoveredPoiClasses, outputDir);
         var icons = await ExtractUiIconsAsync(provider, vfsByName, data.RoomIcons, data.RoomTextures, data.DecoratorIcons, data.DecoratorTextures, outputDir);
         var monsters = await ExtractMonsterVisualsAsync(provider, vfsByName, data.MonsterIds, outputDir);
         var resourceIcons = await ExtractResourceVisualsAsync(provider, vfsByName, data.ResourceIds, outputDir);
-        var worldPoisPath = await ExtractWorldPoisAsync(provider, outputDir);
 
         var manifest = new
         {

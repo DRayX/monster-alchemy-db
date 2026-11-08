@@ -1,0 +1,219 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_NPC_StaticDialogue_Akaw_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Akaw",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue.1"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_NPC_StaticDialogue_Akaw_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Akaw.8"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_NPC_StaticDialogue_Akaw_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Akaw.4"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_NPC_StaticDialogue_Akaw_C'Default__BP_NPC_StaticDialogue_Akaw_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Akaw.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_NPC_StaticDialogue_Akaw_C",
+    "Name": "Default__BP_NPC_StaticDialogue_Akaw_C",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Akaw.BP_NPC_StaticDialogue_Akaw_C'",
+    "Package": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Akaw",
+    "Template": {
+      "ObjectName": "BP_NPC_StaticDialogue_C'Default__BP_NPC_StaticDialogue_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue.2"
+    },
+    "Properties": {
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_NPC_StaticDialogue_Akaw_C:CharacterMesh0'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Akaw.9"
+      },
+      "CharacterMovement": {
+        "ObjectName": "CharacterMovementComponent'Default__BP_NPC_StaticDialogue_Akaw_C:CharMoveComp'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Akaw.3"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "CapsuleComponent'Default__BP_NPC_StaticDialogue_Akaw_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Akaw.2"
+      },
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent'Default__BP_NPC_StaticDialogue_Akaw_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Akaw.2"
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Outer": {
+      "ObjectName": "BP_NPC_StaticDialogue_Akaw_C'Default__BP_NPC_StaticDialogue_Akaw_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Akaw.1"
+    },
+    "Template": {
+      "ObjectName": "CapsuleComponent'Default__BP_NPC_StaticDialogue_C:CollisionCylinder'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue.3"
+    }
+  },
+  {
+    "Type": "CharacterMovementComponent",
+    "Name": "CharMoveComp",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CharacterMovementComponent'",
+    "Outer": {
+      "ObjectName": "BP_NPC_StaticDialogue_Akaw_C'Default__BP_NPC_StaticDialogue_Akaw_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Akaw.1"
+    },
+    "Template": {
+      "ObjectName": "CharacterMovementComponent'Default__BP_NPC_StaticDialogue_C:CharMoveComp'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue.4"
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_Akaw_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Akaw.0"
+    },
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'PaperFlipbookComponent'",
+            "ObjectPath": "/Script/Paper2D"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "PaperFlipbookComponent'BP_NPC_StaticDialogue_Akaw_C:PaperFlipbook_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Akaw.5"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_NPC_C'",
+              "ObjectPath": "/Game/Blueprints/Characters/BP_NPC.0"
+            },
+            "SCSVariableName": "PaperFlipbook",
+            "AssociatedGuid": "A54DD733-4BE95C88-A1E5FBA5-8EACA964"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PaperFlipbookComponent",
+    "Name": "PaperFlipbook_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'PaperFlipbookComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_Akaw_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Akaw.0"
+    },
+    "Template": {
+      "ObjectName": "PaperFlipbookComponent'BP_NPC_StaticDialogue_C:PaperFlipbook_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue.20"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 1.4034266E-06,
+        "Y": -4.5474735E-13,
+        "Z": -100.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_Akaw_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Akaw.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_NPC_StaticDialogue_Akaw_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Akaw.8"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_NPC_StaticDialogue_Akaw_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Akaw.6"
+      },
+      "VariableGuid": "C2D030F8-4B5F789A-1A9D1589-17CC38AC",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_Akaw_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Akaw.0"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_NPC_StaticDialogue_Akaw_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Akaw.7"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "CharacterMesh0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_NPC_StaticDialogue_Akaw_C'Default__BP_NPC_StaticDialogue_Akaw_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Akaw.1"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'Default__BP_NPC_StaticDialogue_C:CharacterMesh0'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue.25"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BP_NPC_StaticDialogue_Akaw_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Akaw.2"
+      }
+    }
+  }
+]

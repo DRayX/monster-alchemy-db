@@ -1,0 +1,513 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_NPC_StaticDialogue_ColisseumBoss_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue.1"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_NPC_StaticDialogue_ColisseumBoss_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.12"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_NPC_StaticDialogue_ColisseumBoss_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.8"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_ColisseumBoss_C:ExecuteUbergraph_BP_NPC_StaticDialogue_ColisseumBoss'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.5"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_ColisseumBoss_C:CustomEvent'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.4"
+      },
+      {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_ColisseumBoss_C:YesButtonDispatcher_Event'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.7"
+      },
+      {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_ColisseumBoss_C:Interaction Logic'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.6"
+      },
+      {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_ColisseumBoss_C:ExecuteUbergraph_BP_NPC_StaticDialogue_ColisseumBoss'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.5"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "RefColiseum",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 48,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_NPC_StaticDialogue_ColisseumBoss": {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_ColisseumBoss_C:ExecuteUbergraph_BP_NPC_StaticDialogue_ColisseumBoss'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.5"
+      },
+      "Interaction Logic": {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_ColisseumBoss_C:Interaction Logic'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.6"
+      },
+      "YesButtonDispatcher_Event": {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_ColisseumBoss_C:YesButtonDispatcher_Event'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.7"
+      },
+      "CustomEvent": {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_ColisseumBoss_C:CustomEvent'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.4"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_NPC_StaticDialogue_ColisseumBoss_C'Default__BP_NPC_StaticDialogue_ColisseumBoss_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_NPC_StaticDialogue_ColisseumBoss_C",
+    "Name": "Default__BP_NPC_StaticDialogue_ColisseumBoss_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.BP_NPC_StaticDialogue_ColisseumBoss_C'",
+    "Package": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss",
+    "Template": {
+      "ObjectName": "BP_NPC_StaticDialogue_C'Default__BP_NPC_StaticDialogue_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue.2"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_NPC_StaticDialogue_ColisseumBoss_C:CharacterMesh0'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.13"
+      },
+      "CharacterMovement": {
+        "ObjectName": "CharacterMovementComponent'Default__BP_NPC_StaticDialogue_ColisseumBoss_C:CharMoveComp'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.3"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "CapsuleComponent'Default__BP_NPC_StaticDialogue_ColisseumBoss_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.2"
+      },
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent'Default__BP_NPC_StaticDialogue_ColisseumBoss_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.2"
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Outer": {
+      "ObjectName": "BP_NPC_StaticDialogue_ColisseumBoss_C'Default__BP_NPC_StaticDialogue_ColisseumBoss_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.1"
+    },
+    "Template": {
+      "ObjectName": "CapsuleComponent'Default__BP_NPC_StaticDialogue_C:CollisionCylinder'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue.3"
+    }
+  },
+  {
+    "Type": "CharacterMovementComponent",
+    "Name": "CharMoveComp",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CharacterMovementComponent'",
+    "Outer": {
+      "ObjectName": "BP_NPC_StaticDialogue_ColisseumBoss_C'Default__BP_NPC_StaticDialogue_ColisseumBoss_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.1"
+    },
+    "Template": {
+      "ObjectName": "CharacterMovementComponent'Default__BP_NPC_StaticDialogue_C:CharMoveComp'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue.4"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "CustomEvent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_ColisseumBoss_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_NPC_StaticDialogue_ColisseumBoss",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_ColisseumBoss_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'W_DecisionPopup_C:YesButtonDispatcher__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_DecisionPopup.13"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_Dialogue_C'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_Dialogue.47"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_Dialogue_C'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_Dialogue.47"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_CheckEvent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Coliseum",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_DecisionPopup_C'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_DecisionPopup.48"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Coliseum_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Coliseum_C'",
+          "ObjectPath": "/Game/Blueprints/World/BP_Coliseum.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Temp_text_Variable_2",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_CheckEvent_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_Dialogue_C'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_Dialogue.47"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'W_Dialogue_C:OnDialogueEnd__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_Dialogue.9"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "Interaction Logic",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_ColisseumBoss_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_NPC_StaticDialogue_C:Interaction Logic'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue.10"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "YesButtonDispatcher_Event",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_ColisseumBoss_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_ColisseumBoss_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.0"
+    },
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'PaperFlipbookComponent'",
+            "ObjectPath": "/Script/Paper2D"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "PaperFlipbookComponent'BP_NPC_StaticDialogue_ColisseumBoss_C:PaperFlipbook_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.9"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_NPC_C'",
+              "ObjectPath": "/Game/Blueprints/Characters/BP_NPC.0"
+            },
+            "SCSVariableName": "PaperFlipbook",
+            "AssociatedGuid": "A54DD733-4BE95C88-A1E5FBA5-8EACA964"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PaperFlipbookComponent",
+    "Name": "PaperFlipbook_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'PaperFlipbookComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_ColisseumBoss_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.0"
+    },
+    "Template": {
+      "ObjectName": "PaperFlipbookComponent'BP_NPC_StaticDialogue_C:PaperFlipbook_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue.20"
+    },
+    "Properties": {
+      "SourceFlipbook": {
+        "ObjectName": "PaperFlipbook'FB_Zanel_01_Idle'",
+        "ObjectPath": "/Game/Art/Sprites/NPCs/Zanel/FB_Zanel_01_Idle.0"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_ColisseumBoss_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_NPC_StaticDialogue_ColisseumBoss_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.12"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_NPC_StaticDialogue_ColisseumBoss_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.10"
+      },
+      "VariableGuid": "CD7E8F01-48228D23-31C25F91-799ADB98",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_ColisseumBoss_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.0"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_NPC_StaticDialogue_ColisseumBoss_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.11"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "CharacterMesh0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_NPC_StaticDialogue_ColisseumBoss_C'Default__BP_NPC_StaticDialogue_ColisseumBoss_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.1"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'Default__BP_NPC_StaticDialogue_C:CharacterMesh0'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue.25"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BP_NPC_StaticDialogue_ColisseumBoss_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_ColisseumBoss.2"
+      }
+    }
+  }
+]

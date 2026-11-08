@@ -1,0 +1,1179 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_ArcaneObject_Door_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprints/World/BP_ArcaneObject_Door",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.0"
+    },
+    "Properties": {
+      "Timelines": [
+        {
+          "ObjectName": "TimelineTemplate'BP_ArcaneObject_Door_C:Timeline_Template'",
+          "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.28"
+        },
+        {
+          "ObjectName": "TimelineTemplate'BP_ArcaneObject_Door_C:Timeline_0_Template'",
+          "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.27"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_ArcaneObject_Door_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.24"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_ArcaneObject_Door_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.16"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_ArcaneObject_Door_C:ExecuteUbergraph_BP_ArcaneObject_Door'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.11"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_ArcaneObject_Door_C:Timeline__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.14"
+      },
+      {
+        "ObjectName": "Function'BP_ArcaneObject_Door_C:Timeline__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.15"
+      },
+      {
+        "ObjectName": "Function'BP_ArcaneObject_Door_C:Timeline_0__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.12"
+      },
+      {
+        "ObjectName": "Function'BP_ArcaneObject_Door_C:Timeline_0__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.13"
+      },
+      {
+        "ObjectName": "Function'BP_ArcaneObject_Door_C:ActivateEffects'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.7"
+      },
+      {
+        "ObjectName": "Function'BP_ArcaneObject_Door_C:DesactivateEffects'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.10"
+      },
+      {
+        "ObjectName": "Function'BP_ArcaneObject_Door_C:DeactivateObject'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.9"
+      },
+      {
+        "ObjectName": "Function'BP_ArcaneObject_Door_C:ActivateObject'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.8"
+      },
+      {
+        "ObjectName": "Function'BP_ArcaneObject_Door_C:ExecuteUbergraph_BP_ArcaneObject_Door'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.11"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Capsule1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'CapsuleComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Capsule",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'CapsuleComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_AlchemyTower_MagicDoor",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_ArcaneDoor_Arc",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Camera",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'CameraComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Timeline_0_NewTrack_0_2F3950D542AF99B960D699926A9B9485",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Timeline_0__Direction_2F3950D542AF99B960D699926A9B9485",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Timeline_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Timeline_NewTrack_0_36053E6048A5D8ECF00D019B664023F8",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Timeline__Direction_36053E6048A5D8ECF00D019B664023F8",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Timeline",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CameraInitialLocation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CameraTargetLocation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "InitialLocation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "TargetLocation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Blend Time",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Open",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_ArcaneObject_Door": {
+        "ObjectName": "Function'BP_ArcaneObject_Door_C:ExecuteUbergraph_BP_ArcaneObject_Door'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.11"
+      },
+      "ActivateObject": {
+        "ObjectName": "Function'BP_ArcaneObject_Door_C:ActivateObject'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.8"
+      },
+      "DeactivateObject": {
+        "ObjectName": "Function'BP_ArcaneObject_Door_C:DeactivateObject'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.9"
+      },
+      "DesactivateEffects": {
+        "ObjectName": "Function'BP_ArcaneObject_Door_C:DesactivateEffects'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.10"
+      },
+      "ActivateEffects": {
+        "ObjectName": "Function'BP_ArcaneObject_Door_C:ActivateEffects'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.7"
+      },
+      "Timeline_0__UpdateFunc": {
+        "ObjectName": "Function'BP_ArcaneObject_Door_C:Timeline_0__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.13"
+      },
+      "Timeline_0__FinishedFunc": {
+        "ObjectName": "Function'BP_ArcaneObject_Door_C:Timeline_0__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.12"
+      },
+      "Timeline__UpdateFunc": {
+        "ObjectName": "Function'BP_ArcaneObject_Door_C:Timeline__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.15"
+      },
+      "Timeline__FinishedFunc": {
+        "ObjectName": "Function'BP_ArcaneObject_Door_C:Timeline__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.14"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_ArcaneObject_Door_C'Default__BP_ArcaneObject_Door_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_ArcaneObject_Door_C",
+    "Name": "Default__BP_ArcaneObject_Door_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/World/BP_ArcaneObject_Door.BP_ArcaneObject_Door_C'",
+    "Package": "/Game/Blueprints/World/BP_ArcaneObject_Door",
+    "Template": {
+      "ObjectName": "BP_ArcaneObject_C'Default__BP_ArcaneObject_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.1"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "CameraInitialLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "CameraTargetLocation": {
+        "X": 0.0,
+        "Y": 1650.0,
+        "Z": 1350.0
+      },
+      "TargetLocation": 900.0,
+      "Blend Time": 1.0
+    }
+  },
+  {
+    "Type": "CameraComponent",
+    "Name": "Camera_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CameraComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_Door_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.0"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 1350.0,
+        "Z": 1050.0
+      },
+      "RelativeRotation": {
+        "Pitch": -40.0,
+        "Yaw": -90.0,
+        "Roll": 1.1210182E-13
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "Capsule1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_Door_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.0"
+    },
+    "Properties": {
+      "CapsuleHalfHeight": 209.18077,
+      "CapsuleRadius": 33.733845,
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAllDynamic",
+        "CollisionResponses": {
+          "ResponseArray": []
+        }
+      },
+      "RelativeLocation": {
+        "X": 190.0,
+        "Y": 0.0,
+        "Z": 170.0
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "Capsule_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_Door_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.0"
+    },
+    "Properties": {
+      "CapsuleHalfHeight": 209.18077,
+      "CapsuleRadius": 33.733845,
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAllDynamic",
+        "CollisionResponses": {
+          "ResponseArray": []
+        }
+      },
+      "RelativeLocation": {
+        "X": -200.0,
+        "Y": 0.0,
+        "Z": 170.0
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_Door_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.0"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0_1",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_Door_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.0"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ActivateEffects",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_Door_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_ArcaneObject_C:ActivateEffects'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "FirstLoad",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ActivateObject",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_Door_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_ArcaneObject_C:ActivateObject'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.5"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DeactivateObject",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_Door_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_ArcaneObject_C:DeactivateObject'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.7"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DesactivateEffects",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_Door_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_ArcaneObject_C:DesactivateEffects'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.8"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "FirstLoad",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_ArcaneObject_Door",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_Door_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerController_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PlayerController'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetActorOfClass_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Player_C'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Player.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerController_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PlayerController'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeLocation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsVisible_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_FirstLoad",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_FirstLoad_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "ConstParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "Temp_real_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "Temp_real_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeLocation_SweepHitResult_1",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeLocation_SweepHitResult_2",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_Alpha_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_Alpha_ImplicitCast_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_0__FinishedFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_Door_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_0__UpdateFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_Door_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline__FinishedFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_Door_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline__UpdateFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_Door_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_Door_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_Door_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_ArcaneObject_Door_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.24"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_ArcaneObject_Door_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.17"
+      },
+      "VariableGuid": "B3F7F716-46005A7F-9155B5B0-FB83E9F6",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_ArcaneObject_Door_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.24"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'CameraComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "CameraComponent'BP_ArcaneObject_Door_C:Camera_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.2"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_ArcaneObject_C",
+      "VariableGuid": "C2D8E9A6-4DB9B904-22B47089-5D3FCFDA",
+      "InternalVariableName": "Camera"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_ArcaneObject_Door_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.24"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_ArcaneObject_Door_C:SM_ArcaneDoor_Arc_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.26"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_ArcaneObject_C",
+      "VariableGuid": "E339E624-43106F9F-62B4B083-19F28806",
+      "InternalVariableName": "SM_ArcaneDoor_Arc"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_ArcaneObject_Door_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.24"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_ArcaneObject_Door_C:SM_AlchemyTower_MagicDoor_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.25"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_ArcaneObject_C",
+      "VariableGuid": "8A7F1525-45744537-3453729B-D89A485B",
+      "InternalVariableName": "SM_AlchemyTower_MagicDoor"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_ArcaneObject_Door_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.24"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'CapsuleComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "CapsuleComponent'BP_ArcaneObject_Door_C:Capsule_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.4"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_ArcaneObject_C",
+      "VariableGuid": "5784CFC6-404AE884-58C0B497-39AC157D",
+      "InternalVariableName": "Capsule"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_ArcaneObject_Door_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.24"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'CapsuleComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "CapsuleComponent'BP_ArcaneObject_Door_C:Capsule1_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.3"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_ArcaneObject_C",
+      "VariableGuid": "EC10ADCB-4D0BE314-07EE5CBF-43401502",
+      "InternalVariableName": "Capsule1"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_Door_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_ArcaneObject_Door_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ArcaneObject_Door_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ArcaneObject_Door_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ArcaneObject_Door_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.22"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ArcaneObject_Door_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.23"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_ArcaneObject_Door_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ArcaneObject_Door_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ArcaneObject_Door_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ArcaneObject_Door_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.22"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ArcaneObject_Door_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.23"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_ArcaneObject_Door_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.18"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_AlchemyTower_MagicDoor_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_Door_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_AlchemyTower_MagicDoor'",
+        "ObjectPath": "/Game/Art/Buildings/AlchemyTower/SM_AlchemyTower_MagicDoor.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_MagicDoorV4'",
+          "ObjectPath": "/Game/Art/Buildings/AlchemyTower/MI_MagicDoorV4.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 906.0,
+        "Z": -600.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_ArcaneDoor_Arc_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_Door_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_ArcaneDoor_Arc'",
+        "ObjectPath": "/Game/Art/ArcaneProps/SM_ArcaneDoor_Arc.2"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "Timeline_0_Template",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_Door_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.0"
+    },
+    "Properties": {
+      "TimelineLength": 1.0,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_ArcaneObject_Door_C:CurveFloat_0_1'",
+            "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.6"
+          },
+          "PropertyName": "Timeline_0_NewTrack_0_2F3950D542AF99B960D699926A9B9485",
+          "TrackName": "NewTrack_0",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "2F3950D5-42AF99B9-60D69992-6A9B9485",
+      "VariableName": "Timeline_0",
+      "DirectionPropertyName": "Timeline_0__Direction_2F3950D542AF99B960D699926A9B9485",
+      "UpdateFunctionName": "Timeline_0__UpdateFunc",
+      "FinishedFunctionName": "Timeline_0__FinishedFunc"
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "Timeline_Template",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_Door_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.0"
+    },
+    "Properties": {
+      "TimelineLength": 1.0,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_ArcaneObject_Door_C:CurveFloat_0'",
+            "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject_Door.5"
+          },
+          "PropertyName": "Timeline_NewTrack_0_36053E6048A5D8ECF00D019B664023F8",
+          "TrackName": "NewTrack_0",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "36053E60-48A5D8EC-F00D019B-664023F8",
+      "VariableName": "Timeline",
+      "DirectionPropertyName": "Timeline__Direction_36053E6048A5D8ECF00D019B664023F8",
+      "UpdateFunctionName": "Timeline__UpdateFunc",
+      "FinishedFunctionName": "Timeline__FinishedFunc"
+    }
+  }
+]

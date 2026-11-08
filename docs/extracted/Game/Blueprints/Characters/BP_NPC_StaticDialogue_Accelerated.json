@@ -1,0 +1,245 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_NPC_StaticDialogue_Accelerated_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Accelerated",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue.1"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_NPC_StaticDialogue_Accelerated_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Accelerated.9"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_NPC_StaticDialogue_Accelerated_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Accelerated.6"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_Accelerated_C:ExecuteUbergraph_BP_NPC_StaticDialogue_Accelerated'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Accelerated.4"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_Accelerated_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Accelerated.5"
+      },
+      {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_Accelerated_C:ExecuteUbergraph_BP_NPC_StaticDialogue_Accelerated'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Accelerated.4"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_NPC_StaticDialogue_Accelerated": {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_Accelerated_C:ExecuteUbergraph_BP_NPC_StaticDialogue_Accelerated'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Accelerated.4"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_NPC_StaticDialogue_Accelerated_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Accelerated.5"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_NPC_StaticDialogue_Accelerated_C'Default__BP_NPC_StaticDialogue_Accelerated_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Accelerated.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_NPC_StaticDialogue_Accelerated_C",
+    "Name": "Default__BP_NPC_StaticDialogue_Accelerated_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Accelerated.BP_NPC_StaticDialogue_Accelerated_C'",
+    "Package": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Accelerated",
+    "Template": {
+      "ObjectName": "BP_NPC_StaticDialogue_C'Default__BP_NPC_StaticDialogue_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue.2"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_NPC_StaticDialogue_Accelerated_C:CharacterMesh0'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Accelerated.10"
+      },
+      "CharacterMovement": {
+        "ObjectName": "CharacterMovementComponent'Default__BP_NPC_StaticDialogue_Accelerated_C:CharMoveComp'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Accelerated.3"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "CapsuleComponent'Default__BP_NPC_StaticDialogue_Accelerated_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Accelerated.2"
+      },
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent'Default__BP_NPC_StaticDialogue_Accelerated_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Accelerated.2"
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Outer": {
+      "ObjectName": "BP_NPC_StaticDialogue_Accelerated_C'Default__BP_NPC_StaticDialogue_Accelerated_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Accelerated.1"
+    },
+    "Template": {
+      "ObjectName": "CapsuleComponent'Default__BP_NPC_StaticDialogue_C:CollisionCylinder'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue.3"
+    }
+  },
+  {
+    "Type": "CharacterMovementComponent",
+    "Name": "CharMoveComp",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CharacterMovementComponent'",
+    "Outer": {
+      "ObjectName": "BP_NPC_StaticDialogue_Accelerated_C'Default__BP_NPC_StaticDialogue_Accelerated_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Accelerated.1"
+    },
+    "Template": {
+      "ObjectName": "CharacterMovementComponent'Default__BP_NPC_StaticDialogue_C:CharMoveComp'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue.4"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_NPC_StaticDialogue_Accelerated",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_Accelerated_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Accelerated.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_Accelerated_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Accelerated.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_NPC_C:ReceiveBeginPlay'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC.26"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_Accelerated_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Accelerated.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_Accelerated_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Accelerated.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_NPC_StaticDialogue_Accelerated_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Accelerated.9"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_NPC_StaticDialogue_Accelerated_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Accelerated.7"
+      },
+      "VariableGuid": "757995A0-4E8A4D88-D2E50583-931C8838",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_NPC_StaticDialogue_Accelerated_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Accelerated.0"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_NPC_StaticDialogue_Accelerated_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Accelerated.8"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "CharacterMesh0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BP_NPC_StaticDialogue_Accelerated_C'Default__BP_NPC_StaticDialogue_Accelerated_C'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Accelerated.1"
+    },
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'Default__BP_NPC_StaticDialogue_C:CharacterMesh0'",
+      "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue.25"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BP_NPC_StaticDialogue_Accelerated_C:CollisionCylinder'",
+        "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_StaticDialogue_Accelerated.2"
+      }
+    }
+  }
+]

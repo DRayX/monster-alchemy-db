@@ -1,0 +1,1059 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_ForgottenKingdomDoor_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprints/World/BP_ForgottenKingdomDoor",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ArcaneObject_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.0"
+    },
+    "Properties": {
+      "Timelines": [
+        {
+          "ObjectName": "TimelineTemplate'BP_ForgottenKingdomDoor_C:Timeline_Template'",
+          "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.21"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_ForgottenKingdomDoor_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.19"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_ForgottenKingdomDoor_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.14"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_ForgottenKingdomDoor_C:ExecuteUbergraph_BP_ForgottenKingdomDoor'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.8"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_ForgottenKingdomDoor_C:UserConstructionScript'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.13"
+      },
+      {
+        "ObjectName": "Function'BP_ForgottenKingdomDoor_C:Timeline__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.11"
+      },
+      {
+        "ObjectName": "Function'BP_ForgottenKingdomDoor_C:Timeline__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.12"
+      },
+      {
+        "ObjectName": "Function'BP_ForgottenKingdomDoor_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.10"
+      },
+      {
+        "ObjectName": "Function'BP_ForgottenKingdomDoor_C:ActivateEffects'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.4"
+      },
+      {
+        "ObjectName": "Function'BP_ForgottenKingdomDoor_C:DesactivateEffects'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.7"
+      },
+      {
+        "ObjectName": "Function'BP_ForgottenKingdomDoor_C:DeactivateObject'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.6"
+      },
+      {
+        "ObjectName": "Function'BP_ForgottenKingdomDoor_C:ActivateObject'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.5"
+      },
+      {
+        "ObjectName": "Function'BP_ForgottenKingdomDoor_C:HandleNPCVictory'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.9"
+      },
+      {
+        "ObjectName": "Function'BP_ForgottenKingdomDoor_C:ExecuteUbergraph_BP_ForgottenKingdomDoor'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.8"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_MetalDoor",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Camera",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'CameraComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Timeline_NewTrack_0_5FED981A40158BFB3B7C19A31A65D90F",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Timeline__Direction_5FED981A40158BFB3B7C19A31A65D90F",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Timeline",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CameraInitialLocation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CameraTargetLocation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "InitialLocation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "TargetLocation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Blend Time",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "RequiredNPCS",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | ExposeOnSpawn",
+        "Inner": {
+          "Type": "SoftObjectProperty",
+          "Name": "RequiredNPCS",
+          "Flags": "RF_Public",
+          "ElementSize": 48,
+          "PropertyClass": {
+            "ObjectName": "BlueprintGeneratedClass'BP_NPC_Battle_C'",
+            "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle.2"
+          }
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "ForgottenDoor",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "NPCGuids",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "NPCGuids",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "AllDefeated",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_ForgottenKingdomDoor": {
+        "ObjectName": "Function'BP_ForgottenKingdomDoor_C:ExecuteUbergraph_BP_ForgottenKingdomDoor'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.8"
+      },
+      "HandleNPCVictory": {
+        "ObjectName": "Function'BP_ForgottenKingdomDoor_C:HandleNPCVictory'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.9"
+      },
+      "ActivateObject": {
+        "ObjectName": "Function'BP_ForgottenKingdomDoor_C:ActivateObject'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.5"
+      },
+      "DeactivateObject": {
+        "ObjectName": "Function'BP_ForgottenKingdomDoor_C:DeactivateObject'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.6"
+      },
+      "DesactivateEffects": {
+        "ObjectName": "Function'BP_ForgottenKingdomDoor_C:DesactivateEffects'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.7"
+      },
+      "ActivateEffects": {
+        "ObjectName": "Function'BP_ForgottenKingdomDoor_C:ActivateEffects'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.4"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_ForgottenKingdomDoor_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.10"
+      },
+      "Timeline__UpdateFunc": {
+        "ObjectName": "Function'BP_ForgottenKingdomDoor_C:Timeline__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.12"
+      },
+      "Timeline__FinishedFunc": {
+        "ObjectName": "Function'BP_ForgottenKingdomDoor_C:Timeline__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.11"
+      },
+      "UserConstructionScript": {
+        "ObjectName": "Function'BP_ForgottenKingdomDoor_C:UserConstructionScript'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.13"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_ForgottenKingdomDoor_C'Default__BP_ForgottenKingdomDoor_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_ForgottenKingdomDoor_C",
+    "Name": "Default__BP_ForgottenKingdomDoor_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/World/BP_ForgottenKingdomDoor.BP_ForgottenKingdomDoor_C'",
+    "Package": "/Game/Blueprints/World/BP_ForgottenKingdomDoor",
+    "Template": {
+      "ObjectName": "BP_ArcaneObject_C'Default__BP_ArcaneObject_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.1"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "CameraInitialLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "CameraTargetLocation": {
+        "X": 0.0,
+        "Y": 1650.0,
+        "Z": 1350.0
+      },
+      "TargetLocation": -300.0,
+      "Blend Time": 3.0,
+      "RequiredNPCS": [
+        {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      ],
+      "ForgottenDoor": "ForgottenDoor"
+    }
+  },
+  {
+    "Type": "CameraComponent",
+    "Name": "Camera_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CameraComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenKingdomDoor_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.0"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 6.8096024E-12,
+        "Y": 910.0,
+        "Z": 640.0
+      },
+      "RelativeRotation": {
+        "Pitch": -30.0,
+        "Yaw": -90.0,
+        "Roll": 1.5057611E-13
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenKingdomDoor_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.0"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ActivateEffects",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenKingdomDoor_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_ArcaneObject_C:ActivateEffects'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.4"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "FirstLoad",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ActivateObject",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenKingdomDoor_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_ArcaneObject_C:ActivateObject'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.5"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DeactivateObject",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenKingdomDoor_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_ArcaneObject_C:DeactivateObject'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.7"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DesactivateEffects",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenKingdomDoor_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_ArcaneObject_C:DesactivateEffects'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.8"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "FirstLoad",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_ForgottenKingdomDoor",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenKingdomDoor_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_FirstLoad_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "ConstParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_FirstLoad",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerController_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PlayerController'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetActorOfClass_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Player_C'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Player.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerController_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PlayerController'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeLocation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_SelfRef",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_NPC_Battle_C'",
+          "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle.2"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_CheckEvent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Conv_NameToString_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_CheckEvent_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeLocation_SweepHitResult_1",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_Alpha_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "HandleNPCVictory",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenKingdomDoor_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "SelfRef",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_NPC_Battle_C'",
+          "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle.2"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenKingdomDoor_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_ArcaneObject_C:ReceiveBeginPlay'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ArcaneObject.10"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline__FinishedFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenKingdomDoor_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline__UpdateFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenKingdomDoor_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UserConstructionScript",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenKingdomDoor_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:UserConstructionScript'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_NPC_Battle_C'",
+          "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle.2"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_NPC_Battle",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_NPC_Battle_C'",
+          "ObjectPath": "/Game/Blueprints/Characters/BP_NPC_Battle.2"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_AddUnique_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenKingdomDoor_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenKingdomDoor_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_ForgottenKingdomDoor_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.19"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_ForgottenKingdomDoor_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.15"
+      },
+      "VariableGuid": "B3F7F716-46005A7F-9155B5B0-FB83E9F6",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_ForgottenKingdomDoor_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.19"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'CameraComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "CameraComponent'BP_ForgottenKingdomDoor_C:Camera_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.2"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_ArcaneObject_C",
+      "VariableGuid": "C2D8E9A6-4DB9B904-22B47089-5D3FCFDA",
+      "InternalVariableName": "Camera"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_ForgottenKingdomDoor_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.19"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_ForgottenKingdomDoor_C:SM_MetalDoor_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.20"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_ArcaneObject_C",
+      "VariableGuid": "8A7F1525-45744537-3453729B-D89A485B",
+      "InternalVariableName": "SM_MetalDoor"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenKingdomDoor_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_ForgottenKingdomDoor_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ForgottenKingdomDoor_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.18"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_ForgottenKingdomDoor_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ForgottenKingdomDoor_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.18"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_ForgottenKingdomDoor_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.16"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_MetalDoor_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenKingdomDoor_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Colisseum_Door'",
+        "ObjectPath": "/Game/Art/Buildings/Colisseum/SM_Colisseum_Door.2"
+      },
+      "OverrideMaterials": [
+        null
+      ],
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "Timeline_Template",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_ForgottenKingdomDoor_C'",
+      "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.0"
+    },
+    "Properties": {
+      "TimelineLength": 1.0,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_ForgottenKingdomDoor_C:CurveFloat_0'",
+            "ObjectPath": "/Game/Blueprints/World/BP_ForgottenKingdomDoor.3"
+          },
+          "PropertyName": "Timeline_NewTrack_0_5FED981A40158BFB3B7C19A31A65D90F",
+          "TrackName": "NewTrack_0",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "5FED981A-40158BFB-3B7C19A3-1A65D90F",
+      "VariableName": "Timeline",
+      "DirectionPropertyName": "Timeline__Direction_5FED981A40158BFB3B7C19A31A65D90F",
+      "UpdateFunctionName": "Timeline__UpdateFunc",
+      "FinishedFunctionName": "Timeline__FinishedFunc"
+    }
+  }
+]

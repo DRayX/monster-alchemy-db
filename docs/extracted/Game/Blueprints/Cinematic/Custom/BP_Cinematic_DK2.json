@@ -1,0 +1,716 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Cinematic_DK2_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Cinematic_Trigger_C'",
+      "ObjectPath": "/Game/Blueprints/Cinematic/BP_Cinematic_Trigger.0"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Cinematic_DK2_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2.12"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Cinematic_DK2_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2.8"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Cinematic_DK2_C:ExecuteUbergraph_BP_Cinematic_DK2'",
+        "ObjectPath": "/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2.3"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Cinematic_DK2_C:CinematicLogic'",
+        "ObjectPath": "/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2.2"
+      },
+      {
+        "ObjectName": "Function'BP_Cinematic_DK2_C:OnMoveFinished_Event'",
+        "ObjectPath": "/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2.5"
+      },
+      {
+        "ObjectName": "Function'BP_Cinematic_DK2_C:OnDialogueEnd_Event'",
+        "ObjectPath": "/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2.4"
+      },
+      {
+        "ObjectName": "Function'BP_Cinematic_DK2_C:OnMoveFinished_Event_0'",
+        "ObjectPath": "/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2.6"
+      },
+      {
+        "ObjectName": "Function'BP_Cinematic_DK2_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2.7"
+      },
+      {
+        "ObjectName": "Function'BP_Cinematic_DK2_C:ExecuteUbergraph_BP_Cinematic_DK2'",
+        "ObjectPath": "/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2.3"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "NpcRef",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 48,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_NPC_C'",
+          "ObjectPath": "/Game/Blueprints/Characters/BP_NPC.0"
+        }
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "Target",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 48,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "In Text",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "Target_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 48,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Quest",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "Target_Player",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 48,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Cinematic_DK2": {
+        "ObjectName": "Function'BP_Cinematic_DK2_C:ExecuteUbergraph_BP_Cinematic_DK2'",
+        "ObjectPath": "/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2.3"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_Cinematic_DK2_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2.7"
+      },
+      "OnMoveFinished_Event_0": {
+        "ObjectName": "Function'BP_Cinematic_DK2_C:OnMoveFinished_Event_0'",
+        "ObjectPath": "/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2.6"
+      },
+      "OnDialogueEnd_Event": {
+        "ObjectName": "Function'BP_Cinematic_DK2_C:OnDialogueEnd_Event'",
+        "ObjectPath": "/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2.4"
+      },
+      "OnMoveFinished_Event": {
+        "ObjectName": "Function'BP_Cinematic_DK2_C:OnMoveFinished_Event'",
+        "ObjectPath": "/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2.5"
+      },
+      "CinematicLogic": {
+        "ObjectName": "Function'BP_Cinematic_DK2_C:CinematicLogic'",
+        "ObjectPath": "/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2.2"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Cinematic_DK2_C'Default__BP_Cinematic_DK2_C'",
+      "ObjectPath": "/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_Cinematic_DK2_C",
+    "Name": "Default__BP_Cinematic_DK2_C",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2.BP_Cinematic_DK2_C'",
+    "Package": "/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2",
+    "Template": {
+      "ObjectName": "BP_Cinematic_Trigger_C'Default__BP_Cinematic_Trigger_C'",
+      "ObjectPath": "/Game/Blueprints/Cinematic/BP_Cinematic_Trigger.2"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "In Text": {
+        "TableId": "/Game/StringTables/NPCs/Full/ST_NPC_DASHTPLATEAU.ST_NPC_DASHTPLATEAU",
+        "Key": "NPC_RIVAL_CINE_1",
+        "SourceString": "HIIII!\nIT'S YOU AGAIN, HAHA!\nMe trained LOTS!\nMe show you, yes?!",
+        "LocalizedString": "HIIII!\nIT'S YOU AGAIN, HAHA!\nMe trained LOTS!\nMe show you, yes?!"
+      },
+      "BlockPlayer": true,
+      "RequieredQuests": [
+        "TutSum2"
+      ]
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "CinematicLogic",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Cinematic_DK2_C'",
+      "ObjectPath": "/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_Cinematic_C:CinematicLogic'",
+      "ObjectPath": "/Game/Blueprints/Cinematic/BP_Cinematic.4"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Cinematic_DK2",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Cinematic_DK2_C'",
+      "ObjectPath": "/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'BP_NPC_C:OnMoveFinished__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Characters/BP_NPC.20"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_NPC",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_NPC_C'",
+          "ObjectPath": "/Game/Blueprints/Characters/BP_NPC.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsActor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_NPC_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_NPC_C'",
+          "ObjectPath": "/Game/Blueprints/Characters/BP_NPC.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsActor_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_NPC_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_NPC_C'",
+          "ObjectPath": "/Game/Blueprints/Characters/BP_NPC.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_4",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_CheckEvent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_NPC_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_NPC_C'",
+          "ObjectPath": "/Game/Blueprints/Characters/BP_NPC.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_5",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue_6",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetBP_Player_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Player_C'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Player.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsActor_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_6",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_MovePlayerTo_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_MovePlayerProxy_C'",
+          "ObjectPath": "/Game/Blueprints/Cinematic/BP_MovePlayerProxy.0"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'BP_NPC_C:OnMoveFinished__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Characters/BP_NPC.20"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'W_Dialogue_C:OnDialogueEnd__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_Dialogue.9"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_Dialogue_C'",
+          "ObjectPath": "/Game/Blueprints/Widgets/W_Dialogue.47"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnDialogueEnd_Event",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Cinematic_DK2_C'",
+      "ObjectPath": "/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnMoveFinished_Event",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Cinematic_DK2_C'",
+      "ObjectPath": "/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnMoveFinished_Event_0",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Cinematic_DK2_C'",
+      "ObjectPath": "/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Cinematic_DK2_C'",
+      "ObjectPath": "/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Cinematic_DK2_C'",
+      "ObjectPath": "/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2.0"
+    },
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'SceneComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SceneComponent'BP_Cinematic_DK2_C:ICH-DefaultSceneRoot_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2.10"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_Cinematic_C'",
+              "ObjectPath": "/Game/Blueprints/Cinematic/BP_Cinematic.0"
+            },
+            "SCSVariableName": "DefaultSceneRoot",
+            "AssociatedGuid": "61621ECF-44E59E99-E52E0988-ECFF86F4"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Cinematic_DK2_C'",
+      "ObjectPath": "/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "ICH-DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Cinematic_DK2_C'",
+      "ObjectPath": "/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_Cinematic_DK2_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2.12"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Cinematic_DK2_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2.9"
+      },
+      "VariableGuid": "AE3E5FD3-45C12981-734BD0AC-3B4F14D0",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Cinematic_DK2_C'",
+      "ObjectPath": "/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2.0"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Cinematic_DK2_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprints/Cinematic/Custom/BP_Cinematic_DK2.11"
+      }
+    }
+  }
+]
