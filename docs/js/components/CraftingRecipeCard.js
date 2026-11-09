@@ -2,28 +2,32 @@
 import { defineComponent } from 'vue';
 import { getIcon } from '../services/assets.js';
 import { ItemChip } from './ItemChip.js';
+import { RecipeScrollBadge } from './RecipeScrollBadge.js';
 
 const WORK_ICON = getIcon('Work');
 
 const TEMPLATE = /* html */ `
   <div class="pa3 bg-near-black ba b--white-10 br2 mb2">
     <div class="flex items-center justify-between mb2">
-      <RouterLink
-        :to="'/rooms/' + recipe.roomId"
-        class="link light-purple b f6 hover-white inline-flex items-center"
-      >
-        <img
-          v-if="recipe.roomIcon"
-          :src="recipe.roomIcon"
-          :alt="recipe.roomName"
-          class="mr2 dib v-mid flex-shrink-0 pixelated icon-16"
-        />
-        <span>
-          {{ recipe.roomName }}
-          <span v-if="recipe.outputType === 'Resource'">(&times;{{ recipe.outputQuantity }})</span>
-          &rarr;
-        </span>
-      </RouterLink>
+      <div class="flex items-center flex-wrap">
+        <RouterLink
+          :to="'/rooms/' + recipe.roomId"
+          class="link light-purple b f6 hover-white inline-flex items-center"
+        >
+          <img
+            v-if="recipe.roomIcon"
+            :src="recipe.roomIcon"
+            :alt="recipe.roomName"
+            class="mr2 dib v-mid flex-shrink-0 pixelated icon-16"
+          />
+          <span>
+            {{ recipe.roomName }}
+            <span v-if="recipe.outputType === 'Resource'">(&times;{{ recipe.outputQuantity }})</span>
+            &rarr;
+          </span>
+        </RouterLink>
+        <RecipeScrollBadge :unlock="recipe.recipeUnlock" />
+      </div>
       <span class="f7 silver inline-flex items-center">
         <img
           :src="WORK_ICON"
@@ -48,7 +52,7 @@ const TEMPLATE = /* html */ `
 
 export const CraftingRecipeCard = defineComponent({
   name: 'CraftingRecipeCard',
-  components: { ItemChip },
+  components: { ItemChip, RecipeScrollBadge },
   props: {
     recipe: {
       /** @type {import('vue').PropType<import('../models/Recipe.js').CraftingRecipe>} */

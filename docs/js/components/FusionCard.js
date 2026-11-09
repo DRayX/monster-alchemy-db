@@ -2,6 +2,7 @@
 import { defineComponent, ref } from 'vue';
 import { getFusionTypeBadgeClass } from '../services/formatters.js';
 import { FusionOperandBadge } from './FusionOperandBadge.js';
+import { RecipeScrollBadge } from './RecipeScrollBadge.js';
 
 const TEMPLATE = /* html */ `
   <div class="pa3 bg-near-black ba b--white-10 br2 mb2">
@@ -22,6 +23,8 @@ const TEMPLATE = /* html */ `
           <span>{{ fusion.baseCombinations.length }} {{ fusion.baseCombinations.length === 1 ? 'combo' : 'combos' }}</span>
           <span class="ml1">{{ isExpanded ? '▴' : '▾' }}</span>
         </button>
+
+        <RecipeScrollBadge v-if="!showResult" :unlock="fusion.recipeUnlock" />
       </div>
 
       <div class="flex items-center mt2 mt0-ns">
@@ -72,7 +75,7 @@ const TEMPLATE = /* html */ `
 
 export const FusionCard = defineComponent({
   name: 'FusionCard',
-  components: { FusionOperandBadge },
+  components: { FusionOperandBadge, RecipeScrollBadge },
   props: {
     fusion: {
       /** @type {import('vue').PropType<import('../models/Recipe.js').FusionRecipe>} */

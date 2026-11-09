@@ -1,10 +1,11 @@
 // @ts-check
 import { defineComponent, computed } from 'vue';
-import { db, dbIndexes } from '../../store.js';
+import { dbIndexes } from '../../store.js';
 import {
   CATEGORY_COLORS,
   renderIconHtml,
-  getPoiCustomIcon
+  getPoiCustomIcon,
+  resolveRecipe
 } from '../../services/mapUtils.js';
 
 export const RowLink = defineComponent({
@@ -59,41 +60,6 @@ export const PopupSection = defineComponent({
     </div>
   `
 });
-
-/**
- * Resolves a recipe key to its output details for Crafting and Fusion recipes.
- * @param {string} [recipeKey]
- */
-export function resolveRecipe(recipeKey) {
-  if (!recipeKey) return null;
-  const craft = dbIndexes.recipes.get(recipeKey);
-  if (craft) {
-    return {
-      to: craft.outputRoute,
-      icon: craft.outputIcon,
-      title: craft.outputName,
-      badgeText: craft.roomName ? `Craft (${craft.roomName})` : 'Craft',
-      badgeClass: 'f7 light-blue'
-    };
-  }
-  const keyLower = recipeKey.toLowerCase();
-  const fusion = db.fusions.find(
-    (f) =>
-      f.fusionType === 'Explicit' &&
-      (`${f.inputA.id}+${f.inputB.id}`.toLowerCase() === keyLower ||
-        `${f.inputB.id}+${f.inputA.id}`.toLowerCase() === keyLower)
-  );
-  if (fusion) {
-    return {
-      to: `/monsters/${fusion.resultId}`,
-      icon: fusion.resultIcon,
-      title: fusion.resultName,
-      badgeText: `Fusion (${fusion.inputAName} + ${fusion.inputBName})`,
-      badgeClass: 'f7 light-purple'
-    };
-  }
-  return null;
-}
 
 /**
  * Resolves an item ID or recipe key into standardized display properties for loot/wares rows.
@@ -166,8 +132,13 @@ const TEMPLATE = /* html */ `
       <span>{{ popupTitle }}</span>
     </div>
     <div class="f7 silver mb2">{{ poi.label }}</div>
-    <div v-if="poi.isHidden" class="mb2">
-      <span class="f8 bg-dark-red washed-red ph2 pv1 br-pill b dib">Hidden</span>
+    <div v-if="poi.isNightOnly || poi.isHidden" class="mb2 flex items-center flex-wrap">
+      <span v-if="poi.isNightOnly" class="f8 bg-dark-blue washed-blue ph2 pv1 br-pill b dib mr1 mb1">
+        🌙 Night Only
+      </span>
+      <span v-if="poi.isHidden" class="f8 bg-dark-red washed-red ph2 pv1 br-pill b dib mr1 mb1">
+        Hidden
+      </span>
     </div>
 
     <!-- Scrollable Content Body -->

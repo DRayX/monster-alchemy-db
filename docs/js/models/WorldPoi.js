@@ -37,6 +37,14 @@ export class WorldPoi {
   }
 
   /**
+   * Whether this POI only spawns/appears at night.
+   * @returns {boolean}
+   */
+  get isNightOnly() {
+    return this.properties.SpecificTimeOnly === true && this.properties.SpecificTime === 'Night';
+  }
+
+  /**
    * For resource nodes, the DT_WorldResources row key (e.g. 'WR_Iron').
    * @returns {string}
    */

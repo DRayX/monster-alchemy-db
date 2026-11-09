@@ -12,6 +12,7 @@ export class Room {
    * @param {string} [data.prefix]
    * @param {import('./Recipe.js').CraftingRecipe[]} [data.recipes]
    * @param {import('./Recipe.js').FusionRecipe[]} [data.fusionRecipes]
+   * @param {import('../types.js').RecipeUnlock | null} [data.recipeUnlock]
    */
   constructor(data) {
     this.id = data.id;
@@ -20,6 +21,9 @@ export class Room {
     this.icon = getRoomIcon(this.id);
     this.recipes = data.recipes || [];
     this.fusionRecipes = data.fusionRecipes || [];
+
+    /** @type {import('../types.js').RecipeUnlock | null} */
+    this.recipeUnlock = data.recipeUnlock ?? null;
   }
 
   get totalRecipeCount() {

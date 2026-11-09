@@ -2,11 +2,11 @@
 import { defineComponent, computed } from 'vue';
 import { dbIndexes } from '../../store.js';
 import { getItemIcon, getIcon } from '../../services/assets.js';
+import { resolveRecipe } from '../../services/mapUtils.js';
 import {
   PopupShell,
   PopupSection,
   RowLink,
-  resolveRecipe,
   resolveItemOrRecipe,
   resolveMonster
 } from './PopupShell.js';

@@ -144,3 +144,18 @@ export interface WorldBattleMember {
   mutation: string;
 }
 
+/** Describes how a recipe or specimen is unlocked in the game. */
+export interface RecipeUnlock {
+  type:
+    | PoiCategory
+    | 'tower_room'
+    | 'starting';
+  to?: string;
+  poi?: import('./models/WorldPoi.js').WorldPoi | null;
+  price?: number;
+  roomId?: string;
+  roomName?: string;
+  dungeonName?: string;
+}
+
+

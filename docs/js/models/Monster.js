@@ -97,6 +97,7 @@ export class Monster {
    * @param {string} [data.description]
    * @param {MonsterLoot[]} [data.loots]
    * @param {MonsterWildSpawn[]} [data.wildSpawns]
+   * @param {import('../types.js').RecipeUnlock | null} [data.recipeUnlock]
    */
   constructor(data) {
     this.id = data.id;
@@ -127,5 +128,8 @@ export class Monster {
 
     /** @type {MonsterWildSpawn[]} */
     this.wildSpawns = data.wildSpawns || [];
+
+    /** @type {import('../types.js').RecipeUnlock | null} */
+    this.recipeUnlock = data.recipeUnlock ?? null;
   }
 }

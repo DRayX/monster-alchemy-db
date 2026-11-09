@@ -10,6 +10,7 @@ import { CraftingRecipeCard } from './CraftingRecipeCard.js';
 import { FusionCard } from './FusionCard.js';
 import { WildSpawnCard } from './WildSpawnCard.js';
 import { NotFoundCard } from './NotFoundCard.js';
+import { RecipeScrollBadge } from './RecipeScrollBadge.js';
 
 /**
  * @typedef {{ key: 'health' | 'strength' | 'defense' | 'mind' | 'soul' | 'agility', label: string, color: string, icon?: string }} StatBarConfig
@@ -53,7 +54,10 @@ const TEMPLATE = /* html */ `
             />
             <div>
               <div class="f7 gray code mb1">{{ monster.id }}</div>
-              <h1 class="f2 fw8 ma0 near-white">{{ monster.name }}</h1>
+              <div class="flex items-center">
+                <h1 class="f2 fw8 ma0 near-white">{{ monster.name }}</h1>
+                <RecipeScrollBadge :unlock="monster.recipeUnlock" :size="24" />
+              </div>
               <div class="f6 silver mt2 flex flex-wrap items-center" style="gap: 6px;">
                 <span>Element:</span>
                 <TypeBadge :type="monster.element" :pill="false" :icon-size="16" custom-class="b near-white" />
@@ -299,7 +303,7 @@ const TEMPLATE = /* html */ `
 
 export const MonsterDetail = defineComponent({
   name: 'MonsterDetail',
-  components: { TypeBadge, StatBar, CraftingRecipeCard, FusionCard, WildSpawnCard, NotFoundCard },
+  components: { TypeBadge, StatBar, CraftingRecipeCard, FusionCard, WildSpawnCard, NotFoundCard, RecipeScrollBadge },
   setup() {
     const route = useRoute();
 

@@ -729,6 +729,7 @@ export const WorldMap = defineComponent({
 
       const qSpawn = /** @type {string} */ (route.query.spawn);
       const qPoi = /** @type {string} */ (route.query.poi);
+      const qSearch = /** @type {string} */ (route.query.search);
       const qX = route.query.x ? Number(route.query.x) : null;
       const qY = route.query.y ? Number(route.query.y) : null;
 
@@ -751,8 +752,12 @@ export const WorldMap = defineComponent({
         isSidebarOpen.value = true;
         const targetPoi = qPoi.toLowerCase();
         target = mapPois.value.find((p) => p.id.toLowerCase() === targetPoi);
-        if (target && !selectedCategories.value.includes(target.category)) {
-          selectedCategories.value.push(target.category);
+        if (target) {
+          selectedCategories.value = [target.category];
+          if (qSearch) {
+            searchQuery.value = qSearch;
+          }
+          syncCategoryLayers();
         }
       } else if (qX !== null && qY !== null) {
         const latLng = worldToLatLng({ x: qX, y: qY });

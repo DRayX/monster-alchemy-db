@@ -312,6 +312,41 @@ export function getSpawnerEncounters(tag) {
 }
 
 /**
+ * Resolves a recipe key to its output details for Crafting and Fusion recipes.
+ * @param {string} [recipeKey]
+ */
+export function resolveRecipe(recipeKey) {
+  if (!recipeKey || recipeKey === 'None') return null;
+  const craft = dbIndexes.recipes.get(recipeKey);
+  if (craft) {
+    return {
+      to: craft.outputRoute,
+      icon: craft.outputIcon,
+      title: craft.outputName,
+      roomName: craft.roomName,
+      badgeText: craft.roomName ? `Craft (${craft.roomName})` : 'Craft',
+      badgeClass: 'f7 light-blue'
+    };
+  }
+  const keyLower = recipeKey.toLowerCase();
+  const fusion = db.fusions.find(
+    (f) =>
+      (`${f.inputA.id}+${f.inputB.id}`.toLowerCase() === keyLower ||
+        `${f.inputB.id}+${f.inputA.id}`.toLowerCase() === keyLower)
+  );
+  if (fusion) {
+    return {
+      to: `/monsters/${fusion.resultId}`,
+      icon: fusion.resultIcon,
+      title: fusion.resultName,
+      badgeText: `Fusion (${fusion.inputAName} + ${fusion.inputBName})`,
+      badgeClass: 'f7 light-purple'
+    };
+  }
+  return null;
+}
+
+/**
  * Visitor that collects lowercase searchable text tokens for a WorldPoi or shared archetype.
  */
 class PoiSearchVisitor {
@@ -337,9 +372,9 @@ class PoiSearchVisitor {
   addRecipe(recipeKey) {
     if (!recipeKey || recipeKey === 'None') return;
     this.addText(recipeKey);
-    const recipe = dbIndexes.recipes.get(recipeKey);
-    if (recipe) {
-      this.addText(recipe.outputName, recipe.roomName);
+    const resolved = resolveRecipe(recipeKey);
+    if (resolved) {
+      this.addText(resolved.title, resolved.roomName);
     }
   }
 
@@ -556,6 +591,8 @@ export function matchesPoiSearch(poi, q) {
   if (instanceText === undefined) {
     const v = new PoiSearchVisitor();
     v.addText(poi.label, poi.tag, poi.id);
+    if (poi.isHidden) v.addText('hidden');
+    if (poi.isNightOnly) v.addText('night');
     const visit = CATEGORY_SEARCH_VISITORS[poi.category];
     if (visit) {
       visit(poi, v);

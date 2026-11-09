@@ -48,6 +48,7 @@ export class CraftingRecipe {
    * @param {number} [data.outputQuantity]
    * @param {number} [data.work]
    * @param {RecipeIngredient[]} [data.ingredients]
+   * @param {import('../types.js').RecipeUnlock | null} [data.recipeUnlock]
    */
   constructor(data) {
     this.id = data.id;
@@ -64,6 +65,9 @@ export class CraftingRecipe {
 
     this.ingredients = data.ingredients || [];
     this.ingredientsSummary = this.ingredients.map((i) => i.summary).join(', ');
+
+    /** @type {import('../types.js').RecipeUnlock | null} */
+    this.recipeUnlock = data.recipeUnlock ?? null;
   }
 }
 
@@ -119,6 +123,7 @@ export class FusionRecipe {
    * @param {string} data.resultId
    * @param {string} data.resultName
    * @param {GenericFusionInputs[]} [data.baseCombinations]
+   * @param {import('../types.js').RecipeUnlock | null} [data.recipeUnlock]
    */
   constructor(data) {
     this.id = data.id || `${data.inputA.id}+${data.inputB.id}=${data.resultId}`;
@@ -131,5 +136,8 @@ export class FusionRecipe {
     this.resultName = data.resultName;
     this.resultIcon = getMonsterProfileImage(data.resultId);
     this.baseCombinations = data.baseCombinations || [];
+
+    /** @type {import('../types.js').RecipeUnlock | null} */
+    this.recipeUnlock = data.recipeUnlock ?? null;
   }
 }

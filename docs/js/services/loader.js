@@ -10,7 +10,8 @@ import {
   parseUnrealEnum,
   extractNormalizedRows,
   normalizeBlueprintProperties,
-  CaseInsensitiveMap
+  CaseInsensitiveMap,
+  extractBlueprintName
 } from './unreal.js';
 import { Monster, MonsterLoot, LearnedSkill, MonsterWildSpawn } from '../models/Monster.js';
 import { Item } from '../models/Item.js';
@@ -22,6 +23,7 @@ import { Location } from '../models/Location.js';
 import { WorldPoi } from '../models/WorldPoi.js';
 import {
   getPoiCategory,
+  getReferencedPoiId,
   unrollFoliageComponent,
   resolveColiseumLocations,
   consolidateZoneCentroids
@@ -501,6 +503,18 @@ export async function loadGameDatabase() {
   resolveColiseumLocations(worldPois);
   const consolidatedPois = consolidateZoneCentroids(worldPois, locationsById);
 
+  linkRecipeScrollPois(
+    worldPois,
+    recipes,
+    fusions,
+    monsterById,
+    itemById,
+    roomById,
+    canonicalMonsterIds,
+    blueprints,
+    locationsById
+  );
+
   const rooms = Array.from(roomById.values());
 
   const items = Array.from(itemById.values());
@@ -520,4 +534,187 @@ export async function loadGameDatabase() {
     locations,
     worldPois: consolidatedPois
   };
+}
+
+/**
+ * Extracts room starter recipes dynamically from BP_TowerManager and room blueprint definitions.
+ * @param {Record<string, any[]>} blueprints
+ * @returns {Map<string, string>} Map of lowercase recipe key -> room ID
+ */
+function extractTowerRoomRecipes(blueprints) {
+  /** @type {Map<string, string>} */
+  const roomIdByRecipeKey = new Map();
+
+  const towerManager = blueprints.BP_TowerManager;
+  if (!Array.isArray(towerManager)) return roomIdByRecipeKey;
+
+  const cdo = towerManager.find((e) => e.Name && e.Name.startsWith('Default__BP_TowerManager'));
+  const roomTypes = cdo?.Properties?.RoomTypes;
+  if (!Array.isArray(roomTypes)) return roomIdByRecipeKey;
+
+  for (const entry of roomTypes) {
+    const roomId = entry.Key;
+    const bpAssetName = extractBlueprintName(entry.Value);
+    const roomBlueprint = bpAssetName ? blueprints[bpAssetName] : null;
+    if (!Array.isArray(roomBlueprint)) continue;
+
+    for (const exp of roomBlueprint) {
+      if (exp.Type === 'BP_Recipe_C' && exp.Properties?.Recipe) {
+        roomIdByRecipeKey.set(String(exp.Properties.Recipe).toLowerCase(), roomId);
+      }
+    }
+  }
+
+  return roomIdByRecipeKey;
+}
+
+const STARTING_RECIPES = new Set(['str_cauldron', 'str_monstermanager', 'str_fusionroom']);
+
+/**
+ * Cross-references world POIs to link recipe scrolls and unlock sources to recipes, monsters, and items in O(N).
+ * @param {WorldPoi[]} worldPois
+ * @param {CraftingRecipe[]} recipes
+ * @param {FusionRecipe[]} fusions
+ * @param {Map<string, Monster>} monsterById
+ * @param {Map<string, Item>} itemById
+ * @param {Map<string, Room>} roomById
+ * @param {Map<string, string>} canonicalMonsterIds
+ * @param {Record<string, any[]>} blueprints
+ * @param {CaseInsensitiveMap<string>} locationsById
+ */
+function linkRecipeScrollPois(
+  worldPois,
+  recipes,
+  fusions,
+  monsterById,
+  itemById,
+  roomById,
+  canonicalMonsterIds,
+  blueprints,
+  locationsById
+) {
+  const towerRoomRecipes = extractTowerRoomRecipes(blueprints);
+
+  /** @type {Map<string, { poi: WorldPoi, price?: number, dungeonName?: string }>} */
+  const recipePoiByRecipeKey = new Map();
+
+  /** @type {Map<string, WorldPoi>} */
+  const dungeonManagerById = new Map();
+  /** @type {WorldPoi[]} */
+  const dungeonEntrances = [];
+
+  for (const poi of worldPois) {
+    if (poi.category === 'manager') {
+      dungeonManagerById.set(poi.id, poi);
+    } else if (poi.category === 'dungeon' && poi.properties?.DungeonRef) {
+      dungeonEntrances.push(poi);
+    }
+
+    // Direct Recipe property or quest/battle/coliseum reward
+    const rKey =
+      poi.properties?.Recipe ||
+      poi.properties?.RewardRecipe ||
+      poi.properties?.QuestInfo?.RewardRecipe;
+
+    if (rKey && rKey !== 'None') {
+      const lower = rKey.toLowerCase();
+      // Only Sum_Plibey has both an overworld pickup and a shop purchase; prefer the free ground scroll
+      if (!recipePoiByRecipeKey.has(lower) || poi.category === 'recipe') {
+        recipePoiByRecipeKey.set(lower, { poi });
+      }
+    }
+
+    // Merchant shop wares (ShopPool)
+    for (const shopItem of poi.shopItems) {
+      if (shopItem.itemId) {
+        const lower = shopItem.itemId.toLowerCase();
+        if (!recipePoiByRecipeKey.has(lower)) {
+          recipePoiByRecipeKey.set(lower, { poi, price: shopItem.price });
+        }
+      }
+    }
+  }
+
+  // Dungeon completion rewards linked from the entrance door to its manager's CustomLootEnd
+  for (const entrance of dungeonEntrances) {
+    const mgrId = getReferencedPoiId(entrance.properties.DungeonRef);
+    const mgr = dungeonManagerById.get(mgrId);
+    const customLoot = mgr?.properties?.CustomLootEnd;
+    if (customLoot && customLoot !== 'None') {
+      const locId = mgr?.properties?.LocationID || entrance.properties?.LocationID;
+      const dungeonName = (locId && locationsById.get(locId)) || '';
+      recipePoiByRecipeKey.set(customLoot.toLowerCase(), { poi: entrance, dungeonName });
+    }
+  }
+
+  /**
+   * Builds a standardized RecipeUnlock descriptor for a recipe key and output entity name.
+   * @param {string} recipeKey
+   * @param {string} entityName
+   * @returns {import('../types.js').RecipeUnlock | null}
+   */
+  function createUnlock(recipeKey, entityName) {
+    const lower = recipeKey.toLowerCase();
+    if (STARTING_RECIPES.has(lower)) {
+      return { type: 'starting' };
+    }
+
+    const mapMatch = recipePoiByRecipeKey.get(lower);
+    if (mapMatch) {
+      const { poi, price, dungeonName } = mapMatch;
+      return {
+        type: poi.category,
+        to: `/map?poi=${poi.id}&search=${encodeURIComponent(entityName)}`,
+        poi,
+        price,
+        dungeonName
+      };
+    }
+
+    const towerRoomId = towerRoomRecipes.get(lower);
+    if (towerRoomId) {
+      const room = roomById.get(towerRoomId);
+      return {
+        type: 'tower_room',
+        to: `/rooms/${towerRoomId}`,
+        roomId: towerRoomId,
+        roomName: room ? room.name : towerRoomId
+      };
+    }
+
+    return null;
+  }
+
+  // 1. Link Crafting Recipes
+  for (const rec of recipes) {
+    const unlock = createUnlock(rec.id, rec.outputName);
+    if (unlock) {
+      rec.recipeUnlock = unlock;
+
+      if (rec.outputType === 'Monster') {
+        const canonicalId = canonicalMonsterIds.get(rec.outputId.toLowerCase()) || rec.outputId;
+        const monster = monsterById.get(canonicalId);
+        if (monster && !monster.recipeUnlock) monster.recipeUnlock = unlock;
+      } else if (rec.outputType === 'Resource') {
+        const item = itemById.get(rec.outputId);
+        if (item && !item.recipeUnlock) item.recipeUnlock = unlock;
+      } else if (rec.outputType === 'Structure') {
+        const room = roomById.get(rec.outputId);
+        if (room && !room.recipeUnlock) room.recipeUnlock = unlock;
+      }
+    }
+  }
+
+  // 2. Link Fusion Recipes
+  for (const fus of fusions) {
+    const keyA = `${fus.inputA.id}+${fus.inputB.id}`;
+    const keyB = `${fus.inputB.id}+${fus.inputA.id}`;
+    const unlock = createUnlock(keyA, fus.resultName) || createUnlock(keyB, fus.resultName);
+
+    if (unlock) {
+      fus.recipeUnlock = unlock;
+      const monster = monsterById.get(fus.resultId);
+      if (monster && !monster.recipeUnlock) monster.recipeUnlock = unlock;
+    }
+  }
 }

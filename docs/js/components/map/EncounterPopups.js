@@ -1,13 +1,17 @@
 // @ts-check
 import { defineComponent, computed } from 'vue';
 import { dbIndexes } from '../../store.js';
-import { getReferencedPoiId, getSpawnerEncounters, getPoiLocationId } from '../../services/mapUtils.js';
+import {
+  getReferencedPoiId,
+  getSpawnerEncounters,
+  getPoiLocationId,
+  resolveRecipe
+} from '../../services/mapUtils.js';
 import {
   PopupShell,
   PopupSection,
   RowLink,
   MonsterAvatar,
-  resolveRecipe,
   resolveMonster,
   formatBattleTeam
 } from './PopupShell.js';

@@ -14,6 +14,7 @@ export class Item {
    * @param {number} [data.craftedCount]
    * @param {number} [data.usedInCount]
    * @param {number} [data.gatherCount]
+   * @param {import('../types.js').RecipeUnlock | null} [data.recipeUnlock]
    */
   constructor(data) {
     this.id = data.id;
@@ -24,6 +25,9 @@ export class Item {
     this.craftedCount = data.craftedCount ?? 0;
     this.usedInCount = data.usedInCount ?? 0;
     this.gatherCount = data.gatherCount ?? 0;
+
+    /** @type {import('../types.js').RecipeUnlock | null} */
+    this.recipeUnlock = data.recipeUnlock ?? null;
   }
 
   get isDropped() {

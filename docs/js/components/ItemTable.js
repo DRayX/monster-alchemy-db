@@ -2,6 +2,7 @@
 import { ref, computed, defineComponent } from 'vue';
 import { db } from '../store.js';
 import { SortableTable } from './SortableTable.js';
+import { RecipeScrollBadge } from './RecipeScrollBadge.js';
 
 /** @type {import('./SortableTable.js').TableColumn<import('../models/Item.js').Item>[]} */
 const COLUMNS = [
@@ -61,12 +62,15 @@ const TEMPLATE = /* html */ `
               loading="lazy"
             />
             <div>
-              <RouterLink
-                :to="'/items/' + item.id"
-                class="link b near-white hover-light-purple db"
-              >
-                {{ item.name }}
-              </RouterLink>
+              <div class="flex items-center">
+                <RouterLink
+                  :to="'/items/' + item.id"
+                  class="link b near-white hover-light-purple"
+                >
+                  {{ item.name }}
+                </RouterLink>
+                <RecipeScrollBadge :unlock="item.recipeUnlock" />
+              </div>
               <div class="f7 gray code">{{ item.id }}</div>
             </div>
           </div>
@@ -99,7 +103,7 @@ const TEMPLATE = /* html */ `
 
 export const ItemTable = defineComponent({
   name: 'ItemTable',
-  components: { SortableTable },
+  components: { SortableTable, RecipeScrollBadge },
   setup() {
     const searchQuery = ref('');
     const selectedSource = ref('ALL');

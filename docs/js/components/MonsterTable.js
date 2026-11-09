@@ -4,6 +4,7 @@ import { db } from '../store.js';
 import { SortableTable } from './SortableTable.js';
 import { TypeBadge } from './TypeBadge.js';
 import { ItemChip } from './ItemChip.js';
+import { RecipeScrollBadge } from './RecipeScrollBadge.js';
 import { getIcon, MONSTER_MANAGER_ICON } from '../services/assets.js';
 
 /** @type {import('./SortableTable.js').TableColumn<import('../models/Monster.js').Monster>[]} */
@@ -95,12 +96,15 @@ const TEMPLATE = /* html */ `
               loading="lazy"
             />
             <div>
-              <RouterLink
-                :to="'/monsters/' + monster.id"
-                class="link b near-white hover-light-purple db"
-              >
-                {{ monster.name }}
-              </RouterLink>
+              <div class="flex items-center">
+                <RouterLink
+                  :to="'/monsters/' + monster.id"
+                  class="link b near-white hover-light-purple"
+                >
+                  {{ monster.name }}
+                </RouterLink>
+                <RecipeScrollBadge :unlock="monster.recipeUnlock" />
+              </div>
               <div class="f7 gray code">{{ monster.id }}</div>
             </div>
           </div>
@@ -144,7 +148,7 @@ const TEMPLATE = /* html */ `
 
 export const MonsterTable = defineComponent({
   name: 'MonsterTable',
-  components: { SortableTable, TypeBadge, ItemChip },
+  components: { SortableTable, TypeBadge, ItemChip, RecipeScrollBadge },
   setup() {
     const searchQuery = ref('');
     const selectedElement = ref('ALL');

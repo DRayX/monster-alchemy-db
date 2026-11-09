@@ -7,6 +7,7 @@ import { CraftingRecipeCard } from './CraftingRecipeCard.js';
 import { WildSpawnCard } from './WildSpawnCard.js';
 import { WorldResourceCard } from './WorldResourceCard.js';
 import { NotFoundCard } from './NotFoundCard.js';
+import { RecipeScrollBadge } from './RecipeScrollBadge.js';
 
 const TEMPLATE = /* html */ `
   <div>
@@ -35,7 +36,10 @@ const TEMPLATE = /* html */ `
           />
           <div>
             <div class="f7 gray code mb1">{{ item.id }}</div>
-            <h1 class="f2 fw8 ma0 near-white">{{ item.name }}</h1>
+            <div class="flex items-center">
+              <h1 class="f2 fw8 ma0 near-white">{{ item.name }}</h1>
+              <RecipeScrollBadge :unlock="item.recipeUnlock" :size="24" />
+            </div>
           </div>
         </div>
 
@@ -217,7 +221,7 @@ const TEMPLATE = /* html */ `
 
 export const ItemDetail = defineComponent({
   name: 'ItemDetail',
-  components: { CraftingRecipeCard, WildSpawnCard, WorldResourceCard, NotFoundCard },
+  components: { CraftingRecipeCard, WildSpawnCard, WorldResourceCard, NotFoundCard, RecipeScrollBadge },
   setup() {
     const route = useRoute();
 

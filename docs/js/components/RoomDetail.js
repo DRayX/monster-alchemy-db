@@ -8,6 +8,7 @@ import { SortableTable } from './SortableTable.js';
 import { ItemChip } from './ItemChip.js';
 import { FusionOperandBadge } from './FusionOperandBadge.js';
 import { NotFoundCard } from './NotFoundCard.js';
+import { RecipeScrollBadge } from './RecipeScrollBadge.js';
 
 /** @type {import('./SortableTable.js').TableColumn<import('../models/Recipe.js').CraftingRecipe>[]} */
 const CRAFT_COLUMNS = [
@@ -49,7 +50,10 @@ const TEMPLATE = /* html */ `
             />
             <div>
               <div class="f7 gray code mb1">{{ room.id }}</div>
-              <h1 class="f2 fw8 ma0 near-white">{{ room.name }}</h1>
+              <div class="flex items-center">
+                <h1 class="f2 fw8 ma0 near-white">{{ room.name }}</h1>
+                <RecipeScrollBadge :unlock="room.recipeUnlock" :size="24" />
+              </div>
             </div>
           </div>
 
@@ -131,12 +135,15 @@ const TEMPLATE = /* html */ `
                   loading="lazy"
                 />
                 <div>
-                  <RouterLink
-                    :to="'/monsters/' + fusion.resultId"
-                    class="link b near-white hover-light-purple db"
-                  >
-                    {{ fusion.resultName }}
-                  </RouterLink>
+                  <div class="flex items-center">
+                    <RouterLink
+                      :to="'/monsters/' + fusion.resultId"
+                      class="link b near-white hover-light-purple"
+                    >
+                      {{ fusion.resultName }}
+                    </RouterLink>
+                    <RecipeScrollBadge :unlock="fusion.recipeUnlock" />
+                  </div>
                   <div class="f7 gray code">{{ fusion.resultId }}</div>
                 </div>
               </div>
@@ -192,12 +199,15 @@ const TEMPLATE = /* html */ `
                   loading="lazy"
                 />
                 <div>
-                  <RouterLink
-                    :to="recipe.outputRoute"
-                    class="link b near-white hover-light-purple db"
-                  >
-                    {{ recipe.outputName }}
-                  </RouterLink>
+                  <div class="flex items-center">
+                    <RouterLink
+                      :to="recipe.outputRoute"
+                      class="link b near-white hover-light-purple"
+                    >
+                      {{ recipe.outputName }}
+                    </RouterLink>
+                    <RecipeScrollBadge :unlock="recipe.recipeUnlock" />
+                  </div>
                   <div class="f7 gray code">{{ recipe.id }}</div>
                 </div>
               </div>
@@ -234,7 +244,7 @@ const TEMPLATE = /* html */ `
 
 export const RoomDetail = defineComponent({
   name: 'RoomDetail',
-  components: { SortableTable, ItemChip, FusionOperandBadge, NotFoundCard },
+  components: { SortableTable, ItemChip, FusionOperandBadge, NotFoundCard, RecipeScrollBadge },
   template: TEMPLATE,
   setup() {
     const route = useRoute();
