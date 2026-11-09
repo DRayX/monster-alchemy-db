@@ -1,0 +1,2277 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_TowerRoom_Craft_Necromancy_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+    },
+    "Properties": {
+      "Timelines": [
+        {
+          "ObjectName": "TimelineTemplate'BP_TowerRoom_Craft_Necromancy_C:Timeline_1_Template'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.62"
+        },
+        {
+          "ObjectName": "TimelineTemplate'BP_TowerRoom_Craft_Necromancy_C:Timeline_2_Template'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.63"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.53"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_TowerRoom_Craft_Necromancy_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.29"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Necromancy_C:ExecuteUbergraph_BP_TowerRoom_Craft_Necromancy'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.19"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Necromancy_C:Timeline_1__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.25"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Necromancy_C:Timeline_1__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.26"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Necromancy_C:Timeline_2__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.27"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Necromancy_C:Timeline_2__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.28"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Necromancy_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.21"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Necromancy_C:OnMoveEnd_Event'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.20"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Necromancy_C:CraftAnimationEnd'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.18"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Necromancy_C:ResetVisuals'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.23"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Necromancy_C:ResultSpawn'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.24"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Necromancy_C:ResetDoonce'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.22"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Necromancy_C:ExecuteUbergraph_BP_TowerRoom_Craft_Necromancy'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.19"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Recipe1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ChildActorComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Recipe",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ChildActorComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Par_4E_LightningStrike_01",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "P_ky_hit_shine",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Par_4E_LightOrb_01",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Par_4E_LightDef_01",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "S_EV_SimpleLightBeam_02",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PointLight",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'PointLightComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SpotLight4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SpotLightComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SpotLight3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SpotLightComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SpotLight2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SpotLightComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SpotLight1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SpotLightComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SpotLight",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SpotLightComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_SummoningMarks",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Timeline_2_NewTrack_0_BFFFB2D441E3304CCAFC99AF8B3FAB7C",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Timeline_2__Direction_BFFFB2D441E3304CCAFC99AF8B3FAB7C",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Timeline_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Timeline_1_NewTrack_0_0646183F480AD70306ABF8902A2A7BAE",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Timeline_1__Direction_0646183F480AD70306ABF8902A2A7BAE",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Timeline_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "SoundsPlayed",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_TowerRoom_Craft_Necromancy": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Necromancy_C:ExecuteUbergraph_BP_TowerRoom_Craft_Necromancy'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.19"
+      },
+      "ResetDoonce": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Necromancy_C:ResetDoonce'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.22"
+      },
+      "ResultSpawn": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Necromancy_C:ResultSpawn'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.24"
+      },
+      "ResetVisuals": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Necromancy_C:ResetVisuals'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.23"
+      },
+      "CraftAnimationEnd": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Necromancy_C:CraftAnimationEnd'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.18"
+      },
+      "OnMoveEnd_Event": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Necromancy_C:OnMoveEnd_Event'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.20"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Necromancy_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.21"
+      },
+      "Timeline_2__UpdateFunc": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Necromancy_C:Timeline_2__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.28"
+      },
+      "Timeline_2__FinishedFunc": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Necromancy_C:Timeline_2__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.27"
+      },
+      "Timeline_1__UpdateFunc": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Necromancy_C:Timeline_1__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.26"
+      },
+      "Timeline_1__FinishedFunc": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Necromancy_C:Timeline_1__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.25"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_TowerRoom_Craft_Necromancy_C'Default__BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.8"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_Interactable_ResourceStand_C",
+    "Name": "Stand_1_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Base/BP_Interactable_ResourceStand.BP_Interactable_ResourceStand_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Necromancy_C:Stand_1_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.12"
+    },
+    "Template": {
+      "ObjectName": "BP_Interactable_ResourceStand_C'Default__BP_Interactable_ResourceStand_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_Interactable_ResourceStand.1"
+    },
+    "ActorLabel": "BP_Interactable_ResourceStand",
+    "ActorInstanceGuid": {
+      "ActorGuid": "00000000-00000000-00000000-00000000",
+      "ActorInstanceGuid": "00000000-00000000-00000000-00000000"
+    }
+  },
+  {
+    "Type": "BP_Interactable_ResourceStand_C",
+    "Name": "Stand_2_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Base/BP_Interactable_ResourceStand.BP_Interactable_ResourceStand_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Necromancy_C:Stand_2_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.13"
+    },
+    "Template": {
+      "ObjectName": "BP_Interactable_ResourceStand_C'Default__BP_Interactable_ResourceStand_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_Interactable_ResourceStand.1"
+    },
+    "ActorLabel": "BP_Interactable_ResourceStand",
+    "ActorInstanceGuid": {
+      "ActorGuid": "00000000-00000000-00000000-00000000",
+      "ActorInstanceGuid": "00000000-00000000-00000000-00000000"
+    }
+  },
+  {
+    "Type": "BP_Interactable_ResourceStand_C",
+    "Name": "Stand_3_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Base/BP_Interactable_ResourceStand.BP_Interactable_ResourceStand_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Necromancy_C:Stand_3_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.14"
+    },
+    "Template": {
+      "ObjectName": "BP_Interactable_ResourceStand_C'Default__BP_Interactable_ResourceStand_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_Interactable_ResourceStand.1"
+    },
+    "ActorLabel": "BP_Interactable_ResourceStand",
+    "ActorInstanceGuid": {
+      "ActorGuid": "00000000-00000000-00000000-00000000",
+      "ActorInstanceGuid": "00000000-00000000-00000000-00000000"
+    }
+  },
+  {
+    "Type": "BP_Interactable_ResourceStand_C",
+    "Name": "Stand_4_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Base/BP_Interactable_ResourceStand.BP_Interactable_ResourceStand_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Necromancy_C:Stand_4_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.15"
+    },
+    "Template": {
+      "ObjectName": "BP_Interactable_ResourceStand_C'BP_TowerRoom_Craft_C:Stand_4_GEN_VARIABLE.Stand_4_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.5"
+    },
+    "ActorLabel": "BP_Interactable_ResourceStand",
+    "ActorInstanceGuid": {
+      "ActorGuid": "00000000-00000000-00000000-00000000",
+      "ActorInstanceGuid": "00000000-00000000-00000000-00000000"
+    }
+  },
+  {
+    "Type": "BP_Interactable_RoomCenter_C",
+    "Name": "Center_GEN_VARIABLE_BP_Interactable_RoomCenter_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Base/BP_Interactable_RoomCenter.BP_Interactable_RoomCenter_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Necromancy_C:Center_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.9"
+    },
+    "Template": {
+      "ObjectName": "BP_Interactable_RoomCenter_C'Default__BP_Interactable_RoomCenter_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_Interactable_RoomCenter.1"
+    },
+    "ActorLabel": "BP_Interactable_CraftCenter",
+    "ActorInstanceGuid": {
+      "ActorGuid": "00000000-00000000-00000000-00000000",
+      "ActorInstanceGuid": "00000000-00000000-00000000-00000000"
+    }
+  },
+  {
+    "Type": "BP_Recipe_C",
+    "Name": "Recipe_GEN_VARIABLE_BP_Recipe_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Resources/BP_Recipe.BP_Recipe_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Necromancy_C:Recipe1_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.10"
+    },
+    "Template": {
+      "ObjectName": "BP_Recipe_C'Default__BP_Recipe_C'",
+      "ObjectPath": "/Game/Blueprints/Resources/BP_Recipe.2"
+    },
+    "Properties": {
+      "Recipe": "Nec_Banshee"
+    },
+    "ActorLabel": "BP_Recipe",
+    "ActorInstanceGuid": {
+      "ActorGuid": "00000000-00000000-00000000-00000000",
+      "ActorInstanceGuid": "00000000-00000000-00000000-00000000"
+    }
+  },
+  {
+    "Type": "BP_Recipe_C",
+    "Name": "Recipe_GEN_VARIABLE_BP_Recipe_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Resources/BP_Recipe.BP_Recipe_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Necromancy_C:Recipe_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.11"
+    },
+    "Template": {
+      "ObjectName": "BP_Recipe_C'Default__BP_Recipe_C'",
+      "ObjectPath": "/Game/Blueprints/Resources/BP_Recipe.2"
+    },
+    "Properties": {
+      "Recipe": "Nec_SkeletonServant"
+    },
+    "ActorLabel": "BP_Recipe",
+    "ActorInstanceGuid": {
+      "ActorGuid": "00000000-00000000-00000000-00000000",
+      "ActorInstanceGuid": "00000000-00000000-00000000-00000000"
+    }
+  },
+  {
+    "Type": "BP_TowerRoom_Craft_Necromancy_C",
+    "Name": "Default__BP_TowerRoom_Craft_Necromancy_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.BP_TowerRoom_Craft_Necromancy_C'",
+    "Package": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy",
+    "Template": {
+      "ObjectName": "BP_TowerRoom_Craft_C'Default__BP_TowerRoom_Craft_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.7"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimHeight": 0.0
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Center_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Template": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_C:Center_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.8"
+    },
+    "Properties": {
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Interactable_RoomCenter_C'BP_TowerRoom_Craft_Necromancy_C:Center_GEN_VARIABLE.Center_GEN_VARIABLE_BP_Interactable_RoomCenter_C_CAT'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.5"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 1265.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Recipe1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Properties": {
+      "ChildActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_Recipe_C'",
+        "ObjectPath": "/Game/Blueprints/Resources/BP_Recipe.1"
+      },
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Recipe_C'BP_TowerRoom_Craft_Necromancy_C:Recipe1_GEN_VARIABLE.Recipe_GEN_VARIABLE_BP_Recipe_C_CAT'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.6"
+      },
+      "RelativeLocation": {
+        "X": 440.0,
+        "Y": 1590.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Recipe_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Properties": {
+      "ChildActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_Recipe_C'",
+        "ObjectPath": "/Game/Blueprints/Resources/BP_Recipe.1"
+      },
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Recipe_C'BP_TowerRoom_Craft_Necromancy_C:Recipe_GEN_VARIABLE.Recipe_GEN_VARIABLE_BP_Recipe_C_CAT'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.7"
+      },
+      "RelativeLocation": {
+        "X": -440.0,
+        "Y": 1590.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Stand_1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Template": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_C:Stand_1_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.10"
+    },
+    "Properties": {
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Interactable_ResourceStand_C'BP_TowerRoom_Craft_Necromancy_C:Stand_1_GEN_VARIABLE.Stand_1_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.1"
+      },
+      "RelativeLocation": {
+        "X": -875.0,
+        "Y": 875.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Stand_2_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Template": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_C:Stand_2_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.11"
+    },
+    "Properties": {
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Interactable_ResourceStand_C'BP_TowerRoom_Craft_Necromancy_C:Stand_2_GEN_VARIABLE.Stand_2_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.2"
+      },
+      "RelativeLocation": {
+        "X": 875.0,
+        "Y": 875.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Stand_3_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Template": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_C:Stand_3_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.12"
+    },
+    "Properties": {
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Interactable_ResourceStand_C'BP_TowerRoom_Craft_Necromancy_C:Stand_3_GEN_VARIABLE.Stand_3_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.3"
+      },
+      "RelativeLocation": {
+        "X": -875.0,
+        "Y": -875.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Stand_4_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Template": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_C:Stand_4_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.13"
+    },
+    "Properties": {
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Interactable_ResourceStand_C'BP_TowerRoom_Craft_Necromancy_C:Stand_4_GEN_VARIABLE.Stand_4_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.4"
+      },
+      "RelativeLocation": {
+        "X": 875.0,
+        "Y": -875.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 2.978628,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 2.97863,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.0,
+            "Value": 1.0,
+            "ArriveTangent": 2.573589,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 2.5735958,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0_1",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.0,
+            "Value": 1.0,
+            "ArriveTangent": 2.9833326,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 2.9833395,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "CraftAnimationEnd",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_TowerRoom_Craft_C:CraftAnimationEnd'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.20"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_TowerRoom_Craft_Necromancy",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetMonsterGameInstance_AsMonster_Game_Instance",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'MonsterGameInstance_C'",
+          "ObjectPath": "/Game/Blueprints/Core/MonsterGameInstance.0"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Conv_DoubleToVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_IsClosed_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Has_Been_Initd_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_RefSelf",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_ResourceAnimation_C'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_ResourceAnimation.0"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Conv_IntToDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_Alpha_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_Alpha_ImplicitCast_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_PlaySound2D_PitchMultiplier_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnMoveEnd_Event",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_TowerRoom_Craft_C:OnMoveEnd_Event'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.34"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "RefSelf",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_ResourceAnimation_C'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_ResourceAnimation.0"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_TowerRoom_Craft_C:ReceiveBeginPlay'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.35"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ResetDoonce",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ResetVisuals",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_TowerRoom_Craft_C:ResetVisuals'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.37"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ResultSpawn",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_TowerRoom_Craft_C:ResultSpawn'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.38"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_1__FinishedFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_1__UpdateFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_2__FinishedFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_2__UpdateFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'ChildActorComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Necromancy_C:Stand_4_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.15"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "Stand_4",
+            "AssociatedGuid": "3978AAE8-463C96EE-B642D48D-91A23BA4"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'ChildActorComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Necromancy_C:Stand_1_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.12"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "Stand_1",
+            "AssociatedGuid": "BD766733-41E91D96-AADC4789-77EC1980"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'ChildActorComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Necromancy_C:Stand_3_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.14"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "Stand_3",
+            "AssociatedGuid": "96E7D32C-482AF704-CE230FAC-4669CE75"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'ChildActorComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Necromancy_C:Stand_2_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.13"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "Stand_2",
+            "AssociatedGuid": "FB456037-4F547F43-2819F2A0-7D3620D6"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'ChildActorComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Necromancy_C:Center_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.9"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "Center",
+            "AssociatedGuid": "E8561062-4F7CBB53-885C45B9-A5C5786A"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'SceneComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SceneComponent'BP_TowerRoom_Craft_Necromancy_C:TargetCraft_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.37"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "TargetCraft",
+            "AssociatedGuid": "737393D6-4A1CDAC1-DABC679A-D0668479"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'SceneComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SceneComponent'BP_TowerRoom_Craft_Necromancy_C:MonsterSpawn_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.36"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+            },
+            "SCSVariableName": "MonsterSpawn",
+            "AssociatedGuid": "41BDDEBA-4288F8C3-FA368BAD-CAC1847D"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "StaticMeshComponent'BP_TowerRoom_Craft_Necromancy_C:TopWall_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.61"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+            },
+            "SCSVariableName": "TopWall",
+            "AssociatedGuid": "27B716CE-4752CD25-7DFA1B8B-6DB44E02"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "P_ky_hit_shine_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'P_ky_hit_dark'",
+        "ObjectPath": "/Game/AdvancedMagicFX12/particles/P_ky_hit_dark.64"
+      },
+      "RelativeLocation": {
+        "X": -5.13858E-07,
+        "Y": -2.2272275E-08,
+        "Z": 172.94463
+      },
+      "RelativeScale3D": {
+        "X": 3.0,
+        "Y": 3.0,
+        "Z": 3.0
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "Par_4E_LightDef_01_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'Par_4E_LightDef_02_Necromancy'",
+        "ObjectPath": "/Game/Art/VFX/Luos8Elements/Particles/Light/Par_4E_LightDef_02_Necromancy.187"
+      },
+      "RelativeScale3D": {
+        "X": 2.5,
+        "Y": 2.5,
+        "Z": 2.5
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "Par_4E_LightningStrike_01_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'Par_4E_LightningStrike_Necro'",
+        "ObjectPath": "/Game/Art/VFX/Luos8Elements/Particles/Lightning/Par_4E_LightningStrike_Necro.145"
+      },
+      "RelativeLocation": {
+        "X": -5.13858E-07,
+        "Y": -2.2272275E-08,
+        "Z": 172.94463
+      },
+      "RelativeScale3D": {
+        "X": 5.0,
+        "Y": 5.0,
+        "Z": 5.0
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "Par_4E_LightOrb_01_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'Par_4E_Dark_Atk_01'",
+        "ObjectPath": "/Game/Art/VFX/Luos8Elements/Particles/Dark/Par_4E_Dark_Atk_01.144"
+      },
+      "RelativeLocation": {
+        "X": -1.513858E-06,
+        "Y": -2.2272275E-08,
+        "Z": 172.94463
+      },
+      "RelativeScale3D": {
+        "X": 5.0,
+        "Y": 5.0,
+        "Z": 5.0
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "PointLightComponent",
+    "Name": "PointLight_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PointLightComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Properties": {
+      "IntensityUnits": "ELightUnits::Candelas",
+      "AttenuationRadius": 408.12973,
+      "Intensity": 85.897385,
+      "LightColor": {
+        "B": 235,
+        "G": 56,
+        "R": 255,
+        "A": 255,
+        "Hex": "FF38EB"
+      },
+      "RelativeLocation": {
+        "X": -9.014982E-07,
+        "Y": 0.0,
+        "Z": 98.79859
+      }
+    },
+    "IntensityNits": 0.0
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "MonsterSpawn_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Template": {
+      "ObjectName": "SceneComponent'BP_TowerRoom_C:MonsterSpawn_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.22"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 1545.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "TargetCraft_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Template": {
+      "ObjectName": "SceneComponent'BP_TowerRoom_Craft_C:TargetCraft_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.51"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": -5.13858E-07,
+        "Y": -2.2272275E-08,
+        "Z": 172.94463
+      }
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.53"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_TowerRoom_Craft_Necromancy_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.35"
+      },
+      "VariableGuid": "ECA223A9-44AD6D01-71F554A6-69FCB4BF",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.53"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_Craft_Necromancy_C:SM_SummoningMarks_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.60"
+      },
+      "ParentComponentOrVariableName": "Plane",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "VariableGuid": "EB8B1DFD-4199714B-B02D5480-62D934FE",
+      "InternalVariableName": "SM_SummoningMarks"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_10",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.53"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'BP_TowerRoom_Craft_Necromancy_C:Par_4E_LightDef_01_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.31"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "VariableGuid": "3B906D75-477E5FAB-297A398D-27A7318E",
+      "InternalVariableName": "Par_4E_LightDef_01"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_11",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.53"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'BP_TowerRoom_Craft_Necromancy_C:Par_4E_LightOrb_01_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.33"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "VariableGuid": "1AA7A242-4838FE72-3AF1B98E-B0F2BECD",
+      "InternalVariableName": "Par_4E_LightOrb_01"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_12",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.53"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'BP_TowerRoom_Craft_Necromancy_C:P_ky_hit_shine_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.30"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "VariableGuid": "D1AFCACF-40E09B29-029E1E80-0349349C",
+      "InternalVariableName": "P_ky_hit_shine"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_13",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.53"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'BP_TowerRoom_Craft_Necromancy_C:Par_4E_LightningStrike_01_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.32"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "VariableGuid": "9CBF4F59-402AC14E-6044D299-3D1F4833",
+      "InternalVariableName": "Par_4E_LightningStrike_01"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_14",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.53"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ChildActorComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Necromancy_C:Recipe1_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.10"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "VariableGuid": "C5B8E9CB-4D442735-5CC6E6AB-67C9182D",
+      "InternalVariableName": "Recipe1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.53"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SpotLightComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SpotLightComponent'BP_TowerRoom_Craft_Necromancy_C:SpotLight_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.58"
+      },
+      "ParentComponentOrVariableName": "Stand_1",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_Craft_C",
+      "VariableGuid": "99FB7460-43E60EE1-66B649AE-BC40B3EA",
+      "InternalVariableName": "SpotLight"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.53"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SpotLightComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SpotLightComponent'BP_TowerRoom_Craft_Necromancy_C:SpotLight1_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.54"
+      },
+      "ParentComponentOrVariableName": "Stand_2",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_Craft_C",
+      "VariableGuid": "DD9C7D33-46540EEB-37E895A4-3E13B51C",
+      "InternalVariableName": "SpotLight1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.53"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SpotLightComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SpotLightComponent'BP_TowerRoom_Craft_Necromancy_C:SpotLight2_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.55"
+      },
+      "ParentComponentOrVariableName": "Stand_3",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_Craft_C",
+      "VariableGuid": "686BF570-4E5EC78B-C0F9A998-8E1FB64C",
+      "InternalVariableName": "SpotLight2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.53"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SpotLightComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SpotLightComponent'BP_TowerRoom_Craft_Necromancy_C:SpotLight3_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.56"
+      },
+      "ParentComponentOrVariableName": "Stand_4",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_Craft_C",
+      "VariableGuid": "3F98D45B-42FB0AEE-378E0FB1-207C8B84",
+      "InternalVariableName": "SpotLight3"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.53"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SpotLightComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SpotLightComponent'BP_TowerRoom_Craft_Necromancy_C:SpotLight4_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.57"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "VariableGuid": "6DE5B137-4151F353-B17279AC-57988933",
+      "InternalVariableName": "SpotLight4"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.53"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'PointLightComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PointLightComponent'BP_TowerRoom_Craft_Necromancy_C:PointLight_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.34"
+      },
+      "ParentComponentOrVariableName": "Center",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_Craft_C",
+      "VariableGuid": "1AD552B6-4DD043F3-2FB3E5BE-E78C42B5",
+      "InternalVariableName": "PointLight"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_8",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.53"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_Craft_Necromancy_C:S_EV_SimpleLightBeam_02_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.59"
+      },
+      "ParentComponentOrVariableName": "Plane",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "VariableGuid": "4409DDD1-43652FD5-B5B94FA0-E3EBF67D",
+      "InternalVariableName": "S_EV_SimpleLightBeam_02"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_9",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.53"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ChildActorComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Necromancy_C:Recipe_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.11"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "VariableGuid": "8CA9454A-41AB2C5D-636FF09C-9A9C4813",
+      "InternalVariableName": "Recipe"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.39"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.45"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.46"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.47"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.48"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.49"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.50"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.51"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.40"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.41"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.42"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.43"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.52"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.44"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.39"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.45"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.46"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.47"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.48"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.49"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.50"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.51"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.40"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.41"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.42"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.43"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.52"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.44"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Necromancy_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.38"
+      }
+    }
+  },
+  {
+    "Type": "SpotLightComponent",
+    "Name": "SpotLight1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SpotLightComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Properties": {
+      "OuterConeAngle": 30.072,
+      "IntensityUnits": "ELightUnits::Candelas",
+      "AttenuationRadius": 4157.4253,
+      "Intensity": 10000.0,
+      "LightColor": {
+        "B": 235,
+        "G": 56,
+        "R": 255,
+        "A": 255,
+        "Hex": "FF38EB"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 999.0
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      }
+    },
+    "IntensityNits": 0.0
+  },
+  {
+    "Type": "SpotLightComponent",
+    "Name": "SpotLight2_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SpotLightComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Properties": {
+      "OuterConeAngle": 30.072,
+      "IntensityUnits": "ELightUnits::Candelas",
+      "AttenuationRadius": 4157.4253,
+      "Intensity": 10000.0,
+      "LightColor": {
+        "B": 235,
+        "G": 56,
+        "R": 255,
+        "A": 255,
+        "Hex": "FF38EB"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 999.0
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      }
+    },
+    "IntensityNits": 0.0
+  },
+  {
+    "Type": "SpotLightComponent",
+    "Name": "SpotLight3_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SpotLightComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Properties": {
+      "OuterConeAngle": 30.072,
+      "IntensityUnits": "ELightUnits::Candelas",
+      "AttenuationRadius": 4157.4253,
+      "Intensity": 10000.0,
+      "LightColor": {
+        "B": 235,
+        "G": 56,
+        "R": 255,
+        "A": 255,
+        "Hex": "FF38EB"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 1000.0
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      }
+    },
+    "IntensityNits": 0.0
+  },
+  {
+    "Type": "SpotLightComponent",
+    "Name": "SpotLight4_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SpotLightComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Properties": {
+      "OuterConeAngle": 49.664,
+      "IntensityUnits": "ELightUnits::Candelas",
+      "AttenuationRadius": 3600.0,
+      "Intensity": 8000.0,
+      "LightColor": {
+        "B": 235,
+        "G": 56,
+        "R": 255,
+        "A": 255,
+        "Hex": "FF38EB"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 1400.0
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 0.0,
+        "Roll": -0.0
+      }
+    },
+    "IntensityNits": 0.0
+  },
+  {
+    "Type": "SpotLightComponent",
+    "Name": "SpotLight_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SpotLightComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Properties": {
+      "OuterConeAngle": 30.072,
+      "IntensityUnits": "ELightUnits::Candelas",
+      "AttenuationRadius": 4157.4253,
+      "Intensity": 10000.0,
+      "LightColor": {
+        "B": 235,
+        "G": 56,
+        "R": 255,
+        "A": 255,
+        "Hex": "FF38EB"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 1000.0
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 0.0,
+        "Roll": -0.0
+      }
+    },
+    "IntensityNits": 0.0
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "S_EV_SimpleLightBeam_02_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'S_EV_SimpleLightBeam_02'",
+        "ObjectPath": "/Game/Art/NinaTemplate/GeneralArt/Lighting/S_EV_SimpleLightBeam_02.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'M_EV_Lightbeam_Master_1sided_02_Inst3'",
+          "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/NecromancyRoom/M_EV_Lightbeam_Master_1sided_02_Inst3.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": 1040.0491,
+        "Y": -9.094947E-13,
+        "Z": 2996.9414
+      },
+      "RelativeRotation": {
+        "Pitch": -20.0,
+        "Yaw": 0.0,
+        "Roll": -0.0
+      },
+      "RelativeScale3D": {
+        "X": 31.397202,
+        "Y": 31.397202,
+        "Z": 26.184147
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_SummoningMarks_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_SummoningMarks'",
+        "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/SummoningRoom/SM_SummoningMarks.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_NecromancyMarks'",
+          "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/NecromancyRoom/MI_NecromancyMarks.0"
+        }
+      ],
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "TopWall_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'BP_TowerRoom_C:TopWall_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.45"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_TowerInterior_Wall_Room'",
+        "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/SM_TowerInterior_Wall_Room.2"
+      }
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "Timeline_1_Template",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Properties": {
+      "TimelineLength": 1.0,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_TowerRoom_Craft_Necromancy_C:CurveFloat_0'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.16"
+          },
+          "PropertyName": "Timeline_1_NewTrack_0_0646183F480AD70306ABF8902A2A7BAE",
+          "TrackName": "NewTrack_0",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "0646183F-480AD703-06ABF890-2A2A7BAE",
+      "VariableName": "Timeline_1",
+      "DirectionPropertyName": "Timeline_1__Direction_0646183F480AD70306ABF8902A2A7BAE",
+      "UpdateFunctionName": "Timeline_1__UpdateFunc",
+      "FinishedFunctionName": "Timeline_1__FinishedFunc"
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "Timeline_2_Template",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Necromancy_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.0"
+    },
+    "Properties": {
+      "TimelineLength": 1.0,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_TowerRoom_Craft_Necromancy_C:CurveFloat_0_1'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Necromancy.17"
+          },
+          "PropertyName": "Timeline_2_NewTrack_0_BFFFB2D441E3304CCAFC99AF8B3FAB7C",
+          "TrackName": "NewTrack_0",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "BFFFB2D4-41E3304C-CAFC99AF-8B3FAB7C",
+      "VariableName": "Timeline_2",
+      "DirectionPropertyName": "Timeline_2__Direction_BFFFB2D441E3304CCAFC99AF8B3FAB7C",
+      "UpdateFunctionName": "Timeline_2__UpdateFunc",
+      "FinishedFunctionName": "Timeline_2__FinishedFunc"
+    }
+  }
+]

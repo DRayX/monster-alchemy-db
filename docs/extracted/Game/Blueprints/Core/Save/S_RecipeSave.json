@@ -1,0 +1,45 @@
+[
+  {
+    "Type": "UserDefinedStruct",
+    "Name": "S_RecipeSave",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedStruct'",
+    "Package": "/Game/Blueprints/Core/Save/S_RecipeSave",
+    "Properties": {
+      "Guid": "2DC497B0-46662923-E59079BA-2BBAB604"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ByteProperty",
+        "Name": "Type_3_4E871BCD4387E788D33147A09C076A46",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'ERecipeType'",
+          "ObjectPath": "/Game/Blueprints/Items/ERecipeType.0"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Times_8_6A9E88EC426EDD6BF57AF6BD920CECAB",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "Exp_9_0B9760B746A2999FAEEE2E9F2B5731C0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      }
+    ],
+    "StructFlags": 0,
+    "DefaultProperties": {
+      "Type_3_4E871BCD4387E788D33147A09C076A46": "ERecipeType::NewEnumerator0",
+      "Times_8_6A9E88EC426EDD6BF57AF6BD920CECAB": 0,
+      "Exp_9_0B9760B746A2999FAEEE2E9F2B5731C0": 0.0
+    }
+  }
+]

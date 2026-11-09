@@ -1,0 +1,2571 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_TowerRoom_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprints/Base/BP_TowerRoom",
+    "Properties": {
+      "DynamicBindingObjects": [
+        {
+          "ObjectName": "ComponentDelegateBinding'BP_TowerRoom_C:ComponentDelegateBinding_0'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.4"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_TowerRoom_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.36"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_TowerRoom_C:ExecuteUbergraph_BP_TowerRoom'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.10"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_TowerRoom_C:AddBuffToTotal'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.5"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_C:AddEBuffsToTotal'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.6"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_C:UpdateRoomBuffs'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.20"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_C:GetMonsterObjectsFromBP'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.11"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_C:ClearRoomMonsters'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.8"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_C:SpawnAssignedMonsters'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.18"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_C:OnAssignedMonsters'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.12"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_C:EventCenterInteract'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.9"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_C:OnTowerMenuPressed_Event'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.16"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_C:OnExit_Event'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.14"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_C:ToggleSelect'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.19"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_C:BndEvt__BP_TowerRoom_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.7"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.17"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_C:OnEnterRoom'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.13"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_C:OnLeaveRoom'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.15"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_C:ExecuteUbergraph_BP_TowerRoom'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.10"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BotWall",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Camera",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'CameraComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MonsterSpawn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RightWall",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LeftWall",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "TopWall",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Box",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'BoxComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_TowerInterior_WallPillar_Long3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_TowerInterior_WallPillar_Long",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_TowerInterior_WallPillar_Long1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_TowerInterior_WallPillar_Long2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Plane",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "RefNeighbors",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "RoomClass",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | ExposeOnSpawn"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Manager",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_TowerManager_C'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_TowerManager.0"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "RoomAssignedMonsters",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "RoomAssignedMonsters",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "BlueprintGeneratedClass'BP_AllyMonster_Base_C'",
+            "ObjectPath": "/Game/Blueprints/Characters/BP_AllyMonster_Base.0"
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RefWidget",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_AssignMonsters_C'",
+          "ObjectPath": "/Game/Blueprints/Widgets/Tower/W_AssignMonsters.148"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "RoomPower",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Coordinate",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | ExposeOnSpawn",
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'S_Coordinate'",
+          "ObjectPath": "/Game/Blueprints/Core/S_Coordinate.0"
+        }
+      },
+      {
+        "Type": "MapProperty",
+        "Name": "RoomEBuffs",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 80,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "KeyProp": {
+          "Type": "ByteProperty",
+          "Name": "RoomEBuffs",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": {
+            "ObjectName": "UserDefinedEnum'EMonsterType'",
+            "ObjectPath": "/Game/Blueprints/Monsters/EMonsterType.0"
+          }
+        },
+        "ValueProp": {
+          "Type": "IntProperty",
+          "Name": "RoomEBuffs_Value",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "MapProperty",
+        "Name": "RoomABuffs",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 80,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "KeyProp": {
+          "Type": "ByteProperty",
+          "Name": "RoomABuffs",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": {
+            "ObjectName": "UserDefinedEnum'EAttackType'",
+            "ObjectPath": "/Game/Blueprints/Monsters/EAttackType.0"
+          }
+        },
+        "ValueProp": {
+          "Type": "IntProperty",
+          "Name": "RoomABuffs_Value",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "MapProperty",
+        "Name": "RoomTotalBuffs",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 80,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "KeyProp": {
+          "Type": "ByteProperty",
+          "Name": "RoomTotalBuffs",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": {
+            "ObjectName": "UserDefinedEnum'EMonsterType'",
+            "ObjectPath": "/Game/Blueprints/Monsters/EMonsterType.0"
+          }
+        },
+        "ValueProp": {
+          "Type": "IntProperty",
+          "Name": "RoomTotalBuffs_Value",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "Prefix",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_TowerRoom": {
+        "ObjectName": "Function'BP_TowerRoom_C:ExecuteUbergraph_BP_TowerRoom'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.10"
+      },
+      "OnLeaveRoom": {
+        "ObjectName": "Function'BP_TowerRoom_C:OnLeaveRoom'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.15"
+      },
+      "OnEnterRoom": {
+        "ObjectName": "Function'BP_TowerRoom_C:OnEnterRoom'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.13"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_TowerRoom_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.17"
+      },
+      "BndEvt__BP_TowerRoom_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature": {
+        "ObjectName": "Function'BP_TowerRoom_C:BndEvt__BP_TowerRoom_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.7"
+      },
+      "ToggleSelect": {
+        "ObjectName": "Function'BP_TowerRoom_C:ToggleSelect'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.19"
+      },
+      "OnExit_Event": {
+        "ObjectName": "Function'BP_TowerRoom_C:OnExit_Event'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.14"
+      },
+      "OnTowerMenuPressed_Event": {
+        "ObjectName": "Function'BP_TowerRoom_C:OnTowerMenuPressed_Event'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.16"
+      },
+      "EventCenterInteract": {
+        "ObjectName": "Function'BP_TowerRoom_C:EventCenterInteract'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.9"
+      },
+      "OnAssignedMonsters": {
+        "ObjectName": "Function'BP_TowerRoom_C:OnAssignedMonsters'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.12"
+      },
+      "SpawnAssignedMonsters": {
+        "ObjectName": "Function'BP_TowerRoom_C:SpawnAssignedMonsters'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.18"
+      },
+      "ClearRoomMonsters": {
+        "ObjectName": "Function'BP_TowerRoom_C:ClearRoomMonsters'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.8"
+      },
+      "GetMonsterObjectsFromBP": {
+        "ObjectName": "Function'BP_TowerRoom_C:GetMonsterObjectsFromBP'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.11"
+      },
+      "UpdateRoomBuffs": {
+        "ObjectName": "Function'BP_TowerRoom_C:UpdateRoomBuffs'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.20"
+      },
+      "AddEBuffsToTotal": {
+        "ObjectName": "Function'BP_TowerRoom_C:AddEBuffsToTotal'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.6"
+      },
+      "AddBuffToTotal": {
+        "ObjectName": "Function'BP_TowerRoom_C:AddBuffToTotal'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.5"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_TowerRoom_C'Default__BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Box_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BoxComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+    },
+    "Properties": {
+      "BoxExtent": {
+        "X": 2200.0,
+        "Y": 2200.0,
+        "Z": 100.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "BP_TowerRoom_C",
+    "Name": "Default__BP_TowerRoom_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Base/BP_TowerRoom.BP_TowerRoom_C'",
+    "Package": "/Game/Blueprints/Base/BP_TowerRoom",
+    "Properties": {
+      "UberGraphFrame": {},
+      "Coordinate": {
+        "X_2_B43A67114C41B2A9B097B9A67C771A84": 0,
+        "Y_4_7528514341F3D4697D84E58BF22BD5EE": 0
+      }
+    }
+  },
+  {
+    "Type": "CameraComponent",
+    "Name": "Camera_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CameraComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+    },
+    "Properties": {
+      "FieldOfView": 70.0,
+      "PostProcessSettings": {
+        "bOverride_DepthOfFieldFocalDistance": true,
+        "bOverride_DepthOfFieldSensorWidth": true,
+        "DepthOfFieldSensorWidth": 200.0,
+        "DepthOfFieldFocalDistance": 3500.0
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 3700.9282,
+        "Z": 2800.0
+      },
+      "RelativeRotation": {
+        "Pitch": -40.0,
+        "Yaw": -90.0,
+        "Roll": 5.0770134E-15
+      }
+    }
+  },
+  {
+    "Type": "ComponentDelegateBinding",
+    "Name": "ComponentDelegateBinding_0",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ComponentDelegateBinding'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+    },
+    "Properties": {
+      "ComponentDelegateBindings": [
+        {
+          "ComponentPropertyName": "Box",
+          "DelegatePropertyName": "OnComponentBeginOverlap",
+          "FunctionNameToBind": "BndEvt__BP_TowerRoom_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AddBuffToTotal",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ByteProperty",
+        "Name": "Buff",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'EMonsterType'",
+          "ObjectPath": "/Game/Blueprints/Monsters/EMonsterType.0"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Amount",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Map_Find_Value",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Map_Find_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "AddEBuffsToTotal",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "MapProperty",
+        "Name": "InputBuffs",
+        "Flags": "RF_Public",
+        "ElementSize": 80,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "KeyProp": {
+          "Type": "ByteProperty",
+          "Name": "InputBuffs",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": {
+            "ObjectName": "UserDefinedEnum'EMonsterType'",
+            "ObjectPath": "/Game/Blueprints/Monsters/EMonsterType.0"
+          }
+        },
+        "ValueProp": {
+          "Type": "IntProperty",
+          "Name": "InputBuffs_Value",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Multi",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_Map_Keys_Keys",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "ByteProperty",
+          "Name": "CallFunc_Map_Keys_Keys",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": {
+            "ObjectName": "UserDefinedEnum'EMonsterType'",
+            "ObjectPath": "/Game/Blueprints/Monsters/EMonsterType.0"
+          }
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'EMonsterType'",
+          "ObjectPath": "/Game/Blueprints/Monsters/EMonsterType.0"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Multiply_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Map_Find_Value",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Map_Find_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GreaterEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "BndEvt__BP_TowerRoom_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "OverlappedComponent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "OtherActor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "OtherComp",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "OtherBodyIndex",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bFromSweep",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "SweepResult",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ClearRoomMonsters",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AllyMonster_Base_C'",
+          "ObjectPath": "/Game/Blueprints/Characters/BP_AllyMonster_Base.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EventCenterInteract",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_TowerRoom",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'W_AssignMonsters_C'",
+          "ObjectPath": "/Game/Blueprints/Widgets/Tower/W_AssignMonsters.148"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'BP_Player_C:OnTowerMenuPressed__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Player.67"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetMonsterObjectsFromBP_Return_Value",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_GetMonsterObjectsFromBP_Return_Value",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "BlueprintGeneratedClass'O_Monster_C'",
+            "ObjectPath": "/Game/Blueprints/Battle/O_Monster.0"
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "K2Node_MakeArray_Array",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "BlueprintGeneratedClass'O_Monster_C'",
+            "ObjectPath": "/Game/Blueprints/Battle/O_Monster.0"
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_CustomEvent_AssignedMonsters",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "K2Node_CustomEvent_AssignedMonsters",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "BlueprintGeneratedClass'O_Monster_C'",
+            "ObjectPath": "/Game/Blueprints/Battle/O_Monster.0"
+          }
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_Selected",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_OverlappedComponent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_OtherActor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_OtherComp",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_ComponentBoundEvent_OtherBodyIndex",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_ComponentBoundEvent_bFromSweep",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_ComponentBoundEvent_SweepResult",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ConstParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Player_C'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Player.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetActorOfClass_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_TowerManager_C'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_TowerManager.0"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'W_AssignMonsters_C:OnExit__DelegateSignature'",
+          "ObjectPath": "/Game/Blueprints/Widgets/Tower/W_AssignMonsters.14"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetMonsterObjectsFromBP",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ArrayProperty",
+        "Name": "Return Value",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Parm | OutParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "Return Value",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "BlueprintGeneratedClass'O_Monster_C'",
+            "ObjectPath": "/Game/Blueprints/Battle/O_Monster.0"
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "Tmp",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "Tmp",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "BlueprintGeneratedClass'O_Monster_C'",
+            "ObjectPath": "/Game/Blueprints/Battle/O_Monster.0"
+          }
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AllyMonster_Base_C'",
+          "ObjectPath": "/Game/Blueprints/Characters/BP_AllyMonster_Base.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Add_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnAssignedMonsters",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ArrayProperty",
+        "Name": "InputMonsters",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "InputMonsters",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "BlueprintGeneratedClass'O_Monster_C'",
+            "ObjectPath": "/Game/Blueprints/Battle/O_Monster.0"
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "AffectedStructures",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "AffectedStructures",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'O_Monster_C'",
+          "ObjectPath": "/Game/Blueprints/Battle/O_Monster.0"
+        }
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Conv_NameToString_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_NotEqual_NameName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerCharacter_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Character'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Player_C'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Player.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ObjectObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_Array_Get_Item_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetRoomFromClass_Return_Value",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_AddUnique_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_NotEqual_NameName_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnEnterRoom",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnExit_Event",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ArrayProperty",
+        "Name": "AssignedMonsters",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "AssignedMonsters",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "BlueprintGeneratedClass'O_Monster_C'",
+            "ObjectPath": "/Game/Blueprints/Battle/O_Monster.0"
+          }
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnLeaveRoom",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnTowerMenuPressed_Event",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SpawnAssignedMonsters",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Add_VectorVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnAIFromClass_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Ally_Monster_Base",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AllyMonster_Base_C'",
+          "ObjectPath": "/Game/Blueprints/Characters/BP_AllyMonster_Base.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Add_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetMonsterGameInstance_AsMonster_Game_Instance",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'MonsterGameInstance_C'",
+          "ObjectPath": "/Game/Blueprints/Core/MonsterGameInstance.0"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetAllMonsters_Return_Value",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_GetAllMonsters_Return_Value",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "BlueprintGeneratedClass'O_Monster_C'",
+            "ObjectPath": "/Game/Blueprints/Battle/O_Monster.0"
+          }
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'O_Monster_C'",
+          "ObjectPath": "/Game/Blueprints/Battle/O_Monster.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_NameName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ToggleSelect",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "Selected",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateRoomBuffs",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ArrayProperty",
+        "Name": "CheckedClasses",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "CheckedClasses",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "ConstParm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "ConstParm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AllyMonster_Base_C'",
+          "ObjectPath": "/Game/Blueprints/Characters/BP_AllyMonster_Base.0"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Map_Find_Value",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Map_Find_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Map_Find_Value_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Map_Find_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_AddUnique_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Array_Contains_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "MonsterSpawn_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 2010.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.36"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_TowerRoom_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.21"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.30"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.29"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.28"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.31"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.32"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.33"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.35"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.34"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.27"
+        }
+      ],
+      "VariableGuid": "A7555926-4A4F7073-658A4FAF-9D8B3A6C",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.36"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_C:Plane_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.39"
+      },
+      "VariableGuid": "49CF0296-44C41BB7-707813B9-87C42795",
+      "InternalVariableName": "Plane"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_10",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.36"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_C:RightWall_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.40"
+      },
+      "VariableGuid": "7F86E524-4F552E42-68BA05A7-0BEF6126",
+      "InternalVariableName": "RightWall"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_11",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.36"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'CameraComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "CameraComponent'BP_TowerRoom_C:Camera_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.3"
+      },
+      "VariableGuid": "ED20BBA9-4FE44DCB-6EA7FC9A-606AB1C7",
+      "InternalVariableName": "Camera"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_12",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.36"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_C:BotWall_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.37"
+      },
+      "VariableGuid": "A3417093-4DB04EDE-5CD3EE96-54469B7D",
+      "InternalVariableName": "BotWall"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.36"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_C:SM_TowerInterior_WallPillar_Long_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.44"
+      },
+      "VariableGuid": "6A2F997C-4306B3E4-DB91758B-E3435DCF",
+      "InternalVariableName": "SM_TowerInterior_WallPillar_Long"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.36"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_C:SM_TowerInterior_WallPillar_Long1_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.41"
+      },
+      "VariableGuid": "F159DD73-4D9C1B97-755A5BB3-9401D37E",
+      "InternalVariableName": "SM_TowerInterior_WallPillar_Long1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.36"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_C:SM_TowerInterior_WallPillar_Long2_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.42"
+      },
+      "VariableGuid": "C7083D2C-4D7F4624-87F7B5A8-EEB31C74",
+      "InternalVariableName": "SM_TowerInterior_WallPillar_Long2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.36"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_C:SM_TowerInterior_WallPillar_Long3_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.43"
+      },
+      "VariableGuid": "9D2760D1-4A545B4A-5EB964A5-C8180759",
+      "InternalVariableName": "SM_TowerInterior_WallPillar_Long3"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.36"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BP_TowerRoom_C:Box_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.1"
+      },
+      "VariableGuid": "85D836D7-41260AD6-41A5B4BB-28DA7F86",
+      "InternalVariableName": "Box"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.36"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_C:TopWall_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.45"
+      },
+      "VariableGuid": "27B716CE-4752CD25-7DFA1B8B-6DB44E02",
+      "InternalVariableName": "TopWall"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_8",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.36"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_TowerRoom_C:MonsterSpawn_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.22"
+      },
+      "VariableGuid": "41BDDEBA-4288F8C3-FA368BAD-CAC1847D",
+      "InternalVariableName": "MonsterSpawn"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_9",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.36"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_C:LeftWall_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.38"
+      },
+      "VariableGuid": "D33E0C32-4E586B38-DFFEC697-FCE66585",
+      "InternalVariableName": "LeftWall"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.23"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.30"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.29"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.28"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.31"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.32"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.33"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.35"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.34"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.27"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_TowerRoom_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.23"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "BotWall_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_TowerInterior_Wall_Room'",
+        "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/SM_TowerInterior_Wall_Room.2"
+      },
+      "OverrideMaterials": [
+        null,
+        null
+      ],
+      "RelativeLocation": {
+        "X": -1E-06,
+        "Y": 2250.0,
+        "Z": 1304.0309
+      },
+      "RelativeRotation": {
+        "Pitch": 1E-06,
+        "Yaw": 1.3943458E-06,
+        "Roll": 180.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "LeftWall_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_TowerInterior_DoorWall_Room'",
+        "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/SM_TowerInterior_DoorWall_Room.2"
+      },
+      "OverrideMaterials": [
+        null,
+        null
+      ],
+      "RelativeLocation": {
+        "X": -2250.0,
+        "Y": 1.4601596E-06,
+        "Z": 1304.0309
+      },
+      "RelativeRotation": {
+        "Pitch": -8.684343E-14,
+        "Yaw": 90.0,
+        "Roll": 180.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Plane_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_TowerInterior_Floor_Room'",
+        "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/SM_TowerInterior_Floor_Room.2"
+      },
+      "OverrideMaterials": [
+        null
+      ],
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionProfileName": "Custom"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -77.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "RightWall_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_TowerInterior_DoorWall_Room'",
+        "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/SM_TowerInterior_DoorWall_Room.2"
+      },
+      "OverrideMaterials": [
+        null,
+        null
+      ],
+      "RelativeLocation": {
+        "X": 2250.0,
+        "Y": -8.499501E-08,
+        "Z": 1304.0309
+      },
+      "RelativeRotation": {
+        "Pitch": -0.0,
+        "Yaw": 270.0,
+        "Roll": 180.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_TowerInterior_WallPillar_Long1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_TowerInterior_WallPillar_Long'",
+        "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/SM_TowerInterior_WallPillar_Long.2"
+      },
+      "RelativeLocation": {
+        "X": 2250.0,
+        "Y": 2250.0,
+        "Z": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "bVisible": false
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_TowerInterior_WallPillar_Long2_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_TowerInterior_WallPillar_Long'",
+        "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/SM_TowerInterior_WallPillar_Long.2"
+      },
+      "RelativeLocation": {
+        "X": -2250.0,
+        "Y": -2250.0,
+        "Z": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "bVisible": false
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_TowerInterior_WallPillar_Long3_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_TowerInterior_WallPillar_Long'",
+        "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/SM_TowerInterior_WallPillar_Long.2"
+      },
+      "RelativeLocation": {
+        "X": 2250.0,
+        "Y": -2250.0,
+        "Z": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "bVisible": false
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_TowerInterior_WallPillar_Long_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_TowerInterior_WallPillar_Long'",
+        "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/SM_TowerInterior_WallPillar_Long.2"
+      },
+      "RelativeLocation": {
+        "X": -2250.0,
+        "Y": 2250.0,
+        "Z": 0.0
+      },
+      "bVisible": false
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "TopWall_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_TowerInterior_DoorWall_Room'",
+        "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/SM_TowerInterior_DoorWall_Room.2"
+      },
+      "OverrideMaterials": [
+        null,
+        null
+      ],
+      "RelativeLocation": {
+        "X": -1.1344541E-06,
+        "Y": -2250.0,
+        "Z": 1304.0309
+      },
+      "RelativeRotation": {
+        "Pitch": -1.3943459E-06,
+        "Yaw": 180.0,
+        "Roll": 180.0
+      }
+    }
+  }
+]

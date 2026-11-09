@@ -1,0 +1,4162 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_TowerRoom_Craft_Cauldron_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+    },
+    "Properties": {
+      "Timelines": [
+        {
+          "ObjectName": "TimelineTemplate'BP_TowerRoom_Craft_Cauldron_C:Timeline_2_Template'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.95"
+        },
+        {
+          "ObjectName": "TimelineTemplate'BP_TowerRoom_Craft_Cauldron_C:Timeline_3_Template'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.96"
+        },
+        {
+          "ObjectName": "TimelineTemplate'BP_TowerRoom_Craft_Cauldron_C:Timeline_4_Template'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.97"
+        },
+        {
+          "ObjectName": "TimelineTemplate'BP_TowerRoom_Craft_Cauldron_C:Timeline_Lights_Template'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.98"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.79"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_TowerRoom_Craft_Cauldron_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.44"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:ExecuteUbergraph_BP_TowerRoom_Craft_Cauldron'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.27"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:Timeline_Lights__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.42"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:Timeline_Lights__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.43"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:Timeline_2__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.36"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:Timeline_2__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.37"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:Timeline_3__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.38"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:Timeline_3__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.39"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:Timeline_4__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.40"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:Timeline_4__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.41"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.31"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:OnMoveEnd_Event'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.28"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:CraftAnimationEnd'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.26"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:ResetVisuals'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.33"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:ReverseWaterLevel'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.35"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:OpenTap'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.29"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:CloseTap'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.24"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:OpenWaterfall'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.30"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:CloseWaterfall'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.25"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:ResetLights'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.32"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:ResultSpawn'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.34"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:ExecuteUbergraph_BP_TowerRoom_Craft_Cauldron'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.27"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Recipe",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ChildActorComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Recipe1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ChildActorComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PointLight2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'PointLightComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "S_EV_SimpleLightBeam_03",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PointLight1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'PointLightComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PointLight",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'PointLightComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_Fog_Sphere1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_WaterRipples",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_WaterFall_Bottom_High2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_WaterFall_Bottom_High1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_WaterFall_Bottom_High",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_Waterfall_Main2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_Waterfall_Main1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_Waterfall_Main",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BP_Waterfall",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ChildActorComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_GiantCauldron_TapTurn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_GiantCauldron_Tap",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NS_StylizedBloodSplash_Low_Aidan",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "P_BubblesAura_Cauldron",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_CauldronStain",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WaterLevel",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ChildActorComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "StaticMesh1_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Cauldron",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Timeline_Lights_NewTrack_0_229BEAE146A2B48BCC37C898FA295777",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Timeline_Lights__Direction_229BEAE146A2B48BCC37C898FA295777",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Timeline_Lights",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Timeline_4_NewTrack_0_78EE826640D41D4479D36FAD569D5D52",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Timeline_4__Direction_78EE826640D41D4479D36FAD569D5D52",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Timeline_4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Timeline_3_NewTrack_0_63463A764A6DDB3697C1C2BBB3CEBA57",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Timeline_3__Direction_63463A764A6DDB3697C1C2BBB3CEBA57",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Timeline_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Timeline_2_NewTrack_0_0EB8599D46AC8CEDECA13C899F5CE081",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Timeline_2__Direction_0EB8599D46AC8CEDECA13C899F5CE081",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Timeline_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RefMatFog",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "WaterfallScaleStart",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_TowerRoom_Craft_Cauldron": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:ExecuteUbergraph_BP_TowerRoom_Craft_Cauldron'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.27"
+      },
+      "ResultSpawn": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:ResultSpawn'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.34"
+      },
+      "ResetLights": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:ResetLights'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.32"
+      },
+      "CloseWaterfall": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:CloseWaterfall'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.25"
+      },
+      "OpenWaterfall": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:OpenWaterfall'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.30"
+      },
+      "CloseTap": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:CloseTap'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.24"
+      },
+      "OpenTap": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:OpenTap'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.29"
+      },
+      "ReverseWaterLevel": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:ReverseWaterLevel'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.35"
+      },
+      "ResetVisuals": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:ResetVisuals'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.33"
+      },
+      "CraftAnimationEnd": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:CraftAnimationEnd'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.26"
+      },
+      "OnMoveEnd_Event": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:OnMoveEnd_Event'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.28"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.31"
+      },
+      "Timeline_4__UpdateFunc": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:Timeline_4__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.41"
+      },
+      "Timeline_4__FinishedFunc": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:Timeline_4__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.40"
+      },
+      "Timeline_3__UpdateFunc": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:Timeline_3__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.39"
+      },
+      "Timeline_3__FinishedFunc": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:Timeline_3__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.38"
+      },
+      "Timeline_2__UpdateFunc": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:Timeline_2__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.37"
+      },
+      "Timeline_2__FinishedFunc": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:Timeline_2__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.36"
+      },
+      "Timeline_Lights__UpdateFunc": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:Timeline_Lights__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.43"
+      },
+      "Timeline_Lights__FinishedFunc": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Cauldron_C:Timeline_Lights__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.42"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_TowerRoom_Craft_Cauldron_C'Default__BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.9"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_Interactable_ResourceStand_C",
+    "Name": "Stand_3_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Base/BP_Interactable_ResourceStand.BP_Interactable_ResourceStand_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Cauldron_C:Stand_1_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.15"
+    },
+    "Template": {
+      "ObjectName": "BP_Interactable_ResourceStand_C'BP_TowerRoom_Craft_C:Stand_1_GEN_VARIABLE.Stand_3_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.2"
+    },
+    "ActorLabel": "BP_Interactable_ResourceStand",
+    "ActorInstanceGuid": {
+      "ActorGuid": "00000000-00000000-00000000-00000000",
+      "ActorInstanceGuid": "00000000-00000000-00000000-00000000"
+    }
+  },
+  {
+    "Type": "BP_Interactable_ResourceStand_C",
+    "Name": "Stand_1_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Base/BP_Interactable_ResourceStand.BP_Interactable_ResourceStand_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Cauldron_C:Stand_2_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.16"
+    },
+    "Template": {
+      "ObjectName": "BP_Interactable_ResourceStand_C'Default__BP_Interactable_ResourceStand_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_Interactable_ResourceStand.1"
+    },
+    "ActorLabel": "BP_Interactable_ResourceStand",
+    "ActorInstanceGuid": {
+      "ActorGuid": "00000000-00000000-00000000-00000000",
+      "ActorInstanceGuid": "00000000-00000000-00000000-00000000"
+    }
+  },
+  {
+    "Type": "BP_Interactable_ResourceStand_C",
+    "Name": "Stand_2_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Base/BP_Interactable_ResourceStand.BP_Interactable_ResourceStand_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Cauldron_C:Stand_3_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.17"
+    },
+    "Template": {
+      "ObjectName": "BP_Interactable_ResourceStand_C'BP_TowerRoom_Craft_C:Stand_3_GEN_VARIABLE.Stand_2_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.4"
+    },
+    "ActorLabel": "BP_Interactable_ResourceStand",
+    "ActorInstanceGuid": {
+      "ActorGuid": "00000000-00000000-00000000-00000000",
+      "ActorInstanceGuid": "00000000-00000000-00000000-00000000"
+    }
+  },
+  {
+    "Type": "BP_Interactable_ResourceStand_C",
+    "Name": "Stand_4_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Base/BP_Interactable_ResourceStand.BP_Interactable_ResourceStand_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Cauldron_C:Stand_4_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.18"
+    },
+    "Template": {
+      "ObjectName": "BP_Interactable_ResourceStand_C'BP_TowerRoom_Craft_C:Stand_4_GEN_VARIABLE.Stand_4_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.5"
+    },
+    "ActorLabel": "BP_Interactable_ResourceStand",
+    "ActorInstanceGuid": {
+      "ActorGuid": "00000000-00000000-00000000-00000000",
+      "ActorInstanceGuid": "00000000-00000000-00000000-00000000"
+    }
+  },
+  {
+    "Type": "BP_Interactable_RoomCenter_C",
+    "Name": "Center_GEN_VARIABLE_BP_Interactable_RoomCenter_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Base/BP_Interactable_RoomCenter.BP_Interactable_RoomCenter_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Cauldron_C:Center_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.12"
+    },
+    "Template": {
+      "ObjectName": "BP_Interactable_RoomCenter_C'Default__BP_Interactable_RoomCenter_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_Interactable_RoomCenter.1"
+    },
+    "ActorLabel": "BP_Interactable_CraftCenter",
+    "ActorInstanceGuid": {
+      "ActorGuid": "00000000-00000000-00000000-00000000",
+      "ActorInstanceGuid": "00000000-00000000-00000000-00000000"
+    }
+  },
+  {
+    "Type": "BP_Recipe_C",
+    "Name": "Recipe_GEN_VARIABLE_BP_Recipe_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Resources/BP_Recipe.BP_Recipe_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Cauldron_C:Recipe1_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.13"
+    },
+    "Template": {
+      "ObjectName": "BP_Recipe_C'Default__BP_Recipe_C'",
+      "ObjectPath": "/Game/Blueprints/Resources/BP_Recipe.2"
+    },
+    "Properties": {
+      "Recipe": "Cal_PutridMixture"
+    },
+    "ActorLabel": "BP_Recipe",
+    "ActorInstanceGuid": {
+      "ActorGuid": "00000000-00000000-00000000-00000000",
+      "ActorInstanceGuid": "00000000-00000000-00000000-00000000"
+    }
+  },
+  {
+    "Type": "BP_Recipe_C",
+    "Name": "Recipe_GEN_VARIABLE_BP_Recipe_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Resources/BP_Recipe.BP_Recipe_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Cauldron_C:Recipe_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.14"
+    },
+    "Template": {
+      "ObjectName": "BP_Recipe_C'Default__BP_Recipe_C'",
+      "ObjectPath": "/Game/Blueprints/Resources/BP_Recipe.2"
+    },
+    "Properties": {
+      "Recipe": "Cal_GooeyMix"
+    },
+    "ActorLabel": "BP_Recipe",
+    "ActorInstanceGuid": {
+      "ActorGuid": "00000000-00000000-00000000-00000000",
+      "ActorInstanceGuid": "00000000-00000000-00000000-00000000"
+    }
+  },
+  {
+    "Type": "BP_RipplePlane_C",
+    "Name": "ChildActor_GEN_VARIABLE_BP_RipplePlane_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Art/Buildings/AlchemyTower/TowerInterior/CauldronRoom/BP_RipplePlane.BP_RipplePlane_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Cauldron_C:WaterLevel_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.19"
+    },
+    "Template": {
+      "ObjectName": "BP_RipplePlane_C'Default__BP_RipplePlane_C'",
+      "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/CauldronRoom/BP_RipplePlane.1"
+    },
+    "ActorLabel": "BP_RipplePlane",
+    "ActorInstanceGuid": {
+      "ActorGuid": "00000000-00000000-00000000-00000000",
+      "ActorInstanceGuid": "00000000-00000000-00000000-00000000"
+    }
+  },
+  {
+    "Type": "BP_TowerRoom_Craft_Cauldron_C",
+    "Name": "Default__BP_TowerRoom_Craft_Cauldron_C",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.BP_TowerRoom_Craft_Cauldron_C'",
+    "Package": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron",
+    "Template": {
+      "ObjectName": "BP_TowerRoom_Craft_C'Default__BP_TowerRoom_Craft_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.7"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "WaterfallScaleStart": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "BP_Waterfall_Short_C",
+    "Name": "BP_Waterfall_GEN_VARIABLE_BP_Waterfall_Short_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Art/CartoonWaterShader/Blueprints/CartoonWaterBlueprints/BP_Waterfall_Short.BP_Waterfall_Short_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Cauldron_C:BP_Waterfall_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.11"
+    },
+    "Template": {
+      "ObjectName": "BP_Waterfall_Short_C'Default__BP_Waterfall_Short_C'",
+      "ObjectPath": "/Game/Art/CartoonWaterShader/Blueprints/CartoonWaterBlueprints/BP_Waterfall_Short.1"
+    },
+    "Properties": {
+      "Vertex Offset": 60.0,
+      "Base Color ": {
+        "R": 0.003631,
+        "G": 0.26,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "0B8B00"
+      },
+      "Specular Color": {
+        "R": 0.483814,
+        "G": 0.775822,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "B9E400"
+      },
+      "Foam Color": {
+        "R": 0.272372,
+        "G": 1.0,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "8FFF00"
+      },
+      "SSS Color": {
+        "R": 0.226842,
+        "G": 0.885,
+        "B": 0.0,
+        "A": 1.0,
+        "Hex": "83F200"
+      }
+    },
+    "ActorLabel": "BP_Waterfall_Short",
+    "ActorInstanceGuid": {
+      "ActorGuid": "00000000-00000000-00000000-00000000",
+      "ActorInstanceGuid": "00000000-00000000-00000000-00000000"
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "BP_Waterfall_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "ChildActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_Waterfall_Short_C'",
+        "ObjectPath": "/Game/Art/CartoonWaterShader/Blueprints/CartoonWaterBlueprints/BP_Waterfall_Short.0"
+      },
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Waterfall_Short_C'BP_TowerRoom_Craft_Cauldron_C:BP_Waterfall_GEN_VARIABLE.BP_Waterfall_GEN_VARIABLE_BP_Waterfall_Short_C_CAT'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.10"
+      },
+      "RelativeLocation": {
+        "X": -1.2789769E-13,
+        "Y": -135.0,
+        "Z": -60.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -180.0,
+        "Roll": 90.0
+      },
+      "RelativeScale3D": {
+        "X": 0.199545,
+        "Y": 0.5067264,
+        "Z": 0.519478
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Center_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Template": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_C:Center_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.8"
+    },
+    "Properties": {
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Interactable_RoomCenter_C'BP_TowerRoom_Craft_Cauldron_C:Center_GEN_VARIABLE.Center_GEN_VARIABLE_BP_Interactable_RoomCenter_C_CAT'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.5"
+      },
+      "RelativeLocation": {
+        "X": -5.0,
+        "Y": 1525.0,
+        "Z": 1.0
+      },
+      "RelativeScale3D": {
+        "X": 1.3,
+        "Y": 1.3,
+        "Z": 1.3
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Recipe1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "ChildActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_Recipe_C'",
+        "ObjectPath": "/Game/Blueprints/Resources/BP_Recipe.1"
+      },
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Recipe_C'BP_TowerRoom_Craft_Cauldron_C:Recipe1_GEN_VARIABLE.Recipe_GEN_VARIABLE_BP_Recipe_C_CAT'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.6"
+      },
+      "RelativeLocation": {
+        "X": 440.0,
+        "Y": 890.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Recipe_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "ChildActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_Recipe_C'",
+        "ObjectPath": "/Game/Blueprints/Resources/BP_Recipe.1"
+      },
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Recipe_C'BP_TowerRoom_Craft_Cauldron_C:Recipe_GEN_VARIABLE.Recipe_GEN_VARIABLE_BP_Recipe_C_CAT'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.7"
+      },
+      "RelativeLocation": {
+        "X": -440.0,
+        "Y": 890.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Stand_1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Template": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_C:Stand_1_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.10"
+    },
+    "Properties": {
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Interactable_ResourceStand_C'BP_TowerRoom_Craft_Cauldron_C:Stand_1_GEN_VARIABLE.Stand_3_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.1"
+      },
+      "RelativeLocation": {
+        "X": -1300.0,
+        "Y": 900.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Stand_2_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Template": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_C:Stand_2_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.11"
+    },
+    "Properties": {
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Interactable_ResourceStand_C'BP_TowerRoom_Craft_Cauldron_C:Stand_2_GEN_VARIABLE.Stand_1_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.2"
+      },
+      "RelativeLocation": {
+        "X": -600.0,
+        "Y": 1500.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Stand_3_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Template": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_C:Stand_3_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.12"
+    },
+    "Properties": {
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Interactable_ResourceStand_C'BP_TowerRoom_Craft_Cauldron_C:Stand_3_GEN_VARIABLE.Stand_2_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.3"
+      },
+      "RelativeLocation": {
+        "X": 600.0,
+        "Y": 1500.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Stand_4_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Template": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_C:Stand_4_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.13"
+    },
+    "Properties": {
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Interactable_ResourceStand_C'BP_TowerRoom_Craft_Cauldron_C:Stand_4_GEN_VARIABLE.Stand_4_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.4"
+      },
+      "RelativeLocation": {
+        "X": 1300.0,
+        "Y": 900.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "WaterLevel_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "ChildActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_RipplePlane_C'",
+        "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/CauldronRoom/BP_RipplePlane.0"
+      },
+      "ChildActorTemplate": {
+        "ObjectName": "BP_RipplePlane_C'BP_TowerRoom_Craft_Cauldron_C:WaterLevel_GEN_VARIABLE.ChildActor_GEN_VARIABLE_BP_RipplePlane_C_CAT'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.8"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 555.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_1",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_1_2",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_1_2_3",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "CloseTap",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "CloseWaterfall",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "CraftAnimationEnd",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_TowerRoom_Craft_C:CraftAnimationEnd'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.20"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_TowerRoom_Craft_Cauldron",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeRotator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Has_Been_Initd_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_RefSelf",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_ResourceAnimation_C'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_ResourceAnimation.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Ripple_Plane",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_RipplePlane_C'",
+          "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/CauldronRoom/BP_RipplePlane.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateDynamicMaterialInstance_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Ripple_Plane_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_RipplePlane_C'",
+          "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/CauldronRoom/BP_RipplePlane.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_IsClosed_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeLocation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeRotation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_VLerp_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Conv_DoubleToVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Ripple_Plane_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_RipplePlane_C'",
+          "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/CauldronRoom/BP_RipplePlane.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_Alpha_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_Alpha_ImplicitCast_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_MakeRotator_Yaw_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_UpdateEmissiveMaterial_Value_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetIntensity_NewIntensity_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnMoveEnd_Event",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_TowerRoom_Craft_C:OnMoveEnd_Event'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.34"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "RefSelf",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_ResourceAnimation_C'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_ResourceAnimation.0"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OpenTap",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OpenWaterfall",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_TowerRoom_Craft_C:ReceiveBeginPlay'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.35"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ResetLights",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ResetVisuals",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_TowerRoom_Craft_C:ResetVisuals'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.37"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ResultSpawn",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_TowerRoom_Craft_C:ResultSpawn'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.38"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReverseWaterLevel",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_2__FinishedFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_2__UpdateFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_3__FinishedFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_3__UpdateFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_4__FinishedFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_4__UpdateFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_Lights__FinishedFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_Lights__UpdateFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'ChildActorComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Cauldron_C:Stand_2_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.16"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "Stand_2",
+            "AssociatedGuid": "FB456037-4F547F43-2819F2A0-7D3620D6"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'ChildActorComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Cauldron_C:Center_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.12"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "Center",
+            "AssociatedGuid": "E8561062-4F7CBB53-885C45B9-A5C5786A"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "StaticMeshComponent'BP_TowerRoom_Craft_Cauldron_C:Plane_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.81"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+            },
+            "SCSVariableName": "Plane",
+            "AssociatedGuid": "49CF0296-44C41BB7-707813B9-87C42795"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'ChildActorComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Cauldron_C:Stand_1_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.15"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "Stand_1",
+            "AssociatedGuid": "BD766733-41E91D96-AADC4789-77EC1980"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'ChildActorComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Cauldron_C:Stand_4_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.18"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "Stand_4",
+            "AssociatedGuid": "3978AAE8-463C96EE-B642D48D-91A23BA4"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'ChildActorComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Cauldron_C:Stand_3_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.17"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "Stand_3",
+            "AssociatedGuid": "96E7D32C-482AF704-CE230FAC-4669CE75"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'SceneComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SceneComponent'BP_TowerRoom_Craft_Cauldron_C:SpawnReward_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.52"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "SpawnReward",
+            "AssociatedGuid": "EBD2292D-43278824-325A289A-5F40F56C"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'SceneComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SceneComponent'BP_TowerRoom_Craft_Cauldron_C:MonsterSpawn_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.51"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+            },
+            "SCSVariableName": "MonsterSpawn",
+            "AssociatedGuid": "41BDDEBA-4288F8C3-FA368BAD-CAC1847D"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'SceneComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SceneComponent'BP_TowerRoom_Craft_Cauldron_C:TargetCraft_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.53"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "TargetCraft",
+            "AssociatedGuid": "737393D6-4A1CDAC1-DABC679A-D0668479"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'SceneComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SceneComponent'BP_TowerRoom_Craft_Cauldron_C:TargetResult_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.54"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "TargetResult",
+            "AssociatedGuid": "56D9B4D5-49D827CB-913DC3B9-56EFCA42"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'WidgetComponent'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "WidgetComponent'BP_TowerRoom_Craft_Cauldron_C:Widget_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.99"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "Widget",
+            "AssociatedGuid": "8BC1FC4F-44108E20-0776E38D-F51E5538"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NS_StylizedBloodSplash_Low_Aidan_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'NS_StylizedBloodSplash_Low_Aidan'",
+        "ObjectPath": "/Game/StylizedBloodPack/Splash/NS_StylizedBloodSplash_Low_Aidan.22"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "ScaleMultiplier",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.ScaleMultiplier",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.ScaleMultiplier",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          128,
+          63
+        ]
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 30.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "P_BubblesAura_Cauldron_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'P_BubblesAura_Cauldron'",
+        "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/CauldronRoom/P_BubblesAura_Cauldron.19"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Color_02",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Color_02",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "RibbonLenght",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.RibbonLenght",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "RibbonWidth",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.RibbonWidth",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Scale",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Scale",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Size",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Size",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Smoke_Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Smoke_Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Smoke_Density",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Smoke_Density",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "SmokeOpacity",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.SmokeOpacity",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.Color",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 16,
+            "Name": "User.Color_02",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 64,
+            "Name": "User.RibbonLenght",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 68,
+            "Name": "User.RibbonWidth",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 32,
+            "Name": "User.Scale",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 36,
+            "Name": "User.Size",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 40,
+            "Name": "User.Smoke_Color",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 56,
+            "Name": "User.Smoke_Density",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 60,
+            "Name": "User.SmokeOpacity",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          128,
+          63,
+          40,
+          72,
+          124,
+          62,
+          0,
+          0,
+          128,
+          63,
+          137,
+          206,
+          154,
+          62,
+          14,
+          45,
+          114,
+          63,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          64,
+          64,
+          0,
+          0,
+          128,
+          63,
+          128,
+          66,
+          5,
+          62,
+          42,
+          65,
+          214,
+          61,
+          179,
+          149,
+          190,
+          61,
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          200,
+          66,
+          0,
+          0,
+          160,
+          65,
+          0,
+          0,
+          0,
+          64,
+          0,
+          0,
+          160,
+          65
+        ]
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 160.0
+      },
+      "RelativeScale3D": {
+        "X": 8.0,
+        "Y": 8.0,
+        "Z": 8.0
+      }
+    }
+  },
+  {
+    "Type": "PointLightComponent",
+    "Name": "PointLight1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PointLightComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "IntensityUnits": "ELightUnits::Candelas",
+      "AttenuationRadius": 1406.3511,
+      "Intensity": 400.0,
+      "LightColor": {
+        "B": 40,
+        "G": 255,
+        "R": 0,
+        "A": 255,
+        "Hex": "00FF28"
+      },
+      "RelativeLocation": {
+        "X": 7.968588E-07,
+        "Y": -1575.0,
+        "Z": 377.95856
+      },
+      "RelativeRotation": {
+        "Pitch": -0.0,
+        "Yaw": -180.0,
+        "Roll": 0.0
+      }
+    },
+    "IntensityNits": 0.0
+  },
+  {
+    "Type": "PointLightComponent",
+    "Name": "PointLight2_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PointLightComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "IntensityUnits": "ELightUnits::Candelas",
+      "AttenuationRadius": 1406.3511,
+      "Intensity": 400.0,
+      "LightColor": {
+        "B": 40,
+        "G": 255,
+        "R": 0,
+        "A": 255,
+        "Hex": "00FF28"
+      },
+      "CastShadows": false,
+      "RelativeLocation": {
+        "X": -2.2737368E-13,
+        "Y": 1430.5339,
+        "Z": 677.3011
+      }
+    },
+    "IntensityNits": 0.0
+  },
+  {
+    "Type": "PointLightComponent",
+    "Name": "PointLight_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PointLightComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "IntensityUnits": "ELightUnits::Candelas",
+      "AttenuationRadius": 1406.3511,
+      "Intensity": 400.0,
+      "LightColor": {
+        "B": 40,
+        "G": 255,
+        "R": 0,
+        "A": 255,
+        "Hex": "00FF28"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 15.0,
+        "Z": 395.0
+      }
+    },
+    "IntensityNits": 0.0
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "MonsterSpawn_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Template": {
+      "ObjectName": "SceneComponent'BP_TowerRoom_C:MonsterSpawn_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.22"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 1730.0,
+        "Z": 195.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SpawnReward_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Template": {
+      "ObjectName": "SceneComponent'BP_TowerRoom_Craft_C:SpawnReward_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.50"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": -1.1315603E-05,
+        "Y": -430.04153,
+        "Z": 333.58978
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "TargetCraft_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Template": {
+      "ObjectName": "SceneComponent'BP_TowerRoom_Craft_C:TargetCraft_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.51"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -440.0,
+        "Z": 250.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "TargetResult_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Template": {
+      "ObjectName": "SceneComponent'BP_TowerRoom_Craft_C:TargetResult_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.52"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 940.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.79"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_TowerRoom_Craft_Cauldron_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.50"
+      },
+      "VariableGuid": "69D9BFC1-43FC734C-F7B2FEB4-F4A6EF6D",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.79"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_Craft_Cauldron_C:Cauldron_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.80"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.73"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.74"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.77"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.72"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_18'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.65"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_21'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.69"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_20'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.68"
+        }
+      ],
+      "VariableGuid": "7DB62328-43598380-4F542F8F-9FE3CD70",
+      "InternalVariableName": "Cauldron"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_10",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.79"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ChildActorComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Cauldron_C:BP_Waterfall_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.11"
+      },
+      "VariableGuid": "2F4D9C4A-4CAD1439-AEA52DB6-E895EE5B",
+      "InternalVariableName": "BP_Waterfall"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_11",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.79"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_Craft_Cauldron_C:SM_Waterfall_Main_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.92"
+      },
+      "ParentComponentOrVariableName": "Plane",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.61"
+        }
+      ],
+      "VariableGuid": "3E626333-49837924-D968E486-F773007D",
+      "InternalVariableName": "SM_Waterfall_Main"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_12",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.79"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_Craft_Cauldron_C:SM_Waterfall_Main1_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.90"
+      },
+      "ParentComponentOrVariableName": "Plane",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.62"
+        }
+      ],
+      "VariableGuid": "523E685D-4F491BAD-CF6EC289-CB57EFCA",
+      "InternalVariableName": "SM_Waterfall_Main1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_13",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.79"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_Craft_Cauldron_C:SM_Waterfall_Main2_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.91"
+      },
+      "ParentComponentOrVariableName": "Plane",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.63"
+        }
+      ],
+      "VariableGuid": "D66969FA-4C65384A-033ECA86-F7528F3B",
+      "InternalVariableName": "SM_Waterfall_Main2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_14",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.79"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_Craft_Cauldron_C:SM_WaterFall_Bottom_High_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.89"
+      },
+      "VariableGuid": "CFF456A8-44444673-D9BD0DAE-4F17EA10",
+      "InternalVariableName": "SM_WaterFall_Bottom_High"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_15",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.79"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_Craft_Cauldron_C:SM_WaterFall_Bottom_High1_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.87"
+      },
+      "VariableGuid": "A05F51B2-48391D05-216ECFA2-FCBE4FB6",
+      "InternalVariableName": "SM_WaterFall_Bottom_High1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_16",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.79"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_Craft_Cauldron_C:SM_WaterFall_Bottom_High2_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.88"
+      },
+      "VariableGuid": "8ED71EFC-429D2654-CF353688-1FFF19D2",
+      "InternalVariableName": "SM_WaterFall_Bottom_High2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_17",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.79"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_Craft_Cauldron_C:SM_WaterRipples_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.93"
+      },
+      "ParentComponentOrVariableName": "Plane",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "VariableGuid": "1CCB7B63-43D3E619-CB45BE93-89531712",
+      "InternalVariableName": "SM_WaterRipples"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_18",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.79"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'PointLightComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PointLightComponent'BP_TowerRoom_Craft_Cauldron_C:PointLight_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.49"
+      },
+      "VariableGuid": "061787E2-44242226-287FAA92-96D48B0B",
+      "InternalVariableName": "PointLight"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_19",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.79"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'PointLightComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PointLightComponent'BP_TowerRoom_Craft_Cauldron_C:PointLight1_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.47"
+      },
+      "ParentComponentOrVariableName": "Plane",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "VariableGuid": "D92A3F3B-41088671-05FF13BC-981C8D27",
+      "InternalVariableName": "PointLight1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.79"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_Craft_Cauldron_C:StaticMesh1_0_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.94"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "VariableGuid": "612DFAD9-497E10F8-A7693082-6DB1D358",
+      "InternalVariableName": "StaticMesh1_0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_20",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.79"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'PointLightComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PointLightComponent'BP_TowerRoom_Craft_Cauldron_C:PointLight2_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.48"
+      },
+      "VariableGuid": "7861BCCF-445D4702-E0965C9F-4B9FD5F1",
+      "InternalVariableName": "PointLight2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_21",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.79"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_Craft_Cauldron_C:S_EV_SimpleLightBeam_03_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.82"
+      },
+      "VariableGuid": "2ED4B6CF-4F42E580-3E534880-91183900",
+      "InternalVariableName": "S_EV_SimpleLightBeam_03"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_22",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.79"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ChildActorComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Cauldron_C:Recipe1_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.13"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "VariableGuid": "ADC56EA0-47489249-1D1BAE98-FAE0B266",
+      "InternalVariableName": "Recipe1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_23",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.79"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ChildActorComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Cauldron_C:Recipe_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.14"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "VariableGuid": "587604FC-43F3C76F-80C8908B-814DC097",
+      "InternalVariableName": "Recipe"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.79"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_Craft_Cauldron_C:SM_Fog_Sphere1_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.84"
+      },
+      "VariableGuid": "94105166-425736F9-BAFD6FB6-82A92B18",
+      "InternalVariableName": "SM_Fog_Sphere1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.79"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ChildActorComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Cauldron_C:WaterLevel_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.19"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.75"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.76"
+        }
+      ],
+      "VariableGuid": "EF4C47C3-4FFFE6E8-450B05B1-89B4D83D",
+      "InternalVariableName": "WaterLevel"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.79"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_Craft_Cauldron_C:SM_CauldronStain_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.83"
+      },
+      "VariableGuid": "E80C1477-4F32A803-D123BD89-0C14836E",
+      "InternalVariableName": "SM_CauldronStain"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.79"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_TowerRoom_Craft_Cauldron_C:P_BubblesAura_Cauldron_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.46"
+      },
+      "VariableGuid": "2B44F361-4202D968-E086B0A0-8ACAEBC1",
+      "InternalVariableName": "P_BubblesAura_Cauldron"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.79"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_TowerRoom_Craft_Cauldron_C:NS_StylizedBloodSplash_Low_Aidan_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.45"
+      },
+      "VariableGuid": "17CA88EC-446AD48B-821320B3-E790E36F",
+      "InternalVariableName": "NS_StylizedBloodSplash_Low_Aidan"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_8",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.79"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_Craft_Cauldron_C:SM_GiantCauldron_Tap_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.85"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.78"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.57"
+        }
+      ],
+      "VariableGuid": "5B362125-4080107C-5F49E18C-1217E0EA",
+      "InternalVariableName": "SM_GiantCauldron_Tap"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_9",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.79"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_Craft_Cauldron_C:SM_GiantCauldron_TapTurn_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.86"
+      },
+      "VariableGuid": "E3BBAD8C-4CDCBE88-5DF1A7BE-D9BEB268",
+      "InternalVariableName": "SM_GiantCauldron_TapTurn"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.56"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.67"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.58"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.59"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.60"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.64"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.66"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_22'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.70"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_23'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.71"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.56"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.67"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.73"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.74"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.75"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.76"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.77"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.78"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.57"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.58"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.59"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.60"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.61"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.62"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.63"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.64"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.72"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_18'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.65"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.66"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_21'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.69"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_20'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.68"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_22'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.70"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_23'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.71"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Cauldron_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.55"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Cauldron_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_GiantCauldron'",
+        "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/CauldronRoom/SM_GiantCauldron.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -410.0,
+        "Z": -180.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Plane_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'BP_TowerRoom_C:Plane_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.39"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_FloorCauldronRoom_V7'",
+        "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/CauldronRoom/SM_FloorCauldronRoom_V7.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_MarbleFloor'",
+          "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/MI_MarbleFloor.0"
+        },
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_MetalFloor'",
+          "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/CauldronRoom/MI_MetalFloor.0"
+        },
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_PotionPool3'",
+          "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/CauldronRoom/MI_PotionPool3.0"
+        },
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_Pillars7'",
+          "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/MI_Pillars7.0"
+        },
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_PotionPool4'",
+          "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/CauldronRoom/MI_PotionPool4.0"
+        },
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_BrickWall'",
+          "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/MI_BrickWall.0"
+        }
+      ],
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 180.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "S_EV_SimpleLightBeam_03_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'S_EV_SimpleLightBeam_02'",
+        "ObjectPath": "/Game/Art/NinaTemplate/GeneralArt/Lighting/S_EV_SimpleLightBeam_02.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'M_EV_Lightbeam_Master_1sided_02_Inst1'",
+          "ObjectPath": "/Game/Art/Buildings/AlchemyTower/M_EV_Lightbeam_Master_1sided_02_Inst1.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": -1.0464448E-05,
+        "Y": -170.0,
+        "Z": 390.0
+      },
+      "RelativeRotation": {
+        "Pitch": 1.3943458E-06,
+        "Yaw": 180.0,
+        "Roll": 180.0
+      },
+      "RelativeScale3D": {
+        "X": 40.0,
+        "Y": 40.0,
+        "Z": 40.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_CauldronStain_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_CauldronStain'",
+        "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/CauldronRoom/SM_CauldronStain.2"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_Fog_Sphere1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Fog_Sphere1'",
+        "ObjectPath": "/Game/Art/NinaTemplate/GeneralArt/Lighting/SM_Fog_Sphere1.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'M_EV_Lightbeam_Master_1sided_02_Inst1'",
+          "ObjectPath": "/Game/Art/Buildings/AlchemyTower/M_EV_Lightbeam_Master_1sided_02_Inst1.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": 15.0,
+        "Y": 20.0,
+        "Z": 525.0
+      },
+      "RelativeScale3D": {
+        "X": 5.457433,
+        "Y": 5.457433,
+        "Z": 5.457433
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_GiantCauldron_Tap_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_GiantCauldron_Tap'",
+        "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/CauldronRoom/SM_GiantCauldron_Tap.2"
+      },
+      "RelativeLocation": {
+        "X": -3.5051044E-16,
+        "Y": 862.1379,
+        "Z": 304.7244
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 180.0,
+        "Roll": 11.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_GiantCauldron_TapTurn_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_GiantCauldron_TapTurn'",
+        "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/CauldronRoom/SM_GiantCauldron_TapTurn.2"
+      },
+      "RelativeLocation": {
+        "X": 2.1421155E-08,
+        "Y": -30.0,
+        "Z": 122.22887
+      },
+      "RelativeRotation": {
+        "Pitch": 8.827813E-31,
+        "Yaw": 0.0,
+        "Roll": 1E-45
+      },
+      "RelativeScale3D": {
+        "X": 1.5399143,
+        "Y": 1.5399143,
+        "Z": 1.5399143
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_WaterFall_Bottom_High1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_WaterFall_Bottom_High'",
+        "ObjectPath": "/Game/Art/DreamscapeSeries/DreamscapeMeadows/Meshes/Water/SM_WaterFall_Bottom_High.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_WaterfallVolumetric_02'",
+          "ObjectPath": "/Game/Art/DreamscapeSeries/DreamscapeMeadows/Materials/Water/MI_WaterfallVolumetric_02.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": -134.99998,
+        "Y": -134.61533,
+        "Z": -574.7295
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -360.0,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 3.846154,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_WaterFall_Bottom_High2_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_WaterFall_Bottom_High'",
+        "ObjectPath": "/Game/Art/DreamscapeSeries/DreamscapeMeadows/Meshes/Water/SM_WaterFall_Bottom_High.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_WaterfallVolumetric_02'",
+          "ObjectPath": "/Game/Art/DreamscapeSeries/DreamscapeMeadows/Materials/Water/MI_WaterfallVolumetric_02.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": -164.99998,
+        "Y": -115.38465,
+        "Z": -280.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -6.971729E-07,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 3.846154,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_WaterFall_Bottom_High_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_WaterFall_Bottom_High'",
+        "ObjectPath": "/Game/Art/DreamscapeSeries/DreamscapeMeadows/Meshes/Water/SM_WaterFall_Bottom_High.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_WaterfallVolumetric_02'",
+          "ObjectPath": "/Game/Art/DreamscapeSeries/DreamscapeMeadows/Materials/Water/MI_WaterfallVolumetric_02.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": -175.0,
+        "Y": -1.0090356E-15,
+        "Z": -738.33923
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 3.846154,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_Waterfall_Main1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Waterfall_Main'",
+        "ObjectPath": "/Game/Art/DreamscapeSeries/DreamscapeMeadows/Meshes/Water/SM_Waterfall_Main.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_PotionFall'",
+          "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/CauldronRoom/MI_PotionFall.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": -970.0,
+        "Y": 375.0,
+        "Z": -59.061165
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 180.0,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 0.26,
+        "Z": 0.3100179
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_Waterfall_Main2_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Waterfall_Main'",
+        "ObjectPath": "/Game/Art/DreamscapeSeries/DreamscapeMeadows/Meshes/Water/SM_Waterfall_Main.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_PotionFall'",
+          "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/CauldronRoom/MI_PotionFall.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": 5.2944384,
+        "Y": 1350.0,
+        "Z": -99.05646
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 0.26,
+        "Z": 0.3804303
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_Waterfall_Main_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Waterfall_Main'",
+        "ObjectPath": "/Game/Art/DreamscapeSeries/DreamscapeMeadows/Meshes/Water/SM_Waterfall_Main.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_PotionFall'",
+          "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/CauldronRoom/MI_PotionFall.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": 995.0,
+        "Y": 360.0,
+        "Z": -58.54365
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 0.26,
+        "Z": 0.30007017
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_WaterRipples_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_WaterRipples'",
+        "ObjectPath": "/Game/Art/CartoonWaterShader/Meshes/WaterRipples/SM_WaterRipples.2"
+      },
+      "RelativeLocation": {
+        "X": -2.9236098E-06,
+        "Y": 300.0,
+        "Z": -297.98083
+      },
+      "RelativeScale3D": {
+        "X": 2.1,
+        "Y": 2.1,
+        "Z": 2.1
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh1_0_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_GiantCauldron_Fence'",
+        "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/CauldronRoom/SM_GiantCauldron_Fence.2"
+      },
+      "RelativeLocation": {
+        "X": -4.469961E-14,
+        "Y": -365.0,
+        "Z": -90.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 180.0,
+        "Roll": -0.0
+      }
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "Timeline_2_Template",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "LengthMode": "ETimelineLengthMode::TL_LastKeyFrame",
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_TowerRoom_Craft_Cauldron_C:CurveFloat_1'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.21"
+          },
+          "PropertyName": "Timeline_2_NewTrack_0_0EB8599D46AC8CEDECA13C899F5CE081",
+          "TrackName": "NewTrack_0",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "0EB8599D-46AC8CED-ECA13C89-9F5CE081",
+      "VariableName": "Timeline_2",
+      "DirectionPropertyName": "Timeline_2__Direction_0EB8599D46AC8CEDECA13C899F5CE081",
+      "UpdateFunctionName": "Timeline_2__UpdateFunc",
+      "FinishedFunctionName": "Timeline_2__FinishedFunc"
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "Timeline_3_Template",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "LengthMode": "ETimelineLengthMode::TL_LastKeyFrame",
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_TowerRoom_Craft_Cauldron_C:CurveFloat_1_2'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.22"
+          },
+          "PropertyName": "Timeline_3_NewTrack_0_63463A764A6DDB3697C1C2BBB3CEBA57",
+          "TrackName": "NewTrack_0",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "63463A76-4A6DDB36-97C1C2BB-B3CEBA57",
+      "VariableName": "Timeline_3",
+      "DirectionPropertyName": "Timeline_3__Direction_63463A764A6DDB3697C1C2BBB3CEBA57",
+      "UpdateFunctionName": "Timeline_3__UpdateFunc",
+      "FinishedFunctionName": "Timeline_3__FinishedFunc"
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "Timeline_4_Template",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "LengthMode": "ETimelineLengthMode::TL_LastKeyFrame",
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_TowerRoom_Craft_Cauldron_C:CurveFloat_1_2_3'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.23"
+          },
+          "PropertyName": "Timeline_4_NewTrack_0_78EE826640D41D4479D36FAD569D5D52",
+          "TrackName": "NewTrack_0",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "78EE8266-40D41D44-79D36FAD-569D5D52",
+      "VariableName": "Timeline_4",
+      "DirectionPropertyName": "Timeline_4__Direction_78EE826640D41D4479D36FAD569D5D52",
+      "UpdateFunctionName": "Timeline_4__UpdateFunc",
+      "FinishedFunctionName": "Timeline_4__FinishedFunc"
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "Timeline_Lights_Template",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Properties": {
+      "TimelineLength": 1.0,
+      "LengthMode": "ETimelineLengthMode::TL_LastKeyFrame",
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_TowerRoom_Craft_Cauldron_C:CurveFloat_0'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.20"
+          },
+          "PropertyName": "Timeline_Lights_NewTrack_0_229BEAE146A2B48BCC37C898FA295777",
+          "TrackName": "NewTrack_0",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "229BEAE1-46A2B48B-CC37C898-FA295777",
+      "VariableName": "Timeline_Lights",
+      "DirectionPropertyName": "Timeline_Lights__Direction_229BEAE146A2B48BCC37C898FA295777",
+      "UpdateFunctionName": "Timeline_Lights__UpdateFunc",
+      "FinishedFunctionName": "Timeline_Lights__FinishedFunc"
+    }
+  },
+  {
+    "Type": "WidgetComponent",
+    "Name": "Widget_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'WidgetComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Cauldron_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Cauldron.0"
+    },
+    "Template": {
+      "ObjectName": "WidgetComponent'BP_TowerRoom_Craft_C:Widget_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.76"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -35.0
+      }
+    }
+  }
+]

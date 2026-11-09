@@ -1,0 +1,3578 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_TowerRoom_Craft_Fermentator_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+    },
+    "Properties": {
+      "Timelines": [
+        {
+          "ObjectName": "TimelineTemplate'BP_TowerRoom_Craft_Fermentator_C:Timeline_1_Template'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.69"
+        },
+        {
+          "ObjectName": "TimelineTemplate'BP_TowerRoom_Craft_Fermentator_C:Timeline_2_Template'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.70"
+        },
+        {
+          "ObjectName": "TimelineTemplate'BP_TowerRoom_Craft_Fermentator_C:Timeline_3_Template'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.71"
+        },
+        {
+          "ObjectName": "TimelineTemplate'BP_TowerRoom_Craft_Fermentator_C:Timeline_4_Template'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.72"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.61"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_TowerRoom_Craft_Fermentator_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.40"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:ExecuteUbergraph_BP_TowerRoom_Craft_Fermentator'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.23"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:Timeline_1__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.32"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:Timeline_1__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.33"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:Timeline_2__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.34"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:Timeline_2__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.35"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:Timeline_3__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.36"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:Timeline_3__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.37"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:Timeline_4__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.38"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:Timeline_4__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.39"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:OnMoveEnd_Event'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.24"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:OpenTap'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.26"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:CloseTap'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.21"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:ResultSpawn'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.30"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:CraftAnimationEnd'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.22"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:StartCraftAnimation'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.31"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:ResetVisuals'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.29"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.27"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:Bounce'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.20"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:ReceiveTick'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.28"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:OpenCoverFast'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.25"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:ExecuteUbergraph_BP_TowerRoom_Craft_Fermentator'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.23"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "P_Fermentator",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "P_Poison_Hit_Fermentator",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FermentatorCover",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FermentatorHandle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FermentatorCoverPivot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FermentatorFlesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Recipe",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ChildActorComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Recipe1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ChildActorComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PointLight1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'PointLightComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_Waterfall_Main2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FermentatorMain",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Timeline_4_NewTrack_0_5CB3CE03433B460C1738BA990536B12F",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Timeline_4__Direction_5CB3CE03433B460C1738BA990536B12F",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Timeline_4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Timeline_3_NewTrack_1_7A35D2134219B42F925BDE9A9DEEE744",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Timeline_3__Direction_7A35D2134219B42F925BDE9A9DEEE744",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Timeline_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Timeline_2_NewTrack_0_4570D3FF489F1CF563A8FF85C53D52AA",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Timeline_2__Direction_4570D3FF489F1CF563A8FF85C53D52AA",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Timeline_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Timeline_1_NewTrack_0_001B881A443381352ADB19B53B943265",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Timeline_1__Direction_001B881A443381352ADB19B53B943265",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Timeline_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RefMatFog",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "WaterfallScaleStart",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "TargetYHandle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CurrentYHandle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_TowerRoom_Craft_Fermentator": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:ExecuteUbergraph_BP_TowerRoom_Craft_Fermentator'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.23"
+      },
+      "OpenCoverFast": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:OpenCoverFast'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.25"
+      },
+      "ReceiveTick": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:ReceiveTick'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.28"
+      },
+      "Bounce": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:Bounce'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.20"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.27"
+      },
+      "ResetVisuals": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:ResetVisuals'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.29"
+      },
+      "StartCraftAnimation": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:StartCraftAnimation'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.31"
+      },
+      "CraftAnimationEnd": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:CraftAnimationEnd'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.22"
+      },
+      "ResultSpawn": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:ResultSpawn'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.30"
+      },
+      "CloseTap": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:CloseTap'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.21"
+      },
+      "OpenTap": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:OpenTap'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.26"
+      },
+      "OnMoveEnd_Event": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:OnMoveEnd_Event'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.24"
+      },
+      "Timeline_4__UpdateFunc": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:Timeline_4__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.39"
+      },
+      "Timeline_4__FinishedFunc": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:Timeline_4__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.38"
+      },
+      "Timeline_3__UpdateFunc": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:Timeline_3__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.37"
+      },
+      "Timeline_3__FinishedFunc": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:Timeline_3__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.36"
+      },
+      "Timeline_2__UpdateFunc": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:Timeline_2__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.35"
+      },
+      "Timeline_2__FinishedFunc": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:Timeline_2__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.34"
+      },
+      "Timeline_1__UpdateFunc": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:Timeline_1__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.33"
+      },
+      "Timeline_1__FinishedFunc": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Fermentator_C:Timeline_1__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.32"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_TowerRoom_Craft_Fermentator_C'Default__BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.8"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_Interactable_ResourceStand_C",
+    "Name": "Stand_3_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Base/BP_Interactable_ResourceStand.BP_Interactable_ResourceStand_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Fermentator_C:Stand_1_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.12"
+    },
+    "Template": {
+      "ObjectName": "BP_Interactable_ResourceStand_C'BP_TowerRoom_Craft_C:Stand_1_GEN_VARIABLE.Stand_3_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.2"
+    },
+    "ActorLabel": "BP_Interactable_ResourceStand",
+    "ActorInstanceGuid": {
+      "ActorGuid": "00000000-00000000-00000000-00000000",
+      "ActorInstanceGuid": "00000000-00000000-00000000-00000000"
+    }
+  },
+  {
+    "Type": "BP_Interactable_ResourceStand_C",
+    "Name": "Stand_1_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Base/BP_Interactable_ResourceStand.BP_Interactable_ResourceStand_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Fermentator_C:Stand_2_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.13"
+    },
+    "Template": {
+      "ObjectName": "BP_Interactable_ResourceStand_C'Default__BP_Interactable_ResourceStand_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_Interactable_ResourceStand.1"
+    },
+    "ActorLabel": "BP_Interactable_ResourceStand",
+    "ActorInstanceGuid": {
+      "ActorGuid": "00000000-00000000-00000000-00000000",
+      "ActorInstanceGuid": "00000000-00000000-00000000-00000000"
+    }
+  },
+  {
+    "Type": "BP_Interactable_ResourceStand_C",
+    "Name": "Stand_2_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Base/BP_Interactable_ResourceStand.BP_Interactable_ResourceStand_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Fermentator_C:Stand_3_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.14"
+    },
+    "Template": {
+      "ObjectName": "BP_Interactable_ResourceStand_C'BP_TowerRoom_Craft_C:Stand_3_GEN_VARIABLE.Stand_2_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.4"
+    },
+    "ActorLabel": "BP_Interactable_ResourceStand",
+    "ActorInstanceGuid": {
+      "ActorGuid": "00000000-00000000-00000000-00000000",
+      "ActorInstanceGuid": "00000000-00000000-00000000-00000000"
+    }
+  },
+  {
+    "Type": "BP_Interactable_ResourceStand_C",
+    "Name": "Stand_4_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Base/BP_Interactable_ResourceStand.BP_Interactable_ResourceStand_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Fermentator_C:Stand_4_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.15"
+    },
+    "Template": {
+      "ObjectName": "BP_Interactable_ResourceStand_C'BP_TowerRoom_Craft_C:Stand_4_GEN_VARIABLE.Stand_4_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.5"
+    },
+    "ActorLabel": "BP_Interactable_ResourceStand",
+    "ActorInstanceGuid": {
+      "ActorGuid": "00000000-00000000-00000000-00000000",
+      "ActorInstanceGuid": "00000000-00000000-00000000-00000000"
+    }
+  },
+  {
+    "Type": "BP_Interactable_RoomCenter_C",
+    "Name": "Center_GEN_VARIABLE_BP_Interactable_RoomCenter_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Base/BP_Interactable_RoomCenter.BP_Interactable_RoomCenter_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Fermentator_C:Center_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.9"
+    },
+    "Template": {
+      "ObjectName": "BP_Interactable_RoomCenter_C'Default__BP_Interactable_RoomCenter_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_Interactable_RoomCenter.1"
+    },
+    "ActorLabel": "BP_Interactable_CraftCenter",
+    "ActorInstanceGuid": {
+      "ActorGuid": "00000000-00000000-00000000-00000000",
+      "ActorInstanceGuid": "00000000-00000000-00000000-00000000"
+    }
+  },
+  {
+    "Type": "BP_Recipe_C",
+    "Name": "Recipe_GEN_VARIABLE_BP_Recipe_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Resources/BP_Recipe.BP_Recipe_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Fermentator_C:Recipe1_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.10"
+    },
+    "Template": {
+      "ObjectName": "BP_Recipe_C'Default__BP_Recipe_C'",
+      "ObjectPath": "/Game/Blueprints/Resources/BP_Recipe.2"
+    },
+    "Properties": {
+      "Recipe": "Fer_DampDough"
+    },
+    "ActorLabel": "BP_Recipe",
+    "ActorInstanceGuid": {
+      "ActorGuid": "00000000-00000000-00000000-00000000",
+      "ActorInstanceGuid": "00000000-00000000-00000000-00000000"
+    }
+  },
+  {
+    "Type": "BP_Recipe_C",
+    "Name": "Recipe_GEN_VARIABLE_BP_Recipe_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Resources/BP_Recipe.BP_Recipe_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Fermentator_C:Recipe_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.11"
+    },
+    "Template": {
+      "ObjectName": "BP_Recipe_C'Default__BP_Recipe_C'",
+      "ObjectPath": "/Game/Blueprints/Resources/BP_Recipe.2"
+    },
+    "Properties": {
+      "Recipe": "Fer_SpringtimeHumus"
+    },
+    "ActorLabel": "BP_Recipe",
+    "ActorInstanceGuid": {
+      "ActorGuid": "00000000-00000000-00000000-00000000",
+      "ActorInstanceGuid": "00000000-00000000-00000000-00000000"
+    }
+  },
+  {
+    "Type": "BP_TowerRoom_Craft_Fermentator_C",
+    "Name": "Default__BP_TowerRoom_Craft_Fermentator_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.BP_TowerRoom_Craft_Fermentator_C'",
+    "Package": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator",
+    "Template": {
+      "ObjectName": "BP_TowerRoom_Craft_C'Default__BP_TowerRoom_Craft_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.7"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "Timeline_2_NewTrack_0_4570D3FF489F1CF563A8FF85C53D52AA": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "WaterfallScaleStart": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "TargetYHandle": -50.0,
+      "PrimaryActorTick": {
+        "bCanEverTick": true
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Center_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Template": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_C:Center_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.8"
+    },
+    "Properties": {
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Interactable_RoomCenter_C'BP_TowerRoom_Craft_Fermentator_C:Center_GEN_VARIABLE.Center_GEN_VARIABLE_BP_Interactable_RoomCenter_C_CAT'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.5"
+      },
+      "RelativeLocation": {
+        "X": 21.726036,
+        "Y": 1525.0,
+        "Z": 1.0
+      },
+      "RelativeScale3D": {
+        "X": 1.3,
+        "Y": 1.3,
+        "Z": 1.3
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Recipe1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Properties": {
+      "ChildActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_Recipe_C'",
+        "ObjectPath": "/Game/Blueprints/Resources/BP_Recipe.1"
+      },
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Recipe_C'BP_TowerRoom_Craft_Fermentator_C:Recipe1_GEN_VARIABLE.Recipe_GEN_VARIABLE_BP_Recipe_C_CAT'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.6"
+      },
+      "RelativeLocation": {
+        "X": 320.0,
+        "Y": 1144.5094,
+        "Z": 4.5474735E-13
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Recipe_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Properties": {
+      "ChildActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_Recipe_C'",
+        "ObjectPath": "/Game/Blueprints/Resources/BP_Recipe.1"
+      },
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Recipe_C'BP_TowerRoom_Craft_Fermentator_C:Recipe_GEN_VARIABLE.Recipe_GEN_VARIABLE_BP_Recipe_C_CAT'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.7"
+      },
+      "RelativeLocation": {
+        "X": -320.0,
+        "Y": 1144.5094,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Stand_1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Template": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_C:Stand_1_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.10"
+    },
+    "Properties": {
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Interactable_ResourceStand_C'BP_TowerRoom_Craft_Fermentator_C:Stand_1_GEN_VARIABLE.Stand_3_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.1"
+      },
+      "RelativeLocation": {
+        "X": -1300.0,
+        "Y": 900.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Stand_2_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Template": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_C:Stand_2_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.11"
+    },
+    "Properties": {
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Interactable_ResourceStand_C'BP_TowerRoom_Craft_Fermentator_C:Stand_2_GEN_VARIABLE.Stand_1_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.2"
+      },
+      "RelativeLocation": {
+        "X": -600.0,
+        "Y": 1500.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Stand_3_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Template": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_C:Stand_3_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.12"
+    },
+    "Properties": {
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Interactable_ResourceStand_C'BP_TowerRoom_Craft_Fermentator_C:Stand_3_GEN_VARIABLE.Stand_2_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.3"
+      },
+      "RelativeLocation": {
+        "X": 600.0,
+        "Y": 1500.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Stand_4_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Template": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_C:Stand_4_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.13"
+    },
+    "Properties": {
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Interactable_ResourceStand_C'BP_TowerRoom_Craft_Fermentator_C:Stand_4_GEN_VARIABLE.Stand_4_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.4"
+      },
+      "RelativeLocation": {
+        "X": 1300.0,
+        "Y": 900.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.58918345,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.58918345,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.6876289,
+            "Value": 0.994323,
+            "ArriveTangent": -1.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": -1.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 2.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_1",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 8.20579,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 8.2057905,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.25,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.5,
+            "Value": 0.0,
+            "ArriveTangent": -9.60084,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": -9.600779,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_1_2",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": -1.0970972,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": -1.0970975,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.0,
+            "Value": 1.0,
+            "ArriveTangent": -1.5513343,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": -1.5513355,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveVector",
+    "Name": "CurveVector_0",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveVector'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Properties": {
+      "FloatCurves": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.15,
+            "Value": 1.1084844,
+            "ArriveTangent": -0.024100974,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": -0.024100993,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.30686402,
+            "Value": 0.91219807,
+            "ArriveTangent": 0.09417026,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.09417026,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.5,
+            "Value": 1.0,
+            "ArriveTangent": 1.2653445,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 1.2653451,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      },
+      "FloatCurves[1]": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.15,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.3,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.5,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      },
+      "FloatCurves[2]": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.14429879,
+            "Value": 0.7329471,
+            "ArriveTangent": 0.040668823,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.040668264,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.3016619,
+            "Value": 1.1799105,
+            "ArriveTangent": -0.065028615,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": -0.06502869,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.5,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 1.5911185,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    },
+    "FloatCurves": [
+      {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.15,
+            "Value": 1.1084844,
+            "ArriveTangent": -0.024100974,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": -0.024100993,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.30686402,
+            "Value": 0.91219807,
+            "ArriveTangent": 0.09417026,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.09417026,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.5,
+            "Value": 1.0,
+            "ArriveTangent": 1.2653445,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 1.2653451,
+            "LeaveTangentWeight": 0.0
+          }
+        ],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant"
+      },
+      {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.15,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.3,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.5,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant"
+      },
+      {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.14429879,
+            "Value": 0.7329471,
+            "ArriveTangent": 0.040668823,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.040668264,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.3016619,
+            "Value": 1.1799105,
+            "ArriveTangent": -0.065028615,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": -0.06502869,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.5,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 1.5911185,
+            "LeaveTangentWeight": 0.0
+          }
+        ],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant"
+      }
+    ]
+  },
+  {
+    "Type": "Function",
+    "Name": "Bounce",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "CloseTap",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "CraftAnimationEnd",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_TowerRoom_Craft_C:CraftAnimationEnd'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.20"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_TowerRoom_Craft_Fermentator",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_RLerp_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_RLerp_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_RefSelf",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_ResourceAnimation_C'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_ResourceAnimation.0"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeRotation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_GetTimeSeconds_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Sin_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeRotator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeRotation_SweepHitResult_1",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_GetTimeSeconds_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Sin_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeRotator_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeRotation_SweepHitResult_2",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeRotation_SweepHitResult_3",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_Alpha_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_B_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_VariableSet_CurrentYHandle_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_MakeRotator_Pitch_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_MakeRotator_Pitch_ImplicitCast_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnMoveEnd_Event",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_TowerRoom_Craft_C:OnMoveEnd_Event'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.34"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "RefSelf",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_ResourceAnimation_C'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_ResourceAnimation.0"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OpenCoverFast",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OpenTap",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_TowerRoom_Craft_C:ReceiveBeginPlay'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.35"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveTick",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:ReceiveTick'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ResetVisuals",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_TowerRoom_Craft_C:ResetVisuals'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.37"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ResultSpawn",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_TowerRoom_Craft_C:ResultSpawn'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.38"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "StartCraftAnimation",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_TowerRoom_Craft_C:StartCraftAnimation'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.42"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_1__FinishedFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_1__UpdateFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_2__FinishedFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_2__UpdateFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_3__FinishedFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_3__UpdateFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_4__FinishedFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_4__UpdateFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'ChildActorComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Fermentator_C:Stand_2_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.13"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "Stand_2",
+            "AssociatedGuid": "FB456037-4F547F43-2819F2A0-7D3620D6"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'ChildActorComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Fermentator_C:Center_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.9"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "Center",
+            "AssociatedGuid": "E8561062-4F7CBB53-885C45B9-A5C5786A"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "StaticMeshComponent'BP_TowerRoom_Craft_Fermentator_C:Plane_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.67"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+            },
+            "SCSVariableName": "Plane",
+            "AssociatedGuid": "49CF0296-44C41BB7-707813B9-87C42795"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'ChildActorComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Fermentator_C:Stand_1_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.12"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "Stand_1",
+            "AssociatedGuid": "BD766733-41E91D96-AADC4789-77EC1980"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'ChildActorComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Fermentator_C:Stand_4_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.15"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "Stand_4",
+            "AssociatedGuid": "3978AAE8-463C96EE-B642D48D-91A23BA4"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'ChildActorComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Fermentator_C:Stand_3_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.14"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "Stand_3",
+            "AssociatedGuid": "96E7D32C-482AF704-CE230FAC-4669CE75"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'SceneComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SceneComponent'BP_TowerRoom_Craft_Fermentator_C:SpawnReward_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.46"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "SpawnReward",
+            "AssociatedGuid": "EBD2292D-43278824-325A289A-5F40F56C"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'SceneComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SceneComponent'BP_TowerRoom_Craft_Fermentator_C:MonsterSpawn_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.45"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+            },
+            "SCSVariableName": "MonsterSpawn",
+            "AssociatedGuid": "41BDDEBA-4288F8C3-FA368BAD-CAC1847D"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'SceneComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SceneComponent'BP_TowerRoom_Craft_Fermentator_C:TargetCraft_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.47"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "TargetCraft",
+            "AssociatedGuid": "737393D6-4A1CDAC1-DABC679A-D0668479"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'SceneComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SceneComponent'BP_TowerRoom_Craft_Fermentator_C:TargetResult_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.48"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "TargetResult",
+            "AssociatedGuid": "56D9B4D5-49D827CB-913DC3B9-56EFCA42"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'WidgetComponent'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "WidgetComponent'BP_TowerRoom_Craft_Fermentator_C:Widget_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.73"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "Widget",
+            "AssociatedGuid": "8BC1FC4F-44108E20-0776E38D-F51E5538"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "P_Poison_Hit_Fermentator_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'P_Poison_Hit_Fermentator'",
+        "ObjectPath": "/Game/ImproveFights_Vfx/Particles/P_Poison_Hit_Fermentator.63"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Color_02",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Color_02",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Color_Boost",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Color_Boost",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "ColorBoost",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.ColorBoost",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Drops",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Drops",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "End",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'Vector3f'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.End",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'Vector3f'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "RibbonLenght",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.RibbonLenght",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "RibbonWidth",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.RibbonWidth",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "RightVector",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'Vector3f'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.RightVector",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'Vector3f'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Scale",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Scale",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Size",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Size",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "SmokeOpacity",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.SmokeOpacity",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "UpVector",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'Vector3f'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.UpVector",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'Vector3f'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.Color",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 16,
+            "Name": "User.Color_02",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 80,
+            "Name": "User.Color_Boost",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 96,
+            "Name": "User.ColorBoost",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 32,
+            "Name": "User.Drops",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 84,
+            "Name": "User.End",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'Vector3f'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 36,
+            "Name": "User.RibbonLenght",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 40,
+            "Name": "User.RibbonWidth",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 68,
+            "Name": "User.RightVector",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'Vector3f'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 44,
+            "Name": "User.Scale",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 48,
+            "Name": "User.Size",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 52,
+            "Name": "User.SmokeOpacity",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 56,
+            "Name": "User.UpVector",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'Vector3f'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          67,
+          142,
+          47,
+          62,
+          168,
+          8,
+          1,
+          62,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          128,
+          63,
+          242,
+          144,
+          16,
+          63,
+          12,
+          49,
+          167,
+          62,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          64,
+          64,
+          0,
+          0,
+          140,
+          66,
+          0,
+          0,
+          160,
+          64,
+          0,
+          0,
+          160,
+          64,
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          200,
+          66,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          32,
+          65
+        ]
+      },
+      "RelativeLocation": {
+        "X": -10.0,
+        "Y": 332.0,
+        "Z": 382.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": -0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 0.99999994,
+        "Z": 0.99999994
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "P_Fermentator_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'Par_Fermentator_Smoke'",
+        "ObjectPath": "/Game/Art/VFX/Luos8Elements/Particles/Earth/Par_Fermentator_Smoke.15"
+      },
+      "RelativeLocation": {
+        "X": -6E-06,
+        "Y": 320.29684,
+        "Z": -52.484207
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "PointLightComponent",
+    "Name": "PointLight1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PointLightComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Properties": {
+      "IntensityUnits": "ELightUnits::Candelas",
+      "AttenuationRadius": 1406.3511,
+      "Intensity": 400.0,
+      "LightColor": {
+        "B": 86,
+        "G": 205,
+        "R": 255,
+        "A": 255,
+        "Hex": "FFCD56"
+      },
+      "RelativeLocation": {
+        "X": 20.93112,
+        "Y": -1575.0,
+        "Z": 684.7436
+      },
+      "RelativeRotation": {
+        "Pitch": -0.0,
+        "Yaw": -180.0,
+        "Roll": 0.0
+      }
+    },
+    "IntensityNits": 0.0
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "MonsterSpawn_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Template": {
+      "ObjectName": "SceneComponent'BP_TowerRoom_C:MonsterSpawn_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.22"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 1730.0,
+        "Z": 195.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SpawnReward_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Template": {
+      "ObjectName": "SceneComponent'BP_TowerRoom_Craft_C:SpawnReward_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.50"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": -1.1315603E-05,
+        "Y": -164.04155,
+        "Z": 448.58978
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "TargetCraft_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Template": {
+      "ObjectName": "SceneComponent'BP_TowerRoom_Craft_C:TargetCraft_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.51"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -181.0,
+        "Z": 411.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "TargetResult_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Template": {
+      "ObjectName": "SceneComponent'BP_TowerRoom_Craft_C:TargetResult_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.52"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 1525.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.61"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_TowerRoom_Craft_Fermentator_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.44"
+      },
+      "VariableGuid": "69D9BFC1-43FC734C-F7B2FEB4-F4A6EF6D",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.61"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_Craft_Fermentator_C:FermentatorMain_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.66"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0.SCS_Node_26'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.58"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0.SCS_Node_25'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.57"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0.SCS_Node_27'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.59"
+        }
+      ],
+      "VariableGuid": "7DB62328-43598380-4F542F8F-9FE3CD70",
+      "InternalVariableName": "FermentatorMain"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_13",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.61"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_Craft_Fermentator_C:SM_Waterfall_Main2_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.68"
+      },
+      "ParentComponentOrVariableName": "Plane",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "VariableGuid": "D66969FA-4C65384A-033ECA86-F7528F3B",
+      "InternalVariableName": "SM_Waterfall_Main2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_19",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.61"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'PointLightComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PointLightComponent'BP_TowerRoom_Craft_Fermentator_C:PointLight1_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.43"
+      },
+      "ParentComponentOrVariableName": "Plane",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "VariableGuid": "D92A3F3B-41088671-05FF13BC-981C8D27",
+      "InternalVariableName": "PointLight1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.61"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_TowerRoom_Craft_Fermentator_C:P_Poison_Hit_Fermentator_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.41"
+      },
+      "ParentComponentOrVariableName": "TargetCraft",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_Craft_C",
+      "VariableGuid": "42D7D231-463C377B-C71DEABB-B34EB533",
+      "InternalVariableName": "P_Poison_Hit_Fermentator"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_22",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.61"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ChildActorComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Fermentator_C:Recipe1_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.10"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "VariableGuid": "ADC56EA0-47489249-1D1BAE98-FAE0B266",
+      "InternalVariableName": "Recipe1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_23",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.61"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ChildActorComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Fermentator_C:Recipe_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.11"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "VariableGuid": "587604FC-43F3C76F-80C8908B-814DC097",
+      "InternalVariableName": "Recipe"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_24",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.61"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_Craft_Fermentator_C:FermentatorFlesh_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.64"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "VariableGuid": "2825E14C-44AFFDC8-8CD23792-36E8398A",
+      "InternalVariableName": "FermentatorFlesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_25",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.61"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_Craft_Fermentator_C:FermentatorHandle_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.65"
+      },
+      "VariableGuid": "440FF2F6-491C529F-716143A1-610B4F61",
+      "InternalVariableName": "FermentatorHandle"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_26",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.61"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_Craft_Fermentator_C:FermentatorCoverPivot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.63"
+      },
+      "VariableGuid": "43D1A0EA-430F223C-4AD0D098-8AF7C1CB",
+      "InternalVariableName": "FermentatorCoverPivot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_27",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.61"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_Craft_Fermentator_C:FermentatorCover_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.62"
+      },
+      "VariableGuid": "A4670988-44260DCA-E6D720AB-F9B21B0B",
+      "InternalVariableName": "FermentatorCover"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.61"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'BP_TowerRoom_Craft_Fermentator_C:P_Fermentator_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.42"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "VariableGuid": "B6A1A64F-4D5186FA-EF5DD88D-3770C56A",
+      "InternalVariableName": "P_Fermentator"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.50"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.51"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.52"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0.SCS_Node_22'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.54"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0.SCS_Node_23'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.55"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0.SCS_Node_24'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.56"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.53"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.60"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.50"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.51"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.52"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0.SCS_Node_22'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.54"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0.SCS_Node_23'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.55"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0.SCS_Node_24'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.56"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0.SCS_Node_26'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.58"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0.SCS_Node_25'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.57"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0.SCS_Node_27'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.59"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.53"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.60"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Fermentator_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.49"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "FermentatorCover_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Fermentator_Cover'",
+        "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/Fermentator/SM_Fermentator_Cover.2"
+      },
+      "RelativeLocation": {
+        "X": 4.847528,
+        "Y": 192.47525,
+        "Z": 680.5747
+      },
+      "RelativeRotation": {
+        "Pitch": 1.314504E-13,
+        "Yaw": 180.0,
+        "Roll": 8.302109E-13
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "FermentatorCoverPivot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Fermentator_Cover_Pivot'",
+        "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/Fermentator/SM_Fermentator_Cover_Pivot.2"
+      },
+      "RelativeLocation": {
+        "X": 5.416546,
+        "Y": 192.47525,
+        "Z": 680.5747
+      },
+      "RelativeRotation": {
+        "Pitch": -1.314504E-13,
+        "Yaw": -3.9434585E-07,
+        "Roll": -6.522791E-16
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "FermentatorFlesh_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Fermentator_Fungus'",
+        "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/Fermentator/SM_Fermentator_Fungus.2"
+      },
+      "RelativeLocation": {
+        "X": 1.8719156E-05,
+        "Y": -171.15541,
+        "Z": -73.08453
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -180.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "FermentatorHandle_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Fermentator_Pressure_Handle'",
+        "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/Fermentator/SM_Fermentator_Pressure_Handle.2"
+      },
+      "RelativeLocation": {
+        "X": -18.170761,
+        "Y": -829.58606,
+        "Z": 296.45758
+      },
+      "RelativeRotation": {
+        "Pitch": -1.314504E-13,
+        "Yaw": -3.9434585E-07,
+        "Roll": -6.522791E-16
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "FermentatorMain_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Fermentator_Main'",
+        "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/Fermentator/SM_Fermentator_Main.2"
+      },
+      "RelativeLocation": {
+        "X": 1.033426E-05,
+        "Y": -141.4996,
+        "Z": -75.676125
+      },
+      "RelativeRotation": {
+        "Pitch": 3.8369308E-13,
+        "Yaw": 180.0,
+        "Roll": 4.3521273E-15
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Plane_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'BP_TowerRoom_C:Plane_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.39"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Fermentator_Room_Floor'",
+        "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/Fermentator/SM_Fermentator_Room_Floor.2"
+      },
+      "OverrideMaterials": [
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_MetalFence'",
+          "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/CauldronRoom/MI_MetalFence.0"
+        }
+      ],
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 180.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_Waterfall_Main2_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Waterfall_Main'",
+        "ObjectPath": "/Game/Art/DreamscapeSeries/DreamscapeMeadows/Meshes/Water/SM_Waterfall_Main.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_PotionFall'",
+          "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/CauldronRoom/MI_PotionFall.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": 5.2944384,
+        "Y": 1350.0,
+        "Z": -99.05646
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 0.26,
+        "Z": 0.3804303
+      }
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "Timeline_1_Template",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Properties": {
+      "LengthMode": "ETimelineLengthMode::TL_LastKeyFrame",
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_TowerRoom_Craft_Fermentator_C:CurveFloat_1_2'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.18"
+          },
+          "PropertyName": "Timeline_1_NewTrack_0_001B881A443381352ADB19B53B943265",
+          "TrackName": "NewTrack_0",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "001B881A-44338135-2ADB19B5-3B943265",
+      "VariableName": "Timeline_1",
+      "DirectionPropertyName": "Timeline_1__Direction_001B881A443381352ADB19B53B943265",
+      "UpdateFunctionName": "Timeline_1__UpdateFunc",
+      "FinishedFunctionName": "Timeline_1__FinishedFunc"
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "Timeline_2_Template",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Properties": {
+      "TimelineLength": 0.5,
+      "VectorTracks": [
+        {
+          "CurveVector": {
+            "ObjectName": "CurveVector'BP_TowerRoom_Craft_Fermentator_C:CurveVector_0'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.19"
+          },
+          "PropertyName": "Timeline_2_NewTrack_0_4570D3FF489F1CF563A8FF85C53D52AA",
+          "TrackName": "NewTrack_0",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "4570D3FF-489F1CF5-63A8FF85-C53D52AA",
+      "VariableName": "Timeline_2",
+      "DirectionPropertyName": "Timeline_2__Direction_4570D3FF489F1CF563A8FF85C53D52AA",
+      "UpdateFunctionName": "Timeline_2__UpdateFunc",
+      "FinishedFunctionName": "Timeline_2__FinishedFunc"
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "Timeline_3_Template",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Properties": {
+      "TimelineLength": 2.0,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_TowerRoom_Craft_Fermentator_C:CurveFloat_0'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.16"
+          },
+          "PropertyName": "Timeline_3_NewTrack_1_7A35D2134219B42F925BDE9A9DEEE744",
+          "TrackName": "NewTrack_1",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "7A35D213-4219B42F-925BDE9A-9DEEE744",
+      "VariableName": "Timeline_3",
+      "DirectionPropertyName": "Timeline_3__Direction_7A35D2134219B42F925BDE9A9DEEE744",
+      "UpdateFunctionName": "Timeline_3__UpdateFunc",
+      "FinishedFunctionName": "Timeline_3__FinishedFunc"
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "Timeline_4_Template",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Properties": {
+      "TimelineLength": 0.5,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_TowerRoom_Craft_Fermentator_C:CurveFloat_1'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.17"
+          },
+          "PropertyName": "Timeline_4_NewTrack_0_5CB3CE03433B460C1738BA990536B12F",
+          "TrackName": "NewTrack_0",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "5CB3CE03-433B460C-1738BA99-0536B12F",
+      "VariableName": "Timeline_4",
+      "DirectionPropertyName": "Timeline_4__Direction_5CB3CE03433B460C1738BA990536B12F",
+      "UpdateFunctionName": "Timeline_4__UpdateFunc",
+      "FinishedFunctionName": "Timeline_4__FinishedFunc"
+    }
+  },
+  {
+    "Type": "WidgetComponent",
+    "Name": "Widget_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'WidgetComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Fermentator_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Fermentator.0"
+    },
+    "Template": {
+      "ObjectName": "WidgetComponent'BP_TowerRoom_Craft_C:Widget_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.76"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -35.0
+      }
+    }
+  }
+]

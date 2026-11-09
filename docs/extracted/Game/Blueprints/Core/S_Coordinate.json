@@ -1,0 +1,33 @@
+[
+  {
+    "Type": "UserDefinedStruct",
+    "Name": "S_Coordinate",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'UserDefinedStruct'",
+    "Package": "/Game/Blueprints/Core/S_Coordinate",
+    "Properties": {
+      "Guid": "B7EB8E2D-4D407282-7548F791-6081D875"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "X_2_B43A67114C41B2A9B097B9A67C771A84",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Y_4_7528514341F3D4697D84E58BF22BD5EE",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      }
+    ],
+    "StructFlags": 0,
+    "DefaultProperties": {
+      "X_2_B43A67114C41B2A9B097B9A67C771A84": 0,
+      "Y_4_7528514341F3D4697D84E58BF22BD5EE": 0
+    }
+  }
+]

@@ -1,0 +1,870 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_TowerRoom_Entrance_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+    },
+    "Properties": {
+      "DynamicBindingObjects": [
+        {
+          "ObjectName": "ComponentDelegateBinding'BP_TowerRoom_Entrance_C:ComponentDelegateBinding_0'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.2"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Entrance_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.8"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_TowerRoom_Entrance_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.5"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_TowerRoom_Entrance_C:ExecuteUbergraph_BP_TowerRoom_Entrance'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.4"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_TowerRoom_Entrance_C:BndEvt__BP_TowerRoom_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.3"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Entrance_C:ExecuteUbergraph_BP_TowerRoom_Entrance'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.4"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_TowerRoom_Entrance": {
+        "ObjectName": "Function'BP_TowerRoom_Entrance_C:ExecuteUbergraph_BP_TowerRoom_Entrance'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.4"
+      },
+      "BndEvt__BP_TowerRoom_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature": {
+        "ObjectName": "Function'BP_TowerRoom_Entrance_C:BndEvt__BP_TowerRoom_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.3"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_TowerRoom_Entrance_C'Default__BP_TowerRoom_Entrance_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_TowerRoom_Entrance_C",
+    "Name": "Default__BP_TowerRoom_Entrance_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.BP_TowerRoom_Entrance_C'",
+    "Package": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance",
+    "Template": {
+      "ObjectName": "BP_TowerRoom_C'Default__BP_TowerRoom_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.2"
+    },
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  },
+  {
+    "Type": "ComponentDelegateBinding",
+    "Name": "ComponentDelegateBinding_0",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ComponentDelegateBinding'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Entrance_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.0"
+    },
+    "Properties": {
+      "ComponentDelegateBindings": [
+        {
+          "ComponentPropertyName": "Box",
+          "DelegatePropertyName": "OnComponentBeginOverlap",
+          "FunctionNameToBind": "BndEvt__BP_TowerRoom_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "BndEvt__BP_TowerRoom_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Entrance_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_TowerRoom_C:BndEvt__BP_TowerRoom_Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.7"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "OverlappedComponent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "OtherActor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "OtherComp",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "OtherBodyIndex",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bFromSweep",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "SweepResult",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_TowerRoom_Entrance",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Entrance_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_OverlappedComponent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_OtherActor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_OtherComp",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_ComponentBoundEvent_OtherBodyIndex",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_ComponentBoundEvent_bFromSweep",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_ComponentBoundEvent_SweepResult",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ConstParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Player_C'",
+          "ObjectPath": "/Game/Blueprints/Core/BP_Player.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Entrance_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.0"
+    },
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "StaticMeshComponent'BP_TowerRoom_Entrance_C:Plane_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.11"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+            },
+            "SCSVariableName": "Plane",
+            "AssociatedGuid": "49CF0296-44C41BB7-707813B9-87C42795"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "StaticMeshComponent'BP_TowerRoom_Entrance_C:BotWall_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.9"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+            },
+            "SCSVariableName": "BotWall",
+            "AssociatedGuid": "A3417093-4DB04EDE-5CD3EE96-54469B7D"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "StaticMeshComponent'BP_TowerRoom_Entrance_C:SM_TowerInterior_WallPillar_Long2_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.14"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+            },
+            "SCSVariableName": "SM_TowerInterior_WallPillar_Long2",
+            "AssociatedGuid": "C7083D2C-4D7F4624-87F7B5A8-EEB31C74"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "StaticMeshComponent'BP_TowerRoom_Entrance_C:SM_TowerInterior_WallPillar_Long1_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.13"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+            },
+            "SCSVariableName": "SM_TowerInterior_WallPillar_Long1",
+            "AssociatedGuid": "F159DD73-4D9C1B97-755A5BB3-9401D37E"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "StaticMeshComponent'BP_TowerRoom_Entrance_C:RightWall_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.12"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+            },
+            "SCSVariableName": "RightWall",
+            "AssociatedGuid": "7F86E524-4F552E42-68BA05A7-0BEF6126"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "StaticMeshComponent'BP_TowerRoom_Entrance_C:LeftWall_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.10"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+            },
+            "SCSVariableName": "LeftWall",
+            "AssociatedGuid": "D33E0C32-4E586B38-DFFEC697-FCE66585"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "StaticMeshComponent'BP_TowerRoom_Entrance_C:TopWall_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.17"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+            },
+            "SCSVariableName": "TopWall",
+            "AssociatedGuid": "27B716CE-4752CD25-7DFA1B8B-6DB44E02"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "StaticMeshComponent'BP_TowerRoom_Entrance_C:SM_TowerInterior_WallPillar_Long_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.16"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+            },
+            "SCSVariableName": "SM_TowerInterior_WallPillar_Long",
+            "AssociatedGuid": "6A2F997C-4306B3E4-DB91758B-E3435DCF"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "StaticMeshComponent'BP_TowerRoom_Entrance_C:SM_TowerInterior_WallPillar_Long3_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.15"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+            },
+            "SCSVariableName": "SM_TowerInterior_WallPillar_Long3",
+            "AssociatedGuid": "9D2760D1-4A545B4A-5EB964A5-C8180759"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Entrance_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Entrance_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.8"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_TowerRoom_Entrance_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.6"
+      },
+      "VariableGuid": "430199F5-438D15B4-47859BAA-FADCDE8C",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Entrance_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.0"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_TowerRoom_Entrance_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.7"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "BotWall_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Entrance_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.0"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'BP_TowerRoom_C:BotWall_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.37"
+    },
+    "Properties": {
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "bVisible": false
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "LeftWall_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Entrance_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.0"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'BP_TowerRoom_C:LeftWall_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.38"
+    },
+    "Properties": {
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "bVisible": false
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Plane_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Entrance_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.0"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'BP_TowerRoom_C:Plane_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.39"
+    },
+    "Properties": {
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "bVisible": false
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "RightWall_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Entrance_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.0"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'BP_TowerRoom_C:RightWall_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.40"
+    },
+    "Properties": {
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "bVisible": false
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_TowerInterior_WallPillar_Long1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Entrance_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.0"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'BP_TowerRoom_C:SM_TowerInterior_WallPillar_Long1_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.41"
+    },
+    "Properties": {
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_TowerInterior_WallPillar_Long2_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Entrance_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.0"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'BP_TowerRoom_C:SM_TowerInterior_WallPillar_Long2_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.42"
+    },
+    "Properties": {
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_TowerInterior_WallPillar_Long3_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Entrance_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.0"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'BP_TowerRoom_C:SM_TowerInterior_WallPillar_Long3_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.43"
+    },
+    "Properties": {
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_TowerInterior_WallPillar_Long_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Entrance_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.0"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'BP_TowerRoom_C:SM_TowerInterior_WallPillar_Long_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.44"
+    },
+    "Properties": {
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "TopWall_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Entrance_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Entrance.0"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'BP_TowerRoom_C:TopWall_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.45"
+    },
+    "Properties": {
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "bVisible": false
+    }
+  }
+]

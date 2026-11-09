@@ -1,0 +1,3585 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_TowerRoom_Craft_Furnace_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Package": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+    },
+    "Properties": {
+      "Timelines": [
+        {
+          "ObjectName": "TimelineTemplate'BP_TowerRoom_Craft_Furnace_C:Timeline_1_Template'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.64"
+        },
+        {
+          "ObjectName": "TimelineTemplate'BP_TowerRoom_Craft_Furnace_C:Timeline_2_Template'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.65"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.59"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_TowerRoom_Craft_Furnace_C:InheritableComponentHandler'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.34"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Furnace_C:ExecuteUbergraph_BP_TowerRoom_Craft_Furnace'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.23"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Furnace_C:Timeline_1__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.30"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Furnace_C:Timeline_1__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.31"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Furnace_C:Timeline_2__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.32"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Furnace_C:Timeline_2__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.33"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Furnace_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.25"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Furnace_C:OnMoveEnd_Event'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.24"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Furnace_C:CraftAnimationEnd'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.22"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Furnace_C:ResetVisuals'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.28"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Furnace_C:ResultSpawn'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.29"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Furnace_C:ActivateTopFire'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.21"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Furnace_C:ActivateBottomFires'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.20"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Furnace_C:ResetTopFireDoonce'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.27"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Furnace_C:ResetTopFire'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.26"
+      },
+      {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Furnace_C:ExecuteUbergraph_BP_TowerRoom_Craft_Furnace'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.23"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Recipe",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ChildActorComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Recipe1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ChildActorComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "P_Fire_Hit_04",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "P_Fire_Hit_03",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_Fog_Sphere1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ParticleSystem_Top",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ParticleSystem_Right",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ParticleSystem_Left",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ParticleSystem_Center",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SpotLight4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SpotLightComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PointLight1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'PointLightComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Furnace",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Timeline_2_NewTrack_0_E3D7BD7941CE29EA467BF9A4C42AAD24",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Timeline_2__Direction_E3D7BD7941CE29EA467BF9A4C42AAD24",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Timeline_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Timeline_1_NewTrack_0_E4AAE2954EFA4F42A2E3E4B31B9CE107",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Timeline_1__Direction_E4AAE2954EFA4F42A2E3E4B31B9CE107",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Timeline_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FurnaceMat",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FogMat",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_TowerRoom_Craft_Furnace": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Furnace_C:ExecuteUbergraph_BP_TowerRoom_Craft_Furnace'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.23"
+      },
+      "ResetTopFire": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Furnace_C:ResetTopFire'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.26"
+      },
+      "ResetTopFireDoonce": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Furnace_C:ResetTopFireDoonce'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.27"
+      },
+      "ActivateBottomFires": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Furnace_C:ActivateBottomFires'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.20"
+      },
+      "ActivateTopFire": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Furnace_C:ActivateTopFire'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.21"
+      },
+      "ResultSpawn": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Furnace_C:ResultSpawn'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.29"
+      },
+      "ResetVisuals": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Furnace_C:ResetVisuals'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.28"
+      },
+      "CraftAnimationEnd": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Furnace_C:CraftAnimationEnd'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.22"
+      },
+      "OnMoveEnd_Event": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Furnace_C:OnMoveEnd_Event'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.24"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Furnace_C:ReceiveBeginPlay'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.25"
+      },
+      "Timeline_2__UpdateFunc": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Furnace_C:Timeline_2__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.33"
+      },
+      "Timeline_2__FinishedFunc": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Furnace_C:Timeline_2__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.32"
+      },
+      "Timeline_1__UpdateFunc": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Furnace_C:Timeline_1__UpdateFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.31"
+      },
+      "Timeline_1__FinishedFunc": {
+        "ObjectName": "Function'BP_TowerRoom_Craft_Furnace_C:Timeline_1__FinishedFunc'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.30"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_TowerRoom_Craft_Furnace_C'Default__BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.9"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_Interactable_RecipeBook_C",
+    "Name": "ChildActor_GEN_VARIABLE_BP_Interactable_RecipeBook_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Base/BP_Interactable_RecipeBook.BP_Interactable_RecipeBook_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Furnace_C:ChildActor_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.11"
+    },
+    "Template": {
+      "ObjectName": "BP_Interactable_RecipeBook_C'BP_TowerRoom_Craft_C:ChildActor_GEN_VARIABLE.ChildActor_GEN_VARIABLE_BP_Interactable_RecipeBook_C_CAT'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.1"
+    },
+    "ActorLabel": "BP_Interactable_RecipeBook",
+    "ActorInstanceGuid": {
+      "ActorGuid": "00000000-00000000-00000000-00000000",
+      "ActorInstanceGuid": "00000000-00000000-00000000-00000000"
+    }
+  },
+  {
+    "Type": "BP_Interactable_ResourceStand_C",
+    "Name": "Stand_1_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Base/BP_Interactable_ResourceStand.BP_Interactable_ResourceStand_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Furnace_C:Stand_1_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.14"
+    },
+    "Template": {
+      "ObjectName": "BP_Interactable_ResourceStand_C'Default__BP_Interactable_ResourceStand_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_Interactable_ResourceStand.1"
+    },
+    "ActorLabel": "BP_Interactable_ResourceStand",
+    "ActorInstanceGuid": {
+      "ActorGuid": "00000000-00000000-00000000-00000000",
+      "ActorInstanceGuid": "00000000-00000000-00000000-00000000"
+    }
+  },
+  {
+    "Type": "BP_Interactable_ResourceStand_C",
+    "Name": "Stand_2_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Base/BP_Interactable_ResourceStand.BP_Interactable_ResourceStand_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Furnace_C:Stand_2_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.15"
+    },
+    "Template": {
+      "ObjectName": "BP_Interactable_ResourceStand_C'Default__BP_Interactable_ResourceStand_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_Interactable_ResourceStand.1"
+    },
+    "ActorLabel": "BP_Interactable_ResourceStand",
+    "ActorInstanceGuid": {
+      "ActorGuid": "00000000-00000000-00000000-00000000",
+      "ActorInstanceGuid": "00000000-00000000-00000000-00000000"
+    }
+  },
+  {
+    "Type": "BP_Interactable_ResourceStand_C",
+    "Name": "Stand_3_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Base/BP_Interactable_ResourceStand.BP_Interactable_ResourceStand_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Furnace_C:Stand_3_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.16"
+    },
+    "Template": {
+      "ObjectName": "BP_Interactable_ResourceStand_C'Default__BP_Interactable_ResourceStand_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_Interactable_ResourceStand.1"
+    },
+    "ActorLabel": "BP_Interactable_ResourceStand",
+    "ActorInstanceGuid": {
+      "ActorGuid": "00000000-00000000-00000000-00000000",
+      "ActorInstanceGuid": "00000000-00000000-00000000-00000000"
+    }
+  },
+  {
+    "Type": "BP_Interactable_ResourceStand_C",
+    "Name": "Stand_4_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Base/BP_Interactable_ResourceStand.BP_Interactable_ResourceStand_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Furnace_C:Stand_4_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.17"
+    },
+    "Template": {
+      "ObjectName": "BP_Interactable_ResourceStand_C'BP_TowerRoom_Craft_C:Stand_4_GEN_VARIABLE.Stand_4_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.5"
+    },
+    "ActorLabel": "BP_Interactable_ResourceStand",
+    "ActorInstanceGuid": {
+      "ActorGuid": "00000000-00000000-00000000-00000000",
+      "ActorInstanceGuid": "00000000-00000000-00000000-00000000"
+    }
+  },
+  {
+    "Type": "BP_Interactable_RoomCenter_C",
+    "Name": "Center_GEN_VARIABLE_BP_Interactable_RoomCenter_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Base/BP_Interactable_RoomCenter.BP_Interactable_RoomCenter_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Furnace_C:Center_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.10"
+    },
+    "Template": {
+      "ObjectName": "BP_Interactable_RoomCenter_C'Default__BP_Interactable_RoomCenter_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_Interactable_RoomCenter.1"
+    },
+    "ActorLabel": "BP_Interactable_CraftCenter",
+    "ActorInstanceGuid": {
+      "ActorGuid": "00000000-00000000-00000000-00000000",
+      "ActorInstanceGuid": "00000000-00000000-00000000-00000000"
+    }
+  },
+  {
+    "Type": "BP_Recipe_C",
+    "Name": "Recipe_GEN_VARIABLE_BP_Recipe_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Resources/BP_Recipe.BP_Recipe_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Furnace_C:Recipe1_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.12"
+    },
+    "Template": {
+      "ObjectName": "BP_Recipe_C'Default__BP_Recipe_C'",
+      "ObjectPath": "/Game/Blueprints/Resources/BP_Recipe.2"
+    },
+    "Properties": {
+      "Recipe": "Fur_MagmaShard"
+    },
+    "ActorLabel": "BP_Recipe",
+    "ActorInstanceGuid": {
+      "ActorGuid": "00000000-00000000-00000000-00000000",
+      "ActorInstanceGuid": "00000000-00000000-00000000-00000000"
+    }
+  },
+  {
+    "Type": "BP_Recipe_C",
+    "Name": "Recipe_GEN_VARIABLE_BP_Recipe_C_CAT",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Resources/BP_Recipe.BP_Recipe_C'",
+    "Outer": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Furnace_C:Recipe_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.13"
+    },
+    "Template": {
+      "ObjectName": "BP_Recipe_C'Default__BP_Recipe_C'",
+      "ObjectPath": "/Game/Blueprints/Resources/BP_Recipe.2"
+    },
+    "Properties": {
+      "Recipe": "Fur_IronIngot"
+    },
+    "ActorLabel": "BP_Recipe",
+    "ActorInstanceGuid": {
+      "ActorGuid": "00000000-00000000-00000000-00000000",
+      "ActorInstanceGuid": "00000000-00000000-00000000-00000000"
+    }
+  },
+  {
+    "Type": "BP_TowerRoom_Craft_Furnace_C",
+    "Name": "Default__BP_TowerRoom_Craft_Furnace_C",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.BP_TowerRoom_Craft_Furnace_C'",
+    "Package": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace",
+    "Template": {
+      "ObjectName": "BP_TowerRoom_Craft_C'Default__BP_TowerRoom_Craft_C'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.7"
+    },
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Center_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Template": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_C:Center_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.8"
+    },
+    "Properties": {
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Interactable_RoomCenter_C'BP_TowerRoom_Craft_Furnace_C:Center_GEN_VARIABLE.Center_GEN_VARIABLE_BP_Interactable_RoomCenter_C_CAT'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.6"
+      },
+      "RelativeLocation": {
+        "X": 1.844483E-05,
+        "Y": 1295.2922,
+        "Z": 1.0000119
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "ChildActor_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Template": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_C:ChildActor_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.9"
+    },
+    "Properties": {
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Interactable_RecipeBook_C'BP_TowerRoom_Craft_Furnace_C:ChildActor_GEN_VARIABLE.ChildActor_GEN_VARIABLE_BP_Interactable_RecipeBook_C_CAT'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.1"
+      },
+      "RelativeLocation": {
+        "X": -1600.0,
+        "Y": -1455.0,
+        "Z": 84.99999
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 180.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Recipe1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Properties": {
+      "ChildActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_Recipe_C'",
+        "ObjectPath": "/Game/Blueprints/Resources/BP_Recipe.1"
+      },
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Recipe_C'BP_TowerRoom_Craft_Furnace_C:Recipe1_GEN_VARIABLE.Recipe_GEN_VARIABLE_BP_Recipe_C_CAT'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.7"
+      },
+      "RelativeLocation": {
+        "X": 440.0,
+        "Y": 890.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Recipe_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Properties": {
+      "ChildActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_Recipe_C'",
+        "ObjectPath": "/Game/Blueprints/Resources/BP_Recipe.1"
+      },
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Recipe_C'BP_TowerRoom_Craft_Furnace_C:Recipe_GEN_VARIABLE.Recipe_GEN_VARIABLE_BP_Recipe_C_CAT'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.8"
+      },
+      "RelativeLocation": {
+        "X": -440.0,
+        "Y": 890.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Stand_1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Template": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_C:Stand_1_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.10"
+    },
+    "Properties": {
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Interactable_ResourceStand_C'BP_TowerRoom_Craft_Furnace_C:Stand_1_GEN_VARIABLE.Stand_1_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.2"
+      },
+      "RelativeLocation": {
+        "X": -1300.0,
+        "Y": 900.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Stand_2_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Template": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_C:Stand_2_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.11"
+    },
+    "Properties": {
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Interactable_ResourceStand_C'BP_TowerRoom_Craft_Furnace_C:Stand_2_GEN_VARIABLE.Stand_2_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.3"
+      },
+      "RelativeLocation": {
+        "X": -600.0,
+        "Y": 1500.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Stand_3_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Template": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_C:Stand_3_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.12"
+    },
+    "Properties": {
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Interactable_ResourceStand_C'BP_TowerRoom_Craft_Furnace_C:Stand_3_GEN_VARIABLE.Stand_3_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.4"
+      },
+      "RelativeLocation": {
+        "X": 600.0,
+        "Y": 1500.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "ChildActorComponent",
+    "Name": "Stand_4_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'ChildActorComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Template": {
+      "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_C:Stand_4_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.13"
+    },
+    "Properties": {
+      "ChildActorTemplate": {
+        "ObjectName": "BP_Interactable_ResourceStand_C'BP_TowerRoom_Craft_Furnace_C:Stand_4_GEN_VARIABLE.Stand_4_GEN_VARIABLE_BP_Interactable_ResourceStand_C_CAT'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.5"
+      },
+      "RelativeLocation": {
+        "X": 1300.0,
+        "Y": 900.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.0,
+            "Value": 1.0,
+            "ArriveTangent": 2.9833326,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 2.9833395,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0_1",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.0,
+            "Value": 1.0,
+            "ArriveTangent": 2.9833326,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 2.9833395,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ActivateBottomFires",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ActivateTopFire",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "CraftAnimationEnd",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_TowerRoom_Craft_C:CraftAnimationEnd'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.20"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_TowerRoom_Craft_Furnace",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_RefSelf",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_ResourceAnimation_C'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_ResourceAnimation.0"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateDynamicMaterialInstance_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateDynamicMaterialInstance_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_IsClosed_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Has_Been_Initd_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Conv_DoubleToVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchEnum_CmpSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Conv_DoubleToVector_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeTransform_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 96,
+        "Struct": {
+          "ObjectName": "Class'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeTransform_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_Alpha_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_Alpha_ImplicitCast_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_Alpha_ImplicitCast_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_Alpha_ImplicitCast_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_Alpha_ImplicitCast_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_Alpha_ImplicitCast_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetIntensity_NewIntensity_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetScalarParameterValue_Value_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetScalarParameterValue_Value_ImplicitCast_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnMoveEnd_Event",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_TowerRoom_Craft_C:OnMoveEnd_Event'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.34"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "RefSelf",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_ResourceAnimation_C'",
+          "ObjectPath": "/Game/Blueprints/Base/BP_ResourceAnimation.0"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_TowerRoom_Craft_C:ReceiveBeginPlay'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.35"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ResetTopFire",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ResetTopFireDoonce",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ResetVisuals",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_TowerRoom_Craft_C:ResetVisuals'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.37"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ResultSpawn",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Super": {
+      "ObjectName": "Function'BP_TowerRoom_Craft_C:ResultSpawn'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.38"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_1__FinishedFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_1__UpdateFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_2__FinishedFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_2__UpdateFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'ChildActorComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Furnace_C:Stand_4_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.17"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "Stand_4",
+            "AssociatedGuid": "3978AAE8-463C96EE-B642D48D-91A23BA4"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'ChildActorComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Furnace_C:Stand_1_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.14"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "Stand_1",
+            "AssociatedGuid": "BD766733-41E91D96-AADC4789-77EC1980"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'ChildActorComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Furnace_C:Stand_3_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.16"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "Stand_3",
+            "AssociatedGuid": "96E7D32C-482AF704-CE230FAC-4669CE75"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'ChildActorComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Furnace_C:Stand_2_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.15"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "Stand_2",
+            "AssociatedGuid": "FB456037-4F547F43-2819F2A0-7D3620D6"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'ChildActorComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Furnace_C:ChildActor_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.11"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "ChildActor",
+            "AssociatedGuid": "07CE0DB3-4A15F78A-683C7788-5D7B270D"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'ChildActorComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Furnace_C:Center_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.10"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "Center",
+            "AssociatedGuid": "E8561062-4F7CBB53-885C45B9-A5C5786A"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "StaticMeshComponent'BP_TowerRoom_Craft_Furnace_C:Plane_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.62"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.0"
+            },
+            "SCSVariableName": "Plane",
+            "AssociatedGuid": "49CF0296-44C41BB7-707813B9-87C42795"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'SceneComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SceneComponent'BP_TowerRoom_Craft_Furnace_C:TargetResult_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.45"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "TargetResult",
+            "AssociatedGuid": "56D9B4D5-49D827CB-913DC3B9-56EFCA42"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'SceneComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SceneComponent'BP_TowerRoom_Craft_Furnace_C:TargetCraft_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.44"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "TargetCraft",
+            "AssociatedGuid": "737393D6-4A1CDAC1-DABC679A-D0668479"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'SceneComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SceneComponent'BP_TowerRoom_Craft_Furnace_C:SpawnReward_GEN_VARIABLE'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.43"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_C'",
+              "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.0"
+            },
+            "SCSVariableName": "SpawnReward",
+            "AssociatedGuid": "EBD2292D-43278824-325A289A-5F40F56C"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "P_Fire_Hit_03_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'P_Fire_Hit_Furnace'",
+        "ObjectPath": "/Game/ImproveFights_Vfx/Particles/P_Fire_Hit_Furnace.92"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Color_02",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Color_02",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Color_Boost",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Color_Boost",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Drops",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Drops",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "RibbonLenght",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.RibbonLenght",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "RibbonWidth",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.RibbonWidth",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "RightVector",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'Vector3f'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.RightVector",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'Vector3f'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Scale",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Scale",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Size",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Size",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Smoke_Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Smoke_Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Smoke_Density",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Smoke_Density",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "SmokeOpacity",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.SmokeOpacity",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "UpVector",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'Vector3f'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.UpVector",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'Vector3f'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.Color",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 16,
+            "Name": "User.Color_02",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 80,
+            "Name": "User.Color_Boost",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 32,
+            "Name": "User.Drops",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 36,
+            "Name": "User.RibbonLenght",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 40,
+            "Name": "User.RibbonWidth",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 68,
+            "Name": "User.RightVector",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'Vector3f'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 44,
+            "Name": "User.Scale",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 48,
+            "Name": "User.Size",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 88,
+            "Name": "User.Smoke_Color",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 84,
+            "Name": "User.Smoke_Density",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 52,
+            "Name": "User.SmokeOpacity",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 56,
+            "Name": "User.UpVector",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'Vector3f'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          72,
+          66,
+          148,
+          198,
+          128,
+          65,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          72,
+          66,
+          37,
+          127,
+          139,
+          65,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          64,
+          64,
+          0,
+          0,
+          160,
+          65,
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          64,
+          64,
+          0,
+          0,
+          64,
+          64,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          65,
+          0,
+          0,
+          200,
+          66,
+          128,
+          66,
+          5,
+          62,
+          42,
+          65,
+          214,
+          61,
+          179,
+          149,
+          190,
+          61,
+          0,
+          0,
+          128,
+          63
+        ]
+      },
+      "RelativeLocation": {
+        "X": 2.638804,
+        "Y": 34.357063,
+        "Z": 969.0997
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "P_Fire_Hit_04_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'P_Fire_Hit_Furnace'",
+        "ObjectPath": "/Game/ImproveFights_Vfx/Particles/P_Fire_Hit_Furnace.92"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Color_02",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Color_02",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Color_Boost",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Color_Boost",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Drops",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Drops",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "RibbonLenght",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.RibbonLenght",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "RibbonWidth",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.RibbonWidth",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "RightVector",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'Vector3f'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.RightVector",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'Vector3f'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Scale",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Scale",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Size",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Size",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Smoke_Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Smoke_Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Smoke_Density",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Smoke_Density",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "SmokeOpacity",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.SmokeOpacity",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "UpVector",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'Vector3f'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.UpVector",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'Vector3f'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.Color",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 16,
+            "Name": "User.Color_02",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 80,
+            "Name": "User.Color_Boost",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 32,
+            "Name": "User.Drops",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 36,
+            "Name": "User.RibbonLenght",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 40,
+            "Name": "User.RibbonWidth",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 68,
+            "Name": "User.RightVector",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'Vector3f'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 44,
+            "Name": "User.Scale",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 48,
+            "Name": "User.Size",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 88,
+            "Name": "User.Smoke_Color",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 84,
+            "Name": "User.Smoke_Density",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 52,
+            "Name": "User.SmokeOpacity",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 56,
+            "Name": "User.UpVector",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'Vector3f'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          72,
+          66,
+          148,
+          198,
+          128,
+          65,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          72,
+          66,
+          37,
+          127,
+          139,
+          65,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          64,
+          64,
+          0,
+          0,
+          160,
+          65,
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          64,
+          64,
+          0,
+          0,
+          64,
+          64,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          65,
+          0,
+          0,
+          200,
+          66,
+          128,
+          66,
+          5,
+          62,
+          42,
+          65,
+          214,
+          61,
+          179,
+          149,
+          190,
+          61,
+          0,
+          0,
+          128,
+          63
+        ]
+      },
+      "RelativeLocation": {
+        "X": -0.38541523,
+        "Y": 594.4528,
+        "Z": 267.35165
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleSystem_Center_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'P_Stylized_Campfire'",
+        "ObjectPath": "/Game/Art/VFX/Campfire/DreamscapeMeadows/Effects/P_Stylized_Campfire.59"
+      },
+      "RelativeLocation": {
+        "X": -6.813929,
+        "Y": 238.73016,
+        "Z": 51.266598
+      },
+      "RelativeScale3D": {
+        "X": 7.991614,
+        "Y": 7.991614,
+        "Z": 7.991614
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleSystem_Left_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'P_Stylized_Campfire'",
+        "ObjectPath": "/Game/Art/VFX/Campfire/DreamscapeMeadows/Effects/P_Stylized_Campfire.59"
+      },
+      "RelativeLocation": {
+        "X": -417.20654,
+        "Y": 145.6344,
+        "Z": 133.46965
+      },
+      "RelativeScale3D": {
+        "X": 5.0,
+        "Y": 5.0000005,
+        "Z": 5.0000005
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleSystem_Right_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'P_Stylized_Campfire'",
+        "ObjectPath": "/Game/Art/VFX/Campfire/DreamscapeMeadows/Effects/P_Stylized_Campfire.59"
+      },
+      "RelativeLocation": {
+        "X": 425.61914,
+        "Y": 145.6344,
+        "Z": 133.46965
+      },
+      "RelativeScale3D": {
+        "X": 5.0,
+        "Y": 5.0,
+        "Z": 5.0
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleSystem_Top_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'P_Stylized_Campfire'",
+        "ObjectPath": "/Game/Art/VFX/Campfire/DreamscapeMeadows/Effects/P_Stylized_Campfire.59"
+      },
+      "RelativeLocation": {
+        "X": 5.5986347,
+        "Y": -209.16841,
+        "Z": 800.0
+      },
+      "RelativeScale3D": {
+        "X": 15.0,
+        "Y": 15.000001,
+        "Z": 15.000001
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "PointLightComponent",
+    "Name": "PointLight1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PointLightComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Properties": {
+      "IntensityUnits": "ELightUnits::Candelas",
+      "AttenuationRadius": 1406.3511,
+      "Intensity": 400.0,
+      "LightColor": {
+        "B": 0,
+        "G": 183,
+        "R": 255,
+        "A": 255,
+        "Hex": "FFB700"
+      },
+      "RelativeLocation": {
+        "X": 1.0000005E-06,
+        "Y": 1398.5751,
+        "Z": 377.9586
+      },
+      "RelativeRotation": {
+        "Pitch": -0.0,
+        "Yaw": -180.0,
+        "Roll": 0.0
+      }
+    },
+    "IntensityNits": 0.0
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SpawnReward_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Template": {
+      "ObjectName": "SceneComponent'BP_TowerRoom_Craft_C:SpawnReward_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.50"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 1.1739928E-08,
+        "Y": 337.30927,
+        "Z": 208.86194
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "TargetCraft_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Template": {
+      "ObjectName": "SceneComponent'BP_TowerRoom_Craft_C:TargetCraft_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.51"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 9.927303E-07,
+        "Y": -181.2815,
+        "Z": 714.1587
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "TargetResult_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Template": {
+      "ObjectName": "SceneComponent'BP_TowerRoom_Craft_C:TargetResult_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom_Craft.52"
+    },
+    "Properties": {
+      "RelativeLocation": {
+        "X": 6.418028E-06,
+        "Y": 872.5919,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.59"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_TowerRoom_Craft_Furnace_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.42"
+      },
+      "VariableGuid": "D88AB7D6-44220449-F001EE9D-7B9780F7",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.59"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_Craft_Furnace_C:Furnace_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.61"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.57"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.58"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.48"
+        }
+      ],
+      "VariableGuid": "77F6BC34-412B7FC5-157F4290-60F25220",
+      "InternalVariableName": "Furnace"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_10",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.59"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_TowerRoom_Craft_Furnace_C:P_Fire_Hit_04_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.36"
+      },
+      "VariableGuid": "DA16ED07-4A6A6614-6503BE80-79D8EB0A",
+      "InternalVariableName": "P_Fire_Hit_04"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_11",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.59"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ChildActorComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Furnace_C:Recipe1_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.12"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "VariableGuid": "F0E5915F-423A57F3-B3EA85BC-5B4B1AE0",
+      "InternalVariableName": "Recipe1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_12",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.59"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ChildActorComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ChildActorComponent'BP_TowerRoom_Craft_Furnace_C:Recipe_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.13"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "VariableGuid": "1F2B6F14-4B458391-D85738A1-147F704E",
+      "InternalVariableName": "Recipe"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.59"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'BP_TowerRoom_Craft_Furnace_C:ParticleSystem_Center_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.37"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "VariableGuid": "2AA7DDD4-44E00590-17A8E2B8-24C5DDD0",
+      "InternalVariableName": "ParticleSystem_Center"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.59"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'PointLightComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PointLightComponent'BP_TowerRoom_Craft_Furnace_C:PointLight1_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.41"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "VariableGuid": "4E648099-43FC6DD7-50EF4190-07976423",
+      "InternalVariableName": "PointLight1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.59"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SpotLightComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SpotLightComponent'BP_TowerRoom_Craft_Furnace_C:SpotLight4_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.60"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "VariableGuid": "51FCE4DA-44299794-443452BF-E784BB32",
+      "InternalVariableName": "SpotLight4"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.59"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'BP_TowerRoom_Craft_Furnace_C:ParticleSystem_Left_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.38"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "VariableGuid": "AA2ADC34-45971BC7-0BB0F88A-CB9FD68D",
+      "InternalVariableName": "ParticleSystem_Left"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.59"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'BP_TowerRoom_Craft_Furnace_C:ParticleSystem_Right_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.39"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "VariableGuid": "BF6E78E6-40D17AC1-74CE289F-8DCDA9F9",
+      "InternalVariableName": "ParticleSystem_Right"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.59"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'BP_TowerRoom_Craft_Furnace_C:ParticleSystem_Top_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.40"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_TowerRoom_C",
+      "VariableGuid": "29FEB7E7-46F465D6-06132DB7-FAE8D5BE",
+      "InternalVariableName": "ParticleSystem_Top"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_8",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.59"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TowerRoom_Craft_Furnace_C:SM_Fog_Sphere1_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.63"
+      },
+      "VariableGuid": "0E88969C-4452DECD-C9DFA981-A937E7DE",
+      "InternalVariableName": "SM_Fog_Sphere1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_9",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.59"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_TowerRoom_Craft_Furnace_C:P_Fire_Hit_03_GEN_VARIABLE'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.35"
+      },
+      "VariableGuid": "A089E18F-4F1F2CE4-E3CD3D87-BEB60178",
+      "InternalVariableName": "P_Fire_Hit_03"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.47"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.52"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.53"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.51"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.54"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.55"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.56"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.49"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.50"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.47"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.52"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.53"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.51"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.54"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.55"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.56"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.57"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.58"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.48"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.49"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.50"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_TowerRoom_Craft_Furnace_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.46"
+      }
+    }
+  },
+  {
+    "Type": "SpotLightComponent",
+    "Name": "SpotLight4_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SpotLightComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Properties": {
+      "OuterConeAngle": 45.872,
+      "IntensityUnits": "ELightUnits::Candelas",
+      "AttenuationRadius": 5970.1177,
+      "Intensity": 20000.0,
+      "LightColor": {
+        "B": 0,
+        "G": 183,
+        "R": 255,
+        "A": 255,
+        "Hex": "FFB700"
+      },
+      "RelativeLocation": {
+        "X": 226.83469,
+        "Y": 1838.5947,
+        "Z": 2069.4187
+      },
+      "RelativeRotation": {
+        "Pitch": -50.0,
+        "Yaw": -100.0,
+        "Roll": 90.0
+      }
+    },
+    "IntensityNits": 0.0
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Furnace_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_FurnaceRoom'",
+        "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/FurnaceRoom/SM_FurnaceRoom.2"
+      },
+      "RelativeLocation": {
+        "X": -3.109543E-07,
+        "Y": -169.24985,
+        "Z": -74.172844
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Plane_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'BP_TowerRoom_C:Plane_GEN_VARIABLE'",
+      "ObjectPath": "/Game/Blueprints/Base/BP_TowerRoom.39"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_FurnaceRoom_Floor'",
+        "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/FurnaceRoom/SM_FurnaceRoom_Floor.2"
+      },
+      "OverrideMaterials": [
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_Pillars7'",
+          "ObjectPath": "/Game/Art/Buildings/AlchemyTower/TowerInterior/MI_Pillars7.0"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_Fog_Sphere1_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Fog_Sphere1'",
+        "ObjectPath": "/Game/Art/NinaTemplate/GeneralArt/Lighting/SM_Fog_Sphere1.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'M_EV_Lightbeam_Master_01_Inst1'",
+          "ObjectPath": "/Game/Art/NinaTemplate/GeneralArt/Lighting/M_EV_Lightbeam_Master_01_Inst1.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": -4.55413E-07,
+        "Y": 0.0,
+        "Z": 904.7674
+      },
+      "RelativeScale3D": {
+        "X": 5.7828197,
+        "Y": 5.7828197,
+        "Z": 5.7828197
+      }
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "Timeline_1_Template",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Properties": {
+      "TimelineLength": 1.0,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_TowerRoom_Craft_Furnace_C:CurveFloat_0'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.18"
+          },
+          "PropertyName": "Timeline_1_NewTrack_0_E4AAE2954EFA4F42A2E3E4B31B9CE107",
+          "TrackName": "NewTrack_0",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "E4AAE295-4EFA4F42-A2E3E4B3-1B9CE107",
+      "VariableName": "Timeline_1",
+      "DirectionPropertyName": "Timeline_1__Direction_E4AAE2954EFA4F42A2E3E4B31B9CE107",
+      "UpdateFunctionName": "Timeline_1__UpdateFunc",
+      "FinishedFunctionName": "Timeline_1__FinishedFunc"
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "Timeline_2_Template",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TowerRoom_Craft_Furnace_C'",
+      "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.0"
+    },
+    "Properties": {
+      "TimelineLength": 1.0,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_TowerRoom_Craft_Furnace_C:CurveFloat_0_1'",
+            "ObjectPath": "/Game/Blueprints/Base/Rooms/BP_TowerRoom_Craft_Furnace.19"
+          },
+          "PropertyName": "Timeline_2_NewTrack_0_E3D7BD7941CE29EA467BF9A4C42AAD24",
+          "TrackName": "NewTrack_0",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "E3D7BD79-41CE29EA-467BF9A4-C42AAD24",
+      "VariableName": "Timeline_2",
+      "DirectionPropertyName": "Timeline_2__Direction_E3D7BD7941CE29EA467BF9A4C42AAD24",
+      "UpdateFunctionName": "Timeline_2__UpdateFunc",
+      "FinishedFunctionName": "Timeline_2__FinishedFunc"
+    }
+  }
+]

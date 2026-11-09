@@ -55,10 +55,10 @@ class Options
 }
 
 /// <summary>
-/// Core DataTables required by the web application.
+/// Core assets (DataTables and Blueprints) required by the web application.
 /// Full paths are resolved dynamically via VFS search.
 /// </summary>
-static readonly string[] WEBAPP_DATA_TABLE_NAMES = new[]
+static readonly string[] CORE_ASSET_NAMES = new[]
 {
     "DT_MonsterTable",
     "DT_MonsterRewards",
@@ -74,7 +74,8 @@ static readonly string[] WEBAPP_DATA_TABLE_NAMES = new[]
     "RDT_DialogueDecoratorImage",
     "DT_Spawns",
     "DT_WorldResources",
-    "DT_Locations"
+    "DT_Locations",
+    "BP_TowerManager"
 };
 
 /// <summary>
@@ -379,14 +380,14 @@ ExtractDataTablesAndTypesAsync(DefaultFileProvider provider, Dictionary<string, 
     var seenPackages = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
     var pendingQueue = new Queue<string>();
 
-    Console.WriteLine($"[Discovery] Resolving {WEBAPP_DATA_TABLE_NAMES.Length} required DataTable(s) by name...");
-    foreach (var tableName in WEBAPP_DATA_TABLE_NAMES)
+    Console.WriteLine($"[Discovery] Resolving {CORE_ASSET_NAMES.Length} core asset(s) by name...");
+    foreach (var assetName in CORE_ASSET_NAMES)
     {
-        var gamePath = ResolveAssetPackage(vfsByName, tableName, "DataTable");
+        var gamePath = ResolveAssetPackage(vfsByName, assetName, "CoreAsset");
         if (gamePath != null && seenPackages.Add(gamePath))
             pendingQueue.Enqueue(gamePath);
         else if (gamePath == null)
-            Console.WriteLine($"  [Warning] DataTable '{tableName}' not found in VFS archives.");
+            Console.WriteLine($"  [Warning] Core asset '{assetName}' not found in VFS archives.");
     }
 
     var monsterIds = new List<string>();
@@ -476,6 +477,23 @@ ExtractDataTablesAndTypesAsync(DefaultFileProvider provider, Dictionary<string, 
                         }
                     }
                     Console.WriteLine($"  [Data] Loaded {decoratorIconMap.Count} decorator icon reference(s) from RDT_DialogueDecoratorImage into memory.");
+                }
+            }
+
+            if (packagePath.EndsWith("BP_TowerManager", StringComparison.OrdinalIgnoreCase))
+            {
+                var cdo = exports.FirstOrDefault(e => e.Name.StartsWith("Default__BP_TowerManager", StringComparison.OrdinalIgnoreCase));
+                if (cdo != null && cdo.TryGetValue(out UScriptMap roomTypes, "RoomTypes"))
+                {
+                    foreach (var (_, val) in roomTypes.Properties)
+                    {
+                        if (val?.GenericValue is FPackageIndex { ResolvedObject: { } res })
+                        {
+                            var cleanPath = StripExportIndex(res.GetPathName());
+                            if (seenPackages.Add(cleanPath))
+                                pendingQueue.Enqueue(cleanPath);
+                        }
+                    }
                 }
             }
 
@@ -820,7 +838,7 @@ async Task<int> RunExtractAsync(Options opts)
     Console.WriteLine($" Mappings File:  {Path.GetFullPath(opts.MappingsPath)}");
     Console.WriteLine($" Output Dir:     {outputDir}");
     Console.WriteLine($" Meta Dir:       {metaDir}");
-    Console.WriteLine($" Core Tables:    {WEBAPP_DATA_TABLE_NAMES.Length} DataTables (Name-resolved)");
+    Console.WriteLine($" Core Assets:    {CORE_ASSET_NAMES.Length} (Name-resolved)");
     Console.WriteLine("========================================");
     Console.WriteLine();
 
