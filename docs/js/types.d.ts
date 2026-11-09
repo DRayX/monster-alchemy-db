@@ -154,8 +154,7 @@ export interface RecipeUnlock {
   poi?: import('./models/WorldPoi.js').WorldPoi | null;
   price?: number;
   roomId?: string;
-  roomName?: string;
-  dungeonName?: string;
+  sourceName?: string;
 }
 
 

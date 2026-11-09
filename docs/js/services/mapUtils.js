@@ -548,6 +548,22 @@ const CATEGORY_SEARCH_VISITORS = {
   },
   dungeon(poi, v) {
     v.addLocation(getPoiLocationId(poi));
+    if (poi.type === 'BP_DungeonDoor_Exit_C') return;
+    const dm = dbIndexes.worldPois.get(getReferencedPoiId(poi.properties.DungeonRef));
+    if (dm) {
+      v.addRecipe(dm.properties.CustomLootEnd);
+      v.addMonster(dm.properties.Boss);
+      if (Array.isArray(dm.properties.LootMonsterPool)) {
+        for (const mId of dm.properties.LootMonsterPool) {
+          v.addMonster(mId);
+        }
+      }
+      if (dm.properties.SpawnTag?.TagName) {
+        for (const enc of getSpawnerEncounters(dm.properties.SpawnTag.TagName)) {
+          v.addMonster(enc.monster.id);
+        }
+      }
+    }
   },
   arcane(poi, v) {
     v.addText(poi.label, poi.type);

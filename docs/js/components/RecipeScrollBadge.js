@@ -72,20 +72,8 @@ const TEMPLATE = /* html */ `
         </div>
 
         <!-- Tower Room -->
-        <div v-else-if="unlock.type === 'tower_room'" class="mb2">
-          <div class="flex items-center mb1">
-            <img
-              v-if="roomIcon"
-              :src="roomIcon"
-              class="icon-24 pixelated mr2 br1 bg-black-40 ba b--white-10 pa05 flex-shrink-0"
-              alt=""
-            />
-            <div>
-              <div class="b near-white">{{ unlock.roomName }}</div>
-              <div class="f8 silver">Alchemist Tower</div>
-            </div>
-          </div>
-          <div class="f8 silver">Available once this room is built in the tower.</div>
+        <div v-else-if="unlock.type === 'tower_room'" class="mb2 silver">
+          Available once this room is constructed in the Alchemist Tower.
         </div>
 
         <!-- Quest -->
@@ -106,12 +94,12 @@ const TEMPLATE = /* html */ `
 
         <!-- Coliseum -->
         <div v-else-if="unlock.type === 'coliseum'" class="mb2 silver">
-          Rewarded for completing Coliseum arena challenges.
+          Reward for completing {{ unlock.sourceName || 'Coliseum' }} arena challenges.
         </div>
 
         <!-- Dungeon -->
         <div v-else-if="unlock.type === 'dungeon'" class="mb2 silver">
-          Reward for completing {{ unlock.dungeonName || 'dungeon' }}.
+          Reward for completing {{ unlock.sourceName || 'dungeon' }}.
         </div>
 
         <!-- Cinematic -->
@@ -187,15 +175,23 @@ export const RecipeScrollBadge = defineComponent({
         case 'npc':
           return { icon: DIALOGUE_ICON, title: 'NPC Gift', colorClass: 'light-blue' };
         case 'coliseum':
-          return { icon: FIGHT_ICON, title: 'Coliseum Reward', colorClass: 'gold' };
+          return {
+            icon: FIGHT_ICON,
+            title: u.sourceName ? `Coliseum: ${u.sourceName}` : 'Coliseum Reward',
+            colorClass: 'gold'
+          };
         case 'dungeon':
-          return { icon: DUNGEON_ICON, title: 'Dungeon Reward', colorClass: 'light-red' };
+          return {
+            icon: DUNGEON_ICON,
+            title: u.sourceName ? `Dungeon: ${u.sourceName}` : 'Dungeon Reward',
+            colorClass: 'light-red'
+          };
         case 'cinematic':
           return { icon: QUEST_ICON, title: 'Cutscene Reward', colorClass: 'light-purple' };
         case 'tower_room':
           return {
             icon: u.roomId ? getRoomIcon(u.roomId) : TOWER_ICON,
-            title: 'Alchemist Tower',
+            title: u.sourceName ? `Tower: ${u.sourceName}` : 'Alchemist Tower',
             colorClass: 'light-purple'
           };
         case 'starting':
@@ -216,13 +212,6 @@ export const RecipeScrollBadge = defineComponent({
       const loc = props.unlock?.poi?.location;
       if (!loc) return '';
       return `X: ${Math.round(loc.x)}, Y: ${Math.round(loc.y)}`;
-    });
-
-    const roomIcon = computed(() => {
-      if (props.unlock?.type === 'tower_room' && props.unlock.roomId) {
-        return getRoomIcon(props.unlock.roomId);
-      }
-      return '';
     });
 
     const actionHint = computed(() => {
@@ -289,7 +278,6 @@ export const RecipeScrollBadge = defineComponent({
       sourceInfo,
       questName,
       coordinatesText,
-      roomIcon,
       actionHint,
       actionColorClass,
       onMouseEnter,

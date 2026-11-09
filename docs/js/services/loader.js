@@ -571,6 +571,15 @@ function extractTowerRoomRecipes(blueprints) {
 const STARTING_RECIPES = new Set(['str_cauldron', 'str_monstermanager', 'str_fusionroom']);
 
 /**
+ * Recipes awarded directly in Blueprint bytecode (such as NewRecipeAnimation nodes)
+ * that are not stored in DataTable rows or actor/CDO serialized properties.
+ * @type {Record<string, string>}
+ */
+const SCRIPTED_POI_RECIPES = {
+  BP_Cinematic_Trigger_Mausoleum_C: 'Str_NecromancyCircle'
+};
+
+/**
  * Cross-references world POIs to link recipe scrolls and unlock sources to recipes, monsters, and items in O(N).
  * @param {WorldPoi[]} worldPois
  * @param {CraftingRecipe[]} recipes
@@ -595,22 +604,42 @@ function linkRecipeScrollPois(
 ) {
   const towerRoomRecipes = extractTowerRoomRecipes(blueprints);
 
-  /** @type {Map<string, { poi: WorldPoi, price?: number, dungeonName?: string }>} */
+  /** @type {Map<string, { poi: WorldPoi, price?: number, sourceName?: string }>} */
   const recipePoiByRecipeKey = new Map();
-
-  /** @type {Map<string, WorldPoi>} */
-  const dungeonManagerById = new Map();
-  /** @type {WorldPoi[]} */
-  const dungeonEntrances = [];
+  const poiById = new Map(worldPois.map((p) => [p.id, p]));
 
   for (const poi of worldPois) {
     if (poi.category === 'manager') {
-      dungeonManagerById.set(poi.id, poi);
-    } else if (poi.category === 'dungeon' && poi.properties?.DungeonRef) {
-      dungeonEntrances.push(poi);
+      continue;
     }
 
-    // Direct Recipe property or quest/battle/coliseum reward
+    // Dungeon completion rewards linked from the entrance door to its manager's CustomLootEnd
+    if (poi.type === 'BP_DungeonDoor_C' && poi.properties?.DungeonRef) {
+      const mgr = poiById.get(getReferencedPoiId(poi.properties.DungeonRef));
+      const customLoot = mgr?.properties?.CustomLootEnd;
+      if (customLoot && customLoot !== 'None') {
+        const locId = mgr.properties?.LocationID || poi.properties?.LocationID;
+        const sourceName = (locId && locationsById.get(locId)) || '';
+        recipePoiByRecipeKey.set(customLoot.toLowerCase(), { poi, sourceName });
+      }
+    } else if (poi.category === 'coliseum' && poi.properties?.RefColiseum) {
+      // Coliseum completion rewards linked from the arena door to its manager's RewardRecipe
+      const mgr = poiById.get(getReferencedPoiId(poi.properties.RefColiseum));
+      const rewardRecipe = mgr?.properties?.RewardRecipe;
+      if (rewardRecipe && rewardRecipe !== 'None') {
+        const locId = mgr.properties?.LocationID || poi.properties?.LocationID;
+        const sourceName = (locId && locationsById.get(locId)) || '';
+        recipePoiByRecipeKey.set(rewardRecipe.toLowerCase(), { poi, sourceName });
+      }
+    }
+
+    // Attribute bytecode-scripted recipe unlocks (e.g. Mausoleum cutscene trigger)
+    const scriptedRecipe = SCRIPTED_POI_RECIPES[poi.type];
+    if (scriptedRecipe) {
+      poi.properties.RewardRecipe = scriptedRecipe;
+    }
+
+    // Direct Recipe property or quest/battle reward
     const rKey =
       poi.properties?.Recipe ||
       poi.properties?.RewardRecipe ||
@@ -635,18 +664,6 @@ function linkRecipeScrollPois(
     }
   }
 
-  // Dungeon completion rewards linked from the entrance door to its manager's CustomLootEnd
-  for (const entrance of dungeonEntrances) {
-    const mgrId = getReferencedPoiId(entrance.properties.DungeonRef);
-    const mgr = dungeonManagerById.get(mgrId);
-    const customLoot = mgr?.properties?.CustomLootEnd;
-    if (customLoot && customLoot !== 'None') {
-      const locId = mgr?.properties?.LocationID || entrance.properties?.LocationID;
-      const dungeonName = (locId && locationsById.get(locId)) || '';
-      recipePoiByRecipeKey.set(customLoot.toLowerCase(), { poi: entrance, dungeonName });
-    }
-  }
-
   /**
    * Builds a standardized RecipeUnlock descriptor for a recipe key and output entity name.
    * @param {string} recipeKey
@@ -661,13 +678,13 @@ function linkRecipeScrollPois(
 
     const mapMatch = recipePoiByRecipeKey.get(lower);
     if (mapMatch) {
-      const { poi, price, dungeonName } = mapMatch;
+      const { poi, price, sourceName } = mapMatch;
       return {
         type: poi.category,
         to: `/map?poi=${poi.id}&search=${encodeURIComponent(entityName)}`,
         poi,
         price,
-        dungeonName
+        sourceName
       };
     }
 
@@ -678,7 +695,7 @@ function linkRecipeScrollPois(
         type: 'tower_room',
         to: `/rooms/${towerRoomId}`,
         roomId: towerRoomId,
-        roomName: room ? room.name : towerRoomId
+        sourceName: room ? room.name : towerRoomId
       };
     }
 
