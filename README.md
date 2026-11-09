@@ -15,6 +15,7 @@ An interactive web database for **Monster Alchemy**, parsed directly from raw Un
 - **Resources & Alchemical Items**: Searchable catalog of reagents, materials, and items detailing monster drop sources, crafting outputs, world gathering nodes, and recipe ingredient usages.
 - **World Gathering Nodes**: Overworld gathering resource nodes with companion monster trait requirements, harvest tools, and drop rate pools.
 - **Crafting Rooms**: Multi-room crafting catalog detailing construction costs, recipes, inputs, and yield counts.
+- **Recipe Unlock Locations & Cross-References**: Inbound crafting and fusion recipes link directly to their in-game unlock sources—overworld ground scrolls, merchant shops, quest rewards, battle encounters, coliseum challenges, dungeon completions, and alchemical tower rooms—with interactive unlock popups and direct map pin navigation links.
 - **Home Page Dashboard**: Quick navigation, Featured Monsters showcase, and statistical distribution breakdowns across Elements, Attack Types, and Tiers.
 - **Sortable & Filterable Tables**: Sortable data tables with original order toggle, real-time multi-facet filtering (search, elements, attack types, tiers, item sources), and sticky headers.
 
@@ -78,6 +79,7 @@ docs/
         ├── MonsterDetail.js      # Monster profile, stats, skills, spawns, and sprites
         ├── MonsterTable.js       # Monsterpedia data table
         ├── NotFoundCard.js       # 404 entity fallback card
+        ├── RecipeScrollBadge.js  # Recipe scroll unlock badges & hover popups
         ├── RoomDetail.js         # Crafting room & fusion recipes
         ├── SortableTable.js      # Generic sortable data table
         ├── StatBar.js            # Visual monster stat bar
